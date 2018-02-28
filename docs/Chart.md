@@ -1,0 +1,53 @@
+# Chart
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**link** | [**Link**](Link.md) |  | [optional] 
+**auto_scaling** | **bool** | True if Microsoft Excel scales a 3-D chart so that it&#39;s closer in size to the equivalent 2-D chart. The RightAngleAxes property must be True. | [optional] 
+**back_wall** | [**LinkElement**](LinkElement.md) |  | [optional] 
+**category_axis** | [**LinkElement**](LinkElement.md) | Gets the chart&#39;s X axis. The property is read only | [optional] 
+**chart_area** | [**LinkElement**](LinkElement.md) | Gets the chart area in the worksheet | [optional] 
+**chart_data_table** | [**LinkElement**](LinkElement.md) | Represents the chart data table. | [optional] 
+**chart_object** | [**LinkElement**](LinkElement.md) | Represents the chartShape; | [optional] 
+**depth_percent** | **int** | Represents the depth of a 3-D chart as a percentage of the chart width (between 20 and 2000 percent). | [optional] 
+**elevation** | **int** | Represents the elevation of the 3-D chart view, in degrees. | [optional] 
+**first_slice_angle** | **int** | Gets or sets the angle of the first pie-chart or doughnut-chart slice, in degrees (clockwise from vertical). Applies only to pie, 3-D pie, and doughnut charts, 0 to 360. | [optional] 
+**floor** | [**LinkElement**](LinkElement.md) | Returns a Floor object that represents the walls of a 3-D chart.              | [optional] 
+**gap_depth** | **int** | Gets or sets the distance between the data series in a 3-D chart, as a percentage of the marker width.The value of this property must be between 0 and 500. | [optional] 
+**gap_width** | **int** | Returns or sets the space between bar or column clusters, as a percentage of the bar or column width. The value of this property must be between 0 and 500.              | [optional] 
+**height_percent** | **int** | Returns or sets the height of a 3-D chart as a percentage of the chart width (between 5 and 500 percent). | [optional] 
+**hide_pivot_field_buttons** | **bool** | Indicates whether hide the pivot chart field buttons only when the chart is PivotChart | [optional] 
+**is3_d** | **bool** | Indicates whether the chart is a 3d chart. | [optional] 
+**is_rectangular_cornered** | **bool** | Gets or sets a value indicating whether the chart displays a data table. | [optional] 
+**legend** | [**LinkElement**](LinkElement.md) | Gets the chart legend. | [optional] 
+**name** | **str** | Gets and sets the name of the chart. | [optional] 
+**n_series** | [**LinkElement**](LinkElement.md) | Gets a SeriesCollection collection representing the data series in the chart. | [optional] 
+**page_setup** | [**LinkElement**](LinkElement.md) | Represents the page setup description in this chart. | [optional] 
+**perspective** | **int** | Returns or sets the perspective for the 3-D chart view. Must be between 0 and 100.This property is ignored if the RightAngleAxes property is True. | [optional] 
+**pivot_source** | **str** | The source is the data of the pivotTable.If PivotSource is not empty ,the chart is PivotChart. | [optional] 
+**placement** | **str** | Represents the way the chart is attached to the cells below it. | [optional] 
+**plot_area** | [**LinkElement**](LinkElement.md) | Gets the chart&#39;s plot area which includes axis tick lables. | [optional] 
+**plot_empty_cells_type** | **str** | Gets and sets how to plot the empty cells. | [optional] 
+**plot_visible_cells** | **bool** | Indicates whether only plot visible cells. | [optional] 
+**print_size** | **str** | Gets and sets the printed chart size. | [optional] 
+**right_angle_axes** | **bool** | True if the chart axes are at right angles.Applies only for 3-D charts(except Column3D and 3-D Pie Charts). | [optional] 
+**rotation_angle** | **int** | Represents the rotation of the 3-D chart view (the rotation of the plot area around the z-axis, in degrees). | [optional] 
+**second_category_axis** | [**LinkElement**](LinkElement.md) | Gets the chart&#39;s second X axis. | [optional] 
+**second_value_axis** | [**LinkElement**](LinkElement.md) | Gets the chart&#39;s second Y axis. | [optional] 
+**series_axis** | [**LinkElement**](LinkElement.md) | Gets the chart&#39;s series axis. | [optional] 
+**shapes** | [**LinkElement**](LinkElement.md) | Returns all drawing shapes in this chart. | [optional] 
+**show_data_table** | **bool** | Gets or sets a value indicating whether the chart displays a data table. | [optional] 
+**show_legend** | **bool** | Gets or sets a value indicating whether the chart legend will be displayed. Default is true. | [optional] 
+**side_wall** | [**LinkElement**](LinkElement.md) |  | [optional] 
+**size_with_window** | **bool** | True if Microsoft Excel resizes the chart to match the size of the chart sheet window. | [optional] 
+**style** | **int** | Gets and sets the builtin style. | [optional] 
+**title** | [**LinkElement**](LinkElement.md) | Gets the chart&#39;s title. | [optional] 
+**type** | **str** | Gets or sets a chart&#39;s type. | [optional] 
+**value_axis** | [**LinkElement**](LinkElement.md) | Gets the chart&#39;s Y axis. | [optional] 
+**walls** | [**LinkElement**](LinkElement.md) | Returns a Walls object that represents the walls of a 3-D chart. | [optional] 
+**walls_and_gridlines2_d** | **bool** | True if gridlines are drawn two-dimensionally on a 3-D chart. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
