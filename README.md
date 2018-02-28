@@ -1,4 +1,4 @@
-# asposecellscloud
+# aspose-cells-cloud-python
 
 Aspose.Cells Cloud SDK for Python allows you to use Aspose.Cells APIs in your Python applications
 
@@ -537,8 +537,6 @@ Class | Method | HTTP request | Description
 - **API key parameter name**: signature
 - **Location**: URL query string
 
-
-## Author
 
 
 
