@@ -38,9 +38,8 @@ setup(
     include_package_data=True,
     long_description="Aspose.Cells Cloud SDK for Python allows you to use Aspose.Cells APIs in your Python applications",
     classifiers=[
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
         'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent'
-    ]
+        'Operating System :: OS Independent',
+    ],
 )
