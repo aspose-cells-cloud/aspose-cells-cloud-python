@@ -227,7 +227,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_get_worksheet_chart**
-> file cells_charts_get_worksheet_chart(name, sheet_name, chart_number, folder=folder)
+> file cells_charts_get_worksheet_chart(name, sheet_name, chart_number, format=format, folder=folder)
 
 Get chart info.
 
@@ -244,11 +244,12 @@ api_instance = asposecellscloud.CellsChartsApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_number = 56 # int | The chart number.
+format = 'format_example' # str | The exported file format. (optional)
 folder = 'folder_example' # str | The document folder. (optional)
 
 try: 
     # Get chart info.
-    api_response = api_instance.cells_charts_get_worksheet_chart(name, sheet_name, chart_number, folder=folder)
+    api_response = api_instance.cells_charts_get_worksheet_chart(name, sheet_name, chart_number, format=format, folder=folder)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_get_worksheet_chart: %s\n" % e)
@@ -261,6 +262,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| Worksheet name. | 
  **chart_number** | **int**| The chart number. | 
+ **format** | **str**| The exported file format. | [optional] 
  **folder** | **str**| The document folder. | [optional] 
 
 ### Return type

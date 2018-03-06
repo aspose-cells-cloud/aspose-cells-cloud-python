@@ -102,9 +102,10 @@ class TestCellsChartsApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 0  
+        format = 'png'
         folder = "Temp"
         AuthUtil.Ready(name, folder)
-        result = self.api.cells_charts_get_worksheet_chart(name, sheet_name,chartIndex, folder=folder)
+        result = self.api.cells_charts_get_worksheet_chart(name, sheet_name, chartIndex, format=format, folder=folder)
         pass
 
     def test_cells_charts_get_worksheet_chart_legend(self):

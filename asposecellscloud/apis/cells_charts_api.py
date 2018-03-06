@@ -537,6 +537,7 @@ class CellsChartsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param int chart_number: The chart number. (required)
+        :param str format: The exported file format.
         :param str folder: The document folder.
         :return: file
                  If the method is called asynchronously,
@@ -565,13 +566,14 @@ class CellsChartsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param int chart_number: The chart number. (required)
+        :param str format: The exported file format.
         :param str folder: The document folder.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_number', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_number', 'format', 'folder']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -608,6 +610,8 @@ class CellsChartsApi(object):
             path_params['chartNumber'] = params['chart_number']
 
         query_params = []
+        if 'format' in params:
+            query_params.append(('format', params['format']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
 
