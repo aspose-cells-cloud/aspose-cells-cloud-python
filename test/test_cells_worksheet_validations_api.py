@@ -24,6 +24,7 @@ from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_worksheet_validations_api import CellsWorksheetValidationsApi
 import AuthUtil
 from asposecellscloud.models import Validation
+from asposecellscloud.models import CellArea
 
 
 class TestCellsWorksheetValidationsApi(unittest.TestCase):
@@ -88,7 +89,13 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         validationIndex = 0
         validation = Validation()
+
+        area = CellArea(start_row = 0, start_column = 0, end_row = 0, end_column = 0)
+        validation.area_list = [area]
+        validation.formula1 = "=(OR(A1=\"Yes\",A1=\"No\"))"
+        validation.type = "Custom"
         validation.ignore_blank = True
+        
         folder = "Temp"
         AuthUtil.Ready(name, folder)
         result = self.api.cells_worksheet_validations_post_worksheet_validation(name, sheet_name,validationIndex, validation=validation,folder=folder)
