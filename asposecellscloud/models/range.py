@@ -54,23 +54,25 @@ class Range(object):
         'worksheet': 'Worksheet'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Range.swagger_types
-        
-    def get_attribute_map(self):
-        return Range.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Range.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, column_count=None, column_width=None, first_column=None, first_row=None, name=None, refers_to=None, row_count=None, row_height=None, worksheet=None):
+    def __init__(self, column_count=None, column_width=None, first_column=None, first_row=None, name=None, refers_to=None, row_count=None, row_height=None, worksheet=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Range - a model defined in Swagger
         """

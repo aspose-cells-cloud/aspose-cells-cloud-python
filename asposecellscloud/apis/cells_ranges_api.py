@@ -40,6 +40,141 @@ class CellsRangesApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
+    def cells_ranges_get_worksheet_cells_range_value(self, name, sheet_name, **kwargs):
+        """
+        Get cells list in a range by range name or row column indexes  
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_ranges_get_worksheet_cells_range_value(name, sheet_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: workbook name (required)
+        :param str sheet_name: worksheet name (required)
+        :param str namerange: range name, for example: 'A1:B2' or 'range_name1'
+        :param int first_row: the first row of the range
+        :param int first_column: the first column of the range
+        :param int row_count: the count of rows in the range
+        :param int column_count: the count of columns in the range
+        :param str folder: Workbook folder.
+        :return: RangeValueResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.cells_ranges_get_worksheet_cells_range_value_with_http_info(name, sheet_name, **kwargs)
+        else:
+            (data) = self.cells_ranges_get_worksheet_cells_range_value_with_http_info(name, sheet_name, **kwargs)
+            return data
+
+    def cells_ranges_get_worksheet_cells_range_value_with_http_info(self, name, sheet_name, **kwargs):
+        """
+        Get cells list in a range by range name or row column indexes  
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_ranges_get_worksheet_cells_range_value_with_http_info(name, sheet_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: workbook name (required)
+        :param str sheet_name: worksheet name (required)
+        :param str namerange: range name, for example: 'A1:B2' or 'range_name1'
+        :param int first_row: the first row of the range
+        :param int first_column: the first column of the range
+        :param int row_count: the count of rows in the range
+        :param int column_count: the count of columns in the range
+        :param str folder: Workbook folder.
+        :return: RangeValueResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'namerange', 'first_row', 'first_column', 'row_count', 'column_count', 'folder']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_ranges_get_worksheet_cells_range_value" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_ranges_get_worksheet_cells_range_value`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_ranges_get_worksheet_cells_range_value`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+
+        query_params = []
+        if 'namerange' in params:
+            query_params.append(('namerange', params['namerange']))
+        if 'first_row' in params:
+            query_params.append(('firstRow', params['first_row']))
+        if 'first_column' in params:
+            query_params.append(('firstColumn', params['first_column']))
+        if 'row_count' in params:
+            query_params.append(('rowCount', params['row_count']))
+        if 'column_count' in params:
+            query_params.append(('columnCount', params['column_count']))
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/ranges/value', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='RangeValueResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def cells_ranges_post_worksheet_cells_range_column_width(self, name, sheet_name, value, **kwargs):
         """
         Set column width of range

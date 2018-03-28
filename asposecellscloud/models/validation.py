@@ -70,23 +70,25 @@ class Validation(object):
         'value2': 'Value2'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Validation.swagger_types
-        
-    def get_attribute_map(self):
-        return Validation.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Validation.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, alert_style=None, area_list=None, error_message=None, error_title=None, formula1=None, formula2=None, ignore_blank=None, in_cell_drop_down=None, input_message=None, input_title=None, operator=None, show_error=None, show_input=None, type=None, value1=None, value2=None):
+    def __init__(self, link=None, alert_style=None, area_list=None, error_message=None, error_title=None, formula1=None, formula2=None, ignore_blank=None, in_cell_drop_down=None, input_message=None, input_title=None, operator=None, show_error=None, show_input=None, type=None, value1=None, value2=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Validation - a model defined in Swagger
         """

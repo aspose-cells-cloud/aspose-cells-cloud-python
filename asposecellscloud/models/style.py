@@ -84,23 +84,25 @@ class Style(object):
         'foreground_theme_color': 'ForegroundThemeColor'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Style.swagger_types
-        
-    def get_attribute_map(self):
-        return Style.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Style.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, font=None, name=None, culture_custom=None, custom=None, background_color=None, foreground_color=None, is_formula_hidden=None, is_date_time=None, is_text_wrapped=None, is_gradient=None, is_locked=None, is_percent=None, shrink_to_fit=None, indent_level=None, number=None, rotation_angle=None, pattern=None, text_direction=None, vertical_alignment=None, horizontal_alignment=None, border_collection=None, background_theme_color=None, foreground_theme_color=None):
+    def __init__(self, link=None, font=None, name=None, culture_custom=None, custom=None, background_color=None, foreground_color=None, is_formula_hidden=None, is_date_time=None, is_text_wrapped=None, is_gradient=None, is_locked=None, is_percent=None, shrink_to_fit=None, indent_level=None, number=None, rotation_angle=None, pattern=None, text_direction=None, vertical_alignment=None, horizontal_alignment=None, border_collection=None, background_theme_color=None, foreground_theme_color=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Style - a model defined in Swagger
         """

@@ -44,19 +44,22 @@ class ImportDoubleArrayOption(ImportOption):
         'data': 'Data'
     }
     
-    def get_swagger_types(self):
-        return dict(ImportDoubleArrayOption.swagger_types, **ImportOption.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(ImportDoubleArrayOption.attribute_map, **ImportOption.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(ImportDoubleArrayOption.swagger_types, **ImportOption.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(ImportDoubleArrayOption.attribute_map, **ImportOption.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, first_row=None, first_column=None, is_vertical=None, data=None):
+    def __init__(self, first_row=None, first_column=None, is_vertical=None, data=None, **kw):
+        super(ImportDoubleArrayOption, self).__init__(**kw)
+		    
         """
         ImportDoubleArrayOption - a model defined in Swagger
         """

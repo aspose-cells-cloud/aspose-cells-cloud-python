@@ -48,23 +48,25 @@ class TextureFill(object):
         'image': 'Image'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return TextureFill.swagger_types
-        
-    def get_attribute_map(self):
-        return TextureFill.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return TextureFill.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, type=None, transparency=None, scale=None, tile_pic_option=None, pic_format_option=None, image=None):
+    def __init__(self, type=None, transparency=None, scale=None, tile_pic_option=None, pic_format_option=None, image=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         TextureFill - a model defined in Swagger
         """

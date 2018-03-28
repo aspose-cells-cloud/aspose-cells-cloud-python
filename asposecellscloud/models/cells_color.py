@@ -46,23 +46,25 @@ class CellsColor(object):
         'type': 'Type'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return CellsColor.swagger_types
-        
-    def get_attribute_map(self):
-        return CellsColor.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return CellsColor.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, color=None, color_index=None, is_shape_color=None, theme_color=None, type=None):
+    def __init__(self, color=None, color_index=None, is_shape_color=None, theme_color=None, type=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         CellsColor - a model defined in Swagger
         """

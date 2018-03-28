@@ -54,23 +54,25 @@ class FilterColumn(object):
         'visibledropdown': 'Visibledropdown'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return FilterColumn.swagger_types
-        
-    def get_attribute_map(self):
-        return FilterColumn.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return FilterColumn.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, field_index=None, filter_type=None, multiple_filters=None, color_filter=None, custom_filters=None, dynamic_filter=None, icon_filter=None, top10_filter=None, visibledropdown=None):
+    def __init__(self, field_index=None, filter_type=None, multiple_filters=None, color_filter=None, custom_filters=None, dynamic_filter=None, icon_filter=None, top10_filter=None, visibledropdown=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         FilterColumn - a model defined in Swagger
         """

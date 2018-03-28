@@ -48,23 +48,25 @@ class TilePicOption(object):
         'mirror_type': 'MirrorType'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return TilePicOption.swagger_types
-        
-    def get_attribute_map(self):
-        return TilePicOption.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return TilePicOption.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, offset_x=None, offset_y=None, scale_x=None, scale_y=None, alignment_type=None, mirror_type=None):
+    def __init__(self, offset_x=None, offset_y=None, scale_x=None, scale_y=None, alignment_type=None, mirror_type=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         TilePicOption - a model defined in Swagger
         """

@@ -38,23 +38,25 @@ class SplitResult(object):
         'documents': 'Documents'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return SplitResult.swagger_types
-        
-    def get_attribute_map(self):
-        return SplitResult.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return SplitResult.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, documents=None):
+    def __init__(self, documents=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         SplitResult - a model defined in Swagger
         """

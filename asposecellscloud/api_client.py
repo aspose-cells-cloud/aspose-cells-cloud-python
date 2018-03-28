@@ -619,15 +619,17 @@ class ApiClient(object):
         :param klass: class literal.
         :return: model object.
         """
-        if not klass.swagger_types:
+        swagger_types = klass.get_swagger_types()
+        attribute_map = klass.get_attribute_map()
+        if not swagger_types:
             return data
 
         kwargs = {}
-        for attr, attr_type in iteritems(klass.swagger_types):
+        for attr, attr_type in iteritems(swagger_types):
             if data is not None \
-               and klass.attribute_map[attr] in data \
+               and attribute_map[attr] in data \
                and isinstance(data, (list, dict)):
-                value = data[klass.attribute_map[attr]]
+                value = data[attribute_map[attr]]
                 kwargs[attr] = self.__deserialize(value, attr_type)
 
         instance = klass(**kwargs)     

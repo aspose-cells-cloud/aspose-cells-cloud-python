@@ -38,19 +38,22 @@ class ColumnResponse(SaaSposeResponse):
         'column': 'Column'
     }
     
-    def get_swagger_types(self):
-        return dict(ColumnResponse.swagger_types, **SaaSposeResponse.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(ColumnResponse.attribute_map, **SaaSposeResponse.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(ColumnResponse.swagger_types, **SaaSposeResponse.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(ColumnResponse.attribute_map, **SaaSposeResponse.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, column=None):
+    def __init__(self, column=None, **kw):
+        super(ColumnResponse, self).__init__(**kw)
+		    
         """
         ColumnResponse - a model defined in Swagger
         """

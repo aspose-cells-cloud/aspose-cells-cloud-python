@@ -40,23 +40,25 @@ class AutoShapes(object):
         'auto_shape_list': 'AutoShapeList'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return AutoShapes.swagger_types
-        
-    def get_attribute_map(self):
-        return AutoShapes.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return AutoShapes.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, auto_shape_list=None):
+    def __init__(self, link=None, auto_shape_list=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         AutoShapes - a model defined in Swagger
         """

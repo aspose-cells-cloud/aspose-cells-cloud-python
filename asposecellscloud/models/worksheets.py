@@ -40,23 +40,25 @@ class Worksheets(object):
         'worksheet_list': 'WorksheetList'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Worksheets.swagger_types
-        
-    def get_attribute_map(self):
-        return Worksheets.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Worksheets.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, worksheet_list=None):
+    def __init__(self, link=None, worksheet_list=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Worksheets - a model defined in Swagger
         """

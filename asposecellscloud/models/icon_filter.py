@@ -40,23 +40,25 @@ class IconFilter(object):
         'icon_set_type': 'IconSetType'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return IconFilter.swagger_types
-        
-    def get_attribute_map(self):
-        return IconFilter.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return IconFilter.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, icon_id=None, icon_set_type=None):
+    def __init__(self, icon_id=None, icon_set_type=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         IconFilter - a model defined in Swagger
         """

@@ -42,23 +42,25 @@ class MergedCells(object):
         'merged_cell_list': 'MergedCellList'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return MergedCells.swagger_types
-        
-    def get_attribute_map(self):
-        return MergedCells.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return MergedCells.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, count=None, merged_cell_list=None):
+    def __init__(self, link=None, count=None, merged_cell_list=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         MergedCells - a model defined in Swagger
         """

@@ -38,23 +38,25 @@ class OperateParameter(object):
         'operate_type': 'OperateType'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return OperateParameter.swagger_types
-        
-    def get_attribute_map(self):
-        return OperateParameter.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return OperateParameter.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, operate_type=None):
+    def __init__(self, operate_type=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         OperateParameter - a model defined in Swagger
         """

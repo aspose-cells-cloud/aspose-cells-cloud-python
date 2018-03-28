@@ -70,23 +70,25 @@ class Cell(object):
         'worksheet': 'Worksheet'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Cell.swagger_types
-        
-    def get_attribute_map(self):
-        return Cell.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Cell.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, name=None, row=None, column=None, value=None, type=None, formula=None, is_formula=None, is_merged=None, is_array_header=None, is_in_array=None, is_error_value=None, is_in_table=None, is_style_set=None, html_string=None, style=None, worksheet=None):
+    def __init__(self, link=None, name=None, row=None, column=None, value=None, type=None, formula=None, is_formula=None, is_merged=None, is_array_header=None, is_in_array=None, is_error_value=None, is_in_table=None, is_style_set=None, html_string=None, style=None, worksheet=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Cell - a model defined in Swagger
         """

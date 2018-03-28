@@ -174,23 +174,25 @@ class PivotTable(object):
         'tag': 'Tag'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return PivotTable.swagger_types
-        
-    def get_attribute_map(self):
-        return PivotTable.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return PivotTable.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, alt_text_description=None, alt_text_title=None, auto_format_type=None, base_fields=None, column_fields=None, column_grand=None, column_header_caption=None, column_range=None, custom_list_sort=None, data_body_range=None, data_field=None, data_fields=None, data_source=None, display_error_string=None, display_immediate_items=None, display_null_string=None, enable_data_value_editing=None, enable_drilldown=None, enable_field_dialog=None, enable_field_list=None, enable_wizard=None, error_string=None, field_list_sort_ascending=None, grand_total_name=None, has_blank_rows=None, indent=None, is_auto_format=None, is_grid_drop_zones=None, is_multiple_field_filters=None, is_selected=None, item_print_titles=None, manual_update=None, merge_labels=None, missing_items_limit=None, name=None, null_string=None, page_field_order=None, page_fields=None, page_field_wrap_count=None, pivot_filters=None, pivot_table_style_name=None, pivot_table_style_type=None, preserve_formatting=None, print_drill=None, print_titles=None, refresh_data_flag=None, refresh_data_on_opening_file=None, row_fields=None, row_grand=None, row_header_caption=None, row_range=None, save_data=None, show_data_tips=None, show_drill=None, show_empty_col=None, show_empty_row=None, show_member_property_tips=None, show_pivot_style_column_header=None, show_pivot_style_column_stripes=None, show_pivot_style_last_column=None, show_pivot_style_row_header=None, show_pivot_style_row_stripes=None, show_row_header_caption=None, show_values_row=None, subtotal_hidden_page_items=None, table_range1=None, table_range2=None, tag=None):
+    def __init__(self, link=None, alt_text_description=None, alt_text_title=None, auto_format_type=None, base_fields=None, column_fields=None, column_grand=None, column_header_caption=None, column_range=None, custom_list_sort=None, data_body_range=None, data_field=None, data_fields=None, data_source=None, display_error_string=None, display_immediate_items=None, display_null_string=None, enable_data_value_editing=None, enable_drilldown=None, enable_field_dialog=None, enable_field_list=None, enable_wizard=None, error_string=None, field_list_sort_ascending=None, grand_total_name=None, has_blank_rows=None, indent=None, is_auto_format=None, is_grid_drop_zones=None, is_multiple_field_filters=None, is_selected=None, item_print_titles=None, manual_update=None, merge_labels=None, missing_items_limit=None, name=None, null_string=None, page_field_order=None, page_fields=None, page_field_wrap_count=None, pivot_filters=None, pivot_table_style_name=None, pivot_table_style_type=None, preserve_formatting=None, print_drill=None, print_titles=None, refresh_data_flag=None, refresh_data_on_opening_file=None, row_fields=None, row_grand=None, row_header_caption=None, row_range=None, save_data=None, show_data_tips=None, show_drill=None, show_empty_col=None, show_empty_row=None, show_member_property_tips=None, show_pivot_style_column_header=None, show_pivot_style_column_stripes=None, show_pivot_style_last_column=None, show_pivot_style_row_header=None, show_pivot_style_row_stripes=None, show_row_header_caption=None, show_values_row=None, subtotal_hidden_page_items=None, table_range1=None, table_range2=None, tag=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         PivotTable - a model defined in Swagger
         """

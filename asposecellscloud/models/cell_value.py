@@ -46,23 +46,25 @@ class CellValue(object):
         'style': 'style'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return CellValue.swagger_types
-        
-    def get_attribute_map(self):
-        return CellValue.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return CellValue.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, row_index=None, column_index=None, type=None, value=None, style=None):
+    def __init__(self, row_index=None, column_index=None, type=None, value=None, style=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         CellValue - a model defined in Swagger
         """

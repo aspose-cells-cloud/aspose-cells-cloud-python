@@ -38,19 +38,22 @@ class ShapesResponse(SaaSposeResponse):
         'shapes': 'Shapes'
     }
     
-    def get_swagger_types(self):
-        return dict(ShapesResponse.swagger_types, **SaaSposeResponse.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(ShapesResponse.attribute_map, **SaaSposeResponse.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(ShapesResponse.swagger_types, **SaaSposeResponse.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(ShapesResponse.attribute_map, **SaaSposeResponse.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, shapes=None):
+    def __init__(self, shapes=None, **kw):
+        super(ShapesResponse, self).__init__(**kw)
+		    
         """
         ShapesResponse - a model defined in Swagger
         """

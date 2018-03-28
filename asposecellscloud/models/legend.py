@@ -68,23 +68,25 @@ class Legend(object):
         'legend_entries': 'LegendEntries'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Legend.swagger_types
-        
-    def get_attribute_map(self):
-        return Legend.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Legend.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, area=None, auto_scale_font=None, background_mode=None, border=None, font=None, is_automatic_size=None, is_inner_mode=None, shadow=None, shape_properties=None, width=None, height=None, x=None, y=None, link=None, position=None, legend_entries=None):
+    def __init__(self, area=None, auto_scale_font=None, background_mode=None, border=None, font=None, is_automatic_size=None, is_inner_mode=None, shadow=None, shape_properties=None, width=None, height=None, x=None, y=None, link=None, position=None, legend_entries=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Legend - a model defined in Swagger
         """

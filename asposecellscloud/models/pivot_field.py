@@ -114,23 +114,25 @@ class PivotField(object):
         'show_subtotal_at_top': 'ShowSubtotalAtTop'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return PivotField.swagger_types
-        
-    def get_attribute_map(self):
-        return PivotField.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return PivotField.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, auto_show_count=None, auto_show_field=None, auto_sort_field=None, base_field=None, base_index=None, base_item=None, base_item_position=None, current_page_item=None, data_display_format=None, display_name=None, drag_to_column=None, drag_to_data=None, drag_to_hide=None, drag_to_page=None, drag_to_row=None, function=None, insert_blank_row=None, is_ascend_show=None, is_ascend_sort=None, is_auto_show=None, is_auto_sort=None, is_auto_subtotals=None, is_calculated_field=None, is_include_new_items_in_filter=None, is_insert_page_breaks_between_items=None, is_multiple_item_selection_allowed=None, is_repeat_item_labels=None, item_count=None, items=None, name=None, number=None, number_format=None, original_items=None, pivot_items=None, position=None, show_all_items=None, show_compact=None, show_in_outline_form=None, show_subtotal_at_top=None):
+    def __init__(self, auto_show_count=None, auto_show_field=None, auto_sort_field=None, base_field=None, base_index=None, base_item=None, base_item_position=None, current_page_item=None, data_display_format=None, display_name=None, drag_to_column=None, drag_to_data=None, drag_to_hide=None, drag_to_page=None, drag_to_row=None, function=None, insert_blank_row=None, is_ascend_show=None, is_ascend_sort=None, is_auto_show=None, is_auto_sort=None, is_auto_subtotals=None, is_calculated_field=None, is_include_new_items_in_filter=None, is_insert_page_breaks_between_items=None, is_multiple_item_selection_allowed=None, is_repeat_item_labels=None, item_count=None, items=None, name=None, number=None, number_format=None, original_items=None, pivot_items=None, position=None, show_all_items=None, show_compact=None, show_in_outline_form=None, show_subtotal_at_top=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         PivotField - a model defined in Swagger
         """

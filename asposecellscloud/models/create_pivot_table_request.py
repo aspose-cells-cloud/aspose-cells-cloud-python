@@ -50,23 +50,25 @@ class CreatePivotTableRequest(object):
         'pivot_field_data': 'PivotFieldData'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return CreatePivotTableRequest.swagger_types
-        
-    def get_attribute_map(self):
-        return CreatePivotTableRequest.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return CreatePivotTableRequest.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, name=None, source_data=None, dest_cell_name=None, use_same_source=None, pivot_field_rows=None, pivot_field_columns=None, pivot_field_data=None):
+    def __init__(self, name=None, source_data=None, dest_cell_name=None, use_same_source=None, pivot_field_rows=None, pivot_field_columns=None, pivot_field_data=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         CreatePivotTableRequest - a model defined in Swagger
         """

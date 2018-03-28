@@ -42,23 +42,25 @@ class CustomParserConfig(object):
         'custom_style': 'CustomStyle'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return CustomParserConfig.swagger_types
-        
-    def get_attribute_map(self):
-        return CustomParserConfig.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return CustomParserConfig.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, column_index=None, parse_method=None, custom_style=None):
+    def __init__(self, column_index=None, parse_method=None, custom_style=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         CustomParserConfig - a model defined in Swagger
         """

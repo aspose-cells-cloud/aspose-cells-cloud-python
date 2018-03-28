@@ -78,23 +78,25 @@ class Title(object):
         'text_vertical_alignment': 'TextVerticalAlignment'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Title.swagger_types
-        
-    def get_attribute_map(self):
-        return Title.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Title.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, area=None, auto_scale_font=None, background_mode=None, border=None, font=None, is_automatic_size=None, is_inner_mode=None, shadow=None, shape_properties=None, width=None, height=None, x=None, y=None, link=None, is_visible=None, linked_source=None, rotation_angle=None, text=None, text_direction=None, text_horizontal_alignment=None, text_vertical_alignment=None):
+    def __init__(self, area=None, auto_scale_font=None, background_mode=None, border=None, font=None, is_automatic_size=None, is_inner_mode=None, shadow=None, shape_properties=None, width=None, height=None, x=None, y=None, link=None, is_visible=None, linked_source=None, rotation_angle=None, text=None, text_direction=None, text_horizontal_alignment=None, text_vertical_alignment=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Title - a model defined in Swagger
         """

@@ -52,19 +52,22 @@ class PivotTableOperateParameter(OperateParameter):
         'pivot_field_data': 'PivotFieldData'
     }
     
-    def get_swagger_types(self):
-        return dict(PivotTableOperateParameter.swagger_types, **OperateParameter.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(PivotTableOperateParameter.attribute_map, **OperateParameter.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(PivotTableOperateParameter.swagger_types, **OperateParameter.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(PivotTableOperateParameter.attribute_map, **OperateParameter.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, source_data=None, dest_cell_name=None, table_name=None, use_same_source=None, pivot_table_index=None, pivot_field_rows=None, pivot_field_columns=None, pivot_field_data=None):
+    def __init__(self, source_data=None, dest_cell_name=None, table_name=None, use_same_source=None, pivot_table_index=None, pivot_field_rows=None, pivot_field_columns=None, pivot_field_data=None, **kw):
+        super(PivotTableOperateParameter, self).__init__(**kw)
+		    
         """
         PivotTableOperateParameter - a model defined in Swagger
         """

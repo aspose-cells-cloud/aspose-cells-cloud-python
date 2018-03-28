@@ -100,23 +100,25 @@ class Worksheet(object):
         'hyperlinks': 'Hyperlinks'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Worksheet.swagger_types
-        
-    def get_attribute_map(self):
-        return Worksheet.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Worksheet.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, links=None, display_right_to_left=None, display_zeros=None, first_visible_column=None, first_visible_row=None, name=None, index=None, is_gridlines_visible=None, is_outline_shown=None, is_page_break_preview=None, is_visible=None, is_protected=None, is_row_column_headers_visible=None, is_ruler_visible=None, is_selected=None, tab_color=None, transition_entry=None, transition_evaluation=None, type=None, view_type=None, visibility_type=None, zoom=None, cells=None, charts=None, auto_shapes=None, ole_objects=None, comments=None, pictures=None, merged_cells=None, validations=None, conditional_formattings=None, hyperlinks=None):
+    def __init__(self, links=None, display_right_to_left=None, display_zeros=None, first_visible_column=None, first_visible_row=None, name=None, index=None, is_gridlines_visible=None, is_outline_shown=None, is_page_break_preview=None, is_visible=None, is_protected=None, is_row_column_headers_visible=None, is_ruler_visible=None, is_selected=None, tab_color=None, transition_entry=None, transition_evaluation=None, type=None, view_type=None, visibility_type=None, zoom=None, cells=None, charts=None, auto_shapes=None, ole_objects=None, comments=None, pictures=None, merged_cells=None, validations=None, conditional_formattings=None, hyperlinks=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Worksheet - a model defined in Swagger
         """

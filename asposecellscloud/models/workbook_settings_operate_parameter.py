@@ -38,19 +38,22 @@ class WorkbookSettingsOperateParameter(OperateParameter):
         'workbook_settings': 'WorkbookSettings'
     }
     
-    def get_swagger_types(self):
-        return dict(WorkbookSettingsOperateParameter.swagger_types, **OperateParameter.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(WorkbookSettingsOperateParameter.attribute_map, **OperateParameter.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(WorkbookSettingsOperateParameter.swagger_types, **OperateParameter.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(WorkbookSettingsOperateParameter.attribute_map, **OperateParameter.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, workbook_settings=None):
+    def __init__(self, workbook_settings=None, **kw):
+        super(WorkbookSettingsOperateParameter, self).__init__(**kw)
+		    
         """
         WorkbookSettingsOperateParameter - a model defined in Swagger
         """

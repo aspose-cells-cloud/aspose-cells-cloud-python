@@ -38,19 +38,22 @@ class PicturesResponse(SaaSposeResponse):
         'pictures': 'Pictures'
     }
     
-    def get_swagger_types(self):
-        return dict(PicturesResponse.swagger_types, **SaaSposeResponse.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(PicturesResponse.attribute_map, **SaaSposeResponse.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(PicturesResponse.swagger_types, **SaaSposeResponse.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(PicturesResponse.attribute_map, **SaaSposeResponse.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, pictures=None):
+    def __init__(self, pictures=None, **kw):
+        super(PicturesResponse, self).__init__(**kw)
+		    
         """
         PicturesResponse - a model defined in Swagger
         """

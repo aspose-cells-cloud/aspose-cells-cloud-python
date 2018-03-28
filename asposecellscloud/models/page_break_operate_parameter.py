@@ -48,19 +48,22 @@ class PageBreakOperateParameter(OperateParameter):
         'end_index': 'EndIndex'
     }
     
-    def get_swagger_types(self):
-        return dict(PageBreakOperateParameter.swagger_types, **OperateParameter.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(PageBreakOperateParameter.attribute_map, **OperateParameter.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(PageBreakOperateParameter.swagger_types, **OperateParameter.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(PageBreakOperateParameter.attribute_map, **OperateParameter.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, page_break_type=None, index=None, row=None, column=None, start_index=None, end_index=None):
+    def __init__(self, page_break_type=None, index=None, row=None, column=None, start_index=None, end_index=None, **kw):
+        super(PageBreakOperateParameter, self).__init__(**kw)
+		    
         """
         PageBreakOperateParameter - a model defined in Swagger
         """

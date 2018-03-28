@@ -38,19 +38,22 @@ class PivotTableResponse(SaaSposeResponse):
         'pivot_table': 'PivotTable'
     }
     
-    def get_swagger_types(self):
-        return dict(PivotTableResponse.swagger_types, **SaaSposeResponse.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(PivotTableResponse.attribute_map, **SaaSposeResponse.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(PivotTableResponse.swagger_types, **SaaSposeResponse.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(PivotTableResponse.attribute_map, **SaaSposeResponse.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, pivot_table=None):
+    def __init__(self, pivot_table=None, **kw):
+        super(PivotTableResponse, self).__init__(**kw)
+		    
         """
         PivotTableResponse - a model defined in Swagger
         """

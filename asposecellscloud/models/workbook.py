@@ -58,23 +58,25 @@ class Workbook(object):
         'password': 'Password'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Workbook.swagger_types
-        
-    def get_attribute_map(self):
-        return Workbook.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Workbook.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, file_name=None, links=None, worksheets=None, default_style=None, document_properties=None, names=None, settings=None, is_write_protected=None, is_protected=None, is_encryption=None, password=None):
+    def __init__(self, file_name=None, links=None, worksheets=None, default_style=None, document_properties=None, names=None, settings=None, is_write_protected=None, is_protected=None, is_encryption=None, password=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Workbook - a model defined in Swagger
         """

@@ -118,23 +118,25 @@ class Picture(object):
         'source_full_name': 'SourceFullName'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Picture.swagger_types
-        
-    def get_attribute_map(self):
-        return Picture.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Picture.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, name=None, mso_drawing_type=None, auto_shape_type=None, placement=None, upper_left_row=None, top=None, upper_left_column=None, left=None, lower_right_row=None, bottom=None, lower_right_column=None, right=None, width=None, height=None, x=None, y=None, rotation_angle=None, html_text=None, text=None, alternative_text=None, text_horizontal_alignment=None, text_horizontal_overflow=None, text_orientation_type=None, text_vertical_alignment=None, text_vertical_overflow=None, is_group=None, is_hidden=None, is_lock_aspect_ratio=None, is_locked=None, is_printable=None, is_text_wrapped=None, is_word_art=None, linked_cell=None, z_order_position=None, link=None, border_line_color=None, border_weight=None, original_height=None, original_width=None, image_format=None, source_full_name=None):
+    def __init__(self, name=None, mso_drawing_type=None, auto_shape_type=None, placement=None, upper_left_row=None, top=None, upper_left_column=None, left=None, lower_right_row=None, bottom=None, lower_right_column=None, right=None, width=None, height=None, x=None, y=None, rotation_angle=None, html_text=None, text=None, alternative_text=None, text_horizontal_alignment=None, text_horizontal_overflow=None, text_orientation_type=None, text_vertical_alignment=None, text_vertical_overflow=None, is_group=None, is_hidden=None, is_lock_aspect_ratio=None, is_locked=None, is_printable=None, is_text_wrapped=None, is_word_art=None, linked_cell=None, z_order_position=None, link=None, border_line_color=None, border_weight=None, original_height=None, original_width=None, image_format=None, source_full_name=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Picture - a model defined in Swagger
         """

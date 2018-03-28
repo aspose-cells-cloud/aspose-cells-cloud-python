@@ -38,19 +38,22 @@ class ConditionalFormattingsResponse(SaaSposeResponse):
         'conditional_formattings': 'ConditionalFormattings'
     }
     
-    def get_swagger_types(self):
-        return dict(ConditionalFormattingsResponse.swagger_types, **SaaSposeResponse.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(ConditionalFormattingsResponse.attribute_map, **SaaSposeResponse.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(ConditionalFormattingsResponse.swagger_types, **SaaSposeResponse.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(ConditionalFormattingsResponse.attribute_map, **SaaSposeResponse.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, conditional_formattings=None):
+    def __init__(self, conditional_formattings=None, **kw):
+        super(ConditionalFormattingsResponse, self).__init__(**kw)
+		    
         """
         ConditionalFormattingsResponse - a model defined in Swagger
         """

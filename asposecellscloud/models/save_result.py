@@ -42,23 +42,25 @@ class SaveResult(object):
         'additional_items': 'AdditionalItems'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return SaveResult.swagger_types
-        
-    def get_attribute_map(self):
-        return SaveResult.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return SaveResult.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, source_document=None, dest_document=None, additional_items=None):
+    def __init__(self, source_document=None, dest_document=None, additional_items=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         SaveResult - a model defined in Swagger
         """

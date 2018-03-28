@@ -54,23 +54,25 @@ class PivotFilter(object):
         'value2': 'Value2'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return PivotFilter.swagger_types
-        
-    def get_attribute_map(self):
-        return PivotFilter.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return PivotFilter.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, auto_filter=None, evaluation_order=None, field_index=None, filter_type=None, measure_fld_index=None, member_property_field_index=None, name=None, value1=None, value2=None):
+    def __init__(self, auto_filter=None, evaluation_order=None, field_index=None, filter_type=None, measure_fld_index=None, member_property_field_index=None, name=None, value1=None, value2=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         PivotFilter - a model defined in Swagger
         """

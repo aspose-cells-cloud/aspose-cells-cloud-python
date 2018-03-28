@@ -52,23 +52,25 @@ class SaveOptions(object):
         'validate_merged_areas': 'ValidateMergedAreas'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return SaveOptions.swagger_types
-        
-    def get_attribute_map(self):
-        return SaveOptions.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return SaveOptions.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, save_format=None, cached_file_folder=None, clear_data=None, create_directory=None, enable_http_compression=None, refresh_chart_cache=None, sort_names=None, validate_merged_areas=None):
+    def __init__(self, save_format=None, cached_file_folder=None, clear_data=None, create_directory=None, enable_http_compression=None, refresh_chart_cache=None, sort_names=None, validate_merged_areas=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         SaveOptions - a model defined in Swagger
         """

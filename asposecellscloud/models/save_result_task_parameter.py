@@ -40,19 +40,22 @@ class SaveResultTaskParameter(TaskParameter):
         'result_destination': 'ResultDestination'
     }
     
-    def get_swagger_types(self):
-        return dict(SaveResultTaskParameter.swagger_types, **TaskParameter.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(SaveResultTaskParameter.attribute_map, **TaskParameter.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(SaveResultTaskParameter.swagger_types, **TaskParameter.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(SaveResultTaskParameter.attribute_map, **TaskParameter.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, result_source=None, result_destination=None):
+    def __init__(self, result_source=None, result_destination=None, **kw):
+        super(SaveResultTaskParameter, self).__init__(**kw)
+		    
         """
         SaveResultTaskParameter - a model defined in Swagger
         """

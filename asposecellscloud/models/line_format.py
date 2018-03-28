@@ -70,23 +70,25 @@ class LineFormat(object):
         'weight': 'Weight'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return LineFormat.swagger_types
-        
-    def get_attribute_map(self):
-        return LineFormat.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return LineFormat.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, type=None, solid_fill=None, pattern_fill=None, texture_fill=None, gradient_fill=None, image_data=None, begin_arrowhead_length=None, begin_arrowhead_style=None, begin_arrowhead_width=None, cap_type=None, compound_type=None, dash_style=None, end_arrowhead_length=None, end_arrowhead_style=None, end_arrowhead_width=None, join_type=None, weight=None):
+    def __init__(self, type=None, solid_fill=None, pattern_fill=None, texture_fill=None, gradient_fill=None, image_data=None, begin_arrowhead_length=None, begin_arrowhead_style=None, begin_arrowhead_width=None, cap_type=None, compound_type=None, dash_style=None, end_arrowhead_length=None, end_arrowhead_style=None, end_arrowhead_width=None, join_type=None, weight=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         LineFormat - a model defined in Swagger
         """

@@ -38,19 +38,22 @@ class AutoShapesResponse(SaaSposeResponse):
         'auto_shapes': 'AutoShapes'
     }
     
-    def get_swagger_types(self):
-        return dict(AutoShapesResponse.swagger_types, **SaaSposeResponse.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(AutoShapesResponse.attribute_map, **SaaSposeResponse.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(AutoShapesResponse.swagger_types, **SaaSposeResponse.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(AutoShapesResponse.attribute_map, **SaaSposeResponse.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, auto_shapes=None):
+    def __init__(self, auto_shapes=None, **kw):
+        super(AutoShapesResponse, self).__init__(**kw)
+		    
         """
         AutoShapesResponse - a model defined in Swagger
         """

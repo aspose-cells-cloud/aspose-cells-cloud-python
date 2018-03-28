@@ -124,23 +124,25 @@ class Chart(object):
         'walls_and_gridlines2_d': 'WallsAndGridlines2D'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Chart.swagger_types
-        
-    def get_attribute_map(self):
-        return Chart.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Chart.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, auto_scaling=None, back_wall=None, category_axis=None, chart_area=None, chart_data_table=None, chart_object=None, depth_percent=None, elevation=None, first_slice_angle=None, floor=None, gap_depth=None, gap_width=None, height_percent=None, hide_pivot_field_buttons=None, is3_d=None, is_rectangular_cornered=None, legend=None, name=None, n_series=None, page_setup=None, perspective=None, pivot_source=None, placement=None, plot_area=None, plot_empty_cells_type=None, plot_visible_cells=None, print_size=None, right_angle_axes=None, rotation_angle=None, second_category_axis=None, second_value_axis=None, series_axis=None, shapes=None, show_data_table=None, show_legend=None, side_wall=None, size_with_window=None, style=None, title=None, type=None, value_axis=None, walls=None, walls_and_gridlines2_d=None):
+    def __init__(self, link=None, auto_scaling=None, back_wall=None, category_axis=None, chart_area=None, chart_data_table=None, chart_object=None, depth_percent=None, elevation=None, first_slice_angle=None, floor=None, gap_depth=None, gap_width=None, height_percent=None, hide_pivot_field_buttons=None, is3_d=None, is_rectangular_cornered=None, legend=None, name=None, n_series=None, page_setup=None, perspective=None, pivot_source=None, placement=None, plot_area=None, plot_empty_cells_type=None, plot_visible_cells=None, print_size=None, right_angle_axes=None, rotation_angle=None, second_category_axis=None, second_value_axis=None, series_axis=None, shapes=None, show_data_table=None, show_legend=None, side_wall=None, size_with_window=None, style=None, title=None, type=None, value_axis=None, walls=None, walls_and_gridlines2_d=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Chart - a model defined in Swagger
         """

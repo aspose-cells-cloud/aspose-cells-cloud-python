@@ -106,23 +106,25 @@ class Shape(object):
         'z_order_position': 'ZOrderPosition'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Shape.swagger_types
-        
-    def get_attribute_map(self):
-        return Shape.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Shape.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, name=None, mso_drawing_type=None, auto_shape_type=None, placement=None, upper_left_row=None, top=None, upper_left_column=None, left=None, lower_right_row=None, bottom=None, lower_right_column=None, right=None, width=None, height=None, x=None, y=None, rotation_angle=None, html_text=None, text=None, alternative_text=None, text_horizontal_alignment=None, text_horizontal_overflow=None, text_orientation_type=None, text_vertical_alignment=None, text_vertical_overflow=None, is_group=None, is_hidden=None, is_lock_aspect_ratio=None, is_locked=None, is_printable=None, is_text_wrapped=None, is_word_art=None, linked_cell=None, z_order_position=None):
+    def __init__(self, link=None, name=None, mso_drawing_type=None, auto_shape_type=None, placement=None, upper_left_row=None, top=None, upper_left_column=None, left=None, lower_right_row=None, bottom=None, lower_right_column=None, right=None, width=None, height=None, x=None, y=None, rotation_angle=None, html_text=None, text=None, alternative_text=None, text_horizontal_alignment=None, text_horizontal_overflow=None, text_orientation_type=None, text_vertical_alignment=None, text_vertical_overflow=None, is_group=None, is_hidden=None, is_lock_aspect_ratio=None, is_locked=None, is_printable=None, is_text_wrapped=None, is_word_art=None, linked_cell=None, z_order_position=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Shape - a model defined in Swagger
         """

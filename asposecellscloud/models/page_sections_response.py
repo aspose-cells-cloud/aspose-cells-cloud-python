@@ -38,19 +38,22 @@ class PageSectionsResponse(SaaSposeResponse):
         'page_sections': 'PageSections'
     }
     
-    def get_swagger_types(self):
-        return dict(PageSectionsResponse.swagger_types, **SaaSposeResponse.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(PageSectionsResponse.attribute_map, **SaaSposeResponse.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(PageSectionsResponse.swagger_types, **SaaSposeResponse.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(PageSectionsResponse.attribute_map, **SaaSposeResponse.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, page_sections=None):
+    def __init__(self, page_sections=None, **kw):
+        super(PageSectionsResponse, self).__init__(**kw)
+		    
         """
         PageSectionsResponse - a model defined in Swagger
         """

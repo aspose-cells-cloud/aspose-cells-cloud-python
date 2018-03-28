@@ -38,19 +38,22 @@ class ListObjectOperateParameter(OperateParameter):
         'list_object': 'ListObject'
     }
     
-    def get_swagger_types(self):
-        return dict(ListObjectOperateParameter.swagger_types, **OperateParameter.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(ListObjectOperateParameter.attribute_map, **OperateParameter.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(ListObjectOperateParameter.swagger_types, **OperateParameter.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(ListObjectOperateParameter.attribute_map, **OperateParameter.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, list_object=None):
+    def __init__(self, list_object=None, **kw):
+        super(ListObjectOperateParameter, self).__init__(**kw)
+		    
         """
         ListObjectOperateParameter - a model defined in Swagger
         """

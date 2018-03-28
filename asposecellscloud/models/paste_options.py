@@ -44,23 +44,25 @@ class PasteOptions(object):
         'transpose': 'Transpose'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return PasteOptions.swagger_types
-        
-    def get_attribute_map(self):
-        return PasteOptions.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return PasteOptions.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, only_visible_cells=None, paste_type=None, skip_blanks=None, transpose=None):
+    def __init__(self, only_visible_cells=None, paste_type=None, skip_blanks=None, transpose=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         PasteOptions - a model defined in Swagger
         """

@@ -74,23 +74,25 @@ class Line(object):
         'weight_pt': 'WeightPt'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Line.swagger_types
-        
-    def get_attribute_map(self):
-        return Line.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Line.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, begin_arrow_length=None, begin_arrow_width=None, begin_type=None, cap_type=None, color=None, compound_type=None, dash_type=None, end_arrow_length=None, end_arrow_width=None, end_type=None, gradient_fill=None, is_auto=None, is_automatic_color=None, is_visible=None, join_type=None, style=None, transparency=None, weight=None, weight_pt=None):
+    def __init__(self, begin_arrow_length=None, begin_arrow_width=None, begin_type=None, cap_type=None, color=None, compound_type=None, dash_type=None, end_arrow_length=None, end_arrow_width=None, end_type=None, gradient_fill=None, is_auto=None, is_automatic_color=None, is_visible=None, join_type=None, style=None, transparency=None, weight=None, weight_pt=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Line - a model defined in Swagger
         """

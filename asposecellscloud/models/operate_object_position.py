@@ -48,23 +48,25 @@ class OperateObjectPosition(object):
         'list_object_index': 'ListObjectIndex'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return OperateObjectPosition.swagger_types
-        
-    def get_attribute_map(self):
-        return OperateObjectPosition.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return OperateObjectPosition.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, workbook=None, sheet_name=None, chart_index=None, shape_index=None, cell_name=None, list_object_index=None):
+    def __init__(self, workbook=None, sheet_name=None, chart_index=None, shape_index=None, cell_name=None, list_object_index=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         OperateObjectPosition - a model defined in Swagger
         """

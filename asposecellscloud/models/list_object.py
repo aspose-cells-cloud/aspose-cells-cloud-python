@@ -68,23 +68,25 @@ class ListObject(object):
         'table_style_type': 'TableStyleType'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return ListObject.swagger_types
-        
-    def get_attribute_map(self):
-        return ListObject.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return ListObject.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, auto_filter=None, display_name=None, start_column=None, start_row=None, end_column=None, end_row=None, list_columns=None, show_header_row=None, show_table_style_column_stripes=None, show_table_style_first_column=None, show_table_style_last_column=None, show_table_style_row_stripes=None, show_totals=None, table_style_name=None, table_style_type=None):
+    def __init__(self, link=None, auto_filter=None, display_name=None, start_column=None, start_row=None, end_column=None, end_row=None, list_columns=None, show_header_row=None, show_table_style_column_stripes=None, show_table_style_first_column=None, show_table_style_last_column=None, show_table_style_row_stripes=None, show_totals=None, table_style_name=None, table_style_type=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         ListObject - a model defined in Swagger
         """

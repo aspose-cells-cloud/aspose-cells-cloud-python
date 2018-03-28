@@ -38,19 +38,22 @@ class WorksheetResponse(SaaSposeResponse):
         'worksheet': 'Worksheet'
     }
     
-    def get_swagger_types(self):
-        return dict(WorksheetResponse.swagger_types, **SaaSposeResponse.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(WorksheetResponse.attribute_map, **SaaSposeResponse.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(WorksheetResponse.swagger_types, **SaaSposeResponse.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(WorksheetResponse.attribute_map, **SaaSposeResponse.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, worksheet=None):
+    def __init__(self, worksheet=None, **kw):
+        super(WorksheetResponse, self).__init__(**kw)
+		    
         """
         WorksheetResponse - a model defined in Swagger
         """

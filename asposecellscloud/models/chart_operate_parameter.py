@@ -54,19 +54,22 @@ class ChartOperateParameter(OperateParameter):
         'string': 'string'
     }
     
-    def get_swagger_types(self):
-        return dict(ChartOperateParameter.swagger_types, **OperateParameter.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(ChartOperateParameter.attribute_map, **OperateParameter.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(ChartOperateParameter.swagger_types, **OperateParameter.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(ChartOperateParameter.attribute_map, **OperateParameter.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, chart_type=None, upper_left_row=None, lower_right_row=None, lower_right_column=None, area=None, is_vertical=None, category_data=None, is_auto_get_serial_name=None, string=None):
+    def __init__(self, chart_type=None, upper_left_row=None, lower_right_row=None, lower_right_column=None, area=None, is_vertical=None, category_data=None, is_auto_get_serial_name=None, string=None, **kw):
+        super(ChartOperateParameter, self).__init__(**kw)
+		    
         """
         ChartOperateParameter - a model defined in Swagger
         """

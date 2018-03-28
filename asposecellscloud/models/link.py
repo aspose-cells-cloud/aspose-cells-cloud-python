@@ -44,23 +44,25 @@ class Link(object):
         'type': 'Type'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Link.swagger_types
-        
-    def get_attribute_map(self):
-        return Link.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Link.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, href=None, rel=None, title=None, type=None):
+    def __init__(self, href=None, rel=None, title=None, type=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Link - a model defined in Swagger
         """

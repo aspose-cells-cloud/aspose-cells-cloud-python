@@ -42,23 +42,25 @@ class AutoFitterOptions(object):
         'only_auto': 'OnlyAuto'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return AutoFitterOptions.swagger_types
-        
-    def get_attribute_map(self):
-        return AutoFitterOptions.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return AutoFitterOptions.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, auto_fit_merged_cells=None, ignore_hidden=None, only_auto=None):
+    def __init__(self, auto_fit_merged_cells=None, ignore_hidden=None, only_auto=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         AutoFitterOptions - a model defined in Swagger
         """

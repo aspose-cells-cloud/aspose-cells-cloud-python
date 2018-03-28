@@ -66,23 +66,25 @@ class FormatCondition(object):
         'top10': 'Top10'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return FormatCondition.swagger_types
-        
-    def get_attribute_map(self):
-        return FormatCondition.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return FormatCondition.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, priority=None, type=None, stop_if_true=None, above_average=None, color_scale=None, data_bar=None, formula1=None, formula2=None, icon_set=None, operator=None, style=None, text=None, time_period=None, top10=None):
+    def __init__(self, link=None, priority=None, type=None, stop_if_true=None, above_average=None, color_scale=None, data_bar=None, formula1=None, formula2=None, icon_set=None, operator=None, style=None, text=None, time_period=None, top10=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         FormatCondition - a model defined in Swagger
         """

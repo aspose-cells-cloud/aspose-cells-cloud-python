@@ -126,23 +126,25 @@ class WorkbookSettings(object):
         'window_width': 'WindowWidth'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return WorkbookSettings.swagger_types
-        
-    def get_attribute_map(self):
-        return WorkbookSettings.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return WorkbookSettings.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, auto_compress_pictures=None, auto_recover=None, build_version=None, calc_mode=None, calc_stack_size=None, calculation_id=None, check_comptiliblity=None, check_excel_restriction=None, crash_save=None, create_calc_chain=None, data_extract_load=None, date1904=None, display_drawing_objects=None, enable_macros=None, first_visible_tab=None, hide_pivot_field_list=None, is_default_encrypted=None, is_hidden=None, is_h_scroll_bar_visible=None, is_minimized=None, is_v_scroll_bar_visible=None, iteration=None, language_code=None, max_change=None, max_iteration=None, memory_setting=None, number_decimal_separator=None, number_group_separator=None, parsing_formula_on_open=None, precision_as_displayed=None, recalculate_before_save=None, re_calculate_on_open=None, recommend_read_only=None, region=None, remove_personal_information=None, repair_load=None, shared=None, sheet_tab_bar_width=None, show_tabs=None, update_adjacent_cells_border=None, update_links_type=None, window_height=None, window_left=None, window_top=None, window_width=None):
+    def __init__(self, auto_compress_pictures=None, auto_recover=None, build_version=None, calc_mode=None, calc_stack_size=None, calculation_id=None, check_comptiliblity=None, check_excel_restriction=None, crash_save=None, create_calc_chain=None, data_extract_load=None, date1904=None, display_drawing_objects=None, enable_macros=None, first_visible_tab=None, hide_pivot_field_list=None, is_default_encrypted=None, is_hidden=None, is_h_scroll_bar_visible=None, is_minimized=None, is_v_scroll_bar_visible=None, iteration=None, language_code=None, max_change=None, max_iteration=None, memory_setting=None, number_decimal_separator=None, number_group_separator=None, parsing_formula_on_open=None, precision_as_displayed=None, recalculate_before_save=None, re_calculate_on_open=None, recommend_read_only=None, region=None, remove_personal_information=None, repair_load=None, shared=None, sheet_tab_bar_width=None, show_tabs=None, update_adjacent_cells_border=None, update_links_type=None, window_height=None, window_left=None, window_top=None, window_width=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         WorkbookSettings - a model defined in Swagger
         """

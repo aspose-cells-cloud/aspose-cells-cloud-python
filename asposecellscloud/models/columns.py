@@ -44,23 +44,25 @@ class Columns(object):
         'columns_list': 'ColumnsList'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Columns.swagger_types
-        
-    def get_attribute_map(self):
-        return Columns.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Columns.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, max_column=None, columns_count=None, columns_list=None):
+    def __init__(self, link=None, max_column=None, columns_count=None, columns_list=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Columns - a model defined in Swagger
         """

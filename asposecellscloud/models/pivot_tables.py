@@ -40,23 +40,25 @@ class PivotTables(object):
         'pivot_table_list': 'PivotTableList'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return PivotTables.swagger_types
-        
-    def get_attribute_map(self):
-        return PivotTables.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return PivotTables.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, pivot_table_list=None):
+    def __init__(self, link=None, pivot_table_list=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         PivotTables - a model defined in Swagger
         """

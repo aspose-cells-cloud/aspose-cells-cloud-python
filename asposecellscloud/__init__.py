@@ -180,6 +180,7 @@ from .models.pivot_table_operate_parameter import PivotTableOperateParameter
 from .models.pivot_table_response import PivotTableResponse
 from .models.pivot_tables import PivotTables
 from .models.pivot_tables_response import PivotTablesResponse
+from .models.range_value_response import RangeValueResponse
 from .models.ranges_response import RangesResponse
 from .models.row import Row
 from .models.row_response import RowResponse

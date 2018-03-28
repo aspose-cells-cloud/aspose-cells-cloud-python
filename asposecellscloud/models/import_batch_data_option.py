@@ -38,19 +38,22 @@ class ImportBatchDataOption(ImportOption):
         'batch_data': 'BatchData'
     }
     
-    def get_swagger_types(self):
-        return dict(ImportBatchDataOption.swagger_types, **ImportOption.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(ImportBatchDataOption.attribute_map, **ImportOption.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(ImportBatchDataOption.swagger_types, **ImportOption.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(ImportBatchDataOption.attribute_map, **ImportOption.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, batch_data=None):
+    def __init__(self, batch_data=None, **kw):
+        super(ImportBatchDataOption, self).__init__(**kw)
+		    
         """
         ImportBatchDataOption - a model defined in Swagger
         """

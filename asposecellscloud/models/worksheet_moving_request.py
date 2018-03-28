@@ -40,23 +40,25 @@ class WorksheetMovingRequest(object):
         'position': 'Position'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return WorksheetMovingRequest.swagger_types
-        
-    def get_attribute_map(self):
-        return WorksheetMovingRequest.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return WorksheetMovingRequest.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, destination_worksheet=None, position=None):
+    def __init__(self, destination_worksheet=None, position=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         WorksheetMovingRequest - a model defined in Swagger
         """

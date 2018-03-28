@@ -40,23 +40,25 @@ class Comments(object):
         'comment_list': 'CommentList'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Comments.swagger_types
-        
-    def get_attribute_map(self):
-        return Comments.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Comments.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, comment_list=None):
+    def __init__(self, link=None, comment_list=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Comments - a model defined in Swagger
         """

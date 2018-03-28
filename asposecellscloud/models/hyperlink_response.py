@@ -38,19 +38,22 @@ class HyperlinkResponse(SaaSposeResponse):
         'hyperlink': 'Hyperlink'
     }
     
-    def get_swagger_types(self):
-        return dict(HyperlinkResponse.swagger_types, **SaaSposeResponse.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(HyperlinkResponse.attribute_map, **SaaSposeResponse.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(HyperlinkResponse.swagger_types, **SaaSposeResponse.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(HyperlinkResponse.attribute_map, **SaaSposeResponse.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, hyperlink=None):
+    def __init__(self, hyperlink=None, **kw):
+        super(HyperlinkResponse, self).__init__(**kw)
+		    
         """
         HyperlinkResponse - a model defined in Swagger
         """

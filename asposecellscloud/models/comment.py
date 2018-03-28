@@ -60,23 +60,25 @@ class Comment(object):
         'text_vertical_alignment': 'TextVerticalAlignment'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return Comment.swagger_types
-        
-    def get_attribute_map(self):
-        return Comment.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return Comment.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, cell_name=None, author=None, html_note=None, note=None, auto_size=None, is_visible=None, width=None, height=None, text_horizontal_alignment=None, text_orientation_type=None, text_vertical_alignment=None):
+    def __init__(self, link=None, cell_name=None, author=None, html_note=None, note=None, auto_size=None, is_visible=None, width=None, height=None, text_horizontal_alignment=None, text_orientation_type=None, text_vertical_alignment=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         Comment - a model defined in Swagger
         """

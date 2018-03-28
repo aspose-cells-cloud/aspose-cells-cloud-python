@@ -43,6 +43,32 @@ class TestCellsRangesApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_cells_ranges_get_worksheet_cells_range_value(self):
+        """
+        Test case for cells_ranges_get_worksheet_cells_range_value
+
+        Get cells list in a range by range name or row column indexes  
+        """
+        name ='Book1.xlsx'  
+        sheet_name ='Sheet1'    
+        folder = "Temp"
+        AuthUtil.Ready(name, folder)
+        firstRow = 0
+        firstColumn = 0
+        rowCount = 3
+        columnCount = 2
+        response = self.api.cells_ranges_get_worksheet_cells_range_value(name, sheet_name, first_row=firstRow, first_column=firstColumn, row_count=rowCount, column_count=columnCount, folder=folder)
+        assert(len(response.cells_list) > 0)
+
+        range_name = "A1:B3"
+        response = self.api.cells_ranges_get_worksheet_cells_range_value(name, sheet_name, namerange=range_name, folder=folder)
+        assert(len(response.cells_list) > 0)
+
+        range_name = "Name_2"
+        response = self.api.cells_ranges_get_worksheet_cells_range_value(name, sheet_name, namerange=range_name, folder=folder)
+        assert(len(response.cells_list) > 0)
+        pass
+
     def test_cells_ranges_post_worksheet_cells_range_column_width(self):
         """
         Test case for cells_ranges_post_worksheet_cells_range_column_width

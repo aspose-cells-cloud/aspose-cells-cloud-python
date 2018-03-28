@@ -106,23 +106,25 @@ class PageSetup(object):
         'footer': 'Footer'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return PageSetup.swagger_types
-        
-    def get_attribute_map(self):
-        return PageSetup.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return PageSetup.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, black_and_white=None, bottom_margin=None, center_horizontally=None, center_vertically=None, first_page_number=None, fit_to_pages_tall=None, fit_to_pages_wide=None, footer_margin=None, header_margin=None, is_auto_first_page_number=None, is_hf_align_margins=None, is_hf_diff_first=None, is_hf_diff_odd_even=None, is_hf_scale_with_doc=None, is_percent_scale=None, left_margin=None, order=None, orientation=None, paper_size=None, print_area=None, print_comments=None, print_copies=None, print_draft=None, print_errors=None, print_gridlines=None, print_headings=None, print_quality=None, print_title_columns=None, print_title_rows=None, right_margin=None, top_margin=None, zoom=None, header=None, footer=None):
+    def __init__(self, link=None, black_and_white=None, bottom_margin=None, center_horizontally=None, center_vertically=None, first_page_number=None, fit_to_pages_tall=None, fit_to_pages_wide=None, footer_margin=None, header_margin=None, is_auto_first_page_number=None, is_hf_align_margins=None, is_hf_diff_first=None, is_hf_diff_odd_even=None, is_hf_scale_with_doc=None, is_percent_scale=None, left_margin=None, order=None, orientation=None, paper_size=None, print_area=None, print_comments=None, print_copies=None, print_draft=None, print_errors=None, print_gridlines=None, print_headings=None, print_quality=None, print_title_columns=None, print_title_rows=None, right_margin=None, top_margin=None, zoom=None, header=None, footer=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         PageSetup - a model defined in Swagger
         """

@@ -44,23 +44,25 @@ class AutoFilter(object):
         'sorter': 'Sorter'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return AutoFilter.swagger_types
-        
-    def get_attribute_map(self):
-        return AutoFilter.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return AutoFilter.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, filter_columns=None, range=None, sorter=None):
+    def __init__(self, link=None, filter_columns=None, range=None, sorter=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         AutoFilter - a model defined in Swagger
         """

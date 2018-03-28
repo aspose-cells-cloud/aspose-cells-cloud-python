@@ -48,19 +48,22 @@ class SplitWorkbookTaskParameter(TaskParameter):
         'horizontal_resolution': 'HorizontalResolution'
     }
     
-    def get_swagger_types(self):
-        return dict(SplitWorkbookTaskParameter.swagger_types, **TaskParameter.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(SplitWorkbookTaskParameter.attribute_map, **TaskParameter.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(SplitWorkbookTaskParameter.swagger_types, **TaskParameter.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(SplitWorkbookTaskParameter.attribute_map, **TaskParameter.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, workbook=None, destination_file_position=None, destination_file_format=None, split_name_rule=None, vertical_resolution=None, horizontal_resolution=None):
+    def __init__(self, workbook=None, destination_file_position=None, destination_file_format=None, split_name_rule=None, vertical_resolution=None, horizontal_resolution=None, **kw):
+        super(SplitWorkbookTaskParameter, self).__init__(**kw)
+		    
         """
         SplitWorkbookTaskParameter - a model defined in Swagger
         """

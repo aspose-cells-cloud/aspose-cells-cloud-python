@@ -48,19 +48,22 @@ class ImportCSVDataOption(ImportOption):
         'custom_parsers': 'CustomParsers'
     }
     
-    def get_swagger_types(self):
-        return dict(ImportCSVDataOption.swagger_types, **ImportOption.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(ImportCSVDataOption.attribute_map, **ImportOption.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(ImportCSVDataOption.swagger_types, **ImportOption.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(ImportCSVDataOption.attribute_map, **ImportOption.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, separator_string=None, convert_numeric_data=None, first_row=None, first_column=None, source_file=None, custom_parsers=None):
+    def __init__(self, separator_string=None, convert_numeric_data=None, first_row=None, first_column=None, source_file=None, custom_parsers=None, **kw):
+        super(ImportCSVDataOption, self).__init__(**kw)
+		    
         """
         ImportCSVDataOption - a model defined in Swagger
         """

@@ -60,23 +60,25 @@ class DataBar(object):
         'show_value': 'ShowValue'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return DataBar.swagger_types
-        
-    def get_attribute_map(self):
-        return DataBar.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return DataBar.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, axis_color=None, axis_position=None, bar_border=None, bar_fill_type=None, color=None, direction=None, max_cfvo=None, max_length=None, min_cfvo=None, min_length=None, negative_bar_format=None, show_value=None):
+    def __init__(self, axis_color=None, axis_position=None, bar_border=None, bar_fill_type=None, color=None, direction=None, max_cfvo=None, max_length=None, min_cfvo=None, min_length=None, negative_bar_format=None, show_value=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         DataBar - a model defined in Swagger
         """

@@ -42,23 +42,25 @@ class SolidFill(object):
         'transparency': 'Transparency'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return SolidFill.swagger_types
-        
-    def get_attribute_map(self):
-        return SolidFill.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return SolidFill.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, color=None, cells_color=None, transparency=None):
+    def __init__(self, color=None, cells_color=None, transparency=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         SolidFill - a model defined in Swagger
         """

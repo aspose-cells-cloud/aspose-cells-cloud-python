@@ -42,23 +42,25 @@ class ResultDestination(object):
         'output_file': 'OutputFile'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return ResultDestination.swagger_types
-        
-    def get_attribute_map(self):
-        return ResultDestination.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return ResultDestination.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, destination_type=None, input_file=None, output_file=None):
+    def __init__(self, destination_type=None, input_file=None, output_file=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         ResultDestination - a model defined in Swagger
         """

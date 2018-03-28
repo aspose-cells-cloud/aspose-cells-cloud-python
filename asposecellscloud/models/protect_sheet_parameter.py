@@ -68,23 +68,25 @@ class ProtectSheetParameter(object):
         'allow_using_pivot_table': 'AllowUsingPivotTable'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return ProtectSheetParameter.swagger_types
-        
-    def get_attribute_map(self):
-        return ProtectSheetParameter.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return ProtectSheetParameter.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, protection_type=None, password=None, allow_edit_area=None, allow_deleting_column=None, allow_deleting_row=None, allow_filtering=None, allow_formatting_cell=None, allow_formatting_column=None, allow_formatting_row=None, allow_inserting_column=None, allow_inserting_hyperlink=None, allow_inserting_row=None, allow_selecting_locked_cell=None, allow_selecting_unlocked_cell=None, allow_sorting=None, allow_using_pivot_table=None):
+    def __init__(self, protection_type=None, password=None, allow_edit_area=None, allow_deleting_column=None, allow_deleting_row=None, allow_filtering=None, allow_formatting_cell=None, allow_formatting_column=None, allow_formatting_row=None, allow_inserting_column=None, allow_inserting_hyperlink=None, allow_inserting_row=None, allow_selecting_locked_cell=None, allow_selecting_unlocked_cell=None, allow_sorting=None, allow_using_pivot_table=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         ProtectSheetParameter - a model defined in Swagger
         """

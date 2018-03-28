@@ -4,6 +4,7 @@ All URIs are relative to *https://api.aspose.cloud/v1.1/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cells_ranges_get_worksheet_cells_range_value**](CellsRangesApi.md#cells_ranges_get_worksheet_cells_range_value) | **GET** /cells/{name}/worksheets/{sheetName}/ranges/value | Get cells list in a range by range name or row column indexes  
 [**cells_ranges_post_worksheet_cells_range_column_width**](CellsRangesApi.md#cells_ranges_post_worksheet_cells_range_column_width) | **POST** /cells/{name}/worksheets/{sheetName}/ranges/columnWidth | Set column width of range
 [**cells_ranges_post_worksheet_cells_range_merge**](CellsRangesApi.md#cells_ranges_post_worksheet_cells_range_merge) | **POST** /cells/{name}/worksheets/{sheetName}/ranges/merge | Combines a range of cells into a single cell.              
 [**cells_ranges_post_worksheet_cells_range_move_to**](CellsRangesApi.md#cells_ranges_post_worksheet_cells_range_move_to) | **POST** /cells/{name}/worksheets/{sheetName}/ranges/moveto | Move the current range to the dest range.             
@@ -14,6 +15,66 @@ Method | HTTP request | Description
 [**cells_ranges_post_worksheet_cells_range_value**](CellsRangesApi.md#cells_ranges_post_worksheet_cells_range_value) | **POST** /cells/{name}/worksheets/{sheetName}/ranges/value | Puts a value into the range, if appropriate the value will be converted to other data type and cell&#39;s number format will be reset.             
 [**cells_ranges_post_worksheet_cells_ranges**](CellsRangesApi.md#cells_ranges_post_worksheet_cells_ranges) | **POST** /cells/{name}/worksheets/{sheetName}/ranges | copy range in the worksheet
 
+
+# **cells_ranges_get_worksheet_cells_range_value**
+> RangeValueResponse cells_ranges_get_worksheet_cells_range_value(name, sheet_name, namerange=namerange, first_row=first_row, first_column=first_column, row_count=row_count, column_count=column_count, folder=folder)
+
+Get cells list in a range by range name or row column indexes  
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import asposecellscloud
+from asposecellscloud.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = asposecellscloud.CellsRangesApi()
+name = 'name_example' # str | workbook name
+sheet_name = 'sheet_name_example' # str | worksheet name
+namerange = 'namerange_example' # str | range name, for example: 'A1:B2' or 'range_name1' (optional)
+first_row = 56 # int | the first row of the range (optional)
+first_column = 56 # int | the first column of the range (optional)
+row_count = 56 # int | the count of rows in the range (optional)
+column_count = 56 # int | the count of columns in the range (optional)
+folder = 'folder_example' # str | Workbook folder. (optional)
+
+try: 
+    # Get cells list in a range by range name or row column indexes  
+    api_response = api_instance.cells_ranges_get_worksheet_cells_range_value(name, sheet_name, namerange=namerange, first_row=first_row, first_column=first_column, row_count=row_count, column_count=column_count, folder=folder)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CellsRangesApi->cells_ranges_get_worksheet_cells_range_value: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| workbook name | 
+ **sheet_name** | **str**| worksheet name | 
+ **namerange** | **str**| range name, for example: &#39;A1:B2&#39; or &#39;range_name1&#39; | [optional] 
+ **first_row** | **int**| the first row of the range | [optional] 
+ **first_column** | **int**| the first column of the range | [optional] 
+ **row_count** | **int**| the count of rows in the range | [optional] 
+ **column_count** | **int**| the count of columns in the range | [optional] 
+ **folder** | **str**| Workbook folder. | [optional] 
+
+### Return type
+
+[**RangeValueResponse**](RangeValueResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_ranges_post_worksheet_cells_range_column_width**
 > SaaSposeResponse cells_ranges_post_worksheet_cells_range_column_width(name, sheet_name, value, range=range, folder=folder)

@@ -42,23 +42,25 @@ class ConditionalFormatting(object):
         'format_conditions': 'FormatConditions'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return ConditionalFormatting.swagger_types
-        
-    def get_attribute_map(self):
-        return ConditionalFormatting.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return ConditionalFormatting.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, sqref=None, format_conditions=None):
+    def __init__(self, link=None, sqref=None, format_conditions=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         ConditionalFormatting - a model defined in Swagger
         """

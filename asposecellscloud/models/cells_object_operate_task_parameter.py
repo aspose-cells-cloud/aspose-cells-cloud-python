@@ -42,19 +42,22 @@ class CellsObjectOperateTaskParameter(TaskParameter):
         'destination_workbook': 'DestinationWorkbook'
     }
     
-    def get_swagger_types(self):
-        return dict(CellsObjectOperateTaskParameter.swagger_types, **TaskParameter.get_swagger_types(self))
-        
-    def get_attribute_map(self):
-        return dict(CellsObjectOperateTaskParameter.attribute_map, **TaskParameter.get_attribute_map(self))
+    @staticmethod
+    def get_swagger_types():
+        return dict(CellsObjectOperateTaskParameter.swagger_types, **TaskParameter.get_swagger_types())
     
+    @staticmethod
+    def get_attribute_map():
+        return dict(CellsObjectOperateTaskParameter.attribute_map, **TaskParameter.get_attribute_map())
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, operate_object=None, operate_parameter=None, destination_workbook=None):
+    def __init__(self, operate_object=None, operate_parameter=None, destination_workbook=None, **kw):
+        super(CellsObjectOperateTaskParameter, self).__init__(**kw)
+		    
         """
         CellsObjectOperateTaskParameter - a model defined in Swagger
         """

@@ -40,23 +40,25 @@ class CellsDocumentProperties(object):
         'document_property_list': 'DocumentPropertyList'
     }
     
-    def get_swagger_types(self):
+    @staticmethod
+    def get_swagger_types():
         return CellsDocumentProperties.swagger_types
-        
-    def get_attribute_map(self):
-        return CellsDocumentProperties.attribute_map
     
-    """
-        Associative dict for storing property values
-    """
-    container = {}
+    @staticmethod
+    def get_attribute_map():
+        return CellsDocumentProperties.attribute_map
     
     def get_from_container(self, attr):
         if attr in self.container:
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, document_property_list=None):
+    def __init__(self, link=None, document_property_list=None, **kw):
+        """
+        Associative dict for storing property values
+        """
+        self.container = {}
+		    
         """
         CellsDocumentProperties - a model defined in Swagger
         """
