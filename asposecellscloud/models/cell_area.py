@@ -95,8 +95,10 @@ class CellArea(object):
         :param end_column: The end_column of this CellArea.
         :type: int
         """
+        """
         if end_column is None:
             raise ValueError("Invalid value for `end_column`, must not be `None`")
+        """
 
         self.container['end_column'] = end_column
 
@@ -118,8 +120,10 @@ class CellArea(object):
         :param end_row: The end_row of this CellArea.
         :type: int
         """
+        """
         if end_row is None:
             raise ValueError("Invalid value for `end_row`, must not be `None`")
+        """
 
         self.container['end_row'] = end_row
 
@@ -141,8 +145,10 @@ class CellArea(object):
         :param start_column: The start_column of this CellArea.
         :type: int
         """
+        """
         if start_column is None:
             raise ValueError("Invalid value for `start_column`, must not be `None`")
+        """
 
         self.container['start_column'] = start_column
 
@@ -164,8 +170,10 @@ class CellArea(object):
         :param start_row: The start_row of this CellArea.
         :type: int
         """
+        """
         if start_row is None:
             raise ValueError("Invalid value for `start_row`, must not be `None`")
+        """
 
         self.container['start_row'] = start_row
 

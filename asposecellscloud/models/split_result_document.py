@@ -109,8 +109,10 @@ class SplitResultDocument(object):
         :param id: The id of this SplitResultDocument.
         :type: int
         """
+        """
         if id is None:
             raise ValueError("Invalid value for `id`, must not be `None`")
+        """
 
         self.container['id'] = id
 

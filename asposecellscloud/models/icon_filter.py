@@ -88,8 +88,10 @@ class IconFilter(object):
         :param icon_id: The icon_id of this IconFilter.
         :type: int
         """
+        """
         if icon_id is None:
             raise ValueError("Invalid value for `icon_id`, must not be `None`")
+        """
 
         self.container['icon_id'] = icon_id
 

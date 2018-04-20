@@ -158,8 +158,10 @@ class Name(object):
         :param worksheet_index: The worksheet_index of this Name.
         :type: int
         """
+        """
         if worksheet_index is None:
             raise ValueError("Invalid value for `worksheet_index`, must not be `None`")
+        """
 
         self.container['worksheet_index'] = worksheet_index
 
@@ -181,8 +183,10 @@ class Name(object):
         :param is_referred: The is_referred of this Name.
         :type: bool
         """
+        """
         if is_referred is None:
             raise ValueError("Invalid value for `is_referred`, must not be `None`")
+        """
 
         self.container['is_referred'] = is_referred
 
@@ -204,8 +208,10 @@ class Name(object):
         :param is_visible: The is_visible of this Name.
         :type: bool
         """
+        """
         if is_visible is None:
             raise ValueError("Invalid value for `is_visible`, must not be `None`")
+        """
 
         self.container['is_visible'] = is_visible
 

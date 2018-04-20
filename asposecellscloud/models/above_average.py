@@ -93,8 +93,10 @@ class AboveAverage(object):
         :param is_above_average: The is_above_average of this AboveAverage.
         :type: bool
         """
+        """
         if is_above_average is None:
             raise ValueError("Invalid value for `is_above_average`, must not be `None`")
+        """
 
         self.container['is_above_average'] = is_above_average
 
@@ -118,8 +120,10 @@ class AboveAverage(object):
         :param is_equal_average: The is_equal_average of this AboveAverage.
         :type: bool
         """
+        """
         if is_equal_average is None:
             raise ValueError("Invalid value for `is_equal_average`, must not be `None`")
+        """
 
         self.container['is_equal_average'] = is_equal_average
 
@@ -143,8 +147,10 @@ class AboveAverage(object):
         :param std_dev: The std_dev of this AboveAverage.
         :type: int
         """
+        """
         if std_dev is None:
             raise ValueError("Invalid value for `std_dev`, must not be `None`")
+        """
 
         self.container['std_dev'] = std_dev
 

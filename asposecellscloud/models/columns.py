@@ -118,8 +118,10 @@ class Columns(object):
         :param max_column: The max_column of this Columns.
         :type: int
         """
+        """
         if max_column is None:
             raise ValueError("Invalid value for `max_column`, must not be `None`")
+        """
 
         self.container['max_column'] = max_column
 
@@ -141,8 +143,10 @@ class Columns(object):
         :param columns_count: The columns_count of this Columns.
         :type: int
         """
+        """
         if columns_count is None:
             raise ValueError("Invalid value for `columns_count`, must not be `None`")
+        """
 
         self.container['columns_count'] = columns_count
 

@@ -114,8 +114,10 @@ class Validations(object):
         :param count: The count of this Validations.
         :type: int
         """
+        """
         if count is None:
             raise ValueError("Invalid value for `count`, must not be `None`")
+        """
 
         self.container['count'] = count
 

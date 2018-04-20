@@ -123,8 +123,10 @@ class FontSetting(object):
         :param length: The length of this FontSetting.
         :type: int
         """
+        """
         if length is None:
             raise ValueError("Invalid value for `length`, must not be `None`")
+        """
 
         self.container['length'] = length
 
@@ -146,8 +148,10 @@ class FontSetting(object):
         :param start_index: The start_index of this FontSetting.
         :type: int
         """
+        """
         if start_index is None:
             raise ValueError("Invalid value for `start_index`, must not be `None`")
+        """
 
         self.container['start_index'] = start_index
 

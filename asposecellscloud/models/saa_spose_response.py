@@ -88,8 +88,10 @@ class SaaSposeResponse(object):
         :param code: The code of this SaaSposeResponse.
         :type: int
         """
+        """
         if code is None:
             raise ValueError("Invalid value for `code`, must not be `None`")
+        """
 
         self.container['code'] = code
 

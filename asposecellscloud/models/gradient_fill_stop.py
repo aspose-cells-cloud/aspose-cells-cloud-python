@@ -113,8 +113,10 @@ class GradientFillStop(object):
         :param position: The position of this GradientFillStop.
         :type: float
         """
+        """
         if position is None:
             raise ValueError("Invalid value for `position`, must not be `None`")
+        """
 
         self.container['position'] = position
 
@@ -136,8 +138,10 @@ class GradientFillStop(object):
         :param transparency: The transparency of this GradientFillStop.
         :type: float
         """
+        """
         if transparency is None:
             raise ValueError("Invalid value for `transparency`, must not be `None`")
+        """
 
         self.container['transparency'] = transparency
 

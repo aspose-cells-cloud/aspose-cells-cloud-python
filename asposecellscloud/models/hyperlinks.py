@@ -114,8 +114,10 @@ class Hyperlinks(object):
         :param count: The count of this Hyperlinks.
         :type: int
         """
+        """
         if count is None:
             raise ValueError("Invalid value for `count`, must not be `None`")
+        """
 
         self.container['count'] = count
 

@@ -7,9 +7,12 @@ Method | HTTP request | Description
 [**cells_workbook_delete_decrypt_document**](CellsWorkbookApi.md#cells_workbook_delete_decrypt_document) | **DELETE** /cells/{name}/encryption | Decrypt document.
 [**cells_workbook_delete_document_unprotect_from_changes**](CellsWorkbookApi.md#cells_workbook_delete_document_unprotect_from_changes) | **DELETE** /cells/{name}/writeProtection | Unprotect document from changes.
 [**cells_workbook_delete_unprotect_document**](CellsWorkbookApi.md#cells_workbook_delete_unprotect_document) | **DELETE** /cells/{name}/protection | Unprotect document.
+[**cells_workbook_delete_workbook_name**](CellsWorkbookApi.md#cells_workbook_delete_workbook_name) | **DELETE** /cells/{name}/names/{nameName} | Clean workbook&#39;s names.
+[**cells_workbook_delete_workbook_names**](CellsWorkbookApi.md#cells_workbook_delete_workbook_names) | **DELETE** /cells/{name}/names | Clean workbook&#39;s names.
 [**cells_workbook_get_workbook**](CellsWorkbookApi.md#cells_workbook_get_workbook) | **GET** /cells/{name} | Read workbook info or export.
 [**cells_workbook_get_workbook_default_style**](CellsWorkbookApi.md#cells_workbook_get_workbook_default_style) | **GET** /cells/{name}/defaultstyle | Read workbook default style info.
 [**cells_workbook_get_workbook_name**](CellsWorkbookApi.md#cells_workbook_get_workbook_name) | **GET** /cells/{name}/names/{nameName} | Read workbook&#39;s name.
+[**cells_workbook_get_workbook_name_value**](CellsWorkbookApi.md#cells_workbook_get_workbook_name_value) | **GET** /cells/{name}/names/{nameName}/value | Get workbook&#39;s name value.
 [**cells_workbook_get_workbook_names**](CellsWorkbookApi.md#cells_workbook_get_workbook_names) | **GET** /cells/{name}/names | Read workbook&#39;s names.
 [**cells_workbook_get_workbook_settings**](CellsWorkbookApi.md#cells_workbook_get_workbook_settings) | **GET** /cells/{name}/settings | Get Workbook Settings DTO
 [**cells_workbook_get_workbook_text_items**](CellsWorkbookApi.md#cells_workbook_get_workbook_text_items) | **GET** /cells/{name}/textItems | Read workbook&#39;s text items.
@@ -177,6 +180,104 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **cells_workbook_delete_workbook_name**
+> SaaSposeResponse cells_workbook_delete_workbook_name(name, name_name, folder=folder)
+
+Clean workbook's names.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import asposecellscloud
+from asposecellscloud.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = asposecellscloud.CellsWorkbookApi()
+name = 'name_example' # str | The workbook name.
+name_name = 'name_name_example' # str | The name.
+folder = 'folder_example' # str | The workbook folder. (optional)
+
+try: 
+    # Clean workbook's names.
+    api_response = api_instance.cells_workbook_delete_workbook_name(name, name_name, folder=folder)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CellsWorkbookApi->cells_workbook_delete_workbook_name: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| The workbook name. | 
+ **name_name** | **str**| The name. | 
+ **folder** | **str**| The workbook folder. | [optional] 
+
+### Return type
+
+[**SaaSposeResponse**](SaaSposeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cells_workbook_delete_workbook_names**
+> SaaSposeResponse cells_workbook_delete_workbook_names(name, folder=folder)
+
+Clean workbook's names.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import asposecellscloud
+from asposecellscloud.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = asposecellscloud.CellsWorkbookApi()
+name = 'name_example' # str | The workbook name.
+folder = 'folder_example' # str | The workbook folder. (optional)
+
+try: 
+    # Clean workbook's names.
+    api_response = api_instance.cells_workbook_delete_workbook_names(name, folder=folder)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CellsWorkbookApi->cells_workbook_delete_workbook_names: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| The workbook name. | 
+ **folder** | **str**| The workbook folder. | [optional] 
+
+### Return type
+
+[**SaaSposeResponse**](SaaSposeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **cells_workbook_get_workbook**
 > file cells_workbook_get_workbook(name, password=password, is_auto_fit=is_auto_fit, folder=folder)
 
@@ -315,6 +416,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**NameResponse**](NameResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cells_workbook_get_workbook_name_value**
+> RangeValueResponse cells_workbook_get_workbook_name_value(name, name_name, folder=folder)
+
+Get workbook's name value.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import asposecellscloud
+from asposecellscloud.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = asposecellscloud.CellsWorkbookApi()
+name = 'name_example' # str | The workbook name.
+name_name = 'name_name_example' # str | The name.
+folder = 'folder_example' # str | The workbook folder. (optional)
+
+try: 
+    # Get workbook's name value.
+    api_response = api_instance.cells_workbook_get_workbook_name_value(name, name_name, folder=folder)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CellsWorkbookApi->cells_workbook_get_workbook_name_value: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| The workbook name. | 
+ **name_name** | **str**| The name. | 
+ **folder** | **str**| The workbook folder. | [optional] 
+
+### Return type
+
+[**RangeValueResponse**](RangeValueResponse.md)
 
 ### Authorization
 

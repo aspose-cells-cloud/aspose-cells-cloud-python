@@ -132,8 +132,10 @@ class Cells(object):
         :param max_row: The max_row of this Cells.
         :type: int
         """
+        """
         if max_row is None:
             raise ValueError("Invalid value for `max_row`, must not be `None`")
+        """
 
         self.container['max_row'] = max_row
 
@@ -157,8 +159,10 @@ class Cells(object):
         :param max_column: The max_column of this Cells.
         :type: int
         """
+        """
         if max_column is None:
             raise ValueError("Invalid value for `max_column`, must not be `None`")
+        """
 
         self.container['max_column'] = max_column
 
@@ -180,8 +184,10 @@ class Cells(object):
         :param cell_count: The cell_count of this Cells.
         :type: int
         """
+        """
         if cell_count is None:
             raise ValueError("Invalid value for `cell_count`, must not be `None`")
+        """
 
         self.container['cell_count'] = cell_count
 

@@ -201,8 +201,10 @@ class Cell(object):
         :param row: The row of this Cell.
         :type: int
         """
+        """
         if row is None:
             raise ValueError("Invalid value for `row`, must not be `None`")
+        """
 
         self.container['row'] = row
 
@@ -226,8 +228,10 @@ class Cell(object):
         :param column: The column of this Cell.
         :type: int
         """
+        """
         if column is None:
             raise ValueError("Invalid value for `column`, must not be `None`")
+        """
 
         self.container['column'] = column
 
@@ -318,8 +322,10 @@ class Cell(object):
         :param is_formula: The is_formula of this Cell.
         :type: bool
         """
+        """
         if is_formula is None:
             raise ValueError("Invalid value for `is_formula`, must not be `None`")
+        """
 
         self.container['is_formula'] = is_formula
 
@@ -343,8 +349,10 @@ class Cell(object):
         :param is_merged: The is_merged of this Cell.
         :type: bool
         """
+        """
         if is_merged is None:
             raise ValueError("Invalid value for `is_merged`, must not be `None`")
+        """
 
         self.container['is_merged'] = is_merged
 
@@ -368,8 +376,10 @@ class Cell(object):
         :param is_array_header: The is_array_header of this Cell.
         :type: bool
         """
+        """
         if is_array_header is None:
             raise ValueError("Invalid value for `is_array_header`, must not be `None`")
+        """
 
         self.container['is_array_header'] = is_array_header
 
@@ -393,8 +403,10 @@ class Cell(object):
         :param is_in_array: The is_in_array of this Cell.
         :type: bool
         """
+        """
         if is_in_array is None:
             raise ValueError("Invalid value for `is_in_array`, must not be `None`")
+        """
 
         self.container['is_in_array'] = is_in_array
 
@@ -418,8 +430,10 @@ class Cell(object):
         :param is_error_value: The is_error_value of this Cell.
         :type: bool
         """
+        """
         if is_error_value is None:
             raise ValueError("Invalid value for `is_error_value`, must not be `None`")
+        """
 
         self.container['is_error_value'] = is_error_value
 
@@ -443,8 +457,10 @@ class Cell(object):
         :param is_in_table: The is_in_table of this Cell.
         :type: bool
         """
+        """
         if is_in_table is None:
             raise ValueError("Invalid value for `is_in_table`, must not be `None`")
+        """
 
         self.container['is_in_table'] = is_in_table
 
@@ -468,8 +484,10 @@ class Cell(object):
         :param is_style_set: The is_style_set of this Cell.
         :type: bool
         """
+        """
         if is_style_set is None:
             raise ValueError("Invalid value for `is_style_set`, must not be `None`")
+        """
 
         self.container['is_style_set'] = is_style_set
 

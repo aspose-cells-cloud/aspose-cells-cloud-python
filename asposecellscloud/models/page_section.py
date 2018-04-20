@@ -105,8 +105,10 @@ class PageSection(object):
         :param section: The section of this PageSection.
         :type: int
         """
+        """
         if section is None:
             raise ValueError("Invalid value for `section`, must not be `None`")
+        """
 
         self.container['section'] = section
 

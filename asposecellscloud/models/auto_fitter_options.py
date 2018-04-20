@@ -91,8 +91,10 @@ class AutoFitterOptions(object):
         :param auto_fit_merged_cells: The auto_fit_merged_cells of this AutoFitterOptions.
         :type: bool
         """
+        """
         if auto_fit_merged_cells is None:
             raise ValueError("Invalid value for `auto_fit_merged_cells`, must not be `None`")
+        """
 
         self.container['auto_fit_merged_cells'] = auto_fit_merged_cells
 
@@ -114,8 +116,10 @@ class AutoFitterOptions(object):
         :param ignore_hidden: The ignore_hidden of this AutoFitterOptions.
         :type: bool
         """
+        """
         if ignore_hidden is None:
             raise ValueError("Invalid value for `ignore_hidden`, must not be `None`")
+        """
 
         self.container['ignore_hidden'] = ignore_hidden
 
@@ -137,8 +141,10 @@ class AutoFitterOptions(object):
         :param only_auto: The only_auto of this AutoFitterOptions.
         :type: bool
         """
+        """
         if only_auto is None:
             raise ValueError("Invalid value for `only_auto`, must not be `None`")
+        """
 
         self.container['only_auto'] = only_auto
 

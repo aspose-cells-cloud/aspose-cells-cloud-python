@@ -85,8 +85,10 @@ class WorkbookReplaceResponse(SaaSposeResponse):
         :param matches: The matches of this WorkbookReplaceResponse.
         :type: int
         """
+        """
         if matches is None:
             raise ValueError("Invalid value for `matches`, must not be `None`")
+        """
 
         self.container['matches'] = matches
 

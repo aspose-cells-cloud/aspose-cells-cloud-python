@@ -118,8 +118,10 @@ class Rows(object):
         :param max_row: The max_row of this Rows.
         :type: int
         """
+        """
         if max_row is None:
             raise ValueError("Invalid value for `max_row`, must not be `None`")
+        """
 
         self.container['max_row'] = max_row
 
@@ -141,8 +143,10 @@ class Rows(object):
         :param rows_count: The rows_count of this Rows.
         :type: int
         """
+        """
         if rows_count is None:
             raise ValueError("Invalid value for `rows_count`, must not be `None`")
+        """
 
         self.container['rows_count'] = rows_count
 

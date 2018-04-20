@@ -93,8 +93,10 @@ class SortKey(object):
         :param key: The key of this SortKey.
         :type: int
         """
+        """
         if key is None:
             raise ValueError("Invalid value for `key`, must not be `None`")
+        """
 
         self.container['key'] = key
 

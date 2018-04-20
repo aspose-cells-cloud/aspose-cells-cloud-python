@@ -105,8 +105,10 @@ class TilePicOption(object):
         :param offset_x: The offset_x of this TilePicOption.
         :type: float
         """
+        """
         if offset_x is None:
             raise ValueError("Invalid value for `offset_x`, must not be `None`")
+        """
 
         self.container['offset_x'] = offset_x
 
@@ -128,8 +130,10 @@ class TilePicOption(object):
         :param offset_y: The offset_y of this TilePicOption.
         :type: float
         """
+        """
         if offset_y is None:
             raise ValueError("Invalid value for `offset_y`, must not be `None`")
+        """
 
         self.container['offset_y'] = offset_y
 
@@ -151,8 +155,10 @@ class TilePicOption(object):
         :param scale_x: The scale_x of this TilePicOption.
         :type: float
         """
+        """
         if scale_x is None:
             raise ValueError("Invalid value for `scale_x`, must not be `None`")
+        """
 
         self.container['scale_x'] = scale_x
 
@@ -174,8 +180,10 @@ class TilePicOption(object):
         :param scale_y: The scale_y of this TilePicOption.
         :type: float
         """
+        """
         if scale_y is None:
             raise ValueError("Invalid value for `scale_y`, must not be `None`")
+        """
 
         self.container['scale_y'] = scale_y
 

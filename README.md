@@ -218,6 +218,7 @@ Class | Method | HTTP request | Description
 *CellsPropertiesApi* | [**cells_properties_get_document_properties**](docs/CellsPropertiesApi.md#cells_properties_get_document_properties) | **GET** /cells/{name}/documentproperties | Read document properties.
 *CellsPropertiesApi* | [**cells_properties_get_document_property**](docs/CellsPropertiesApi.md#cells_properties_get_document_property) | **GET** /cells/{name}/documentproperties/{propertyName} | Read document property by name.
 *CellsPropertiesApi* | [**cells_properties_put_document_property**](docs/CellsPropertiesApi.md#cells_properties_put_document_property) | **PUT** /cells/{name}/documentproperties/{propertyName} | Set/create document property.
+*CellsRangesApi* | [**cells_ranges_get_worksheet_cells_range_value**](docs/CellsRangesApi.md#cells_ranges_get_worksheet_cells_range_value) | **GET** /cells/{name}/worksheets/{sheetName}/ranges/value | Get cells list in a range by range name or row column indexes  
 *CellsRangesApi* | [**cells_ranges_post_worksheet_cells_range_column_width**](docs/CellsRangesApi.md#cells_ranges_post_worksheet_cells_range_column_width) | **POST** /cells/{name}/worksheets/{sheetName}/ranges/columnWidth | Set column width of range
 *CellsRangesApi* | [**cells_ranges_post_worksheet_cells_range_merge**](docs/CellsRangesApi.md#cells_ranges_post_worksheet_cells_range_merge) | **POST** /cells/{name}/worksheets/{sheetName}/ranges/merge | Combines a range of cells into a single cell.              
 *CellsRangesApi* | [**cells_ranges_post_worksheet_cells_range_move_to**](docs/CellsRangesApi.md#cells_ranges_post_worksheet_cells_range_move_to) | **POST** /cells/{name}/worksheets/{sheetName}/ranges/moveto | Move the current range to the dest range.             
@@ -238,9 +239,12 @@ Class | Method | HTTP request | Description
 *CellsWorkbookApi* | [**cells_workbook_delete_decrypt_document**](docs/CellsWorkbookApi.md#cells_workbook_delete_decrypt_document) | **DELETE** /cells/{name}/encryption | Decrypt document.
 *CellsWorkbookApi* | [**cells_workbook_delete_document_unprotect_from_changes**](docs/CellsWorkbookApi.md#cells_workbook_delete_document_unprotect_from_changes) | **DELETE** /cells/{name}/writeProtection | Unprotect document from changes.
 *CellsWorkbookApi* | [**cells_workbook_delete_unprotect_document**](docs/CellsWorkbookApi.md#cells_workbook_delete_unprotect_document) | **DELETE** /cells/{name}/protection | Unprotect document.
+*CellsWorkbookApi* | [**cells_workbook_delete_workbook_name**](docs/CellsWorkbookApi.md#cells_workbook_delete_workbook_name) | **DELETE** /cells/{name}/names/{nameName} | Clean workbook&#39;s names.
+*CellsWorkbookApi* | [**cells_workbook_delete_workbook_names**](docs/CellsWorkbookApi.md#cells_workbook_delete_workbook_names) | **DELETE** /cells/{name}/names | Clean workbook&#39;s names.
 *CellsWorkbookApi* | [**cells_workbook_get_workbook**](docs/CellsWorkbookApi.md#cells_workbook_get_workbook) | **GET** /cells/{name} | Read workbook info or export.
 *CellsWorkbookApi* | [**cells_workbook_get_workbook_default_style**](docs/CellsWorkbookApi.md#cells_workbook_get_workbook_default_style) | **GET** /cells/{name}/defaultstyle | Read workbook default style info.
 *CellsWorkbookApi* | [**cells_workbook_get_workbook_name**](docs/CellsWorkbookApi.md#cells_workbook_get_workbook_name) | **GET** /cells/{name}/names/{nameName} | Read workbook&#39;s name.
+*CellsWorkbookApi* | [**cells_workbook_get_workbook_name_value**](docs/CellsWorkbookApi.md#cells_workbook_get_workbook_name_value) | **GET** /cells/{name}/names/{nameName}/value | Get workbook&#39;s name value.
 *CellsWorkbookApi* | [**cells_workbook_get_workbook_names**](docs/CellsWorkbookApi.md#cells_workbook_get_workbook_names) | **GET** /cells/{name}/names | Read workbook&#39;s names.
 *CellsWorkbookApi* | [**cells_workbook_get_workbook_settings**](docs/CellsWorkbookApi.md#cells_workbook_get_workbook_settings) | **GET** /cells/{name}/settings | Get Workbook Settings DTO
 *CellsWorkbookApi* | [**cells_workbook_get_workbook_text_items**](docs/CellsWorkbookApi.md#cells_workbook_get_workbook_text_items) | **GET** /cells/{name}/textItems | Read workbook&#39;s text items.
@@ -467,6 +471,7 @@ Class | Method | HTTP request | Description
  - [PivotTableResponse](docs/PivotTableResponse.md)
  - [PivotTables](docs/PivotTables.md)
  - [PivotTablesResponse](docs/PivotTablesResponse.md)
+ - [RangeValueResponse](docs/RangeValueResponse.md)
  - [RangesResponse](docs/RangesResponse.md)
  - [Row](docs/Row.md)
  - [RowResponse](docs/RowResponse.md)

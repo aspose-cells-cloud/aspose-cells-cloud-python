@@ -118,8 +118,10 @@ class WorkbookEncryptionRequest(object):
         :param key_length: The key_length of this WorkbookEncryptionRequest.
         :type: int
         """
+        """
         if key_length is None:
             raise ValueError("Invalid value for `key_length`, must not be `None`")
+        """
 
         self.container['key_length'] = key_length
 

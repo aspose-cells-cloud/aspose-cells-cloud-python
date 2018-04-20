@@ -91,8 +91,10 @@ class HorizontalPageBreak(object):
         :param row: The row of this HorizontalPageBreak.
         :type: int
         """
+        """
         if row is None:
             raise ValueError("Invalid value for `row`, must not be `None`")
+        """
 
         self.container['row'] = row
 
@@ -114,8 +116,10 @@ class HorizontalPageBreak(object):
         :param end_column: The end_column of this HorizontalPageBreak.
         :type: int
         """
+        """
         if end_column is None:
             raise ValueError("Invalid value for `end_column`, must not be `None`")
+        """
 
         self.container['end_column'] = end_column
 
@@ -137,8 +141,10 @@ class HorizontalPageBreak(object):
         :param start_column: The start_column of this HorizontalPageBreak.
         :type: int
         """
+        """
         if start_column is None:
             raise ValueError("Invalid value for `start_column`, must not be `None`")
+        """
 
         self.container['start_column'] = start_column
 

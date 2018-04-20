@@ -176,8 +176,10 @@ class CreatePivotTableRequest(object):
         :param use_same_source: The use_same_source of this CreatePivotTableRequest.
         :type: bool
         """
+        """
         if use_same_source is None:
             raise ValueError("Invalid value for `use_same_source`, must not be `None`")
+        """
 
         self.container['use_same_source'] = use_same_source
 

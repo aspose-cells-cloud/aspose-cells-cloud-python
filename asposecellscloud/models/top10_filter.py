@@ -117,8 +117,10 @@ class Top10Filter(object):
         :param is_percent: The is_percent of this Top10Filter.
         :type: bool
         """
+        """
         if is_percent is None:
             raise ValueError("Invalid value for `is_percent`, must not be `None`")
+        """
 
         self.container['is_percent'] = is_percent
 
@@ -140,8 +142,10 @@ class Top10Filter(object):
         :param is_top: The is_top of this Top10Filter.
         :type: bool
         """
+        """
         if is_top is None:
             raise ValueError("Invalid value for `is_top`, must not be `None`")
+        """
 
         self.container['is_top'] = is_top
 
@@ -163,8 +167,10 @@ class Top10Filter(object):
         :param items: The items of this Top10Filter.
         :type: int
         """
+        """
         if items is None:
             raise ValueError("Invalid value for `items`, must not be `None`")
+        """
 
         self.container['items'] = items
 

@@ -375,8 +375,10 @@ class Worksheet(object):
         :param index: The index of this Worksheet.
         :type: int
         """
+        """
         if index is None:
             raise ValueError("Invalid value for `index`, must not be `None`")
+        """
 
         self.container['index'] = index
 
@@ -492,8 +494,10 @@ class Worksheet(object):
         :param is_protected: The is_protected of this Worksheet.
         :type: bool
         """
+        """
         if is_protected is None:
             raise ValueError("Invalid value for `is_protected`, must not be `None`")
+        """
 
         self.container['is_protected'] = is_protected
 

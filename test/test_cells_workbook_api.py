@@ -84,6 +84,31 @@ class TestCellsWorkbookApi(unittest.TestCase):
         result = self.api.cells_workbook_delete_unprotect_document(name, protection=protection, folder=folder)
         pass
 
+    def test_cells_workbook_delete_workbook_name(self):
+        """
+        Test case for cells_workbook_delete_workbook_name
+
+        Clean workbook's names.
+        """
+        name ='Book1.xlsx'       
+        folder = "Temp"
+        name_name = "Name_2"
+        AuthUtil.Ready(name, folder)
+        result = self.api.cells_workbook_delete_workbook_name(name, name_name, folder=folder)
+        pass
+
+    def test_cells_workbook_delete_workbook_names(self):
+        """
+        Test case for cells_workbook_delete_workbook_names
+
+        Clean workbook's names.
+        """
+        name ='Book1.xlsx'       
+        folder = "Temp"
+        AuthUtil.Ready(name, folder)
+        result = self.api.cells_workbook_delete_workbook_names(name, folder=folder)
+        pass
+
     def test_cells_workbook_get_workbook(self):
         """
         Test case for cells_workbook_get_workbook
@@ -119,9 +144,21 @@ class TestCellsWorkbookApi(unittest.TestCase):
         name ='Book1.xlsx'       
         folder = "Temp"
         nameName = "Name_2"
-        isAutoFit = 'true'
         AuthUtil.Ready(name, folder)
-        result = self.api.cells_workbook_get_workbook_name(name,nameName, folder=folder)
+        result = self.api.cells_workbook_get_workbook_name(name, nameName, folder=folder)
+        pass
+
+    def test_cells_workbook_get_workbook_name_value(self):
+        """
+        Test case for cells_workbook_get_workbook_name_value
+
+        Get workbook's name value.
+        """
+        name ='Book1.xlsx'       
+        folder = "Temp"
+        name_name = "Name_2"
+        AuthUtil.Ready(name, folder)
+        result = self.api.cells_workbook_get_workbook_name_value(name, name_name, folder=folder)
         pass
 
     def test_cells_workbook_get_workbook_names(self):

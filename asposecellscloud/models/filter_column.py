@@ -123,8 +123,10 @@ class FilterColumn(object):
         :param field_index: The field_index of this FilterColumn.
         :type: int
         """
+        """
         if field_index is None:
             raise ValueError("Invalid value for `field_index`, must not be `None`")
+        """
 
         self.container['field_index'] = field_index
 

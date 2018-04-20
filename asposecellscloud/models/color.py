@@ -95,8 +95,10 @@ class Color(object):
         :param a: The a of this Color.
         :type: int
         """
+        """
         if a is None:
             raise ValueError("Invalid value for `a`, must not be `None`")
+        """
 
         self.container['a'] = a
 
@@ -118,8 +120,10 @@ class Color(object):
         :param r: The r of this Color.
         :type: int
         """
+        """
         if r is None:
             raise ValueError("Invalid value for `r`, must not be `None`")
+        """
 
         self.container['r'] = r
 
@@ -141,8 +145,10 @@ class Color(object):
         :param g: The g of this Color.
         :type: int
         """
+        """
         if g is None:
             raise ValueError("Invalid value for `g`, must not be `None`")
+        """
 
         self.container['g'] = g
 
@@ -164,8 +170,10 @@ class Color(object):
         :param b: The b of this Color.
         :type: int
         """
+        """
         if b is None:
             raise ValueError("Invalid value for `b`, must not be `None`")
+        """
 
         self.container['b'] = b
 

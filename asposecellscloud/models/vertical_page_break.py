@@ -91,8 +91,10 @@ class VerticalPageBreak(object):
         :param column: The column of this VerticalPageBreak.
         :type: int
         """
+        """
         if column is None:
             raise ValueError("Invalid value for `column`, must not be `None`")
+        """
 
         self.container['column'] = column
 
@@ -114,8 +116,10 @@ class VerticalPageBreak(object):
         :param end_row: The end_row of this VerticalPageBreak.
         :type: int
         """
+        """
         if end_row is None:
             raise ValueError("Invalid value for `end_row`, must not be `None`")
+        """
 
         self.container['end_row'] = end_row
 
@@ -137,8 +141,10 @@ class VerticalPageBreak(object):
         :param start_row: The start_row of this VerticalPageBreak.
         :type: int
         """
+        """
         if start_row is None:
             raise ValueError("Invalid value for `start_row`, must not be `None`")
+        """
 
         self.container['start_row'] = start_row
 
