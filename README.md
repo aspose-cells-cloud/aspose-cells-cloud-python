@@ -2,7 +2,7 @@
 
 Aspose.Cells Cloud SDK for Python allows you to use Aspose.Cells APIs in your Python applications
 
-- Package version: 18.2
+- Package version: 18.4
 - Build package: io.swagger.codegen.languages.PythonClientCodegen
 
 ## Requirements.
