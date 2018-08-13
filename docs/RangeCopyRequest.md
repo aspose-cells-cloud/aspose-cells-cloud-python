@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**operate** | **str** |  | [optional] 
 **source** | [**Range**](Range.md) |  | [optional] 
+**operate** | **str** |  | [optional] 
 **target** | [**Range**](Range.md) |  | [optional] 
 **paste_options** | [**PasteOptions**](PasteOptions.md) |  | [optional] 
 

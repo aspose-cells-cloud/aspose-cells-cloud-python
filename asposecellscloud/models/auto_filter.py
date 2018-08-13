@@ -32,15 +32,15 @@ class AutoFilter(object):
     """
     swagger_types = {
         'link': 'Link',
-        'filter_columns': 'list[FilterColumn]',
         'range': 'str',
+        'filter_columns': 'list[FilterColumn]',
         'sorter': 'DataSorter'
     }
 
     attribute_map = {
         'link': 'link',
-        'filter_columns': 'FilterColumns',
         'range': 'Range',
+        'filter_columns': 'FilterColumns',
         'sorter': 'Sorter'
     }
     
@@ -57,7 +57,7 @@ class AutoFilter(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, filter_columns=None, range=None, sorter=None, **kw):
+    def __init__(self, link=None, range=None, filter_columns=None, sorter=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -68,16 +68,16 @@ class AutoFilter(object):
         """
 
         self.container['link'] = None
-        self.container['filter_columns'] = None
         self.container['range'] = None
+        self.container['filter_columns'] = None
         self.container['sorter'] = None
 
         if link is not None:
           self.link = link
-        if filter_columns is not None:
-          self.filter_columns = filter_columns
         if range is not None:
           self.range = range
+        if filter_columns is not None:
+          self.filter_columns = filter_columns
         if sorter is not None:
           self.sorter = sorter
 
@@ -103,27 +103,6 @@ class AutoFilter(object):
         self.container['link'] = link
 
     @property
-    def filter_columns(self):
-        """
-        Gets the filter_columns of this AutoFilter.
-
-        :return: The filter_columns of this AutoFilter.
-        :rtype: list[FilterColumn]
-        """
-        return self.container['filter_columns']
-
-    @filter_columns.setter
-    def filter_columns(self, filter_columns):
-        """
-        Sets the filter_columns of this AutoFilter.
-
-        :param filter_columns: The filter_columns of this AutoFilter.
-        :type: list[FilterColumn]
-        """
-
-        self.container['filter_columns'] = filter_columns
-
-    @property
     def range(self):
         """
         Gets the range of this AutoFilter.
@@ -143,6 +122,27 @@ class AutoFilter(object):
         """
 
         self.container['range'] = range
+
+    @property
+    def filter_columns(self):
+        """
+        Gets the filter_columns of this AutoFilter.
+
+        :return: The filter_columns of this AutoFilter.
+        :rtype: list[FilterColumn]
+        """
+        return self.container['filter_columns']
+
+    @filter_columns.setter
+    def filter_columns(self, filter_columns):
+        """
+        Sets the filter_columns of this AutoFilter.
+
+        :param filter_columns: The filter_columns of this AutoFilter.
+        :type: list[FilterColumn]
+        """
+
+        self.container['filter_columns'] = filter_columns
 
     @property
     def sorter(self):

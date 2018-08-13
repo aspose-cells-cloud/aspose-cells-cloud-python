@@ -31,21 +31,21 @@ class PageBreakOperateParameter(OperateParameter):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'page_break_type': 'str',
         'index': 'int',
-        'row': 'int',
+        'end_index': 'int',
         'column': 'int',
         'start_index': 'int',
-        'end_index': 'int'
+        'page_break_type': 'str',
+        'row': 'int'
     }
 
     attribute_map = {
-        'page_break_type': 'PageBreakType',
         'index': 'Index',
-        'row': 'Row',
+        'end_index': 'EndIndex',
         'column': 'Column',
         'start_index': 'StartIndex',
-        'end_index': 'EndIndex'
+        'page_break_type': 'PageBreakType',
+        'row': 'Row'
     }
     
     @staticmethod
@@ -61,53 +61,32 @@ class PageBreakOperateParameter(OperateParameter):
             return self.container[attr]
         return None
 
-    def __init__(self, page_break_type=None, index=None, row=None, column=None, start_index=None, end_index=None, **kw):
+    def __init__(self, index=None, end_index=None, column=None, start_index=None, page_break_type=None, row=None, **kw):
         super(PageBreakOperateParameter, self).__init__(**kw)
 		    
         """
         PageBreakOperateParameter - a model defined in Swagger
         """
 
-        self.container['page_break_type'] = None
         self.container['index'] = None
-        self.container['row'] = None
+        self.container['end_index'] = None
         self.container['column'] = None
         self.container['start_index'] = None
-        self.container['end_index'] = None
+        self.container['page_break_type'] = None
+        self.container['row'] = None
 
-        if page_break_type is not None:
-          self.page_break_type = page_break_type
         if index is not None:
           self.index = index
-        if row is not None:
-          self.row = row
+        if end_index is not None:
+          self.end_index = end_index
         if column is not None:
           self.column = column
         if start_index is not None:
           self.start_index = start_index
-        if end_index is not None:
-          self.end_index = end_index
-
-    @property
-    def page_break_type(self):
-        """
-        Gets the page_break_type of this PageBreakOperateParameter.
-
-        :return: The page_break_type of this PageBreakOperateParameter.
-        :rtype: str
-        """
-        return self.container['page_break_type']
-
-    @page_break_type.setter
-    def page_break_type(self, page_break_type):
-        """
-        Sets the page_break_type of this PageBreakOperateParameter.
-
-        :param page_break_type: The page_break_type of this PageBreakOperateParameter.
-        :type: str
-        """
-
-        self.container['page_break_type'] = page_break_type
+        if page_break_type is not None:
+          self.page_break_type = page_break_type
+        if row is not None:
+          self.row = row
 
     @property
     def index(self):
@@ -131,25 +110,25 @@ class PageBreakOperateParameter(OperateParameter):
         self.container['index'] = index
 
     @property
-    def row(self):
+    def end_index(self):
         """
-        Gets the row of this PageBreakOperateParameter.
+        Gets the end_index of this PageBreakOperateParameter.
 
-        :return: The row of this PageBreakOperateParameter.
+        :return: The end_index of this PageBreakOperateParameter.
         :rtype: int
         """
-        return self.container['row']
+        return self.container['end_index']
 
-    @row.setter
-    def row(self, row):
+    @end_index.setter
+    def end_index(self, end_index):
         """
-        Sets the row of this PageBreakOperateParameter.
+        Sets the end_index of this PageBreakOperateParameter.
 
-        :param row: The row of this PageBreakOperateParameter.
+        :param end_index: The end_index of this PageBreakOperateParameter.
         :type: int
         """
 
-        self.container['row'] = row
+        self.container['end_index'] = end_index
 
     @property
     def column(self):
@@ -194,25 +173,46 @@ class PageBreakOperateParameter(OperateParameter):
         self.container['start_index'] = start_index
 
     @property
-    def end_index(self):
+    def page_break_type(self):
         """
-        Gets the end_index of this PageBreakOperateParameter.
+        Gets the page_break_type of this PageBreakOperateParameter.
 
-        :return: The end_index of this PageBreakOperateParameter.
+        :return: The page_break_type of this PageBreakOperateParameter.
+        :rtype: str
+        """
+        return self.container['page_break_type']
+
+    @page_break_type.setter
+    def page_break_type(self, page_break_type):
+        """
+        Sets the page_break_type of this PageBreakOperateParameter.
+
+        :param page_break_type: The page_break_type of this PageBreakOperateParameter.
+        :type: str
+        """
+
+        self.container['page_break_type'] = page_break_type
+
+    @property
+    def row(self):
+        """
+        Gets the row of this PageBreakOperateParameter.
+
+        :return: The row of this PageBreakOperateParameter.
         :rtype: int
         """
-        return self.container['end_index']
+        return self.container['row']
 
-    @end_index.setter
-    def end_index(self, end_index):
+    @row.setter
+    def row(self, row):
         """
-        Sets the end_index of this PageBreakOperateParameter.
+        Sets the row of this PageBreakOperateParameter.
 
-        :param end_index: The end_index of this PageBreakOperateParameter.
+        :param row: The row of this PageBreakOperateParameter.
         :type: int
         """
 
-        self.container['end_index'] = end_index
+        self.container['row'] = row
 
     def to_dict(self):
         """

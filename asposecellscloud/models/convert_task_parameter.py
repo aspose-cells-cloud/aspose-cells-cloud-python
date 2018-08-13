@@ -32,14 +32,14 @@ class ConvertTaskParameter(TaskParameter):
     """
     swagger_types = {
         'workbook': 'FileSource',
-        'destination_file': 'str',
-        'save_options': 'SaveOptions'
+        'save_options': 'SaveOptions',
+        'destination_file': 'str'
     }
 
     attribute_map = {
         'workbook': 'Workbook',
-        'destination_file': 'DestinationFile',
-        'save_options': 'SaveOptions'
+        'save_options': 'SaveOptions',
+        'destination_file': 'DestinationFile'
     }
     
     @staticmethod
@@ -55,7 +55,7 @@ class ConvertTaskParameter(TaskParameter):
             return self.container[attr]
         return None
 
-    def __init__(self, workbook=None, destination_file=None, save_options=None, **kw):
+    def __init__(self, workbook=None, save_options=None, destination_file=None, **kw):
         super(ConvertTaskParameter, self).__init__(**kw)
 		    
         """
@@ -63,15 +63,15 @@ class ConvertTaskParameter(TaskParameter):
         """
 
         self.container['workbook'] = None
-        self.container['destination_file'] = None
         self.container['save_options'] = None
+        self.container['destination_file'] = None
 
         if workbook is not None:
           self.workbook = workbook
-        if destination_file is not None:
-          self.destination_file = destination_file
         if save_options is not None:
           self.save_options = save_options
+        if destination_file is not None:
+          self.destination_file = destination_file
 
     @property
     def workbook(self):
@@ -95,27 +95,6 @@ class ConvertTaskParameter(TaskParameter):
         self.container['workbook'] = workbook
 
     @property
-    def destination_file(self):
-        """
-        Gets the destination_file of this ConvertTaskParameter.
-
-        :return: The destination_file of this ConvertTaskParameter.
-        :rtype: str
-        """
-        return self.container['destination_file']
-
-    @destination_file.setter
-    def destination_file(self, destination_file):
-        """
-        Sets the destination_file of this ConvertTaskParameter.
-
-        :param destination_file: The destination_file of this ConvertTaskParameter.
-        :type: str
-        """
-
-        self.container['destination_file'] = destination_file
-
-    @property
     def save_options(self):
         """
         Gets the save_options of this ConvertTaskParameter.
@@ -135,6 +114,27 @@ class ConvertTaskParameter(TaskParameter):
         """
 
         self.container['save_options'] = save_options
+
+    @property
+    def destination_file(self):
+        """
+        Gets the destination_file of this ConvertTaskParameter.
+
+        :return: The destination_file of this ConvertTaskParameter.
+        :rtype: str
+        """
+        return self.container['destination_file']
+
+    @destination_file.setter
+    def destination_file(self, destination_file):
+        """
+        Sets the destination_file of this ConvertTaskParameter.
+
+        :param destination_file: The destination_file of this ConvertTaskParameter.
+        :type: str
+        """
+
+        self.container['destination_file'] = destination_file
 
     def to_dict(self):
         """

@@ -31,93 +31,93 @@ class OleObject(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'mso_drawing_type': 'str',
-        'auto_shape_type': 'str',
-        'placement': 'str',
-        'upper_left_row': 'int',
-        'top': 'int',
-        'upper_left_column': 'int',
-        'left': 'int',
-        'lower_right_row': 'int',
-        'bottom': 'int',
-        'lower_right_column': 'int',
-        'right': 'int',
-        'width': 'int',
-        'height': 'int',
-        'x': 'int',
-        'y': 'int',
-        'rotation_angle': 'float',
-        'html_text': 'str',
-        'text': 'str',
         'alternative_text': 'str',
-        'text_horizontal_alignment': 'str',
-        'text_horizontal_overflow': 'str',
-        'text_orientation_type': 'str',
+        'bottom': 'int',
+        'top': 'int',
+        'width': 'int',
+        'html_text': 'str',
         'text_vertical_alignment': 'str',
-        'text_vertical_overflow': 'str',
-        'is_group': 'bool',
-        'is_hidden': 'bool',
-        'is_lock_aspect_ratio': 'bool',
-        'is_locked': 'bool',
+        'auto_shape_type': 'str',
         'is_printable': 'bool',
-        'is_text_wrapped': 'bool',
+        'upper_left_column': 'int',
+        'is_lock_aspect_ratio': 'bool',
+        'is_group': 'bool',
+        'rotation_angle': 'float',
+        'z_order_position': 'int',
+        'text_horizontal_overflow': 'str',
+        'mso_drawing_type': 'str',
+        'text_orientation_type': 'str',
+        'placement': 'str',
+        'name': 'str',
         'is_word_art': 'bool',
         'linked_cell': 'str',
-        'z_order_position': 'int',
+        'upper_left_row': 'int',
+        'is_locked': 'bool',
+        'lower_right_row': 'int',
+        'is_text_wrapped': 'bool',
+        'y': 'int',
+        'x': 'int',
+        'is_hidden': 'bool',
+        'left': 'int',
+        'right': 'int',
+        'text': 'str',
+        'lower_right_column': 'int',
+        'height': 'int',
+        'text_horizontal_alignment': 'str',
+        'text_vertical_overflow': 'str',
         'link': 'Link',
         'display_as_icon': 'bool',
         'file_format_type': 'str',
-        'image_source_full_name': 'str',
+        'source_full_name': 'str',
         'is_auto_size': 'bool',
-        'is_link': 'bool',
+        'image_source_full_name': 'str',
         'prog_id': 'str',
-        'source_full_name': 'str'
+        'is_link': 'bool'
     }
 
     attribute_map = {
-        'name': 'Name',
-        'mso_drawing_type': 'MsoDrawingType',
-        'auto_shape_type': 'AutoShapeType',
-        'placement': 'Placement',
-        'upper_left_row': 'UpperLeftRow',
-        'top': 'Top',
-        'upper_left_column': 'UpperLeftColumn',
-        'left': 'Left',
-        'lower_right_row': 'LowerRightRow',
-        'bottom': 'Bottom',
-        'lower_right_column': 'LowerRightColumn',
-        'right': 'Right',
-        'width': 'Width',
-        'height': 'Height',
-        'x': 'X',
-        'y': 'Y',
-        'rotation_angle': 'RotationAngle',
-        'html_text': 'HtmlText',
-        'text': 'Text',
         'alternative_text': 'AlternativeText',
-        'text_horizontal_alignment': 'TextHorizontalAlignment',
-        'text_horizontal_overflow': 'TextHorizontalOverflow',
-        'text_orientation_type': 'TextOrientationType',
+        'bottom': 'Bottom',
+        'top': 'Top',
+        'width': 'Width',
+        'html_text': 'HtmlText',
         'text_vertical_alignment': 'TextVerticalAlignment',
-        'text_vertical_overflow': 'TextVerticalOverflow',
-        'is_group': 'IsGroup',
-        'is_hidden': 'IsHidden',
-        'is_lock_aspect_ratio': 'IsLockAspectRatio',
-        'is_locked': 'IsLocked',
+        'auto_shape_type': 'AutoShapeType',
         'is_printable': 'IsPrintable',
-        'is_text_wrapped': 'IsTextWrapped',
+        'upper_left_column': 'UpperLeftColumn',
+        'is_lock_aspect_ratio': 'IsLockAspectRatio',
+        'is_group': 'IsGroup',
+        'rotation_angle': 'RotationAngle',
+        'z_order_position': 'ZOrderPosition',
+        'text_horizontal_overflow': 'TextHorizontalOverflow',
+        'mso_drawing_type': 'MsoDrawingType',
+        'text_orientation_type': 'TextOrientationType',
+        'placement': 'Placement',
+        'name': 'Name',
         'is_word_art': 'IsWordArt',
         'linked_cell': 'LinkedCell',
-        'z_order_position': 'ZOrderPosition',
+        'upper_left_row': 'UpperLeftRow',
+        'is_locked': 'IsLocked',
+        'lower_right_row': 'LowerRightRow',
+        'is_text_wrapped': 'IsTextWrapped',
+        'y': 'Y',
+        'x': 'X',
+        'is_hidden': 'IsHidden',
+        'left': 'Left',
+        'right': 'Right',
+        'text': 'Text',
+        'lower_right_column': 'LowerRightColumn',
+        'height': 'Height',
+        'text_horizontal_alignment': 'TextHorizontalAlignment',
+        'text_vertical_overflow': 'TextVerticalOverflow',
         'link': 'link',
         'display_as_icon': 'DisplayAsIcon',
         'file_format_type': 'FileFormatType',
-        'image_source_full_name': 'ImageSourceFullName',
+        'source_full_name': 'SourceFullName',
         'is_auto_size': 'IsAutoSize',
-        'is_link': 'IsLink',
+        'image_source_full_name': 'ImageSourceFullName',
         'prog_id': 'ProgID',
-        'source_full_name': 'SourceFullName'
+        'is_link': 'IsLink'
     }
     
     @staticmethod
@@ -133,7 +133,7 @@ class OleObject(object):
             return self.container[attr]
         return None
 
-    def __init__(self, name=None, mso_drawing_type=None, auto_shape_type=None, placement=None, upper_left_row=None, top=None, upper_left_column=None, left=None, lower_right_row=None, bottom=None, lower_right_column=None, right=None, width=None, height=None, x=None, y=None, rotation_angle=None, html_text=None, text=None, alternative_text=None, text_horizontal_alignment=None, text_horizontal_overflow=None, text_orientation_type=None, text_vertical_alignment=None, text_vertical_overflow=None, is_group=None, is_hidden=None, is_lock_aspect_ratio=None, is_locked=None, is_printable=None, is_text_wrapped=None, is_word_art=None, linked_cell=None, z_order_position=None, link=None, display_as_icon=None, file_format_type=None, image_source_full_name=None, is_auto_size=None, is_link=None, prog_id=None, source_full_name=None, **kw):
+    def __init__(self, alternative_text=None, bottom=None, top=None, width=None, html_text=None, text_vertical_alignment=None, auto_shape_type=None, is_printable=None, upper_left_column=None, is_lock_aspect_ratio=None, is_group=None, rotation_angle=None, z_order_position=None, text_horizontal_overflow=None, mso_drawing_type=None, text_orientation_type=None, placement=None, name=None, is_word_art=None, linked_cell=None, upper_left_row=None, is_locked=None, lower_right_row=None, is_text_wrapped=None, y=None, x=None, is_hidden=None, left=None, right=None, text=None, lower_right_column=None, height=None, text_horizontal_alignment=None, text_vertical_overflow=None, link=None, display_as_icon=None, file_format_type=None, source_full_name=None, is_auto_size=None, image_source_full_name=None, prog_id=None, is_link=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -143,532 +143,133 @@ class OleObject(object):
         OleObject - a model defined in Swagger
         """
 
-        self.container['name'] = None
-        self.container['mso_drawing_type'] = None
-        self.container['auto_shape_type'] = None
-        self.container['placement'] = None
-        self.container['upper_left_row'] = None
-        self.container['top'] = None
-        self.container['upper_left_column'] = None
-        self.container['left'] = None
-        self.container['lower_right_row'] = None
-        self.container['bottom'] = None
-        self.container['lower_right_column'] = None
-        self.container['right'] = None
-        self.container['width'] = None
-        self.container['height'] = None
-        self.container['x'] = None
-        self.container['y'] = None
-        self.container['rotation_angle'] = None
-        self.container['html_text'] = None
-        self.container['text'] = None
         self.container['alternative_text'] = None
-        self.container['text_horizontal_alignment'] = None
-        self.container['text_horizontal_overflow'] = None
-        self.container['text_orientation_type'] = None
+        self.container['bottom'] = None
+        self.container['top'] = None
+        self.container['width'] = None
+        self.container['html_text'] = None
         self.container['text_vertical_alignment'] = None
-        self.container['text_vertical_overflow'] = None
-        self.container['is_group'] = None
-        self.container['is_hidden'] = None
-        self.container['is_lock_aspect_ratio'] = None
-        self.container['is_locked'] = None
+        self.container['auto_shape_type'] = None
         self.container['is_printable'] = None
-        self.container['is_text_wrapped'] = None
+        self.container['upper_left_column'] = None
+        self.container['is_lock_aspect_ratio'] = None
+        self.container['is_group'] = None
+        self.container['rotation_angle'] = None
+        self.container['z_order_position'] = None
+        self.container['text_horizontal_overflow'] = None
+        self.container['mso_drawing_type'] = None
+        self.container['text_orientation_type'] = None
+        self.container['placement'] = None
+        self.container['name'] = None
         self.container['is_word_art'] = None
         self.container['linked_cell'] = None
-        self.container['z_order_position'] = None
+        self.container['upper_left_row'] = None
+        self.container['is_locked'] = None
+        self.container['lower_right_row'] = None
+        self.container['is_text_wrapped'] = None
+        self.container['y'] = None
+        self.container['x'] = None
+        self.container['is_hidden'] = None
+        self.container['left'] = None
+        self.container['right'] = None
+        self.container['text'] = None
+        self.container['lower_right_column'] = None
+        self.container['height'] = None
+        self.container['text_horizontal_alignment'] = None
+        self.container['text_vertical_overflow'] = None
         self.container['link'] = None
         self.container['display_as_icon'] = None
         self.container['file_format_type'] = None
-        self.container['image_source_full_name'] = None
-        self.container['is_auto_size'] = None
-        self.container['is_link'] = None
-        self.container['prog_id'] = None
         self.container['source_full_name'] = None
+        self.container['is_auto_size'] = None
+        self.container['image_source_full_name'] = None
+        self.container['prog_id'] = None
+        self.container['is_link'] = None
 
-        if name is not None:
-          self.name = name
-        if mso_drawing_type is not None:
-          self.mso_drawing_type = mso_drawing_type
-        if auto_shape_type is not None:
-          self.auto_shape_type = auto_shape_type
-        if placement is not None:
-          self.placement = placement
-        if upper_left_row is not None:
-          self.upper_left_row = upper_left_row
-        if top is not None:
-          self.top = top
-        if upper_left_column is not None:
-          self.upper_left_column = upper_left_column
-        if left is not None:
-          self.left = left
-        if lower_right_row is not None:
-          self.lower_right_row = lower_right_row
-        if bottom is not None:
-          self.bottom = bottom
-        if lower_right_column is not None:
-          self.lower_right_column = lower_right_column
-        if right is not None:
-          self.right = right
-        if width is not None:
-          self.width = width
-        if height is not None:
-          self.height = height
-        if x is not None:
-          self.x = x
-        if y is not None:
-          self.y = y
-        if rotation_angle is not None:
-          self.rotation_angle = rotation_angle
-        if html_text is not None:
-          self.html_text = html_text
-        if text is not None:
-          self.text = text
         if alternative_text is not None:
           self.alternative_text = alternative_text
-        if text_horizontal_alignment is not None:
-          self.text_horizontal_alignment = text_horizontal_alignment
-        if text_horizontal_overflow is not None:
-          self.text_horizontal_overflow = text_horizontal_overflow
-        if text_orientation_type is not None:
-          self.text_orientation_type = text_orientation_type
+        if bottom is not None:
+          self.bottom = bottom
+        if top is not None:
+          self.top = top
+        if width is not None:
+          self.width = width
+        if html_text is not None:
+          self.html_text = html_text
         if text_vertical_alignment is not None:
           self.text_vertical_alignment = text_vertical_alignment
-        if text_vertical_overflow is not None:
-          self.text_vertical_overflow = text_vertical_overflow
-        if is_group is not None:
-          self.is_group = is_group
-        if is_hidden is not None:
-          self.is_hidden = is_hidden
-        if is_lock_aspect_ratio is not None:
-          self.is_lock_aspect_ratio = is_lock_aspect_ratio
-        if is_locked is not None:
-          self.is_locked = is_locked
+        if auto_shape_type is not None:
+          self.auto_shape_type = auto_shape_type
         if is_printable is not None:
           self.is_printable = is_printable
-        if is_text_wrapped is not None:
-          self.is_text_wrapped = is_text_wrapped
+        if upper_left_column is not None:
+          self.upper_left_column = upper_left_column
+        if is_lock_aspect_ratio is not None:
+          self.is_lock_aspect_ratio = is_lock_aspect_ratio
+        if is_group is not None:
+          self.is_group = is_group
+        if rotation_angle is not None:
+          self.rotation_angle = rotation_angle
+        if z_order_position is not None:
+          self.z_order_position = z_order_position
+        if text_horizontal_overflow is not None:
+          self.text_horizontal_overflow = text_horizontal_overflow
+        if mso_drawing_type is not None:
+          self.mso_drawing_type = mso_drawing_type
+        if text_orientation_type is not None:
+          self.text_orientation_type = text_orientation_type
+        if placement is not None:
+          self.placement = placement
+        if name is not None:
+          self.name = name
         if is_word_art is not None:
           self.is_word_art = is_word_art
         if linked_cell is not None:
           self.linked_cell = linked_cell
-        if z_order_position is not None:
-          self.z_order_position = z_order_position
+        if upper_left_row is not None:
+          self.upper_left_row = upper_left_row
+        if is_locked is not None:
+          self.is_locked = is_locked
+        if lower_right_row is not None:
+          self.lower_right_row = lower_right_row
+        if is_text_wrapped is not None:
+          self.is_text_wrapped = is_text_wrapped
+        if y is not None:
+          self.y = y
+        if x is not None:
+          self.x = x
+        if is_hidden is not None:
+          self.is_hidden = is_hidden
+        if left is not None:
+          self.left = left
+        if right is not None:
+          self.right = right
+        if text is not None:
+          self.text = text
+        if lower_right_column is not None:
+          self.lower_right_column = lower_right_column
+        if height is not None:
+          self.height = height
+        if text_horizontal_alignment is not None:
+          self.text_horizontal_alignment = text_horizontal_alignment
+        if text_vertical_overflow is not None:
+          self.text_vertical_overflow = text_vertical_overflow
         if link is not None:
           self.link = link
         if display_as_icon is not None:
           self.display_as_icon = display_as_icon
         if file_format_type is not None:
           self.file_format_type = file_format_type
-        if image_source_full_name is not None:
-          self.image_source_full_name = image_source_full_name
-        if is_auto_size is not None:
-          self.is_auto_size = is_auto_size
-        if is_link is not None:
-          self.is_link = is_link
-        if prog_id is not None:
-          self.prog_id = prog_id
         if source_full_name is not None:
           self.source_full_name = source_full_name
-
-    @property
-    def name(self):
-        """
-        Gets the name of this OleObject.
-
-        :return: The name of this OleObject.
-        :rtype: str
-        """
-        return self.container['name']
-
-    @name.setter
-    def name(self, name):
-        """
-        Sets the name of this OleObject.
-
-        :param name: The name of this OleObject.
-        :type: str
-        """
-
-        self.container['name'] = name
-
-    @property
-    def mso_drawing_type(self):
-        """
-        Gets the mso_drawing_type of this OleObject.
-
-        :return: The mso_drawing_type of this OleObject.
-        :rtype: str
-        """
-        return self.container['mso_drawing_type']
-
-    @mso_drawing_type.setter
-    def mso_drawing_type(self, mso_drawing_type):
-        """
-        Sets the mso_drawing_type of this OleObject.
-
-        :param mso_drawing_type: The mso_drawing_type of this OleObject.
-        :type: str
-        """
-
-        self.container['mso_drawing_type'] = mso_drawing_type
-
-    @property
-    def auto_shape_type(self):
-        """
-        Gets the auto_shape_type of this OleObject.
-
-        :return: The auto_shape_type of this OleObject.
-        :rtype: str
-        """
-        return self.container['auto_shape_type']
-
-    @auto_shape_type.setter
-    def auto_shape_type(self, auto_shape_type):
-        """
-        Sets the auto_shape_type of this OleObject.
-
-        :param auto_shape_type: The auto_shape_type of this OleObject.
-        :type: str
-        """
-
-        self.container['auto_shape_type'] = auto_shape_type
-
-    @property
-    def placement(self):
-        """
-        Gets the placement of this OleObject.
-
-        :return: The placement of this OleObject.
-        :rtype: str
-        """
-        return self.container['placement']
-
-    @placement.setter
-    def placement(self, placement):
-        """
-        Sets the placement of this OleObject.
-
-        :param placement: The placement of this OleObject.
-        :type: str
-        """
-
-        self.container['placement'] = placement
-
-    @property
-    def upper_left_row(self):
-        """
-        Gets the upper_left_row of this OleObject.
-
-        :return: The upper_left_row of this OleObject.
-        :rtype: int
-        """
-        return self.container['upper_left_row']
-
-    @upper_left_row.setter
-    def upper_left_row(self, upper_left_row):
-        """
-        Sets the upper_left_row of this OleObject.
-
-        :param upper_left_row: The upper_left_row of this OleObject.
-        :type: int
-        """
-
-        self.container['upper_left_row'] = upper_left_row
-
-    @property
-    def top(self):
-        """
-        Gets the top of this OleObject.
-
-        :return: The top of this OleObject.
-        :rtype: int
-        """
-        return self.container['top']
-
-    @top.setter
-    def top(self, top):
-        """
-        Sets the top of this OleObject.
-
-        :param top: The top of this OleObject.
-        :type: int
-        """
-
-        self.container['top'] = top
-
-    @property
-    def upper_left_column(self):
-        """
-        Gets the upper_left_column of this OleObject.
-
-        :return: The upper_left_column of this OleObject.
-        :rtype: int
-        """
-        return self.container['upper_left_column']
-
-    @upper_left_column.setter
-    def upper_left_column(self, upper_left_column):
-        """
-        Sets the upper_left_column of this OleObject.
-
-        :param upper_left_column: The upper_left_column of this OleObject.
-        :type: int
-        """
-
-        self.container['upper_left_column'] = upper_left_column
-
-    @property
-    def left(self):
-        """
-        Gets the left of this OleObject.
-
-        :return: The left of this OleObject.
-        :rtype: int
-        """
-        return self.container['left']
-
-    @left.setter
-    def left(self, left):
-        """
-        Sets the left of this OleObject.
-
-        :param left: The left of this OleObject.
-        :type: int
-        """
-
-        self.container['left'] = left
-
-    @property
-    def lower_right_row(self):
-        """
-        Gets the lower_right_row of this OleObject.
-
-        :return: The lower_right_row of this OleObject.
-        :rtype: int
-        """
-        return self.container['lower_right_row']
-
-    @lower_right_row.setter
-    def lower_right_row(self, lower_right_row):
-        """
-        Sets the lower_right_row of this OleObject.
-
-        :param lower_right_row: The lower_right_row of this OleObject.
-        :type: int
-        """
-
-        self.container['lower_right_row'] = lower_right_row
-
-    @property
-    def bottom(self):
-        """
-        Gets the bottom of this OleObject.
-
-        :return: The bottom of this OleObject.
-        :rtype: int
-        """
-        return self.container['bottom']
-
-    @bottom.setter
-    def bottom(self, bottom):
-        """
-        Sets the bottom of this OleObject.
-
-        :param bottom: The bottom of this OleObject.
-        :type: int
-        """
-
-        self.container['bottom'] = bottom
-
-    @property
-    def lower_right_column(self):
-        """
-        Gets the lower_right_column of this OleObject.
-
-        :return: The lower_right_column of this OleObject.
-        :rtype: int
-        """
-        return self.container['lower_right_column']
-
-    @lower_right_column.setter
-    def lower_right_column(self, lower_right_column):
-        """
-        Sets the lower_right_column of this OleObject.
-
-        :param lower_right_column: The lower_right_column of this OleObject.
-        :type: int
-        """
-
-        self.container['lower_right_column'] = lower_right_column
-
-    @property
-    def right(self):
-        """
-        Gets the right of this OleObject.
-
-        :return: The right of this OleObject.
-        :rtype: int
-        """
-        return self.container['right']
-
-    @right.setter
-    def right(self, right):
-        """
-        Sets the right of this OleObject.
-
-        :param right: The right of this OleObject.
-        :type: int
-        """
-
-        self.container['right'] = right
-
-    @property
-    def width(self):
-        """
-        Gets the width of this OleObject.
-
-        :return: The width of this OleObject.
-        :rtype: int
-        """
-        return self.container['width']
-
-    @width.setter
-    def width(self, width):
-        """
-        Sets the width of this OleObject.
-
-        :param width: The width of this OleObject.
-        :type: int
-        """
-
-        self.container['width'] = width
-
-    @property
-    def height(self):
-        """
-        Gets the height of this OleObject.
-
-        :return: The height of this OleObject.
-        :rtype: int
-        """
-        return self.container['height']
-
-    @height.setter
-    def height(self, height):
-        """
-        Sets the height of this OleObject.
-
-        :param height: The height of this OleObject.
-        :type: int
-        """
-
-        self.container['height'] = height
-
-    @property
-    def x(self):
-        """
-        Gets the x of this OleObject.
-
-        :return: The x of this OleObject.
-        :rtype: int
-        """
-        return self.container['x']
-
-    @x.setter
-    def x(self, x):
-        """
-        Sets the x of this OleObject.
-
-        :param x: The x of this OleObject.
-        :type: int
-        """
-
-        self.container['x'] = x
-
-    @property
-    def y(self):
-        """
-        Gets the y of this OleObject.
-
-        :return: The y of this OleObject.
-        :rtype: int
-        """
-        return self.container['y']
-
-    @y.setter
-    def y(self, y):
-        """
-        Sets the y of this OleObject.
-
-        :param y: The y of this OleObject.
-        :type: int
-        """
-
-        self.container['y'] = y
-
-    @property
-    def rotation_angle(self):
-        """
-        Gets the rotation_angle of this OleObject.
-
-        :return: The rotation_angle of this OleObject.
-        :rtype: float
-        """
-        return self.container['rotation_angle']
-
-    @rotation_angle.setter
-    def rotation_angle(self, rotation_angle):
-        """
-        Sets the rotation_angle of this OleObject.
-
-        :param rotation_angle: The rotation_angle of this OleObject.
-        :type: float
-        """
-
-        self.container['rotation_angle'] = rotation_angle
-
-    @property
-    def html_text(self):
-        """
-        Gets the html_text of this OleObject.
-
-        :return: The html_text of this OleObject.
-        :rtype: str
-        """
-        return self.container['html_text']
-
-    @html_text.setter
-    def html_text(self, html_text):
-        """
-        Sets the html_text of this OleObject.
-
-        :param html_text: The html_text of this OleObject.
-        :type: str
-        """
-
-        self.container['html_text'] = html_text
-
-    @property
-    def text(self):
-        """
-        Gets the text of this OleObject.
-
-        :return: The text of this OleObject.
-        :rtype: str
-        """
-        return self.container['text']
-
-    @text.setter
-    def text(self, text):
-        """
-        Sets the text of this OleObject.
-
-        :param text: The text of this OleObject.
-        :type: str
-        """
-
-        self.container['text'] = text
+        if is_auto_size is not None:
+          self.is_auto_size = is_auto_size
+        if image_source_full_name is not None:
+          self.image_source_full_name = image_source_full_name
+        if prog_id is not None:
+          self.prog_id = prog_id
+        if is_link is not None:
+          self.is_link = is_link
 
     @property
     def alternative_text(self):
@@ -692,67 +293,88 @@ class OleObject(object):
         self.container['alternative_text'] = alternative_text
 
     @property
-    def text_horizontal_alignment(self):
+    def bottom(self):
         """
-        Gets the text_horizontal_alignment of this OleObject.
+        Gets the bottom of this OleObject.
 
-        :return: The text_horizontal_alignment of this OleObject.
-        :rtype: str
+        :return: The bottom of this OleObject.
+        :rtype: int
         """
-        return self.container['text_horizontal_alignment']
+        return self.container['bottom']
 
-    @text_horizontal_alignment.setter
-    def text_horizontal_alignment(self, text_horizontal_alignment):
+    @bottom.setter
+    def bottom(self, bottom):
         """
-        Sets the text_horizontal_alignment of this OleObject.
+        Sets the bottom of this OleObject.
 
-        :param text_horizontal_alignment: The text_horizontal_alignment of this OleObject.
-        :type: str
+        :param bottom: The bottom of this OleObject.
+        :type: int
         """
 
-        self.container['text_horizontal_alignment'] = text_horizontal_alignment
+        self.container['bottom'] = bottom
 
     @property
-    def text_horizontal_overflow(self):
+    def top(self):
         """
-        Gets the text_horizontal_overflow of this OleObject.
+        Gets the top of this OleObject.
 
-        :return: The text_horizontal_overflow of this OleObject.
-        :rtype: str
+        :return: The top of this OleObject.
+        :rtype: int
         """
-        return self.container['text_horizontal_overflow']
+        return self.container['top']
 
-    @text_horizontal_overflow.setter
-    def text_horizontal_overflow(self, text_horizontal_overflow):
+    @top.setter
+    def top(self, top):
         """
-        Sets the text_horizontal_overflow of this OleObject.
+        Sets the top of this OleObject.
 
-        :param text_horizontal_overflow: The text_horizontal_overflow of this OleObject.
-        :type: str
+        :param top: The top of this OleObject.
+        :type: int
         """
 
-        self.container['text_horizontal_overflow'] = text_horizontal_overflow
+        self.container['top'] = top
 
     @property
-    def text_orientation_type(self):
+    def width(self):
         """
-        Gets the text_orientation_type of this OleObject.
+        Gets the width of this OleObject.
 
-        :return: The text_orientation_type of this OleObject.
+        :return: The width of this OleObject.
+        :rtype: int
+        """
+        return self.container['width']
+
+    @width.setter
+    def width(self, width):
+        """
+        Sets the width of this OleObject.
+
+        :param width: The width of this OleObject.
+        :type: int
+        """
+
+        self.container['width'] = width
+
+    @property
+    def html_text(self):
+        """
+        Gets the html_text of this OleObject.
+
+        :return: The html_text of this OleObject.
         :rtype: str
         """
-        return self.container['text_orientation_type']
+        return self.container['html_text']
 
-    @text_orientation_type.setter
-    def text_orientation_type(self, text_orientation_type):
+    @html_text.setter
+    def html_text(self, html_text):
         """
-        Sets the text_orientation_type of this OleObject.
+        Sets the html_text of this OleObject.
 
-        :param text_orientation_type: The text_orientation_type of this OleObject.
+        :param html_text: The html_text of this OleObject.
         :type: str
         """
 
-        self.container['text_orientation_type'] = text_orientation_type
+        self.container['html_text'] = html_text
 
     @property
     def text_vertical_alignment(self):
@@ -776,109 +398,25 @@ class OleObject(object):
         self.container['text_vertical_alignment'] = text_vertical_alignment
 
     @property
-    def text_vertical_overflow(self):
+    def auto_shape_type(self):
         """
-        Gets the text_vertical_overflow of this OleObject.
+        Gets the auto_shape_type of this OleObject.
 
-        :return: The text_vertical_overflow of this OleObject.
+        :return: The auto_shape_type of this OleObject.
         :rtype: str
         """
-        return self.container['text_vertical_overflow']
+        return self.container['auto_shape_type']
 
-    @text_vertical_overflow.setter
-    def text_vertical_overflow(self, text_vertical_overflow):
+    @auto_shape_type.setter
+    def auto_shape_type(self, auto_shape_type):
         """
-        Sets the text_vertical_overflow of this OleObject.
+        Sets the auto_shape_type of this OleObject.
 
-        :param text_vertical_overflow: The text_vertical_overflow of this OleObject.
+        :param auto_shape_type: The auto_shape_type of this OleObject.
         :type: str
         """
 
-        self.container['text_vertical_overflow'] = text_vertical_overflow
-
-    @property
-    def is_group(self):
-        """
-        Gets the is_group of this OleObject.
-
-        :return: The is_group of this OleObject.
-        :rtype: bool
-        """
-        return self.container['is_group']
-
-    @is_group.setter
-    def is_group(self, is_group):
-        """
-        Sets the is_group of this OleObject.
-
-        :param is_group: The is_group of this OleObject.
-        :type: bool
-        """
-
-        self.container['is_group'] = is_group
-
-    @property
-    def is_hidden(self):
-        """
-        Gets the is_hidden of this OleObject.
-
-        :return: The is_hidden of this OleObject.
-        :rtype: bool
-        """
-        return self.container['is_hidden']
-
-    @is_hidden.setter
-    def is_hidden(self, is_hidden):
-        """
-        Sets the is_hidden of this OleObject.
-
-        :param is_hidden: The is_hidden of this OleObject.
-        :type: bool
-        """
-
-        self.container['is_hidden'] = is_hidden
-
-    @property
-    def is_lock_aspect_ratio(self):
-        """
-        Gets the is_lock_aspect_ratio of this OleObject.
-
-        :return: The is_lock_aspect_ratio of this OleObject.
-        :rtype: bool
-        """
-        return self.container['is_lock_aspect_ratio']
-
-    @is_lock_aspect_ratio.setter
-    def is_lock_aspect_ratio(self, is_lock_aspect_ratio):
-        """
-        Sets the is_lock_aspect_ratio of this OleObject.
-
-        :param is_lock_aspect_ratio: The is_lock_aspect_ratio of this OleObject.
-        :type: bool
-        """
-
-        self.container['is_lock_aspect_ratio'] = is_lock_aspect_ratio
-
-    @property
-    def is_locked(self):
-        """
-        Gets the is_locked of this OleObject.
-
-        :return: The is_locked of this OleObject.
-        :rtype: bool
-        """
-        return self.container['is_locked']
-
-    @is_locked.setter
-    def is_locked(self, is_locked):
-        """
-        Sets the is_locked of this OleObject.
-
-        :param is_locked: The is_locked of this OleObject.
-        :type: bool
-        """
-
-        self.container['is_locked'] = is_locked
+        self.container['auto_shape_type'] = auto_shape_type
 
     @property
     def is_printable(self):
@@ -902,25 +440,214 @@ class OleObject(object):
         self.container['is_printable'] = is_printable
 
     @property
-    def is_text_wrapped(self):
+    def upper_left_column(self):
         """
-        Gets the is_text_wrapped of this OleObject.
+        Gets the upper_left_column of this OleObject.
 
-        :return: The is_text_wrapped of this OleObject.
+        :return: The upper_left_column of this OleObject.
+        :rtype: int
+        """
+        return self.container['upper_left_column']
+
+    @upper_left_column.setter
+    def upper_left_column(self, upper_left_column):
+        """
+        Sets the upper_left_column of this OleObject.
+
+        :param upper_left_column: The upper_left_column of this OleObject.
+        :type: int
+        """
+
+        self.container['upper_left_column'] = upper_left_column
+
+    @property
+    def is_lock_aspect_ratio(self):
+        """
+        Gets the is_lock_aspect_ratio of this OleObject.
+
+        :return: The is_lock_aspect_ratio of this OleObject.
         :rtype: bool
         """
-        return self.container['is_text_wrapped']
+        return self.container['is_lock_aspect_ratio']
 
-    @is_text_wrapped.setter
-    def is_text_wrapped(self, is_text_wrapped):
+    @is_lock_aspect_ratio.setter
+    def is_lock_aspect_ratio(self, is_lock_aspect_ratio):
         """
-        Sets the is_text_wrapped of this OleObject.
+        Sets the is_lock_aspect_ratio of this OleObject.
 
-        :param is_text_wrapped: The is_text_wrapped of this OleObject.
+        :param is_lock_aspect_ratio: The is_lock_aspect_ratio of this OleObject.
         :type: bool
         """
 
-        self.container['is_text_wrapped'] = is_text_wrapped
+        self.container['is_lock_aspect_ratio'] = is_lock_aspect_ratio
+
+    @property
+    def is_group(self):
+        """
+        Gets the is_group of this OleObject.
+
+        :return: The is_group of this OleObject.
+        :rtype: bool
+        """
+        return self.container['is_group']
+
+    @is_group.setter
+    def is_group(self, is_group):
+        """
+        Sets the is_group of this OleObject.
+
+        :param is_group: The is_group of this OleObject.
+        :type: bool
+        """
+
+        self.container['is_group'] = is_group
+
+    @property
+    def rotation_angle(self):
+        """
+        Gets the rotation_angle of this OleObject.
+
+        :return: The rotation_angle of this OleObject.
+        :rtype: float
+        """
+        return self.container['rotation_angle']
+
+    @rotation_angle.setter
+    def rotation_angle(self, rotation_angle):
+        """
+        Sets the rotation_angle of this OleObject.
+
+        :param rotation_angle: The rotation_angle of this OleObject.
+        :type: float
+        """
+
+        self.container['rotation_angle'] = rotation_angle
+
+    @property
+    def z_order_position(self):
+        """
+        Gets the z_order_position of this OleObject.
+
+        :return: The z_order_position of this OleObject.
+        :rtype: int
+        """
+        return self.container['z_order_position']
+
+    @z_order_position.setter
+    def z_order_position(self, z_order_position):
+        """
+        Sets the z_order_position of this OleObject.
+
+        :param z_order_position: The z_order_position of this OleObject.
+        :type: int
+        """
+
+        self.container['z_order_position'] = z_order_position
+
+    @property
+    def text_horizontal_overflow(self):
+        """
+        Gets the text_horizontal_overflow of this OleObject.
+
+        :return: The text_horizontal_overflow of this OleObject.
+        :rtype: str
+        """
+        return self.container['text_horizontal_overflow']
+
+    @text_horizontal_overflow.setter
+    def text_horizontal_overflow(self, text_horizontal_overflow):
+        """
+        Sets the text_horizontal_overflow of this OleObject.
+
+        :param text_horizontal_overflow: The text_horizontal_overflow of this OleObject.
+        :type: str
+        """
+
+        self.container['text_horizontal_overflow'] = text_horizontal_overflow
+
+    @property
+    def mso_drawing_type(self):
+        """
+        Gets the mso_drawing_type of this OleObject.
+
+        :return: The mso_drawing_type of this OleObject.
+        :rtype: str
+        """
+        return self.container['mso_drawing_type']
+
+    @mso_drawing_type.setter
+    def mso_drawing_type(self, mso_drawing_type):
+        """
+        Sets the mso_drawing_type of this OleObject.
+
+        :param mso_drawing_type: The mso_drawing_type of this OleObject.
+        :type: str
+        """
+
+        self.container['mso_drawing_type'] = mso_drawing_type
+
+    @property
+    def text_orientation_type(self):
+        """
+        Gets the text_orientation_type of this OleObject.
+
+        :return: The text_orientation_type of this OleObject.
+        :rtype: str
+        """
+        return self.container['text_orientation_type']
+
+    @text_orientation_type.setter
+    def text_orientation_type(self, text_orientation_type):
+        """
+        Sets the text_orientation_type of this OleObject.
+
+        :param text_orientation_type: The text_orientation_type of this OleObject.
+        :type: str
+        """
+
+        self.container['text_orientation_type'] = text_orientation_type
+
+    @property
+    def placement(self):
+        """
+        Gets the placement of this OleObject.
+
+        :return: The placement of this OleObject.
+        :rtype: str
+        """
+        return self.container['placement']
+
+    @placement.setter
+    def placement(self, placement):
+        """
+        Sets the placement of this OleObject.
+
+        :param placement: The placement of this OleObject.
+        :type: str
+        """
+
+        self.container['placement'] = placement
+
+    @property
+    def name(self):
+        """
+        Gets the name of this OleObject.
+
+        :return: The name of this OleObject.
+        :rtype: str
+        """
+        return self.container['name']
+
+    @name.setter
+    def name(self, name):
+        """
+        Sets the name of this OleObject.
+
+        :param name: The name of this OleObject.
+        :type: str
+        """
+
+        self.container['name'] = name
 
     @property
     def is_word_art(self):
@@ -965,25 +692,298 @@ class OleObject(object):
         self.container['linked_cell'] = linked_cell
 
     @property
-    def z_order_position(self):
+    def upper_left_row(self):
         """
-        Gets the z_order_position of this OleObject.
+        Gets the upper_left_row of this OleObject.
 
-        :return: The z_order_position of this OleObject.
+        :return: The upper_left_row of this OleObject.
         :rtype: int
         """
-        return self.container['z_order_position']
+        return self.container['upper_left_row']
 
-    @z_order_position.setter
-    def z_order_position(self, z_order_position):
+    @upper_left_row.setter
+    def upper_left_row(self, upper_left_row):
         """
-        Sets the z_order_position of this OleObject.
+        Sets the upper_left_row of this OleObject.
 
-        :param z_order_position: The z_order_position of this OleObject.
+        :param upper_left_row: The upper_left_row of this OleObject.
         :type: int
         """
 
-        self.container['z_order_position'] = z_order_position
+        self.container['upper_left_row'] = upper_left_row
+
+    @property
+    def is_locked(self):
+        """
+        Gets the is_locked of this OleObject.
+
+        :return: The is_locked of this OleObject.
+        :rtype: bool
+        """
+        return self.container['is_locked']
+
+    @is_locked.setter
+    def is_locked(self, is_locked):
+        """
+        Sets the is_locked of this OleObject.
+
+        :param is_locked: The is_locked of this OleObject.
+        :type: bool
+        """
+
+        self.container['is_locked'] = is_locked
+
+    @property
+    def lower_right_row(self):
+        """
+        Gets the lower_right_row of this OleObject.
+
+        :return: The lower_right_row of this OleObject.
+        :rtype: int
+        """
+        return self.container['lower_right_row']
+
+    @lower_right_row.setter
+    def lower_right_row(self, lower_right_row):
+        """
+        Sets the lower_right_row of this OleObject.
+
+        :param lower_right_row: The lower_right_row of this OleObject.
+        :type: int
+        """
+
+        self.container['lower_right_row'] = lower_right_row
+
+    @property
+    def is_text_wrapped(self):
+        """
+        Gets the is_text_wrapped of this OleObject.
+
+        :return: The is_text_wrapped of this OleObject.
+        :rtype: bool
+        """
+        return self.container['is_text_wrapped']
+
+    @is_text_wrapped.setter
+    def is_text_wrapped(self, is_text_wrapped):
+        """
+        Sets the is_text_wrapped of this OleObject.
+
+        :param is_text_wrapped: The is_text_wrapped of this OleObject.
+        :type: bool
+        """
+
+        self.container['is_text_wrapped'] = is_text_wrapped
+
+    @property
+    def y(self):
+        """
+        Gets the y of this OleObject.
+
+        :return: The y of this OleObject.
+        :rtype: int
+        """
+        return self.container['y']
+
+    @y.setter
+    def y(self, y):
+        """
+        Sets the y of this OleObject.
+
+        :param y: The y of this OleObject.
+        :type: int
+        """
+
+        self.container['y'] = y
+
+    @property
+    def x(self):
+        """
+        Gets the x of this OleObject.
+
+        :return: The x of this OleObject.
+        :rtype: int
+        """
+        return self.container['x']
+
+    @x.setter
+    def x(self, x):
+        """
+        Sets the x of this OleObject.
+
+        :param x: The x of this OleObject.
+        :type: int
+        """
+
+        self.container['x'] = x
+
+    @property
+    def is_hidden(self):
+        """
+        Gets the is_hidden of this OleObject.
+
+        :return: The is_hidden of this OleObject.
+        :rtype: bool
+        """
+        return self.container['is_hidden']
+
+    @is_hidden.setter
+    def is_hidden(self, is_hidden):
+        """
+        Sets the is_hidden of this OleObject.
+
+        :param is_hidden: The is_hidden of this OleObject.
+        :type: bool
+        """
+
+        self.container['is_hidden'] = is_hidden
+
+    @property
+    def left(self):
+        """
+        Gets the left of this OleObject.
+
+        :return: The left of this OleObject.
+        :rtype: int
+        """
+        return self.container['left']
+
+    @left.setter
+    def left(self, left):
+        """
+        Sets the left of this OleObject.
+
+        :param left: The left of this OleObject.
+        :type: int
+        """
+
+        self.container['left'] = left
+
+    @property
+    def right(self):
+        """
+        Gets the right of this OleObject.
+
+        :return: The right of this OleObject.
+        :rtype: int
+        """
+        return self.container['right']
+
+    @right.setter
+    def right(self, right):
+        """
+        Sets the right of this OleObject.
+
+        :param right: The right of this OleObject.
+        :type: int
+        """
+
+        self.container['right'] = right
+
+    @property
+    def text(self):
+        """
+        Gets the text of this OleObject.
+
+        :return: The text of this OleObject.
+        :rtype: str
+        """
+        return self.container['text']
+
+    @text.setter
+    def text(self, text):
+        """
+        Sets the text of this OleObject.
+
+        :param text: The text of this OleObject.
+        :type: str
+        """
+
+        self.container['text'] = text
+
+    @property
+    def lower_right_column(self):
+        """
+        Gets the lower_right_column of this OleObject.
+
+        :return: The lower_right_column of this OleObject.
+        :rtype: int
+        """
+        return self.container['lower_right_column']
+
+    @lower_right_column.setter
+    def lower_right_column(self, lower_right_column):
+        """
+        Sets the lower_right_column of this OleObject.
+
+        :param lower_right_column: The lower_right_column of this OleObject.
+        :type: int
+        """
+
+        self.container['lower_right_column'] = lower_right_column
+
+    @property
+    def height(self):
+        """
+        Gets the height of this OleObject.
+
+        :return: The height of this OleObject.
+        :rtype: int
+        """
+        return self.container['height']
+
+    @height.setter
+    def height(self, height):
+        """
+        Sets the height of this OleObject.
+
+        :param height: The height of this OleObject.
+        :type: int
+        """
+
+        self.container['height'] = height
+
+    @property
+    def text_horizontal_alignment(self):
+        """
+        Gets the text_horizontal_alignment of this OleObject.
+
+        :return: The text_horizontal_alignment of this OleObject.
+        :rtype: str
+        """
+        return self.container['text_horizontal_alignment']
+
+    @text_horizontal_alignment.setter
+    def text_horizontal_alignment(self, text_horizontal_alignment):
+        """
+        Sets the text_horizontal_alignment of this OleObject.
+
+        :param text_horizontal_alignment: The text_horizontal_alignment of this OleObject.
+        :type: str
+        """
+
+        self.container['text_horizontal_alignment'] = text_horizontal_alignment
+
+    @property
+    def text_vertical_overflow(self):
+        """
+        Gets the text_vertical_overflow of this OleObject.
+
+        :return: The text_vertical_overflow of this OleObject.
+        :rtype: str
+        """
+        return self.container['text_vertical_overflow']
+
+    @text_vertical_overflow.setter
+    def text_vertical_overflow(self, text_vertical_overflow):
+        """
+        Sets the text_vertical_overflow of this OleObject.
+
+        :param text_vertical_overflow: The text_vertical_overflow of this OleObject.
+        :type: str
+        """
+
+        self.container['text_vertical_overflow'] = text_vertical_overflow
 
     @property
     def link(self):
@@ -1049,25 +1049,25 @@ class OleObject(object):
         self.container['file_format_type'] = file_format_type
 
     @property
-    def image_source_full_name(self):
+    def source_full_name(self):
         """
-        Gets the image_source_full_name of this OleObject.
+        Gets the source_full_name of this OleObject.
 
-        :return: The image_source_full_name of this OleObject.
+        :return: The source_full_name of this OleObject.
         :rtype: str
         """
-        return self.container['image_source_full_name']
+        return self.container['source_full_name']
 
-    @image_source_full_name.setter
-    def image_source_full_name(self, image_source_full_name):
+    @source_full_name.setter
+    def source_full_name(self, source_full_name):
         """
-        Sets the image_source_full_name of this OleObject.
+        Sets the source_full_name of this OleObject.
 
-        :param image_source_full_name: The image_source_full_name of this OleObject.
+        :param source_full_name: The source_full_name of this OleObject.
         :type: str
         """
 
-        self.container['image_source_full_name'] = image_source_full_name
+        self.container['source_full_name'] = source_full_name
 
     @property
     def is_auto_size(self):
@@ -1091,25 +1091,25 @@ class OleObject(object):
         self.container['is_auto_size'] = is_auto_size
 
     @property
-    def is_link(self):
+    def image_source_full_name(self):
         """
-        Gets the is_link of this OleObject.
+        Gets the image_source_full_name of this OleObject.
 
-        :return: The is_link of this OleObject.
-        :rtype: bool
+        :return: The image_source_full_name of this OleObject.
+        :rtype: str
         """
-        return self.container['is_link']
+        return self.container['image_source_full_name']
 
-    @is_link.setter
-    def is_link(self, is_link):
+    @image_source_full_name.setter
+    def image_source_full_name(self, image_source_full_name):
         """
-        Sets the is_link of this OleObject.
+        Sets the image_source_full_name of this OleObject.
 
-        :param is_link: The is_link of this OleObject.
-        :type: bool
+        :param image_source_full_name: The image_source_full_name of this OleObject.
+        :type: str
         """
 
-        self.container['is_link'] = is_link
+        self.container['image_source_full_name'] = image_source_full_name
 
     @property
     def prog_id(self):
@@ -1133,25 +1133,25 @@ class OleObject(object):
         self.container['prog_id'] = prog_id
 
     @property
-    def source_full_name(self):
+    def is_link(self):
         """
-        Gets the source_full_name of this OleObject.
+        Gets the is_link of this OleObject.
 
-        :return: The source_full_name of this OleObject.
-        :rtype: str
+        :return: The is_link of this OleObject.
+        :rtype: bool
         """
-        return self.container['source_full_name']
+        return self.container['is_link']
 
-    @source_full_name.setter
-    def source_full_name(self, source_full_name):
+    @is_link.setter
+    def is_link(self, is_link):
         """
-        Sets the source_full_name of this OleObject.
+        Sets the is_link of this OleObject.
 
-        :param source_full_name: The source_full_name of this OleObject.
-        :type: str
+        :param is_link: The is_link of this OleObject.
+        :type: bool
         """
 
-        self.container['source_full_name'] = source_full_name
+        self.container['is_link'] = is_link
 
     def to_dict(self):
         """

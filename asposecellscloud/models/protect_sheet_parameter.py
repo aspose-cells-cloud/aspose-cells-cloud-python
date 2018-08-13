@@ -31,41 +31,41 @@ class ProtectSheetParameter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'protection_type': 'str',
-        'password': 'str',
-        'allow_edit_area': 'list[str]',
-        'allow_deleting_column': 'str',
-        'allow_deleting_row': 'str',
-        'allow_filtering': 'str',
-        'allow_formatting_cell': 'str',
-        'allow_formatting_column': 'str',
-        'allow_formatting_row': 'str',
-        'allow_inserting_column': 'str',
-        'allow_inserting_hyperlink': 'str',
-        'allow_inserting_row': 'str',
-        'allow_selecting_locked_cell': 'str',
         'allow_selecting_unlocked_cell': 'str',
+        'allow_filtering': 'str',
+        'allow_deleting_column': 'str',
+        'allow_selecting_locked_cell': 'str',
+        'allow_using_pivot_table': 'str',
+        'allow_edit_area': 'list[str]',
+        'allow_inserting_hyperlink': 'str',
+        'allow_formatting_cell': 'str',
+        'allow_formatting_row': 'str',
+        'allow_inserting_row': 'str',
+        'allow_formatting_column': 'str',
         'allow_sorting': 'str',
-        'allow_using_pivot_table': 'str'
+        'allow_inserting_column': 'str',
+        'password': 'str',
+        'allow_deleting_row': 'str',
+        'protection_type': 'str'
     }
 
     attribute_map = {
-        'protection_type': 'ProtectionType',
-        'password': 'Password',
-        'allow_edit_area': 'AllowEditArea',
-        'allow_deleting_column': 'AllowDeletingColumn',
-        'allow_deleting_row': 'AllowDeletingRow',
-        'allow_filtering': 'AllowFiltering',
-        'allow_formatting_cell': 'AllowFormattingCell',
-        'allow_formatting_column': 'AllowFormattingColumn',
-        'allow_formatting_row': 'AllowFormattingRow',
-        'allow_inserting_column': 'AllowInsertingColumn',
-        'allow_inserting_hyperlink': 'AllowInsertingHyperlink',
-        'allow_inserting_row': 'AllowInsertingRow',
-        'allow_selecting_locked_cell': 'AllowSelectingLockedCell',
         'allow_selecting_unlocked_cell': 'AllowSelectingUnlockedCell',
+        'allow_filtering': 'AllowFiltering',
+        'allow_deleting_column': 'AllowDeletingColumn',
+        'allow_selecting_locked_cell': 'AllowSelectingLockedCell',
+        'allow_using_pivot_table': 'AllowUsingPivotTable',
+        'allow_edit_area': 'AllowEditArea',
+        'allow_inserting_hyperlink': 'AllowInsertingHyperlink',
+        'allow_formatting_cell': 'AllowFormattingCell',
+        'allow_formatting_row': 'AllowFormattingRow',
+        'allow_inserting_row': 'AllowInsertingRow',
+        'allow_formatting_column': 'AllowFormattingColumn',
         'allow_sorting': 'AllowSorting',
-        'allow_using_pivot_table': 'AllowUsingPivotTable'
+        'allow_inserting_column': 'AllowInsertingColumn',
+        'password': 'Password',
+        'allow_deleting_row': 'AllowDeletingRow',
+        'protection_type': 'ProtectionType'
     }
     
     @staticmethod
@@ -81,7 +81,7 @@ class ProtectSheetParameter(object):
             return self.container[attr]
         return None
 
-    def __init__(self, protection_type=None, password=None, allow_edit_area=None, allow_deleting_column=None, allow_deleting_row=None, allow_filtering=None, allow_formatting_cell=None, allow_formatting_column=None, allow_formatting_row=None, allow_inserting_column=None, allow_inserting_hyperlink=None, allow_inserting_row=None, allow_selecting_locked_cell=None, allow_selecting_unlocked_cell=None, allow_sorting=None, allow_using_pivot_table=None, **kw):
+    def __init__(self, allow_selecting_unlocked_cell=None, allow_filtering=None, allow_deleting_column=None, allow_selecting_locked_cell=None, allow_using_pivot_table=None, allow_edit_area=None, allow_inserting_hyperlink=None, allow_formatting_cell=None, allow_formatting_row=None, allow_inserting_row=None, allow_formatting_column=None, allow_sorting=None, allow_inserting_column=None, password=None, allow_deleting_row=None, protection_type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -91,328 +91,55 @@ class ProtectSheetParameter(object):
         ProtectSheetParameter - a model defined in Swagger
         """
 
-        self.container['protection_type'] = None
-        self.container['password'] = None
-        self.container['allow_edit_area'] = None
-        self.container['allow_deleting_column'] = None
-        self.container['allow_deleting_row'] = None
-        self.container['allow_filtering'] = None
-        self.container['allow_formatting_cell'] = None
-        self.container['allow_formatting_column'] = None
-        self.container['allow_formatting_row'] = None
-        self.container['allow_inserting_column'] = None
-        self.container['allow_inserting_hyperlink'] = None
-        self.container['allow_inserting_row'] = None
-        self.container['allow_selecting_locked_cell'] = None
         self.container['allow_selecting_unlocked_cell'] = None
-        self.container['allow_sorting'] = None
+        self.container['allow_filtering'] = None
+        self.container['allow_deleting_column'] = None
+        self.container['allow_selecting_locked_cell'] = None
         self.container['allow_using_pivot_table'] = None
+        self.container['allow_edit_area'] = None
+        self.container['allow_inserting_hyperlink'] = None
+        self.container['allow_formatting_cell'] = None
+        self.container['allow_formatting_row'] = None
+        self.container['allow_inserting_row'] = None
+        self.container['allow_formatting_column'] = None
+        self.container['allow_sorting'] = None
+        self.container['allow_inserting_column'] = None
+        self.container['password'] = None
+        self.container['allow_deleting_row'] = None
+        self.container['protection_type'] = None
 
-        if protection_type is not None:
-          self.protection_type = protection_type
-        if password is not None:
-          self.password = password
-        if allow_edit_area is not None:
-          self.allow_edit_area = allow_edit_area
-        if allow_deleting_column is not None:
-          self.allow_deleting_column = allow_deleting_column
-        if allow_deleting_row is not None:
-          self.allow_deleting_row = allow_deleting_row
-        if allow_filtering is not None:
-          self.allow_filtering = allow_filtering
-        if allow_formatting_cell is not None:
-          self.allow_formatting_cell = allow_formatting_cell
-        if allow_formatting_column is not None:
-          self.allow_formatting_column = allow_formatting_column
-        if allow_formatting_row is not None:
-          self.allow_formatting_row = allow_formatting_row
-        if allow_inserting_column is not None:
-          self.allow_inserting_column = allow_inserting_column
-        if allow_inserting_hyperlink is not None:
-          self.allow_inserting_hyperlink = allow_inserting_hyperlink
-        if allow_inserting_row is not None:
-          self.allow_inserting_row = allow_inserting_row
-        if allow_selecting_locked_cell is not None:
-          self.allow_selecting_locked_cell = allow_selecting_locked_cell
         if allow_selecting_unlocked_cell is not None:
           self.allow_selecting_unlocked_cell = allow_selecting_unlocked_cell
-        if allow_sorting is not None:
-          self.allow_sorting = allow_sorting
+        if allow_filtering is not None:
+          self.allow_filtering = allow_filtering
+        if allow_deleting_column is not None:
+          self.allow_deleting_column = allow_deleting_column
+        if allow_selecting_locked_cell is not None:
+          self.allow_selecting_locked_cell = allow_selecting_locked_cell
         if allow_using_pivot_table is not None:
           self.allow_using_pivot_table = allow_using_pivot_table
-
-    @property
-    def protection_type(self):
-        """
-        Gets the protection_type of this ProtectSheetParameter.
-
-        :return: The protection_type of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['protection_type']
-
-    @protection_type.setter
-    def protection_type(self, protection_type):
-        """
-        Sets the protection_type of this ProtectSheetParameter.
-
-        :param protection_type: The protection_type of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['protection_type'] = protection_type
-
-    @property
-    def password(self):
-        """
-        Gets the password of this ProtectSheetParameter.
-
-        :return: The password of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['password']
-
-    @password.setter
-    def password(self, password):
-        """
-        Sets the password of this ProtectSheetParameter.
-
-        :param password: The password of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['password'] = password
-
-    @property
-    def allow_edit_area(self):
-        """
-        Gets the allow_edit_area of this ProtectSheetParameter.
-
-        :return: The allow_edit_area of this ProtectSheetParameter.
-        :rtype: list[str]
-        """
-        return self.container['allow_edit_area']
-
-    @allow_edit_area.setter
-    def allow_edit_area(self, allow_edit_area):
-        """
-        Sets the allow_edit_area of this ProtectSheetParameter.
-
-        :param allow_edit_area: The allow_edit_area of this ProtectSheetParameter.
-        :type: list[str]
-        """
-
-        self.container['allow_edit_area'] = allow_edit_area
-
-    @property
-    def allow_deleting_column(self):
-        """
-        Gets the allow_deleting_column of this ProtectSheetParameter.
-
-        :return: The allow_deleting_column of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['allow_deleting_column']
-
-    @allow_deleting_column.setter
-    def allow_deleting_column(self, allow_deleting_column):
-        """
-        Sets the allow_deleting_column of this ProtectSheetParameter.
-
-        :param allow_deleting_column: The allow_deleting_column of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['allow_deleting_column'] = allow_deleting_column
-
-    @property
-    def allow_deleting_row(self):
-        """
-        Gets the allow_deleting_row of this ProtectSheetParameter.
-
-        :return: The allow_deleting_row of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['allow_deleting_row']
-
-    @allow_deleting_row.setter
-    def allow_deleting_row(self, allow_deleting_row):
-        """
-        Sets the allow_deleting_row of this ProtectSheetParameter.
-
-        :param allow_deleting_row: The allow_deleting_row of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['allow_deleting_row'] = allow_deleting_row
-
-    @property
-    def allow_filtering(self):
-        """
-        Gets the allow_filtering of this ProtectSheetParameter.
-
-        :return: The allow_filtering of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['allow_filtering']
-
-    @allow_filtering.setter
-    def allow_filtering(self, allow_filtering):
-        """
-        Sets the allow_filtering of this ProtectSheetParameter.
-
-        :param allow_filtering: The allow_filtering of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['allow_filtering'] = allow_filtering
-
-    @property
-    def allow_formatting_cell(self):
-        """
-        Gets the allow_formatting_cell of this ProtectSheetParameter.
-
-        :return: The allow_formatting_cell of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['allow_formatting_cell']
-
-    @allow_formatting_cell.setter
-    def allow_formatting_cell(self, allow_formatting_cell):
-        """
-        Sets the allow_formatting_cell of this ProtectSheetParameter.
-
-        :param allow_formatting_cell: The allow_formatting_cell of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['allow_formatting_cell'] = allow_formatting_cell
-
-    @property
-    def allow_formatting_column(self):
-        """
-        Gets the allow_formatting_column of this ProtectSheetParameter.
-
-        :return: The allow_formatting_column of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['allow_formatting_column']
-
-    @allow_formatting_column.setter
-    def allow_formatting_column(self, allow_formatting_column):
-        """
-        Sets the allow_formatting_column of this ProtectSheetParameter.
-
-        :param allow_formatting_column: The allow_formatting_column of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['allow_formatting_column'] = allow_formatting_column
-
-    @property
-    def allow_formatting_row(self):
-        """
-        Gets the allow_formatting_row of this ProtectSheetParameter.
-
-        :return: The allow_formatting_row of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['allow_formatting_row']
-
-    @allow_formatting_row.setter
-    def allow_formatting_row(self, allow_formatting_row):
-        """
-        Sets the allow_formatting_row of this ProtectSheetParameter.
-
-        :param allow_formatting_row: The allow_formatting_row of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['allow_formatting_row'] = allow_formatting_row
-
-    @property
-    def allow_inserting_column(self):
-        """
-        Gets the allow_inserting_column of this ProtectSheetParameter.
-
-        :return: The allow_inserting_column of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['allow_inserting_column']
-
-    @allow_inserting_column.setter
-    def allow_inserting_column(self, allow_inserting_column):
-        """
-        Sets the allow_inserting_column of this ProtectSheetParameter.
-
-        :param allow_inserting_column: The allow_inserting_column of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['allow_inserting_column'] = allow_inserting_column
-
-    @property
-    def allow_inserting_hyperlink(self):
-        """
-        Gets the allow_inserting_hyperlink of this ProtectSheetParameter.
-
-        :return: The allow_inserting_hyperlink of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['allow_inserting_hyperlink']
-
-    @allow_inserting_hyperlink.setter
-    def allow_inserting_hyperlink(self, allow_inserting_hyperlink):
-        """
-        Sets the allow_inserting_hyperlink of this ProtectSheetParameter.
-
-        :param allow_inserting_hyperlink: The allow_inserting_hyperlink of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['allow_inserting_hyperlink'] = allow_inserting_hyperlink
-
-    @property
-    def allow_inserting_row(self):
-        """
-        Gets the allow_inserting_row of this ProtectSheetParameter.
-
-        :return: The allow_inserting_row of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['allow_inserting_row']
-
-    @allow_inserting_row.setter
-    def allow_inserting_row(self, allow_inserting_row):
-        """
-        Sets the allow_inserting_row of this ProtectSheetParameter.
-
-        :param allow_inserting_row: The allow_inserting_row of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['allow_inserting_row'] = allow_inserting_row
-
-    @property
-    def allow_selecting_locked_cell(self):
-        """
-        Gets the allow_selecting_locked_cell of this ProtectSheetParameter.
-
-        :return: The allow_selecting_locked_cell of this ProtectSheetParameter.
-        :rtype: str
-        """
-        return self.container['allow_selecting_locked_cell']
-
-    @allow_selecting_locked_cell.setter
-    def allow_selecting_locked_cell(self, allow_selecting_locked_cell):
-        """
-        Sets the allow_selecting_locked_cell of this ProtectSheetParameter.
-
-        :param allow_selecting_locked_cell: The allow_selecting_locked_cell of this ProtectSheetParameter.
-        :type: str
-        """
-
-        self.container['allow_selecting_locked_cell'] = allow_selecting_locked_cell
+        if allow_edit_area is not None:
+          self.allow_edit_area = allow_edit_area
+        if allow_inserting_hyperlink is not None:
+          self.allow_inserting_hyperlink = allow_inserting_hyperlink
+        if allow_formatting_cell is not None:
+          self.allow_formatting_cell = allow_formatting_cell
+        if allow_formatting_row is not None:
+          self.allow_formatting_row = allow_formatting_row
+        if allow_inserting_row is not None:
+          self.allow_inserting_row = allow_inserting_row
+        if allow_formatting_column is not None:
+          self.allow_formatting_column = allow_formatting_column
+        if allow_sorting is not None:
+          self.allow_sorting = allow_sorting
+        if allow_inserting_column is not None:
+          self.allow_inserting_column = allow_inserting_column
+        if password is not None:
+          self.password = password
+        if allow_deleting_row is not None:
+          self.allow_deleting_row = allow_deleting_row
+        if protection_type is not None:
+          self.protection_type = protection_type
 
     @property
     def allow_selecting_unlocked_cell(self):
@@ -436,25 +163,67 @@ class ProtectSheetParameter(object):
         self.container['allow_selecting_unlocked_cell'] = allow_selecting_unlocked_cell
 
     @property
-    def allow_sorting(self):
+    def allow_filtering(self):
         """
-        Gets the allow_sorting of this ProtectSheetParameter.
+        Gets the allow_filtering of this ProtectSheetParameter.
 
-        :return: The allow_sorting of this ProtectSheetParameter.
+        :return: The allow_filtering of this ProtectSheetParameter.
         :rtype: str
         """
-        return self.container['allow_sorting']
+        return self.container['allow_filtering']
 
-    @allow_sorting.setter
-    def allow_sorting(self, allow_sorting):
+    @allow_filtering.setter
+    def allow_filtering(self, allow_filtering):
         """
-        Sets the allow_sorting of this ProtectSheetParameter.
+        Sets the allow_filtering of this ProtectSheetParameter.
 
-        :param allow_sorting: The allow_sorting of this ProtectSheetParameter.
+        :param allow_filtering: The allow_filtering of this ProtectSheetParameter.
         :type: str
         """
 
-        self.container['allow_sorting'] = allow_sorting
+        self.container['allow_filtering'] = allow_filtering
+
+    @property
+    def allow_deleting_column(self):
+        """
+        Gets the allow_deleting_column of this ProtectSheetParameter.
+
+        :return: The allow_deleting_column of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['allow_deleting_column']
+
+    @allow_deleting_column.setter
+    def allow_deleting_column(self, allow_deleting_column):
+        """
+        Sets the allow_deleting_column of this ProtectSheetParameter.
+
+        :param allow_deleting_column: The allow_deleting_column of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['allow_deleting_column'] = allow_deleting_column
+
+    @property
+    def allow_selecting_locked_cell(self):
+        """
+        Gets the allow_selecting_locked_cell of this ProtectSheetParameter.
+
+        :return: The allow_selecting_locked_cell of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['allow_selecting_locked_cell']
+
+    @allow_selecting_locked_cell.setter
+    def allow_selecting_locked_cell(self, allow_selecting_locked_cell):
+        """
+        Sets the allow_selecting_locked_cell of this ProtectSheetParameter.
+
+        :param allow_selecting_locked_cell: The allow_selecting_locked_cell of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['allow_selecting_locked_cell'] = allow_selecting_locked_cell
 
     @property
     def allow_using_pivot_table(self):
@@ -476,6 +245,237 @@ class ProtectSheetParameter(object):
         """
 
         self.container['allow_using_pivot_table'] = allow_using_pivot_table
+
+    @property
+    def allow_edit_area(self):
+        """
+        Gets the allow_edit_area of this ProtectSheetParameter.
+
+        :return: The allow_edit_area of this ProtectSheetParameter.
+        :rtype: list[str]
+        """
+        return self.container['allow_edit_area']
+
+    @allow_edit_area.setter
+    def allow_edit_area(self, allow_edit_area):
+        """
+        Sets the allow_edit_area of this ProtectSheetParameter.
+
+        :param allow_edit_area: The allow_edit_area of this ProtectSheetParameter.
+        :type: list[str]
+        """
+
+        self.container['allow_edit_area'] = allow_edit_area
+
+    @property
+    def allow_inserting_hyperlink(self):
+        """
+        Gets the allow_inserting_hyperlink of this ProtectSheetParameter.
+
+        :return: The allow_inserting_hyperlink of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['allow_inserting_hyperlink']
+
+    @allow_inserting_hyperlink.setter
+    def allow_inserting_hyperlink(self, allow_inserting_hyperlink):
+        """
+        Sets the allow_inserting_hyperlink of this ProtectSheetParameter.
+
+        :param allow_inserting_hyperlink: The allow_inserting_hyperlink of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['allow_inserting_hyperlink'] = allow_inserting_hyperlink
+
+    @property
+    def allow_formatting_cell(self):
+        """
+        Gets the allow_formatting_cell of this ProtectSheetParameter.
+
+        :return: The allow_formatting_cell of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['allow_formatting_cell']
+
+    @allow_formatting_cell.setter
+    def allow_formatting_cell(self, allow_formatting_cell):
+        """
+        Sets the allow_formatting_cell of this ProtectSheetParameter.
+
+        :param allow_formatting_cell: The allow_formatting_cell of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['allow_formatting_cell'] = allow_formatting_cell
+
+    @property
+    def allow_formatting_row(self):
+        """
+        Gets the allow_formatting_row of this ProtectSheetParameter.
+
+        :return: The allow_formatting_row of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['allow_formatting_row']
+
+    @allow_formatting_row.setter
+    def allow_formatting_row(self, allow_formatting_row):
+        """
+        Sets the allow_formatting_row of this ProtectSheetParameter.
+
+        :param allow_formatting_row: The allow_formatting_row of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['allow_formatting_row'] = allow_formatting_row
+
+    @property
+    def allow_inserting_row(self):
+        """
+        Gets the allow_inserting_row of this ProtectSheetParameter.
+
+        :return: The allow_inserting_row of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['allow_inserting_row']
+
+    @allow_inserting_row.setter
+    def allow_inserting_row(self, allow_inserting_row):
+        """
+        Sets the allow_inserting_row of this ProtectSheetParameter.
+
+        :param allow_inserting_row: The allow_inserting_row of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['allow_inserting_row'] = allow_inserting_row
+
+    @property
+    def allow_formatting_column(self):
+        """
+        Gets the allow_formatting_column of this ProtectSheetParameter.
+
+        :return: The allow_formatting_column of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['allow_formatting_column']
+
+    @allow_formatting_column.setter
+    def allow_formatting_column(self, allow_formatting_column):
+        """
+        Sets the allow_formatting_column of this ProtectSheetParameter.
+
+        :param allow_formatting_column: The allow_formatting_column of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['allow_formatting_column'] = allow_formatting_column
+
+    @property
+    def allow_sorting(self):
+        """
+        Gets the allow_sorting of this ProtectSheetParameter.
+
+        :return: The allow_sorting of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['allow_sorting']
+
+    @allow_sorting.setter
+    def allow_sorting(self, allow_sorting):
+        """
+        Sets the allow_sorting of this ProtectSheetParameter.
+
+        :param allow_sorting: The allow_sorting of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['allow_sorting'] = allow_sorting
+
+    @property
+    def allow_inserting_column(self):
+        """
+        Gets the allow_inserting_column of this ProtectSheetParameter.
+
+        :return: The allow_inserting_column of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['allow_inserting_column']
+
+    @allow_inserting_column.setter
+    def allow_inserting_column(self, allow_inserting_column):
+        """
+        Sets the allow_inserting_column of this ProtectSheetParameter.
+
+        :param allow_inserting_column: The allow_inserting_column of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['allow_inserting_column'] = allow_inserting_column
+
+    @property
+    def password(self):
+        """
+        Gets the password of this ProtectSheetParameter.
+
+        :return: The password of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['password']
+
+    @password.setter
+    def password(self, password):
+        """
+        Sets the password of this ProtectSheetParameter.
+
+        :param password: The password of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['password'] = password
+
+    @property
+    def allow_deleting_row(self):
+        """
+        Gets the allow_deleting_row of this ProtectSheetParameter.
+
+        :return: The allow_deleting_row of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['allow_deleting_row']
+
+    @allow_deleting_row.setter
+    def allow_deleting_row(self, allow_deleting_row):
+        """
+        Sets the allow_deleting_row of this ProtectSheetParameter.
+
+        :param allow_deleting_row: The allow_deleting_row of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['allow_deleting_row'] = allow_deleting_row
+
+    @property
+    def protection_type(self):
+        """
+        Gets the protection_type of this ProtectSheetParameter.
+
+        :return: The protection_type of this ProtectSheetParameter.
+        :rtype: str
+        """
+        return self.container['protection_type']
+
+    @protection_type.setter
+    def protection_type(self, protection_type):
+        """
+        Sets the protection_type of this ProtectSheetParameter.
+
+        :param protection_type: The protection_type of this ProtectSheetParameter.
+        :type: str
+        """
+
+        self.container['protection_type'] = protection_type
 
     def to_dict(self):
         """

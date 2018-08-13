@@ -31,15 +31,15 @@ class ConditionalFormattingIcon(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'image_data': 'str',
         'index': 'int',
-        'type': 'str'
+        'type': 'str',
+        'image_data': 'str'
     }
 
     attribute_map = {
-        'image_data': 'ImageData',
         'index': 'Index',
-        'type': 'Type'
+        'type': 'Type',
+        'image_data': 'ImageData'
     }
     
     @staticmethod
@@ -55,7 +55,7 @@ class ConditionalFormattingIcon(object):
             return self.container[attr]
         return None
 
-    def __init__(self, image_data=None, index=None, type=None, **kw):
+    def __init__(self, index=None, type=None, image_data=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -65,41 +65,16 @@ class ConditionalFormattingIcon(object):
         ConditionalFormattingIcon - a model defined in Swagger
         """
 
-        self.container['image_data'] = None
         self.container['index'] = None
         self.container['type'] = None
+        self.container['image_data'] = None
 
-        if image_data is not None:
-          self.image_data = image_data
         if index is not None:
           self.index = index
         if type is not None:
           self.type = type
-
-    @property
-    def image_data(self):
-        """
-        Gets the image_data of this ConditionalFormattingIcon.
-        Gets the icon set data.             
-
-        :return: The image_data of this ConditionalFormattingIcon.
-        :rtype: str
-        """
-        return self.container['image_data']
-
-    @image_data.setter
-    def image_data(self, image_data):
-        """
-        Sets the image_data of this ConditionalFormattingIcon.
-        Gets the icon set data.             
-
-        :param image_data: The image_data of this ConditionalFormattingIcon.
-        :type: str
-        """
-        if image_data is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', image_data):
-            raise ValueError("Invalid value for `image_data`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")
-
-        self.container['image_data'] = image_data
+        if image_data is not None:
+          self.image_data = image_data
 
     @property
     def index(self):
@@ -146,6 +121,31 @@ class ConditionalFormattingIcon(object):
         """
 
         self.container['type'] = type
+
+    @property
+    def image_data(self):
+        """
+        Gets the image_data of this ConditionalFormattingIcon.
+        Gets the icon set data.             
+
+        :return: The image_data of this ConditionalFormattingIcon.
+        :rtype: str
+        """
+        return self.container['image_data']
+
+    @image_data.setter
+    def image_data(self, image_data):
+        """
+        Sets the image_data of this ConditionalFormattingIcon.
+        Gets the icon set data.             
+
+        :param image_data: The image_data of this ConditionalFormattingIcon.
+        :type: str
+        """
+        if image_data is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', image_data):
+            raise ValueError("Invalid value for `image_data`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")
+
+        self.container['image_data'] = image_data
 
     def to_dict(self):
         """

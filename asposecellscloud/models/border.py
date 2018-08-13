@@ -31,15 +31,15 @@ class Border(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'line_style': 'str',
         'color': 'Color',
-        'border_type': 'str'
+        'border_type': 'str',
+        'line_style': 'str'
     }
 
     attribute_map = {
-        'line_style': 'LineStyle',
         'color': 'Color',
-        'border_type': 'BorderType'
+        'border_type': 'BorderType',
+        'line_style': 'LineStyle'
     }
     
     @staticmethod
@@ -55,7 +55,7 @@ class Border(object):
             return self.container[attr]
         return None
 
-    def __init__(self, line_style=None, color=None, border_type=None, **kw):
+    def __init__(self, color=None, border_type=None, line_style=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -65,37 +65,16 @@ class Border(object):
         Border - a model defined in Swagger
         """
 
-        self.container['line_style'] = None
         self.container['color'] = None
         self.container['border_type'] = None
+        self.container['line_style'] = None
 
-        if line_style is not None:
-          self.line_style = line_style
         if color is not None:
           self.color = color
         if border_type is not None:
           self.border_type = border_type
-
-    @property
-    def line_style(self):
-        """
-        Gets the line_style of this Border.
-
-        :return: The line_style of this Border.
-        :rtype: str
-        """
-        return self.container['line_style']
-
-    @line_style.setter
-    def line_style(self, line_style):
-        """
-        Sets the line_style of this Border.
-
-        :param line_style: The line_style of this Border.
-        :type: str
-        """
-
-        self.container['line_style'] = line_style
+        if line_style is not None:
+          self.line_style = line_style
 
     @property
     def color(self):
@@ -138,6 +117,27 @@ class Border(object):
         """
 
         self.container['border_type'] = border_type
+
+    @property
+    def line_style(self):
+        """
+        Gets the line_style of this Border.
+
+        :return: The line_style of this Border.
+        :rtype: str
+        """
+        return self.container['line_style']
+
+    @line_style.setter
+    def line_style(self, line_style):
+        """
+        Sets the line_style of this Border.
+
+        :param line_style: The line_style of this Border.
+        :type: str
+        """
+
+        self.container['line_style'] = line_style
 
     def to_dict(self):
         """

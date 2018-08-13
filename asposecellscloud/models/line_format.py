@@ -31,43 +31,43 @@ class LineFormat(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
-        'solid_fill': 'SolidFill',
-        'pattern_fill': 'PatternFill',
         'texture_fill': 'TextureFill',
-        'gradient_fill': 'GradientFill',
         'image_data': 'str',
+        'pattern_fill': 'PatternFill',
+        'solid_fill': 'SolidFill',
+        'gradient_fill': 'GradientFill',
+        'type': 'str',
         'begin_arrowhead_length': 'str',
-        'begin_arrowhead_style': 'str',
-        'begin_arrowhead_width': 'str',
-        'cap_type': 'str',
-        'compound_type': 'str',
         'dash_style': 'str',
-        'end_arrowhead_length': 'str',
-        'end_arrowhead_style': 'str',
         'end_arrowhead_width': 'str',
+        'end_arrowhead_length': 'str',
+        'begin_arrowhead_width': 'str',
+        'compound_type': 'str',
         'join_type': 'str',
-        'weight': 'float'
+        'weight': 'float',
+        'begin_arrowhead_style': 'str',
+        'end_arrowhead_style': 'str',
+        'cap_type': 'str'
     }
 
     attribute_map = {
-        'type': 'Type',
-        'solid_fill': 'SolidFill',
-        'pattern_fill': 'PatternFill',
         'texture_fill': 'TextureFill',
-        'gradient_fill': 'GradientFill',
         'image_data': 'ImageData',
+        'pattern_fill': 'PatternFill',
+        'solid_fill': 'SolidFill',
+        'gradient_fill': 'GradientFill',
+        'type': 'Type',
         'begin_arrowhead_length': 'BeginArrowheadLength',
-        'begin_arrowhead_style': 'BeginArrowheadStyle',
-        'begin_arrowhead_width': 'BeginArrowheadWidth',
-        'cap_type': 'CapType',
-        'compound_type': 'CompoundType',
         'dash_style': 'DashStyle',
-        'end_arrowhead_length': 'EndArrowheadLength',
-        'end_arrowhead_style': 'EndArrowheadStyle',
         'end_arrowhead_width': 'EndArrowheadWidth',
+        'end_arrowhead_length': 'EndArrowheadLength',
+        'begin_arrowhead_width': 'BeginArrowheadWidth',
+        'compound_type': 'CompoundType',
         'join_type': 'JoinType',
-        'weight': 'Weight'
+        'weight': 'Weight',
+        'begin_arrowhead_style': 'BeginArrowheadStyle',
+        'end_arrowhead_style': 'EndArrowheadStyle',
+        'cap_type': 'CapType'
     }
     
     @staticmethod
@@ -83,7 +83,7 @@ class LineFormat(object):
             return self.container[attr]
         return None
 
-    def __init__(self, type=None, solid_fill=None, pattern_fill=None, texture_fill=None, gradient_fill=None, image_data=None, begin_arrowhead_length=None, begin_arrowhead_style=None, begin_arrowhead_width=None, cap_type=None, compound_type=None, dash_style=None, end_arrowhead_length=None, end_arrowhead_style=None, end_arrowhead_width=None, join_type=None, weight=None, **kw):
+    def __init__(self, texture_fill=None, image_data=None, pattern_fill=None, solid_fill=None, gradient_fill=None, type=None, begin_arrowhead_length=None, dash_style=None, end_arrowhead_width=None, end_arrowhead_length=None, begin_arrowhead_width=None, compound_type=None, join_type=None, weight=None, begin_arrowhead_style=None, end_arrowhead_style=None, cap_type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -93,121 +93,58 @@ class LineFormat(object):
         LineFormat - a model defined in Swagger
         """
 
-        self.container['type'] = None
-        self.container['solid_fill'] = None
-        self.container['pattern_fill'] = None
         self.container['texture_fill'] = None
-        self.container['gradient_fill'] = None
         self.container['image_data'] = None
+        self.container['pattern_fill'] = None
+        self.container['solid_fill'] = None
+        self.container['gradient_fill'] = None
+        self.container['type'] = None
         self.container['begin_arrowhead_length'] = None
-        self.container['begin_arrowhead_style'] = None
-        self.container['begin_arrowhead_width'] = None
-        self.container['cap_type'] = None
-        self.container['compound_type'] = None
         self.container['dash_style'] = None
-        self.container['end_arrowhead_length'] = None
-        self.container['end_arrowhead_style'] = None
         self.container['end_arrowhead_width'] = None
+        self.container['end_arrowhead_length'] = None
+        self.container['begin_arrowhead_width'] = None
+        self.container['compound_type'] = None
         self.container['join_type'] = None
         self.container['weight'] = None
+        self.container['begin_arrowhead_style'] = None
+        self.container['end_arrowhead_style'] = None
+        self.container['cap_type'] = None
 
-        if type is not None:
-          self.type = type
-        if solid_fill is not None:
-          self.solid_fill = solid_fill
-        if pattern_fill is not None:
-          self.pattern_fill = pattern_fill
         if texture_fill is not None:
           self.texture_fill = texture_fill
-        if gradient_fill is not None:
-          self.gradient_fill = gradient_fill
         if image_data is not None:
           self.image_data = image_data
+        if pattern_fill is not None:
+          self.pattern_fill = pattern_fill
+        if solid_fill is not None:
+          self.solid_fill = solid_fill
+        if gradient_fill is not None:
+          self.gradient_fill = gradient_fill
+        if type is not None:
+          self.type = type
         if begin_arrowhead_length is not None:
           self.begin_arrowhead_length = begin_arrowhead_length
-        if begin_arrowhead_style is not None:
-          self.begin_arrowhead_style = begin_arrowhead_style
-        if begin_arrowhead_width is not None:
-          self.begin_arrowhead_width = begin_arrowhead_width
-        if cap_type is not None:
-          self.cap_type = cap_type
-        if compound_type is not None:
-          self.compound_type = compound_type
         if dash_style is not None:
           self.dash_style = dash_style
-        if end_arrowhead_length is not None:
-          self.end_arrowhead_length = end_arrowhead_length
-        if end_arrowhead_style is not None:
-          self.end_arrowhead_style = end_arrowhead_style
         if end_arrowhead_width is not None:
           self.end_arrowhead_width = end_arrowhead_width
+        if end_arrowhead_length is not None:
+          self.end_arrowhead_length = end_arrowhead_length
+        if begin_arrowhead_width is not None:
+          self.begin_arrowhead_width = begin_arrowhead_width
+        if compound_type is not None:
+          self.compound_type = compound_type
         if join_type is not None:
           self.join_type = join_type
         if weight is not None:
           self.weight = weight
-
-    @property
-    def type(self):
-        """
-        Gets the type of this LineFormat.
-
-        :return: The type of this LineFormat.
-        :rtype: str
-        """
-        return self.container['type']
-
-    @type.setter
-    def type(self, type):
-        """
-        Sets the type of this LineFormat.
-
-        :param type: The type of this LineFormat.
-        :type: str
-        """
-
-        self.container['type'] = type
-
-    @property
-    def solid_fill(self):
-        """
-        Gets the solid_fill of this LineFormat.
-
-        :return: The solid_fill of this LineFormat.
-        :rtype: SolidFill
-        """
-        return self.container['solid_fill']
-
-    @solid_fill.setter
-    def solid_fill(self, solid_fill):
-        """
-        Sets the solid_fill of this LineFormat.
-
-        :param solid_fill: The solid_fill of this LineFormat.
-        :type: SolidFill
-        """
-
-        self.container['solid_fill'] = solid_fill
-
-    @property
-    def pattern_fill(self):
-        """
-        Gets the pattern_fill of this LineFormat.
-
-        :return: The pattern_fill of this LineFormat.
-        :rtype: PatternFill
-        """
-        return self.container['pattern_fill']
-
-    @pattern_fill.setter
-    def pattern_fill(self, pattern_fill):
-        """
-        Sets the pattern_fill of this LineFormat.
-
-        :param pattern_fill: The pattern_fill of this LineFormat.
-        :type: PatternFill
-        """
-
-        self.container['pattern_fill'] = pattern_fill
+        if begin_arrowhead_style is not None:
+          self.begin_arrowhead_style = begin_arrowhead_style
+        if end_arrowhead_style is not None:
+          self.end_arrowhead_style = end_arrowhead_style
+        if cap_type is not None:
+          self.cap_type = cap_type
 
     @property
     def texture_fill(self):
@@ -229,27 +166,6 @@ class LineFormat(object):
         """
 
         self.container['texture_fill'] = texture_fill
-
-    @property
-    def gradient_fill(self):
-        """
-        Gets the gradient_fill of this LineFormat.
-
-        :return: The gradient_fill of this LineFormat.
-        :rtype: GradientFill
-        """
-        return self.container['gradient_fill']
-
-    @gradient_fill.setter
-    def gradient_fill(self, gradient_fill):
-        """
-        Sets the gradient_fill of this LineFormat.
-
-        :param gradient_fill: The gradient_fill of this LineFormat.
-        :type: GradientFill
-        """
-
-        self.container['gradient_fill'] = gradient_fill
 
     @property
     def image_data(self):
@@ -275,6 +191,90 @@ class LineFormat(object):
         self.container['image_data'] = image_data
 
     @property
+    def pattern_fill(self):
+        """
+        Gets the pattern_fill of this LineFormat.
+
+        :return: The pattern_fill of this LineFormat.
+        :rtype: PatternFill
+        """
+        return self.container['pattern_fill']
+
+    @pattern_fill.setter
+    def pattern_fill(self, pattern_fill):
+        """
+        Sets the pattern_fill of this LineFormat.
+
+        :param pattern_fill: The pattern_fill of this LineFormat.
+        :type: PatternFill
+        """
+
+        self.container['pattern_fill'] = pattern_fill
+
+    @property
+    def solid_fill(self):
+        """
+        Gets the solid_fill of this LineFormat.
+
+        :return: The solid_fill of this LineFormat.
+        :rtype: SolidFill
+        """
+        return self.container['solid_fill']
+
+    @solid_fill.setter
+    def solid_fill(self, solid_fill):
+        """
+        Sets the solid_fill of this LineFormat.
+
+        :param solid_fill: The solid_fill of this LineFormat.
+        :type: SolidFill
+        """
+
+        self.container['solid_fill'] = solid_fill
+
+    @property
+    def gradient_fill(self):
+        """
+        Gets the gradient_fill of this LineFormat.
+
+        :return: The gradient_fill of this LineFormat.
+        :rtype: GradientFill
+        """
+        return self.container['gradient_fill']
+
+    @gradient_fill.setter
+    def gradient_fill(self, gradient_fill):
+        """
+        Sets the gradient_fill of this LineFormat.
+
+        :param gradient_fill: The gradient_fill of this LineFormat.
+        :type: GradientFill
+        """
+
+        self.container['gradient_fill'] = gradient_fill
+
+    @property
+    def type(self):
+        """
+        Gets the type of this LineFormat.
+
+        :return: The type of this LineFormat.
+        :rtype: str
+        """
+        return self.container['type']
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this LineFormat.
+
+        :param type: The type of this LineFormat.
+        :type: str
+        """
+
+        self.container['type'] = type
+
+    @property
     def begin_arrowhead_length(self):
         """
         Gets the begin_arrowhead_length of this LineFormat.
@@ -294,90 +294,6 @@ class LineFormat(object):
         """
 
         self.container['begin_arrowhead_length'] = begin_arrowhead_length
-
-    @property
-    def begin_arrowhead_style(self):
-        """
-        Gets the begin_arrowhead_style of this LineFormat.
-
-        :return: The begin_arrowhead_style of this LineFormat.
-        :rtype: str
-        """
-        return self.container['begin_arrowhead_style']
-
-    @begin_arrowhead_style.setter
-    def begin_arrowhead_style(self, begin_arrowhead_style):
-        """
-        Sets the begin_arrowhead_style of this LineFormat.
-
-        :param begin_arrowhead_style: The begin_arrowhead_style of this LineFormat.
-        :type: str
-        """
-
-        self.container['begin_arrowhead_style'] = begin_arrowhead_style
-
-    @property
-    def begin_arrowhead_width(self):
-        """
-        Gets the begin_arrowhead_width of this LineFormat.
-
-        :return: The begin_arrowhead_width of this LineFormat.
-        :rtype: str
-        """
-        return self.container['begin_arrowhead_width']
-
-    @begin_arrowhead_width.setter
-    def begin_arrowhead_width(self, begin_arrowhead_width):
-        """
-        Sets the begin_arrowhead_width of this LineFormat.
-
-        :param begin_arrowhead_width: The begin_arrowhead_width of this LineFormat.
-        :type: str
-        """
-
-        self.container['begin_arrowhead_width'] = begin_arrowhead_width
-
-    @property
-    def cap_type(self):
-        """
-        Gets the cap_type of this LineFormat.
-
-        :return: The cap_type of this LineFormat.
-        :rtype: str
-        """
-        return self.container['cap_type']
-
-    @cap_type.setter
-    def cap_type(self, cap_type):
-        """
-        Sets the cap_type of this LineFormat.
-
-        :param cap_type: The cap_type of this LineFormat.
-        :type: str
-        """
-
-        self.container['cap_type'] = cap_type
-
-    @property
-    def compound_type(self):
-        """
-        Gets the compound_type of this LineFormat.
-
-        :return: The compound_type of this LineFormat.
-        :rtype: str
-        """
-        return self.container['compound_type']
-
-    @compound_type.setter
-    def compound_type(self, compound_type):
-        """
-        Sets the compound_type of this LineFormat.
-
-        :param compound_type: The compound_type of this LineFormat.
-        :type: str
-        """
-
-        self.container['compound_type'] = compound_type
 
     @property
     def dash_style(self):
@@ -401,6 +317,27 @@ class LineFormat(object):
         self.container['dash_style'] = dash_style
 
     @property
+    def end_arrowhead_width(self):
+        """
+        Gets the end_arrowhead_width of this LineFormat.
+
+        :return: The end_arrowhead_width of this LineFormat.
+        :rtype: str
+        """
+        return self.container['end_arrowhead_width']
+
+    @end_arrowhead_width.setter
+    def end_arrowhead_width(self, end_arrowhead_width):
+        """
+        Sets the end_arrowhead_width of this LineFormat.
+
+        :param end_arrowhead_width: The end_arrowhead_width of this LineFormat.
+        :type: str
+        """
+
+        self.container['end_arrowhead_width'] = end_arrowhead_width
+
+    @property
     def end_arrowhead_length(self):
         """
         Gets the end_arrowhead_length of this LineFormat.
@@ -422,46 +359,46 @@ class LineFormat(object):
         self.container['end_arrowhead_length'] = end_arrowhead_length
 
     @property
-    def end_arrowhead_style(self):
+    def begin_arrowhead_width(self):
         """
-        Gets the end_arrowhead_style of this LineFormat.
+        Gets the begin_arrowhead_width of this LineFormat.
 
-        :return: The end_arrowhead_style of this LineFormat.
+        :return: The begin_arrowhead_width of this LineFormat.
         :rtype: str
         """
-        return self.container['end_arrowhead_style']
+        return self.container['begin_arrowhead_width']
 
-    @end_arrowhead_style.setter
-    def end_arrowhead_style(self, end_arrowhead_style):
+    @begin_arrowhead_width.setter
+    def begin_arrowhead_width(self, begin_arrowhead_width):
         """
-        Sets the end_arrowhead_style of this LineFormat.
+        Sets the begin_arrowhead_width of this LineFormat.
 
-        :param end_arrowhead_style: The end_arrowhead_style of this LineFormat.
+        :param begin_arrowhead_width: The begin_arrowhead_width of this LineFormat.
         :type: str
         """
 
-        self.container['end_arrowhead_style'] = end_arrowhead_style
+        self.container['begin_arrowhead_width'] = begin_arrowhead_width
 
     @property
-    def end_arrowhead_width(self):
+    def compound_type(self):
         """
-        Gets the end_arrowhead_width of this LineFormat.
+        Gets the compound_type of this LineFormat.
 
-        :return: The end_arrowhead_width of this LineFormat.
+        :return: The compound_type of this LineFormat.
         :rtype: str
         """
-        return self.container['end_arrowhead_width']
+        return self.container['compound_type']
 
-    @end_arrowhead_width.setter
-    def end_arrowhead_width(self, end_arrowhead_width):
+    @compound_type.setter
+    def compound_type(self, compound_type):
         """
-        Sets the end_arrowhead_width of this LineFormat.
+        Sets the compound_type of this LineFormat.
 
-        :param end_arrowhead_width: The end_arrowhead_width of this LineFormat.
+        :param compound_type: The compound_type of this LineFormat.
         :type: str
         """
 
-        self.container['end_arrowhead_width'] = end_arrowhead_width
+        self.container['compound_type'] = compound_type
 
     @property
     def join_type(self):
@@ -504,6 +441,69 @@ class LineFormat(object):
         """
 
         self.container['weight'] = weight
+
+    @property
+    def begin_arrowhead_style(self):
+        """
+        Gets the begin_arrowhead_style of this LineFormat.
+
+        :return: The begin_arrowhead_style of this LineFormat.
+        :rtype: str
+        """
+        return self.container['begin_arrowhead_style']
+
+    @begin_arrowhead_style.setter
+    def begin_arrowhead_style(self, begin_arrowhead_style):
+        """
+        Sets the begin_arrowhead_style of this LineFormat.
+
+        :param begin_arrowhead_style: The begin_arrowhead_style of this LineFormat.
+        :type: str
+        """
+
+        self.container['begin_arrowhead_style'] = begin_arrowhead_style
+
+    @property
+    def end_arrowhead_style(self):
+        """
+        Gets the end_arrowhead_style of this LineFormat.
+
+        :return: The end_arrowhead_style of this LineFormat.
+        :rtype: str
+        """
+        return self.container['end_arrowhead_style']
+
+    @end_arrowhead_style.setter
+    def end_arrowhead_style(self, end_arrowhead_style):
+        """
+        Sets the end_arrowhead_style of this LineFormat.
+
+        :param end_arrowhead_style: The end_arrowhead_style of this LineFormat.
+        :type: str
+        """
+
+        self.container['end_arrowhead_style'] = end_arrowhead_style
+
+    @property
+    def cap_type(self):
+        """
+        Gets the cap_type of this LineFormat.
+
+        :return: The cap_type of this LineFormat.
+        :rtype: str
+        """
+        return self.container['cap_type']
+
+    @cap_type.setter
+    def cap_type(self, cap_type):
+        """
+        Sets the cap_type of this LineFormat.
+
+        :param cap_type: The cap_type of this LineFormat.
+        :type: str
+        """
+
+        self.container['cap_type'] = cap_type
 
     def to_dict(self):
         """

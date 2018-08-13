@@ -31,41 +31,41 @@ class Legend(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'area': 'Area',
-        'auto_scale_font': 'bool',
-        'background_mode': 'str',
-        'border': 'Line',
-        'font': 'Font',
-        'is_automatic_size': 'bool',
         'is_inner_mode': 'bool',
-        'shadow': 'bool',
         'shape_properties': 'list[LinkElement]',
-        'width': 'int',
+        'auto_scale_font': 'bool',
+        'area': 'Area',
         'height': 'int',
-        'x': 'int',
+        'width': 'int',
+        'background_mode': 'str',
+        'is_automatic_size': 'bool',
         'y': 'int',
+        'x': 'int',
+        'shadow': 'bool',
+        'font': 'Font',
+        'border': 'Line',
         'link': 'Link',
-        'position': 'str',
-        'legend_entries': 'LinkElement'
+        'legend_entries': 'LinkElement',
+        'position': 'str'
     }
 
     attribute_map = {
-        'area': 'Area',
-        'auto_scale_font': 'AutoScaleFont',
-        'background_mode': 'BackgroundMode',
-        'border': 'Border',
-        'font': 'Font',
-        'is_automatic_size': 'IsAutomaticSize',
         'is_inner_mode': 'IsInnerMode',
-        'shadow': 'Shadow',
         'shape_properties': 'ShapeProperties',
-        'width': 'Width',
+        'auto_scale_font': 'AutoScaleFont',
+        'area': 'Area',
         'height': 'Height',
-        'x': 'X',
+        'width': 'Width',
+        'background_mode': 'BackgroundMode',
+        'is_automatic_size': 'IsAutomaticSize',
         'y': 'Y',
+        'x': 'X',
+        'shadow': 'Shadow',
+        'font': 'Font',
+        'border': 'Border',
         'link': 'link',
-        'position': 'Position',
-        'legend_entries': 'LegendEntries'
+        'legend_entries': 'LegendEntries',
+        'position': 'Position'
     }
     
     @staticmethod
@@ -81,7 +81,7 @@ class Legend(object):
             return self.container[attr]
         return None
 
-    def __init__(self, area=None, auto_scale_font=None, background_mode=None, border=None, font=None, is_automatic_size=None, is_inner_mode=None, shadow=None, shape_properties=None, width=None, height=None, x=None, y=None, link=None, position=None, legend_entries=None, **kw):
+    def __init__(self, is_inner_mode=None, shape_properties=None, auto_scale_font=None, area=None, height=None, width=None, background_mode=None, is_automatic_size=None, y=None, x=None, shadow=None, font=None, border=None, link=None, legend_entries=None, position=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -91,181 +91,55 @@ class Legend(object):
         Legend - a model defined in Swagger
         """
 
-        self.container['area'] = None
-        self.container['auto_scale_font'] = None
-        self.container['background_mode'] = None
-        self.container['border'] = None
-        self.container['font'] = None
-        self.container['is_automatic_size'] = None
         self.container['is_inner_mode'] = None
-        self.container['shadow'] = None
         self.container['shape_properties'] = None
-        self.container['width'] = None
+        self.container['auto_scale_font'] = None
+        self.container['area'] = None
         self.container['height'] = None
-        self.container['x'] = None
+        self.container['width'] = None
+        self.container['background_mode'] = None
+        self.container['is_automatic_size'] = None
         self.container['y'] = None
+        self.container['x'] = None
+        self.container['shadow'] = None
+        self.container['font'] = None
+        self.container['border'] = None
         self.container['link'] = None
-        self.container['position'] = None
         self.container['legend_entries'] = None
+        self.container['position'] = None
 
-        if area is not None:
-          self.area = area
-        if auto_scale_font is not None:
-          self.auto_scale_font = auto_scale_font
-        if background_mode is not None:
-          self.background_mode = background_mode
-        if border is not None:
-          self.border = border
-        if font is not None:
-          self.font = font
-        if is_automatic_size is not None:
-          self.is_automatic_size = is_automatic_size
         if is_inner_mode is not None:
           self.is_inner_mode = is_inner_mode
-        if shadow is not None:
-          self.shadow = shadow
         if shape_properties is not None:
           self.shape_properties = shape_properties
-        if width is not None:
-          self.width = width
+        if auto_scale_font is not None:
+          self.auto_scale_font = auto_scale_font
+        if area is not None:
+          self.area = area
         if height is not None:
           self.height = height
-        if x is not None:
-          self.x = x
+        if width is not None:
+          self.width = width
+        if background_mode is not None:
+          self.background_mode = background_mode
+        if is_automatic_size is not None:
+          self.is_automatic_size = is_automatic_size
         if y is not None:
           self.y = y
+        if x is not None:
+          self.x = x
+        if shadow is not None:
+          self.shadow = shadow
+        if font is not None:
+          self.font = font
+        if border is not None:
+          self.border = border
         if link is not None:
           self.link = link
-        if position is not None:
-          self.position = position
         if legend_entries is not None:
           self.legend_entries = legend_entries
-
-    @property
-    def area(self):
-        """
-        Gets the area of this Legend.
-
-        :return: The area of this Legend.
-        :rtype: Area
-        """
-        return self.container['area']
-
-    @area.setter
-    def area(self, area):
-        """
-        Sets the area of this Legend.
-
-        :param area: The area of this Legend.
-        :type: Area
-        """
-
-        self.container['area'] = area
-
-    @property
-    def auto_scale_font(self):
-        """
-        Gets the auto_scale_font of this Legend.
-
-        :return: The auto_scale_font of this Legend.
-        :rtype: bool
-        """
-        return self.container['auto_scale_font']
-
-    @auto_scale_font.setter
-    def auto_scale_font(self, auto_scale_font):
-        """
-        Sets the auto_scale_font of this Legend.
-
-        :param auto_scale_font: The auto_scale_font of this Legend.
-        :type: bool
-        """
-
-        self.container['auto_scale_font'] = auto_scale_font
-
-    @property
-    def background_mode(self):
-        """
-        Gets the background_mode of this Legend.
-
-        :return: The background_mode of this Legend.
-        :rtype: str
-        """
-        return self.container['background_mode']
-
-    @background_mode.setter
-    def background_mode(self, background_mode):
-        """
-        Sets the background_mode of this Legend.
-
-        :param background_mode: The background_mode of this Legend.
-        :type: str
-        """
-
-        self.container['background_mode'] = background_mode
-
-    @property
-    def border(self):
-        """
-        Gets the border of this Legend.
-
-        :return: The border of this Legend.
-        :rtype: Line
-        """
-        return self.container['border']
-
-    @border.setter
-    def border(self, border):
-        """
-        Sets the border of this Legend.
-
-        :param border: The border of this Legend.
-        :type: Line
-        """
-
-        self.container['border'] = border
-
-    @property
-    def font(self):
-        """
-        Gets the font of this Legend.
-
-        :return: The font of this Legend.
-        :rtype: Font
-        """
-        return self.container['font']
-
-    @font.setter
-    def font(self, font):
-        """
-        Sets the font of this Legend.
-
-        :param font: The font of this Legend.
-        :type: Font
-        """
-
-        self.container['font'] = font
-
-    @property
-    def is_automatic_size(self):
-        """
-        Gets the is_automatic_size of this Legend.
-
-        :return: The is_automatic_size of this Legend.
-        :rtype: bool
-        """
-        return self.container['is_automatic_size']
-
-    @is_automatic_size.setter
-    def is_automatic_size(self, is_automatic_size):
-        """
-        Sets the is_automatic_size of this Legend.
-
-        :param is_automatic_size: The is_automatic_size of this Legend.
-        :type: bool
-        """
-
-        self.container['is_automatic_size'] = is_automatic_size
+        if position is not None:
+          self.position = position
 
     @property
     def is_inner_mode(self):
@@ -289,27 +163,6 @@ class Legend(object):
         self.container['is_inner_mode'] = is_inner_mode
 
     @property
-    def shadow(self):
-        """
-        Gets the shadow of this Legend.
-
-        :return: The shadow of this Legend.
-        :rtype: bool
-        """
-        return self.container['shadow']
-
-    @shadow.setter
-    def shadow(self, shadow):
-        """
-        Sets the shadow of this Legend.
-
-        :param shadow: The shadow of this Legend.
-        :type: bool
-        """
-
-        self.container['shadow'] = shadow
-
-    @property
     def shape_properties(self):
         """
         Gets the shape_properties of this Legend.
@@ -331,25 +184,46 @@ class Legend(object):
         self.container['shape_properties'] = shape_properties
 
     @property
-    def width(self):
+    def auto_scale_font(self):
         """
-        Gets the width of this Legend.
+        Gets the auto_scale_font of this Legend.
 
-        :return: The width of this Legend.
-        :rtype: int
+        :return: The auto_scale_font of this Legend.
+        :rtype: bool
         """
-        return self.container['width']
+        return self.container['auto_scale_font']
 
-    @width.setter
-    def width(self, width):
+    @auto_scale_font.setter
+    def auto_scale_font(self, auto_scale_font):
         """
-        Sets the width of this Legend.
+        Sets the auto_scale_font of this Legend.
 
-        :param width: The width of this Legend.
-        :type: int
+        :param auto_scale_font: The auto_scale_font of this Legend.
+        :type: bool
         """
 
-        self.container['width'] = width
+        self.container['auto_scale_font'] = auto_scale_font
+
+    @property
+    def area(self):
+        """
+        Gets the area of this Legend.
+
+        :return: The area of this Legend.
+        :rtype: Area
+        """
+        return self.container['area']
+
+    @area.setter
+    def area(self, area):
+        """
+        Sets the area of this Legend.
+
+        :param area: The area of this Legend.
+        :type: Area
+        """
+
+        self.container['area'] = area
 
     @property
     def height(self):
@@ -373,25 +247,67 @@ class Legend(object):
         self.container['height'] = height
 
     @property
-    def x(self):
+    def width(self):
         """
-        Gets the x of this Legend.
+        Gets the width of this Legend.
 
-        :return: The x of this Legend.
+        :return: The width of this Legend.
         :rtype: int
         """
-        return self.container['x']
+        return self.container['width']
 
-    @x.setter
-    def x(self, x):
+    @width.setter
+    def width(self, width):
         """
-        Sets the x of this Legend.
+        Sets the width of this Legend.
 
-        :param x: The x of this Legend.
+        :param width: The width of this Legend.
         :type: int
         """
 
-        self.container['x'] = x
+        self.container['width'] = width
+
+    @property
+    def background_mode(self):
+        """
+        Gets the background_mode of this Legend.
+
+        :return: The background_mode of this Legend.
+        :rtype: str
+        """
+        return self.container['background_mode']
+
+    @background_mode.setter
+    def background_mode(self, background_mode):
+        """
+        Sets the background_mode of this Legend.
+
+        :param background_mode: The background_mode of this Legend.
+        :type: str
+        """
+
+        self.container['background_mode'] = background_mode
+
+    @property
+    def is_automatic_size(self):
+        """
+        Gets the is_automatic_size of this Legend.
+
+        :return: The is_automatic_size of this Legend.
+        :rtype: bool
+        """
+        return self.container['is_automatic_size']
+
+    @is_automatic_size.setter
+    def is_automatic_size(self, is_automatic_size):
+        """
+        Sets the is_automatic_size of this Legend.
+
+        :param is_automatic_size: The is_automatic_size of this Legend.
+        :type: bool
+        """
+
+        self.container['is_automatic_size'] = is_automatic_size
 
     @property
     def y(self):
@@ -415,6 +331,90 @@ class Legend(object):
         self.container['y'] = y
 
     @property
+    def x(self):
+        """
+        Gets the x of this Legend.
+
+        :return: The x of this Legend.
+        :rtype: int
+        """
+        return self.container['x']
+
+    @x.setter
+    def x(self, x):
+        """
+        Sets the x of this Legend.
+
+        :param x: The x of this Legend.
+        :type: int
+        """
+
+        self.container['x'] = x
+
+    @property
+    def shadow(self):
+        """
+        Gets the shadow of this Legend.
+
+        :return: The shadow of this Legend.
+        :rtype: bool
+        """
+        return self.container['shadow']
+
+    @shadow.setter
+    def shadow(self, shadow):
+        """
+        Sets the shadow of this Legend.
+
+        :param shadow: The shadow of this Legend.
+        :type: bool
+        """
+
+        self.container['shadow'] = shadow
+
+    @property
+    def font(self):
+        """
+        Gets the font of this Legend.
+
+        :return: The font of this Legend.
+        :rtype: Font
+        """
+        return self.container['font']
+
+    @font.setter
+    def font(self, font):
+        """
+        Sets the font of this Legend.
+
+        :param font: The font of this Legend.
+        :type: Font
+        """
+
+        self.container['font'] = font
+
+    @property
+    def border(self):
+        """
+        Gets the border of this Legend.
+
+        :return: The border of this Legend.
+        :rtype: Line
+        """
+        return self.container['border']
+
+    @border.setter
+    def border(self, border):
+        """
+        Sets the border of this Legend.
+
+        :param border: The border of this Legend.
+        :type: Line
+        """
+
+        self.container['border'] = border
+
+    @property
     def link(self):
         """
         Gets the link of this Legend.
@@ -436,27 +436,6 @@ class Legend(object):
         self.container['link'] = link
 
     @property
-    def position(self):
-        """
-        Gets the position of this Legend.
-
-        :return: The position of this Legend.
-        :rtype: str
-        """
-        return self.container['position']
-
-    @position.setter
-    def position(self, position):
-        """
-        Sets the position of this Legend.
-
-        :param position: The position of this Legend.
-        :type: str
-        """
-
-        self.container['position'] = position
-
-    @property
     def legend_entries(self):
         """
         Gets the legend_entries of this Legend.
@@ -476,6 +455,27 @@ class Legend(object):
         """
 
         self.container['legend_entries'] = legend_entries
+
+    @property
+    def position(self):
+        """
+        Gets the position of this Legend.
+
+        :return: The position of this Legend.
+        :rtype: str
+        """
+        return self.container['position']
+
+    @position.setter
+    def position(self, position):
+        """
+        Sets the position of this Legend.
+
+        :param position: The position of this Legend.
+        :type: str
+        """
+
+        self.container['position'] = position
 
     def to_dict(self):
         """

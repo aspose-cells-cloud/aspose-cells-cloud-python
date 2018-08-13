@@ -31,21 +31,21 @@ class CopyOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'refer_to_destination_sheet': 'bool',
+        'copy_names': 'bool',
+        'refer_to_sheet_with_same_name': 'bool',
         'column_character_width': 'bool',
         'copy_invalid_formulas_as_values': 'bool',
-        'copy_names': 'bool',
-        'extend_to_adjacent_range': 'bool',
-        'refer_to_destination_sheet': 'bool',
-        'refer_to_sheet_with_same_name': 'bool'
+        'extend_to_adjacent_range': 'bool'
     }
 
     attribute_map = {
+        'refer_to_destination_sheet': 'ReferToDestinationSheet',
+        'copy_names': 'CopyNames',
+        'refer_to_sheet_with_same_name': 'ReferToSheetWithSameName',
         'column_character_width': 'ColumnCharacterWidth',
         'copy_invalid_formulas_as_values': 'CopyInvalidFormulasAsValues',
-        'copy_names': 'CopyNames',
-        'extend_to_adjacent_range': 'ExtendToAdjacentRange',
-        'refer_to_destination_sheet': 'ReferToDestinationSheet',
-        'refer_to_sheet_with_same_name': 'ReferToSheetWithSameName'
+        'extend_to_adjacent_range': 'ExtendToAdjacentRange'
     }
     
     @staticmethod
@@ -61,7 +61,7 @@ class CopyOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self, column_character_width=None, copy_invalid_formulas_as_values=None, copy_names=None, extend_to_adjacent_range=None, refer_to_destination_sheet=None, refer_to_sheet_with_same_name=None, **kw):
+    def __init__(self, refer_to_destination_sheet=None, copy_names=None, refer_to_sheet_with_same_name=None, column_character_width=None, copy_invalid_formulas_as_values=None, extend_to_adjacent_range=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -71,25 +71,92 @@ class CopyOptions(object):
         CopyOptions - a model defined in Swagger
         """
 
+        self.container['refer_to_destination_sheet'] = None
+        self.container['copy_names'] = None
+        self.container['refer_to_sheet_with_same_name'] = None
         self.container['column_character_width'] = None
         self.container['copy_invalid_formulas_as_values'] = None
-        self.container['copy_names'] = None
         self.container['extend_to_adjacent_range'] = None
-        self.container['refer_to_destination_sheet'] = None
-        self.container['refer_to_sheet_with_same_name'] = None
 
+        if refer_to_destination_sheet is not None:
+          self.refer_to_destination_sheet = refer_to_destination_sheet
+        if copy_names is not None:
+          self.copy_names = copy_names
+        if refer_to_sheet_with_same_name is not None:
+          self.refer_to_sheet_with_same_name = refer_to_sheet_with_same_name
         if column_character_width is not None:
           self.column_character_width = column_character_width
         if copy_invalid_formulas_as_values is not None:
           self.copy_invalid_formulas_as_values = copy_invalid_formulas_as_values
-        if copy_names is not None:
-          self.copy_names = copy_names
         if extend_to_adjacent_range is not None:
           self.extend_to_adjacent_range = extend_to_adjacent_range
-        if refer_to_destination_sheet is not None:
-          self.refer_to_destination_sheet = refer_to_destination_sheet
-        if refer_to_sheet_with_same_name is not None:
-          self.refer_to_sheet_with_same_name = refer_to_sheet_with_same_name
+
+    @property
+    def refer_to_destination_sheet(self):
+        """
+        Gets the refer_to_destination_sheet of this CopyOptions.
+        When copying the range in the same file and the chart refers to the source sheet,   False means the copied chart's data source will not be changed. True means the   copied chart's data source refers to the destination sheet.             
+
+        :return: The refer_to_destination_sheet of this CopyOptions.
+        :rtype: bool
+        """
+        return self.container['refer_to_destination_sheet']
+
+    @refer_to_destination_sheet.setter
+    def refer_to_destination_sheet(self, refer_to_destination_sheet):
+        """
+        Sets the refer_to_destination_sheet of this CopyOptions.
+        When copying the range in the same file and the chart refers to the source sheet,   False means the copied chart's data source will not be changed. True means the   copied chart's data source refers to the destination sheet.             
+
+        :param refer_to_destination_sheet: The refer_to_destination_sheet of this CopyOptions.
+        :type: bool
+        """
+
+        self.container['refer_to_destination_sheet'] = refer_to_destination_sheet
+
+    @property
+    def copy_names(self):
+        """
+        Gets the copy_names of this CopyOptions.
+        Indicates whether copying the names.
+
+        :return: The copy_names of this CopyOptions.
+        :rtype: bool
+        """
+        return self.container['copy_names']
+
+    @copy_names.setter
+    def copy_names(self, copy_names):
+        """
+        Sets the copy_names of this CopyOptions.
+        Indicates whether copying the names.
+
+        :param copy_names: The copy_names of this CopyOptions.
+        :type: bool
+        """
+
+        self.container['copy_names'] = copy_names
+
+    @property
+    def refer_to_sheet_with_same_name(self):
+        """
+        Gets the refer_to_sheet_with_same_name of this CopyOptions.
+
+        :return: The refer_to_sheet_with_same_name of this CopyOptions.
+        :rtype: bool
+        """
+        return self.container['refer_to_sheet_with_same_name']
+
+    @refer_to_sheet_with_same_name.setter
+    def refer_to_sheet_with_same_name(self, refer_to_sheet_with_same_name):
+        """
+        Sets the refer_to_sheet_with_same_name of this CopyOptions.
+
+        :param refer_to_sheet_with_same_name: The refer_to_sheet_with_same_name of this CopyOptions.
+        :type: bool
+        """
+
+        self.container['refer_to_sheet_with_same_name'] = refer_to_sheet_with_same_name
 
     @property
     def column_character_width(self):
@@ -138,29 +205,6 @@ class CopyOptions(object):
         self.container['copy_invalid_formulas_as_values'] = copy_invalid_formulas_as_values
 
     @property
-    def copy_names(self):
-        """
-        Gets the copy_names of this CopyOptions.
-        Indicates whether copying the names.
-
-        :return: The copy_names of this CopyOptions.
-        :rtype: bool
-        """
-        return self.container['copy_names']
-
-    @copy_names.setter
-    def copy_names(self, copy_names):
-        """
-        Sets the copy_names of this CopyOptions.
-        Indicates whether copying the names.
-
-        :param copy_names: The copy_names of this CopyOptions.
-        :type: bool
-        """
-
-        self.container['copy_names'] = copy_names
-
-    @property
     def extend_to_adjacent_range(self):
         """
         Gets the extend_to_adjacent_range of this CopyOptions.
@@ -182,50 +226,6 @@ class CopyOptions(object):
         """
 
         self.container['extend_to_adjacent_range'] = extend_to_adjacent_range
-
-    @property
-    def refer_to_destination_sheet(self):
-        """
-        Gets the refer_to_destination_sheet of this CopyOptions.
-        When copying the range in the same file and the chart refers to the source sheet,   False means the copied chart's data source will not be changed. True means the   copied chart's data source refers to the destination sheet.             
-
-        :return: The refer_to_destination_sheet of this CopyOptions.
-        :rtype: bool
-        """
-        return self.container['refer_to_destination_sheet']
-
-    @refer_to_destination_sheet.setter
-    def refer_to_destination_sheet(self, refer_to_destination_sheet):
-        """
-        Sets the refer_to_destination_sheet of this CopyOptions.
-        When copying the range in the same file and the chart refers to the source sheet,   False means the copied chart's data source will not be changed. True means the   copied chart's data source refers to the destination sheet.             
-
-        :param refer_to_destination_sheet: The refer_to_destination_sheet of this CopyOptions.
-        :type: bool
-        """
-
-        self.container['refer_to_destination_sheet'] = refer_to_destination_sheet
-
-    @property
-    def refer_to_sheet_with_same_name(self):
-        """
-        Gets the refer_to_sheet_with_same_name of this CopyOptions.
-
-        :return: The refer_to_sheet_with_same_name of this CopyOptions.
-        :rtype: bool
-        """
-        return self.container['refer_to_sheet_with_same_name']
-
-    @refer_to_sheet_with_same_name.setter
-    def refer_to_sheet_with_same_name(self, refer_to_sheet_with_same_name):
-        """
-        Sets the refer_to_sheet_with_same_name of this CopyOptions.
-
-        :param refer_to_sheet_with_same_name: The refer_to_sheet_with_same_name of this CopyOptions.
-        :type: bool
-        """
-
-        self.container['refer_to_sheet_with_same_name'] = refer_to_sheet_with_same_name
 
     def to_dict(self):
         """

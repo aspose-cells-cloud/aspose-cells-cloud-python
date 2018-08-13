@@ -31,20 +31,20 @@ class TilePicOption(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'offset_x': 'float',
-        'offset_y': 'float',
-        'scale_x': 'float',
-        'scale_y': 'float',
         'alignment_type': 'str',
+        'offset_x': 'float',
+        'scale_x': 'float',
+        'offset_y': 'float',
+        'scale_y': 'float',
         'mirror_type': 'str'
     }
 
     attribute_map = {
-        'offset_x': 'OffsetX',
-        'offset_y': 'OffsetY',
-        'scale_x': 'ScaleX',
-        'scale_y': 'ScaleY',
         'alignment_type': 'AlignmentType',
+        'offset_x': 'OffsetX',
+        'scale_x': 'ScaleX',
+        'offset_y': 'OffsetY',
+        'scale_y': 'ScaleY',
         'mirror_type': 'MirrorType'
     }
     
@@ -61,7 +61,7 @@ class TilePicOption(object):
             return self.container[attr]
         return None
 
-    def __init__(self, offset_x=None, offset_y=None, scale_x=None, scale_y=None, alignment_type=None, mirror_type=None, **kw):
+    def __init__(self, alignment_type=None, offset_x=None, scale_x=None, offset_y=None, scale_y=None, mirror_type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -71,21 +71,42 @@ class TilePicOption(object):
         TilePicOption - a model defined in Swagger
         """
 
-        self.container['offset_x'] = None
-        self.container['offset_y'] = None
-        self.container['scale_x'] = None
-        self.container['scale_y'] = None
         self.container['alignment_type'] = None
+        self.container['offset_x'] = None
+        self.container['scale_x'] = None
+        self.container['offset_y'] = None
+        self.container['scale_y'] = None
         self.container['mirror_type'] = None
 
-        self.offset_x = offset_x
-        self.offset_y = offset_y
-        self.scale_x = scale_x
-        self.scale_y = scale_y
         if alignment_type is not None:
           self.alignment_type = alignment_type
+        self.offset_x = offset_x
+        self.scale_x = scale_x
+        self.offset_y = offset_y
+        self.scale_y = scale_y
         if mirror_type is not None:
           self.mirror_type = mirror_type
+
+    @property
+    def alignment_type(self):
+        """
+        Gets the alignment_type of this TilePicOption.
+
+        :return: The alignment_type of this TilePicOption.
+        :rtype: str
+        """
+        return self.container['alignment_type']
+
+    @alignment_type.setter
+    def alignment_type(self, alignment_type):
+        """
+        Sets the alignment_type of this TilePicOption.
+
+        :param alignment_type: The alignment_type of this TilePicOption.
+        :type: str
+        """
+
+        self.container['alignment_type'] = alignment_type
 
     @property
     def offset_x(self):
@@ -113,31 +134,6 @@ class TilePicOption(object):
         self.container['offset_x'] = offset_x
 
     @property
-    def offset_y(self):
-        """
-        Gets the offset_y of this TilePicOption.
-
-        :return: The offset_y of this TilePicOption.
-        :rtype: float
-        """
-        return self.container['offset_y']
-
-    @offset_y.setter
-    def offset_y(self, offset_y):
-        """
-        Sets the offset_y of this TilePicOption.
-
-        :param offset_y: The offset_y of this TilePicOption.
-        :type: float
-        """
-        """
-        if offset_y is None:
-            raise ValueError("Invalid value for `offset_y`, must not be `None`")
-        """
-
-        self.container['offset_y'] = offset_y
-
-    @property
     def scale_x(self):
         """
         Gets the scale_x of this TilePicOption.
@@ -163,6 +159,31 @@ class TilePicOption(object):
         self.container['scale_x'] = scale_x
 
     @property
+    def offset_y(self):
+        """
+        Gets the offset_y of this TilePicOption.
+
+        :return: The offset_y of this TilePicOption.
+        :rtype: float
+        """
+        return self.container['offset_y']
+
+    @offset_y.setter
+    def offset_y(self, offset_y):
+        """
+        Sets the offset_y of this TilePicOption.
+
+        :param offset_y: The offset_y of this TilePicOption.
+        :type: float
+        """
+        """
+        if offset_y is None:
+            raise ValueError("Invalid value for `offset_y`, must not be `None`")
+        """
+
+        self.container['offset_y'] = offset_y
+
+    @property
     def scale_y(self):
         """
         Gets the scale_y of this TilePicOption.
@@ -186,27 +207,6 @@ class TilePicOption(object):
         """
 
         self.container['scale_y'] = scale_y
-
-    @property
-    def alignment_type(self):
-        """
-        Gets the alignment_type of this TilePicOption.
-
-        :return: The alignment_type of this TilePicOption.
-        :rtype: str
-        """
-        return self.container['alignment_type']
-
-    @alignment_type.setter
-    def alignment_type(self, alignment_type):
-        """
-        Sets the alignment_type of this TilePicOption.
-
-        :param alignment_type: The alignment_type of this TilePicOption.
-        :type: str
-        """
-
-        self.container['alignment_type'] = alignment_type
 
     @property
     def mirror_type(self):

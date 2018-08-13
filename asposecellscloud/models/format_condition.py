@@ -32,38 +32,38 @@ class FormatCondition(object):
     """
     swagger_types = {
         'link': 'Link',
-        'priority': 'int',
-        'type': 'str',
-        'stop_if_true': 'bool',
         'above_average': 'AboveAverage',
+        'formula2': 'str',
+        'style': 'Style',
+        'formula1': 'str',
         'color_scale': 'ColorScale',
         'data_bar': 'DataBar',
-        'formula1': 'str',
-        'formula2': 'str',
-        'icon_set': 'IconSet',
-        'operator': 'str',
-        'style': 'Style',
         'text': 'str',
-        'time_period': 'str',
-        'top10': 'Top10'
+        'stop_if_true': 'bool',
+        'priority': 'int',
+        'top10': 'Top10',
+        'operator': 'str',
+        'icon_set': 'IconSet',
+        'type': 'str',
+        'time_period': 'str'
     }
 
     attribute_map = {
         'link': 'link',
-        'priority': 'Priority',
-        'type': 'Type',
-        'stop_if_true': 'StopIfTrue',
         'above_average': 'AboveAverage',
+        'formula2': 'Formula2',
+        'style': 'Style',
+        'formula1': 'Formula1',
         'color_scale': 'ColorScale',
         'data_bar': 'DataBar',
-        'formula1': 'Formula1',
-        'formula2': 'Formula2',
-        'icon_set': 'IconSet',
-        'operator': 'Operator',
-        'style': 'Style',
         'text': 'Text',
-        'time_period': 'TimePeriod',
-        'top10': 'Top10'
+        'stop_if_true': 'StopIfTrue',
+        'priority': 'Priority',
+        'top10': 'Top10',
+        'operator': 'Operator',
+        'icon_set': 'IconSet',
+        'type': 'Type',
+        'time_period': 'TimePeriod'
     }
     
     @staticmethod
@@ -79,7 +79,7 @@ class FormatCondition(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, priority=None, type=None, stop_if_true=None, above_average=None, color_scale=None, data_bar=None, formula1=None, formula2=None, icon_set=None, operator=None, style=None, text=None, time_period=None, top10=None, **kw):
+    def __init__(self, link=None, above_average=None, formula2=None, style=None, formula1=None, color_scale=None, data_bar=None, text=None, stop_if_true=None, priority=None, top10=None, operator=None, icon_set=None, type=None, time_period=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -90,51 +90,51 @@ class FormatCondition(object):
         """
 
         self.container['link'] = None
-        self.container['priority'] = None
-        self.container['type'] = None
-        self.container['stop_if_true'] = None
         self.container['above_average'] = None
+        self.container['formula2'] = None
+        self.container['style'] = None
+        self.container['formula1'] = None
         self.container['color_scale'] = None
         self.container['data_bar'] = None
-        self.container['formula1'] = None
-        self.container['formula2'] = None
-        self.container['icon_set'] = None
-        self.container['operator'] = None
-        self.container['style'] = None
         self.container['text'] = None
-        self.container['time_period'] = None
+        self.container['stop_if_true'] = None
+        self.container['priority'] = None
         self.container['top10'] = None
+        self.container['operator'] = None
+        self.container['icon_set'] = None
+        self.container['type'] = None
+        self.container['time_period'] = None
 
         if link is not None:
           self.link = link
-        if priority is not None:
-          self.priority = priority
-        if type is not None:
-          self.type = type
-        if stop_if_true is not None:
-          self.stop_if_true = stop_if_true
         if above_average is not None:
           self.above_average = above_average
+        if formula2 is not None:
+          self.formula2 = formula2
+        if style is not None:
+          self.style = style
+        if formula1 is not None:
+          self.formula1 = formula1
         if color_scale is not None:
           self.color_scale = color_scale
         if data_bar is not None:
           self.data_bar = data_bar
-        if formula1 is not None:
-          self.formula1 = formula1
-        if formula2 is not None:
-          self.formula2 = formula2
-        if icon_set is not None:
-          self.icon_set = icon_set
-        if operator is not None:
-          self.operator = operator
-        if style is not None:
-          self.style = style
         if text is not None:
           self.text = text
-        if time_period is not None:
-          self.time_period = time_period
+        if stop_if_true is not None:
+          self.stop_if_true = stop_if_true
+        if priority is not None:
+          self.priority = priority
         if top10 is not None:
           self.top10 = top10
+        if operator is not None:
+          self.operator = operator
+        if icon_set is not None:
+          self.icon_set = icon_set
+        if type is not None:
+          self.type = type
+        if time_period is not None:
+          self.time_period = time_period
 
     @property
     def link(self):
@@ -158,75 +158,6 @@ class FormatCondition(object):
         self.container['link'] = link
 
     @property
-    def priority(self):
-        """
-        Gets the priority of this FormatCondition.
-        The priority of this conditional formatting rule. This value is used to determine     which format should be evaluated and rendered. Lower numeric values are higher     priority than higher numeric values, where '1' is the highest priority.
-
-        :return: The priority of this FormatCondition.
-        :rtype: int
-        """
-        return self.container['priority']
-
-    @priority.setter
-    def priority(self, priority):
-        """
-        Sets the priority of this FormatCondition.
-        The priority of this conditional formatting rule. This value is used to determine     which format should be evaluated and rendered. Lower numeric values are higher     priority than higher numeric values, where '1' is the highest priority.
-
-        :param priority: The priority of this FormatCondition.
-        :type: int
-        """
-
-        self.container['priority'] = priority
-
-    @property
-    def type(self):
-        """
-        Gets the type of this FormatCondition.
-        Gets and sets whether the conditional format Type.             
-
-        :return: The type of this FormatCondition.
-        :rtype: str
-        """
-        return self.container['type']
-
-    @type.setter
-    def type(self, type):
-        """
-        Sets the type of this FormatCondition.
-        Gets and sets whether the conditional format Type.             
-
-        :param type: The type of this FormatCondition.
-        :type: str
-        """
-
-        self.container['type'] = type
-
-    @property
-    def stop_if_true(self):
-        """
-        Gets the stop_if_true of this FormatCondition.
-        True, no rules with lower priority may be applied over this rule, when this     rule evaluates to true.  Only applies for Excel 2007;
-
-        :return: The stop_if_true of this FormatCondition.
-        :rtype: bool
-        """
-        return self.container['stop_if_true']
-
-    @stop_if_true.setter
-    def stop_if_true(self, stop_if_true):
-        """
-        Sets the stop_if_true of this FormatCondition.
-        True, no rules with lower priority may be applied over this rule, when this     rule evaluates to true.  Only applies for Excel 2007;
-
-        :param stop_if_true: The stop_if_true of this FormatCondition.
-        :type: bool
-        """
-
-        self.container['stop_if_true'] = stop_if_true
-
-    @property
     def above_average(self):
         """
         Gets the above_average of this FormatCondition.
@@ -246,6 +177,69 @@ class FormatCondition(object):
         """
 
         self.container['above_average'] = above_average
+
+    @property
+    def formula2(self):
+        """
+        Gets the formula2 of this FormatCondition.
+
+        :return: The formula2 of this FormatCondition.
+        :rtype: str
+        """
+        return self.container['formula2']
+
+    @formula2.setter
+    def formula2(self, formula2):
+        """
+        Sets the formula2 of this FormatCondition.
+
+        :param formula2: The formula2 of this FormatCondition.
+        :type: str
+        """
+
+        self.container['formula2'] = formula2
+
+    @property
+    def style(self):
+        """
+        Gets the style of this FormatCondition.
+
+        :return: The style of this FormatCondition.
+        :rtype: Style
+        """
+        return self.container['style']
+
+    @style.setter
+    def style(self, style):
+        """
+        Sets the style of this FormatCondition.
+
+        :param style: The style of this FormatCondition.
+        :type: Style
+        """
+
+        self.container['style'] = style
+
+    @property
+    def formula1(self):
+        """
+        Gets the formula1 of this FormatCondition.
+
+        :return: The formula1 of this FormatCondition.
+        :rtype: str
+        """
+        return self.container['formula1']
+
+    @formula1.setter
+    def formula1(self, formula1):
+        """
+        Sets the formula1 of this FormatCondition.
+
+        :param formula1: The formula1 of this FormatCondition.
+        :type: str
+        """
+
+        self.container['formula1'] = formula1
 
     @property
     def color_scale(self):
@@ -290,67 +284,92 @@ class FormatCondition(object):
         self.container['data_bar'] = data_bar
 
     @property
-    def formula1(self):
+    def text(self):
         """
-        Gets the formula1 of this FormatCondition.
+        Gets the text of this FormatCondition.
 
-        :return: The formula1 of this FormatCondition.
+        :return: The text of this FormatCondition.
         :rtype: str
         """
-        return self.container['formula1']
+        return self.container['text']
 
-    @formula1.setter
-    def formula1(self, formula1):
+    @text.setter
+    def text(self, text):
         """
-        Sets the formula1 of this FormatCondition.
+        Sets the text of this FormatCondition.
 
-        :param formula1: The formula1 of this FormatCondition.
+        :param text: The text of this FormatCondition.
         :type: str
         """
 
-        self.container['formula1'] = formula1
+        self.container['text'] = text
 
     @property
-    def formula2(self):
+    def stop_if_true(self):
         """
-        Gets the formula2 of this FormatCondition.
+        Gets the stop_if_true of this FormatCondition.
+        True, no rules with lower priority may be applied over this rule, when this     rule evaluates to true.  Only applies for Excel 2007;
 
-        :return: The formula2 of this FormatCondition.
-        :rtype: str
+        :return: The stop_if_true of this FormatCondition.
+        :rtype: bool
         """
-        return self.container['formula2']
+        return self.container['stop_if_true']
 
-    @formula2.setter
-    def formula2(self, formula2):
+    @stop_if_true.setter
+    def stop_if_true(self, stop_if_true):
         """
-        Sets the formula2 of this FormatCondition.
+        Sets the stop_if_true of this FormatCondition.
+        True, no rules with lower priority may be applied over this rule, when this     rule evaluates to true.  Only applies for Excel 2007;
 
-        :param formula2: The formula2 of this FormatCondition.
-        :type: str
+        :param stop_if_true: The stop_if_true of this FormatCondition.
+        :type: bool
         """
 
-        self.container['formula2'] = formula2
+        self.container['stop_if_true'] = stop_if_true
 
     @property
-    def icon_set(self):
+    def priority(self):
         """
-        Gets the icon_set of this FormatCondition.
+        Gets the priority of this FormatCondition.
+        The priority of this conditional formatting rule. This value is used to determine     which format should be evaluated and rendered. Lower numeric values are higher     priority than higher numeric values, where '1' is the highest priority.
 
-        :return: The icon_set of this FormatCondition.
-        :rtype: IconSet
+        :return: The priority of this FormatCondition.
+        :rtype: int
         """
-        return self.container['icon_set']
+        return self.container['priority']
 
-    @icon_set.setter
-    def icon_set(self, icon_set):
+    @priority.setter
+    def priority(self, priority):
         """
-        Sets the icon_set of this FormatCondition.
+        Sets the priority of this FormatCondition.
+        The priority of this conditional formatting rule. This value is used to determine     which format should be evaluated and rendered. Lower numeric values are higher     priority than higher numeric values, where '1' is the highest priority.
 
-        :param icon_set: The icon_set of this FormatCondition.
-        :type: IconSet
+        :param priority: The priority of this FormatCondition.
+        :type: int
         """
 
-        self.container['icon_set'] = icon_set
+        self.container['priority'] = priority
+
+    @property
+    def top10(self):
+        """
+        Gets the top10 of this FormatCondition.
+
+        :return: The top10 of this FormatCondition.
+        :rtype: Top10
+        """
+        return self.container['top10']
+
+    @top10.setter
+    def top10(self, top10):
+        """
+        Sets the top10 of this FormatCondition.
+
+        :param top10: The top10 of this FormatCondition.
+        :type: Top10
+        """
+
+        self.container['top10'] = top10
 
     @property
     def operator(self):
@@ -374,46 +393,48 @@ class FormatCondition(object):
         self.container['operator'] = operator
 
     @property
-    def style(self):
+    def icon_set(self):
         """
-        Gets the style of this FormatCondition.
+        Gets the icon_set of this FormatCondition.
 
-        :return: The style of this FormatCondition.
-        :rtype: Style
+        :return: The icon_set of this FormatCondition.
+        :rtype: IconSet
         """
-        return self.container['style']
+        return self.container['icon_set']
 
-    @style.setter
-    def style(self, style):
+    @icon_set.setter
+    def icon_set(self, icon_set):
         """
-        Sets the style of this FormatCondition.
+        Sets the icon_set of this FormatCondition.
 
-        :param style: The style of this FormatCondition.
-        :type: Style
+        :param icon_set: The icon_set of this FormatCondition.
+        :type: IconSet
         """
 
-        self.container['style'] = style
+        self.container['icon_set'] = icon_set
 
     @property
-    def text(self):
+    def type(self):
         """
-        Gets the text of this FormatCondition.
+        Gets the type of this FormatCondition.
+        Gets and sets whether the conditional format Type.             
 
-        :return: The text of this FormatCondition.
+        :return: The type of this FormatCondition.
         :rtype: str
         """
-        return self.container['text']
+        return self.container['type']
 
-    @text.setter
-    def text(self, text):
+    @type.setter
+    def type(self, type):
         """
-        Sets the text of this FormatCondition.
+        Sets the type of this FormatCondition.
+        Gets and sets whether the conditional format Type.             
 
-        :param text: The text of this FormatCondition.
+        :param type: The type of this FormatCondition.
         :type: str
         """
 
-        self.container['text'] = text
+        self.container['type'] = type
 
     @property
     def time_period(self):
@@ -435,27 +456,6 @@ class FormatCondition(object):
         """
 
         self.container['time_period'] = time_period
-
-    @property
-    def top10(self):
-        """
-        Gets the top10 of this FormatCondition.
-
-        :return: The top10 of this FormatCondition.
-        :rtype: Top10
-        """
-        return self.container['top10']
-
-    @top10.setter
-    def top10(self, top10):
-        """
-        Sets the top10 of this FormatCondition.
-
-        :param top10: The top10 of this FormatCondition.
-        :type: Top10
-        """
-
-        self.container['top10'] = top10
 
     def to_dict(self):
         """

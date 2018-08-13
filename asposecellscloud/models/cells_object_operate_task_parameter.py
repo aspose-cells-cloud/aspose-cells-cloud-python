@@ -31,15 +31,15 @@ class CellsObjectOperateTaskParameter(TaskParameter):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'operate_object': 'OperateObject',
         'operate_parameter': 'OperateParameter',
-        'destination_workbook': 'FileSource'
+        'destination_workbook': 'FileSource',
+        'operate_object': 'OperateObject'
     }
 
     attribute_map = {
-        'operate_object': 'OperateObject',
         'operate_parameter': 'OperateParameter',
-        'destination_workbook': 'DestinationWorkbook'
+        'destination_workbook': 'DestinationWorkbook',
+        'operate_object': 'OperateObject'
     }
     
     @staticmethod
@@ -55,44 +55,23 @@ class CellsObjectOperateTaskParameter(TaskParameter):
             return self.container[attr]
         return None
 
-    def __init__(self, operate_object=None, operate_parameter=None, destination_workbook=None, **kw):
+    def __init__(self, operate_parameter=None, destination_workbook=None, operate_object=None, **kw):
         super(CellsObjectOperateTaskParameter, self).__init__(**kw)
 		    
         """
         CellsObjectOperateTaskParameter - a model defined in Swagger
         """
 
-        self.container['operate_object'] = None
         self.container['operate_parameter'] = None
         self.container['destination_workbook'] = None
+        self.container['operate_object'] = None
 
-        if operate_object is not None:
-          self.operate_object = operate_object
         if operate_parameter is not None:
           self.operate_parameter = operate_parameter
         if destination_workbook is not None:
           self.destination_workbook = destination_workbook
-
-    @property
-    def operate_object(self):
-        """
-        Gets the operate_object of this CellsObjectOperateTaskParameter.
-
-        :return: The operate_object of this CellsObjectOperateTaskParameter.
-        :rtype: OperateObject
-        """
-        return self.container['operate_object']
-
-    @operate_object.setter
-    def operate_object(self, operate_object):
-        """
-        Sets the operate_object of this CellsObjectOperateTaskParameter.
-
-        :param operate_object: The operate_object of this CellsObjectOperateTaskParameter.
-        :type: OperateObject
-        """
-
-        self.container['operate_object'] = operate_object
+        if operate_object is not None:
+          self.operate_object = operate_object
 
     @property
     def operate_parameter(self):
@@ -135,6 +114,27 @@ class CellsObjectOperateTaskParameter(TaskParameter):
         """
 
         self.container['destination_workbook'] = destination_workbook
+
+    @property
+    def operate_object(self):
+        """
+        Gets the operate_object of this CellsObjectOperateTaskParameter.
+
+        :return: The operate_object of this CellsObjectOperateTaskParameter.
+        :rtype: OperateObject
+        """
+        return self.container['operate_object']
+
+    @operate_object.setter
+    def operate_object(self, operate_object):
+        """
+        Sets the operate_object of this CellsObjectOperateTaskParameter.
+
+        :param operate_object: The operate_object of this CellsObjectOperateTaskParameter.
+        :type: OperateObject
+        """
+
+        self.container['operate_object'] = operate_object
 
     def to_dict(self):
         """

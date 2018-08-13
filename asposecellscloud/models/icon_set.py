@@ -31,21 +31,21 @@ class IconSet(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'reverse': 'bool',
         'cf_icons': 'list[ConditionalFormattingIcon]',
         'cfvos': 'list[ConditionalFormattingValue]',
+        'icon_set_type': 'str',
         'is_custom': 'bool',
-        'reverse': 'bool',
-        'show_value': 'bool',
-        'icon_set_type': 'str'
+        'show_value': 'bool'
     }
 
     attribute_map = {
+        'reverse': 'Reverse',
         'cf_icons': 'CfIcons',
         'cfvos': 'Cfvos',
+        'icon_set_type': 'IconSetType',
         'is_custom': 'IsCustom',
-        'reverse': 'Reverse',
-        'show_value': 'ShowValue',
-        'icon_set_type': 'IconSetType'
+        'show_value': 'ShowValue'
     }
     
     @staticmethod
@@ -61,7 +61,7 @@ class IconSet(object):
             return self.container[attr]
         return None
 
-    def __init__(self, cf_icons=None, cfvos=None, is_custom=None, reverse=None, show_value=None, icon_set_type=None, **kw):
+    def __init__(self, reverse=None, cf_icons=None, cfvos=None, icon_set_type=None, is_custom=None, show_value=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -71,25 +71,48 @@ class IconSet(object):
         IconSet - a model defined in Swagger
         """
 
+        self.container['reverse'] = None
         self.container['cf_icons'] = None
         self.container['cfvos'] = None
-        self.container['is_custom'] = None
-        self.container['reverse'] = None
-        self.container['show_value'] = None
         self.container['icon_set_type'] = None
+        self.container['is_custom'] = None
+        self.container['show_value'] = None
 
+        if reverse is not None:
+          self.reverse = reverse
         if cf_icons is not None:
           self.cf_icons = cf_icons
         if cfvos is not None:
           self.cfvos = cfvos
-        if is_custom is not None:
-          self.is_custom = is_custom
-        if reverse is not None:
-          self.reverse = reverse
-        if show_value is not None:
-          self.show_value = show_value
         if icon_set_type is not None:
           self.icon_set_type = icon_set_type
+        if is_custom is not None:
+          self.is_custom = is_custom
+        if show_value is not None:
+          self.show_value = show_value
+
+    @property
+    def reverse(self):
+        """
+        Gets the reverse of this IconSet.
+        Get or set the flag indicating whether to reverses the default order of the   icons in this icon set.  Default value is false.             
+
+        :return: The reverse of this IconSet.
+        :rtype: bool
+        """
+        return self.container['reverse']
+
+    @reverse.setter
+    def reverse(self, reverse):
+        """
+        Sets the reverse of this IconSet.
+        Get or set the flag indicating whether to reverses the default order of the   icons in this icon set.  Default value is false.             
+
+        :param reverse: The reverse of this IconSet.
+        :type: bool
+        """
+
+        self.container['reverse'] = reverse
 
     @property
     def cf_icons(self):
@@ -138,6 +161,29 @@ class IconSet(object):
         self.container['cfvos'] = cfvos
 
     @property
+    def icon_set_type(self):
+        """
+        Gets the icon_set_type of this IconSet.
+        Get or Set the icon set type to display.  Setting the type will auto check    if the current Cfvos's count is accord with the new type. If not accord,    old Cfvos will be cleaned and default Cfvos will be added.             
+
+        :return: The icon_set_type of this IconSet.
+        :rtype: str
+        """
+        return self.container['icon_set_type']
+
+    @icon_set_type.setter
+    def icon_set_type(self, icon_set_type):
+        """
+        Sets the icon_set_type of this IconSet.
+        Get or Set the icon set type to display.  Setting the type will auto check    if the current Cfvos's count is accord with the new type. If not accord,    old Cfvos will be cleaned and default Cfvos will be added.             
+
+        :param icon_set_type: The icon_set_type of this IconSet.
+        :type: str
+        """
+
+        self.container['icon_set_type'] = icon_set_type
+
+    @property
     def is_custom(self):
         """
         Gets the is_custom of this IconSet.
@@ -161,29 +207,6 @@ class IconSet(object):
         self.container['is_custom'] = is_custom
 
     @property
-    def reverse(self):
-        """
-        Gets the reverse of this IconSet.
-        Get or set the flag indicating whether to reverses the default order of the   icons in this icon set.  Default value is false.             
-
-        :return: The reverse of this IconSet.
-        :rtype: bool
-        """
-        return self.container['reverse']
-
-    @reverse.setter
-    def reverse(self, reverse):
-        """
-        Sets the reverse of this IconSet.
-        Get or set the flag indicating whether to reverses the default order of the   icons in this icon set.  Default value is false.             
-
-        :param reverse: The reverse of this IconSet.
-        :type: bool
-        """
-
-        self.container['reverse'] = reverse
-
-    @property
     def show_value(self):
         """
         Gets the show_value of this IconSet.
@@ -205,29 +228,6 @@ class IconSet(object):
         """
 
         self.container['show_value'] = show_value
-
-    @property
-    def icon_set_type(self):
-        """
-        Gets the icon_set_type of this IconSet.
-        Get or Set the icon set type to display.  Setting the type will auto check    if the current Cfvos's count is accord with the new type. If not accord,    old Cfvos will be cleaned and default Cfvos will be added.             
-
-        :return: The icon_set_type of this IconSet.
-        :rtype: str
-        """
-        return self.container['icon_set_type']
-
-    @icon_set_type.setter
-    def icon_set_type(self, icon_set_type):
-        """
-        Sets the icon_set_type of this IconSet.
-        Get or Set the icon set type to display.  Setting the type will auto check    if the current Cfvos's count is accord with the new type. If not accord,    old Cfvos will be cleaned and default Cfvos will be added.             
-
-        :param icon_set_type: The icon_set_type of this IconSet.
-        :type: str
-        """
-
-        self.container['icon_set_type'] = icon_set_type
 
     def to_dict(self):
         """

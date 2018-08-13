@@ -32,16 +32,16 @@ class CellsDocumentProperty(object):
     """
     swagger_types = {
         'link': 'Link',
+        'built_in': 'str',
         'name': 'str',
-        'value': 'str',
-        'built_in': 'str'
+        'value': 'str'
     }
 
     attribute_map = {
         'link': 'link',
+        'built_in': 'BuiltIn',
         'name': 'Name',
-        'value': 'Value',
-        'built_in': 'BuiltIn'
+        'value': 'Value'
     }
     
     @staticmethod
@@ -57,7 +57,7 @@ class CellsDocumentProperty(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, name=None, value=None, built_in=None, **kw):
+    def __init__(self, link=None, built_in=None, name=None, value=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -68,18 +68,18 @@ class CellsDocumentProperty(object):
         """
 
         self.container['link'] = None
+        self.container['built_in'] = None
         self.container['name'] = None
         self.container['value'] = None
-        self.container['built_in'] = None
 
         if link is not None:
           self.link = link
+        if built_in is not None:
+          self.built_in = built_in
         if name is not None:
           self.name = name
         if value is not None:
           self.value = value
-        if built_in is not None:
-          self.built_in = built_in
 
     @property
     def link(self):
@@ -101,6 +101,27 @@ class CellsDocumentProperty(object):
         """
 
         self.container['link'] = link
+
+    @property
+    def built_in(self):
+        """
+        Gets the built_in of this CellsDocumentProperty.
+
+        :return: The built_in of this CellsDocumentProperty.
+        :rtype: str
+        """
+        return self.container['built_in']
+
+    @built_in.setter
+    def built_in(self, built_in):
+        """
+        Sets the built_in of this CellsDocumentProperty.
+
+        :param built_in: The built_in of this CellsDocumentProperty.
+        :type: str
+        """
+
+        self.container['built_in'] = built_in
 
     @property
     def name(self):
@@ -143,27 +164,6 @@ class CellsDocumentProperty(object):
         """
 
         self.container['value'] = value
-
-    @property
-    def built_in(self):
-        """
-        Gets the built_in of this CellsDocumentProperty.
-
-        :return: The built_in of this CellsDocumentProperty.
-        :rtype: str
-        """
-        return self.container['built_in']
-
-    @built_in.setter
-    def built_in(self, built_in):
-        """
-        Sets the built_in of this CellsDocumentProperty.
-
-        :param built_in: The built_in of this CellsDocumentProperty.
-        :type: str
-        """
-
-        self.container['built_in'] = built_in
 
     def to_dict(self):
         """

@@ -31,23 +31,23 @@ class CreatePivotTableRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'source_data': 'str',
-        'dest_cell_name': 'str',
-        'use_same_source': 'bool',
-        'pivot_field_rows': 'list[int]',
         'pivot_field_columns': 'list[int]',
-        'pivot_field_data': 'list[int]'
+        'name': 'str',
+        'use_same_source': 'bool',
+        'pivot_field_data': 'list[int]',
+        'pivot_field_rows': 'list[int]',
+        'dest_cell_name': 'str',
+        'source_data': 'str'
     }
 
     attribute_map = {
-        'name': 'Name',
-        'source_data': 'SourceData',
-        'dest_cell_name': 'DestCellName',
-        'use_same_source': 'UseSameSource',
-        'pivot_field_rows': 'PivotFieldRows',
         'pivot_field_columns': 'PivotFieldColumns',
-        'pivot_field_data': 'PivotFieldData'
+        'name': 'Name',
+        'use_same_source': 'UseSameSource',
+        'pivot_field_data': 'PivotFieldData',
+        'pivot_field_rows': 'PivotFieldRows',
+        'dest_cell_name': 'DestCellName',
+        'source_data': 'SourceData'
     }
     
     @staticmethod
@@ -63,7 +63,7 @@ class CreatePivotTableRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self, name=None, source_data=None, dest_cell_name=None, use_same_source=None, pivot_field_rows=None, pivot_field_columns=None, pivot_field_data=None, **kw):
+    def __init__(self, pivot_field_columns=None, name=None, use_same_source=None, pivot_field_data=None, pivot_field_rows=None, dest_cell_name=None, source_data=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -73,27 +73,48 @@ class CreatePivotTableRequest(object):
         CreatePivotTableRequest - a model defined in Swagger
         """
 
-        self.container['name'] = None
-        self.container['source_data'] = None
-        self.container['dest_cell_name'] = None
-        self.container['use_same_source'] = None
-        self.container['pivot_field_rows'] = None
         self.container['pivot_field_columns'] = None
+        self.container['name'] = None
+        self.container['use_same_source'] = None
         self.container['pivot_field_data'] = None
+        self.container['pivot_field_rows'] = None
+        self.container['dest_cell_name'] = None
+        self.container['source_data'] = None
 
-        if name is not None:
-          self.name = name
-        if source_data is not None:
-          self.source_data = source_data
-        if dest_cell_name is not None:
-          self.dest_cell_name = dest_cell_name
-        self.use_same_source = use_same_source
-        if pivot_field_rows is not None:
-          self.pivot_field_rows = pivot_field_rows
         if pivot_field_columns is not None:
           self.pivot_field_columns = pivot_field_columns
+        if name is not None:
+          self.name = name
+        self.use_same_source = use_same_source
         if pivot_field_data is not None:
           self.pivot_field_data = pivot_field_data
+        if pivot_field_rows is not None:
+          self.pivot_field_rows = pivot_field_rows
+        if dest_cell_name is not None:
+          self.dest_cell_name = dest_cell_name
+        if source_data is not None:
+          self.source_data = source_data
+
+    @property
+    def pivot_field_columns(self):
+        """
+        Gets the pivot_field_columns of this CreatePivotTableRequest.
+
+        :return: The pivot_field_columns of this CreatePivotTableRequest.
+        :rtype: list[int]
+        """
+        return self.container['pivot_field_columns']
+
+    @pivot_field_columns.setter
+    def pivot_field_columns(self, pivot_field_columns):
+        """
+        Sets the pivot_field_columns of this CreatePivotTableRequest.
+
+        :param pivot_field_columns: The pivot_field_columns of this CreatePivotTableRequest.
+        :type: list[int]
+        """
+
+        self.container['pivot_field_columns'] = pivot_field_columns
 
     @property
     def name(self):
@@ -115,48 +136,6 @@ class CreatePivotTableRequest(object):
         """
 
         self.container['name'] = name
-
-    @property
-    def source_data(self):
-        """
-        Gets the source_data of this CreatePivotTableRequest.
-
-        :return: The source_data of this CreatePivotTableRequest.
-        :rtype: str
-        """
-        return self.container['source_data']
-
-    @source_data.setter
-    def source_data(self, source_data):
-        """
-        Sets the source_data of this CreatePivotTableRequest.
-
-        :param source_data: The source_data of this CreatePivotTableRequest.
-        :type: str
-        """
-
-        self.container['source_data'] = source_data
-
-    @property
-    def dest_cell_name(self):
-        """
-        Gets the dest_cell_name of this CreatePivotTableRequest.
-
-        :return: The dest_cell_name of this CreatePivotTableRequest.
-        :rtype: str
-        """
-        return self.container['dest_cell_name']
-
-    @dest_cell_name.setter
-    def dest_cell_name(self, dest_cell_name):
-        """
-        Sets the dest_cell_name of this CreatePivotTableRequest.
-
-        :param dest_cell_name: The dest_cell_name of this CreatePivotTableRequest.
-        :type: str
-        """
-
-        self.container['dest_cell_name'] = dest_cell_name
 
     @property
     def use_same_source(self):
@@ -184,6 +163,27 @@ class CreatePivotTableRequest(object):
         self.container['use_same_source'] = use_same_source
 
     @property
+    def pivot_field_data(self):
+        """
+        Gets the pivot_field_data of this CreatePivotTableRequest.
+
+        :return: The pivot_field_data of this CreatePivotTableRequest.
+        :rtype: list[int]
+        """
+        return self.container['pivot_field_data']
+
+    @pivot_field_data.setter
+    def pivot_field_data(self, pivot_field_data):
+        """
+        Sets the pivot_field_data of this CreatePivotTableRequest.
+
+        :param pivot_field_data: The pivot_field_data of this CreatePivotTableRequest.
+        :type: list[int]
+        """
+
+        self.container['pivot_field_data'] = pivot_field_data
+
+    @property
     def pivot_field_rows(self):
         """
         Gets the pivot_field_rows of this CreatePivotTableRequest.
@@ -205,46 +205,46 @@ class CreatePivotTableRequest(object):
         self.container['pivot_field_rows'] = pivot_field_rows
 
     @property
-    def pivot_field_columns(self):
+    def dest_cell_name(self):
         """
-        Gets the pivot_field_columns of this CreatePivotTableRequest.
+        Gets the dest_cell_name of this CreatePivotTableRequest.
 
-        :return: The pivot_field_columns of this CreatePivotTableRequest.
-        :rtype: list[int]
+        :return: The dest_cell_name of this CreatePivotTableRequest.
+        :rtype: str
         """
-        return self.container['pivot_field_columns']
+        return self.container['dest_cell_name']
 
-    @pivot_field_columns.setter
-    def pivot_field_columns(self, pivot_field_columns):
+    @dest_cell_name.setter
+    def dest_cell_name(self, dest_cell_name):
         """
-        Sets the pivot_field_columns of this CreatePivotTableRequest.
+        Sets the dest_cell_name of this CreatePivotTableRequest.
 
-        :param pivot_field_columns: The pivot_field_columns of this CreatePivotTableRequest.
-        :type: list[int]
+        :param dest_cell_name: The dest_cell_name of this CreatePivotTableRequest.
+        :type: str
         """
 
-        self.container['pivot_field_columns'] = pivot_field_columns
+        self.container['dest_cell_name'] = dest_cell_name
 
     @property
-    def pivot_field_data(self):
+    def source_data(self):
         """
-        Gets the pivot_field_data of this CreatePivotTableRequest.
+        Gets the source_data of this CreatePivotTableRequest.
 
-        :return: The pivot_field_data of this CreatePivotTableRequest.
-        :rtype: list[int]
+        :return: The source_data of this CreatePivotTableRequest.
+        :rtype: str
         """
-        return self.container['pivot_field_data']
+        return self.container['source_data']
 
-    @pivot_field_data.setter
-    def pivot_field_data(self, pivot_field_data):
+    @source_data.setter
+    def source_data(self, source_data):
         """
-        Sets the pivot_field_data of this CreatePivotTableRequest.
+        Sets the source_data of this CreatePivotTableRequest.
 
-        :param pivot_field_data: The pivot_field_data of this CreatePivotTableRequest.
-        :type: list[int]
+        :param source_data: The source_data of this CreatePivotTableRequest.
+        :type: str
         """
 
-        self.container['pivot_field_data'] = pivot_field_data
+        self.container['source_data'] = source_data
 
     def to_dict(self):
         """

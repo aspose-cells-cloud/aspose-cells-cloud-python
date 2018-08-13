@@ -31,99 +31,99 @@ class WorkbookSettings(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'auto_compress_pictures': 'bool',
-        'auto_recover': 'bool',
-        'build_version': 'str',
-        'calc_mode': 'str',
-        'calc_stack_size': 'int',
-        'calculation_id': 'str',
-        'check_comptiliblity': 'bool',
-        'check_excel_restriction': 'bool',
-        'crash_save': 'bool',
-        'create_calc_chain': 'bool',
-        'data_extract_load': 'bool',
-        'date1904': 'bool',
-        'display_drawing_objects': 'str',
-        'enable_macros': 'bool',
-        'first_visible_tab': 'int',
-        'hide_pivot_field_list': 'bool',
-        'is_default_encrypted': 'bool',
-        'is_hidden': 'bool',
-        'is_h_scroll_bar_visible': 'bool',
-        'is_minimized': 'bool',
-        'is_v_scroll_bar_visible': 'bool',
-        'iteration': 'bool',
-        'language_code': 'str',
-        'max_change': 'float',
-        'max_iteration': 'int',
-        'memory_setting': 'str',
-        'number_decimal_separator': 'str',
         'number_group_separator': 'str',
-        'parsing_formula_on_open': 'bool',
-        'precision_as_displayed': 'bool',
-        'recalculate_before_save': 'bool',
+        'hide_pivot_field_list': 'bool',
+        'is_minimized': 'bool',
+        'calculation_id': 'str',
         're_calculate_on_open': 'bool',
-        'recommend_read_only': 'bool',
-        'region': 'str',
-        'remove_personal_information': 'bool',
-        'repair_load': 'bool',
-        'shared': 'bool',
-        'sheet_tab_bar_width': 'int',
-        'show_tabs': 'bool',
-        'update_adjacent_cells_border': 'bool',
-        'update_links_type': 'str',
+        'check_excel_restriction': 'bool',
+        'is_h_scroll_bar_visible': 'bool',
         'window_height': 'float',
         'window_left': 'float',
+        'calc_stack_size': 'int',
+        'shared': 'bool',
+        'remove_personal_information': 'bool',
+        'language_code': 'str',
+        'enable_macros': 'bool',
+        'is_default_encrypted': 'bool',
+        'recalculate_before_save': 'bool',
+        'parsing_formula_on_open': 'bool',
         'window_top': 'float',
-        'window_width': 'float'
+        'region': 'str',
+        'memory_setting': 'str',
+        'update_adjacent_cells_border': 'bool',
+        'crash_save': 'bool',
+        'show_tabs': 'bool',
+        'precision_as_displayed': 'bool',
+        'calc_mode': 'str',
+        'auto_compress_pictures': 'bool',
+        'date1904': 'bool',
+        'number_decimal_separator': 'str',
+        'iteration': 'bool',
+        'check_comptiliblity': 'bool',
+        'auto_recover': 'bool',
+        'max_change': 'float',
+        'data_extract_load': 'bool',
+        'first_visible_tab': 'int',
+        'is_hidden': 'bool',
+        'recommend_read_only': 'bool',
+        'display_drawing_objects': 'str',
+        'build_version': 'str',
+        'is_v_scroll_bar_visible': 'bool',
+        'window_width': 'float',
+        'create_calc_chain': 'bool',
+        'max_iteration': 'int',
+        'repair_load': 'bool',
+        'update_links_type': 'str',
+        'sheet_tab_bar_width': 'int'
     }
 
     attribute_map = {
-        'auto_compress_pictures': 'AutoCompressPictures',
-        'auto_recover': 'AutoRecover',
-        'build_version': 'BuildVersion',
-        'calc_mode': 'CalcMode',
-        'calc_stack_size': 'CalcStackSize',
-        'calculation_id': 'CalculationId',
-        'check_comptiliblity': 'CheckComptiliblity',
-        'check_excel_restriction': 'CheckExcelRestriction',
-        'crash_save': 'CrashSave',
-        'create_calc_chain': 'CreateCalcChain',
-        'data_extract_load': 'DataExtractLoad',
-        'date1904': 'Date1904',
-        'display_drawing_objects': 'DisplayDrawingObjects',
-        'enable_macros': 'EnableMacros',
-        'first_visible_tab': 'FirstVisibleTab',
-        'hide_pivot_field_list': 'HidePivotFieldList',
-        'is_default_encrypted': 'IsDefaultEncrypted',
-        'is_hidden': 'IsHidden',
-        'is_h_scroll_bar_visible': 'IsHScrollBarVisible',
-        'is_minimized': 'IsMinimized',
-        'is_v_scroll_bar_visible': 'IsVScrollBarVisible',
-        'iteration': 'Iteration',
-        'language_code': 'LanguageCode',
-        'max_change': 'MaxChange',
-        'max_iteration': 'MaxIteration',
-        'memory_setting': 'MemorySetting',
-        'number_decimal_separator': 'NumberDecimalSeparator',
         'number_group_separator': 'NumberGroupSeparator',
-        'parsing_formula_on_open': 'ParsingFormulaOnOpen',
-        'precision_as_displayed': 'PrecisionAsDisplayed',
-        'recalculate_before_save': 'RecalculateBeforeSave',
+        'hide_pivot_field_list': 'HidePivotFieldList',
+        'is_minimized': 'IsMinimized',
+        'calculation_id': 'CalculationId',
         're_calculate_on_open': 'ReCalculateOnOpen',
-        'recommend_read_only': 'RecommendReadOnly',
-        'region': 'Region',
-        'remove_personal_information': 'RemovePersonalInformation',
-        'repair_load': 'RepairLoad',
-        'shared': 'Shared',
-        'sheet_tab_bar_width': 'SheetTabBarWidth',
-        'show_tabs': 'ShowTabs',
-        'update_adjacent_cells_border': 'UpdateAdjacentCellsBorder',
-        'update_links_type': 'UpdateLinksType',
+        'check_excel_restriction': 'CheckExcelRestriction',
+        'is_h_scroll_bar_visible': 'IsHScrollBarVisible',
         'window_height': 'WindowHeight',
         'window_left': 'WindowLeft',
+        'calc_stack_size': 'CalcStackSize',
+        'shared': 'Shared',
+        'remove_personal_information': 'RemovePersonalInformation',
+        'language_code': 'LanguageCode',
+        'enable_macros': 'EnableMacros',
+        'is_default_encrypted': 'IsDefaultEncrypted',
+        'recalculate_before_save': 'RecalculateBeforeSave',
+        'parsing_formula_on_open': 'ParsingFormulaOnOpen',
         'window_top': 'WindowTop',
-        'window_width': 'WindowWidth'
+        'region': 'Region',
+        'memory_setting': 'MemorySetting',
+        'update_adjacent_cells_border': 'UpdateAdjacentCellsBorder',
+        'crash_save': 'CrashSave',
+        'show_tabs': 'ShowTabs',
+        'precision_as_displayed': 'PrecisionAsDisplayed',
+        'calc_mode': 'CalcMode',
+        'auto_compress_pictures': 'AutoCompressPictures',
+        'date1904': 'Date1904',
+        'number_decimal_separator': 'NumberDecimalSeparator',
+        'iteration': 'Iteration',
+        'check_comptiliblity': 'CheckComptiliblity',
+        'auto_recover': 'AutoRecover',
+        'max_change': 'MaxChange',
+        'data_extract_load': 'DataExtractLoad',
+        'first_visible_tab': 'FirstVisibleTab',
+        'is_hidden': 'IsHidden',
+        'recommend_read_only': 'RecommendReadOnly',
+        'display_drawing_objects': 'DisplayDrawingObjects',
+        'build_version': 'BuildVersion',
+        'is_v_scroll_bar_visible': 'IsVScrollBarVisible',
+        'window_width': 'WindowWidth',
+        'create_calc_chain': 'CreateCalcChain',
+        'max_iteration': 'MaxIteration',
+        'repair_load': 'RepairLoad',
+        'update_links_type': 'UpdateLinksType',
+        'sheet_tab_bar_width': 'SheetTabBarWidth'
     }
     
     @staticmethod
@@ -139,7 +139,7 @@ class WorkbookSettings(object):
             return self.container[attr]
         return None
 
-    def __init__(self, auto_compress_pictures=None, auto_recover=None, build_version=None, calc_mode=None, calc_stack_size=None, calculation_id=None, check_comptiliblity=None, check_excel_restriction=None, crash_save=None, create_calc_chain=None, data_extract_load=None, date1904=None, display_drawing_objects=None, enable_macros=None, first_visible_tab=None, hide_pivot_field_list=None, is_default_encrypted=None, is_hidden=None, is_h_scroll_bar_visible=None, is_minimized=None, is_v_scroll_bar_visible=None, iteration=None, language_code=None, max_change=None, max_iteration=None, memory_setting=None, number_decimal_separator=None, number_group_separator=None, parsing_formula_on_open=None, precision_as_displayed=None, recalculate_before_save=None, re_calculate_on_open=None, recommend_read_only=None, region=None, remove_personal_information=None, repair_load=None, shared=None, sheet_tab_bar_width=None, show_tabs=None, update_adjacent_cells_border=None, update_links_type=None, window_height=None, window_left=None, window_top=None, window_width=None, **kw):
+    def __init__(self, number_group_separator=None, hide_pivot_field_list=None, is_minimized=None, calculation_id=None, re_calculate_on_open=None, check_excel_restriction=None, is_h_scroll_bar_visible=None, window_height=None, window_left=None, calc_stack_size=None, shared=None, remove_personal_information=None, language_code=None, enable_macros=None, is_default_encrypted=None, recalculate_before_save=None, parsing_formula_on_open=None, window_top=None, region=None, memory_setting=None, update_adjacent_cells_border=None, crash_save=None, show_tabs=None, precision_as_displayed=None, calc_mode=None, auto_compress_pictures=None, date1904=None, number_decimal_separator=None, iteration=None, check_comptiliblity=None, auto_recover=None, max_change=None, data_extract_load=None, first_visible_tab=None, is_hidden=None, recommend_read_only=None, display_drawing_objects=None, build_version=None, is_v_scroll_bar_visible=None, window_width=None, create_calc_chain=None, max_iteration=None, repair_load=None, update_links_type=None, sheet_tab_bar_width=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -149,477 +149,163 @@ class WorkbookSettings(object):
         WorkbookSettings - a model defined in Swagger
         """
 
-        self.container['auto_compress_pictures'] = None
-        self.container['auto_recover'] = None
-        self.container['build_version'] = None
-        self.container['calc_mode'] = None
-        self.container['calc_stack_size'] = None
-        self.container['calculation_id'] = None
-        self.container['check_comptiliblity'] = None
-        self.container['check_excel_restriction'] = None
-        self.container['crash_save'] = None
-        self.container['create_calc_chain'] = None
-        self.container['data_extract_load'] = None
-        self.container['date1904'] = None
-        self.container['display_drawing_objects'] = None
-        self.container['enable_macros'] = None
-        self.container['first_visible_tab'] = None
-        self.container['hide_pivot_field_list'] = None
-        self.container['is_default_encrypted'] = None
-        self.container['is_hidden'] = None
-        self.container['is_h_scroll_bar_visible'] = None
-        self.container['is_minimized'] = None
-        self.container['is_v_scroll_bar_visible'] = None
-        self.container['iteration'] = None
-        self.container['language_code'] = None
-        self.container['max_change'] = None
-        self.container['max_iteration'] = None
-        self.container['memory_setting'] = None
-        self.container['number_decimal_separator'] = None
         self.container['number_group_separator'] = None
-        self.container['parsing_formula_on_open'] = None
-        self.container['precision_as_displayed'] = None
-        self.container['recalculate_before_save'] = None
+        self.container['hide_pivot_field_list'] = None
+        self.container['is_minimized'] = None
+        self.container['calculation_id'] = None
         self.container['re_calculate_on_open'] = None
-        self.container['recommend_read_only'] = None
-        self.container['region'] = None
-        self.container['remove_personal_information'] = None
-        self.container['repair_load'] = None
-        self.container['shared'] = None
-        self.container['sheet_tab_bar_width'] = None
-        self.container['show_tabs'] = None
-        self.container['update_adjacent_cells_border'] = None
-        self.container['update_links_type'] = None
+        self.container['check_excel_restriction'] = None
+        self.container['is_h_scroll_bar_visible'] = None
         self.container['window_height'] = None
         self.container['window_left'] = None
+        self.container['calc_stack_size'] = None
+        self.container['shared'] = None
+        self.container['remove_personal_information'] = None
+        self.container['language_code'] = None
+        self.container['enable_macros'] = None
+        self.container['is_default_encrypted'] = None
+        self.container['recalculate_before_save'] = None
+        self.container['parsing_formula_on_open'] = None
         self.container['window_top'] = None
+        self.container['region'] = None
+        self.container['memory_setting'] = None
+        self.container['update_adjacent_cells_border'] = None
+        self.container['crash_save'] = None
+        self.container['show_tabs'] = None
+        self.container['precision_as_displayed'] = None
+        self.container['calc_mode'] = None
+        self.container['auto_compress_pictures'] = None
+        self.container['date1904'] = None
+        self.container['number_decimal_separator'] = None
+        self.container['iteration'] = None
+        self.container['check_comptiliblity'] = None
+        self.container['auto_recover'] = None
+        self.container['max_change'] = None
+        self.container['data_extract_load'] = None
+        self.container['first_visible_tab'] = None
+        self.container['is_hidden'] = None
+        self.container['recommend_read_only'] = None
+        self.container['display_drawing_objects'] = None
+        self.container['build_version'] = None
+        self.container['is_v_scroll_bar_visible'] = None
         self.container['window_width'] = None
+        self.container['create_calc_chain'] = None
+        self.container['max_iteration'] = None
+        self.container['repair_load'] = None
+        self.container['update_links_type'] = None
+        self.container['sheet_tab_bar_width'] = None
 
-        if auto_compress_pictures is not None:
-          self.auto_compress_pictures = auto_compress_pictures
-        if auto_recover is not None:
-          self.auto_recover = auto_recover
-        if build_version is not None:
-          self.build_version = build_version
-        if calc_mode is not None:
-          self.calc_mode = calc_mode
-        if calc_stack_size is not None:
-          self.calc_stack_size = calc_stack_size
-        if calculation_id is not None:
-          self.calculation_id = calculation_id
-        if check_comptiliblity is not None:
-          self.check_comptiliblity = check_comptiliblity
-        if check_excel_restriction is not None:
-          self.check_excel_restriction = check_excel_restriction
-        if crash_save is not None:
-          self.crash_save = crash_save
-        if create_calc_chain is not None:
-          self.create_calc_chain = create_calc_chain
-        if data_extract_load is not None:
-          self.data_extract_load = data_extract_load
-        if date1904 is not None:
-          self.date1904 = date1904
-        if display_drawing_objects is not None:
-          self.display_drawing_objects = display_drawing_objects
-        if enable_macros is not None:
-          self.enable_macros = enable_macros
-        if first_visible_tab is not None:
-          self.first_visible_tab = first_visible_tab
-        if hide_pivot_field_list is not None:
-          self.hide_pivot_field_list = hide_pivot_field_list
-        if is_default_encrypted is not None:
-          self.is_default_encrypted = is_default_encrypted
-        if is_hidden is not None:
-          self.is_hidden = is_hidden
-        if is_h_scroll_bar_visible is not None:
-          self.is_h_scroll_bar_visible = is_h_scroll_bar_visible
-        if is_minimized is not None:
-          self.is_minimized = is_minimized
-        if is_v_scroll_bar_visible is not None:
-          self.is_v_scroll_bar_visible = is_v_scroll_bar_visible
-        if iteration is not None:
-          self.iteration = iteration
-        if language_code is not None:
-          self.language_code = language_code
-        if max_change is not None:
-          self.max_change = max_change
-        if max_iteration is not None:
-          self.max_iteration = max_iteration
-        if memory_setting is not None:
-          self.memory_setting = memory_setting
-        if number_decimal_separator is not None:
-          self.number_decimal_separator = number_decimal_separator
         if number_group_separator is not None:
           self.number_group_separator = number_group_separator
-        if parsing_formula_on_open is not None:
-          self.parsing_formula_on_open = parsing_formula_on_open
-        if precision_as_displayed is not None:
-          self.precision_as_displayed = precision_as_displayed
-        if recalculate_before_save is not None:
-          self.recalculate_before_save = recalculate_before_save
+        if hide_pivot_field_list is not None:
+          self.hide_pivot_field_list = hide_pivot_field_list
+        if is_minimized is not None:
+          self.is_minimized = is_minimized
+        if calculation_id is not None:
+          self.calculation_id = calculation_id
         if re_calculate_on_open is not None:
           self.re_calculate_on_open = re_calculate_on_open
-        if recommend_read_only is not None:
-          self.recommend_read_only = recommend_read_only
-        if region is not None:
-          self.region = region
-        if remove_personal_information is not None:
-          self.remove_personal_information = remove_personal_information
-        if repair_load is not None:
-          self.repair_load = repair_load
-        if shared is not None:
-          self.shared = shared
-        if sheet_tab_bar_width is not None:
-          self.sheet_tab_bar_width = sheet_tab_bar_width
-        if show_tabs is not None:
-          self.show_tabs = show_tabs
-        if update_adjacent_cells_border is not None:
-          self.update_adjacent_cells_border = update_adjacent_cells_border
-        if update_links_type is not None:
-          self.update_links_type = update_links_type
+        if check_excel_restriction is not None:
+          self.check_excel_restriction = check_excel_restriction
+        if is_h_scroll_bar_visible is not None:
+          self.is_h_scroll_bar_visible = is_h_scroll_bar_visible
         if window_height is not None:
           self.window_height = window_height
         if window_left is not None:
           self.window_left = window_left
+        if calc_stack_size is not None:
+          self.calc_stack_size = calc_stack_size
+        if shared is not None:
+          self.shared = shared
+        if remove_personal_information is not None:
+          self.remove_personal_information = remove_personal_information
+        if language_code is not None:
+          self.language_code = language_code
+        if enable_macros is not None:
+          self.enable_macros = enable_macros
+        if is_default_encrypted is not None:
+          self.is_default_encrypted = is_default_encrypted
+        if recalculate_before_save is not None:
+          self.recalculate_before_save = recalculate_before_save
+        if parsing_formula_on_open is not None:
+          self.parsing_formula_on_open = parsing_formula_on_open
         if window_top is not None:
           self.window_top = window_top
+        if region is not None:
+          self.region = region
+        if memory_setting is not None:
+          self.memory_setting = memory_setting
+        if update_adjacent_cells_border is not None:
+          self.update_adjacent_cells_border = update_adjacent_cells_border
+        if crash_save is not None:
+          self.crash_save = crash_save
+        if show_tabs is not None:
+          self.show_tabs = show_tabs
+        if precision_as_displayed is not None:
+          self.precision_as_displayed = precision_as_displayed
+        if calc_mode is not None:
+          self.calc_mode = calc_mode
+        if auto_compress_pictures is not None:
+          self.auto_compress_pictures = auto_compress_pictures
+        if date1904 is not None:
+          self.date1904 = date1904
+        if number_decimal_separator is not None:
+          self.number_decimal_separator = number_decimal_separator
+        if iteration is not None:
+          self.iteration = iteration
+        if check_comptiliblity is not None:
+          self.check_comptiliblity = check_comptiliblity
+        if auto_recover is not None:
+          self.auto_recover = auto_recover
+        if max_change is not None:
+          self.max_change = max_change
+        if data_extract_load is not None:
+          self.data_extract_load = data_extract_load
+        if first_visible_tab is not None:
+          self.first_visible_tab = first_visible_tab
+        if is_hidden is not None:
+          self.is_hidden = is_hidden
+        if recommend_read_only is not None:
+          self.recommend_read_only = recommend_read_only
+        if display_drawing_objects is not None:
+          self.display_drawing_objects = display_drawing_objects
+        if build_version is not None:
+          self.build_version = build_version
+        if is_v_scroll_bar_visible is not None:
+          self.is_v_scroll_bar_visible = is_v_scroll_bar_visible
         if window_width is not None:
           self.window_width = window_width
+        if create_calc_chain is not None:
+          self.create_calc_chain = create_calc_chain
+        if max_iteration is not None:
+          self.max_iteration = max_iteration
+        if repair_load is not None:
+          self.repair_load = repair_load
+        if update_links_type is not None:
+          self.update_links_type = update_links_type
+        if sheet_tab_bar_width is not None:
+          self.sheet_tab_bar_width = sheet_tab_bar_width
 
     @property
-    def auto_compress_pictures(self):
+    def number_group_separator(self):
         """
-        Gets the auto_compress_pictures of this WorkbookSettings.
+        Gets the number_group_separator of this WorkbookSettings.
 
-        :return: The auto_compress_pictures of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['auto_compress_pictures']
-
-    @auto_compress_pictures.setter
-    def auto_compress_pictures(self, auto_compress_pictures):
-        """
-        Sets the auto_compress_pictures of this WorkbookSettings.
-
-        :param auto_compress_pictures: The auto_compress_pictures of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['auto_compress_pictures'] = auto_compress_pictures
-
-    @property
-    def auto_recover(self):
-        """
-        Gets the auto_recover of this WorkbookSettings.
-
-        :return: The auto_recover of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['auto_recover']
-
-    @auto_recover.setter
-    def auto_recover(self, auto_recover):
-        """
-        Sets the auto_recover of this WorkbookSettings.
-
-        :param auto_recover: The auto_recover of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['auto_recover'] = auto_recover
-
-    @property
-    def build_version(self):
-        """
-        Gets the build_version of this WorkbookSettings.
-        Specifies the incremental public release of the application.             
-
-        :return: The build_version of this WorkbookSettings.
+        :return: The number_group_separator of this WorkbookSettings.
         :rtype: str
         """
-        return self.container['build_version']
+        return self.container['number_group_separator']
 
-    @build_version.setter
-    def build_version(self, build_version):
+    @number_group_separator.setter
+    def number_group_separator(self, number_group_separator):
         """
-        Sets the build_version of this WorkbookSettings.
-        Specifies the incremental public release of the application.             
+        Sets the number_group_separator of this WorkbookSettings.
 
-        :param build_version: The build_version of this WorkbookSettings.
+        :param number_group_separator: The number_group_separator of this WorkbookSettings.
         :type: str
         """
 
-        self.container['build_version'] = build_version
-
-    @property
-    def calc_mode(self):
-        """
-        Gets the calc_mode of this WorkbookSettings.
-        It specifies whether to calculate formulas manually, automatically or automatically except for multiple table operations.             
-
-        :return: The calc_mode of this WorkbookSettings.
-        :rtype: str
-        """
-        return self.container['calc_mode']
-
-    @calc_mode.setter
-    def calc_mode(self, calc_mode):
-        """
-        Sets the calc_mode of this WorkbookSettings.
-        It specifies whether to calculate formulas manually, automatically or automatically except for multiple table operations.             
-
-        :param calc_mode: The calc_mode of this WorkbookSettings.
-        :type: str
-        """
-
-        self.container['calc_mode'] = calc_mode
-
-    @property
-    def calc_stack_size(self):
-        """
-        Gets the calc_stack_size of this WorkbookSettings.
-        Specifies the stack size for calculating cells recursively.  The large value for this size will give better performance when there are lots of cells need to be calculated recursively.  On the other hand, larger value will raise the stakes of StackOverflowException.  If use gets StackOverflowException when calculating formulas, this value should be decreased.             
-
-        :return: The calc_stack_size of this WorkbookSettings.
-        :rtype: int
-        """
-        return self.container['calc_stack_size']
-
-    @calc_stack_size.setter
-    def calc_stack_size(self, calc_stack_size):
-        """
-        Sets the calc_stack_size of this WorkbookSettings.
-        Specifies the stack size for calculating cells recursively.  The large value for this size will give better performance when there are lots of cells need to be calculated recursively.  On the other hand, larger value will raise the stakes of StackOverflowException.  If use gets StackOverflowException when calculating formulas, this value should be decreased.             
-
-        :param calc_stack_size: The calc_stack_size of this WorkbookSettings.
-        :type: int
-        """
-
-        self.container['calc_stack_size'] = calc_stack_size
-
-    @property
-    def calculation_id(self):
-        """
-        Gets the calculation_id of this WorkbookSettings.
-        Specifies the version of the calculation engine used to calculate values in the workbook.             
-
-        :return: The calculation_id of this WorkbookSettings.
-        :rtype: str
-        """
-        return self.container['calculation_id']
-
-    @calculation_id.setter
-    def calculation_id(self, calculation_id):
-        """
-        Sets the calculation_id of this WorkbookSettings.
-        Specifies the version of the calculation engine used to calculate values in the workbook.             
-
-        :param calculation_id: The calculation_id of this WorkbookSettings.
-        :type: str
-        """
-
-        self.container['calculation_id'] = calculation_id
-
-    @property
-    def check_comptiliblity(self):
-        """
-        Gets the check_comptiliblity of this WorkbookSettings.
-        Indicates whether check comptiliblity when saving workbook.                           Remarks:  The default value is true.              
-
-        :return: The check_comptiliblity of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['check_comptiliblity']
-
-    @check_comptiliblity.setter
-    def check_comptiliblity(self, check_comptiliblity):
-        """
-        Sets the check_comptiliblity of this WorkbookSettings.
-        Indicates whether check comptiliblity when saving workbook.                           Remarks:  The default value is true.              
-
-        :param check_comptiliblity: The check_comptiliblity of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['check_comptiliblity'] = check_comptiliblity
-
-    @property
-    def check_excel_restriction(self):
-        """
-        Gets the check_excel_restriction of this WorkbookSettings.
-        Whether check restriction of excel file when user modify cells related objects.  For example, excel does not allow inputting string value longer than 32K.  When you input a value longer than 32K such as by Cell.PutValue(string), if this property is true, you will get an Exception.  If this property is false, we will accept your input string value as the cell's value so that later you can output the complete string value for other file formats such as CSV.  However, if you have set such kind of value that is invalid for excel file format, you should not save the workbook as excel file format later. Otherwise there may be unexpected error for the generated excel file.             
-
-        :return: The check_excel_restriction of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['check_excel_restriction']
-
-    @check_excel_restriction.setter
-    def check_excel_restriction(self, check_excel_restriction):
-        """
-        Sets the check_excel_restriction of this WorkbookSettings.
-        Whether check restriction of excel file when user modify cells related objects.  For example, excel does not allow inputting string value longer than 32K.  When you input a value longer than 32K such as by Cell.PutValue(string), if this property is true, you will get an Exception.  If this property is false, we will accept your input string value as the cell's value so that later you can output the complete string value for other file formats such as CSV.  However, if you have set such kind of value that is invalid for excel file format, you should not save the workbook as excel file format later. Otherwise there may be unexpected error for the generated excel file.             
-
-        :param check_excel_restriction: The check_excel_restriction of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['check_excel_restriction'] = check_excel_restriction
-
-    @property
-    def crash_save(self):
-        """
-        Gets the crash_save of this WorkbookSettings.
-
-        :return: The crash_save of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['crash_save']
-
-    @crash_save.setter
-    def crash_save(self, crash_save):
-        """
-        Sets the crash_save of this WorkbookSettings.
-
-        :param crash_save: The crash_save of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['crash_save'] = crash_save
-
-    @property
-    def create_calc_chain(self):
-        """
-        Gets the create_calc_chain of this WorkbookSettings.
-        Indicates whether create calculated formulas chain.             
-
-        :return: The create_calc_chain of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['create_calc_chain']
-
-    @create_calc_chain.setter
-    def create_calc_chain(self, create_calc_chain):
-        """
-        Sets the create_calc_chain of this WorkbookSettings.
-        Indicates whether create calculated formulas chain.             
-
-        :param create_calc_chain: The create_calc_chain of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['create_calc_chain'] = create_calc_chain
-
-    @property
-    def data_extract_load(self):
-        """
-        Gets the data_extract_load of this WorkbookSettings.
-
-        :return: The data_extract_load of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['data_extract_load']
-
-    @data_extract_load.setter
-    def data_extract_load(self, data_extract_load):
-        """
-        Sets the data_extract_load of this WorkbookSettings.
-
-        :param data_extract_load: The data_extract_load of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['data_extract_load'] = data_extract_load
-
-    @property
-    def date1904(self):
-        """
-        Gets the date1904 of this WorkbookSettings.
-        Gets or sets a value which represents if the workbook uses the 1904 date system.             
-
-        :return: The date1904 of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['date1904']
-
-    @date1904.setter
-    def date1904(self, date1904):
-        """
-        Sets the date1904 of this WorkbookSettings.
-        Gets or sets a value which represents if the workbook uses the 1904 date system.             
-
-        :param date1904: The date1904 of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['date1904'] = date1904
-
-    @property
-    def display_drawing_objects(self):
-        """
-        Gets the display_drawing_objects of this WorkbookSettings.
-        Indicates whether and how to show objects in the workbook.             
-
-        :return: The display_drawing_objects of this WorkbookSettings.
-        :rtype: str
-        """
-        return self.container['display_drawing_objects']
-
-    @display_drawing_objects.setter
-    def display_drawing_objects(self, display_drawing_objects):
-        """
-        Sets the display_drawing_objects of this WorkbookSettings.
-        Indicates whether and how to show objects in the workbook.             
-
-        :param display_drawing_objects: The display_drawing_objects of this WorkbookSettings.
-        :type: str
-        """
-
-        self.container['display_drawing_objects'] = display_drawing_objects
-
-    @property
-    def enable_macros(self):
-        """
-        Gets the enable_macros of this WorkbookSettings.
-
-        :return: The enable_macros of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['enable_macros']
-
-    @enable_macros.setter
-    def enable_macros(self, enable_macros):
-        """
-        Sets the enable_macros of this WorkbookSettings.
-
-        :param enable_macros: The enable_macros of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['enable_macros'] = enable_macros
-
-    @property
-    def first_visible_tab(self):
-        """
-        Gets the first_visible_tab of this WorkbookSettings.
-        Gets or sets the first visible worksheet tab.             
-
-        :return: The first_visible_tab of this WorkbookSettings.
-        :rtype: int
-        """
-        return self.container['first_visible_tab']
-
-    @first_visible_tab.setter
-    def first_visible_tab(self, first_visible_tab):
-        """
-        Sets the first_visible_tab of this WorkbookSettings.
-        Gets or sets the first visible worksheet tab.             
-
-        :param first_visible_tab: The first_visible_tab of this WorkbookSettings.
-        :type: int
-        """
-
-        self.container['first_visible_tab'] = first_visible_tab
+        self.container['number_group_separator'] = number_group_separator
 
     @property
     def hide_pivot_field_list(self):
@@ -641,73 +327,6 @@ class WorkbookSettings(object):
         """
 
         self.container['hide_pivot_field_list'] = hide_pivot_field_list
-
-    @property
-    def is_default_encrypted(self):
-        """
-        Gets the is_default_encrypted of this WorkbookSettings.
-
-        :return: The is_default_encrypted of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['is_default_encrypted']
-
-    @is_default_encrypted.setter
-    def is_default_encrypted(self, is_default_encrypted):
-        """
-        Sets the is_default_encrypted of this WorkbookSettings.
-
-        :param is_default_encrypted: The is_default_encrypted of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['is_default_encrypted'] = is_default_encrypted
-
-    @property
-    def is_hidden(self):
-        """
-        Gets the is_hidden of this WorkbookSettings.
-        Indicates whether this workbook is hidden.             
-
-        :return: The is_hidden of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['is_hidden']
-
-    @is_hidden.setter
-    def is_hidden(self, is_hidden):
-        """
-        Sets the is_hidden of this WorkbookSettings.
-        Indicates whether this workbook is hidden.             
-
-        :param is_hidden: The is_hidden of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['is_hidden'] = is_hidden
-
-    @property
-    def is_h_scroll_bar_visible(self):
-        """
-        Gets the is_h_scroll_bar_visible of this WorkbookSettings.
-        Gets or sets a value indicating whether the generated spreadsheet will contain a horizontal scroll bar.                           Remarks: The default value is true.              
-
-        :return: The is_h_scroll_bar_visible of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['is_h_scroll_bar_visible']
-
-    @is_h_scroll_bar_visible.setter
-    def is_h_scroll_bar_visible(self, is_h_scroll_bar_visible):
-        """
-        Sets the is_h_scroll_bar_visible of this WorkbookSettings.
-        Gets or sets a value indicating whether the generated spreadsheet will contain a horizontal scroll bar.                           Remarks: The default value is true.              
-
-        :param is_h_scroll_bar_visible: The is_h_scroll_bar_visible of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['is_h_scroll_bar_visible'] = is_h_scroll_bar_visible
 
     @property
     def is_minimized(self):
@@ -733,251 +352,27 @@ class WorkbookSettings(object):
         self.container['is_minimized'] = is_minimized
 
     @property
-    def is_v_scroll_bar_visible(self):
+    def calculation_id(self):
         """
-        Gets the is_v_scroll_bar_visible of this WorkbookSettings.
-        Gets or sets a value indicating whether the generated spreadsheet will contain a vertical scroll bar.                           Remarks: The default value is true.              
+        Gets the calculation_id of this WorkbookSettings.
+        Specifies the version of the calculation engine used to calculate values in the workbook.             
 
-        :return: The is_v_scroll_bar_visible of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['is_v_scroll_bar_visible']
-
-    @is_v_scroll_bar_visible.setter
-    def is_v_scroll_bar_visible(self, is_v_scroll_bar_visible):
-        """
-        Sets the is_v_scroll_bar_visible of this WorkbookSettings.
-        Gets or sets a value indicating whether the generated spreadsheet will contain a vertical scroll bar.                           Remarks: The default value is true.              
-
-        :param is_v_scroll_bar_visible: The is_v_scroll_bar_visible of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['is_v_scroll_bar_visible'] = is_v_scroll_bar_visible
-
-    @property
-    def iteration(self):
-        """
-        Gets the iteration of this WorkbookSettings.
-        Indicates if Aspose.Cells will use iteration to resolve circular references.             
-
-        :return: The iteration of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['iteration']
-
-    @iteration.setter
-    def iteration(self, iteration):
-        """
-        Sets the iteration of this WorkbookSettings.
-        Indicates if Aspose.Cells will use iteration to resolve circular references.             
-
-        :param iteration: The iteration of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['iteration'] = iteration
-
-    @property
-    def language_code(self):
-        """
-        Gets the language_code of this WorkbookSettings.
-        Gets or sets the user interface language of the Workbook version based on CountryCode that has saved the file.             
-
-        :return: The language_code of this WorkbookSettings.
+        :return: The calculation_id of this WorkbookSettings.
         :rtype: str
         """
-        return self.container['language_code']
+        return self.container['calculation_id']
 
-    @language_code.setter
-    def language_code(self, language_code):
+    @calculation_id.setter
+    def calculation_id(self, calculation_id):
         """
-        Sets the language_code of this WorkbookSettings.
-        Gets or sets the user interface language of the Workbook version based on CountryCode that has saved the file.             
+        Sets the calculation_id of this WorkbookSettings.
+        Specifies the version of the calculation engine used to calculate values in the workbook.             
 
-        :param language_code: The language_code of this WorkbookSettings.
+        :param calculation_id: The calculation_id of this WorkbookSettings.
         :type: str
         """
 
-        self.container['language_code'] = language_code
-
-    @property
-    def max_change(self):
-        """
-        Gets the max_change of this WorkbookSettings.
-        Returns or sets the maximum number of change that Microsoft Excel can use to resolve a circular reference.             
-
-        :return: The max_change of this WorkbookSettings.
-        :rtype: float
-        """
-        return self.container['max_change']
-
-    @max_change.setter
-    def max_change(self, max_change):
-        """
-        Sets the max_change of this WorkbookSettings.
-        Returns or sets the maximum number of change that Microsoft Excel can use to resolve a circular reference.             
-
-        :param max_change: The max_change of this WorkbookSettings.
-        :type: float
-        """
-
-        self.container['max_change'] = max_change
-
-    @property
-    def max_iteration(self):
-        """
-        Gets the max_iteration of this WorkbookSettings.
-        Returns or sets the maximum number of iterations that Aspose.Cells can use to resolve a circular reference.             
-
-        :return: The max_iteration of this WorkbookSettings.
-        :rtype: int
-        """
-        return self.container['max_iteration']
-
-    @max_iteration.setter
-    def max_iteration(self, max_iteration):
-        """
-        Sets the max_iteration of this WorkbookSettings.
-        Returns or sets the maximum number of iterations that Aspose.Cells can use to resolve a circular reference.             
-
-        :param max_iteration: The max_iteration of this WorkbookSettings.
-        :type: int
-        """
-
-        self.container['max_iteration'] = max_iteration
-
-    @property
-    def memory_setting(self):
-        """
-        Gets the memory_setting of this WorkbookSettings.
-
-        :return: The memory_setting of this WorkbookSettings.
-        :rtype: str
-        """
-        return self.container['memory_setting']
-
-    @memory_setting.setter
-    def memory_setting(self, memory_setting):
-        """
-        Sets the memory_setting of this WorkbookSettings.
-
-        :param memory_setting: The memory_setting of this WorkbookSettings.
-        :type: str
-        """
-
-        self.container['memory_setting'] = memory_setting
-
-    @property
-    def number_decimal_separator(self):
-        """
-        Gets the number_decimal_separator of this WorkbookSettings.
-
-        :return: The number_decimal_separator of this WorkbookSettings.
-        :rtype: str
-        """
-        return self.container['number_decimal_separator']
-
-    @number_decimal_separator.setter
-    def number_decimal_separator(self, number_decimal_separator):
-        """
-        Sets the number_decimal_separator of this WorkbookSettings.
-
-        :param number_decimal_separator: The number_decimal_separator of this WorkbookSettings.
-        :type: str
-        """
-
-        self.container['number_decimal_separator'] = number_decimal_separator
-
-    @property
-    def number_group_separator(self):
-        """
-        Gets the number_group_separator of this WorkbookSettings.
-
-        :return: The number_group_separator of this WorkbookSettings.
-        :rtype: str
-        """
-        return self.container['number_group_separator']
-
-    @number_group_separator.setter
-    def number_group_separator(self, number_group_separator):
-        """
-        Sets the number_group_separator of this WorkbookSettings.
-
-        :param number_group_separator: The number_group_separator of this WorkbookSettings.
-        :type: str
-        """
-
-        self.container['number_group_separator'] = number_group_separator
-
-    @property
-    def parsing_formula_on_open(self):
-        """
-        Gets the parsing_formula_on_open of this WorkbookSettings.
-        Indicates whether parsing the formula when reading the file.                           Remarks: Only applies for Excel Xlsx,Xltx, Xltm,Xlsm file because the formulas in the files are stored with a string formula.              
-
-        :return: The parsing_formula_on_open of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['parsing_formula_on_open']
-
-    @parsing_formula_on_open.setter
-    def parsing_formula_on_open(self, parsing_formula_on_open):
-        """
-        Sets the parsing_formula_on_open of this WorkbookSettings.
-        Indicates whether parsing the formula when reading the file.                           Remarks: Only applies for Excel Xlsx,Xltx, Xltm,Xlsm file because the formulas in the files are stored with a string formula.              
-
-        :param parsing_formula_on_open: The parsing_formula_on_open of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['parsing_formula_on_open'] = parsing_formula_on_open
-
-    @property
-    def precision_as_displayed(self):
-        """
-        Gets the precision_as_displayed of this WorkbookSettings.
-        True if calculations in this workbook will be done using only the precision of the numbers as they're displayed             
-
-        :return: The precision_as_displayed of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['precision_as_displayed']
-
-    @precision_as_displayed.setter
-    def precision_as_displayed(self, precision_as_displayed):
-        """
-        Sets the precision_as_displayed of this WorkbookSettings.
-        True if calculations in this workbook will be done using only the precision of the numbers as they're displayed             
-
-        :param precision_as_displayed: The precision_as_displayed of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['precision_as_displayed'] = precision_as_displayed
-
-    @property
-    def recalculate_before_save(self):
-        """
-        Gets the recalculate_before_save of this WorkbookSettings.
-        Indicates whether to recalculate before saving the document.             
-
-        :return: The recalculate_before_save of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['recalculate_before_save']
-
-    @recalculate_before_save.setter
-    def recalculate_before_save(self, recalculate_before_save):
-        """
-        Sets the recalculate_before_save of this WorkbookSettings.
-        Indicates whether to recalculate before saving the document.             
-
-        :param recalculate_before_save: The recalculate_before_save of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['recalculate_before_save'] = recalculate_before_save
+        self.container['calculation_id'] = calculation_id
 
     @property
     def re_calculate_on_open(self):
@@ -1003,205 +398,50 @@ class WorkbookSettings(object):
         self.container['re_calculate_on_open'] = re_calculate_on_open
 
     @property
-    def recommend_read_only(self):
+    def check_excel_restriction(self):
         """
-        Gets the recommend_read_only of this WorkbookSettings.
-        Indicates if the Read Only Recommended option is selected.             
+        Gets the check_excel_restriction of this WorkbookSettings.
+        Whether check restriction of excel file when user modify cells related objects.  For example, excel does not allow inputting string value longer than 32K.  When you input a value longer than 32K such as by Cell.PutValue(string), if this property is true, you will get an Exception.  If this property is false, we will accept your input string value as the cell's value so that later you can output the complete string value for other file formats such as CSV.  However, if you have set such kind of value that is invalid for excel file format, you should not save the workbook as excel file format later. Otherwise there may be unexpected error for the generated excel file.             
 
-        :return: The recommend_read_only of this WorkbookSettings.
+        :return: The check_excel_restriction of this WorkbookSettings.
         :rtype: bool
         """
-        return self.container['recommend_read_only']
+        return self.container['check_excel_restriction']
 
-    @recommend_read_only.setter
-    def recommend_read_only(self, recommend_read_only):
+    @check_excel_restriction.setter
+    def check_excel_restriction(self, check_excel_restriction):
         """
-        Sets the recommend_read_only of this WorkbookSettings.
-        Indicates if the Read Only Recommended option is selected.             
+        Sets the check_excel_restriction of this WorkbookSettings.
+        Whether check restriction of excel file when user modify cells related objects.  For example, excel does not allow inputting string value longer than 32K.  When you input a value longer than 32K such as by Cell.PutValue(string), if this property is true, you will get an Exception.  If this property is false, we will accept your input string value as the cell's value so that later you can output the complete string value for other file formats such as CSV.  However, if you have set such kind of value that is invalid for excel file format, you should not save the workbook as excel file format later. Otherwise there may be unexpected error for the generated excel file.             
 
-        :param recommend_read_only: The recommend_read_only of this WorkbookSettings.
+        :param check_excel_restriction: The check_excel_restriction of this WorkbookSettings.
         :type: bool
         """
 
-        self.container['recommend_read_only'] = recommend_read_only
+        self.container['check_excel_restriction'] = check_excel_restriction
 
     @property
-    def region(self):
+    def is_h_scroll_bar_visible(self):
         """
-        Gets the region of this WorkbookSettings.
-        Gets or sets the system regional settings based on CountryCode at the time the file was saved.                           Remarks: If you do not want to use the region saved in the file, please reset it after reading the file.              
+        Gets the is_h_scroll_bar_visible of this WorkbookSettings.
+        Gets or sets a value indicating whether the generated spreadsheet will contain a horizontal scroll bar.                           Remarks: The default value is true.              
 
-        :return: The region of this WorkbookSettings.
-        :rtype: str
-        """
-        return self.container['region']
-
-    @region.setter
-    def region(self, region):
-        """
-        Sets the region of this WorkbookSettings.
-        Gets or sets the system regional settings based on CountryCode at the time the file was saved.                           Remarks: If you do not want to use the region saved in the file, please reset it after reading the file.              
-
-        :param region: The region of this WorkbookSettings.
-        :type: str
-        """
-
-        self.container['region'] = region
-
-    @property
-    def remove_personal_information(self):
-        """
-        Gets the remove_personal_information of this WorkbookSettings.
-
-        :return: The remove_personal_information of this WorkbookSettings.
+        :return: The is_h_scroll_bar_visible of this WorkbookSettings.
         :rtype: bool
         """
-        return self.container['remove_personal_information']
+        return self.container['is_h_scroll_bar_visible']
 
-    @remove_personal_information.setter
-    def remove_personal_information(self, remove_personal_information):
+    @is_h_scroll_bar_visible.setter
+    def is_h_scroll_bar_visible(self, is_h_scroll_bar_visible):
         """
-        Sets the remove_personal_information of this WorkbookSettings.
+        Sets the is_h_scroll_bar_visible of this WorkbookSettings.
+        Gets or sets a value indicating whether the generated spreadsheet will contain a horizontal scroll bar.                           Remarks: The default value is true.              
 
-        :param remove_personal_information: The remove_personal_information of this WorkbookSettings.
+        :param is_h_scroll_bar_visible: The is_h_scroll_bar_visible of this WorkbookSettings.
         :type: bool
         """
 
-        self.container['remove_personal_information'] = remove_personal_information
-
-    @property
-    def repair_load(self):
-        """
-        Gets the repair_load of this WorkbookSettings.
-
-        :return: The repair_load of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['repair_load']
-
-    @repair_load.setter
-    def repair_load(self, repair_load):
-        """
-        Sets the repair_load of this WorkbookSettings.
-
-        :param repair_load: The repair_load of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['repair_load'] = repair_load
-
-    @property
-    def shared(self):
-        """
-        Gets the shared of this WorkbookSettings.
-        Gets or sets a value that indicates whether the Workbook is shared.                           Remarks: The default value is false.              
-
-        :return: The shared of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['shared']
-
-    @shared.setter
-    def shared(self, shared):
-        """
-        Sets the shared of this WorkbookSettings.
-        Gets or sets a value that indicates whether the Workbook is shared.                           Remarks: The default value is false.              
-
-        :param shared: The shared of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['shared'] = shared
-
-    @property
-    def sheet_tab_bar_width(self):
-        """
-        Gets the sheet_tab_bar_width of this WorkbookSettings.
-        Width of worksheet tab bar (in 1/1000 of window width).             
-
-        :return: The sheet_tab_bar_width of this WorkbookSettings.
-        :rtype: int
-        """
-        return self.container['sheet_tab_bar_width']
-
-    @sheet_tab_bar_width.setter
-    def sheet_tab_bar_width(self, sheet_tab_bar_width):
-        """
-        Sets the sheet_tab_bar_width of this WorkbookSettings.
-        Width of worksheet tab bar (in 1/1000 of window width).             
-
-        :param sheet_tab_bar_width: The sheet_tab_bar_width of this WorkbookSettings.
-        :type: int
-        """
-
-        self.container['sheet_tab_bar_width'] = sheet_tab_bar_width
-
-    @property
-    def show_tabs(self):
-        """
-        Gets the show_tabs of this WorkbookSettings.
-        Get or sets a value whether the Workbook tabs are displayed.                           Remarks: The default value is true.              
-
-        :return: The show_tabs of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['show_tabs']
-
-    @show_tabs.setter
-    def show_tabs(self, show_tabs):
-        """
-        Sets the show_tabs of this WorkbookSettings.
-        Get or sets a value whether the Workbook tabs are displayed.                           Remarks: The default value is true.              
-
-        :param show_tabs: The show_tabs of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['show_tabs'] = show_tabs
-
-    @property
-    def update_adjacent_cells_border(self):
-        """
-        Gets the update_adjacent_cells_border of this WorkbookSettings.
-        Indicates whether update adjacent cells' border.                           Remarks: The default value is true.  For example: the bottom border of the cell A1 is update, the top border of the cell A2 should be changed too.              
-
-        :return: The update_adjacent_cells_border of this WorkbookSettings.
-        :rtype: bool
-        """
-        return self.container['update_adjacent_cells_border']
-
-    @update_adjacent_cells_border.setter
-    def update_adjacent_cells_border(self, update_adjacent_cells_border):
-        """
-        Sets the update_adjacent_cells_border of this WorkbookSettings.
-        Indicates whether update adjacent cells' border.                           Remarks: The default value is true.  For example: the bottom border of the cell A1 is update, the top border of the cell A2 should be changed too.              
-
-        :param update_adjacent_cells_border: The update_adjacent_cells_border of this WorkbookSettings.
-        :type: bool
-        """
-
-        self.container['update_adjacent_cells_border'] = update_adjacent_cells_border
-
-    @property
-    def update_links_type(self):
-        """
-        Gets the update_links_type of this WorkbookSettings.
-
-        :return: The update_links_type of this WorkbookSettings.
-        :rtype: str
-        """
-        return self.container['update_links_type']
-
-    @update_links_type.setter
-    def update_links_type(self, update_links_type):
-        """
-        Sets the update_links_type of this WorkbookSettings.
-
-        :param update_links_type: The update_links_type of this WorkbookSettings.
-        :type: str
-        """
-
-        self.container['update_links_type'] = update_links_type
+        self.container['is_h_scroll_bar_visible'] = is_h_scroll_bar_visible
 
     @property
     def window_height(self):
@@ -1250,6 +490,184 @@ class WorkbookSettings(object):
         self.container['window_left'] = window_left
 
     @property
+    def calc_stack_size(self):
+        """
+        Gets the calc_stack_size of this WorkbookSettings.
+        Specifies the stack size for calculating cells recursively.  The large value for this size will give better performance when there are lots of cells need to be calculated recursively.  On the other hand, larger value will raise the stakes of StackOverflowException.  If use gets StackOverflowException when calculating formulas, this value should be decreased.             
+
+        :return: The calc_stack_size of this WorkbookSettings.
+        :rtype: int
+        """
+        return self.container['calc_stack_size']
+
+    @calc_stack_size.setter
+    def calc_stack_size(self, calc_stack_size):
+        """
+        Sets the calc_stack_size of this WorkbookSettings.
+        Specifies the stack size for calculating cells recursively.  The large value for this size will give better performance when there are lots of cells need to be calculated recursively.  On the other hand, larger value will raise the stakes of StackOverflowException.  If use gets StackOverflowException when calculating formulas, this value should be decreased.             
+
+        :param calc_stack_size: The calc_stack_size of this WorkbookSettings.
+        :type: int
+        """
+
+        self.container['calc_stack_size'] = calc_stack_size
+
+    @property
+    def shared(self):
+        """
+        Gets the shared of this WorkbookSettings.
+        Gets or sets a value that indicates whether the Workbook is shared.                           Remarks: The default value is false.              
+
+        :return: The shared of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['shared']
+
+    @shared.setter
+    def shared(self, shared):
+        """
+        Sets the shared of this WorkbookSettings.
+        Gets or sets a value that indicates whether the Workbook is shared.                           Remarks: The default value is false.              
+
+        :param shared: The shared of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['shared'] = shared
+
+    @property
+    def remove_personal_information(self):
+        """
+        Gets the remove_personal_information of this WorkbookSettings.
+
+        :return: The remove_personal_information of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['remove_personal_information']
+
+    @remove_personal_information.setter
+    def remove_personal_information(self, remove_personal_information):
+        """
+        Sets the remove_personal_information of this WorkbookSettings.
+
+        :param remove_personal_information: The remove_personal_information of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['remove_personal_information'] = remove_personal_information
+
+    @property
+    def language_code(self):
+        """
+        Gets the language_code of this WorkbookSettings.
+        Gets or sets the user interface language of the Workbook version based on CountryCode that has saved the file.             
+
+        :return: The language_code of this WorkbookSettings.
+        :rtype: str
+        """
+        return self.container['language_code']
+
+    @language_code.setter
+    def language_code(self, language_code):
+        """
+        Sets the language_code of this WorkbookSettings.
+        Gets or sets the user interface language of the Workbook version based on CountryCode that has saved the file.             
+
+        :param language_code: The language_code of this WorkbookSettings.
+        :type: str
+        """
+
+        self.container['language_code'] = language_code
+
+    @property
+    def enable_macros(self):
+        """
+        Gets the enable_macros of this WorkbookSettings.
+
+        :return: The enable_macros of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['enable_macros']
+
+    @enable_macros.setter
+    def enable_macros(self, enable_macros):
+        """
+        Sets the enable_macros of this WorkbookSettings.
+
+        :param enable_macros: The enable_macros of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['enable_macros'] = enable_macros
+
+    @property
+    def is_default_encrypted(self):
+        """
+        Gets the is_default_encrypted of this WorkbookSettings.
+
+        :return: The is_default_encrypted of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['is_default_encrypted']
+
+    @is_default_encrypted.setter
+    def is_default_encrypted(self, is_default_encrypted):
+        """
+        Sets the is_default_encrypted of this WorkbookSettings.
+
+        :param is_default_encrypted: The is_default_encrypted of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['is_default_encrypted'] = is_default_encrypted
+
+    @property
+    def recalculate_before_save(self):
+        """
+        Gets the recalculate_before_save of this WorkbookSettings.
+        Indicates whether to recalculate before saving the document.             
+
+        :return: The recalculate_before_save of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['recalculate_before_save']
+
+    @recalculate_before_save.setter
+    def recalculate_before_save(self, recalculate_before_save):
+        """
+        Sets the recalculate_before_save of this WorkbookSettings.
+        Indicates whether to recalculate before saving the document.             
+
+        :param recalculate_before_save: The recalculate_before_save of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['recalculate_before_save'] = recalculate_before_save
+
+    @property
+    def parsing_formula_on_open(self):
+        """
+        Gets the parsing_formula_on_open of this WorkbookSettings.
+        Indicates whether parsing the formula when reading the file.                           Remarks: Only applies for Excel Xlsx,Xltx, Xltm,Xlsm file because the formulas in the files are stored with a string formula.              
+
+        :return: The parsing_formula_on_open of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['parsing_formula_on_open']
+
+    @parsing_formula_on_open.setter
+    def parsing_formula_on_open(self, parsing_formula_on_open):
+        """
+        Sets the parsing_formula_on_open of this WorkbookSettings.
+        Indicates whether parsing the formula when reading the file.                           Remarks: Only applies for Excel Xlsx,Xltx, Xltm,Xlsm file because the formulas in the files are stored with a string formula.              
+
+        :param parsing_formula_on_open: The parsing_formula_on_open of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['parsing_formula_on_open'] = parsing_formula_on_open
+
+    @property
     def window_top(self):
         """
         Gets the window_top of this WorkbookSettings.
@@ -1273,6 +691,477 @@ class WorkbookSettings(object):
         self.container['window_top'] = window_top
 
     @property
+    def region(self):
+        """
+        Gets the region of this WorkbookSettings.
+        Gets or sets the system regional settings based on CountryCode at the time the file was saved.                           Remarks: If you do not want to use the region saved in the file, please reset it after reading the file.              
+
+        :return: The region of this WorkbookSettings.
+        :rtype: str
+        """
+        return self.container['region']
+
+    @region.setter
+    def region(self, region):
+        """
+        Sets the region of this WorkbookSettings.
+        Gets or sets the system regional settings based on CountryCode at the time the file was saved.                           Remarks: If you do not want to use the region saved in the file, please reset it after reading the file.              
+
+        :param region: The region of this WorkbookSettings.
+        :type: str
+        """
+
+        self.container['region'] = region
+
+    @property
+    def memory_setting(self):
+        """
+        Gets the memory_setting of this WorkbookSettings.
+
+        :return: The memory_setting of this WorkbookSettings.
+        :rtype: str
+        """
+        return self.container['memory_setting']
+
+    @memory_setting.setter
+    def memory_setting(self, memory_setting):
+        """
+        Sets the memory_setting of this WorkbookSettings.
+
+        :param memory_setting: The memory_setting of this WorkbookSettings.
+        :type: str
+        """
+
+        self.container['memory_setting'] = memory_setting
+
+    @property
+    def update_adjacent_cells_border(self):
+        """
+        Gets the update_adjacent_cells_border of this WorkbookSettings.
+        Indicates whether update adjacent cells' border.                           Remarks: The default value is true.  For example: the bottom border of the cell A1 is update, the top border of the cell A2 should be changed too.              
+
+        :return: The update_adjacent_cells_border of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['update_adjacent_cells_border']
+
+    @update_adjacent_cells_border.setter
+    def update_adjacent_cells_border(self, update_adjacent_cells_border):
+        """
+        Sets the update_adjacent_cells_border of this WorkbookSettings.
+        Indicates whether update adjacent cells' border.                           Remarks: The default value is true.  For example: the bottom border of the cell A1 is update, the top border of the cell A2 should be changed too.              
+
+        :param update_adjacent_cells_border: The update_adjacent_cells_border of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['update_adjacent_cells_border'] = update_adjacent_cells_border
+
+    @property
+    def crash_save(self):
+        """
+        Gets the crash_save of this WorkbookSettings.
+
+        :return: The crash_save of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['crash_save']
+
+    @crash_save.setter
+    def crash_save(self, crash_save):
+        """
+        Sets the crash_save of this WorkbookSettings.
+
+        :param crash_save: The crash_save of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['crash_save'] = crash_save
+
+    @property
+    def show_tabs(self):
+        """
+        Gets the show_tabs of this WorkbookSettings.
+        Get or sets a value whether the Workbook tabs are displayed.                           Remarks: The default value is true.              
+
+        :return: The show_tabs of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['show_tabs']
+
+    @show_tabs.setter
+    def show_tabs(self, show_tabs):
+        """
+        Sets the show_tabs of this WorkbookSettings.
+        Get or sets a value whether the Workbook tabs are displayed.                           Remarks: The default value is true.              
+
+        :param show_tabs: The show_tabs of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['show_tabs'] = show_tabs
+
+    @property
+    def precision_as_displayed(self):
+        """
+        Gets the precision_as_displayed of this WorkbookSettings.
+        True if calculations in this workbook will be done using only the precision of the numbers as they're displayed             
+
+        :return: The precision_as_displayed of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['precision_as_displayed']
+
+    @precision_as_displayed.setter
+    def precision_as_displayed(self, precision_as_displayed):
+        """
+        Sets the precision_as_displayed of this WorkbookSettings.
+        True if calculations in this workbook will be done using only the precision of the numbers as they're displayed             
+
+        :param precision_as_displayed: The precision_as_displayed of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['precision_as_displayed'] = precision_as_displayed
+
+    @property
+    def calc_mode(self):
+        """
+        Gets the calc_mode of this WorkbookSettings.
+        It specifies whether to calculate formulas manually, automatically or automatically except for multiple table operations.             
+
+        :return: The calc_mode of this WorkbookSettings.
+        :rtype: str
+        """
+        return self.container['calc_mode']
+
+    @calc_mode.setter
+    def calc_mode(self, calc_mode):
+        """
+        Sets the calc_mode of this WorkbookSettings.
+        It specifies whether to calculate formulas manually, automatically or automatically except for multiple table operations.             
+
+        :param calc_mode: The calc_mode of this WorkbookSettings.
+        :type: str
+        """
+
+        self.container['calc_mode'] = calc_mode
+
+    @property
+    def auto_compress_pictures(self):
+        """
+        Gets the auto_compress_pictures of this WorkbookSettings.
+
+        :return: The auto_compress_pictures of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['auto_compress_pictures']
+
+    @auto_compress_pictures.setter
+    def auto_compress_pictures(self, auto_compress_pictures):
+        """
+        Sets the auto_compress_pictures of this WorkbookSettings.
+
+        :param auto_compress_pictures: The auto_compress_pictures of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['auto_compress_pictures'] = auto_compress_pictures
+
+    @property
+    def date1904(self):
+        """
+        Gets the date1904 of this WorkbookSettings.
+        Gets or sets a value which represents if the workbook uses the 1904 date system.             
+
+        :return: The date1904 of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['date1904']
+
+    @date1904.setter
+    def date1904(self, date1904):
+        """
+        Sets the date1904 of this WorkbookSettings.
+        Gets or sets a value which represents if the workbook uses the 1904 date system.             
+
+        :param date1904: The date1904 of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['date1904'] = date1904
+
+    @property
+    def number_decimal_separator(self):
+        """
+        Gets the number_decimal_separator of this WorkbookSettings.
+
+        :return: The number_decimal_separator of this WorkbookSettings.
+        :rtype: str
+        """
+        return self.container['number_decimal_separator']
+
+    @number_decimal_separator.setter
+    def number_decimal_separator(self, number_decimal_separator):
+        """
+        Sets the number_decimal_separator of this WorkbookSettings.
+
+        :param number_decimal_separator: The number_decimal_separator of this WorkbookSettings.
+        :type: str
+        """
+
+        self.container['number_decimal_separator'] = number_decimal_separator
+
+    @property
+    def iteration(self):
+        """
+        Gets the iteration of this WorkbookSettings.
+        Indicates if Aspose.Cells will use iteration to resolve circular references.             
+
+        :return: The iteration of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['iteration']
+
+    @iteration.setter
+    def iteration(self, iteration):
+        """
+        Sets the iteration of this WorkbookSettings.
+        Indicates if Aspose.Cells will use iteration to resolve circular references.             
+
+        :param iteration: The iteration of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['iteration'] = iteration
+
+    @property
+    def check_comptiliblity(self):
+        """
+        Gets the check_comptiliblity of this WorkbookSettings.
+        Indicates whether check comptiliblity when saving workbook.                           Remarks:  The default value is true.              
+
+        :return: The check_comptiliblity of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['check_comptiliblity']
+
+    @check_comptiliblity.setter
+    def check_comptiliblity(self, check_comptiliblity):
+        """
+        Sets the check_comptiliblity of this WorkbookSettings.
+        Indicates whether check comptiliblity when saving workbook.                           Remarks:  The default value is true.              
+
+        :param check_comptiliblity: The check_comptiliblity of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['check_comptiliblity'] = check_comptiliblity
+
+    @property
+    def auto_recover(self):
+        """
+        Gets the auto_recover of this WorkbookSettings.
+
+        :return: The auto_recover of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['auto_recover']
+
+    @auto_recover.setter
+    def auto_recover(self, auto_recover):
+        """
+        Sets the auto_recover of this WorkbookSettings.
+
+        :param auto_recover: The auto_recover of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['auto_recover'] = auto_recover
+
+    @property
+    def max_change(self):
+        """
+        Gets the max_change of this WorkbookSettings.
+        Returns or sets the maximum number of change that Microsoft Excel can use to resolve a circular reference.             
+
+        :return: The max_change of this WorkbookSettings.
+        :rtype: float
+        """
+        return self.container['max_change']
+
+    @max_change.setter
+    def max_change(self, max_change):
+        """
+        Sets the max_change of this WorkbookSettings.
+        Returns or sets the maximum number of change that Microsoft Excel can use to resolve a circular reference.             
+
+        :param max_change: The max_change of this WorkbookSettings.
+        :type: float
+        """
+
+        self.container['max_change'] = max_change
+
+    @property
+    def data_extract_load(self):
+        """
+        Gets the data_extract_load of this WorkbookSettings.
+
+        :return: The data_extract_load of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['data_extract_load']
+
+    @data_extract_load.setter
+    def data_extract_load(self, data_extract_load):
+        """
+        Sets the data_extract_load of this WorkbookSettings.
+
+        :param data_extract_load: The data_extract_load of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['data_extract_load'] = data_extract_load
+
+    @property
+    def first_visible_tab(self):
+        """
+        Gets the first_visible_tab of this WorkbookSettings.
+        Gets or sets the first visible worksheet tab.             
+
+        :return: The first_visible_tab of this WorkbookSettings.
+        :rtype: int
+        """
+        return self.container['first_visible_tab']
+
+    @first_visible_tab.setter
+    def first_visible_tab(self, first_visible_tab):
+        """
+        Sets the first_visible_tab of this WorkbookSettings.
+        Gets or sets the first visible worksheet tab.             
+
+        :param first_visible_tab: The first_visible_tab of this WorkbookSettings.
+        :type: int
+        """
+
+        self.container['first_visible_tab'] = first_visible_tab
+
+    @property
+    def is_hidden(self):
+        """
+        Gets the is_hidden of this WorkbookSettings.
+        Indicates whether this workbook is hidden.             
+
+        :return: The is_hidden of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['is_hidden']
+
+    @is_hidden.setter
+    def is_hidden(self, is_hidden):
+        """
+        Sets the is_hidden of this WorkbookSettings.
+        Indicates whether this workbook is hidden.             
+
+        :param is_hidden: The is_hidden of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['is_hidden'] = is_hidden
+
+    @property
+    def recommend_read_only(self):
+        """
+        Gets the recommend_read_only of this WorkbookSettings.
+        Indicates if the Read Only Recommended option is selected.             
+
+        :return: The recommend_read_only of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['recommend_read_only']
+
+    @recommend_read_only.setter
+    def recommend_read_only(self, recommend_read_only):
+        """
+        Sets the recommend_read_only of this WorkbookSettings.
+        Indicates if the Read Only Recommended option is selected.             
+
+        :param recommend_read_only: The recommend_read_only of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['recommend_read_only'] = recommend_read_only
+
+    @property
+    def display_drawing_objects(self):
+        """
+        Gets the display_drawing_objects of this WorkbookSettings.
+        Indicates whether and how to show objects in the workbook.             
+
+        :return: The display_drawing_objects of this WorkbookSettings.
+        :rtype: str
+        """
+        return self.container['display_drawing_objects']
+
+    @display_drawing_objects.setter
+    def display_drawing_objects(self, display_drawing_objects):
+        """
+        Sets the display_drawing_objects of this WorkbookSettings.
+        Indicates whether and how to show objects in the workbook.             
+
+        :param display_drawing_objects: The display_drawing_objects of this WorkbookSettings.
+        :type: str
+        """
+
+        self.container['display_drawing_objects'] = display_drawing_objects
+
+    @property
+    def build_version(self):
+        """
+        Gets the build_version of this WorkbookSettings.
+        Specifies the incremental public release of the application.             
+
+        :return: The build_version of this WorkbookSettings.
+        :rtype: str
+        """
+        return self.container['build_version']
+
+    @build_version.setter
+    def build_version(self, build_version):
+        """
+        Sets the build_version of this WorkbookSettings.
+        Specifies the incremental public release of the application.             
+
+        :param build_version: The build_version of this WorkbookSettings.
+        :type: str
+        """
+
+        self.container['build_version'] = build_version
+
+    @property
+    def is_v_scroll_bar_visible(self):
+        """
+        Gets the is_v_scroll_bar_visible of this WorkbookSettings.
+        Gets or sets a value indicating whether the generated spreadsheet will contain a vertical scroll bar.                           Remarks: The default value is true.              
+
+        :return: The is_v_scroll_bar_visible of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['is_v_scroll_bar_visible']
+
+    @is_v_scroll_bar_visible.setter
+    def is_v_scroll_bar_visible(self, is_v_scroll_bar_visible):
+        """
+        Sets the is_v_scroll_bar_visible of this WorkbookSettings.
+        Gets or sets a value indicating whether the generated spreadsheet will contain a vertical scroll bar.                           Remarks: The default value is true.              
+
+        :param is_v_scroll_bar_visible: The is_v_scroll_bar_visible of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['is_v_scroll_bar_visible'] = is_v_scroll_bar_visible
+
+    @property
     def window_width(self):
         """
         Gets the window_width of this WorkbookSettings.
@@ -1294,6 +1183,117 @@ class WorkbookSettings(object):
         """
 
         self.container['window_width'] = window_width
+
+    @property
+    def create_calc_chain(self):
+        """
+        Gets the create_calc_chain of this WorkbookSettings.
+        Indicates whether create calculated formulas chain.             
+
+        :return: The create_calc_chain of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['create_calc_chain']
+
+    @create_calc_chain.setter
+    def create_calc_chain(self, create_calc_chain):
+        """
+        Sets the create_calc_chain of this WorkbookSettings.
+        Indicates whether create calculated formulas chain.             
+
+        :param create_calc_chain: The create_calc_chain of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['create_calc_chain'] = create_calc_chain
+
+    @property
+    def max_iteration(self):
+        """
+        Gets the max_iteration of this WorkbookSettings.
+        Returns or sets the maximum number of iterations that Aspose.Cells can use to resolve a circular reference.             
+
+        :return: The max_iteration of this WorkbookSettings.
+        :rtype: int
+        """
+        return self.container['max_iteration']
+
+    @max_iteration.setter
+    def max_iteration(self, max_iteration):
+        """
+        Sets the max_iteration of this WorkbookSettings.
+        Returns or sets the maximum number of iterations that Aspose.Cells can use to resolve a circular reference.             
+
+        :param max_iteration: The max_iteration of this WorkbookSettings.
+        :type: int
+        """
+
+        self.container['max_iteration'] = max_iteration
+
+    @property
+    def repair_load(self):
+        """
+        Gets the repair_load of this WorkbookSettings.
+
+        :return: The repair_load of this WorkbookSettings.
+        :rtype: bool
+        """
+        return self.container['repair_load']
+
+    @repair_load.setter
+    def repair_load(self, repair_load):
+        """
+        Sets the repair_load of this WorkbookSettings.
+
+        :param repair_load: The repair_load of this WorkbookSettings.
+        :type: bool
+        """
+
+        self.container['repair_load'] = repair_load
+
+    @property
+    def update_links_type(self):
+        """
+        Gets the update_links_type of this WorkbookSettings.
+
+        :return: The update_links_type of this WorkbookSettings.
+        :rtype: str
+        """
+        return self.container['update_links_type']
+
+    @update_links_type.setter
+    def update_links_type(self, update_links_type):
+        """
+        Sets the update_links_type of this WorkbookSettings.
+
+        :param update_links_type: The update_links_type of this WorkbookSettings.
+        :type: str
+        """
+
+        self.container['update_links_type'] = update_links_type
+
+    @property
+    def sheet_tab_bar_width(self):
+        """
+        Gets the sheet_tab_bar_width of this WorkbookSettings.
+        Width of worksheet tab bar (in 1/1000 of window width).             
+
+        :return: The sheet_tab_bar_width of this WorkbookSettings.
+        :rtype: int
+        """
+        return self.container['sheet_tab_bar_width']
+
+    @sheet_tab_bar_width.setter
+    def sheet_tab_bar_width(self, sheet_tab_bar_width):
+        """
+        Sets the sheet_tab_bar_width of this WorkbookSettings.
+        Width of worksheet tab bar (in 1/1000 of window width).             
+
+        :param sheet_tab_bar_width: The sheet_tab_bar_width of this WorkbookSettings.
+        :type: int
+        """
+
+        self.container['sheet_tab_bar_width'] = sheet_tab_bar_width
 
     def to_dict(self):
         """

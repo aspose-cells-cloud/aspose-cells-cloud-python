@@ -31,23 +31,23 @@ class ShadowEffect(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'angle': 'float',
-        'blur': 'float',
-        'color': 'CellsColor',
         'distance': 'float',
+        'angle': 'float',
         'preset_type': 'str',
-        'size': 'float',
-        'transparency': 'float'
+        'color': 'CellsColor',
+        'transparency': 'float',
+        'blur': 'float',
+        'size': 'float'
     }
 
     attribute_map = {
-        'angle': 'Angle',
-        'blur': 'Blur',
-        'color': 'Color',
         'distance': 'Distance',
+        'angle': 'Angle',
         'preset_type': 'PresetType',
-        'size': 'Size',
-        'transparency': 'Transparency'
+        'color': 'Color',
+        'transparency': 'Transparency',
+        'blur': 'Blur',
+        'size': 'Size'
     }
     
     @staticmethod
@@ -63,7 +63,7 @@ class ShadowEffect(object):
             return self.container[attr]
         return None
 
-    def __init__(self, angle=None, blur=None, color=None, distance=None, preset_type=None, size=None, transparency=None, **kw):
+    def __init__(self, distance=None, angle=None, preset_type=None, color=None, transparency=None, blur=None, size=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -73,91 +73,28 @@ class ShadowEffect(object):
         ShadowEffect - a model defined in Swagger
         """
 
-        self.container['angle'] = None
-        self.container['blur'] = None
-        self.container['color'] = None
         self.container['distance'] = None
+        self.container['angle'] = None
         self.container['preset_type'] = None
-        self.container['size'] = None
+        self.container['color'] = None
         self.container['transparency'] = None
+        self.container['blur'] = None
+        self.container['size'] = None
 
-        if angle is not None:
-          self.angle = angle
-        if blur is not None:
-          self.blur = blur
-        if color is not None:
-          self.color = color
         if distance is not None:
           self.distance = distance
+        if angle is not None:
+          self.angle = angle
         if preset_type is not None:
           self.preset_type = preset_type
-        if size is not None:
-          self.size = size
+        if color is not None:
+          self.color = color
         if transparency is not None:
           self.transparency = transparency
-
-    @property
-    def angle(self):
-        """
-        Gets the angle of this ShadowEffect.
-
-        :return: The angle of this ShadowEffect.
-        :rtype: float
-        """
-        return self.container['angle']
-
-    @angle.setter
-    def angle(self, angle):
-        """
-        Sets the angle of this ShadowEffect.
-
-        :param angle: The angle of this ShadowEffect.
-        :type: float
-        """
-
-        self.container['angle'] = angle
-
-    @property
-    def blur(self):
-        """
-        Gets the blur of this ShadowEffect.
-
-        :return: The blur of this ShadowEffect.
-        :rtype: float
-        """
-        return self.container['blur']
-
-    @blur.setter
-    def blur(self, blur):
-        """
-        Sets the blur of this ShadowEffect.
-
-        :param blur: The blur of this ShadowEffect.
-        :type: float
-        """
-
-        self.container['blur'] = blur
-
-    @property
-    def color(self):
-        """
-        Gets the color of this ShadowEffect.
-
-        :return: The color of this ShadowEffect.
-        :rtype: CellsColor
-        """
-        return self.container['color']
-
-    @color.setter
-    def color(self, color):
-        """
-        Sets the color of this ShadowEffect.
-
-        :param color: The color of this ShadowEffect.
-        :type: CellsColor
-        """
-
-        self.container['color'] = color
+        if blur is not None:
+          self.blur = blur
+        if size is not None:
+          self.size = size
 
     @property
     def distance(self):
@@ -181,6 +118,27 @@ class ShadowEffect(object):
         self.container['distance'] = distance
 
     @property
+    def angle(self):
+        """
+        Gets the angle of this ShadowEffect.
+
+        :return: The angle of this ShadowEffect.
+        :rtype: float
+        """
+        return self.container['angle']
+
+    @angle.setter
+    def angle(self, angle):
+        """
+        Sets the angle of this ShadowEffect.
+
+        :param angle: The angle of this ShadowEffect.
+        :type: float
+        """
+
+        self.container['angle'] = angle
+
+    @property
     def preset_type(self):
         """
         Gets the preset_type of this ShadowEffect.
@@ -202,25 +160,25 @@ class ShadowEffect(object):
         self.container['preset_type'] = preset_type
 
     @property
-    def size(self):
+    def color(self):
         """
-        Gets the size of this ShadowEffect.
+        Gets the color of this ShadowEffect.
 
-        :return: The size of this ShadowEffect.
-        :rtype: float
+        :return: The color of this ShadowEffect.
+        :rtype: CellsColor
         """
-        return self.container['size']
+        return self.container['color']
 
-    @size.setter
-    def size(self, size):
+    @color.setter
+    def color(self, color):
         """
-        Sets the size of this ShadowEffect.
+        Sets the color of this ShadowEffect.
 
-        :param size: The size of this ShadowEffect.
-        :type: float
+        :param color: The color of this ShadowEffect.
+        :type: CellsColor
         """
 
-        self.container['size'] = size
+        self.container['color'] = color
 
     @property
     def transparency(self):
@@ -242,6 +200,48 @@ class ShadowEffect(object):
         """
 
         self.container['transparency'] = transparency
+
+    @property
+    def blur(self):
+        """
+        Gets the blur of this ShadowEffect.
+
+        :return: The blur of this ShadowEffect.
+        :rtype: float
+        """
+        return self.container['blur']
+
+    @blur.setter
+    def blur(self, blur):
+        """
+        Sets the blur of this ShadowEffect.
+
+        :param blur: The blur of this ShadowEffect.
+        :type: float
+        """
+
+        self.container['blur'] = blur
+
+    @property
+    def size(self):
+        """
+        Gets the size of this ShadowEffect.
+
+        :return: The size of this ShadowEffect.
+        :rtype: float
+        """
+        return self.container['size']
+
+    @size.setter
+    def size(self, size):
+        """
+        Sets the size of this ShadowEffect.
+
+        :param size: The size of this ShadowEffect.
+        :type: float
+        """
+
+        self.container['size'] = size
 
     def to_dict(self):
         """

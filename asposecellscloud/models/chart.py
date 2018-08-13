@@ -32,96 +32,96 @@ class Chart(object):
     """
     swagger_types = {
         'link': 'Link',
-        'auto_scaling': 'bool',
-        'back_wall': 'LinkElement',
-        'category_axis': 'LinkElement',
-        'chart_area': 'LinkElement',
-        'chart_data_table': 'LinkElement',
-        'chart_object': 'LinkElement',
-        'depth_percent': 'int',
-        'elevation': 'int',
         'first_slice_angle': 'int',
         'floor': 'LinkElement',
-        'gap_depth': 'int',
-        'gap_width': 'int',
-        'height_percent': 'int',
-        'hide_pivot_field_buttons': 'bool',
-        'is3_d': 'bool',
-        'is_rectangular_cornered': 'bool',
-        'legend': 'LinkElement',
-        'name': 'str',
-        'n_series': 'LinkElement',
-        'page_setup': 'LinkElement',
-        'perspective': 'int',
-        'pivot_source': 'str',
-        'placement': 'str',
-        'plot_area': 'LinkElement',
         'plot_empty_cells_type': 'str',
-        'plot_visible_cells': 'bool',
-        'print_size': 'str',
-        'right_angle_axes': 'bool',
-        'rotation_angle': 'int',
+        'auto_scaling': 'bool',
+        'style': 'int',
+        'series_axis': 'LinkElement',
+        'value_axis': 'LinkElement',
+        'show_data_table': 'bool',
+        'is3_d': 'bool',
+        'chart_area': 'LinkElement',
+        'elevation': 'int',
+        'side_wall': 'LinkElement',
+        'type': 'str',
+        'title': 'LinkElement',
+        'walls': 'LinkElement',
+        'back_wall': 'LinkElement',
+        'chart_data_table': 'LinkElement',
+        'height_percent': 'int',
+        'gap_width': 'int',
+        'legend': 'LinkElement',
+        'chart_object': 'LinkElement',
+        'is_rectangular_cornered': 'bool',
         'second_category_axis': 'LinkElement',
         'second_value_axis': 'LinkElement',
-        'series_axis': 'LinkElement',
-        'shapes': 'LinkElement',
-        'show_data_table': 'bool',
-        'show_legend': 'bool',
-        'side_wall': 'LinkElement',
+        'placement': 'str',
+        'name': 'str',
         'size_with_window': 'bool',
-        'style': 'int',
-        'title': 'LinkElement',
-        'type': 'str',
-        'value_axis': 'LinkElement',
-        'walls': 'LinkElement',
-        'walls_and_gridlines2_d': 'bool'
+        'right_angle_axes': 'bool',
+        'plot_visible_cells': 'bool',
+        'show_legend': 'bool',
+        'pivot_source': 'str',
+        'depth_percent': 'int',
+        'print_size': 'str',
+        'gap_depth': 'int',
+        'shapes': 'LinkElement',
+        'walls_and_gridlines2_d': 'bool',
+        'n_series': 'LinkElement',
+        'rotation_angle': 'int',
+        'plot_area': 'LinkElement',
+        'category_axis': 'LinkElement',
+        'perspective': 'int',
+        'hide_pivot_field_buttons': 'bool',
+        'page_setup': 'LinkElement'
     }
 
     attribute_map = {
         'link': 'link',
-        'auto_scaling': 'AutoScaling',
-        'back_wall': 'BackWall',
-        'category_axis': 'CategoryAxis',
-        'chart_area': 'ChartArea',
-        'chart_data_table': 'ChartDataTable',
-        'chart_object': 'ChartObject',
-        'depth_percent': 'DepthPercent',
-        'elevation': 'Elevation',
         'first_slice_angle': 'FirstSliceAngle',
         'floor': 'Floor',
-        'gap_depth': 'GapDepth',
-        'gap_width': 'GapWidth',
-        'height_percent': 'HeightPercent',
-        'hide_pivot_field_buttons': 'HidePivotFieldButtons',
-        'is3_d': 'Is3D',
-        'is_rectangular_cornered': 'IsRectangularCornered',
-        'legend': 'Legend',
-        'name': 'Name',
-        'n_series': 'NSeries',
-        'page_setup': 'PageSetup',
-        'perspective': 'Perspective',
-        'pivot_source': 'PivotSource',
-        'placement': 'Placement',
-        'plot_area': 'PlotArea',
         'plot_empty_cells_type': 'PlotEmptyCellsType',
-        'plot_visible_cells': 'PlotVisibleCells',
-        'print_size': 'PrintSize',
-        'right_angle_axes': 'RightAngleAxes',
-        'rotation_angle': 'RotationAngle',
+        'auto_scaling': 'AutoScaling',
+        'style': 'Style',
+        'series_axis': 'SeriesAxis',
+        'value_axis': 'ValueAxis',
+        'show_data_table': 'ShowDataTable',
+        'is3_d': 'Is3D',
+        'chart_area': 'ChartArea',
+        'elevation': 'Elevation',
+        'side_wall': 'SideWall',
+        'type': 'Type',
+        'title': 'Title',
+        'walls': 'Walls',
+        'back_wall': 'BackWall',
+        'chart_data_table': 'ChartDataTable',
+        'height_percent': 'HeightPercent',
+        'gap_width': 'GapWidth',
+        'legend': 'Legend',
+        'chart_object': 'ChartObject',
+        'is_rectangular_cornered': 'IsRectangularCornered',
         'second_category_axis': 'SecondCategoryAxis',
         'second_value_axis': 'SecondValueAxis',
-        'series_axis': 'SeriesAxis',
-        'shapes': 'Shapes',
-        'show_data_table': 'ShowDataTable',
-        'show_legend': 'ShowLegend',
-        'side_wall': 'SideWall',
+        'placement': 'Placement',
+        'name': 'Name',
         'size_with_window': 'SizeWithWindow',
-        'style': 'Style',
-        'title': 'Title',
-        'type': 'Type',
-        'value_axis': 'ValueAxis',
-        'walls': 'Walls',
-        'walls_and_gridlines2_d': 'WallsAndGridlines2D'
+        'right_angle_axes': 'RightAngleAxes',
+        'plot_visible_cells': 'PlotVisibleCells',
+        'show_legend': 'ShowLegend',
+        'pivot_source': 'PivotSource',
+        'depth_percent': 'DepthPercent',
+        'print_size': 'PrintSize',
+        'gap_depth': 'GapDepth',
+        'shapes': 'Shapes',
+        'walls_and_gridlines2_d': 'WallsAndGridlines2D',
+        'n_series': 'NSeries',
+        'rotation_angle': 'RotationAngle',
+        'plot_area': 'PlotArea',
+        'category_axis': 'CategoryAxis',
+        'perspective': 'Perspective',
+        'hide_pivot_field_buttons': 'HidePivotFieldButtons',
+        'page_setup': 'PageSetup'
     }
     
     @staticmethod
@@ -137,7 +137,7 @@ class Chart(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, auto_scaling=None, back_wall=None, category_axis=None, chart_area=None, chart_data_table=None, chart_object=None, depth_percent=None, elevation=None, first_slice_angle=None, floor=None, gap_depth=None, gap_width=None, height_percent=None, hide_pivot_field_buttons=None, is3_d=None, is_rectangular_cornered=None, legend=None, name=None, n_series=None, page_setup=None, perspective=None, pivot_source=None, placement=None, plot_area=None, plot_empty_cells_type=None, plot_visible_cells=None, print_size=None, right_angle_axes=None, rotation_angle=None, second_category_axis=None, second_value_axis=None, series_axis=None, shapes=None, show_data_table=None, show_legend=None, side_wall=None, size_with_window=None, style=None, title=None, type=None, value_axis=None, walls=None, walls_and_gridlines2_d=None, **kw):
+    def __init__(self, link=None, first_slice_angle=None, floor=None, plot_empty_cells_type=None, auto_scaling=None, style=None, series_axis=None, value_axis=None, show_data_table=None, is3_d=None, chart_area=None, elevation=None, side_wall=None, type=None, title=None, walls=None, back_wall=None, chart_data_table=None, height_percent=None, gap_width=None, legend=None, chart_object=None, is_rectangular_cornered=None, second_category_axis=None, second_value_axis=None, placement=None, name=None, size_with_window=None, right_angle_axes=None, plot_visible_cells=None, show_legend=None, pivot_source=None, depth_percent=None, print_size=None, gap_depth=None, shapes=None, walls_and_gridlines2_d=None, n_series=None, rotation_angle=None, plot_area=None, category_axis=None, perspective=None, hide_pivot_field_buttons=None, page_setup=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -148,138 +148,138 @@ class Chart(object):
         """
 
         self.container['link'] = None
-        self.container['auto_scaling'] = None
-        self.container['back_wall'] = None
-        self.container['category_axis'] = None
-        self.container['chart_area'] = None
-        self.container['chart_data_table'] = None
-        self.container['chart_object'] = None
-        self.container['depth_percent'] = None
-        self.container['elevation'] = None
         self.container['first_slice_angle'] = None
         self.container['floor'] = None
-        self.container['gap_depth'] = None
-        self.container['gap_width'] = None
-        self.container['height_percent'] = None
-        self.container['hide_pivot_field_buttons'] = None
-        self.container['is3_d'] = None
-        self.container['is_rectangular_cornered'] = None
-        self.container['legend'] = None
-        self.container['name'] = None
-        self.container['n_series'] = None
-        self.container['page_setup'] = None
-        self.container['perspective'] = None
-        self.container['pivot_source'] = None
-        self.container['placement'] = None
-        self.container['plot_area'] = None
         self.container['plot_empty_cells_type'] = None
-        self.container['plot_visible_cells'] = None
-        self.container['print_size'] = None
-        self.container['right_angle_axes'] = None
-        self.container['rotation_angle'] = None
+        self.container['auto_scaling'] = None
+        self.container['style'] = None
+        self.container['series_axis'] = None
+        self.container['value_axis'] = None
+        self.container['show_data_table'] = None
+        self.container['is3_d'] = None
+        self.container['chart_area'] = None
+        self.container['elevation'] = None
+        self.container['side_wall'] = None
+        self.container['type'] = None
+        self.container['title'] = None
+        self.container['walls'] = None
+        self.container['back_wall'] = None
+        self.container['chart_data_table'] = None
+        self.container['height_percent'] = None
+        self.container['gap_width'] = None
+        self.container['legend'] = None
+        self.container['chart_object'] = None
+        self.container['is_rectangular_cornered'] = None
         self.container['second_category_axis'] = None
         self.container['second_value_axis'] = None
-        self.container['series_axis'] = None
-        self.container['shapes'] = None
-        self.container['show_data_table'] = None
-        self.container['show_legend'] = None
-        self.container['side_wall'] = None
+        self.container['placement'] = None
+        self.container['name'] = None
         self.container['size_with_window'] = None
-        self.container['style'] = None
-        self.container['title'] = None
-        self.container['type'] = None
-        self.container['value_axis'] = None
-        self.container['walls'] = None
+        self.container['right_angle_axes'] = None
+        self.container['plot_visible_cells'] = None
+        self.container['show_legend'] = None
+        self.container['pivot_source'] = None
+        self.container['depth_percent'] = None
+        self.container['print_size'] = None
+        self.container['gap_depth'] = None
+        self.container['shapes'] = None
         self.container['walls_and_gridlines2_d'] = None
+        self.container['n_series'] = None
+        self.container['rotation_angle'] = None
+        self.container['plot_area'] = None
+        self.container['category_axis'] = None
+        self.container['perspective'] = None
+        self.container['hide_pivot_field_buttons'] = None
+        self.container['page_setup'] = None
 
         if link is not None:
           self.link = link
-        if auto_scaling is not None:
-          self.auto_scaling = auto_scaling
-        if back_wall is not None:
-          self.back_wall = back_wall
-        if category_axis is not None:
-          self.category_axis = category_axis
-        if chart_area is not None:
-          self.chart_area = chart_area
-        if chart_data_table is not None:
-          self.chart_data_table = chart_data_table
-        if chart_object is not None:
-          self.chart_object = chart_object
-        if depth_percent is not None:
-          self.depth_percent = depth_percent
-        if elevation is not None:
-          self.elevation = elevation
         if first_slice_angle is not None:
           self.first_slice_angle = first_slice_angle
         if floor is not None:
           self.floor = floor
-        if gap_depth is not None:
-          self.gap_depth = gap_depth
-        if gap_width is not None:
-          self.gap_width = gap_width
-        if height_percent is not None:
-          self.height_percent = height_percent
-        if hide_pivot_field_buttons is not None:
-          self.hide_pivot_field_buttons = hide_pivot_field_buttons
-        if is3_d is not None:
-          self.is3_d = is3_d
-        if is_rectangular_cornered is not None:
-          self.is_rectangular_cornered = is_rectangular_cornered
-        if legend is not None:
-          self.legend = legend
-        if name is not None:
-          self.name = name
-        if n_series is not None:
-          self.n_series = n_series
-        if page_setup is not None:
-          self.page_setup = page_setup
-        if perspective is not None:
-          self.perspective = perspective
-        if pivot_source is not None:
-          self.pivot_source = pivot_source
-        if placement is not None:
-          self.placement = placement
-        if plot_area is not None:
-          self.plot_area = plot_area
         if plot_empty_cells_type is not None:
           self.plot_empty_cells_type = plot_empty_cells_type
-        if plot_visible_cells is not None:
-          self.plot_visible_cells = plot_visible_cells
-        if print_size is not None:
-          self.print_size = print_size
-        if right_angle_axes is not None:
-          self.right_angle_axes = right_angle_axes
-        if rotation_angle is not None:
-          self.rotation_angle = rotation_angle
+        if auto_scaling is not None:
+          self.auto_scaling = auto_scaling
+        if style is not None:
+          self.style = style
+        if series_axis is not None:
+          self.series_axis = series_axis
+        if value_axis is not None:
+          self.value_axis = value_axis
+        if show_data_table is not None:
+          self.show_data_table = show_data_table
+        if is3_d is not None:
+          self.is3_d = is3_d
+        if chart_area is not None:
+          self.chart_area = chart_area
+        if elevation is not None:
+          self.elevation = elevation
+        if side_wall is not None:
+          self.side_wall = side_wall
+        if type is not None:
+          self.type = type
+        if title is not None:
+          self.title = title
+        if walls is not None:
+          self.walls = walls
+        if back_wall is not None:
+          self.back_wall = back_wall
+        if chart_data_table is not None:
+          self.chart_data_table = chart_data_table
+        if height_percent is not None:
+          self.height_percent = height_percent
+        if gap_width is not None:
+          self.gap_width = gap_width
+        if legend is not None:
+          self.legend = legend
+        if chart_object is not None:
+          self.chart_object = chart_object
+        if is_rectangular_cornered is not None:
+          self.is_rectangular_cornered = is_rectangular_cornered
         if second_category_axis is not None:
           self.second_category_axis = second_category_axis
         if second_value_axis is not None:
           self.second_value_axis = second_value_axis
-        if series_axis is not None:
-          self.series_axis = series_axis
-        if shapes is not None:
-          self.shapes = shapes
-        if show_data_table is not None:
-          self.show_data_table = show_data_table
-        if show_legend is not None:
-          self.show_legend = show_legend
-        if side_wall is not None:
-          self.side_wall = side_wall
+        if placement is not None:
+          self.placement = placement
+        if name is not None:
+          self.name = name
         if size_with_window is not None:
           self.size_with_window = size_with_window
-        if style is not None:
-          self.style = style
-        if title is not None:
-          self.title = title
-        if type is not None:
-          self.type = type
-        if value_axis is not None:
-          self.value_axis = value_axis
-        if walls is not None:
-          self.walls = walls
+        if right_angle_axes is not None:
+          self.right_angle_axes = right_angle_axes
+        if plot_visible_cells is not None:
+          self.plot_visible_cells = plot_visible_cells
+        if show_legend is not None:
+          self.show_legend = show_legend
+        if pivot_source is not None:
+          self.pivot_source = pivot_source
+        if depth_percent is not None:
+          self.depth_percent = depth_percent
+        if print_size is not None:
+          self.print_size = print_size
+        if gap_depth is not None:
+          self.gap_depth = gap_depth
+        if shapes is not None:
+          self.shapes = shapes
         if walls_and_gridlines2_d is not None:
           self.walls_and_gridlines2_d = walls_and_gridlines2_d
+        if n_series is not None:
+          self.n_series = n_series
+        if rotation_angle is not None:
+          self.rotation_angle = rotation_angle
+        if plot_area is not None:
+          self.plot_area = plot_area
+        if category_axis is not None:
+          self.category_axis = category_axis
+        if perspective is not None:
+          self.perspective = perspective
+        if hide_pivot_field_buttons is not None:
+          self.hide_pivot_field_buttons = hide_pivot_field_buttons
+        if page_setup is not None:
+          self.page_setup = page_setup
 
     @property
     def link(self):
@@ -301,188 +301,6 @@ class Chart(object):
         """
 
         self.container['link'] = link
-
-    @property
-    def auto_scaling(self):
-        """
-        Gets the auto_scaling of this Chart.
-        True if Microsoft Excel scales a 3-D chart so that it's closer in size to the equivalent 2-D chart. The RightAngleAxes property must be True.
-
-        :return: The auto_scaling of this Chart.
-        :rtype: bool
-        """
-        return self.container['auto_scaling']
-
-    @auto_scaling.setter
-    def auto_scaling(self, auto_scaling):
-        """
-        Sets the auto_scaling of this Chart.
-        True if Microsoft Excel scales a 3-D chart so that it's closer in size to the equivalent 2-D chart. The RightAngleAxes property must be True.
-
-        :param auto_scaling: The auto_scaling of this Chart.
-        :type: bool
-        """
-
-        self.container['auto_scaling'] = auto_scaling
-
-    @property
-    def back_wall(self):
-        """
-        Gets the back_wall of this Chart.
-
-        :return: The back_wall of this Chart.
-        :rtype: LinkElement
-        """
-        return self.container['back_wall']
-
-    @back_wall.setter
-    def back_wall(self, back_wall):
-        """
-        Sets the back_wall of this Chart.
-
-        :param back_wall: The back_wall of this Chart.
-        :type: LinkElement
-        """
-
-        self.container['back_wall'] = back_wall
-
-    @property
-    def category_axis(self):
-        """
-        Gets the category_axis of this Chart.
-        Gets the chart's X axis. The property is read only
-
-        :return: The category_axis of this Chart.
-        :rtype: LinkElement
-        """
-        return self.container['category_axis']
-
-    @category_axis.setter
-    def category_axis(self, category_axis):
-        """
-        Sets the category_axis of this Chart.
-        Gets the chart's X axis. The property is read only
-
-        :param category_axis: The category_axis of this Chart.
-        :type: LinkElement
-        """
-
-        self.container['category_axis'] = category_axis
-
-    @property
-    def chart_area(self):
-        """
-        Gets the chart_area of this Chart.
-        Gets the chart area in the worksheet
-
-        :return: The chart_area of this Chart.
-        :rtype: LinkElement
-        """
-        return self.container['chart_area']
-
-    @chart_area.setter
-    def chart_area(self, chart_area):
-        """
-        Sets the chart_area of this Chart.
-        Gets the chart area in the worksheet
-
-        :param chart_area: The chart_area of this Chart.
-        :type: LinkElement
-        """
-
-        self.container['chart_area'] = chart_area
-
-    @property
-    def chart_data_table(self):
-        """
-        Gets the chart_data_table of this Chart.
-        Represents the chart data table.
-
-        :return: The chart_data_table of this Chart.
-        :rtype: LinkElement
-        """
-        return self.container['chart_data_table']
-
-    @chart_data_table.setter
-    def chart_data_table(self, chart_data_table):
-        """
-        Sets the chart_data_table of this Chart.
-        Represents the chart data table.
-
-        :param chart_data_table: The chart_data_table of this Chart.
-        :type: LinkElement
-        """
-
-        self.container['chart_data_table'] = chart_data_table
-
-    @property
-    def chart_object(self):
-        """
-        Gets the chart_object of this Chart.
-        Represents the chartShape;
-
-        :return: The chart_object of this Chart.
-        :rtype: LinkElement
-        """
-        return self.container['chart_object']
-
-    @chart_object.setter
-    def chart_object(self, chart_object):
-        """
-        Sets the chart_object of this Chart.
-        Represents the chartShape;
-
-        :param chart_object: The chart_object of this Chart.
-        :type: LinkElement
-        """
-
-        self.container['chart_object'] = chart_object
-
-    @property
-    def depth_percent(self):
-        """
-        Gets the depth_percent of this Chart.
-        Represents the depth of a 3-D chart as a percentage of the chart width (between 20 and 2000 percent).
-
-        :return: The depth_percent of this Chart.
-        :rtype: int
-        """
-        return self.container['depth_percent']
-
-    @depth_percent.setter
-    def depth_percent(self, depth_percent):
-        """
-        Sets the depth_percent of this Chart.
-        Represents the depth of a 3-D chart as a percentage of the chart width (between 20 and 2000 percent).
-
-        :param depth_percent: The depth_percent of this Chart.
-        :type: int
-        """
-
-        self.container['depth_percent'] = depth_percent
-
-    @property
-    def elevation(self):
-        """
-        Gets the elevation of this Chart.
-        Represents the elevation of the 3-D chart view, in degrees.
-
-        :return: The elevation of this Chart.
-        :rtype: int
-        """
-        return self.container['elevation']
-
-    @elevation.setter
-    def elevation(self, elevation):
-        """
-        Sets the elevation of this Chart.
-        Represents the elevation of the 3-D chart view, in degrees.
-
-        :param elevation: The elevation of this Chart.
-        :type: int
-        """
-
-        self.container['elevation'] = elevation
 
     @property
     def first_slice_angle(self):
@@ -531,96 +349,142 @@ class Chart(object):
         self.container['floor'] = floor
 
     @property
-    def gap_depth(self):
+    def plot_empty_cells_type(self):
         """
-        Gets the gap_depth of this Chart.
-        Gets or sets the distance between the data series in a 3-D chart, as a percentage of the marker width.The value of this property must be between 0 and 500.
+        Gets the plot_empty_cells_type of this Chart.
+        Gets and sets how to plot the empty cells.
 
-        :return: The gap_depth of this Chart.
-        :rtype: int
+        :return: The plot_empty_cells_type of this Chart.
+        :rtype: str
         """
-        return self.container['gap_depth']
+        return self.container['plot_empty_cells_type']
 
-    @gap_depth.setter
-    def gap_depth(self, gap_depth):
+    @plot_empty_cells_type.setter
+    def plot_empty_cells_type(self, plot_empty_cells_type):
         """
-        Sets the gap_depth of this Chart.
-        Gets or sets the distance between the data series in a 3-D chart, as a percentage of the marker width.The value of this property must be between 0 and 500.
+        Sets the plot_empty_cells_type of this Chart.
+        Gets and sets how to plot the empty cells.
 
-        :param gap_depth: The gap_depth of this Chart.
-        :type: int
+        :param plot_empty_cells_type: The plot_empty_cells_type of this Chart.
+        :type: str
         """
 
-        self.container['gap_depth'] = gap_depth
+        self.container['plot_empty_cells_type'] = plot_empty_cells_type
 
     @property
-    def gap_width(self):
+    def auto_scaling(self):
         """
-        Gets the gap_width of this Chart.
-        Returns or sets the space between bar or column clusters, as a percentage of the bar or column width. The value of this property must be between 0 and 500.             
+        Gets the auto_scaling of this Chart.
+        True if Microsoft Excel scales a 3-D chart so that it's closer in size to the equivalent 2-D chart. The RightAngleAxes property must be True.
 
-        :return: The gap_width of this Chart.
-        :rtype: int
-        """
-        return self.container['gap_width']
-
-    @gap_width.setter
-    def gap_width(self, gap_width):
-        """
-        Sets the gap_width of this Chart.
-        Returns or sets the space between bar or column clusters, as a percentage of the bar or column width. The value of this property must be between 0 and 500.             
-
-        :param gap_width: The gap_width of this Chart.
-        :type: int
-        """
-
-        self.container['gap_width'] = gap_width
-
-    @property
-    def height_percent(self):
-        """
-        Gets the height_percent of this Chart.
-        Returns or sets the height of a 3-D chart as a percentage of the chart width (between 5 and 500 percent).
-
-        :return: The height_percent of this Chart.
-        :rtype: int
-        """
-        return self.container['height_percent']
-
-    @height_percent.setter
-    def height_percent(self, height_percent):
-        """
-        Sets the height_percent of this Chart.
-        Returns or sets the height of a 3-D chart as a percentage of the chart width (between 5 and 500 percent).
-
-        :param height_percent: The height_percent of this Chart.
-        :type: int
-        """
-
-        self.container['height_percent'] = height_percent
-
-    @property
-    def hide_pivot_field_buttons(self):
-        """
-        Gets the hide_pivot_field_buttons of this Chart.
-        Indicates whether hide the pivot chart field buttons only when the chart is PivotChart
-
-        :return: The hide_pivot_field_buttons of this Chart.
+        :return: The auto_scaling of this Chart.
         :rtype: bool
         """
-        return self.container['hide_pivot_field_buttons']
+        return self.container['auto_scaling']
 
-    @hide_pivot_field_buttons.setter
-    def hide_pivot_field_buttons(self, hide_pivot_field_buttons):
+    @auto_scaling.setter
+    def auto_scaling(self, auto_scaling):
         """
-        Sets the hide_pivot_field_buttons of this Chart.
-        Indicates whether hide the pivot chart field buttons only when the chart is PivotChart
+        Sets the auto_scaling of this Chart.
+        True if Microsoft Excel scales a 3-D chart so that it's closer in size to the equivalent 2-D chart. The RightAngleAxes property must be True.
 
-        :param hide_pivot_field_buttons: The hide_pivot_field_buttons of this Chart.
+        :param auto_scaling: The auto_scaling of this Chart.
         :type: bool
         """
 
-        self.container['hide_pivot_field_buttons'] = hide_pivot_field_buttons
+        self.container['auto_scaling'] = auto_scaling
+
+    @property
+    def style(self):
+        """
+        Gets the style of this Chart.
+        Gets and sets the builtin style.
+
+        :return: The style of this Chart.
+        :rtype: int
+        """
+        return self.container['style']
+
+    @style.setter
+    def style(self, style):
+        """
+        Sets the style of this Chart.
+        Gets and sets the builtin style.
+
+        :param style: The style of this Chart.
+        :type: int
+        """
+
+        self.container['style'] = style
+
+    @property
+    def series_axis(self):
+        """
+        Gets the series_axis of this Chart.
+        Gets the chart's series axis.
+
+        :return: The series_axis of this Chart.
+        :rtype: LinkElement
+        """
+        return self.container['series_axis']
+
+    @series_axis.setter
+    def series_axis(self, series_axis):
+        """
+        Sets the series_axis of this Chart.
+        Gets the chart's series axis.
+
+        :param series_axis: The series_axis of this Chart.
+        :type: LinkElement
+        """
+
+        self.container['series_axis'] = series_axis
+
+    @property
+    def value_axis(self):
+        """
+        Gets the value_axis of this Chart.
+        Gets the chart's Y axis.
+
+        :return: The value_axis of this Chart.
+        :rtype: LinkElement
+        """
+        return self.container['value_axis']
+
+    @value_axis.setter
+    def value_axis(self, value_axis):
+        """
+        Sets the value_axis of this Chart.
+        Gets the chart's Y axis.
+
+        :param value_axis: The value_axis of this Chart.
+        :type: LinkElement
+        """
+
+        self.container['value_axis'] = value_axis
+
+    @property
+    def show_data_table(self):
+        """
+        Gets the show_data_table of this Chart.
+        Gets or sets a value indicating whether the chart displays a data table.
+
+        :return: The show_data_table of this Chart.
+        :rtype: bool
+        """
+        return self.container['show_data_table']
+
+    @show_data_table.setter
+    def show_data_table(self, show_data_table):
+        """
+        Sets the show_data_table of this Chart.
+        Gets or sets a value indicating whether the chart displays a data table.
+
+        :param show_data_table: The show_data_table of this Chart.
+        :type: bool
+        """
+
+        self.container['show_data_table'] = show_data_table
 
     @property
     def is3_d(self):
@@ -646,27 +510,230 @@ class Chart(object):
         self.container['is3_d'] = is3_d
 
     @property
-    def is_rectangular_cornered(self):
+    def chart_area(self):
         """
-        Gets the is_rectangular_cornered of this Chart.
-        Gets or sets a value indicating whether the chart displays a data table.
+        Gets the chart_area of this Chart.
+        Gets the chart area in the worksheet
 
-        :return: The is_rectangular_cornered of this Chart.
-        :rtype: bool
+        :return: The chart_area of this Chart.
+        :rtype: LinkElement
         """
-        return self.container['is_rectangular_cornered']
+        return self.container['chart_area']
 
-    @is_rectangular_cornered.setter
-    def is_rectangular_cornered(self, is_rectangular_cornered):
+    @chart_area.setter
+    def chart_area(self, chart_area):
         """
-        Sets the is_rectangular_cornered of this Chart.
-        Gets or sets a value indicating whether the chart displays a data table.
+        Sets the chart_area of this Chart.
+        Gets the chart area in the worksheet
 
-        :param is_rectangular_cornered: The is_rectangular_cornered of this Chart.
-        :type: bool
+        :param chart_area: The chart_area of this Chart.
+        :type: LinkElement
         """
 
-        self.container['is_rectangular_cornered'] = is_rectangular_cornered
+        self.container['chart_area'] = chart_area
+
+    @property
+    def elevation(self):
+        """
+        Gets the elevation of this Chart.
+        Represents the elevation of the 3-D chart view, in degrees.
+
+        :return: The elevation of this Chart.
+        :rtype: int
+        """
+        return self.container['elevation']
+
+    @elevation.setter
+    def elevation(self, elevation):
+        """
+        Sets the elevation of this Chart.
+        Represents the elevation of the 3-D chart view, in degrees.
+
+        :param elevation: The elevation of this Chart.
+        :type: int
+        """
+
+        self.container['elevation'] = elevation
+
+    @property
+    def side_wall(self):
+        """
+        Gets the side_wall of this Chart.
+
+        :return: The side_wall of this Chart.
+        :rtype: LinkElement
+        """
+        return self.container['side_wall']
+
+    @side_wall.setter
+    def side_wall(self, side_wall):
+        """
+        Sets the side_wall of this Chart.
+
+        :param side_wall: The side_wall of this Chart.
+        :type: LinkElement
+        """
+
+        self.container['side_wall'] = side_wall
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Chart.
+        Gets or sets a chart's type.
+
+        :return: The type of this Chart.
+        :rtype: str
+        """
+        return self.container['type']
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Chart.
+        Gets or sets a chart's type.
+
+        :param type: The type of this Chart.
+        :type: str
+        """
+
+        self.container['type'] = type
+
+    @property
+    def title(self):
+        """
+        Gets the title of this Chart.
+        Gets the chart's title.
+
+        :return: The title of this Chart.
+        :rtype: LinkElement
+        """
+        return self.container['title']
+
+    @title.setter
+    def title(self, title):
+        """
+        Sets the title of this Chart.
+        Gets the chart's title.
+
+        :param title: The title of this Chart.
+        :type: LinkElement
+        """
+
+        self.container['title'] = title
+
+    @property
+    def walls(self):
+        """
+        Gets the walls of this Chart.
+        Returns a Walls object that represents the walls of a 3-D chart.
+
+        :return: The walls of this Chart.
+        :rtype: LinkElement
+        """
+        return self.container['walls']
+
+    @walls.setter
+    def walls(self, walls):
+        """
+        Sets the walls of this Chart.
+        Returns a Walls object that represents the walls of a 3-D chart.
+
+        :param walls: The walls of this Chart.
+        :type: LinkElement
+        """
+
+        self.container['walls'] = walls
+
+    @property
+    def back_wall(self):
+        """
+        Gets the back_wall of this Chart.
+
+        :return: The back_wall of this Chart.
+        :rtype: LinkElement
+        """
+        return self.container['back_wall']
+
+    @back_wall.setter
+    def back_wall(self, back_wall):
+        """
+        Sets the back_wall of this Chart.
+
+        :param back_wall: The back_wall of this Chart.
+        :type: LinkElement
+        """
+
+        self.container['back_wall'] = back_wall
+
+    @property
+    def chart_data_table(self):
+        """
+        Gets the chart_data_table of this Chart.
+        Represents the chart data table.
+
+        :return: The chart_data_table of this Chart.
+        :rtype: LinkElement
+        """
+        return self.container['chart_data_table']
+
+    @chart_data_table.setter
+    def chart_data_table(self, chart_data_table):
+        """
+        Sets the chart_data_table of this Chart.
+        Represents the chart data table.
+
+        :param chart_data_table: The chart_data_table of this Chart.
+        :type: LinkElement
+        """
+
+        self.container['chart_data_table'] = chart_data_table
+
+    @property
+    def height_percent(self):
+        """
+        Gets the height_percent of this Chart.
+        Returns or sets the height of a 3-D chart as a percentage of the chart width (between 5 and 500 percent).
+
+        :return: The height_percent of this Chart.
+        :rtype: int
+        """
+        return self.container['height_percent']
+
+    @height_percent.setter
+    def height_percent(self, height_percent):
+        """
+        Sets the height_percent of this Chart.
+        Returns or sets the height of a 3-D chart as a percentage of the chart width (between 5 and 500 percent).
+
+        :param height_percent: The height_percent of this Chart.
+        :type: int
+        """
+
+        self.container['height_percent'] = height_percent
+
+    @property
+    def gap_width(self):
+        """
+        Gets the gap_width of this Chart.
+        Returns or sets the space between bar or column clusters, as a percentage of the bar or column width. The value of this property must be between 0 and 500.             
+
+        :return: The gap_width of this Chart.
+        :rtype: int
+        """
+        return self.container['gap_width']
+
+    @gap_width.setter
+    def gap_width(self, gap_width):
+        """
+        Sets the gap_width of this Chart.
+        Returns or sets the space between bar or column clusters, as a percentage of the bar or column width. The value of this property must be between 0 and 500.             
+
+        :param gap_width: The gap_width of this Chart.
+        :type: int
+        """
+
+        self.container['gap_width'] = gap_width
 
     @property
     def legend(self):
@@ -692,280 +759,50 @@ class Chart(object):
         self.container['legend'] = legend
 
     @property
-    def name(self):
+    def chart_object(self):
         """
-        Gets the name of this Chart.
-        Gets and sets the name of the chart.
+        Gets the chart_object of this Chart.
+        Represents the chartShape;
 
-        :return: The name of this Chart.
-        :rtype: str
-        """
-        return self.container['name']
-
-    @name.setter
-    def name(self, name):
-        """
-        Sets the name of this Chart.
-        Gets and sets the name of the chart.
-
-        :param name: The name of this Chart.
-        :type: str
-        """
-
-        self.container['name'] = name
-
-    @property
-    def n_series(self):
-        """
-        Gets the n_series of this Chart.
-        Gets a SeriesCollection collection representing the data series in the chart.
-
-        :return: The n_series of this Chart.
+        :return: The chart_object of this Chart.
         :rtype: LinkElement
         """
-        return self.container['n_series']
+        return self.container['chart_object']
 
-    @n_series.setter
-    def n_series(self, n_series):
+    @chart_object.setter
+    def chart_object(self, chart_object):
         """
-        Sets the n_series of this Chart.
-        Gets a SeriesCollection collection representing the data series in the chart.
+        Sets the chart_object of this Chart.
+        Represents the chartShape;
 
-        :param n_series: The n_series of this Chart.
+        :param chart_object: The chart_object of this Chart.
         :type: LinkElement
         """
 
-        self.container['n_series'] = n_series
+        self.container['chart_object'] = chart_object
 
     @property
-    def page_setup(self):
+    def is_rectangular_cornered(self):
         """
-        Gets the page_setup of this Chart.
-        Represents the page setup description in this chart.
+        Gets the is_rectangular_cornered of this Chart.
+        Gets or sets a value indicating whether the chart displays a data table.
 
-        :return: The page_setup of this Chart.
-        :rtype: LinkElement
-        """
-        return self.container['page_setup']
-
-    @page_setup.setter
-    def page_setup(self, page_setup):
-        """
-        Sets the page_setup of this Chart.
-        Represents the page setup description in this chart.
-
-        :param page_setup: The page_setup of this Chart.
-        :type: LinkElement
-        """
-
-        self.container['page_setup'] = page_setup
-
-    @property
-    def perspective(self):
-        """
-        Gets the perspective of this Chart.
-        Returns or sets the perspective for the 3-D chart view. Must be between 0 and 100.This property is ignored if the RightAngleAxes property is True.
-
-        :return: The perspective of this Chart.
-        :rtype: int
-        """
-        return self.container['perspective']
-
-    @perspective.setter
-    def perspective(self, perspective):
-        """
-        Sets the perspective of this Chart.
-        Returns or sets the perspective for the 3-D chart view. Must be between 0 and 100.This property is ignored if the RightAngleAxes property is True.
-
-        :param perspective: The perspective of this Chart.
-        :type: int
-        """
-
-        self.container['perspective'] = perspective
-
-    @property
-    def pivot_source(self):
-        """
-        Gets the pivot_source of this Chart.
-        The source is the data of the pivotTable.If PivotSource is not empty ,the chart is PivotChart.
-
-        :return: The pivot_source of this Chart.
-        :rtype: str
-        """
-        return self.container['pivot_source']
-
-    @pivot_source.setter
-    def pivot_source(self, pivot_source):
-        """
-        Sets the pivot_source of this Chart.
-        The source is the data of the pivotTable.If PivotSource is not empty ,the chart is PivotChart.
-
-        :param pivot_source: The pivot_source of this Chart.
-        :type: str
-        """
-
-        self.container['pivot_source'] = pivot_source
-
-    @property
-    def placement(self):
-        """
-        Gets the placement of this Chart.
-        Represents the way the chart is attached to the cells below it.
-
-        :return: The placement of this Chart.
-        :rtype: str
-        """
-        return self.container['placement']
-
-    @placement.setter
-    def placement(self, placement):
-        """
-        Sets the placement of this Chart.
-        Represents the way the chart is attached to the cells below it.
-
-        :param placement: The placement of this Chart.
-        :type: str
-        """
-
-        self.container['placement'] = placement
-
-    @property
-    def plot_area(self):
-        """
-        Gets the plot_area of this Chart.
-        Gets the chart's plot area which includes axis tick lables.
-
-        :return: The plot_area of this Chart.
-        :rtype: LinkElement
-        """
-        return self.container['plot_area']
-
-    @plot_area.setter
-    def plot_area(self, plot_area):
-        """
-        Sets the plot_area of this Chart.
-        Gets the chart's plot area which includes axis tick lables.
-
-        :param plot_area: The plot_area of this Chart.
-        :type: LinkElement
-        """
-
-        self.container['plot_area'] = plot_area
-
-    @property
-    def plot_empty_cells_type(self):
-        """
-        Gets the plot_empty_cells_type of this Chart.
-        Gets and sets how to plot the empty cells.
-
-        :return: The plot_empty_cells_type of this Chart.
-        :rtype: str
-        """
-        return self.container['plot_empty_cells_type']
-
-    @plot_empty_cells_type.setter
-    def plot_empty_cells_type(self, plot_empty_cells_type):
-        """
-        Sets the plot_empty_cells_type of this Chart.
-        Gets and sets how to plot the empty cells.
-
-        :param plot_empty_cells_type: The plot_empty_cells_type of this Chart.
-        :type: str
-        """
-
-        self.container['plot_empty_cells_type'] = plot_empty_cells_type
-
-    @property
-    def plot_visible_cells(self):
-        """
-        Gets the plot_visible_cells of this Chart.
-        Indicates whether only plot visible cells.
-
-        :return: The plot_visible_cells of this Chart.
+        :return: The is_rectangular_cornered of this Chart.
         :rtype: bool
         """
-        return self.container['plot_visible_cells']
+        return self.container['is_rectangular_cornered']
 
-    @plot_visible_cells.setter
-    def plot_visible_cells(self, plot_visible_cells):
+    @is_rectangular_cornered.setter
+    def is_rectangular_cornered(self, is_rectangular_cornered):
         """
-        Sets the plot_visible_cells of this Chart.
-        Indicates whether only plot visible cells.
+        Sets the is_rectangular_cornered of this Chart.
+        Gets or sets a value indicating whether the chart displays a data table.
 
-        :param plot_visible_cells: The plot_visible_cells of this Chart.
+        :param is_rectangular_cornered: The is_rectangular_cornered of this Chart.
         :type: bool
         """
 
-        self.container['plot_visible_cells'] = plot_visible_cells
-
-    @property
-    def print_size(self):
-        """
-        Gets the print_size of this Chart.
-        Gets and sets the printed chart size.
-
-        :return: The print_size of this Chart.
-        :rtype: str
-        """
-        return self.container['print_size']
-
-    @print_size.setter
-    def print_size(self, print_size):
-        """
-        Sets the print_size of this Chart.
-        Gets and sets the printed chart size.
-
-        :param print_size: The print_size of this Chart.
-        :type: str
-        """
-
-        self.container['print_size'] = print_size
-
-    @property
-    def right_angle_axes(self):
-        """
-        Gets the right_angle_axes of this Chart.
-        True if the chart axes are at right angles.Applies only for 3-D charts(except Column3D and 3-D Pie Charts).
-
-        :return: The right_angle_axes of this Chart.
-        :rtype: bool
-        """
-        return self.container['right_angle_axes']
-
-    @right_angle_axes.setter
-    def right_angle_axes(self, right_angle_axes):
-        """
-        Sets the right_angle_axes of this Chart.
-        True if the chart axes are at right angles.Applies only for 3-D charts(except Column3D and 3-D Pie Charts).
-
-        :param right_angle_axes: The right_angle_axes of this Chart.
-        :type: bool
-        """
-
-        self.container['right_angle_axes'] = right_angle_axes
-
-    @property
-    def rotation_angle(self):
-        """
-        Gets the rotation_angle of this Chart.
-        Represents the rotation of the 3-D chart view (the rotation of the plot area around the z-axis, in degrees).
-
-        :return: The rotation_angle of this Chart.
-        :rtype: int
-        """
-        return self.container['rotation_angle']
-
-    @rotation_angle.setter
-    def rotation_angle(self, rotation_angle):
-        """
-        Sets the rotation_angle of this Chart.
-        Represents the rotation of the 3-D chart view (the rotation of the plot area around the z-axis, in degrees).
-
-        :param rotation_angle: The rotation_angle of this Chart.
-        :type: int
-        """
-
-        self.container['rotation_angle'] = rotation_angle
+        self.container['is_rectangular_cornered'] = is_rectangular_cornered
 
     @property
     def second_category_axis(self):
@@ -1014,117 +851,50 @@ class Chart(object):
         self.container['second_value_axis'] = second_value_axis
 
     @property
-    def series_axis(self):
+    def placement(self):
         """
-        Gets the series_axis of this Chart.
-        Gets the chart's series axis.
+        Gets the placement of this Chart.
+        Represents the way the chart is attached to the cells below it.
 
-        :return: The series_axis of this Chart.
-        :rtype: LinkElement
+        :return: The placement of this Chart.
+        :rtype: str
         """
-        return self.container['series_axis']
+        return self.container['placement']
 
-    @series_axis.setter
-    def series_axis(self, series_axis):
+    @placement.setter
+    def placement(self, placement):
         """
-        Sets the series_axis of this Chart.
-        Gets the chart's series axis.
+        Sets the placement of this Chart.
+        Represents the way the chart is attached to the cells below it.
 
-        :param series_axis: The series_axis of this Chart.
-        :type: LinkElement
+        :param placement: The placement of this Chart.
+        :type: str
         """
 
-        self.container['series_axis'] = series_axis
+        self.container['placement'] = placement
 
     @property
-    def shapes(self):
+    def name(self):
         """
-        Gets the shapes of this Chart.
-        Returns all drawing shapes in this chart.
+        Gets the name of this Chart.
+        Gets and sets the name of the chart.
 
-        :return: The shapes of this Chart.
-        :rtype: LinkElement
+        :return: The name of this Chart.
+        :rtype: str
         """
-        return self.container['shapes']
+        return self.container['name']
 
-    @shapes.setter
-    def shapes(self, shapes):
+    @name.setter
+    def name(self, name):
         """
-        Sets the shapes of this Chart.
-        Returns all drawing shapes in this chart.
+        Sets the name of this Chart.
+        Gets and sets the name of the chart.
 
-        :param shapes: The shapes of this Chart.
-        :type: LinkElement
-        """
-
-        self.container['shapes'] = shapes
-
-    @property
-    def show_data_table(self):
-        """
-        Gets the show_data_table of this Chart.
-        Gets or sets a value indicating whether the chart displays a data table.
-
-        :return: The show_data_table of this Chart.
-        :rtype: bool
-        """
-        return self.container['show_data_table']
-
-    @show_data_table.setter
-    def show_data_table(self, show_data_table):
-        """
-        Sets the show_data_table of this Chart.
-        Gets or sets a value indicating whether the chart displays a data table.
-
-        :param show_data_table: The show_data_table of this Chart.
-        :type: bool
+        :param name: The name of this Chart.
+        :type: str
         """
 
-        self.container['show_data_table'] = show_data_table
-
-    @property
-    def show_legend(self):
-        """
-        Gets the show_legend of this Chart.
-        Gets or sets a value indicating whether the chart legend will be displayed. Default is true.
-
-        :return: The show_legend of this Chart.
-        :rtype: bool
-        """
-        return self.container['show_legend']
-
-    @show_legend.setter
-    def show_legend(self, show_legend):
-        """
-        Sets the show_legend of this Chart.
-        Gets or sets a value indicating whether the chart legend will be displayed. Default is true.
-
-        :param show_legend: The show_legend of this Chart.
-        :type: bool
-        """
-
-        self.container['show_legend'] = show_legend
-
-    @property
-    def side_wall(self):
-        """
-        Gets the side_wall of this Chart.
-
-        :return: The side_wall of this Chart.
-        :rtype: LinkElement
-        """
-        return self.container['side_wall']
-
-    @side_wall.setter
-    def side_wall(self, side_wall):
-        """
-        Sets the side_wall of this Chart.
-
-        :param side_wall: The side_wall of this Chart.
-        :type: LinkElement
-        """
-
-        self.container['side_wall'] = side_wall
+        self.container['name'] = name
 
     @property
     def size_with_window(self):
@@ -1150,119 +920,188 @@ class Chart(object):
         self.container['size_with_window'] = size_with_window
 
     @property
-    def style(self):
+    def right_angle_axes(self):
         """
-        Gets the style of this Chart.
-        Gets and sets the builtin style.
+        Gets the right_angle_axes of this Chart.
+        True if the chart axes are at right angles.Applies only for 3-D charts(except Column3D and 3-D Pie Charts).
 
-        :return: The style of this Chart.
-        :rtype: int
+        :return: The right_angle_axes of this Chart.
+        :rtype: bool
         """
-        return self.container['style']
+        return self.container['right_angle_axes']
 
-    @style.setter
-    def style(self, style):
+    @right_angle_axes.setter
+    def right_angle_axes(self, right_angle_axes):
         """
-        Sets the style of this Chart.
-        Gets and sets the builtin style.
+        Sets the right_angle_axes of this Chart.
+        True if the chart axes are at right angles.Applies only for 3-D charts(except Column3D and 3-D Pie Charts).
 
-        :param style: The style of this Chart.
-        :type: int
+        :param right_angle_axes: The right_angle_axes of this Chart.
+        :type: bool
         """
 
-        self.container['style'] = style
+        self.container['right_angle_axes'] = right_angle_axes
 
     @property
-    def title(self):
+    def plot_visible_cells(self):
         """
-        Gets the title of this Chart.
-        Gets the chart's title.
+        Gets the plot_visible_cells of this Chart.
+        Indicates whether only plot visible cells.
 
-        :return: The title of this Chart.
-        :rtype: LinkElement
+        :return: The plot_visible_cells of this Chart.
+        :rtype: bool
         """
-        return self.container['title']
+        return self.container['plot_visible_cells']
 
-    @title.setter
-    def title(self, title):
+    @plot_visible_cells.setter
+    def plot_visible_cells(self, plot_visible_cells):
         """
-        Sets the title of this Chart.
-        Gets the chart's title.
+        Sets the plot_visible_cells of this Chart.
+        Indicates whether only plot visible cells.
 
-        :param title: The title of this Chart.
-        :type: LinkElement
+        :param plot_visible_cells: The plot_visible_cells of this Chart.
+        :type: bool
         """
 
-        self.container['title'] = title
+        self.container['plot_visible_cells'] = plot_visible_cells
 
     @property
-    def type(self):
+    def show_legend(self):
         """
-        Gets the type of this Chart.
-        Gets or sets a chart's type.
+        Gets the show_legend of this Chart.
+        Gets or sets a value indicating whether the chart legend will be displayed. Default is true.
 
-        :return: The type of this Chart.
+        :return: The show_legend of this Chart.
+        :rtype: bool
+        """
+        return self.container['show_legend']
+
+    @show_legend.setter
+    def show_legend(self, show_legend):
+        """
+        Sets the show_legend of this Chart.
+        Gets or sets a value indicating whether the chart legend will be displayed. Default is true.
+
+        :param show_legend: The show_legend of this Chart.
+        :type: bool
+        """
+
+        self.container['show_legend'] = show_legend
+
+    @property
+    def pivot_source(self):
+        """
+        Gets the pivot_source of this Chart.
+        The source is the data of the pivotTable.If PivotSource is not empty ,the chart is PivotChart.
+
+        :return: The pivot_source of this Chart.
         :rtype: str
         """
-        return self.container['type']
+        return self.container['pivot_source']
 
-    @type.setter
-    def type(self, type):
+    @pivot_source.setter
+    def pivot_source(self, pivot_source):
         """
-        Sets the type of this Chart.
-        Gets or sets a chart's type.
+        Sets the pivot_source of this Chart.
+        The source is the data of the pivotTable.If PivotSource is not empty ,the chart is PivotChart.
 
-        :param type: The type of this Chart.
+        :param pivot_source: The pivot_source of this Chart.
         :type: str
         """
 
-        self.container['type'] = type
+        self.container['pivot_source'] = pivot_source
 
     @property
-    def value_axis(self):
+    def depth_percent(self):
         """
-        Gets the value_axis of this Chart.
-        Gets the chart's Y axis.
+        Gets the depth_percent of this Chart.
+        Represents the depth of a 3-D chart as a percentage of the chart width (between 20 and 2000 percent).
 
-        :return: The value_axis of this Chart.
+        :return: The depth_percent of this Chart.
+        :rtype: int
+        """
+        return self.container['depth_percent']
+
+    @depth_percent.setter
+    def depth_percent(self, depth_percent):
+        """
+        Sets the depth_percent of this Chart.
+        Represents the depth of a 3-D chart as a percentage of the chart width (between 20 and 2000 percent).
+
+        :param depth_percent: The depth_percent of this Chart.
+        :type: int
+        """
+
+        self.container['depth_percent'] = depth_percent
+
+    @property
+    def print_size(self):
+        """
+        Gets the print_size of this Chart.
+        Gets and sets the printed chart size.
+
+        :return: The print_size of this Chart.
+        :rtype: str
+        """
+        return self.container['print_size']
+
+    @print_size.setter
+    def print_size(self, print_size):
+        """
+        Sets the print_size of this Chart.
+        Gets and sets the printed chart size.
+
+        :param print_size: The print_size of this Chart.
+        :type: str
+        """
+
+        self.container['print_size'] = print_size
+
+    @property
+    def gap_depth(self):
+        """
+        Gets the gap_depth of this Chart.
+        Gets or sets the distance between the data series in a 3-D chart, as a percentage of the marker width.The value of this property must be between 0 and 500.
+
+        :return: The gap_depth of this Chart.
+        :rtype: int
+        """
+        return self.container['gap_depth']
+
+    @gap_depth.setter
+    def gap_depth(self, gap_depth):
+        """
+        Sets the gap_depth of this Chart.
+        Gets or sets the distance between the data series in a 3-D chart, as a percentage of the marker width.The value of this property must be between 0 and 500.
+
+        :param gap_depth: The gap_depth of this Chart.
+        :type: int
+        """
+
+        self.container['gap_depth'] = gap_depth
+
+    @property
+    def shapes(self):
+        """
+        Gets the shapes of this Chart.
+        Returns all drawing shapes in this chart.
+
+        :return: The shapes of this Chart.
         :rtype: LinkElement
         """
-        return self.container['value_axis']
+        return self.container['shapes']
 
-    @value_axis.setter
-    def value_axis(self, value_axis):
+    @shapes.setter
+    def shapes(self, shapes):
         """
-        Sets the value_axis of this Chart.
-        Gets the chart's Y axis.
+        Sets the shapes of this Chart.
+        Returns all drawing shapes in this chart.
 
-        :param value_axis: The value_axis of this Chart.
+        :param shapes: The shapes of this Chart.
         :type: LinkElement
         """
 
-        self.container['value_axis'] = value_axis
-
-    @property
-    def walls(self):
-        """
-        Gets the walls of this Chart.
-        Returns a Walls object that represents the walls of a 3-D chart.
-
-        :return: The walls of this Chart.
-        :rtype: LinkElement
-        """
-        return self.container['walls']
-
-    @walls.setter
-    def walls(self, walls):
-        """
-        Sets the walls of this Chart.
-        Returns a Walls object that represents the walls of a 3-D chart.
-
-        :param walls: The walls of this Chart.
-        :type: LinkElement
-        """
-
-        self.container['walls'] = walls
+        self.container['shapes'] = shapes
 
     @property
     def walls_and_gridlines2_d(self):
@@ -1286,6 +1125,167 @@ class Chart(object):
         """
 
         self.container['walls_and_gridlines2_d'] = walls_and_gridlines2_d
+
+    @property
+    def n_series(self):
+        """
+        Gets the n_series of this Chart.
+        Gets a SeriesCollection collection representing the data series in the chart.
+
+        :return: The n_series of this Chart.
+        :rtype: LinkElement
+        """
+        return self.container['n_series']
+
+    @n_series.setter
+    def n_series(self, n_series):
+        """
+        Sets the n_series of this Chart.
+        Gets a SeriesCollection collection representing the data series in the chart.
+
+        :param n_series: The n_series of this Chart.
+        :type: LinkElement
+        """
+
+        self.container['n_series'] = n_series
+
+    @property
+    def rotation_angle(self):
+        """
+        Gets the rotation_angle of this Chart.
+        Represents the rotation of the 3-D chart view (the rotation of the plot area around the z-axis, in degrees).
+
+        :return: The rotation_angle of this Chart.
+        :rtype: int
+        """
+        return self.container['rotation_angle']
+
+    @rotation_angle.setter
+    def rotation_angle(self, rotation_angle):
+        """
+        Sets the rotation_angle of this Chart.
+        Represents the rotation of the 3-D chart view (the rotation of the plot area around the z-axis, in degrees).
+
+        :param rotation_angle: The rotation_angle of this Chart.
+        :type: int
+        """
+
+        self.container['rotation_angle'] = rotation_angle
+
+    @property
+    def plot_area(self):
+        """
+        Gets the plot_area of this Chart.
+        Gets the chart's plot area which includes axis tick lables.
+
+        :return: The plot_area of this Chart.
+        :rtype: LinkElement
+        """
+        return self.container['plot_area']
+
+    @plot_area.setter
+    def plot_area(self, plot_area):
+        """
+        Sets the plot_area of this Chart.
+        Gets the chart's plot area which includes axis tick lables.
+
+        :param plot_area: The plot_area of this Chart.
+        :type: LinkElement
+        """
+
+        self.container['plot_area'] = plot_area
+
+    @property
+    def category_axis(self):
+        """
+        Gets the category_axis of this Chart.
+        Gets the chart's X axis. The property is read only
+
+        :return: The category_axis of this Chart.
+        :rtype: LinkElement
+        """
+        return self.container['category_axis']
+
+    @category_axis.setter
+    def category_axis(self, category_axis):
+        """
+        Sets the category_axis of this Chart.
+        Gets the chart's X axis. The property is read only
+
+        :param category_axis: The category_axis of this Chart.
+        :type: LinkElement
+        """
+
+        self.container['category_axis'] = category_axis
+
+    @property
+    def perspective(self):
+        """
+        Gets the perspective of this Chart.
+        Returns or sets the perspective for the 3-D chart view. Must be between 0 and 100.This property is ignored if the RightAngleAxes property is True.
+
+        :return: The perspective of this Chart.
+        :rtype: int
+        """
+        return self.container['perspective']
+
+    @perspective.setter
+    def perspective(self, perspective):
+        """
+        Sets the perspective of this Chart.
+        Returns or sets the perspective for the 3-D chart view. Must be between 0 and 100.This property is ignored if the RightAngleAxes property is True.
+
+        :param perspective: The perspective of this Chart.
+        :type: int
+        """
+
+        self.container['perspective'] = perspective
+
+    @property
+    def hide_pivot_field_buttons(self):
+        """
+        Gets the hide_pivot_field_buttons of this Chart.
+        Indicates whether hide the pivot chart field buttons only when the chart is PivotChart
+
+        :return: The hide_pivot_field_buttons of this Chart.
+        :rtype: bool
+        """
+        return self.container['hide_pivot_field_buttons']
+
+    @hide_pivot_field_buttons.setter
+    def hide_pivot_field_buttons(self, hide_pivot_field_buttons):
+        """
+        Sets the hide_pivot_field_buttons of this Chart.
+        Indicates whether hide the pivot chart field buttons only when the chart is PivotChart
+
+        :param hide_pivot_field_buttons: The hide_pivot_field_buttons of this Chart.
+        :type: bool
+        """
+
+        self.container['hide_pivot_field_buttons'] = hide_pivot_field_buttons
+
+    @property
+    def page_setup(self):
+        """
+        Gets the page_setup of this Chart.
+        Represents the page setup description in this chart.
+
+        :return: The page_setup of this Chart.
+        :rtype: LinkElement
+        """
+        return self.container['page_setup']
+
+    @page_setup.setter
+    def page_setup(self, page_setup):
+        """
+        Sets the page_setup of this Chart.
+        Represents the page setup description in this chart.
+
+        :param page_setup: The page_setup of this Chart.
+        :type: LinkElement
+        """
+
+        self.container['page_setup'] = page_setup
 
     def to_dict(self):
         """

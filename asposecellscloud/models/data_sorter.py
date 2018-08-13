@@ -32,15 +32,15 @@ class DataSorter(object):
     """
     swagger_types = {
         'case_sensitive': 'bool',
-        'has_headers': 'bool',
         'key_list': 'list[SortKey]',
+        'has_headers': 'bool',
         'sort_left_to_right': 'bool'
     }
 
     attribute_map = {
         'case_sensitive': 'CaseSensitive',
-        'has_headers': 'HasHeaders',
         'key_list': 'KeyList',
+        'has_headers': 'HasHeaders',
         'sort_left_to_right': 'SortLeftToRight'
     }
     
@@ -57,7 +57,7 @@ class DataSorter(object):
             return self.container[attr]
         return None
 
-    def __init__(self, case_sensitive=None, has_headers=None, key_list=None, sort_left_to_right=None, **kw):
+    def __init__(self, case_sensitive=None, key_list=None, has_headers=None, sort_left_to_right=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -68,16 +68,16 @@ class DataSorter(object):
         """
 
         self.container['case_sensitive'] = None
-        self.container['has_headers'] = None
         self.container['key_list'] = None
+        self.container['has_headers'] = None
         self.container['sort_left_to_right'] = None
 
         if case_sensitive is not None:
           self.case_sensitive = case_sensitive
-        if has_headers is not None:
-          self.has_headers = has_headers
         if key_list is not None:
           self.key_list = key_list
+        if has_headers is not None:
+          self.has_headers = has_headers
         if sort_left_to_right is not None:
           self.sort_left_to_right = sort_left_to_right
 
@@ -103,27 +103,6 @@ class DataSorter(object):
         self.container['case_sensitive'] = case_sensitive
 
     @property
-    def has_headers(self):
-        """
-        Gets the has_headers of this DataSorter.
-
-        :return: The has_headers of this DataSorter.
-        :rtype: bool
-        """
-        return self.container['has_headers']
-
-    @has_headers.setter
-    def has_headers(self, has_headers):
-        """
-        Sets the has_headers of this DataSorter.
-
-        :param has_headers: The has_headers of this DataSorter.
-        :type: bool
-        """
-
-        self.container['has_headers'] = has_headers
-
-    @property
     def key_list(self):
         """
         Gets the key_list of this DataSorter.
@@ -143,6 +122,27 @@ class DataSorter(object):
         """
 
         self.container['key_list'] = key_list
+
+    @property
+    def has_headers(self):
+        """
+        Gets the has_headers of this DataSorter.
+
+        :return: The has_headers of this DataSorter.
+        :rtype: bool
+        """
+        return self.container['has_headers']
+
+    @has_headers.setter
+    def has_headers(self, has_headers):
+        """
+        Sets the has_headers of this DataSorter.
+
+        :param has_headers: The has_headers of this DataSorter.
+        :type: bool
+        """
+
+        self.container['has_headers'] = has_headers
 
     @property
     def sort_left_to_right(self):

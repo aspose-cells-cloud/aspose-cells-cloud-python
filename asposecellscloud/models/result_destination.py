@@ -31,15 +31,15 @@ class ResultDestination(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'destination_type': 'str',
+        'output_file': 'str',
         'input_file': 'str',
-        'output_file': 'str'
+        'destination_type': 'str'
     }
 
     attribute_map = {
-        'destination_type': 'DestinationType',
+        'output_file': 'OutputFile',
         'input_file': 'InputFile',
-        'output_file': 'OutputFile'
+        'destination_type': 'DestinationType'
     }
     
     @staticmethod
@@ -55,7 +55,7 @@ class ResultDestination(object):
             return self.container[attr]
         return None
 
-    def __init__(self, destination_type=None, input_file=None, output_file=None, **kw):
+    def __init__(self, output_file=None, input_file=None, destination_type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -65,37 +65,37 @@ class ResultDestination(object):
         ResultDestination - a model defined in Swagger
         """
 
-        self.container['destination_type'] = None
-        self.container['input_file'] = None
         self.container['output_file'] = None
+        self.container['input_file'] = None
+        self.container['destination_type'] = None
 
-        if destination_type is not None:
-          self.destination_type = destination_type
-        if input_file is not None:
-          self.input_file = input_file
         if output_file is not None:
           self.output_file = output_file
+        if input_file is not None:
+          self.input_file = input_file
+        if destination_type is not None:
+          self.destination_type = destination_type
 
     @property
-    def destination_type(self):
+    def output_file(self):
         """
-        Gets the destination_type of this ResultDestination.
+        Gets the output_file of this ResultDestination.
 
-        :return: The destination_type of this ResultDestination.
+        :return: The output_file of this ResultDestination.
         :rtype: str
         """
-        return self.container['destination_type']
+        return self.container['output_file']
 
-    @destination_type.setter
-    def destination_type(self, destination_type):
+    @output_file.setter
+    def output_file(self, output_file):
         """
-        Sets the destination_type of this ResultDestination.
+        Sets the output_file of this ResultDestination.
 
-        :param destination_type: The destination_type of this ResultDestination.
+        :param output_file: The output_file of this ResultDestination.
         :type: str
         """
 
-        self.container['destination_type'] = destination_type
+        self.container['output_file'] = output_file
 
     @property
     def input_file(self):
@@ -119,25 +119,25 @@ class ResultDestination(object):
         self.container['input_file'] = input_file
 
     @property
-    def output_file(self):
+    def destination_type(self):
         """
-        Gets the output_file of this ResultDestination.
+        Gets the destination_type of this ResultDestination.
 
-        :return: The output_file of this ResultDestination.
+        :return: The destination_type of this ResultDestination.
         :rtype: str
         """
-        return self.container['output_file']
+        return self.container['destination_type']
 
-    @output_file.setter
-    def output_file(self, output_file):
+    @destination_type.setter
+    def destination_type(self, destination_type):
         """
-        Sets the output_file of this ResultDestination.
+        Sets the destination_type of this ResultDestination.
 
-        :param output_file: The output_file of this ResultDestination.
+        :param destination_type: The destination_type of this ResultDestination.
         :type: str
         """
 
-        self.container['output_file'] = output_file
+        self.container['destination_type'] = destination_type
 
     def to_dict(self):
         """

@@ -31,25 +31,25 @@ class SaveOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'save_format': 'str',
-        'cached_file_folder': 'str',
-        'clear_data': 'bool',
-        'create_directory': 'bool',
         'enable_http_compression': 'bool',
+        'save_format': 'str',
+        'clear_data': 'bool',
+        'cached_file_folder': 'str',
+        'validate_merged_areas': 'bool',
         'refresh_chart_cache': 'bool',
-        'sort_names': 'bool',
-        'validate_merged_areas': 'bool'
+        'create_directory': 'bool',
+        'sort_names': 'bool'
     }
 
     attribute_map = {
-        'save_format': 'SaveFormat',
-        'cached_file_folder': 'CachedFileFolder',
-        'clear_data': 'ClearData',
-        'create_directory': 'CreateDirectory',
         'enable_http_compression': 'EnableHTTPCompression',
+        'save_format': 'SaveFormat',
+        'clear_data': 'ClearData',
+        'cached_file_folder': 'CachedFileFolder',
+        'validate_merged_areas': 'ValidateMergedAreas',
         'refresh_chart_cache': 'RefreshChartCache',
-        'sort_names': 'SortNames',
-        'validate_merged_areas': 'ValidateMergedAreas'
+        'create_directory': 'CreateDirectory',
+        'sort_names': 'SortNames'
     }
     
     @staticmethod
@@ -65,7 +65,7 @@ class SaveOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self, save_format=None, cached_file_folder=None, clear_data=None, create_directory=None, enable_http_compression=None, refresh_chart_cache=None, sort_names=None, validate_merged_areas=None, **kw):
+    def __init__(self, enable_http_compression=None, save_format=None, clear_data=None, cached_file_folder=None, validate_merged_areas=None, refresh_chart_cache=None, create_directory=None, sort_names=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -75,31 +75,52 @@ class SaveOptions(object):
         SaveOptions - a model defined in Swagger
         """
 
-        self.container['save_format'] = None
-        self.container['cached_file_folder'] = None
-        self.container['clear_data'] = None
-        self.container['create_directory'] = None
         self.container['enable_http_compression'] = None
-        self.container['refresh_chart_cache'] = None
-        self.container['sort_names'] = None
+        self.container['save_format'] = None
+        self.container['clear_data'] = None
+        self.container['cached_file_folder'] = None
         self.container['validate_merged_areas'] = None
+        self.container['refresh_chart_cache'] = None
+        self.container['create_directory'] = None
+        self.container['sort_names'] = None
 
-        if save_format is not None:
-          self.save_format = save_format
-        if cached_file_folder is not None:
-          self.cached_file_folder = cached_file_folder
-        if clear_data is not None:
-          self.clear_data = clear_data
-        if create_directory is not None:
-          self.create_directory = create_directory
         if enable_http_compression is not None:
           self.enable_http_compression = enable_http_compression
-        if refresh_chart_cache is not None:
-          self.refresh_chart_cache = refresh_chart_cache
-        if sort_names is not None:
-          self.sort_names = sort_names
+        if save_format is not None:
+          self.save_format = save_format
+        if clear_data is not None:
+          self.clear_data = clear_data
+        if cached_file_folder is not None:
+          self.cached_file_folder = cached_file_folder
         if validate_merged_areas is not None:
           self.validate_merged_areas = validate_merged_areas
+        if refresh_chart_cache is not None:
+          self.refresh_chart_cache = refresh_chart_cache
+        if create_directory is not None:
+          self.create_directory = create_directory
+        if sort_names is not None:
+          self.sort_names = sort_names
+
+    @property
+    def enable_http_compression(self):
+        """
+        Gets the enable_http_compression of this SaveOptions.
+
+        :return: The enable_http_compression of this SaveOptions.
+        :rtype: bool
+        """
+        return self.container['enable_http_compression']
+
+    @enable_http_compression.setter
+    def enable_http_compression(self, enable_http_compression):
+        """
+        Sets the enable_http_compression of this SaveOptions.
+
+        :param enable_http_compression: The enable_http_compression of this SaveOptions.
+        :type: bool
+        """
+
+        self.container['enable_http_compression'] = enable_http_compression
 
     @property
     def save_format(self):
@@ -121,29 +142,6 @@ class SaveOptions(object):
         """
 
         self.container['save_format'] = save_format
-
-    @property
-    def cached_file_folder(self):
-        """
-        Gets the cached_file_folder of this SaveOptions.
-        The cached file folder is used to store some large data.
-
-        :return: The cached_file_folder of this SaveOptions.
-        :rtype: str
-        """
-        return self.container['cached_file_folder']
-
-    @cached_file_folder.setter
-    def cached_file_folder(self, cached_file_folder):
-        """
-        Sets the cached_file_folder of this SaveOptions.
-        The cached file folder is used to store some large data.
-
-        :param cached_file_folder: The cached_file_folder of this SaveOptions.
-        :type: str
-        """
-
-        self.container['cached_file_folder'] = cached_file_folder
 
     @property
     def clear_data(self):
@@ -169,90 +167,27 @@ class SaveOptions(object):
         self.container['clear_data'] = clear_data
 
     @property
-    def create_directory(self):
+    def cached_file_folder(self):
         """
-        Gets the create_directory of this SaveOptions.
-        If true and the directory does not exist, the directory will be automatically created before saving the file.             
+        Gets the cached_file_folder of this SaveOptions.
+        The cached file folder is used to store some large data.
 
-        :return: The create_directory of this SaveOptions.
-        :rtype: bool
+        :return: The cached_file_folder of this SaveOptions.
+        :rtype: str
         """
-        return self.container['create_directory']
+        return self.container['cached_file_folder']
 
-    @create_directory.setter
-    def create_directory(self, create_directory):
+    @cached_file_folder.setter
+    def cached_file_folder(self, cached_file_folder):
         """
-        Sets the create_directory of this SaveOptions.
-        If true and the directory does not exist, the directory will be automatically created before saving the file.             
+        Sets the cached_file_folder of this SaveOptions.
+        The cached file folder is used to store some large data.
 
-        :param create_directory: The create_directory of this SaveOptions.
-        :type: bool
-        """
-
-        self.container['create_directory'] = create_directory
-
-    @property
-    def enable_http_compression(self):
-        """
-        Gets the enable_http_compression of this SaveOptions.
-
-        :return: The enable_http_compression of this SaveOptions.
-        :rtype: bool
-        """
-        return self.container['enable_http_compression']
-
-    @enable_http_compression.setter
-    def enable_http_compression(self, enable_http_compression):
-        """
-        Sets the enable_http_compression of this SaveOptions.
-
-        :param enable_http_compression: The enable_http_compression of this SaveOptions.
-        :type: bool
+        :param cached_file_folder: The cached_file_folder of this SaveOptions.
+        :type: str
         """
 
-        self.container['enable_http_compression'] = enable_http_compression
-
-    @property
-    def refresh_chart_cache(self):
-        """
-        Gets the refresh_chart_cache of this SaveOptions.
-
-        :return: The refresh_chart_cache of this SaveOptions.
-        :rtype: bool
-        """
-        return self.container['refresh_chart_cache']
-
-    @refresh_chart_cache.setter
-    def refresh_chart_cache(self, refresh_chart_cache):
-        """
-        Sets the refresh_chart_cache of this SaveOptions.
-
-        :param refresh_chart_cache: The refresh_chart_cache of this SaveOptions.
-        :type: bool
-        """
-
-        self.container['refresh_chart_cache'] = refresh_chart_cache
-
-    @property
-    def sort_names(self):
-        """
-        Gets the sort_names of this SaveOptions.
-
-        :return: The sort_names of this SaveOptions.
-        :rtype: bool
-        """
-        return self.container['sort_names']
-
-    @sort_names.setter
-    def sort_names(self, sort_names):
-        """
-        Sets the sort_names of this SaveOptions.
-
-        :param sort_names: The sort_names of this SaveOptions.
-        :type: bool
-        """
-
-        self.container['sort_names'] = sort_names
+        self.container['cached_file_folder'] = cached_file_folder
 
     @property
     def validate_merged_areas(self):
@@ -276,6 +211,71 @@ class SaveOptions(object):
         """
 
         self.container['validate_merged_areas'] = validate_merged_areas
+
+    @property
+    def refresh_chart_cache(self):
+        """
+        Gets the refresh_chart_cache of this SaveOptions.
+
+        :return: The refresh_chart_cache of this SaveOptions.
+        :rtype: bool
+        """
+        return self.container['refresh_chart_cache']
+
+    @refresh_chart_cache.setter
+    def refresh_chart_cache(self, refresh_chart_cache):
+        """
+        Sets the refresh_chart_cache of this SaveOptions.
+
+        :param refresh_chart_cache: The refresh_chart_cache of this SaveOptions.
+        :type: bool
+        """
+
+        self.container['refresh_chart_cache'] = refresh_chart_cache
+
+    @property
+    def create_directory(self):
+        """
+        Gets the create_directory of this SaveOptions.
+        If true and the directory does not exist, the directory will be automatically created before saving the file.             
+
+        :return: The create_directory of this SaveOptions.
+        :rtype: bool
+        """
+        return self.container['create_directory']
+
+    @create_directory.setter
+    def create_directory(self, create_directory):
+        """
+        Sets the create_directory of this SaveOptions.
+        If true and the directory does not exist, the directory will be automatically created before saving the file.             
+
+        :param create_directory: The create_directory of this SaveOptions.
+        :type: bool
+        """
+
+        self.container['create_directory'] = create_directory
+
+    @property
+    def sort_names(self):
+        """
+        Gets the sort_names of this SaveOptions.
+
+        :return: The sort_names of this SaveOptions.
+        :rtype: bool
+        """
+        return self.container['sort_names']
+
+    @sort_names.setter
+    def sort_names(self, sort_names):
+        """
+        Sets the sort_names of this SaveOptions.
+
+        :param sort_names: The sort_names of this SaveOptions.
+        :type: bool
+        """
+
+        self.container['sort_names'] = sort_names
 
     def to_dict(self):
         """

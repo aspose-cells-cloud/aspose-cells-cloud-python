@@ -32,18 +32,18 @@ class CellsColor(object):
     """
     swagger_types = {
         'color': 'Color',
-        'color_index': 'int',
-        'is_shape_color': 'bool',
+        'type': 'str',
         'theme_color': 'ThemeColor',
-        'type': 'str'
+        'is_shape_color': 'bool',
+        'color_index': 'int'
     }
 
     attribute_map = {
         'color': 'Color',
-        'color_index': 'ColorIndex',
-        'is_shape_color': 'IsShapeColor',
+        'type': 'Type',
         'theme_color': 'ThemeColor',
-        'type': 'Type'
+        'is_shape_color': 'IsShapeColor',
+        'color_index': 'ColorIndex'
     }
     
     @staticmethod
@@ -59,7 +59,7 @@ class CellsColor(object):
             return self.container[attr]
         return None
 
-    def __init__(self, color=None, color_index=None, is_shape_color=None, theme_color=None, type=None, **kw):
+    def __init__(self, color=None, type=None, theme_color=None, is_shape_color=None, color_index=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -70,21 +70,21 @@ class CellsColor(object):
         """
 
         self.container['color'] = None
-        self.container['color_index'] = None
-        self.container['is_shape_color'] = None
-        self.container['theme_color'] = None
         self.container['type'] = None
+        self.container['theme_color'] = None
+        self.container['is_shape_color'] = None
+        self.container['color_index'] = None
 
         if color is not None:
           self.color = color
-        if color_index is not None:
-          self.color_index = color_index
-        if is_shape_color is not None:
-          self.is_shape_color = is_shape_color
-        if theme_color is not None:
-          self.theme_color = theme_color
         if type is not None:
           self.type = type
+        if theme_color is not None:
+          self.theme_color = theme_color
+        if is_shape_color is not None:
+          self.is_shape_color = is_shape_color
+        if color_index is not None:
+          self.color_index = color_index
 
     @property
     def color(self):
@@ -108,46 +108,25 @@ class CellsColor(object):
         self.container['color'] = color
 
     @property
-    def color_index(self):
+    def type(self):
         """
-        Gets the color_index of this CellsColor.
+        Gets the type of this CellsColor.
 
-        :return: The color_index of this CellsColor.
-        :rtype: int
+        :return: The type of this CellsColor.
+        :rtype: str
         """
-        return self.container['color_index']
+        return self.container['type']
 
-    @color_index.setter
-    def color_index(self, color_index):
+    @type.setter
+    def type(self, type):
         """
-        Sets the color_index of this CellsColor.
+        Sets the type of this CellsColor.
 
-        :param color_index: The color_index of this CellsColor.
-        :type: int
-        """
-
-        self.container['color_index'] = color_index
-
-    @property
-    def is_shape_color(self):
-        """
-        Gets the is_shape_color of this CellsColor.
-
-        :return: The is_shape_color of this CellsColor.
-        :rtype: bool
-        """
-        return self.container['is_shape_color']
-
-    @is_shape_color.setter
-    def is_shape_color(self, is_shape_color):
-        """
-        Sets the is_shape_color of this CellsColor.
-
-        :param is_shape_color: The is_shape_color of this CellsColor.
-        :type: bool
+        :param type: The type of this CellsColor.
+        :type: str
         """
 
-        self.container['is_shape_color'] = is_shape_color
+        self.container['type'] = type
 
     @property
     def theme_color(self):
@@ -171,25 +150,46 @@ class CellsColor(object):
         self.container['theme_color'] = theme_color
 
     @property
-    def type(self):
+    def is_shape_color(self):
         """
-        Gets the type of this CellsColor.
+        Gets the is_shape_color of this CellsColor.
 
-        :return: The type of this CellsColor.
-        :rtype: str
+        :return: The is_shape_color of this CellsColor.
+        :rtype: bool
         """
-        return self.container['type']
+        return self.container['is_shape_color']
 
-    @type.setter
-    def type(self, type):
+    @is_shape_color.setter
+    def is_shape_color(self, is_shape_color):
         """
-        Sets the type of this CellsColor.
+        Sets the is_shape_color of this CellsColor.
 
-        :param type: The type of this CellsColor.
-        :type: str
+        :param is_shape_color: The is_shape_color of this CellsColor.
+        :type: bool
         """
 
-        self.container['type'] = type
+        self.container['is_shape_color'] = is_shape_color
+
+    @property
+    def color_index(self):
+        """
+        Gets the color_index of this CellsColor.
+
+        :return: The color_index of this CellsColor.
+        :rtype: int
+        """
+        return self.container['color_index']
+
+    @color_index.setter
+    def color_index(self, color_index):
+        """
+        Sets the color_index of this CellsColor.
+
+        :param color_index: The color_index of this CellsColor.
+        :type: int
+        """
+
+        self.container['color_index'] = color_index
 
     def to_dict(self):
         """

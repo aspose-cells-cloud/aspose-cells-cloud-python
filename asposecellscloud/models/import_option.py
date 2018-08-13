@@ -31,17 +31,17 @@ class ImportOption(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'destination_worksheet': 'str',
-        'is_insert': 'bool',
+        'source': 'FileSource',
         'import_data_type': 'str',
-        'source': 'FileSource'
+        'destination_worksheet': 'str',
+        'is_insert': 'bool'
     }
 
     attribute_map = {
-        'destination_worksheet': 'DestinationWorksheet',
-        'is_insert': 'IsInsert',
+        'source': 'Source',
         'import_data_type': 'ImportDataType',
-        'source': 'Source'
+        'destination_worksheet': 'DestinationWorksheet',
+        'is_insert': 'IsInsert'
     }
     
     @staticmethod
@@ -57,7 +57,7 @@ class ImportOption(object):
             return self.container[attr]
         return None
 
-    def __init__(self, destination_worksheet=None, is_insert=None, import_data_type=None, source=None, **kw):
+    def __init__(self, source=None, import_data_type=None, destination_worksheet=None, is_insert=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -67,19 +67,61 @@ class ImportOption(object):
         ImportOption - a model defined in Swagger
         """
 
+        self.container['source'] = None
+        self.container['import_data_type'] = None
         self.container['destination_worksheet'] = None
         self.container['is_insert'] = None
-        self.container['import_data_type'] = None
-        self.container['source'] = None
 
+        if source is not None:
+          self.source = source
+        if import_data_type is not None:
+          self.import_data_type = import_data_type
         if destination_worksheet is not None:
           self.destination_worksheet = destination_worksheet
         if is_insert is not None:
           self.is_insert = is_insert
-        if import_data_type is not None:
-          self.import_data_type = import_data_type
-        if source is not None:
-          self.source = source
+
+    @property
+    def source(self):
+        """
+        Gets the source of this ImportOption.
+
+        :return: The source of this ImportOption.
+        :rtype: FileSource
+        """
+        return self.container['source']
+
+    @source.setter
+    def source(self, source):
+        """
+        Sets the source of this ImportOption.
+
+        :param source: The source of this ImportOption.
+        :type: FileSource
+        """
+
+        self.container['source'] = source
+
+    @property
+    def import_data_type(self):
+        """
+        Gets the import_data_type of this ImportOption.
+
+        :return: The import_data_type of this ImportOption.
+        :rtype: str
+        """
+        return self.container['import_data_type']
+
+    @import_data_type.setter
+    def import_data_type(self, import_data_type):
+        """
+        Sets the import_data_type of this ImportOption.
+
+        :param import_data_type: The import_data_type of this ImportOption.
+        :type: str
+        """
+
+        self.container['import_data_type'] = import_data_type
 
     @property
     def destination_worksheet(self):
@@ -122,48 +164,6 @@ class ImportOption(object):
         """
 
         self.container['is_insert'] = is_insert
-
-    @property
-    def import_data_type(self):
-        """
-        Gets the import_data_type of this ImportOption.
-
-        :return: The import_data_type of this ImportOption.
-        :rtype: str
-        """
-        return self.container['import_data_type']
-
-    @import_data_type.setter
-    def import_data_type(self, import_data_type):
-        """
-        Sets the import_data_type of this ImportOption.
-
-        :param import_data_type: The import_data_type of this ImportOption.
-        :type: str
-        """
-
-        self.container['import_data_type'] = import_data_type
-
-    @property
-    def source(self):
-        """
-        Gets the source of this ImportOption.
-
-        :return: The source of this ImportOption.
-        :rtype: FileSource
-        """
-        return self.container['source']
-
-    @source.setter
-    def source(self, source):
-        """
-        Sets the source of this ImportOption.
-
-        :param source: The source of this ImportOption.
-        :type: FileSource
-        """
-
-        self.container['source'] = source
 
     def to_dict(self):
         """

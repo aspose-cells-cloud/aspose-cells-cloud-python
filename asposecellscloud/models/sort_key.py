@@ -31,15 +31,15 @@ class SortKey(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'key': 'int',
+        'custom_list': 'str',
         'sort_order': 'str',
-        'custom_list': 'str'
+        'key': 'int'
     }
 
     attribute_map = {
-        'key': 'Key',
+        'custom_list': 'CustomList',
         'sort_order': 'SortOrder',
-        'custom_list': 'CustomList'
+        'key': 'Key'
     }
     
     @staticmethod
@@ -55,7 +55,7 @@ class SortKey(object):
             return self.container[attr]
         return None
 
-    def __init__(self, key=None, sort_order=None, custom_list=None, **kw):
+    def __init__(self, custom_list=None, sort_order=None, key=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -65,15 +65,57 @@ class SortKey(object):
         SortKey - a model defined in Swagger
         """
 
-        self.container['key'] = None
-        self.container['sort_order'] = None
         self.container['custom_list'] = None
+        self.container['sort_order'] = None
+        self.container['key'] = None
 
-        self.key = key
-        if sort_order is not None:
-          self.sort_order = sort_order
         if custom_list is not None:
           self.custom_list = custom_list
+        if sort_order is not None:
+          self.sort_order = sort_order
+        self.key = key
+
+    @property
+    def custom_list(self):
+        """
+        Gets the custom_list of this SortKey.
+
+        :return: The custom_list of this SortKey.
+        :rtype: str
+        """
+        return self.container['custom_list']
+
+    @custom_list.setter
+    def custom_list(self, custom_list):
+        """
+        Sets the custom_list of this SortKey.
+
+        :param custom_list: The custom_list of this SortKey.
+        :type: str
+        """
+
+        self.container['custom_list'] = custom_list
+
+    @property
+    def sort_order(self):
+        """
+        Gets the sort_order of this SortKey.
+
+        :return: The sort_order of this SortKey.
+        :rtype: str
+        """
+        return self.container['sort_order']
+
+    @sort_order.setter
+    def sort_order(self, sort_order):
+        """
+        Sets the sort_order of this SortKey.
+
+        :param sort_order: The sort_order of this SortKey.
+        :type: str
+        """
+
+        self.container['sort_order'] = sort_order
 
     @property
     def key(self):
@@ -99,48 +141,6 @@ class SortKey(object):
         """
 
         self.container['key'] = key
-
-    @property
-    def sort_order(self):
-        """
-        Gets the sort_order of this SortKey.
-
-        :return: The sort_order of this SortKey.
-        :rtype: str
-        """
-        return self.container['sort_order']
-
-    @sort_order.setter
-    def sort_order(self, sort_order):
-        """
-        Sets the sort_order of this SortKey.
-
-        :param sort_order: The sort_order of this SortKey.
-        :type: str
-        """
-
-        self.container['sort_order'] = sort_order
-
-    @property
-    def custom_list(self):
-        """
-        Gets the custom_list of this SortKey.
-
-        :return: The custom_list of this SortKey.
-        :rtype: str
-        """
-        return self.container['custom_list']
-
-    @custom_list.setter
-    def custom_list(self, custom_list):
-        """
-        Sets the custom_list of this SortKey.
-
-        :param custom_list: The custom_list of this SortKey.
-        :type: str
-        """
-
-        self.container['custom_list'] = custom_list
 
     def to_dict(self):
         """

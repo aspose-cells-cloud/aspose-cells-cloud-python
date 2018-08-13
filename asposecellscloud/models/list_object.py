@@ -32,40 +32,40 @@ class ListObject(object):
     """
     swagger_types = {
         'link': 'Link',
-        'auto_filter': 'AutoFilter',
+        'show_totals': 'bool',
+        'table_style_type': 'str',
         'display_name': 'str',
-        'start_column': 'int',
-        'start_row': 'int',
-        'end_column': 'int',
-        'end_row': 'int',
-        'list_columns': 'list[ListColumn]',
         'show_header_row': 'bool',
+        'start_column': 'int',
+        'show_table_style_last_column': 'bool',
         'show_table_style_column_stripes': 'bool',
         'show_table_style_first_column': 'bool',
-        'show_table_style_last_column': 'bool',
+        'start_row': 'int',
+        'auto_filter': 'AutoFilter',
         'show_table_style_row_stripes': 'bool',
-        'show_totals': 'bool',
+        'end_column': 'int',
         'table_style_name': 'str',
-        'table_style_type': 'str'
+        'list_columns': 'list[ListColumn]',
+        'end_row': 'int'
     }
 
     attribute_map = {
         'link': 'link',
-        'auto_filter': 'AutoFilter',
+        'show_totals': 'ShowTotals',
+        'table_style_type': 'TableStyleType',
         'display_name': 'DisplayName',
-        'start_column': 'StartColumn',
-        'start_row': 'StartRow',
-        'end_column': 'EndColumn',
-        'end_row': 'EndRow',
-        'list_columns': 'ListColumns',
         'show_header_row': 'ShowHeaderRow',
+        'start_column': 'StartColumn',
+        'show_table_style_last_column': 'ShowTableStyleLastColumn',
         'show_table_style_column_stripes': 'ShowTableStyleColumnStripes',
         'show_table_style_first_column': 'ShowTableStyleFirstColumn',
-        'show_table_style_last_column': 'ShowTableStyleLastColumn',
+        'start_row': 'StartRow',
+        'auto_filter': 'AutoFilter',
         'show_table_style_row_stripes': 'ShowTableStyleRowStripes',
-        'show_totals': 'ShowTotals',
+        'end_column': 'EndColumn',
         'table_style_name': 'TableStyleName',
-        'table_style_type': 'TableStyleType'
+        'list_columns': 'ListColumns',
+        'end_row': 'EndRow'
     }
     
     @staticmethod
@@ -81,7 +81,7 @@ class ListObject(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, auto_filter=None, display_name=None, start_column=None, start_row=None, end_column=None, end_row=None, list_columns=None, show_header_row=None, show_table_style_column_stripes=None, show_table_style_first_column=None, show_table_style_last_column=None, show_table_style_row_stripes=None, show_totals=None, table_style_name=None, table_style_type=None, **kw):
+    def __init__(self, link=None, show_totals=None, table_style_type=None, display_name=None, show_header_row=None, start_column=None, show_table_style_last_column=None, show_table_style_column_stripes=None, show_table_style_first_column=None, start_row=None, auto_filter=None, show_table_style_row_stripes=None, end_column=None, table_style_name=None, list_columns=None, end_row=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -92,54 +92,54 @@ class ListObject(object):
         """
 
         self.container['link'] = None
-        self.container['auto_filter'] = None
+        self.container['show_totals'] = None
+        self.container['table_style_type'] = None
         self.container['display_name'] = None
-        self.container['start_column'] = None
-        self.container['start_row'] = None
-        self.container['end_column'] = None
-        self.container['end_row'] = None
-        self.container['list_columns'] = None
         self.container['show_header_row'] = None
+        self.container['start_column'] = None
+        self.container['show_table_style_last_column'] = None
         self.container['show_table_style_column_stripes'] = None
         self.container['show_table_style_first_column'] = None
-        self.container['show_table_style_last_column'] = None
+        self.container['start_row'] = None
+        self.container['auto_filter'] = None
         self.container['show_table_style_row_stripes'] = None
-        self.container['show_totals'] = None
+        self.container['end_column'] = None
         self.container['table_style_name'] = None
-        self.container['table_style_type'] = None
+        self.container['list_columns'] = None
+        self.container['end_row'] = None
 
         if link is not None:
           self.link = link
-        if auto_filter is not None:
-          self.auto_filter = auto_filter
+        if show_totals is not None:
+          self.show_totals = show_totals
+        if table_style_type is not None:
+          self.table_style_type = table_style_type
         if display_name is not None:
           self.display_name = display_name
-        if start_column is not None:
-          self.start_column = start_column
-        if start_row is not None:
-          self.start_row = start_row
-        if end_column is not None:
-          self.end_column = end_column
-        if end_row is not None:
-          self.end_row = end_row
-        if list_columns is not None:
-          self.list_columns = list_columns
         if show_header_row is not None:
           self.show_header_row = show_header_row
+        if start_column is not None:
+          self.start_column = start_column
+        if show_table_style_last_column is not None:
+          self.show_table_style_last_column = show_table_style_last_column
         if show_table_style_column_stripes is not None:
           self.show_table_style_column_stripes = show_table_style_column_stripes
         if show_table_style_first_column is not None:
           self.show_table_style_first_column = show_table_style_first_column
-        if show_table_style_last_column is not None:
-          self.show_table_style_last_column = show_table_style_last_column
+        if start_row is not None:
+          self.start_row = start_row
+        if auto_filter is not None:
+          self.auto_filter = auto_filter
         if show_table_style_row_stripes is not None:
           self.show_table_style_row_stripes = show_table_style_row_stripes
-        if show_totals is not None:
-          self.show_totals = show_totals
+        if end_column is not None:
+          self.end_column = end_column
         if table_style_name is not None:
           self.table_style_name = table_style_name
-        if table_style_type is not None:
-          self.table_style_type = table_style_type
+        if list_columns is not None:
+          self.list_columns = list_columns
+        if end_row is not None:
+          self.end_row = end_row
 
     @property
     def link(self):
@@ -163,27 +163,50 @@ class ListObject(object):
         self.container['link'] = link
 
     @property
-    def auto_filter(self):
+    def show_totals(self):
         """
-        Gets the auto_filter of this ListObject.
-        Gets auto filter.             
+        Gets the show_totals of this ListObject.
+        Gets and sets whether this ListObject show total row.
 
-        :return: The auto_filter of this ListObject.
-        :rtype: AutoFilter
+        :return: The show_totals of this ListObject.
+        :rtype: bool
         """
-        return self.container['auto_filter']
+        return self.container['show_totals']
 
-    @auto_filter.setter
-    def auto_filter(self, auto_filter):
+    @show_totals.setter
+    def show_totals(self, show_totals):
         """
-        Sets the auto_filter of this ListObject.
-        Gets auto filter.             
+        Sets the show_totals of this ListObject.
+        Gets and sets whether this ListObject show total row.
 
-        :param auto_filter: The auto_filter of this ListObject.
-        :type: AutoFilter
+        :param show_totals: The show_totals of this ListObject.
+        :type: bool
         """
 
-        self.container['auto_filter'] = auto_filter
+        self.container['show_totals'] = show_totals
+
+    @property
+    def table_style_type(self):
+        """
+        Gets the table_style_type of this ListObject.
+        Gets and the built-in table style.
+
+        :return: The table_style_type of this ListObject.
+        :rtype: str
+        """
+        return self.container['table_style_type']
+
+    @table_style_type.setter
+    def table_style_type(self, table_style_type):
+        """
+        Sets the table_style_type of this ListObject.
+        Gets and the built-in table style.
+
+        :param table_style_type: The table_style_type of this ListObject.
+        :type: str
+        """
+
+        self.container['table_style_type'] = table_style_type
 
     @property
     def display_name(self):
@@ -209,6 +232,29 @@ class ListObject(object):
         self.container['display_name'] = display_name
 
     @property
+    def show_header_row(self):
+        """
+        Gets the show_header_row of this ListObject.
+        Gets and sets whether this ListObject show header row.             
+
+        :return: The show_header_row of this ListObject.
+        :rtype: bool
+        """
+        return self.container['show_header_row']
+
+    @show_header_row.setter
+    def show_header_row(self, show_header_row):
+        """
+        Sets the show_header_row of this ListObject.
+        Gets and sets whether this ListObject show header row.             
+
+        :param show_header_row: The show_header_row of this ListObject.
+        :type: bool
+        """
+
+        self.container['show_header_row'] = show_header_row
+
+    @property
     def start_column(self):
         """
         Gets the start_column of this ListObject.
@@ -232,119 +278,27 @@ class ListObject(object):
         self.container['start_column'] = start_column
 
     @property
-    def start_row(self):
+    def show_table_style_last_column(self):
         """
-        Gets the start_row of this ListObject.
-        Gets the start row of the range.
+        Gets the show_table_style_last_column of this ListObject.
+        Indicates whether the last column in the table should have the style applied.
 
-        :return: The start_row of this ListObject.
-        :rtype: int
-        """
-        return self.container['start_row']
-
-    @start_row.setter
-    def start_row(self, start_row):
-        """
-        Sets the start_row of this ListObject.
-        Gets the start row of the range.
-
-        :param start_row: The start_row of this ListObject.
-        :type: int
-        """
-
-        self.container['start_row'] = start_row
-
-    @property
-    def end_column(self):
-        """
-        Gets the end_column of this ListObject.
-        Gets the end column of the range.
-
-        :return: The end_column of this ListObject.
-        :rtype: int
-        """
-        return self.container['end_column']
-
-    @end_column.setter
-    def end_column(self, end_column):
-        """
-        Sets the end_column of this ListObject.
-        Gets the end column of the range.
-
-        :param end_column: The end_column of this ListObject.
-        :type: int
-        """
-
-        self.container['end_column'] = end_column
-
-    @property
-    def end_row(self):
-        """
-        Gets the end_row of this ListObject.
-        Gets the end row of the range.
-
-        :return: The end_row of this ListObject.
-        :rtype: int
-        """
-        return self.container['end_row']
-
-    @end_row.setter
-    def end_row(self, end_row):
-        """
-        Sets the end_row of this ListObject.
-        Gets the end row of the range.
-
-        :param end_row: The end_row of this ListObject.
-        :type: int
-        """
-
-        self.container['end_row'] = end_row
-
-    @property
-    def list_columns(self):
-        """
-        Gets the list_columns of this ListObject.
-        Gets ListColumns of the ListObject.
-
-        :return: The list_columns of this ListObject.
-        :rtype: list[ListColumn]
-        """
-        return self.container['list_columns']
-
-    @list_columns.setter
-    def list_columns(self, list_columns):
-        """
-        Sets the list_columns of this ListObject.
-        Gets ListColumns of the ListObject.
-
-        :param list_columns: The list_columns of this ListObject.
-        :type: list[ListColumn]
-        """
-
-        self.container['list_columns'] = list_columns
-
-    @property
-    def show_header_row(self):
-        """
-        Gets the show_header_row of this ListObject.
-        Gets and sets whether this ListObject show header row.             
-
-        :return: The show_header_row of this ListObject.
+        :return: The show_table_style_last_column of this ListObject.
         :rtype: bool
         """
-        return self.container['show_header_row']
+        return self.container['show_table_style_last_column']
 
-    @show_header_row.setter
-    def show_header_row(self, show_header_row):
+    @show_table_style_last_column.setter
+    def show_table_style_last_column(self, show_table_style_last_column):
         """
-        Sets the show_header_row of this ListObject.
-        Gets and sets whether this ListObject show header row.             
+        Sets the show_table_style_last_column of this ListObject.
+        Indicates whether the last column in the table should have the style applied.
 
-        :param show_header_row: The show_header_row of this ListObject.
+        :param show_table_style_last_column: The show_table_style_last_column of this ListObject.
         :type: bool
         """
 
-        self.container['show_header_row'] = show_header_row
+        self.container['show_table_style_last_column'] = show_table_style_last_column
 
     @property
     def show_table_style_column_stripes(self):
@@ -393,27 +347,50 @@ class ListObject(object):
         self.container['show_table_style_first_column'] = show_table_style_first_column
 
     @property
-    def show_table_style_last_column(self):
+    def start_row(self):
         """
-        Gets the show_table_style_last_column of this ListObject.
-        Indicates whether the last column in the table should have the style applied.
+        Gets the start_row of this ListObject.
+        Gets the start row of the range.
 
-        :return: The show_table_style_last_column of this ListObject.
-        :rtype: bool
+        :return: The start_row of this ListObject.
+        :rtype: int
         """
-        return self.container['show_table_style_last_column']
+        return self.container['start_row']
 
-    @show_table_style_last_column.setter
-    def show_table_style_last_column(self, show_table_style_last_column):
+    @start_row.setter
+    def start_row(self, start_row):
         """
-        Sets the show_table_style_last_column of this ListObject.
-        Indicates whether the last column in the table should have the style applied.
+        Sets the start_row of this ListObject.
+        Gets the start row of the range.
 
-        :param show_table_style_last_column: The show_table_style_last_column of this ListObject.
-        :type: bool
+        :param start_row: The start_row of this ListObject.
+        :type: int
         """
 
-        self.container['show_table_style_last_column'] = show_table_style_last_column
+        self.container['start_row'] = start_row
+
+    @property
+    def auto_filter(self):
+        """
+        Gets the auto_filter of this ListObject.
+        Gets auto filter.             
+
+        :return: The auto_filter of this ListObject.
+        :rtype: AutoFilter
+        """
+        return self.container['auto_filter']
+
+    @auto_filter.setter
+    def auto_filter(self, auto_filter):
+        """
+        Sets the auto_filter of this ListObject.
+        Gets auto filter.             
+
+        :param auto_filter: The auto_filter of this ListObject.
+        :type: AutoFilter
+        """
+
+        self.container['auto_filter'] = auto_filter
 
     @property
     def show_table_style_row_stripes(self):
@@ -439,27 +416,27 @@ class ListObject(object):
         self.container['show_table_style_row_stripes'] = show_table_style_row_stripes
 
     @property
-    def show_totals(self):
+    def end_column(self):
         """
-        Gets the show_totals of this ListObject.
-        Gets and sets whether this ListObject show total row.
+        Gets the end_column of this ListObject.
+        Gets the end column of the range.
 
-        :return: The show_totals of this ListObject.
-        :rtype: bool
+        :return: The end_column of this ListObject.
+        :rtype: int
         """
-        return self.container['show_totals']
+        return self.container['end_column']
 
-    @show_totals.setter
-    def show_totals(self, show_totals):
+    @end_column.setter
+    def end_column(self, end_column):
         """
-        Sets the show_totals of this ListObject.
-        Gets and sets whether this ListObject show total row.
+        Sets the end_column of this ListObject.
+        Gets the end column of the range.
 
-        :param show_totals: The show_totals of this ListObject.
-        :type: bool
+        :param end_column: The end_column of this ListObject.
+        :type: int
         """
 
-        self.container['show_totals'] = show_totals
+        self.container['end_column'] = end_column
 
     @property
     def table_style_name(self):
@@ -485,27 +462,50 @@ class ListObject(object):
         self.container['table_style_name'] = table_style_name
 
     @property
-    def table_style_type(self):
+    def list_columns(self):
         """
-        Gets the table_style_type of this ListObject.
-        Gets and the built-in table style.
+        Gets the list_columns of this ListObject.
+        Gets ListColumns of the ListObject.
 
-        :return: The table_style_type of this ListObject.
-        :rtype: str
+        :return: The list_columns of this ListObject.
+        :rtype: list[ListColumn]
         """
-        return self.container['table_style_type']
+        return self.container['list_columns']
 
-    @table_style_type.setter
-    def table_style_type(self, table_style_type):
+    @list_columns.setter
+    def list_columns(self, list_columns):
         """
-        Sets the table_style_type of this ListObject.
-        Gets and the built-in table style.
+        Sets the list_columns of this ListObject.
+        Gets ListColumns of the ListObject.
 
-        :param table_style_type: The table_style_type of this ListObject.
-        :type: str
+        :param list_columns: The list_columns of this ListObject.
+        :type: list[ListColumn]
         """
 
-        self.container['table_style_type'] = table_style_type
+        self.container['list_columns'] = list_columns
+
+    @property
+    def end_row(self):
+        """
+        Gets the end_row of this ListObject.
+        Gets the end row of the range.
+
+        :return: The end_row of this ListObject.
+        :rtype: int
+        """
+        return self.container['end_row']
+
+    @end_row.setter
+    def end_row(self, end_row):
+        """
+        Sets the end_row of this ListObject.
+        Gets the end row of the range.
+
+        :param end_row: The end_row of this ListObject.
+        :type: int
+        """
+
+        self.container['end_row'] = end_row
 
     def to_dict(self):
         """

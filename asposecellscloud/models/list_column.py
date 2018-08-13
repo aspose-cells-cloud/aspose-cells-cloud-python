@@ -31,13 +31,13 @@ class ListColumn(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'totals_calculation': 'str'
+        'totals_calculation': 'str',
+        'name': 'str'
     }
 
     attribute_map = {
-        'name': 'Name',
-        'totals_calculation': 'TotalsCalculation'
+        'totals_calculation': 'TotalsCalculation',
+        'name': 'Name'
     }
     
     @staticmethod
@@ -53,7 +53,7 @@ class ListColumn(object):
             return self.container[attr]
         return None
 
-    def __init__(self, name=None, totals_calculation=None, **kw):
+    def __init__(self, totals_calculation=None, name=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -63,36 +63,13 @@ class ListColumn(object):
         ListColumn - a model defined in Swagger
         """
 
-        self.container['name'] = None
         self.container['totals_calculation'] = None
+        self.container['name'] = None
 
-        if name is not None:
-          self.name = name
         if totals_calculation is not None:
           self.totals_calculation = totals_calculation
-
-    @property
-    def name(self):
-        """
-        Gets the name of this ListColumn.
-        Gets and sets the name of the column.
-
-        :return: The name of this ListColumn.
-        :rtype: str
-        """
-        return self.container['name']
-
-    @name.setter
-    def name(self, name):
-        """
-        Sets the name of this ListColumn.
-        Gets and sets the name of the column.
-
-        :param name: The name of this ListColumn.
-        :type: str
-        """
-
-        self.container['name'] = name
+        if name is not None:
+          self.name = name
 
     @property
     def totals_calculation(self):
@@ -116,6 +93,29 @@ class ListColumn(object):
         """
 
         self.container['totals_calculation'] = totals_calculation
+
+    @property
+    def name(self):
+        """
+        Gets the name of this ListColumn.
+        Gets and sets the name of the column.
+
+        :return: The name of this ListColumn.
+        :rtype: str
+        """
+        return self.container['name']
+
+    @name.setter
+    def name(self, name):
+        """
+        Sets the name of this ListColumn.
+        Gets and sets the name of the column.
+
+        :param name: The name of this ListColumn.
+        :type: str
+        """
+
+        self.container['name'] = name
 
     def to_dict(self):
         """

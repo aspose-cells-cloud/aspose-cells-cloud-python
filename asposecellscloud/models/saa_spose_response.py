@@ -31,13 +31,13 @@ class SaaSposeResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'code': 'int',
-        'status': 'str'
+        'status': 'str',
+        'code': 'int'
     }
 
     attribute_map = {
-        'code': 'Code',
-        'status': 'Status'
+        'status': 'Status',
+        'code': 'Code'
     }
     
     @staticmethod
@@ -53,7 +53,7 @@ class SaaSposeResponse(object):
             return self.container[attr]
         return None
 
-    def __init__(self, code=None, status=None, **kw):
+    def __init__(self, status=None, code=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -63,12 +63,33 @@ class SaaSposeResponse(object):
         SaaSposeResponse - a model defined in Swagger
         """
 
-        self.container['code'] = None
         self.container['status'] = None
+        self.container['code'] = None
 
-        self.code = code
         if status is not None:
           self.status = status
+        self.code = code
+
+    @property
+    def status(self):
+        """
+        Gets the status of this SaaSposeResponse.
+
+        :return: The status of this SaaSposeResponse.
+        :rtype: str
+        """
+        return self.container['status']
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this SaaSposeResponse.
+
+        :param status: The status of this SaaSposeResponse.
+        :type: str
+        """
+
+        self.container['status'] = status
 
     @property
     def code(self):
@@ -94,27 +115,6 @@ class SaaSposeResponse(object):
         """
 
         self.container['code'] = code
-
-    @property
-    def status(self):
-        """
-        Gets the status of this SaaSposeResponse.
-
-        :return: The status of this SaaSposeResponse.
-        :rtype: str
-        """
-        return self.container['status']
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this SaaSposeResponse.
-
-        :param status: The status of this SaaSposeResponse.
-        :type: str
-        """
-
-        self.container['status'] = status
 
     def to_dict(self):
         """

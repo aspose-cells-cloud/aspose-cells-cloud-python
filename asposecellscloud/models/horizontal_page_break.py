@@ -31,15 +31,15 @@ class HorizontalPageBreak(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'row': 'int',
+        'start_column': 'int',
         'end_column': 'int',
-        'start_column': 'int'
+        'row': 'int'
     }
 
     attribute_map = {
-        'row': 'Row',
+        'start_column': 'StartColumn',
         'end_column': 'EndColumn',
-        'start_column': 'StartColumn'
+        'row': 'Row'
     }
     
     @staticmethod
@@ -55,7 +55,7 @@ class HorizontalPageBreak(object):
             return self.container[attr]
         return None
 
-    def __init__(self, row=None, end_column=None, start_column=None, **kw):
+    def __init__(self, start_column=None, end_column=None, row=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -65,38 +65,38 @@ class HorizontalPageBreak(object):
         HorizontalPageBreak - a model defined in Swagger
         """
 
-        self.container['row'] = None
-        self.container['end_column'] = None
         self.container['start_column'] = None
+        self.container['end_column'] = None
+        self.container['row'] = None
 
-        self.row = row
-        self.end_column = end_column
         self.start_column = start_column
+        self.end_column = end_column
+        self.row = row
 
     @property
-    def row(self):
+    def start_column(self):
         """
-        Gets the row of this HorizontalPageBreak.
+        Gets the start_column of this HorizontalPageBreak.
 
-        :return: The row of this HorizontalPageBreak.
+        :return: The start_column of this HorizontalPageBreak.
         :rtype: int
         """
-        return self.container['row']
+        return self.container['start_column']
 
-    @row.setter
-    def row(self, row):
+    @start_column.setter
+    def start_column(self, start_column):
         """
-        Sets the row of this HorizontalPageBreak.
+        Sets the start_column of this HorizontalPageBreak.
 
-        :param row: The row of this HorizontalPageBreak.
+        :param start_column: The start_column of this HorizontalPageBreak.
         :type: int
         """
         """
-        if row is None:
-            raise ValueError("Invalid value for `row`, must not be `None`")
+        if start_column is None:
+            raise ValueError("Invalid value for `start_column`, must not be `None`")
         """
 
-        self.container['row'] = row
+        self.container['start_column'] = start_column
 
     @property
     def end_column(self):
@@ -124,29 +124,29 @@ class HorizontalPageBreak(object):
         self.container['end_column'] = end_column
 
     @property
-    def start_column(self):
+    def row(self):
         """
-        Gets the start_column of this HorizontalPageBreak.
+        Gets the row of this HorizontalPageBreak.
 
-        :return: The start_column of this HorizontalPageBreak.
+        :return: The row of this HorizontalPageBreak.
         :rtype: int
         """
-        return self.container['start_column']
+        return self.container['row']
 
-    @start_column.setter
-    def start_column(self, start_column):
+    @row.setter
+    def row(self, row):
         """
-        Sets the start_column of this HorizontalPageBreak.
+        Sets the row of this HorizontalPageBreak.
 
-        :param start_column: The start_column of this HorizontalPageBreak.
+        :param row: The row of this HorizontalPageBreak.
         :type: int
         """
         """
-        if start_column is None:
-            raise ValueError("Invalid value for `start_column`, must not be `None`")
+        if row is None:
+            raise ValueError("Invalid value for `row`, must not be `None`")
         """
 
-        self.container['start_column'] = start_column
+        self.container['row'] = row
 
     def to_dict(self):
         """

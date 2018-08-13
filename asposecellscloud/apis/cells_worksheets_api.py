@@ -892,6 +892,7 @@ class CellsWorksheetsApi(object):
             for asynchronous request. (optional)
         :param str name: The document name. (required)
         :param str sheet_name: The worksheet name. (required)
+        :param str format: The exported file format.
         :param int vertical_resolution: Image vertical resolution.
         :param int horizontal_resolution: Image horizontal resolution.
         :param str folder: The document folder.
@@ -921,6 +922,7 @@ class CellsWorksheetsApi(object):
             for asynchronous request. (optional)
         :param str name: The document name. (required)
         :param str sheet_name: The worksheet name. (required)
+        :param str format: The exported file format.
         :param int vertical_resolution: Image vertical resolution.
         :param int horizontal_resolution: Image horizontal resolution.
         :param str folder: The document folder.
@@ -929,7 +931,7 @@ class CellsWorksheetsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'vertical_resolution', 'horizontal_resolution', 'folder']
+        all_params = ['name', 'sheet_name', 'format', 'vertical_resolution', 'horizontal_resolution', 'folder']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -961,6 +963,8 @@ class CellsWorksheetsApi(object):
             path_params['sheetName'] = params['sheet_name']
 
         query_params = []
+        if 'format' in params:
+            query_params.append(('format', params['format']))
         if 'vertical_resolution' in params:
             query_params.append(('verticalResolution', params['vertical_resolution']))
         if 'horizontal_resolution' in params:

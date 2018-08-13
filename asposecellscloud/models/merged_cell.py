@@ -32,18 +32,18 @@ class MergedCell(object):
     """
     swagger_types = {
         'link': 'Link',
-        'end_column': 'int',
-        'end_row': 'int',
+        'start_row': 'int',
         'start_column': 'int',
-        'start_row': 'int'
+        'end_column': 'int',
+        'end_row': 'int'
     }
 
     attribute_map = {
         'link': 'link',
-        'end_column': 'EndColumn',
-        'end_row': 'EndRow',
+        'start_row': 'StartRow',
         'start_column': 'StartColumn',
-        'start_row': 'StartRow'
+        'end_column': 'EndColumn',
+        'end_row': 'EndRow'
     }
     
     @staticmethod
@@ -59,7 +59,7 @@ class MergedCell(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, end_column=None, end_row=None, start_column=None, start_row=None, **kw):
+    def __init__(self, link=None, start_row=None, start_column=None, end_column=None, end_row=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -70,17 +70,17 @@ class MergedCell(object):
         """
 
         self.container['link'] = None
+        self.container['start_row'] = None
+        self.container['start_column'] = None
         self.container['end_column'] = None
         self.container['end_row'] = None
-        self.container['start_column'] = None
-        self.container['start_row'] = None
 
         if link is not None:
           self.link = link
+        self.start_row = start_row
+        self.start_column = start_column
         self.end_column = end_column
         self.end_row = end_row
-        self.start_column = start_column
-        self.start_row = start_row
 
     @property
     def link(self):
@@ -102,6 +102,56 @@ class MergedCell(object):
         """
 
         self.container['link'] = link
+
+    @property
+    def start_row(self):
+        """
+        Gets the start_row of this MergedCell.
+
+        :return: The start_row of this MergedCell.
+        :rtype: int
+        """
+        return self.container['start_row']
+
+    @start_row.setter
+    def start_row(self, start_row):
+        """
+        Sets the start_row of this MergedCell.
+
+        :param start_row: The start_row of this MergedCell.
+        :type: int
+        """
+        """
+        if start_row is None:
+            raise ValueError("Invalid value for `start_row`, must not be `None`")
+        """
+
+        self.container['start_row'] = start_row
+
+    @property
+    def start_column(self):
+        """
+        Gets the start_column of this MergedCell.
+
+        :return: The start_column of this MergedCell.
+        :rtype: int
+        """
+        return self.container['start_column']
+
+    @start_column.setter
+    def start_column(self, start_column):
+        """
+        Sets the start_column of this MergedCell.
+
+        :param start_column: The start_column of this MergedCell.
+        :type: int
+        """
+        """
+        if start_column is None:
+            raise ValueError("Invalid value for `start_column`, must not be `None`")
+        """
+
+        self.container['start_column'] = start_column
 
     @property
     def end_column(self):
@@ -152,56 +202,6 @@ class MergedCell(object):
         """
 
         self.container['end_row'] = end_row
-
-    @property
-    def start_column(self):
-        """
-        Gets the start_column of this MergedCell.
-
-        :return: The start_column of this MergedCell.
-        :rtype: int
-        """
-        return self.container['start_column']
-
-    @start_column.setter
-    def start_column(self, start_column):
-        """
-        Sets the start_column of this MergedCell.
-
-        :param start_column: The start_column of this MergedCell.
-        :type: int
-        """
-        """
-        if start_column is None:
-            raise ValueError("Invalid value for `start_column`, must not be `None`")
-        """
-
-        self.container['start_column'] = start_column
-
-    @property
-    def start_row(self):
-        """
-        Gets the start_row of this MergedCell.
-
-        :return: The start_row of this MergedCell.
-        :rtype: int
-        """
-        return self.container['start_row']
-
-    @start_row.setter
-    def start_row(self, start_row):
-        """
-        Sets the start_row of this MergedCell.
-
-        :param start_row: The start_row of this MergedCell.
-        :type: int
-        """
-        """
-        if start_row is None:
-            raise ValueError("Invalid value for `start_row`, must not be `None`")
-        """
-
-        self.container['start_row'] = start_row
 
     def to_dict(self):
         """

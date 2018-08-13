@@ -31,29 +31,29 @@ class Font(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'color': 'Color',
-        'double_size': 'float',
-        'is_bold': 'bool',
         'is_italic': 'bool',
-        'is_strikeout': 'bool',
+        'name': 'str',
+        'double_size': 'float',
+        'color': 'Color',
+        'is_bold': 'bool',
         'is_subscript': 'bool',
         'is_superscript': 'bool',
-        'name': 'str',
-        'size': 'int',
-        'underline': 'str'
+        'is_strikeout': 'bool',
+        'underline': 'str',
+        'size': 'int'
     }
 
     attribute_map = {
-        'color': 'Color',
-        'double_size': 'DoubleSize',
-        'is_bold': 'IsBold',
         'is_italic': 'IsItalic',
-        'is_strikeout': 'IsStrikeout',
+        'name': 'Name',
+        'double_size': 'DoubleSize',
+        'color': 'Color',
+        'is_bold': 'IsBold',
         'is_subscript': 'IsSubscript',
         'is_superscript': 'IsSuperscript',
-        'name': 'Name',
-        'size': 'Size',
-        'underline': 'Underline'
+        'is_strikeout': 'IsStrikeout',
+        'underline': 'Underline',
+        'size': 'Size'
     }
     
     @staticmethod
@@ -69,7 +69,7 @@ class Font(object):
             return self.container[attr]
         return None
 
-    def __init__(self, color=None, double_size=None, is_bold=None, is_italic=None, is_strikeout=None, is_subscript=None, is_superscript=None, name=None, size=None, underline=None, **kw):
+    def __init__(self, is_italic=None, name=None, double_size=None, color=None, is_bold=None, is_subscript=None, is_superscript=None, is_strikeout=None, underline=None, size=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -79,100 +79,37 @@ class Font(object):
         Font - a model defined in Swagger
         """
 
-        self.container['color'] = None
-        self.container['double_size'] = None
-        self.container['is_bold'] = None
         self.container['is_italic'] = None
-        self.container['is_strikeout'] = None
+        self.container['name'] = None
+        self.container['double_size'] = None
+        self.container['color'] = None
+        self.container['is_bold'] = None
         self.container['is_subscript'] = None
         self.container['is_superscript'] = None
-        self.container['name'] = None
-        self.container['size'] = None
+        self.container['is_strikeout'] = None
         self.container['underline'] = None
+        self.container['size'] = None
 
-        if color is not None:
-          self.color = color
-        if double_size is not None:
-          self.double_size = double_size
-        if is_bold is not None:
-          self.is_bold = is_bold
         if is_italic is not None:
           self.is_italic = is_italic
-        if is_strikeout is not None:
-          self.is_strikeout = is_strikeout
+        if name is not None:
+          self.name = name
+        if double_size is not None:
+          self.double_size = double_size
+        if color is not None:
+          self.color = color
+        if is_bold is not None:
+          self.is_bold = is_bold
         if is_subscript is not None:
           self.is_subscript = is_subscript
         if is_superscript is not None:
           self.is_superscript = is_superscript
-        if name is not None:
-          self.name = name
-        if size is not None:
-          self.size = size
+        if is_strikeout is not None:
+          self.is_strikeout = is_strikeout
         if underline is not None:
           self.underline = underline
-
-    @property
-    def color(self):
-        """
-        Gets the color of this Font.
-
-        :return: The color of this Font.
-        :rtype: Color
-        """
-        return self.container['color']
-
-    @color.setter
-    def color(self, color):
-        """
-        Sets the color of this Font.
-
-        :param color: The color of this Font.
-        :type: Color
-        """
-
-        self.container['color'] = color
-
-    @property
-    def double_size(self):
-        """
-        Gets the double_size of this Font.
-
-        :return: The double_size of this Font.
-        :rtype: float
-        """
-        return self.container['double_size']
-
-    @double_size.setter
-    def double_size(self, double_size):
-        """
-        Sets the double_size of this Font.
-
-        :param double_size: The double_size of this Font.
-        :type: float
-        """
-
-        self.container['double_size'] = double_size
-
-    @property
-    def is_bold(self):
-        """
-        Gets the is_bold of this Font.
-
-        :return: The is_bold of this Font.
-        :rtype: bool
-        """
-        return self.container['is_bold']
-
-    @is_bold.setter
-    def is_bold(self, is_bold):
-        """
-        Sets the is_bold of this Font.
-
-        :param is_bold: The is_bold of this Font.
-        :type: bool
-        """
-
-        self.container['is_bold'] = is_bold
+        if size is not None:
+          self.size = size
 
     @property
     def is_italic(self):
@@ -196,25 +133,88 @@ class Font(object):
         self.container['is_italic'] = is_italic
 
     @property
-    def is_strikeout(self):
+    def name(self):
         """
-        Gets the is_strikeout of this Font.
+        Gets the name of this Font.
 
-        :return: The is_strikeout of this Font.
+        :return: The name of this Font.
+        :rtype: str
+        """
+        return self.container['name']
+
+    @name.setter
+    def name(self, name):
+        """
+        Sets the name of this Font.
+
+        :param name: The name of this Font.
+        :type: str
+        """
+
+        self.container['name'] = name
+
+    @property
+    def double_size(self):
+        """
+        Gets the double_size of this Font.
+
+        :return: The double_size of this Font.
+        :rtype: float
+        """
+        return self.container['double_size']
+
+    @double_size.setter
+    def double_size(self, double_size):
+        """
+        Sets the double_size of this Font.
+
+        :param double_size: The double_size of this Font.
+        :type: float
+        """
+
+        self.container['double_size'] = double_size
+
+    @property
+    def color(self):
+        """
+        Gets the color of this Font.
+
+        :return: The color of this Font.
+        :rtype: Color
+        """
+        return self.container['color']
+
+    @color.setter
+    def color(self, color):
+        """
+        Sets the color of this Font.
+
+        :param color: The color of this Font.
+        :type: Color
+        """
+
+        self.container['color'] = color
+
+    @property
+    def is_bold(self):
+        """
+        Gets the is_bold of this Font.
+
+        :return: The is_bold of this Font.
         :rtype: bool
         """
-        return self.container['is_strikeout']
+        return self.container['is_bold']
 
-    @is_strikeout.setter
-    def is_strikeout(self, is_strikeout):
+    @is_bold.setter
+    def is_bold(self, is_bold):
         """
-        Sets the is_strikeout of this Font.
+        Sets the is_bold of this Font.
 
-        :param is_strikeout: The is_strikeout of this Font.
+        :param is_bold: The is_bold of this Font.
         :type: bool
         """
 
-        self.container['is_strikeout'] = is_strikeout
+        self.container['is_bold'] = is_bold
 
     @property
     def is_subscript(self):
@@ -259,46 +259,25 @@ class Font(object):
         self.container['is_superscript'] = is_superscript
 
     @property
-    def name(self):
+    def is_strikeout(self):
         """
-        Gets the name of this Font.
+        Gets the is_strikeout of this Font.
 
-        :return: The name of this Font.
-        :rtype: str
+        :return: The is_strikeout of this Font.
+        :rtype: bool
         """
-        return self.container['name']
+        return self.container['is_strikeout']
 
-    @name.setter
-    def name(self, name):
+    @is_strikeout.setter
+    def is_strikeout(self, is_strikeout):
         """
-        Sets the name of this Font.
+        Sets the is_strikeout of this Font.
 
-        :param name: The name of this Font.
-        :type: str
-        """
-
-        self.container['name'] = name
-
-    @property
-    def size(self):
-        """
-        Gets the size of this Font.
-
-        :return: The size of this Font.
-        :rtype: int
-        """
-        return self.container['size']
-
-    @size.setter
-    def size(self, size):
-        """
-        Sets the size of this Font.
-
-        :param size: The size of this Font.
-        :type: int
+        :param is_strikeout: The is_strikeout of this Font.
+        :type: bool
         """
 
-        self.container['size'] = size
+        self.container['is_strikeout'] = is_strikeout
 
     @property
     def underline(self):
@@ -320,6 +299,27 @@ class Font(object):
         """
 
         self.container['underline'] = underline
+
+    @property
+    def size(self):
+        """
+        Gets the size of this Font.
+
+        :return: The size of this Font.
+        :rtype: int
+        """
+        return self.container['size']
+
+    @size.setter
+    def size(self, size):
+        """
+        Sets the size of this Font.
+
+        :param size: The size of this Font.
+        :type: int
+        """
+
+        self.container['size'] = size
 
     def to_dict(self):
         """

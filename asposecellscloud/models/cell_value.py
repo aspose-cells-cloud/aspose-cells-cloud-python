@@ -33,17 +33,17 @@ class CellValue(object):
     swagger_types = {
         'row_index': 'int',
         'column_index': 'int',
+        'style': 'Style',
         'type': 'str',
-        'value': 'str',
-        'style': 'Style'
+        'value': 'str'
     }
 
     attribute_map = {
         'row_index': 'rowIndex',
         'column_index': 'columnIndex',
+        'style': 'style',
         'type': 'type',
-        'value': 'value',
-        'style': 'style'
+        'value': 'value'
     }
     
     @staticmethod
@@ -59,7 +59,7 @@ class CellValue(object):
             return self.container[attr]
         return None
 
-    def __init__(self, row_index=None, column_index=None, type=None, value=None, style=None, **kw):
+    def __init__(self, row_index=None, column_index=None, style=None, type=None, value=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -71,20 +71,20 @@ class CellValue(object):
 
         self.container['row_index'] = None
         self.container['column_index'] = None
+        self.container['style'] = None
         self.container['type'] = None
         self.container['value'] = None
-        self.container['style'] = None
 
         if row_index is not None:
           self.row_index = row_index
         if column_index is not None:
           self.column_index = column_index
+        if style is not None:
+          self.style = style
         if type is not None:
           self.type = type
         if value is not None:
           self.value = value
-        if style is not None:
-          self.style = style
 
     @property
     def row_index(self):
@@ -129,6 +129,27 @@ class CellValue(object):
         self.container['column_index'] = column_index
 
     @property
+    def style(self):
+        """
+        Gets the style of this CellValue.
+
+        :return: The style of this CellValue.
+        :rtype: Style
+        """
+        return self.container['style']
+
+    @style.setter
+    def style(self, style):
+        """
+        Sets the style of this CellValue.
+
+        :param style: The style of this CellValue.
+        :type: Style
+        """
+
+        self.container['style'] = style
+
+    @property
     def type(self):
         """
         Gets the type of this CellValue.
@@ -169,27 +190,6 @@ class CellValue(object):
         """
 
         self.container['value'] = value
-
-    @property
-    def style(self):
-        """
-        Gets the style of this CellValue.
-
-        :return: The style of this CellValue.
-        :rtype: Style
-        """
-        return self.container['style']
-
-    @style.setter
-    def style(self, style):
-        """
-        Sets the style of this CellValue.
-
-        :param style: The style of this CellValue.
-        :type: Style
-        """
-
-        self.container['style'] = style
 
     def to_dict(self):
         """

@@ -400,7 +400,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_get_worksheet**
-> file cells_worksheets_get_worksheet(name, sheet_name, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, folder=folder)
+> file cells_worksheets_get_worksheet(name, sheet_name, format=format, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, folder=folder)
 
 Read worksheet info or export.
 
@@ -416,13 +416,14 @@ from pprint import pprint
 api_instance = asposecellscloud.CellsWorksheetsApi()
 name = 'name_example' # str | The document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
+format = 'format_example' # str | The exported file format. (optional)
 vertical_resolution = 0 # int | Image vertical resolution. (optional) (default to 0)
 horizontal_resolution = 0 # int | Image horizontal resolution. (optional) (default to 0)
 folder = 'folder_example' # str | The document folder. (optional)
 
 try: 
     # Read worksheet info or export.
-    api_response = api_instance.cells_worksheets_get_worksheet(name, sheet_name, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, folder=folder)
+    api_response = api_instance.cells_worksheets_get_worksheet(name, sheet_name, format=format, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, folder=folder)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_get_worksheet: %s\n" % e)
@@ -434,6 +435,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| The document name. | 
  **sheet_name** | **str**| The worksheet name. | 
+ **format** | **str**| The exported file format. | [optional] 
  **vertical_resolution** | **int**| Image vertical resolution. | [optional] [default to 0]
  **horizontal_resolution** | **int**| Image horizontal resolution. | [optional] [default to 0]
  **folder** | **str**| The document folder. | [optional] 

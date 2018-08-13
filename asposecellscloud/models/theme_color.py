@@ -31,13 +31,13 @@ class ThemeColor(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'color_type': 'str',
-        'tint': 'float'
+        'tint': 'float',
+        'color_type': 'str'
     }
 
     attribute_map = {
-        'color_type': 'ColorType',
-        'tint': 'Tint'
+        'tint': 'Tint',
+        'color_type': 'ColorType'
     }
     
     @staticmethod
@@ -53,7 +53,7 @@ class ThemeColor(object):
             return self.container[attr]
         return None
 
-    def __init__(self, color_type=None, tint=None, **kw):
+    def __init__(self, tint=None, color_type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -63,34 +63,13 @@ class ThemeColor(object):
         ThemeColor - a model defined in Swagger
         """
 
-        self.container['color_type'] = None
         self.container['tint'] = None
+        self.container['color_type'] = None
 
-        if color_type is not None:
-          self.color_type = color_type
         if tint is not None:
           self.tint = tint
-
-    @property
-    def color_type(self):
-        """
-        Gets the color_type of this ThemeColor.
-
-        :return: The color_type of this ThemeColor.
-        :rtype: str
-        """
-        return self.container['color_type']
-
-    @color_type.setter
-    def color_type(self, color_type):
-        """
-        Sets the color_type of this ThemeColor.
-
-        :param color_type: The color_type of this ThemeColor.
-        :type: str
-        """
-
-        self.container['color_type'] = color_type
+        if color_type is not None:
+          self.color_type = color_type
 
     @property
     def tint(self):
@@ -112,6 +91,27 @@ class ThemeColor(object):
         """
 
         self.container['tint'] = tint
+
+    @property
+    def color_type(self):
+        """
+        Gets the color_type of this ThemeColor.
+
+        :return: The color_type of this ThemeColor.
+        :rtype: str
+        """
+        return self.container['color_type']
+
+    @color_type.setter
+    def color_type(self, color_type):
+        """
+        Sets the color_type of this ThemeColor.
+
+        :param color_type: The color_type of this ThemeColor.
+        :type: str
+        """
+
+        self.container['color_type'] = color_type
 
     def to_dict(self):
         """

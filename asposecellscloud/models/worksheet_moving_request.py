@@ -31,13 +31,13 @@ class WorksheetMovingRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'destination_worksheet': 'str',
-        'position': 'str'
+        'position': 'str',
+        'destination_worksheet': 'str'
     }
 
     attribute_map = {
-        'destination_worksheet': 'DestinationWorksheet',
-        'position': 'Position'
+        'position': 'Position',
+        'destination_worksheet': 'DestinationWorksheet'
     }
     
     @staticmethod
@@ -53,7 +53,7 @@ class WorksheetMovingRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self, destination_worksheet=None, position=None, **kw):
+    def __init__(self, position=None, destination_worksheet=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -63,36 +63,13 @@ class WorksheetMovingRequest(object):
         WorksheetMovingRequest - a model defined in Swagger
         """
 
-        self.container['destination_worksheet'] = None
         self.container['position'] = None
+        self.container['destination_worksheet'] = None
 
-        if destination_worksheet is not None:
-          self.destination_worksheet = destination_worksheet
         if position is not None:
           self.position = position
-
-    @property
-    def destination_worksheet(self):
-        """
-        Gets the destination_worksheet of this WorksheetMovingRequest.
-        Destination worksheet name.  
-
-        :return: The destination_worksheet of this WorksheetMovingRequest.
-        :rtype: str
-        """
-        return self.container['destination_worksheet']
-
-    @destination_worksheet.setter
-    def destination_worksheet(self, destination_worksheet):
-        """
-        Sets the destination_worksheet of this WorksheetMovingRequest.
-        Destination worksheet name.  
-
-        :param destination_worksheet: The destination_worksheet of this WorksheetMovingRequest.
-        :type: str
-        """
-
-        self.container['destination_worksheet'] = destination_worksheet
+        if destination_worksheet is not None:
+          self.destination_worksheet = destination_worksheet
 
     @property
     def position(self):
@@ -116,6 +93,29 @@ class WorksheetMovingRequest(object):
         """
 
         self.container['position'] = position
+
+    @property
+    def destination_worksheet(self):
+        """
+        Gets the destination_worksheet of this WorksheetMovingRequest.
+        Destination worksheet name.  
+
+        :return: The destination_worksheet of this WorksheetMovingRequest.
+        :rtype: str
+        """
+        return self.container['destination_worksheet']
+
+    @destination_worksheet.setter
+    def destination_worksheet(self, destination_worksheet):
+        """
+        Sets the destination_worksheet of this WorksheetMovingRequest.
+        Destination worksheet name.  
+
+        :param destination_worksheet: The destination_worksheet of this WorksheetMovingRequest.
+        :type: str
+        """
+
+        self.container['destination_worksheet'] = destination_worksheet
 
     def to_dict(self):
         """

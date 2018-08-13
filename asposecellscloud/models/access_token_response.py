@@ -31,25 +31,25 @@ class AccessTokenResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'expires': 'str',
         'access_token': 'str',
-        'token_type': 'str',
-        'expires_in': 'int',
-        'refresh_token': 'str',
-        'client_id': 'str',
-        'client_refresh_token_life_time_in_minutes': 'str',
         'issued': 'str',
-        'expires': 'str'
+        'client_refresh_token_life_time_in_minutes': 'str',
+        'expires_in': 'int',
+        'token_type': 'str',
+        'client_id': 'str',
+        'refresh_token': 'str'
     }
 
     attribute_map = {
+        'expires': '.expires',
         'access_token': 'access_token',
-        'token_type': 'token_type',
-        'expires_in': 'expires_in',
-        'refresh_token': 'refresh_token',
-        'client_id': 'client_id',
-        'client_refresh_token_life_time_in_minutes': 'clientRefreshTokenLifeTimeInMinutes',
         'issued': '.issued',
-        'expires': '.expires'
+        'client_refresh_token_life_time_in_minutes': 'clientRefreshTokenLifeTimeInMinutes',
+        'expires_in': 'expires_in',
+        'token_type': 'token_type',
+        'client_id': 'client_id',
+        'refresh_token': 'refresh_token'
     }
     
     @staticmethod
@@ -65,7 +65,7 @@ class AccessTokenResponse(object):
             return self.container[attr]
         return None
 
-    def __init__(self, access_token=None, token_type=None, expires_in=None, refresh_token=None, client_id=None, client_refresh_token_life_time_in_minutes=None, issued=None, expires=None, **kw):
+    def __init__(self, expires=None, access_token=None, issued=None, client_refresh_token_life_time_in_minutes=None, expires_in=None, token_type=None, client_id=None, refresh_token=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -75,31 +75,52 @@ class AccessTokenResponse(object):
         AccessTokenResponse - a model defined in Swagger
         """
 
-        self.container['access_token'] = None
-        self.container['token_type'] = None
-        self.container['expires_in'] = None
-        self.container['refresh_token'] = None
-        self.container['client_id'] = None
-        self.container['client_refresh_token_life_time_in_minutes'] = None
-        self.container['issued'] = None
         self.container['expires'] = None
+        self.container['access_token'] = None
+        self.container['issued'] = None
+        self.container['client_refresh_token_life_time_in_minutes'] = None
+        self.container['expires_in'] = None
+        self.container['token_type'] = None
+        self.container['client_id'] = None
+        self.container['refresh_token'] = None
 
-        if access_token is not None:
-          self.access_token = access_token
-        if token_type is not None:
-          self.token_type = token_type
-        if expires_in is not None:
-          self.expires_in = expires_in
-        if refresh_token is not None:
-          self.refresh_token = refresh_token
-        if client_id is not None:
-          self.client_id = client_id
-        if client_refresh_token_life_time_in_minutes is not None:
-          self.client_refresh_token_life_time_in_minutes = client_refresh_token_life_time_in_minutes
-        if issued is not None:
-          self.issued = issued
         if expires is not None:
           self.expires = expires
+        if access_token is not None:
+          self.access_token = access_token
+        if issued is not None:
+          self.issued = issued
+        if client_refresh_token_life_time_in_minutes is not None:
+          self.client_refresh_token_life_time_in_minutes = client_refresh_token_life_time_in_minutes
+        if expires_in is not None:
+          self.expires_in = expires_in
+        if token_type is not None:
+          self.token_type = token_type
+        if client_id is not None:
+          self.client_id = client_id
+        if refresh_token is not None:
+          self.refresh_token = refresh_token
+
+    @property
+    def expires(self):
+        """
+        Gets the expires of this AccessTokenResponse.
+
+        :return: The expires of this AccessTokenResponse.
+        :rtype: str
+        """
+        return self.container['expires']
+
+    @expires.setter
+    def expires(self, expires):
+        """
+        Sets the expires of this AccessTokenResponse.
+
+        :param expires: The expires of this AccessTokenResponse.
+        :type: str
+        """
+
+        self.container['expires'] = expires
 
     @property
     def access_token(self):
@@ -123,88 +144,25 @@ class AccessTokenResponse(object):
         self.container['access_token'] = access_token
 
     @property
-    def token_type(self):
+    def issued(self):
         """
-        Gets the token_type of this AccessTokenResponse.
+        Gets the issued of this AccessTokenResponse.
 
-        :return: The token_type of this AccessTokenResponse.
+        :return: The issued of this AccessTokenResponse.
         :rtype: str
         """
-        return self.container['token_type']
+        return self.container['issued']
 
-    @token_type.setter
-    def token_type(self, token_type):
+    @issued.setter
+    def issued(self, issued):
         """
-        Sets the token_type of this AccessTokenResponse.
+        Sets the issued of this AccessTokenResponse.
 
-        :param token_type: The token_type of this AccessTokenResponse.
+        :param issued: The issued of this AccessTokenResponse.
         :type: str
         """
 
-        self.container['token_type'] = token_type
-
-    @property
-    def expires_in(self):
-        """
-        Gets the expires_in of this AccessTokenResponse.
-
-        :return: The expires_in of this AccessTokenResponse.
-        :rtype: int
-        """
-        return self.container['expires_in']
-
-    @expires_in.setter
-    def expires_in(self, expires_in):
-        """
-        Sets the expires_in of this AccessTokenResponse.
-
-        :param expires_in: The expires_in of this AccessTokenResponse.
-        :type: int
-        """
-
-        self.container['expires_in'] = expires_in
-
-    @property
-    def refresh_token(self):
-        """
-        Gets the refresh_token of this AccessTokenResponse.
-
-        :return: The refresh_token of this AccessTokenResponse.
-        :rtype: str
-        """
-        return self.container['refresh_token']
-
-    @refresh_token.setter
-    def refresh_token(self, refresh_token):
-        """
-        Sets the refresh_token of this AccessTokenResponse.
-
-        :param refresh_token: The refresh_token of this AccessTokenResponse.
-        :type: str
-        """
-
-        self.container['refresh_token'] = refresh_token
-
-    @property
-    def client_id(self):
-        """
-        Gets the client_id of this AccessTokenResponse.
-
-        :return: The client_id of this AccessTokenResponse.
-        :rtype: str
-        """
-        return self.container['client_id']
-
-    @client_id.setter
-    def client_id(self, client_id):
-        """
-        Sets the client_id of this AccessTokenResponse.
-
-        :param client_id: The client_id of this AccessTokenResponse.
-        :type: str
-        """
-
-        self.container['client_id'] = client_id
+        self.container['issued'] = issued
 
     @property
     def client_refresh_token_life_time_in_minutes(self):
@@ -228,46 +186,88 @@ class AccessTokenResponse(object):
         self.container['client_refresh_token_life_time_in_minutes'] = client_refresh_token_life_time_in_minutes
 
     @property
-    def issued(self):
+    def expires_in(self):
         """
-        Gets the issued of this AccessTokenResponse.
+        Gets the expires_in of this AccessTokenResponse.
 
-        :return: The issued of this AccessTokenResponse.
-        :rtype: str
+        :return: The expires_in of this AccessTokenResponse.
+        :rtype: int
         """
-        return self.container['issued']
+        return self.container['expires_in']
 
-    @issued.setter
-    def issued(self, issued):
+    @expires_in.setter
+    def expires_in(self, expires_in):
         """
-        Sets the issued of this AccessTokenResponse.
+        Sets the expires_in of this AccessTokenResponse.
 
-        :param issued: The issued of this AccessTokenResponse.
-        :type: str
+        :param expires_in: The expires_in of this AccessTokenResponse.
+        :type: int
         """
 
-        self.container['issued'] = issued
+        self.container['expires_in'] = expires_in
 
     @property
-    def expires(self):
+    def token_type(self):
         """
-        Gets the expires of this AccessTokenResponse.
+        Gets the token_type of this AccessTokenResponse.
 
-        :return: The expires of this AccessTokenResponse.
+        :return: The token_type of this AccessTokenResponse.
         :rtype: str
         """
-        return self.container['expires']
+        return self.container['token_type']
 
-    @expires.setter
-    def expires(self, expires):
+    @token_type.setter
+    def token_type(self, token_type):
         """
-        Sets the expires of this AccessTokenResponse.
+        Sets the token_type of this AccessTokenResponse.
 
-        :param expires: The expires of this AccessTokenResponse.
+        :param token_type: The token_type of this AccessTokenResponse.
         :type: str
         """
 
-        self.container['expires'] = expires
+        self.container['token_type'] = token_type
+
+    @property
+    def client_id(self):
+        """
+        Gets the client_id of this AccessTokenResponse.
+
+        :return: The client_id of this AccessTokenResponse.
+        :rtype: str
+        """
+        return self.container['client_id']
+
+    @client_id.setter
+    def client_id(self, client_id):
+        """
+        Sets the client_id of this AccessTokenResponse.
+
+        :param client_id: The client_id of this AccessTokenResponse.
+        :type: str
+        """
+
+        self.container['client_id'] = client_id
+
+    @property
+    def refresh_token(self):
+        """
+        Gets the refresh_token of this AccessTokenResponse.
+
+        :return: The refresh_token of this AccessTokenResponse.
+        :rtype: str
+        """
+        return self.container['refresh_token']
+
+    @refresh_token.setter
+    def refresh_token(self, refresh_token):
+        """
+        Sets the refresh_token of this AccessTokenResponse.
+
+        :param refresh_token: The refresh_token of this AccessTokenResponse.
+        :type: str
+        """
+
+        self.container['refresh_token'] = refresh_token
 
     def to_dict(self):
         """

@@ -31,15 +31,15 @@ class AutoFitterOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'auto_fit_merged_cells': 'bool',
         'ignore_hidden': 'bool',
-        'only_auto': 'bool'
+        'only_auto': 'bool',
+        'auto_fit_merged_cells': 'bool'
     }
 
     attribute_map = {
-        'auto_fit_merged_cells': 'AutoFitMergedCells',
         'ignore_hidden': 'IgnoreHidden',
-        'only_auto': 'OnlyAuto'
+        'only_auto': 'OnlyAuto',
+        'auto_fit_merged_cells': 'AutoFitMergedCells'
     }
     
     @staticmethod
@@ -55,7 +55,7 @@ class AutoFitterOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self, auto_fit_merged_cells=None, ignore_hidden=None, only_auto=None, **kw):
+    def __init__(self, ignore_hidden=None, only_auto=None, auto_fit_merged_cells=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -65,38 +65,13 @@ class AutoFitterOptions(object):
         AutoFitterOptions - a model defined in Swagger
         """
 
-        self.container['auto_fit_merged_cells'] = None
         self.container['ignore_hidden'] = None
         self.container['only_auto'] = None
+        self.container['auto_fit_merged_cells'] = None
 
-        self.auto_fit_merged_cells = auto_fit_merged_cells
         self.ignore_hidden = ignore_hidden
         self.only_auto = only_auto
-
-    @property
-    def auto_fit_merged_cells(self):
-        """
-        Gets the auto_fit_merged_cells of this AutoFitterOptions.
-
-        :return: The auto_fit_merged_cells of this AutoFitterOptions.
-        :rtype: bool
-        """
-        return self.container['auto_fit_merged_cells']
-
-    @auto_fit_merged_cells.setter
-    def auto_fit_merged_cells(self, auto_fit_merged_cells):
-        """
-        Sets the auto_fit_merged_cells of this AutoFitterOptions.
-
-        :param auto_fit_merged_cells: The auto_fit_merged_cells of this AutoFitterOptions.
-        :type: bool
-        """
-        """
-        if auto_fit_merged_cells is None:
-            raise ValueError("Invalid value for `auto_fit_merged_cells`, must not be `None`")
-        """
-
-        self.container['auto_fit_merged_cells'] = auto_fit_merged_cells
+        self.auto_fit_merged_cells = auto_fit_merged_cells
 
     @property
     def ignore_hidden(self):
@@ -147,6 +122,31 @@ class AutoFitterOptions(object):
         """
 
         self.container['only_auto'] = only_auto
+
+    @property
+    def auto_fit_merged_cells(self):
+        """
+        Gets the auto_fit_merged_cells of this AutoFitterOptions.
+
+        :return: The auto_fit_merged_cells of this AutoFitterOptions.
+        :rtype: bool
+        """
+        return self.container['auto_fit_merged_cells']
+
+    @auto_fit_merged_cells.setter
+    def auto_fit_merged_cells(self, auto_fit_merged_cells):
+        """
+        Sets the auto_fit_merged_cells of this AutoFitterOptions.
+
+        :param auto_fit_merged_cells: The auto_fit_merged_cells of this AutoFitterOptions.
+        :type: bool
+        """
+        """
+        if auto_fit_merged_cells is None:
+            raise ValueError("Invalid value for `auto_fit_merged_cells`, must not be `None`")
+        """
+
+        self.container['auto_fit_merged_cells'] = auto_fit_merged_cells
 
     def to_dict(self):
         """

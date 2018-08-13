@@ -31,21 +31,21 @@ class OperateObjectPosition(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'workbook': 'FileSource',
-        'sheet_name': 'str',
         'chart_index': 'int',
+        'list_object_index': 'int',
+        'sheet_name': 'str',
         'shape_index': 'int',
         'cell_name': 'str',
-        'list_object_index': 'int'
+        'workbook': 'FileSource'
     }
 
     attribute_map = {
-        'workbook': 'Workbook',
-        'sheet_name': 'SheetName',
         'chart_index': 'ChartIndex',
+        'list_object_index': 'ListObjectIndex',
+        'sheet_name': 'SheetName',
         'shape_index': 'ShapeIndex',
         'cell_name': 'CellName',
-        'list_object_index': 'ListObjectIndex'
+        'workbook': 'Workbook'
     }
     
     @staticmethod
@@ -61,7 +61,7 @@ class OperateObjectPosition(object):
             return self.container[attr]
         return None
 
-    def __init__(self, workbook=None, sheet_name=None, chart_index=None, shape_index=None, cell_name=None, list_object_index=None, **kw):
+    def __init__(self, chart_index=None, list_object_index=None, sheet_name=None, shape_index=None, cell_name=None, workbook=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -71,67 +71,25 @@ class OperateObjectPosition(object):
         OperateObjectPosition - a model defined in Swagger
         """
 
-        self.container['workbook'] = None
-        self.container['sheet_name'] = None
         self.container['chart_index'] = None
+        self.container['list_object_index'] = None
+        self.container['sheet_name'] = None
         self.container['shape_index'] = None
         self.container['cell_name'] = None
-        self.container['list_object_index'] = None
+        self.container['workbook'] = None
 
-        if workbook is not None:
-          self.workbook = workbook
-        if sheet_name is not None:
-          self.sheet_name = sheet_name
         if chart_index is not None:
           self.chart_index = chart_index
+        if list_object_index is not None:
+          self.list_object_index = list_object_index
+        if sheet_name is not None:
+          self.sheet_name = sheet_name
         if shape_index is not None:
           self.shape_index = shape_index
         if cell_name is not None:
           self.cell_name = cell_name
-        if list_object_index is not None:
-          self.list_object_index = list_object_index
-
-    @property
-    def workbook(self):
-        """
-        Gets the workbook of this OperateObjectPosition.
-
-        :return: The workbook of this OperateObjectPosition.
-        :rtype: FileSource
-        """
-        return self.container['workbook']
-
-    @workbook.setter
-    def workbook(self, workbook):
-        """
-        Sets the workbook of this OperateObjectPosition.
-
-        :param workbook: The workbook of this OperateObjectPosition.
-        :type: FileSource
-        """
-
-        self.container['workbook'] = workbook
-
-    @property
-    def sheet_name(self):
-        """
-        Gets the sheet_name of this OperateObjectPosition.
-
-        :return: The sheet_name of this OperateObjectPosition.
-        :rtype: str
-        """
-        return self.container['sheet_name']
-
-    @sheet_name.setter
-    def sheet_name(self, sheet_name):
-        """
-        Sets the sheet_name of this OperateObjectPosition.
-
-        :param sheet_name: The sheet_name of this OperateObjectPosition.
-        :type: str
-        """
-
-        self.container['sheet_name'] = sheet_name
+        if workbook is not None:
+          self.workbook = workbook
 
     @property
     def chart_index(self):
@@ -153,6 +111,48 @@ class OperateObjectPosition(object):
         """
 
         self.container['chart_index'] = chart_index
+
+    @property
+    def list_object_index(self):
+        """
+        Gets the list_object_index of this OperateObjectPosition.
+
+        :return: The list_object_index of this OperateObjectPosition.
+        :rtype: int
+        """
+        return self.container['list_object_index']
+
+    @list_object_index.setter
+    def list_object_index(self, list_object_index):
+        """
+        Sets the list_object_index of this OperateObjectPosition.
+
+        :param list_object_index: The list_object_index of this OperateObjectPosition.
+        :type: int
+        """
+
+        self.container['list_object_index'] = list_object_index
+
+    @property
+    def sheet_name(self):
+        """
+        Gets the sheet_name of this OperateObjectPosition.
+
+        :return: The sheet_name of this OperateObjectPosition.
+        :rtype: str
+        """
+        return self.container['sheet_name']
+
+    @sheet_name.setter
+    def sheet_name(self, sheet_name):
+        """
+        Sets the sheet_name of this OperateObjectPosition.
+
+        :param sheet_name: The sheet_name of this OperateObjectPosition.
+        :type: str
+        """
+
+        self.container['sheet_name'] = sheet_name
 
     @property
     def shape_index(self):
@@ -197,25 +197,25 @@ class OperateObjectPosition(object):
         self.container['cell_name'] = cell_name
 
     @property
-    def list_object_index(self):
+    def workbook(self):
         """
-        Gets the list_object_index of this OperateObjectPosition.
+        Gets the workbook of this OperateObjectPosition.
 
-        :return: The list_object_index of this OperateObjectPosition.
-        :rtype: int
+        :return: The workbook of this OperateObjectPosition.
+        :rtype: FileSource
         """
-        return self.container['list_object_index']
+        return self.container['workbook']
 
-    @list_object_index.setter
-    def list_object_index(self, list_object_index):
+    @workbook.setter
+    def workbook(self, workbook):
         """
-        Sets the list_object_index of this OperateObjectPosition.
+        Sets the workbook of this OperateObjectPosition.
 
-        :param list_object_index: The list_object_index of this OperateObjectPosition.
-        :type: int
+        :param workbook: The workbook of this OperateObjectPosition.
+        :type: FileSource
         """
 
-        self.container['list_object_index'] = list_object_index
+        self.container['workbook'] = workbook
 
     def to_dict(self):
         """

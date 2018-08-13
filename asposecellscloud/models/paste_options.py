@@ -31,16 +31,16 @@ class PasteOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'only_visible_cells': 'bool',
         'paste_type': 'str',
         'skip_blanks': 'bool',
+        'only_visible_cells': 'bool',
         'transpose': 'bool'
     }
 
     attribute_map = {
-        'only_visible_cells': 'OnlyVisibleCells',
         'paste_type': 'PasteType',
         'skip_blanks': 'SkipBlanks',
+        'only_visible_cells': 'OnlyVisibleCells',
         'transpose': 'Transpose'
     }
     
@@ -57,7 +57,7 @@ class PasteOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self, only_visible_cells=None, paste_type=None, skip_blanks=None, transpose=None, **kw):
+    def __init__(self, paste_type=None, skip_blanks=None, only_visible_cells=None, transpose=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -67,40 +67,19 @@ class PasteOptions(object):
         PasteOptions - a model defined in Swagger
         """
 
-        self.container['only_visible_cells'] = None
         self.container['paste_type'] = None
         self.container['skip_blanks'] = None
+        self.container['only_visible_cells'] = None
         self.container['transpose'] = None
 
-        if only_visible_cells is not None:
-          self.only_visible_cells = only_visible_cells
         if paste_type is not None:
           self.paste_type = paste_type
         if skip_blanks is not None:
           self.skip_blanks = skip_blanks
+        if only_visible_cells is not None:
+          self.only_visible_cells = only_visible_cells
         if transpose is not None:
           self.transpose = transpose
-
-    @property
-    def only_visible_cells(self):
-        """
-        Gets the only_visible_cells of this PasteOptions.
-
-        :return: The only_visible_cells of this PasteOptions.
-        :rtype: bool
-        """
-        return self.container['only_visible_cells']
-
-    @only_visible_cells.setter
-    def only_visible_cells(self, only_visible_cells):
-        """
-        Sets the only_visible_cells of this PasteOptions.
-
-        :param only_visible_cells: The only_visible_cells of this PasteOptions.
-        :type: bool
-        """
-
-        self.container['only_visible_cells'] = only_visible_cells
 
     @property
     def paste_type(self):
@@ -143,6 +122,27 @@ class PasteOptions(object):
         """
 
         self.container['skip_blanks'] = skip_blanks
+
+    @property
+    def only_visible_cells(self):
+        """
+        Gets the only_visible_cells of this PasteOptions.
+
+        :return: The only_visible_cells of this PasteOptions.
+        :rtype: bool
+        """
+        return self.container['only_visible_cells']
+
+    @only_visible_cells.setter
+    def only_visible_cells(self, only_visible_cells):
+        """
+        Sets the only_visible_cells of this PasteOptions.
+
+        :param only_visible_cells: The only_visible_cells of this PasteOptions.
+        :type: bool
+        """
+
+        self.container['only_visible_cells'] = only_visible_cells
 
     @property
     def transpose(self):

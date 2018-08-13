@@ -31,23 +31,23 @@ class PatternFill(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'pattern': 'str',
-        'background_cells_color': 'CellsColor',
-        'foreground_cells_color': 'CellsColor',
         'foreground_color': 'Color',
+        'pattern': 'str',
         'background_color': 'Color',
         'back_transparency': 'float',
-        'fore_transparency': 'float'
+        'background_cells_color': 'CellsColor',
+        'fore_transparency': 'float',
+        'foreground_cells_color': 'CellsColor'
     }
 
     attribute_map = {
-        'pattern': 'Pattern',
-        'background_cells_color': 'BackgroundCellsColor',
-        'foreground_cells_color': 'ForegroundCellsColor',
         'foreground_color': 'ForegroundColor',
+        'pattern': 'Pattern',
         'background_color': 'BackgroundColor',
         'back_transparency': 'BackTransparency',
-        'fore_transparency': 'ForeTransparency'
+        'background_cells_color': 'BackgroundCellsColor',
+        'fore_transparency': 'ForeTransparency',
+        'foreground_cells_color': 'ForegroundCellsColor'
     }
     
     @staticmethod
@@ -63,7 +63,7 @@ class PatternFill(object):
             return self.container[attr]
         return None
 
-    def __init__(self, pattern=None, background_cells_color=None, foreground_cells_color=None, foreground_color=None, background_color=None, back_transparency=None, fore_transparency=None, **kw):
+    def __init__(self, foreground_color=None, pattern=None, background_color=None, back_transparency=None, background_cells_color=None, fore_transparency=None, foreground_cells_color=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -73,91 +73,28 @@ class PatternFill(object):
         PatternFill - a model defined in Swagger
         """
 
-        self.container['pattern'] = None
-        self.container['background_cells_color'] = None
-        self.container['foreground_cells_color'] = None
         self.container['foreground_color'] = None
+        self.container['pattern'] = None
         self.container['background_color'] = None
         self.container['back_transparency'] = None
+        self.container['background_cells_color'] = None
         self.container['fore_transparency'] = None
+        self.container['foreground_cells_color'] = None
 
-        if pattern is not None:
-          self.pattern = pattern
-        if background_cells_color is not None:
-          self.background_cells_color = background_cells_color
-        if foreground_cells_color is not None:
-          self.foreground_cells_color = foreground_cells_color
         if foreground_color is not None:
           self.foreground_color = foreground_color
+        if pattern is not None:
+          self.pattern = pattern
         if background_color is not None:
           self.background_color = background_color
         if back_transparency is not None:
           self.back_transparency = back_transparency
+        if background_cells_color is not None:
+          self.background_cells_color = background_cells_color
         if fore_transparency is not None:
           self.fore_transparency = fore_transparency
-
-    @property
-    def pattern(self):
-        """
-        Gets the pattern of this PatternFill.
-
-        :return: The pattern of this PatternFill.
-        :rtype: str
-        """
-        return self.container['pattern']
-
-    @pattern.setter
-    def pattern(self, pattern):
-        """
-        Sets the pattern of this PatternFill.
-
-        :param pattern: The pattern of this PatternFill.
-        :type: str
-        """
-
-        self.container['pattern'] = pattern
-
-    @property
-    def background_cells_color(self):
-        """
-        Gets the background_cells_color of this PatternFill.
-
-        :return: The background_cells_color of this PatternFill.
-        :rtype: CellsColor
-        """
-        return self.container['background_cells_color']
-
-    @background_cells_color.setter
-    def background_cells_color(self, background_cells_color):
-        """
-        Sets the background_cells_color of this PatternFill.
-
-        :param background_cells_color: The background_cells_color of this PatternFill.
-        :type: CellsColor
-        """
-
-        self.container['background_cells_color'] = background_cells_color
-
-    @property
-    def foreground_cells_color(self):
-        """
-        Gets the foreground_cells_color of this PatternFill.
-
-        :return: The foreground_cells_color of this PatternFill.
-        :rtype: CellsColor
-        """
-        return self.container['foreground_cells_color']
-
-    @foreground_cells_color.setter
-    def foreground_cells_color(self, foreground_cells_color):
-        """
-        Sets the foreground_cells_color of this PatternFill.
-
-        :param foreground_cells_color: The foreground_cells_color of this PatternFill.
-        :type: CellsColor
-        """
-
-        self.container['foreground_cells_color'] = foreground_cells_color
+        if foreground_cells_color is not None:
+          self.foreground_cells_color = foreground_cells_color
 
     @property
     def foreground_color(self):
@@ -179,6 +116,27 @@ class PatternFill(object):
         """
 
         self.container['foreground_color'] = foreground_color
+
+    @property
+    def pattern(self):
+        """
+        Gets the pattern of this PatternFill.
+
+        :return: The pattern of this PatternFill.
+        :rtype: str
+        """
+        return self.container['pattern']
+
+    @pattern.setter
+    def pattern(self, pattern):
+        """
+        Sets the pattern of this PatternFill.
+
+        :param pattern: The pattern of this PatternFill.
+        :type: str
+        """
+
+        self.container['pattern'] = pattern
 
     @property
     def background_color(self):
@@ -223,6 +181,27 @@ class PatternFill(object):
         self.container['back_transparency'] = back_transparency
 
     @property
+    def background_cells_color(self):
+        """
+        Gets the background_cells_color of this PatternFill.
+
+        :return: The background_cells_color of this PatternFill.
+        :rtype: CellsColor
+        """
+        return self.container['background_cells_color']
+
+    @background_cells_color.setter
+    def background_cells_color(self, background_cells_color):
+        """
+        Sets the background_cells_color of this PatternFill.
+
+        :param background_cells_color: The background_cells_color of this PatternFill.
+        :type: CellsColor
+        """
+
+        self.container['background_cells_color'] = background_cells_color
+
+    @property
     def fore_transparency(self):
         """
         Gets the fore_transparency of this PatternFill.
@@ -242,6 +221,27 @@ class PatternFill(object):
         """
 
         self.container['fore_transparency'] = fore_transparency
+
+    @property
+    def foreground_cells_color(self):
+        """
+        Gets the foreground_cells_color of this PatternFill.
+
+        :return: The foreground_cells_color of this PatternFill.
+        :rtype: CellsColor
+        """
+        return self.container['foreground_cells_color']
+
+    @foreground_cells_color.setter
+    def foreground_cells_color(self, foreground_cells_color):
+        """
+        Sets the foreground_cells_color of this PatternFill.
+
+        :param foreground_cells_color: The foreground_cells_color of this PatternFill.
+        :type: CellsColor
+        """
+
+        self.container['foreground_cells_color'] = foreground_cells_color
 
     def to_dict(self):
         """

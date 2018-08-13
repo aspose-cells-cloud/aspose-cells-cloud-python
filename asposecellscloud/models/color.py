@@ -32,16 +32,16 @@ class Color(object):
     """
     swagger_types = {
         'a': 'int',
+        'b': 'int',
         'r': 'int',
-        'g': 'int',
-        'b': 'int'
+        'g': 'int'
     }
 
     attribute_map = {
         'a': 'A',
+        'b': 'B',
         'r': 'R',
-        'g': 'G',
-        'b': 'B'
+        'g': 'G'
     }
     
     @staticmethod
@@ -57,7 +57,7 @@ class Color(object):
             return self.container[attr]
         return None
 
-    def __init__(self, a=None, r=None, g=None, b=None, **kw):
+    def __init__(self, a=None, b=None, r=None, g=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -68,14 +68,14 @@ class Color(object):
         """
 
         self.container['a'] = None
+        self.container['b'] = None
         self.container['r'] = None
         self.container['g'] = None
-        self.container['b'] = None
 
         self.a = a
+        self.b = b
         self.r = r
         self.g = g
-        self.b = b
 
     @property
     def a(self):
@@ -101,6 +101,31 @@ class Color(object):
         """
 
         self.container['a'] = a
+
+    @property
+    def b(self):
+        """
+        Gets the b of this Color.
+
+        :return: The b of this Color.
+        :rtype: int
+        """
+        return self.container['b']
+
+    @b.setter
+    def b(self, b):
+        """
+        Sets the b of this Color.
+
+        :param b: The b of this Color.
+        :type: int
+        """
+        """
+        if b is None:
+            raise ValueError("Invalid value for `b`, must not be `None`")
+        """
+
+        self.container['b'] = b
 
     @property
     def r(self):
@@ -151,31 +176,6 @@ class Color(object):
         """
 
         self.container['g'] = g
-
-    @property
-    def b(self):
-        """
-        Gets the b of this Color.
-
-        :return: The b of this Color.
-        :rtype: int
-        """
-        return self.container['b']
-
-    @b.setter
-    def b(self, b):
-        """
-        Sets the b of this Color.
-
-        :param b: The b of this Color.
-        :type: int
-        """
-        """
-        if b is None:
-            raise ValueError("Invalid value for `b`, must not be `None`")
-        """
-
-        self.container['b'] = b
 
     def to_dict(self):
         """

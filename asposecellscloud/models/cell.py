@@ -32,42 +32,42 @@ class Cell(object):
     """
     swagger_types = {
         'link': 'Link',
+        'style': 'LinkElement',
+        'html_string': 'str',
         'name': 'str',
-        'row': 'int',
         'column': 'int',
-        'value': 'str',
-        'type': 'str',
-        'formula': 'str',
-        'is_formula': 'bool',
-        'is_merged': 'bool',
+        'worksheet': 'str',
+        'is_in_table': 'bool',
         'is_array_header': 'bool',
+        'value': 'str',
+        'is_formula': 'bool',
+        'is_style_set': 'bool',
         'is_in_array': 'bool',
         'is_error_value': 'bool',
-        'is_in_table': 'bool',
-        'is_style_set': 'bool',
-        'html_string': 'str',
-        'style': 'LinkElement',
-        'worksheet': 'str'
+        'is_merged': 'bool',
+        'formula': 'str',
+        'type': 'str',
+        'row': 'int'
     }
 
     attribute_map = {
         'link': 'link',
+        'style': 'Style',
+        'html_string': 'HtmlString',
         'name': 'Name',
-        'row': 'Row',
         'column': 'Column',
-        'value': 'Value',
-        'type': 'Type',
-        'formula': 'Formula',
-        'is_formula': 'IsFormula',
-        'is_merged': 'IsMerged',
+        'worksheet': 'Worksheet',
+        'is_in_table': 'IsInTable',
         'is_array_header': 'IsArrayHeader',
+        'value': 'Value',
+        'is_formula': 'IsFormula',
+        'is_style_set': 'IsStyleSet',
         'is_in_array': 'IsInArray',
         'is_error_value': 'IsErrorValue',
-        'is_in_table': 'IsInTable',
-        'is_style_set': 'IsStyleSet',
-        'html_string': 'HtmlString',
-        'style': 'Style',
-        'worksheet': 'Worksheet'
+        'is_merged': 'IsMerged',
+        'formula': 'Formula',
+        'type': 'Type',
+        'row': 'Row'
     }
     
     @staticmethod
@@ -83,7 +83,7 @@ class Cell(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, name=None, row=None, column=None, value=None, type=None, formula=None, is_formula=None, is_merged=None, is_array_header=None, is_in_array=None, is_error_value=None, is_in_table=None, is_style_set=None, html_string=None, style=None, worksheet=None, **kw):
+    def __init__(self, link=None, style=None, html_string=None, name=None, column=None, worksheet=None, is_in_table=None, is_array_header=None, value=None, is_formula=None, is_style_set=None, is_in_array=None, is_error_value=None, is_merged=None, formula=None, type=None, row=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -94,48 +94,48 @@ class Cell(object):
         """
 
         self.container['link'] = None
+        self.container['style'] = None
+        self.container['html_string'] = None
         self.container['name'] = None
-        self.container['row'] = None
         self.container['column'] = None
-        self.container['value'] = None
-        self.container['type'] = None
-        self.container['formula'] = None
-        self.container['is_formula'] = None
-        self.container['is_merged'] = None
+        self.container['worksheet'] = None
+        self.container['is_in_table'] = None
         self.container['is_array_header'] = None
+        self.container['value'] = None
+        self.container['is_formula'] = None
+        self.container['is_style_set'] = None
         self.container['is_in_array'] = None
         self.container['is_error_value'] = None
-        self.container['is_in_table'] = None
-        self.container['is_style_set'] = None
-        self.container['html_string'] = None
-        self.container['style'] = None
-        self.container['worksheet'] = None
+        self.container['is_merged'] = None
+        self.container['formula'] = None
+        self.container['type'] = None
+        self.container['row'] = None
 
         if link is not None:
           self.link = link
-        if name is not None:
-          self.name = name
-        self.row = row
-        self.column = column
-        if value is not None:
-          self.value = value
-        if type is not None:
-          self.type = type
-        if formula is not None:
-          self.formula = formula
-        self.is_formula = is_formula
-        self.is_merged = is_merged
-        self.is_array_header = is_array_header
-        self.is_in_array = is_in_array
-        self.is_error_value = is_error_value
-        self.is_in_table = is_in_table
-        self.is_style_set = is_style_set
-        if html_string is not None:
-          self.html_string = html_string
         if style is not None:
           self.style = style
+        if html_string is not None:
+          self.html_string = html_string
+        if name is not None:
+          self.name = name
+        self.column = column
         if worksheet is not None:
           self.worksheet = worksheet
+        self.is_in_table = is_in_table
+        self.is_array_header = is_array_header
+        if value is not None:
+          self.value = value
+        self.is_formula = is_formula
+        self.is_style_set = is_style_set
+        self.is_in_array = is_in_array
+        self.is_error_value = is_error_value
+        self.is_merged = is_merged
+        if formula is not None:
+          self.formula = formula
+        if type is not None:
+          self.type = type
+        self.row = row
 
     @property
     def link(self):
@@ -159,6 +159,50 @@ class Cell(object):
         self.container['link'] = link
 
     @property
+    def style(self):
+        """
+        Gets the style of this Cell.
+
+        :return: The style of this Cell.
+        :rtype: LinkElement
+        """
+        return self.container['style']
+
+    @style.setter
+    def style(self, style):
+        """
+        Sets the style of this Cell.
+
+        :param style: The style of this Cell.
+        :type: LinkElement
+        """
+
+        self.container['style'] = style
+
+    @property
+    def html_string(self):
+        """
+        Gets the html_string of this Cell.
+        Gets and sets the html string which contains data and some formattings in this cell.             
+
+        :return: The html_string of this Cell.
+        :rtype: str
+        """
+        return self.container['html_string']
+
+    @html_string.setter
+    def html_string(self, html_string):
+        """
+        Sets the html_string of this Cell.
+        Gets and sets the html string which contains data and some formattings in this cell.             
+
+        :param html_string: The html_string of this Cell.
+        :type: str
+        """
+
+        self.container['html_string'] = html_string
+
+    @property
     def name(self):
         """
         Gets the name of this Cell.
@@ -180,33 +224,6 @@ class Cell(object):
         """
 
         self.container['name'] = name
-
-    @property
-    def row(self):
-        """
-        Gets the row of this Cell.
-        Gets row number (zero based) of the cell.             
-
-        :return: The row of this Cell.
-        :rtype: int
-        """
-        return self.container['row']
-
-    @row.setter
-    def row(self, row):
-        """
-        Sets the row of this Cell.
-        Gets row number (zero based) of the cell.             
-
-        :param row: The row of this Cell.
-        :type: int
-        """
-        """
-        if row is None:
-            raise ValueError("Invalid value for `row`, must not be `None`")
-        """
-
-        self.container['row'] = row
 
     @property
     def column(self):
@@ -236,6 +253,83 @@ class Cell(object):
         self.container['column'] = column
 
     @property
+    def worksheet(self):
+        """
+        Gets the worksheet of this Cell.
+        Gets the parent worksheet.
+
+        :return: The worksheet of this Cell.
+        :rtype: str
+        """
+        return self.container['worksheet']
+
+    @worksheet.setter
+    def worksheet(self, worksheet):
+        """
+        Sets the worksheet of this Cell.
+        Gets the parent worksheet.
+
+        :param worksheet: The worksheet of this Cell.
+        :type: str
+        """
+
+        self.container['worksheet'] = worksheet
+
+    @property
+    def is_in_table(self):
+        """
+        Gets the is_in_table of this Cell.
+        Indicates whethe this cell is part of table formula.             
+
+        :return: The is_in_table of this Cell.
+        :rtype: bool
+        """
+        return self.container['is_in_table']
+
+    @is_in_table.setter
+    def is_in_table(self, is_in_table):
+        """
+        Sets the is_in_table of this Cell.
+        Indicates whethe this cell is part of table formula.             
+
+        :param is_in_table: The is_in_table of this Cell.
+        :type: bool
+        """
+        """
+        if is_in_table is None:
+            raise ValueError("Invalid value for `is_in_table`, must not be `None`")
+        """
+
+        self.container['is_in_table'] = is_in_table
+
+    @property
+    def is_array_header(self):
+        """
+        Gets the is_array_header of this Cell.
+        Inidicates the cell's formula is and array formula and it is the first cell of the array.
+
+        :return: The is_array_header of this Cell.
+        :rtype: bool
+        """
+        return self.container['is_array_header']
+
+    @is_array_header.setter
+    def is_array_header(self, is_array_header):
+        """
+        Sets the is_array_header of this Cell.
+        Inidicates the cell's formula is and array formula and it is the first cell of the array.
+
+        :param is_array_header: The is_array_header of this Cell.
+        :type: bool
+        """
+        """
+        if is_array_header is None:
+            raise ValueError("Invalid value for `is_array_header`, must not be `None`")
+        """
+
+        self.container['is_array_header'] = is_array_header
+
+    @property
     def value(self):
         """
         Gets the value of this Cell.
@@ -255,52 +349,6 @@ class Cell(object):
         """
 
         self.container['value'] = value
-
-    @property
-    def type(self):
-        """
-        Gets the type of this Cell.
-        Specifies a cell value type.
-
-        :return: The type of this Cell.
-        :rtype: str
-        """
-        return self.container['type']
-
-    @type.setter
-    def type(self, type):
-        """
-        Sets the type of this Cell.
-        Specifies a cell value type.
-
-        :param type: The type of this Cell.
-        :type: str
-        """
-
-        self.container['type'] = type
-
-    @property
-    def formula(self):
-        """
-        Gets the formula of this Cell.
-        Gets or sets a formula of the Aspose.Cells.Cell.
-
-        :return: The formula of this Cell.
-        :rtype: str
-        """
-        return self.container['formula']
-
-    @formula.setter
-    def formula(self, formula):
-        """
-        Sets the formula of this Cell.
-        Gets or sets a formula of the Aspose.Cells.Cell.
-
-        :param formula: The formula of this Cell.
-        :type: str
-        """
-
-        self.container['formula'] = formula
 
     @property
     def is_formula(self):
@@ -330,58 +378,31 @@ class Cell(object):
         self.container['is_formula'] = is_formula
 
     @property
-    def is_merged(self):
+    def is_style_set(self):
         """
-        Gets the is_merged of this Cell.
-        Checks if a cell is part of a merged range or not.             
+        Gets the is_style_set of this Cell.
+        Indicates if the cell's style is set. If return false, it means this cell has a default cell format.             
 
-        :return: The is_merged of this Cell.
+        :return: The is_style_set of this Cell.
         :rtype: bool
         """
-        return self.container['is_merged']
+        return self.container['is_style_set']
 
-    @is_merged.setter
-    def is_merged(self, is_merged):
+    @is_style_set.setter
+    def is_style_set(self, is_style_set):
         """
-        Sets the is_merged of this Cell.
-        Checks if a cell is part of a merged range or not.             
+        Sets the is_style_set of this Cell.
+        Indicates if the cell's style is set. If return false, it means this cell has a default cell format.             
 
-        :param is_merged: The is_merged of this Cell.
+        :param is_style_set: The is_style_set of this Cell.
         :type: bool
         """
         """
-        if is_merged is None:
-            raise ValueError("Invalid value for `is_merged`, must not be `None`")
+        if is_style_set is None:
+            raise ValueError("Invalid value for `is_style_set`, must not be `None`")
         """
 
-        self.container['is_merged'] = is_merged
-
-    @property
-    def is_array_header(self):
-        """
-        Gets the is_array_header of this Cell.
-        Inidicates the cell's formula is and array formula and it is the first cell of the array.
-
-        :return: The is_array_header of this Cell.
-        :rtype: bool
-        """
-        return self.container['is_array_header']
-
-    @is_array_header.setter
-    def is_array_header(self, is_array_header):
-        """
-        Sets the is_array_header of this Cell.
-        Inidicates the cell's formula is and array formula and it is the first cell of the array.
-
-        :param is_array_header: The is_array_header of this Cell.
-        :type: bool
-        """
-        """
-        if is_array_header is None:
-            raise ValueError("Invalid value for `is_array_header`, must not be `None`")
-        """
-
-        self.container['is_array_header'] = is_array_header
+        self.container['is_style_set'] = is_style_set
 
     @property
     def is_in_array(self):
@@ -438,125 +459,104 @@ class Cell(object):
         self.container['is_error_value'] = is_error_value
 
     @property
-    def is_in_table(self):
+    def is_merged(self):
         """
-        Gets the is_in_table of this Cell.
-        Indicates whethe this cell is part of table formula.             
+        Gets the is_merged of this Cell.
+        Checks if a cell is part of a merged range or not.             
 
-        :return: The is_in_table of this Cell.
+        :return: The is_merged of this Cell.
         :rtype: bool
         """
-        return self.container['is_in_table']
+        return self.container['is_merged']
 
-    @is_in_table.setter
-    def is_in_table(self, is_in_table):
+    @is_merged.setter
+    def is_merged(self, is_merged):
         """
-        Sets the is_in_table of this Cell.
-        Indicates whethe this cell is part of table formula.             
+        Sets the is_merged of this Cell.
+        Checks if a cell is part of a merged range or not.             
 
-        :param is_in_table: The is_in_table of this Cell.
+        :param is_merged: The is_merged of this Cell.
         :type: bool
         """
         """
-        if is_in_table is None:
-            raise ValueError("Invalid value for `is_in_table`, must not be `None`")
+        if is_merged is None:
+            raise ValueError("Invalid value for `is_merged`, must not be `None`")
         """
 
-        self.container['is_in_table'] = is_in_table
-
-    @property
-    def is_style_set(self):
-        """
-        Gets the is_style_set of this Cell.
-        Indicates if the cell's style is set. If return false, it means this cell has a default cell format.             
-
-        :return: The is_style_set of this Cell.
-        :rtype: bool
-        """
-        return self.container['is_style_set']
-
-    @is_style_set.setter
-    def is_style_set(self, is_style_set):
-        """
-        Sets the is_style_set of this Cell.
-        Indicates if the cell's style is set. If return false, it means this cell has a default cell format.             
-
-        :param is_style_set: The is_style_set of this Cell.
-        :type: bool
-        """
-        """
-        if is_style_set is None:
-            raise ValueError("Invalid value for `is_style_set`, must not be `None`")
-        """
-
-        self.container['is_style_set'] = is_style_set
+        self.container['is_merged'] = is_merged
 
     @property
-    def html_string(self):
+    def formula(self):
         """
-        Gets the html_string of this Cell.
-        Gets and sets the html string which contains data and some formattings in this cell.             
+        Gets the formula of this Cell.
+        Gets or sets a formula of the Aspose.Cells.Cell.
 
-        :return: The html_string of this Cell.
+        :return: The formula of this Cell.
         :rtype: str
         """
-        return self.container['html_string']
+        return self.container['formula']
 
-    @html_string.setter
-    def html_string(self, html_string):
+    @formula.setter
+    def formula(self, formula):
         """
-        Sets the html_string of this Cell.
-        Gets and sets the html string which contains data and some formattings in this cell.             
+        Sets the formula of this Cell.
+        Gets or sets a formula of the Aspose.Cells.Cell.
 
-        :param html_string: The html_string of this Cell.
+        :param formula: The formula of this Cell.
         :type: str
         """
 
-        self.container['html_string'] = html_string
+        self.container['formula'] = formula
 
     @property
-    def style(self):
+    def type(self):
         """
-        Gets the style of this Cell.
+        Gets the type of this Cell.
+        Specifies a cell value type.
 
-        :return: The style of this Cell.
-        :rtype: LinkElement
-        """
-        return self.container['style']
-
-    @style.setter
-    def style(self, style):
-        """
-        Sets the style of this Cell.
-
-        :param style: The style of this Cell.
-        :type: LinkElement
-        """
-
-        self.container['style'] = style
-
-    @property
-    def worksheet(self):
-        """
-        Gets the worksheet of this Cell.
-        Gets the parent worksheet.
-
-        :return: The worksheet of this Cell.
+        :return: The type of this Cell.
         :rtype: str
         """
-        return self.container['worksheet']
+        return self.container['type']
 
-    @worksheet.setter
-    def worksheet(self, worksheet):
+    @type.setter
+    def type(self, type):
         """
-        Sets the worksheet of this Cell.
-        Gets the parent worksheet.
+        Sets the type of this Cell.
+        Specifies a cell value type.
 
-        :param worksheet: The worksheet of this Cell.
+        :param type: The type of this Cell.
         :type: str
         """
 
-        self.container['worksheet'] = worksheet
+        self.container['type'] = type
+
+    @property
+    def row(self):
+        """
+        Gets the row of this Cell.
+        Gets row number (zero based) of the cell.             
+
+        :return: The row of this Cell.
+        :rtype: int
+        """
+        return self.container['row']
+
+    @row.setter
+    def row(self, row):
+        """
+        Sets the row of this Cell.
+        Gets row number (zero based) of the cell.             
+
+        :param row: The row of this Cell.
+        :type: int
+        """
+        """
+        if row is None:
+            raise ValueError("Invalid value for `row`, must not be `None`")
+        """
+
+        self.container['row'] = row
 
     def to_dict(self):
         """

@@ -32,20 +32,20 @@ class Column(object):
     """
     swagger_types = {
         'link': 'Link',
-        'group_level': 'int',
         'index': 'int',
+        'style': 'LinkElement',
+        'group_level': 'int',
         'is_hidden': 'bool',
-        'width': 'float',
-        'style': 'LinkElement'
+        'width': 'float'
     }
 
     attribute_map = {
         'link': 'link',
-        'group_level': 'GroupLevel',
         'index': 'Index',
+        'style': 'Style',
+        'group_level': 'GroupLevel',
         'is_hidden': 'IsHidden',
-        'width': 'Width',
-        'style': 'Style'
+        'width': 'Width'
     }
     
     @staticmethod
@@ -61,7 +61,7 @@ class Column(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, group_level=None, index=None, is_hidden=None, width=None, style=None, **kw):
+    def __init__(self, link=None, index=None, style=None, group_level=None, is_hidden=None, width=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -72,24 +72,24 @@ class Column(object):
         """
 
         self.container['link'] = None
-        self.container['group_level'] = None
         self.container['index'] = None
+        self.container['style'] = None
+        self.container['group_level'] = None
         self.container['is_hidden'] = None
         self.container['width'] = None
-        self.container['style'] = None
 
         if link is not None:
           self.link = link
-        if group_level is not None:
-          self.group_level = group_level
         if index is not None:
           self.index = index
+        if style is not None:
+          self.style = style
+        if group_level is not None:
+          self.group_level = group_level
         if is_hidden is not None:
           self.is_hidden = is_hidden
         if width is not None:
           self.width = width
-        if style is not None:
-          self.style = style
 
     @property
     def link(self):
@@ -113,27 +113,6 @@ class Column(object):
         self.container['link'] = link
 
     @property
-    def group_level(self):
-        """
-        Gets the group_level of this Column.
-
-        :return: The group_level of this Column.
-        :rtype: int
-        """
-        return self.container['group_level']
-
-    @group_level.setter
-    def group_level(self, group_level):
-        """
-        Sets the group_level of this Column.
-
-        :param group_level: The group_level of this Column.
-        :type: int
-        """
-
-        self.container['group_level'] = group_level
-
-    @property
     def index(self):
         """
         Gets the index of this Column.
@@ -153,6 +132,48 @@ class Column(object):
         """
 
         self.container['index'] = index
+
+    @property
+    def style(self):
+        """
+        Gets the style of this Column.
+
+        :return: The style of this Column.
+        :rtype: LinkElement
+        """
+        return self.container['style']
+
+    @style.setter
+    def style(self, style):
+        """
+        Sets the style of this Column.
+
+        :param style: The style of this Column.
+        :type: LinkElement
+        """
+
+        self.container['style'] = style
+
+    @property
+    def group_level(self):
+        """
+        Gets the group_level of this Column.
+
+        :return: The group_level of this Column.
+        :rtype: int
+        """
+        return self.container['group_level']
+
+    @group_level.setter
+    def group_level(self, group_level):
+        """
+        Sets the group_level of this Column.
+
+        :param group_level: The group_level of this Column.
+        :type: int
+        """
+
+        self.container['group_level'] = group_level
 
     @property
     def is_hidden(self):
@@ -195,27 +216,6 @@ class Column(object):
         """
 
         self.container['width'] = width
-
-    @property
-    def style(self):
-        """
-        Gets the style of this Column.
-
-        :return: The style of this Column.
-        :rtype: LinkElement
-        """
-        return self.container['style']
-
-    @style.setter
-    def style(self, style):
-        """
-        Sets the style of this Column.
-
-        :param style: The style of this Column.
-        :type: LinkElement
-        """
-
-        self.container['style'] = style
 
     def to_dict(self):
         """

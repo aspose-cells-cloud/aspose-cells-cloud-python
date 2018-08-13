@@ -32,15 +32,15 @@ class Columns(object):
     """
     swagger_types = {
         'link': 'Link',
-        'max_column': 'int',
         'columns_count': 'int',
+        'max_column': 'int',
         'columns_list': 'list[LinkElement]'
     }
 
     attribute_map = {
         'link': 'link',
-        'max_column': 'MaxColumn',
         'columns_count': 'ColumnsCount',
+        'max_column': 'MaxColumn',
         'columns_list': 'ColumnsList'
     }
     
@@ -57,7 +57,7 @@ class Columns(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, max_column=None, columns_count=None, columns_list=None, **kw):
+    def __init__(self, link=None, columns_count=None, max_column=None, columns_list=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -68,14 +68,14 @@ class Columns(object):
         """
 
         self.container['link'] = None
-        self.container['max_column'] = None
         self.container['columns_count'] = None
+        self.container['max_column'] = None
         self.container['columns_list'] = None
 
         if link is not None:
           self.link = link
-        self.max_column = max_column
         self.columns_count = columns_count
+        self.max_column = max_column
         if columns_list is not None:
           self.columns_list = columns_list
 
@@ -101,31 +101,6 @@ class Columns(object):
         self.container['link'] = link
 
     @property
-    def max_column(self):
-        """
-        Gets the max_column of this Columns.
-
-        :return: The max_column of this Columns.
-        :rtype: int
-        """
-        return self.container['max_column']
-
-    @max_column.setter
-    def max_column(self, max_column):
-        """
-        Sets the max_column of this Columns.
-
-        :param max_column: The max_column of this Columns.
-        :type: int
-        """
-        """
-        if max_column is None:
-            raise ValueError("Invalid value for `max_column`, must not be `None`")
-        """
-
-        self.container['max_column'] = max_column
-
-    @property
     def columns_count(self):
         """
         Gets the columns_count of this Columns.
@@ -149,6 +124,31 @@ class Columns(object):
         """
 
         self.container['columns_count'] = columns_count
+
+    @property
+    def max_column(self):
+        """
+        Gets the max_column of this Columns.
+
+        :return: The max_column of this Columns.
+        :rtype: int
+        """
+        return self.container['max_column']
+
+    @max_column.setter
+    def max_column(self, max_column):
+        """
+        Sets the max_column of this Columns.
+
+        :param max_column: The max_column of this Columns.
+        :type: int
+        """
+        """
+        if max_column is None:
+            raise ValueError("Invalid value for `max_column`, must not be `None`")
+        """
+
+        self.container['max_column'] = max_column
 
     @property
     def columns_list(self):

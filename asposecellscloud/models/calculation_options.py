@@ -31,17 +31,17 @@ class CalculationOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'calc_stack_size': 'int',
-        'ignore_error': 'bool',
         'precision_strategy': 'str',
-        'recursive': 'bool'
+        'ignore_error': 'bool',
+        'recursive': 'bool',
+        'calc_stack_size': 'int'
     }
 
     attribute_map = {
-        'calc_stack_size': 'CalcStackSize',
-        'ignore_error': 'IgnoreError',
         'precision_strategy': 'PrecisionStrategy',
-        'recursive': 'Recursive'
+        'ignore_error': 'IgnoreError',
+        'recursive': 'Recursive',
+        'calc_stack_size': 'CalcStackSize'
     }
     
     @staticmethod
@@ -57,7 +57,7 @@ class CalculationOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self, calc_stack_size=None, ignore_error=None, precision_strategy=None, recursive=None, **kw):
+    def __init__(self, precision_strategy=None, ignore_error=None, recursive=None, calc_stack_size=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -67,61 +67,19 @@ class CalculationOptions(object):
         CalculationOptions - a model defined in Swagger
         """
 
-        self.container['calc_stack_size'] = None
-        self.container['ignore_error'] = None
         self.container['precision_strategy'] = None
+        self.container['ignore_error'] = None
         self.container['recursive'] = None
+        self.container['calc_stack_size'] = None
 
-        if calc_stack_size is not None:
-          self.calc_stack_size = calc_stack_size
-        if ignore_error is not None:
-          self.ignore_error = ignore_error
         if precision_strategy is not None:
           self.precision_strategy = precision_strategy
+        if ignore_error is not None:
+          self.ignore_error = ignore_error
         if recursive is not None:
           self.recursive = recursive
-
-    @property
-    def calc_stack_size(self):
-        """
-        Gets the calc_stack_size of this CalculationOptions.
-
-        :return: The calc_stack_size of this CalculationOptions.
-        :rtype: int
-        """
-        return self.container['calc_stack_size']
-
-    @calc_stack_size.setter
-    def calc_stack_size(self, calc_stack_size):
-        """
-        Sets the calc_stack_size of this CalculationOptions.
-
-        :param calc_stack_size: The calc_stack_size of this CalculationOptions.
-        :type: int
-        """
-
-        self.container['calc_stack_size'] = calc_stack_size
-
-    @property
-    def ignore_error(self):
-        """
-        Gets the ignore_error of this CalculationOptions.
-
-        :return: The ignore_error of this CalculationOptions.
-        :rtype: bool
-        """
-        return self.container['ignore_error']
-
-    @ignore_error.setter
-    def ignore_error(self, ignore_error):
-        """
-        Sets the ignore_error of this CalculationOptions.
-
-        :param ignore_error: The ignore_error of this CalculationOptions.
-        :type: bool
-        """
-
-        self.container['ignore_error'] = ignore_error
+        if calc_stack_size is not None:
+          self.calc_stack_size = calc_stack_size
 
     @property
     def precision_strategy(self):
@@ -145,6 +103,27 @@ class CalculationOptions(object):
         self.container['precision_strategy'] = precision_strategy
 
     @property
+    def ignore_error(self):
+        """
+        Gets the ignore_error of this CalculationOptions.
+
+        :return: The ignore_error of this CalculationOptions.
+        :rtype: bool
+        """
+        return self.container['ignore_error']
+
+    @ignore_error.setter
+    def ignore_error(self, ignore_error):
+        """
+        Sets the ignore_error of this CalculationOptions.
+
+        :param ignore_error: The ignore_error of this CalculationOptions.
+        :type: bool
+        """
+
+        self.container['ignore_error'] = ignore_error
+
+    @property
     def recursive(self):
         """
         Gets the recursive of this CalculationOptions.
@@ -164,6 +143,27 @@ class CalculationOptions(object):
         """
 
         self.container['recursive'] = recursive
+
+    @property
+    def calc_stack_size(self):
+        """
+        Gets the calc_stack_size of this CalculationOptions.
+
+        :return: The calc_stack_size of this CalculationOptions.
+        :rtype: int
+        """
+        return self.container['calc_stack_size']
+
+    @calc_stack_size.setter
+    def calc_stack_size(self, calc_stack_size):
+        """
+        Sets the calc_stack_size of this CalculationOptions.
+
+        :param calc_stack_size: The calc_stack_size of this CalculationOptions.
+        :type: int
+        """
+
+        self.container['calc_stack_size'] = calc_stack_size
 
     def to_dict(self):
         """

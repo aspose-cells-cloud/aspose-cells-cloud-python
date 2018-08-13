@@ -31,13 +31,13 @@ class MultipleFilters(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'match_blank': 'bool',
-        'multiple_filter_list': 'list[MultipleFilter]'
+        'multiple_filter_list': 'list[MultipleFilter]',
+        'match_blank': 'bool'
     }
 
     attribute_map = {
-        'match_blank': 'MatchBlank',
-        'multiple_filter_list': 'MultipleFilterList'
+        'multiple_filter_list': 'MultipleFilterList',
+        'match_blank': 'MatchBlank'
     }
     
     @staticmethod
@@ -53,7 +53,7 @@ class MultipleFilters(object):
             return self.container[attr]
         return None
 
-    def __init__(self, match_blank=None, multiple_filter_list=None, **kw):
+    def __init__(self, multiple_filter_list=None, match_blank=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -63,34 +63,13 @@ class MultipleFilters(object):
         MultipleFilters - a model defined in Swagger
         """
 
-        self.container['match_blank'] = None
         self.container['multiple_filter_list'] = None
+        self.container['match_blank'] = None
 
-        if match_blank is not None:
-          self.match_blank = match_blank
         if multiple_filter_list is not None:
           self.multiple_filter_list = multiple_filter_list
-
-    @property
-    def match_blank(self):
-        """
-        Gets the match_blank of this MultipleFilters.
-
-        :return: The match_blank of this MultipleFilters.
-        :rtype: bool
-        """
-        return self.container['match_blank']
-
-    @match_blank.setter
-    def match_blank(self, match_blank):
-        """
-        Sets the match_blank of this MultipleFilters.
-
-        :param match_blank: The match_blank of this MultipleFilters.
-        :type: bool
-        """
-
-        self.container['match_blank'] = match_blank
+        if match_blank is not None:
+          self.match_blank = match_blank
 
     @property
     def multiple_filter_list(self):
@@ -112,6 +91,27 @@ class MultipleFilters(object):
         """
 
         self.container['multiple_filter_list'] = multiple_filter_list
+
+    @property
+    def match_blank(self):
+        """
+        Gets the match_blank of this MultipleFilters.
+
+        :return: The match_blank of this MultipleFilters.
+        :rtype: bool
+        """
+        return self.container['match_blank']
+
+    @match_blank.setter
+    def match_blank(self, match_blank):
+        """
+        Sets the match_blank of this MultipleFilters.
+
+        :param match_blank: The match_blank of this MultipleFilters.
+        :type: bool
+        """
+
+        self.container['match_blank'] = match_blank
 
     def to_dict(self):
         """

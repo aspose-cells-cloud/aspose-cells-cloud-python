@@ -32,16 +32,16 @@ class GradientFill(object):
     """
     swagger_types = {
         'fill_type': 'str',
-        'direction_type': 'str',
         'angle': 'float',
-        'gradient_stops': 'list[GradientFillStop]'
+        'gradient_stops': 'list[GradientFillStop]',
+        'direction_type': 'str'
     }
 
     attribute_map = {
         'fill_type': 'FillType',
-        'direction_type': 'DirectionType',
         'angle': 'Angle',
-        'gradient_stops': 'GradientStops'
+        'gradient_stops': 'GradientStops',
+        'direction_type': 'DirectionType'
     }
     
     @staticmethod
@@ -57,7 +57,7 @@ class GradientFill(object):
             return self.container[attr]
         return None
 
-    def __init__(self, fill_type=None, direction_type=None, angle=None, gradient_stops=None, **kw):
+    def __init__(self, fill_type=None, angle=None, gradient_stops=None, direction_type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -68,18 +68,18 @@ class GradientFill(object):
         """
 
         self.container['fill_type'] = None
-        self.container['direction_type'] = None
         self.container['angle'] = None
         self.container['gradient_stops'] = None
+        self.container['direction_type'] = None
 
         if fill_type is not None:
           self.fill_type = fill_type
-        if direction_type is not None:
-          self.direction_type = direction_type
         if angle is not None:
           self.angle = angle
         if gradient_stops is not None:
           self.gradient_stops = gradient_stops
+        if direction_type is not None:
+          self.direction_type = direction_type
 
     @property
     def fill_type(self):
@@ -101,27 +101,6 @@ class GradientFill(object):
         """
 
         self.container['fill_type'] = fill_type
-
-    @property
-    def direction_type(self):
-        """
-        Gets the direction_type of this GradientFill.
-
-        :return: The direction_type of this GradientFill.
-        :rtype: str
-        """
-        return self.container['direction_type']
-
-    @direction_type.setter
-    def direction_type(self, direction_type):
-        """
-        Sets the direction_type of this GradientFill.
-
-        :param direction_type: The direction_type of this GradientFill.
-        :type: str
-        """
-
-        self.container['direction_type'] = direction_type
 
     @property
     def angle(self):
@@ -164,6 +143,27 @@ class GradientFill(object):
         """
 
         self.container['gradient_stops'] = gradient_stops
+
+    @property
+    def direction_type(self):
+        """
+        Gets the direction_type of this GradientFill.
+
+        :return: The direction_type of this GradientFill.
+        :rtype: str
+        """
+        return self.container['direction_type']
+
+    @direction_type.setter
+    def direction_type(self, direction_type):
+        """
+        Sets the direction_type of this GradientFill.
+
+        :param direction_type: The direction_type of this GradientFill.
+        :type: str
+        """
+
+        self.container['direction_type'] = direction_type
 
     def to_dict(self):
         """

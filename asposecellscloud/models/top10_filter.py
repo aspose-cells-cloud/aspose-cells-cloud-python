@@ -31,17 +31,17 @@ class Top10Filter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'criteria': 'str',
+        'items': 'int',
         'is_percent': 'bool',
         'is_top': 'bool',
-        'items': 'int'
+        'criteria': 'str'
     }
 
     attribute_map = {
-        'criteria': 'Criteria',
+        'items': 'Items',
         'is_percent': 'IsPercent',
         'is_top': 'IsTop',
-        'items': 'Items'
+        'criteria': 'Criteria'
     }
     
     @staticmethod
@@ -57,7 +57,7 @@ class Top10Filter(object):
             return self.container[attr]
         return None
 
-    def __init__(self, criteria=None, is_percent=None, is_top=None, items=None, **kw):
+    def __init__(self, items=None, is_percent=None, is_top=None, criteria=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -67,37 +67,41 @@ class Top10Filter(object):
         Top10Filter - a model defined in Swagger
         """
 
-        self.container['criteria'] = None
+        self.container['items'] = None
         self.container['is_percent'] = None
         self.container['is_top'] = None
-        self.container['items'] = None
+        self.container['criteria'] = None
 
-        if criteria is not None:
-          self.criteria = criteria
+        self.items = items
         self.is_percent = is_percent
         self.is_top = is_top
-        self.items = items
+        if criteria is not None:
+          self.criteria = criteria
 
     @property
-    def criteria(self):
+    def items(self):
         """
-        Gets the criteria of this Top10Filter.
+        Gets the items of this Top10Filter.
 
-        :return: The criteria of this Top10Filter.
-        :rtype: str
+        :return: The items of this Top10Filter.
+        :rtype: int
         """
-        return self.container['criteria']
+        return self.container['items']
 
-    @criteria.setter
-    def criteria(self, criteria):
+    @items.setter
+    def items(self, items):
         """
-        Sets the criteria of this Top10Filter.
+        Sets the items of this Top10Filter.
 
-        :param criteria: The criteria of this Top10Filter.
-        :type: str
+        :param items: The items of this Top10Filter.
+        :type: int
+        """
+        """
+        if items is None:
+            raise ValueError("Invalid value for `items`, must not be `None`")
         """
 
-        self.container['criteria'] = criteria
+        self.container['items'] = items
 
     @property
     def is_percent(self):
@@ -150,29 +154,25 @@ class Top10Filter(object):
         self.container['is_top'] = is_top
 
     @property
-    def items(self):
+    def criteria(self):
         """
-        Gets the items of this Top10Filter.
+        Gets the criteria of this Top10Filter.
 
-        :return: The items of this Top10Filter.
-        :rtype: int
+        :return: The criteria of this Top10Filter.
+        :rtype: str
         """
-        return self.container['items']
+        return self.container['criteria']
 
-    @items.setter
-    def items(self, items):
+    @criteria.setter
+    def criteria(self, criteria):
         """
-        Sets the items of this Top10Filter.
+        Sets the criteria of this Top10Filter.
 
-        :param items: The items of this Top10Filter.
-        :type: int
-        """
-        """
-        if items is None:
-            raise ValueError("Invalid value for `items`, must not be `None`")
+        :param criteria: The criteria of this Top10Filter.
+        :type: str
         """
 
-        self.container['items'] = items
+        self.container['criteria'] = criteria
 
     def to_dict(self):
         """

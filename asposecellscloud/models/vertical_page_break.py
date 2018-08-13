@@ -32,14 +32,14 @@ class VerticalPageBreak(object):
     """
     swagger_types = {
         'column': 'int',
-        'end_row': 'int',
-        'start_row': 'int'
+        'start_row': 'int',
+        'end_row': 'int'
     }
 
     attribute_map = {
         'column': 'Column',
-        'end_row': 'EndRow',
-        'start_row': 'StartRow'
+        'start_row': 'StartRow',
+        'end_row': 'EndRow'
     }
     
     @staticmethod
@@ -55,7 +55,7 @@ class VerticalPageBreak(object):
             return self.container[attr]
         return None
 
-    def __init__(self, column=None, end_row=None, start_row=None, **kw):
+    def __init__(self, column=None, start_row=None, end_row=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -66,12 +66,12 @@ class VerticalPageBreak(object):
         """
 
         self.container['column'] = None
-        self.container['end_row'] = None
         self.container['start_row'] = None
+        self.container['end_row'] = None
 
         self.column = column
-        self.end_row = end_row
         self.start_row = start_row
+        self.end_row = end_row
 
     @property
     def column(self):
@@ -99,31 +99,6 @@ class VerticalPageBreak(object):
         self.container['column'] = column
 
     @property
-    def end_row(self):
-        """
-        Gets the end_row of this VerticalPageBreak.
-
-        :return: The end_row of this VerticalPageBreak.
-        :rtype: int
-        """
-        return self.container['end_row']
-
-    @end_row.setter
-    def end_row(self, end_row):
-        """
-        Sets the end_row of this VerticalPageBreak.
-
-        :param end_row: The end_row of this VerticalPageBreak.
-        :type: int
-        """
-        """
-        if end_row is None:
-            raise ValueError("Invalid value for `end_row`, must not be `None`")
-        """
-
-        self.container['end_row'] = end_row
-
-    @property
     def start_row(self):
         """
         Gets the start_row of this VerticalPageBreak.
@@ -147,6 +122,31 @@ class VerticalPageBreak(object):
         """
 
         self.container['start_row'] = start_row
+
+    @property
+    def end_row(self):
+        """
+        Gets the end_row of this VerticalPageBreak.
+
+        :return: The end_row of this VerticalPageBreak.
+        :rtype: int
+        """
+        return self.container['end_row']
+
+    @end_row.setter
+    def end_row(self, end_row):
+        """
+        Sets the end_row of this VerticalPageBreak.
+
+        :param end_row: The end_row of this VerticalPageBreak.
+        :type: int
+        """
+        """
+        if end_row is None:
+            raise ValueError("Invalid value for `end_row`, must not be `None`")
+        """
+
+        self.container['end_row'] = end_row
 
     def to_dict(self):
         """

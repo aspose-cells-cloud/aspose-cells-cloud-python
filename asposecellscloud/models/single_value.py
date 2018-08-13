@@ -31,13 +31,13 @@ class SingleValue(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'value': 'str',
-        'value_type': 'ValueType'
+        'value_type': 'ValueType',
+        'value': 'str'
     }
 
     attribute_map = {
-        'value': 'Value',
-        'value_type': 'ValueType'
+        'value_type': 'ValueType',
+        'value': 'Value'
     }
     
     @staticmethod
@@ -53,7 +53,7 @@ class SingleValue(object):
             return self.container[attr]
         return None
 
-    def __init__(self, value=None, value_type=None, **kw):
+    def __init__(self, value_type=None, value=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -63,34 +63,13 @@ class SingleValue(object):
         SingleValue - a model defined in Swagger
         """
 
-        self.container['value'] = None
         self.container['value_type'] = None
+        self.container['value'] = None
 
-        if value is not None:
-          self.value = value
         if value_type is not None:
           self.value_type = value_type
-
-    @property
-    def value(self):
-        """
-        Gets the value of this SingleValue.
-
-        :return: The value of this SingleValue.
-        :rtype: str
-        """
-        return self.container['value']
-
-    @value.setter
-    def value(self, value):
-        """
-        Sets the value of this SingleValue.
-
-        :param value: The value of this SingleValue.
-        :type: str
-        """
-
-        self.container['value'] = value
+        if value is not None:
+          self.value = value
 
     @property
     def value_type(self):
@@ -112,6 +91,27 @@ class SingleValue(object):
         """
 
         self.container['value_type'] = value_type
+
+    @property
+    def value(self):
+        """
+        Gets the value of this SingleValue.
+
+        :return: The value of this SingleValue.
+        :rtype: str
+        """
+        return self.container['value']
+
+    @value.setter
+    def value(self, value):
+        """
+        Sets the value of this SingleValue.
+
+        :param value: The value of this SingleValue.
+        :type: str
+        """
+
+        self.container['value'] = value
 
     def to_dict(self):
         """

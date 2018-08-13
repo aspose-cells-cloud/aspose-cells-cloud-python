@@ -31,13 +31,13 @@ class WorkbookProtectionRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'protection_type': 'str',
-        'password': 'str'
+        'password': 'str',
+        'protection_type': 'str'
     }
 
     attribute_map = {
-        'protection_type': 'ProtectionType',
-        'password': 'Password'
+        'password': 'Password',
+        'protection_type': 'ProtectionType'
     }
     
     @staticmethod
@@ -53,7 +53,7 @@ class WorkbookProtectionRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self, protection_type=None, password=None, **kw):
+    def __init__(self, password=None, protection_type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -63,36 +63,13 @@ class WorkbookProtectionRequest(object):
         WorkbookProtectionRequest - a model defined in Swagger
         """
 
-        self.container['protection_type'] = None
         self.container['password'] = None
+        self.container['protection_type'] = None
 
-        if protection_type is not None:
-          self.protection_type = protection_type
         if password is not None:
           self.password = password
-
-    @property
-    def protection_type(self):
-        """
-        Gets the protection_type of this WorkbookProtectionRequest.
-        Protection type. Can be ALL, CONTENTS, NONE, OBJECTS, SCENARIOS, STRUCTURE, WINDOWS  
-
-        :return: The protection_type of this WorkbookProtectionRequest.
-        :rtype: str
-        """
-        return self.container['protection_type']
-
-    @protection_type.setter
-    def protection_type(self, protection_type):
-        """
-        Sets the protection_type of this WorkbookProtectionRequest.
-        Protection type. Can be ALL, CONTENTS, NONE, OBJECTS, SCENARIOS, STRUCTURE, WINDOWS  
-
-        :param protection_type: The protection_type of this WorkbookProtectionRequest.
-        :type: str
-        """
-
-        self.container['protection_type'] = protection_type
+        if protection_type is not None:
+          self.protection_type = protection_type
 
     @property
     def password(self):
@@ -116,6 +93,29 @@ class WorkbookProtectionRequest(object):
         """
 
         self.container['password'] = password
+
+    @property
+    def protection_type(self):
+        """
+        Gets the protection_type of this WorkbookProtectionRequest.
+        Protection type. Can be ALL, CONTENTS, NONE, OBJECTS, SCENARIOS, STRUCTURE, WINDOWS  
+
+        :return: The protection_type of this WorkbookProtectionRequest.
+        :rtype: str
+        """
+        return self.container['protection_type']
+
+    @protection_type.setter
+    def protection_type(self, protection_type):
+        """
+        Sets the protection_type of this WorkbookProtectionRequest.
+        Protection type. Can be ALL, CONTENTS, NONE, OBJECTS, SCENARIOS, STRUCTURE, WINDOWS  
+
+        :param protection_type: The protection_type of this WorkbookProtectionRequest.
+        :type: str
+        """
+
+        self.container['protection_type'] = protection_type
 
     def to_dict(self):
         """

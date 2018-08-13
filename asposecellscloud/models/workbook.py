@@ -31,30 +31,30 @@ class Workbook(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'file_name': 'str',
         'links': 'list[Link]',
-        'worksheets': 'LinkElement',
-        'default_style': 'LinkElement',
+        'settings': 'LinkElement',
+        'is_protected': 'str',
+        'is_write_protected': 'str',
+        'file_name': 'str',
         'document_properties': 'LinkElement',
         'names': 'LinkElement',
-        'settings': 'LinkElement',
-        'is_write_protected': 'str',
-        'is_protected': 'str',
+        'default_style': 'LinkElement',
         'is_encryption': 'str',
+        'worksheets': 'LinkElement',
         'password': 'str'
     }
 
     attribute_map = {
-        'file_name': 'FileName',
         'links': 'Links',
-        'worksheets': 'Worksheets',
-        'default_style': 'DefaultStyle',
+        'settings': 'Settings',
+        'is_protected': 'IsProtected',
+        'is_write_protected': 'IsWriteProtected',
+        'file_name': 'FileName',
         'document_properties': 'DocumentProperties',
         'names': 'Names',
-        'settings': 'Settings',
-        'is_write_protected': 'IsWriteProtected',
-        'is_protected': 'IsProtected',
+        'default_style': 'DefaultStyle',
         'is_encryption': 'IsEncryption',
+        'worksheets': 'Worksheets',
         'password': 'Password'
     }
     
@@ -71,7 +71,7 @@ class Workbook(object):
             return self.container[attr]
         return None
 
-    def __init__(self, file_name=None, links=None, worksheets=None, default_style=None, document_properties=None, names=None, settings=None, is_write_protected=None, is_protected=None, is_encryption=None, password=None, **kw):
+    def __init__(self, links=None, settings=None, is_protected=None, is_write_protected=None, file_name=None, document_properties=None, names=None, default_style=None, is_encryption=None, worksheets=None, password=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -81,61 +81,40 @@ class Workbook(object):
         Workbook - a model defined in Swagger
         """
 
-        self.container['file_name'] = None
         self.container['links'] = None
-        self.container['worksheets'] = None
-        self.container['default_style'] = None
+        self.container['settings'] = None
+        self.container['is_protected'] = None
+        self.container['is_write_protected'] = None
+        self.container['file_name'] = None
         self.container['document_properties'] = None
         self.container['names'] = None
-        self.container['settings'] = None
-        self.container['is_write_protected'] = None
-        self.container['is_protected'] = None
+        self.container['default_style'] = None
         self.container['is_encryption'] = None
+        self.container['worksheets'] = None
         self.container['password'] = None
 
-        if file_name is not None:
-          self.file_name = file_name
         if links is not None:
           self.links = links
-        if worksheets is not None:
-          self.worksheets = worksheets
-        if default_style is not None:
-          self.default_style = default_style
+        if settings is not None:
+          self.settings = settings
+        if is_protected is not None:
+          self.is_protected = is_protected
+        if is_write_protected is not None:
+          self.is_write_protected = is_write_protected
+        if file_name is not None:
+          self.file_name = file_name
         if document_properties is not None:
           self.document_properties = document_properties
         if names is not None:
           self.names = names
-        if settings is not None:
-          self.settings = settings
-        if is_write_protected is not None:
-          self.is_write_protected = is_write_protected
-        if is_protected is not None:
-          self.is_protected = is_protected
+        if default_style is not None:
+          self.default_style = default_style
         if is_encryption is not None:
           self.is_encryption = is_encryption
+        if worksheets is not None:
+          self.worksheets = worksheets
         if password is not None:
           self.password = password
-
-    @property
-    def file_name(self):
-        """
-        Gets the file_name of this Workbook.
-
-        :return: The file_name of this Workbook.
-        :rtype: str
-        """
-        return self.container['file_name']
-
-    @file_name.setter
-    def file_name(self, file_name):
-        """
-        Sets the file_name of this Workbook.
-
-        :param file_name: The file_name of this Workbook.
-        :type: str
-        """
-
-        self.container['file_name'] = file_name
 
     @property
     def links(self):
@@ -159,46 +138,88 @@ class Workbook(object):
         self.container['links'] = links
 
     @property
-    def worksheets(self):
+    def settings(self):
         """
-        Gets the worksheets of this Workbook.
+        Gets the settings of this Workbook.
 
-        :return: The worksheets of this Workbook.
+        :return: The settings of this Workbook.
         :rtype: LinkElement
         """
-        return self.container['worksheets']
+        return self.container['settings']
 
-    @worksheets.setter
-    def worksheets(self, worksheets):
+    @settings.setter
+    def settings(self, settings):
         """
-        Sets the worksheets of this Workbook.
+        Sets the settings of this Workbook.
 
-        :param worksheets: The worksheets of this Workbook.
+        :param settings: The settings of this Workbook.
         :type: LinkElement
         """
 
-        self.container['worksheets'] = worksheets
+        self.container['settings'] = settings
 
     @property
-    def default_style(self):
+    def is_protected(self):
         """
-        Gets the default_style of this Workbook.
+        Gets the is_protected of this Workbook.
 
-        :return: The default_style of this Workbook.
-        :rtype: LinkElement
+        :return: The is_protected of this Workbook.
+        :rtype: str
         """
-        return self.container['default_style']
+        return self.container['is_protected']
 
-    @default_style.setter
-    def default_style(self, default_style):
+    @is_protected.setter
+    def is_protected(self, is_protected):
         """
-        Sets the default_style of this Workbook.
+        Sets the is_protected of this Workbook.
 
-        :param default_style: The default_style of this Workbook.
-        :type: LinkElement
+        :param is_protected: The is_protected of this Workbook.
+        :type: str
         """
 
-        self.container['default_style'] = default_style
+        self.container['is_protected'] = is_protected
+
+    @property
+    def is_write_protected(self):
+        """
+        Gets the is_write_protected of this Workbook.
+
+        :return: The is_write_protected of this Workbook.
+        :rtype: str
+        """
+        return self.container['is_write_protected']
+
+    @is_write_protected.setter
+    def is_write_protected(self, is_write_protected):
+        """
+        Sets the is_write_protected of this Workbook.
+
+        :param is_write_protected: The is_write_protected of this Workbook.
+        :type: str
+        """
+
+        self.container['is_write_protected'] = is_write_protected
+
+    @property
+    def file_name(self):
+        """
+        Gets the file_name of this Workbook.
+
+        :return: The file_name of this Workbook.
+        :rtype: str
+        """
+        return self.container['file_name']
+
+    @file_name.setter
+    def file_name(self, file_name):
+        """
+        Sets the file_name of this Workbook.
+
+        :param file_name: The file_name of this Workbook.
+        :type: str
+        """
+
+        self.container['file_name'] = file_name
 
     @property
     def document_properties(self):
@@ -243,67 +264,25 @@ class Workbook(object):
         self.container['names'] = names
 
     @property
-    def settings(self):
+    def default_style(self):
         """
-        Gets the settings of this Workbook.
+        Gets the default_style of this Workbook.
 
-        :return: The settings of this Workbook.
+        :return: The default_style of this Workbook.
         :rtype: LinkElement
         """
-        return self.container['settings']
+        return self.container['default_style']
 
-    @settings.setter
-    def settings(self, settings):
+    @default_style.setter
+    def default_style(self, default_style):
         """
-        Sets the settings of this Workbook.
+        Sets the default_style of this Workbook.
 
-        :param settings: The settings of this Workbook.
+        :param default_style: The default_style of this Workbook.
         :type: LinkElement
         """
 
-        self.container['settings'] = settings
-
-    @property
-    def is_write_protected(self):
-        """
-        Gets the is_write_protected of this Workbook.
-
-        :return: The is_write_protected of this Workbook.
-        :rtype: str
-        """
-        return self.container['is_write_protected']
-
-    @is_write_protected.setter
-    def is_write_protected(self, is_write_protected):
-        """
-        Sets the is_write_protected of this Workbook.
-
-        :param is_write_protected: The is_write_protected of this Workbook.
-        :type: str
-        """
-
-        self.container['is_write_protected'] = is_write_protected
-
-    @property
-    def is_protected(self):
-        """
-        Gets the is_protected of this Workbook.
-
-        :return: The is_protected of this Workbook.
-        :rtype: str
-        """
-        return self.container['is_protected']
-
-    @is_protected.setter
-    def is_protected(self, is_protected):
-        """
-        Sets the is_protected of this Workbook.
-
-        :param is_protected: The is_protected of this Workbook.
-        :type: str
-        """
-
-        self.container['is_protected'] = is_protected
+        self.container['default_style'] = default_style
 
     @property
     def is_encryption(self):
@@ -325,6 +304,27 @@ class Workbook(object):
         """
 
         self.container['is_encryption'] = is_encryption
+
+    @property
+    def worksheets(self):
+        """
+        Gets the worksheets of this Workbook.
+
+        :return: The worksheets of this Workbook.
+        :rtype: LinkElement
+        """
+        return self.container['worksheets']
+
+    @worksheets.setter
+    def worksheets(self, worksheets):
+        """
+        Sets the worksheets of this Workbook.
+
+        :param worksheets: The worksheets of this Workbook.
+        :type: LinkElement
+        """
+
+        self.container['worksheets'] = worksheets
 
     @property
     def password(self):

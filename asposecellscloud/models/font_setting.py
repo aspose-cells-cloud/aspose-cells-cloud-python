@@ -31,19 +31,19 @@ class FontSetting(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'font': 'Font',
-        'length': 'int',
-        'start_index': 'int',
         'text_options': 'TextOptions',
-        'type': 'str'
+        'length': 'int',
+        'font': 'Font',
+        'type': 'str',
+        'start_index': 'int'
     }
 
     attribute_map = {
-        'font': 'Font',
-        'length': 'Length',
-        'start_index': 'StartIndex',
         'text_options': 'TextOptions',
-        'type': 'Type'
+        'length': 'Length',
+        'font': 'Font',
+        'type': 'Type',
+        'start_index': 'StartIndex'
     }
     
     @staticmethod
@@ -59,7 +59,7 @@ class FontSetting(object):
             return self.container[attr]
         return None
 
-    def __init__(self, font=None, length=None, start_index=None, text_options=None, type=None, **kw):
+    def __init__(self, text_options=None, length=None, font=None, type=None, start_index=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -69,41 +69,41 @@ class FontSetting(object):
         FontSetting - a model defined in Swagger
         """
 
-        self.container['font'] = None
-        self.container['length'] = None
-        self.container['start_index'] = None
         self.container['text_options'] = None
+        self.container['length'] = None
+        self.container['font'] = None
         self.container['type'] = None
+        self.container['start_index'] = None
 
-        if font is not None:
-          self.font = font
-        self.length = length
-        self.start_index = start_index
         if text_options is not None:
           self.text_options = text_options
+        self.length = length
+        if font is not None:
+          self.font = font
         if type is not None:
           self.type = type
+        self.start_index = start_index
 
     @property
-    def font(self):
+    def text_options(self):
         """
-        Gets the font of this FontSetting.
+        Gets the text_options of this FontSetting.
 
-        :return: The font of this FontSetting.
-        :rtype: Font
+        :return: The text_options of this FontSetting.
+        :rtype: TextOptions
         """
-        return self.container['font']
+        return self.container['text_options']
 
-    @font.setter
-    def font(self, font):
+    @text_options.setter
+    def text_options(self, text_options):
         """
-        Sets the font of this FontSetting.
+        Sets the text_options of this FontSetting.
 
-        :param font: The font of this FontSetting.
-        :type: Font
+        :param text_options: The text_options of this FontSetting.
+        :type: TextOptions
         """
 
-        self.container['font'] = font
+        self.container['text_options'] = text_options
 
     @property
     def length(self):
@@ -131,6 +131,48 @@ class FontSetting(object):
         self.container['length'] = length
 
     @property
+    def font(self):
+        """
+        Gets the font of this FontSetting.
+
+        :return: The font of this FontSetting.
+        :rtype: Font
+        """
+        return self.container['font']
+
+    @font.setter
+    def font(self, font):
+        """
+        Sets the font of this FontSetting.
+
+        :param font: The font of this FontSetting.
+        :type: Font
+        """
+
+        self.container['font'] = font
+
+    @property
+    def type(self):
+        """
+        Gets the type of this FontSetting.
+
+        :return: The type of this FontSetting.
+        :rtype: str
+        """
+        return self.container['type']
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this FontSetting.
+
+        :param type: The type of this FontSetting.
+        :type: str
+        """
+
+        self.container['type'] = type
+
+    @property
     def start_index(self):
         """
         Gets the start_index of this FontSetting.
@@ -154,48 +196,6 @@ class FontSetting(object):
         """
 
         self.container['start_index'] = start_index
-
-    @property
-    def text_options(self):
-        """
-        Gets the text_options of this FontSetting.
-
-        :return: The text_options of this FontSetting.
-        :rtype: TextOptions
-        """
-        return self.container['text_options']
-
-    @text_options.setter
-    def text_options(self, text_options):
-        """
-        Sets the text_options of this FontSetting.
-
-        :param text_options: The text_options of this FontSetting.
-        :type: TextOptions
-        """
-
-        self.container['text_options'] = text_options
-
-    @property
-    def type(self):
-        """
-        Gets the type of this FontSetting.
-
-        :return: The type of this FontSetting.
-        :rtype: str
-        """
-        return self.container['type']
-
-    @type.setter
-    def type(self, type):
-        """
-        Sets the type of this FontSetting.
-
-        :param type: The type of this FontSetting.
-        :type: str
-        """
-
-        self.container['type'] = type
 
     def to_dict(self):
         """

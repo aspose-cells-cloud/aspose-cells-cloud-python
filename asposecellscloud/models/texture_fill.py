@@ -31,21 +31,21 @@ class TextureFill(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
-        'transparency': 'float',
         'scale': 'float',
-        'tile_pic_option': 'TilePicOption',
+        'image': 'LinkElement',
         'pic_format_option': 'PicFormatOption',
-        'image': 'LinkElement'
+        'tile_pic_option': 'TilePicOption',
+        'transparency': 'float',
+        'type': 'str'
     }
 
     attribute_map = {
-        'type': 'Type',
-        'transparency': 'Transparency',
         'scale': 'Scale',
-        'tile_pic_option': 'TilePicOption',
+        'image': 'Image',
         'pic_format_option': 'PicFormatOption',
-        'image': 'Image'
+        'tile_pic_option': 'TilePicOption',
+        'transparency': 'Transparency',
+        'type': 'Type'
     }
     
     @staticmethod
@@ -61,7 +61,7 @@ class TextureFill(object):
             return self.container[attr]
         return None
 
-    def __init__(self, type=None, transparency=None, scale=None, tile_pic_option=None, pic_format_option=None, image=None, **kw):
+    def __init__(self, scale=None, image=None, pic_format_option=None, tile_pic_option=None, transparency=None, type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -71,67 +71,25 @@ class TextureFill(object):
         TextureFill - a model defined in Swagger
         """
 
-        self.container['type'] = None
-        self.container['transparency'] = None
         self.container['scale'] = None
-        self.container['tile_pic_option'] = None
-        self.container['pic_format_option'] = None
         self.container['image'] = None
+        self.container['pic_format_option'] = None
+        self.container['tile_pic_option'] = None
+        self.container['transparency'] = None
+        self.container['type'] = None
 
-        if type is not None:
-          self.type = type
-        if transparency is not None:
-          self.transparency = transparency
         if scale is not None:
           self.scale = scale
-        if tile_pic_option is not None:
-          self.tile_pic_option = tile_pic_option
-        if pic_format_option is not None:
-          self.pic_format_option = pic_format_option
         if image is not None:
           self.image = image
-
-    @property
-    def type(self):
-        """
-        Gets the type of this TextureFill.
-
-        :return: The type of this TextureFill.
-        :rtype: str
-        """
-        return self.container['type']
-
-    @type.setter
-    def type(self, type):
-        """
-        Sets the type of this TextureFill.
-
-        :param type: The type of this TextureFill.
-        :type: str
-        """
-
-        self.container['type'] = type
-
-    @property
-    def transparency(self):
-        """
-        Gets the transparency of this TextureFill.
-
-        :return: The transparency of this TextureFill.
-        :rtype: float
-        """
-        return self.container['transparency']
-
-    @transparency.setter
-    def transparency(self, transparency):
-        """
-        Sets the transparency of this TextureFill.
-
-        :param transparency: The transparency of this TextureFill.
-        :type: float
-        """
-
-        self.container['transparency'] = transparency
+        if pic_format_option is not None:
+          self.pic_format_option = pic_format_option
+        if tile_pic_option is not None:
+          self.tile_pic_option = tile_pic_option
+        if transparency is not None:
+          self.transparency = transparency
+        if type is not None:
+          self.type = type
 
     @property
     def scale(self):
@@ -155,25 +113,25 @@ class TextureFill(object):
         self.container['scale'] = scale
 
     @property
-    def tile_pic_option(self):
+    def image(self):
         """
-        Gets the tile_pic_option of this TextureFill.
+        Gets the image of this TextureFill.
 
-        :return: The tile_pic_option of this TextureFill.
-        :rtype: TilePicOption
+        :return: The image of this TextureFill.
+        :rtype: LinkElement
         """
-        return self.container['tile_pic_option']
+        return self.container['image']
 
-    @tile_pic_option.setter
-    def tile_pic_option(self, tile_pic_option):
+    @image.setter
+    def image(self, image):
         """
-        Sets the tile_pic_option of this TextureFill.
+        Sets the image of this TextureFill.
 
-        :param tile_pic_option: The tile_pic_option of this TextureFill.
-        :type: TilePicOption
+        :param image: The image of this TextureFill.
+        :type: LinkElement
         """
 
-        self.container['tile_pic_option'] = tile_pic_option
+        self.container['image'] = image
 
     @property
     def pic_format_option(self):
@@ -197,25 +155,67 @@ class TextureFill(object):
         self.container['pic_format_option'] = pic_format_option
 
     @property
-    def image(self):
+    def tile_pic_option(self):
         """
-        Gets the image of this TextureFill.
+        Gets the tile_pic_option of this TextureFill.
 
-        :return: The image of this TextureFill.
-        :rtype: LinkElement
+        :return: The tile_pic_option of this TextureFill.
+        :rtype: TilePicOption
         """
-        return self.container['image']
+        return self.container['tile_pic_option']
 
-    @image.setter
-    def image(self, image):
+    @tile_pic_option.setter
+    def tile_pic_option(self, tile_pic_option):
         """
-        Sets the image of this TextureFill.
+        Sets the tile_pic_option of this TextureFill.
 
-        :param image: The image of this TextureFill.
-        :type: LinkElement
+        :param tile_pic_option: The tile_pic_option of this TextureFill.
+        :type: TilePicOption
         """
 
-        self.container['image'] = image
+        self.container['tile_pic_option'] = tile_pic_option
+
+    @property
+    def transparency(self):
+        """
+        Gets the transparency of this TextureFill.
+
+        :return: The transparency of this TextureFill.
+        :rtype: float
+        """
+        return self.container['transparency']
+
+    @transparency.setter
+    def transparency(self, transparency):
+        """
+        Sets the transparency of this TextureFill.
+
+        :param transparency: The transparency of this TextureFill.
+        :type: float
+        """
+
+        self.container['transparency'] = transparency
+
+    @property
+    def type(self):
+        """
+        Gets the type of this TextureFill.
+
+        :return: The type of this TextureFill.
+        :rtype: str
+        """
+        return self.container['type']
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this TextureFill.
+
+        :param type: The type of this TextureFill.
+        :type: str
+        """
+
+        self.container['type'] = type
 
     def to_dict(self):
         """

@@ -32,16 +32,16 @@ class Link(object):
     """
     swagger_types = {
         'href': 'str',
+        'type': 'str',
         'rel': 'str',
-        'title': 'str',
-        'type': 'str'
+        'title': 'str'
     }
 
     attribute_map = {
         'href': 'Href',
+        'type': 'Type',
         'rel': 'Rel',
-        'title': 'Title',
-        'type': 'Type'
+        'title': 'Title'
     }
     
     @staticmethod
@@ -57,7 +57,7 @@ class Link(object):
             return self.container[attr]
         return None
 
-    def __init__(self, href=None, rel=None, title=None, type=None, **kw):
+    def __init__(self, href=None, type=None, rel=None, title=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -68,18 +68,18 @@ class Link(object):
         """
 
         self.container['href'] = None
+        self.container['type'] = None
         self.container['rel'] = None
         self.container['title'] = None
-        self.container['type'] = None
 
         if href is not None:
           self.href = href
+        if type is not None:
+          self.type = type
         if rel is not None:
           self.rel = rel
         if title is not None:
           self.title = title
-        if type is not None:
-          self.type = type
 
     @property
     def href(self):
@@ -101,6 +101,27 @@ class Link(object):
         """
 
         self.container['href'] = href
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Link.
+
+        :return: The type of this Link.
+        :rtype: str
+        """
+        return self.container['type']
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Link.
+
+        :param type: The type of this Link.
+        :type: str
+        """
+
+        self.container['type'] = type
 
     @property
     def rel(self):
@@ -143,27 +164,6 @@ class Link(object):
         """
 
         self.container['title'] = title
-
-    @property
-    def type(self):
-        """
-        Gets the type of this Link.
-
-        :return: The type of this Link.
-        :rtype: str
-        """
-        return self.container['type']
-
-    @type.setter
-    def type(self, type):
-        """
-        Sets the type of this Link.
-
-        :param type: The type of this Link.
-        :type: str
-        """
-
-        self.container['type'] = type
 
     def to_dict(self):
         """

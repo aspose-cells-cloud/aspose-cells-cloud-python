@@ -31,21 +31,21 @@ class FillFormat(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
-        'solid_fill': 'SolidFill',
-        'pattern_fill': 'PatternFill',
         'texture_fill': 'TextureFill',
+        'image_data': 'str',
+        'pattern_fill': 'PatternFill',
+        'solid_fill': 'SolidFill',
         'gradient_fill': 'GradientFill',
-        'image_data': 'str'
+        'type': 'str'
     }
 
     attribute_map = {
-        'type': 'Type',
-        'solid_fill': 'SolidFill',
-        'pattern_fill': 'PatternFill',
         'texture_fill': 'TextureFill',
+        'image_data': 'ImageData',
+        'pattern_fill': 'PatternFill',
+        'solid_fill': 'SolidFill',
         'gradient_fill': 'GradientFill',
-        'image_data': 'ImageData'
+        'type': 'Type'
     }
     
     @staticmethod
@@ -61,7 +61,7 @@ class FillFormat(object):
             return self.container[attr]
         return None
 
-    def __init__(self, type=None, solid_fill=None, pattern_fill=None, texture_fill=None, gradient_fill=None, image_data=None, **kw):
+    def __init__(self, texture_fill=None, image_data=None, pattern_fill=None, solid_fill=None, gradient_fill=None, type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -71,88 +71,25 @@ class FillFormat(object):
         FillFormat - a model defined in Swagger
         """
 
-        self.container['type'] = None
-        self.container['solid_fill'] = None
-        self.container['pattern_fill'] = None
         self.container['texture_fill'] = None
-        self.container['gradient_fill'] = None
         self.container['image_data'] = None
+        self.container['pattern_fill'] = None
+        self.container['solid_fill'] = None
+        self.container['gradient_fill'] = None
+        self.container['type'] = None
 
-        if type is not None:
-          self.type = type
-        if solid_fill is not None:
-          self.solid_fill = solid_fill
-        if pattern_fill is not None:
-          self.pattern_fill = pattern_fill
         if texture_fill is not None:
           self.texture_fill = texture_fill
-        if gradient_fill is not None:
-          self.gradient_fill = gradient_fill
         if image_data is not None:
           self.image_data = image_data
-
-    @property
-    def type(self):
-        """
-        Gets the type of this FillFormat.
-
-        :return: The type of this FillFormat.
-        :rtype: str
-        """
-        return self.container['type']
-
-    @type.setter
-    def type(self, type):
-        """
-        Sets the type of this FillFormat.
-
-        :param type: The type of this FillFormat.
-        :type: str
-        """
-
-        self.container['type'] = type
-
-    @property
-    def solid_fill(self):
-        """
-        Gets the solid_fill of this FillFormat.
-
-        :return: The solid_fill of this FillFormat.
-        :rtype: SolidFill
-        """
-        return self.container['solid_fill']
-
-    @solid_fill.setter
-    def solid_fill(self, solid_fill):
-        """
-        Sets the solid_fill of this FillFormat.
-
-        :param solid_fill: The solid_fill of this FillFormat.
-        :type: SolidFill
-        """
-
-        self.container['solid_fill'] = solid_fill
-
-    @property
-    def pattern_fill(self):
-        """
-        Gets the pattern_fill of this FillFormat.
-
-        :return: The pattern_fill of this FillFormat.
-        :rtype: PatternFill
-        """
-        return self.container['pattern_fill']
-
-    @pattern_fill.setter
-    def pattern_fill(self, pattern_fill):
-        """
-        Sets the pattern_fill of this FillFormat.
-
-        :param pattern_fill: The pattern_fill of this FillFormat.
-        :type: PatternFill
-        """
-
-        self.container['pattern_fill'] = pattern_fill
+        if pattern_fill is not None:
+          self.pattern_fill = pattern_fill
+        if solid_fill is not None:
+          self.solid_fill = solid_fill
+        if gradient_fill is not None:
+          self.gradient_fill = gradient_fill
+        if type is not None:
+          self.type = type
 
     @property
     def texture_fill(self):
@@ -176,27 +113,6 @@ class FillFormat(object):
         self.container['texture_fill'] = texture_fill
 
     @property
-    def gradient_fill(self):
-        """
-        Gets the gradient_fill of this FillFormat.
-
-        :return: The gradient_fill of this FillFormat.
-        :rtype: GradientFill
-        """
-        return self.container['gradient_fill']
-
-    @gradient_fill.setter
-    def gradient_fill(self, gradient_fill):
-        """
-        Sets the gradient_fill of this FillFormat.
-
-        :param gradient_fill: The gradient_fill of this FillFormat.
-        :type: GradientFill
-        """
-
-        self.container['gradient_fill'] = gradient_fill
-
-    @property
     def image_data(self):
         """
         Gets the image_data of this FillFormat.
@@ -218,6 +134,90 @@ class FillFormat(object):
             raise ValueError("Invalid value for `image_data`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")
 
         self.container['image_data'] = image_data
+
+    @property
+    def pattern_fill(self):
+        """
+        Gets the pattern_fill of this FillFormat.
+
+        :return: The pattern_fill of this FillFormat.
+        :rtype: PatternFill
+        """
+        return self.container['pattern_fill']
+
+    @pattern_fill.setter
+    def pattern_fill(self, pattern_fill):
+        """
+        Sets the pattern_fill of this FillFormat.
+
+        :param pattern_fill: The pattern_fill of this FillFormat.
+        :type: PatternFill
+        """
+
+        self.container['pattern_fill'] = pattern_fill
+
+    @property
+    def solid_fill(self):
+        """
+        Gets the solid_fill of this FillFormat.
+
+        :return: The solid_fill of this FillFormat.
+        :rtype: SolidFill
+        """
+        return self.container['solid_fill']
+
+    @solid_fill.setter
+    def solid_fill(self, solid_fill):
+        """
+        Sets the solid_fill of this FillFormat.
+
+        :param solid_fill: The solid_fill of this FillFormat.
+        :type: SolidFill
+        """
+
+        self.container['solid_fill'] = solid_fill
+
+    @property
+    def gradient_fill(self):
+        """
+        Gets the gradient_fill of this FillFormat.
+
+        :return: The gradient_fill of this FillFormat.
+        :rtype: GradientFill
+        """
+        return self.container['gradient_fill']
+
+    @gradient_fill.setter
+    def gradient_fill(self, gradient_fill):
+        """
+        Sets the gradient_fill of this FillFormat.
+
+        :param gradient_fill: The gradient_fill of this FillFormat.
+        :type: GradientFill
+        """
+
+        self.container['gradient_fill'] = gradient_fill
+
+    @property
+    def type(self):
+        """
+        Gets the type of this FillFormat.
+
+        :return: The type of this FillFormat.
+        :rtype: str
+        """
+        return self.container['type']
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this FillFormat.
+
+        :param type: The type of this FillFormat.
+        :type: str
+        """
+
+        self.container['type'] = type
 
     def to_dict(self):
         """

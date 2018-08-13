@@ -31,25 +31,25 @@ class PivotTableOperateParameter(OperateParameter):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'source_data': 'str',
-        'dest_cell_name': 'str',
+        'pivot_field_columns': 'list[int]',
+        'pivot_table_index': 'int',
         'table_name': 'str',
         'use_same_source': 'bool',
-        'pivot_table_index': 'int',
+        'pivot_field_data': 'list[int]',
         'pivot_field_rows': 'list[int]',
-        'pivot_field_columns': 'list[int]',
-        'pivot_field_data': 'list[int]'
+        'dest_cell_name': 'str',
+        'source_data': 'str'
     }
 
     attribute_map = {
-        'source_data': 'SourceData',
-        'dest_cell_name': 'DestCellName',
+        'pivot_field_columns': 'PivotFieldColumns',
+        'pivot_table_index': 'PivotTableIndex',
         'table_name': 'TableName',
         'use_same_source': 'UseSameSource',
-        'pivot_table_index': 'PivotTableIndex',
+        'pivot_field_data': 'PivotFieldData',
         'pivot_field_rows': 'PivotFieldRows',
-        'pivot_field_columns': 'PivotFieldColumns',
-        'pivot_field_data': 'PivotFieldData'
+        'dest_cell_name': 'DestCellName',
+        'source_data': 'SourceData'
     }
     
     @staticmethod
@@ -65,80 +65,80 @@ class PivotTableOperateParameter(OperateParameter):
             return self.container[attr]
         return None
 
-    def __init__(self, source_data=None, dest_cell_name=None, table_name=None, use_same_source=None, pivot_table_index=None, pivot_field_rows=None, pivot_field_columns=None, pivot_field_data=None, **kw):
+    def __init__(self, pivot_field_columns=None, pivot_table_index=None, table_name=None, use_same_source=None, pivot_field_data=None, pivot_field_rows=None, dest_cell_name=None, source_data=None, **kw):
         super(PivotTableOperateParameter, self).__init__(**kw)
 		    
         """
         PivotTableOperateParameter - a model defined in Swagger
         """
 
-        self.container['source_data'] = None
-        self.container['dest_cell_name'] = None
+        self.container['pivot_field_columns'] = None
+        self.container['pivot_table_index'] = None
         self.container['table_name'] = None
         self.container['use_same_source'] = None
-        self.container['pivot_table_index'] = None
-        self.container['pivot_field_rows'] = None
-        self.container['pivot_field_columns'] = None
         self.container['pivot_field_data'] = None
+        self.container['pivot_field_rows'] = None
+        self.container['dest_cell_name'] = None
+        self.container['source_data'] = None
 
-        if source_data is not None:
-          self.source_data = source_data
-        if dest_cell_name is not None:
-          self.dest_cell_name = dest_cell_name
+        if pivot_field_columns is not None:
+          self.pivot_field_columns = pivot_field_columns
+        if pivot_table_index is not None:
+          self.pivot_table_index = pivot_table_index
         if table_name is not None:
           self.table_name = table_name
         if use_same_source is not None:
           self.use_same_source = use_same_source
-        if pivot_table_index is not None:
-          self.pivot_table_index = pivot_table_index
-        if pivot_field_rows is not None:
-          self.pivot_field_rows = pivot_field_rows
-        if pivot_field_columns is not None:
-          self.pivot_field_columns = pivot_field_columns
         if pivot_field_data is not None:
           self.pivot_field_data = pivot_field_data
+        if pivot_field_rows is not None:
+          self.pivot_field_rows = pivot_field_rows
+        if dest_cell_name is not None:
+          self.dest_cell_name = dest_cell_name
+        if source_data is not None:
+          self.source_data = source_data
 
     @property
-    def source_data(self):
+    def pivot_field_columns(self):
         """
-        Gets the source_data of this PivotTableOperateParameter.
+        Gets the pivot_field_columns of this PivotTableOperateParameter.
 
-        :return: The source_data of this PivotTableOperateParameter.
-        :rtype: str
+        :return: The pivot_field_columns of this PivotTableOperateParameter.
+        :rtype: list[int]
         """
-        return self.container['source_data']
+        return self.container['pivot_field_columns']
 
-    @source_data.setter
-    def source_data(self, source_data):
+    @pivot_field_columns.setter
+    def pivot_field_columns(self, pivot_field_columns):
         """
-        Sets the source_data of this PivotTableOperateParameter.
+        Sets the pivot_field_columns of this PivotTableOperateParameter.
 
-        :param source_data: The source_data of this PivotTableOperateParameter.
-        :type: str
+        :param pivot_field_columns: The pivot_field_columns of this PivotTableOperateParameter.
+        :type: list[int]
         """
 
-        self.container['source_data'] = source_data
+        self.container['pivot_field_columns'] = pivot_field_columns
 
     @property
-    def dest_cell_name(self):
+    def pivot_table_index(self):
         """
-        Gets the dest_cell_name of this PivotTableOperateParameter.
+        Gets the pivot_table_index of this PivotTableOperateParameter.
 
-        :return: The dest_cell_name of this PivotTableOperateParameter.
-        :rtype: str
+        :return: The pivot_table_index of this PivotTableOperateParameter.
+        :rtype: int
         """
-        return self.container['dest_cell_name']
+        return self.container['pivot_table_index']
 
-    @dest_cell_name.setter
-    def dest_cell_name(self, dest_cell_name):
+    @pivot_table_index.setter
+    def pivot_table_index(self, pivot_table_index):
         """
-        Sets the dest_cell_name of this PivotTableOperateParameter.
+        Sets the pivot_table_index of this PivotTableOperateParameter.
 
-        :param dest_cell_name: The dest_cell_name of this PivotTableOperateParameter.
-        :type: str
+        :param pivot_table_index: The pivot_table_index of this PivotTableOperateParameter.
+        :type: int
         """
 
-        self.container['dest_cell_name'] = dest_cell_name
+        self.container['pivot_table_index'] = pivot_table_index
 
     @property
     def table_name(self):
@@ -183,25 +183,25 @@ class PivotTableOperateParameter(OperateParameter):
         self.container['use_same_source'] = use_same_source
 
     @property
-    def pivot_table_index(self):
+    def pivot_field_data(self):
         """
-        Gets the pivot_table_index of this PivotTableOperateParameter.
+        Gets the pivot_field_data of this PivotTableOperateParameter.
 
-        :return: The pivot_table_index of this PivotTableOperateParameter.
-        :rtype: int
+        :return: The pivot_field_data of this PivotTableOperateParameter.
+        :rtype: list[int]
         """
-        return self.container['pivot_table_index']
+        return self.container['pivot_field_data']
 
-    @pivot_table_index.setter
-    def pivot_table_index(self, pivot_table_index):
+    @pivot_field_data.setter
+    def pivot_field_data(self, pivot_field_data):
         """
-        Sets the pivot_table_index of this PivotTableOperateParameter.
+        Sets the pivot_field_data of this PivotTableOperateParameter.
 
-        :param pivot_table_index: The pivot_table_index of this PivotTableOperateParameter.
-        :type: int
+        :param pivot_field_data: The pivot_field_data of this PivotTableOperateParameter.
+        :type: list[int]
         """
 
-        self.container['pivot_table_index'] = pivot_table_index
+        self.container['pivot_field_data'] = pivot_field_data
 
     @property
     def pivot_field_rows(self):
@@ -225,46 +225,46 @@ class PivotTableOperateParameter(OperateParameter):
         self.container['pivot_field_rows'] = pivot_field_rows
 
     @property
-    def pivot_field_columns(self):
+    def dest_cell_name(self):
         """
-        Gets the pivot_field_columns of this PivotTableOperateParameter.
+        Gets the dest_cell_name of this PivotTableOperateParameter.
 
-        :return: The pivot_field_columns of this PivotTableOperateParameter.
-        :rtype: list[int]
+        :return: The dest_cell_name of this PivotTableOperateParameter.
+        :rtype: str
         """
-        return self.container['pivot_field_columns']
+        return self.container['dest_cell_name']
 
-    @pivot_field_columns.setter
-    def pivot_field_columns(self, pivot_field_columns):
+    @dest_cell_name.setter
+    def dest_cell_name(self, dest_cell_name):
         """
-        Sets the pivot_field_columns of this PivotTableOperateParameter.
+        Sets the dest_cell_name of this PivotTableOperateParameter.
 
-        :param pivot_field_columns: The pivot_field_columns of this PivotTableOperateParameter.
-        :type: list[int]
+        :param dest_cell_name: The dest_cell_name of this PivotTableOperateParameter.
+        :type: str
         """
 
-        self.container['pivot_field_columns'] = pivot_field_columns
+        self.container['dest_cell_name'] = dest_cell_name
 
     @property
-    def pivot_field_data(self):
+    def source_data(self):
         """
-        Gets the pivot_field_data of this PivotTableOperateParameter.
+        Gets the source_data of this PivotTableOperateParameter.
 
-        :return: The pivot_field_data of this PivotTableOperateParameter.
-        :rtype: list[int]
+        :return: The source_data of this PivotTableOperateParameter.
+        :rtype: str
         """
-        return self.container['pivot_field_data']
+        return self.container['source_data']
 
-    @pivot_field_data.setter
-    def pivot_field_data(self, pivot_field_data):
+    @source_data.setter
+    def source_data(self, source_data):
         """
-        Sets the pivot_field_data of this PivotTableOperateParameter.
+        Sets the source_data of this PivotTableOperateParameter.
 
-        :param pivot_field_data: The pivot_field_data of this PivotTableOperateParameter.
-        :type: list[int]
+        :param source_data: The source_data of this PivotTableOperateParameter.
+        :type: str
         """
 
-        self.container['pivot_field_data'] = pivot_field_data
+        self.container['source_data'] = source_data
 
     def to_dict(self):
         """

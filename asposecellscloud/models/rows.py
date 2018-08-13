@@ -33,15 +33,15 @@ class Rows(object):
     swagger_types = {
         'link': 'Link',
         'max_row': 'int',
-        'rows_count': 'int',
-        'rows_list': 'list[LinkElement]'
+        'rows_list': 'list[LinkElement]',
+        'rows_count': 'int'
     }
 
     attribute_map = {
         'link': 'link',
         'max_row': 'MaxRow',
-        'rows_count': 'RowsCount',
-        'rows_list': 'RowsList'
+        'rows_list': 'RowsList',
+        'rows_count': 'RowsCount'
     }
     
     @staticmethod
@@ -57,7 +57,7 @@ class Rows(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, max_row=None, rows_count=None, rows_list=None, **kw):
+    def __init__(self, link=None, max_row=None, rows_list=None, rows_count=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -69,15 +69,15 @@ class Rows(object):
 
         self.container['link'] = None
         self.container['max_row'] = None
-        self.container['rows_count'] = None
         self.container['rows_list'] = None
+        self.container['rows_count'] = None
 
         if link is not None:
           self.link = link
         self.max_row = max_row
-        self.rows_count = rows_count
         if rows_list is not None:
           self.rows_list = rows_list
+        self.rows_count = rows_count
 
     @property
     def link(self):
@@ -126,6 +126,27 @@ class Rows(object):
         self.container['max_row'] = max_row
 
     @property
+    def rows_list(self):
+        """
+        Gets the rows_list of this Rows.
+
+        :return: The rows_list of this Rows.
+        :rtype: list[LinkElement]
+        """
+        return self.container['rows_list']
+
+    @rows_list.setter
+    def rows_list(self, rows_list):
+        """
+        Sets the rows_list of this Rows.
+
+        :param rows_list: The rows_list of this Rows.
+        :type: list[LinkElement]
+        """
+
+        self.container['rows_list'] = rows_list
+
+    @property
     def rows_count(self):
         """
         Gets the rows_count of this Rows.
@@ -149,27 +170,6 @@ class Rows(object):
         """
 
         self.container['rows_count'] = rows_count
-
-    @property
-    def rows_list(self):
-        """
-        Gets the rows_list of this Rows.
-
-        :return: The rows_list of this Rows.
-        :rtype: list[LinkElement]
-        """
-        return self.container['rows_list']
-
-    @rows_list.setter
-    def rows_list(self, rows_list):
-        """
-        Sets the rows_list of this Rows.
-
-        :param rows_list: The rows_list of this Rows.
-        :type: list[LinkElement]
-        """
-
-        self.container['rows_list'] = rows_list
 
     def to_dict(self):
         """

@@ -31,13 +31,13 @@ class TaskDescription(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'task_type': 'str',
-        'task_parameter': 'TaskParameter'
+        'task_parameter': 'TaskParameter',
+        'task_type': 'str'
     }
 
     attribute_map = {
-        'task_type': 'TaskType',
-        'task_parameter': 'TaskParameter'
+        'task_parameter': 'TaskParameter',
+        'task_type': 'TaskType'
     }
     
     @staticmethod
@@ -53,7 +53,7 @@ class TaskDescription(object):
             return self.container[attr]
         return None
 
-    def __init__(self, task_type=None, task_parameter=None, **kw):
+    def __init__(self, task_parameter=None, task_type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -63,34 +63,13 @@ class TaskDescription(object):
         TaskDescription - a model defined in Swagger
         """
 
-        self.container['task_type'] = None
         self.container['task_parameter'] = None
+        self.container['task_type'] = None
 
-        if task_type is not None:
-          self.task_type = task_type
         if task_parameter is not None:
           self.task_parameter = task_parameter
-
-    @property
-    def task_type(self):
-        """
-        Gets the task_type of this TaskDescription.
-
-        :return: The task_type of this TaskDescription.
-        :rtype: str
-        """
-        return self.container['task_type']
-
-    @task_type.setter
-    def task_type(self, task_type):
-        """
-        Sets the task_type of this TaskDescription.
-
-        :param task_type: The task_type of this TaskDescription.
-        :type: str
-        """
-
-        self.container['task_type'] = task_type
+        if task_type is not None:
+          self.task_type = task_type
 
     @property
     def task_parameter(self):
@@ -112,6 +91,27 @@ class TaskDescription(object):
         """
 
         self.container['task_parameter'] = task_parameter
+
+    @property
+    def task_type(self):
+        """
+        Gets the task_type of this TaskDescription.
+
+        :return: The task_type of this TaskDescription.
+        :rtype: str
+        """
+        return self.container['task_type']
+
+    @task_type.setter
+    def task_type(self, task_type):
+        """
+        Sets the task_type of this TaskDescription.
+
+        :param task_type: The task_type of this TaskDescription.
+        :type: str
+        """
+
+        self.container['task_type'] = task_type
 
     def to_dict(self):
         """

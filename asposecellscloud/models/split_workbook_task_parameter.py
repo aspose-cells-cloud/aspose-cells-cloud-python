@@ -31,21 +31,21 @@ class SplitWorkbookTaskParameter(TaskParameter):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'workbook': 'FileSource',
-        'destination_file_position': 'FileSource',
         'destination_file_format': 'str',
-        'split_name_rule': 'str',
+        'destination_file_position': 'FileSource',
         'vertical_resolution': 'int',
-        'horizontal_resolution': 'int'
+        'horizontal_resolution': 'int',
+        'split_name_rule': 'str',
+        'workbook': 'FileSource'
     }
 
     attribute_map = {
-        'workbook': 'Workbook',
-        'destination_file_position': 'DestinationFilePosition',
         'destination_file_format': 'DestinationFileFormat',
-        'split_name_rule': 'SplitNameRule',
+        'destination_file_position': 'DestinationFilePosition',
         'vertical_resolution': 'VerticalResolution',
-        'horizontal_resolution': 'HorizontalResolution'
+        'horizontal_resolution': 'HorizontalResolution',
+        'split_name_rule': 'SplitNameRule',
+        'workbook': 'Workbook'
     }
     
     @staticmethod
@@ -61,74 +61,32 @@ class SplitWorkbookTaskParameter(TaskParameter):
             return self.container[attr]
         return None
 
-    def __init__(self, workbook=None, destination_file_position=None, destination_file_format=None, split_name_rule=None, vertical_resolution=None, horizontal_resolution=None, **kw):
+    def __init__(self, destination_file_format=None, destination_file_position=None, vertical_resolution=None, horizontal_resolution=None, split_name_rule=None, workbook=None, **kw):
         super(SplitWorkbookTaskParameter, self).__init__(**kw)
 		    
         """
         SplitWorkbookTaskParameter - a model defined in Swagger
         """
 
-        self.container['workbook'] = None
-        self.container['destination_file_position'] = None
         self.container['destination_file_format'] = None
-        self.container['split_name_rule'] = None
+        self.container['destination_file_position'] = None
         self.container['vertical_resolution'] = None
         self.container['horizontal_resolution'] = None
+        self.container['split_name_rule'] = None
+        self.container['workbook'] = None
 
-        if workbook is not None:
-          self.workbook = workbook
-        if destination_file_position is not None:
-          self.destination_file_position = destination_file_position
         if destination_file_format is not None:
           self.destination_file_format = destination_file_format
-        if split_name_rule is not None:
-          self.split_name_rule = split_name_rule
+        if destination_file_position is not None:
+          self.destination_file_position = destination_file_position
         if vertical_resolution is not None:
           self.vertical_resolution = vertical_resolution
         if horizontal_resolution is not None:
           self.horizontal_resolution = horizontal_resolution
-
-    @property
-    def workbook(self):
-        """
-        Gets the workbook of this SplitWorkbookTaskParameter.
-
-        :return: The workbook of this SplitWorkbookTaskParameter.
-        :rtype: FileSource
-        """
-        return self.container['workbook']
-
-    @workbook.setter
-    def workbook(self, workbook):
-        """
-        Sets the workbook of this SplitWorkbookTaskParameter.
-
-        :param workbook: The workbook of this SplitWorkbookTaskParameter.
-        :type: FileSource
-        """
-
-        self.container['workbook'] = workbook
-
-    @property
-    def destination_file_position(self):
-        """
-        Gets the destination_file_position of this SplitWorkbookTaskParameter.
-
-        :return: The destination_file_position of this SplitWorkbookTaskParameter.
-        :rtype: FileSource
-        """
-        return self.container['destination_file_position']
-
-    @destination_file_position.setter
-    def destination_file_position(self, destination_file_position):
-        """
-        Sets the destination_file_position of this SplitWorkbookTaskParameter.
-
-        :param destination_file_position: The destination_file_position of this SplitWorkbookTaskParameter.
-        :type: FileSource
-        """
-
-        self.container['destination_file_position'] = destination_file_position
+        if split_name_rule is not None:
+          self.split_name_rule = split_name_rule
+        if workbook is not None:
+          self.workbook = workbook
 
     @property
     def destination_file_format(self):
@@ -152,25 +110,25 @@ class SplitWorkbookTaskParameter(TaskParameter):
         self.container['destination_file_format'] = destination_file_format
 
     @property
-    def split_name_rule(self):
+    def destination_file_position(self):
         """
-        Gets the split_name_rule of this SplitWorkbookTaskParameter.
+        Gets the destination_file_position of this SplitWorkbookTaskParameter.
 
-        :return: The split_name_rule of this SplitWorkbookTaskParameter.
-        :rtype: str
+        :return: The destination_file_position of this SplitWorkbookTaskParameter.
+        :rtype: FileSource
         """
-        return self.container['split_name_rule']
+        return self.container['destination_file_position']
 
-    @split_name_rule.setter
-    def split_name_rule(self, split_name_rule):
+    @destination_file_position.setter
+    def destination_file_position(self, destination_file_position):
         """
-        Sets the split_name_rule of this SplitWorkbookTaskParameter.
+        Sets the destination_file_position of this SplitWorkbookTaskParameter.
 
-        :param split_name_rule: The split_name_rule of this SplitWorkbookTaskParameter.
-        :type: str
+        :param destination_file_position: The destination_file_position of this SplitWorkbookTaskParameter.
+        :type: FileSource
         """
 
-        self.container['split_name_rule'] = split_name_rule
+        self.container['destination_file_position'] = destination_file_position
 
     @property
     def vertical_resolution(self):
@@ -213,6 +171,48 @@ class SplitWorkbookTaskParameter(TaskParameter):
         """
 
         self.container['horizontal_resolution'] = horizontal_resolution
+
+    @property
+    def split_name_rule(self):
+        """
+        Gets the split_name_rule of this SplitWorkbookTaskParameter.
+
+        :return: The split_name_rule of this SplitWorkbookTaskParameter.
+        :rtype: str
+        """
+        return self.container['split_name_rule']
+
+    @split_name_rule.setter
+    def split_name_rule(self, split_name_rule):
+        """
+        Sets the split_name_rule of this SplitWorkbookTaskParameter.
+
+        :param split_name_rule: The split_name_rule of this SplitWorkbookTaskParameter.
+        :type: str
+        """
+
+        self.container['split_name_rule'] = split_name_rule
+
+    @property
+    def workbook(self):
+        """
+        Gets the workbook of this SplitWorkbookTaskParameter.
+
+        :return: The workbook of this SplitWorkbookTaskParameter.
+        :rtype: FileSource
+        """
+        return self.container['workbook']
+
+    @workbook.setter
+    def workbook(self, workbook):
+        """
+        Sets the workbook of this SplitWorkbookTaskParameter.
+
+        :param workbook: The workbook of this SplitWorkbookTaskParameter.
+        :type: FileSource
+        """
+
+        self.container['workbook'] = workbook
 
     def to_dict(self):
         """

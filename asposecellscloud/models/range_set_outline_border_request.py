@@ -31,17 +31,17 @@ class RangeSetOutlineBorderRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'border_color': 'Color',
         'range': 'Range',
-        'border_edge': 'str',
         'border_style': 'str',
-        'border_color': 'Color'
+        'border_edge': 'str'
     }
 
     attribute_map = {
+        'border_color': 'borderColor',
         'range': 'Range',
-        'border_edge': 'borderEdge',
         'border_style': 'borderStyle',
-        'border_color': 'borderColor'
+        'border_edge': 'borderEdge'
     }
     
     @staticmethod
@@ -57,7 +57,7 @@ class RangeSetOutlineBorderRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self, range=None, border_edge=None, border_style=None, border_color=None, **kw):
+    def __init__(self, border_color=None, range=None, border_style=None, border_edge=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -67,19 +67,40 @@ class RangeSetOutlineBorderRequest(object):
         RangeSetOutlineBorderRequest - a model defined in Swagger
         """
 
-        self.container['range'] = None
-        self.container['border_edge'] = None
-        self.container['border_style'] = None
         self.container['border_color'] = None
+        self.container['range'] = None
+        self.container['border_style'] = None
+        self.container['border_edge'] = None
 
-        if range is not None:
-          self.range = range
-        if border_edge is not None:
-          self.border_edge = border_edge
-        if border_style is not None:
-          self.border_style = border_style
         if border_color is not None:
           self.border_color = border_color
+        if range is not None:
+          self.range = range
+        if border_style is not None:
+          self.border_style = border_style
+        if border_edge is not None:
+          self.border_edge = border_edge
+
+    @property
+    def border_color(self):
+        """
+        Gets the border_color of this RangeSetOutlineBorderRequest.
+
+        :return: The border_color of this RangeSetOutlineBorderRequest.
+        :rtype: Color
+        """
+        return self.container['border_color']
+
+    @border_color.setter
+    def border_color(self, border_color):
+        """
+        Sets the border_color of this RangeSetOutlineBorderRequest.
+
+        :param border_color: The border_color of this RangeSetOutlineBorderRequest.
+        :type: Color
+        """
+
+        self.container['border_color'] = border_color
 
     @property
     def range(self):
@@ -103,27 +124,6 @@ class RangeSetOutlineBorderRequest(object):
         self.container['range'] = range
 
     @property
-    def border_edge(self):
-        """
-        Gets the border_edge of this RangeSetOutlineBorderRequest.
-
-        :return: The border_edge of this RangeSetOutlineBorderRequest.
-        :rtype: str
-        """
-        return self.container['border_edge']
-
-    @border_edge.setter
-    def border_edge(self, border_edge):
-        """
-        Sets the border_edge of this RangeSetOutlineBorderRequest.
-
-        :param border_edge: The border_edge of this RangeSetOutlineBorderRequest.
-        :type: str
-        """
-
-        self.container['border_edge'] = border_edge
-
-    @property
     def border_style(self):
         """
         Gets the border_style of this RangeSetOutlineBorderRequest.
@@ -145,25 +145,25 @@ class RangeSetOutlineBorderRequest(object):
         self.container['border_style'] = border_style
 
     @property
-    def border_color(self):
+    def border_edge(self):
         """
-        Gets the border_color of this RangeSetOutlineBorderRequest.
+        Gets the border_edge of this RangeSetOutlineBorderRequest.
 
-        :return: The border_color of this RangeSetOutlineBorderRequest.
-        :rtype: Color
+        :return: The border_edge of this RangeSetOutlineBorderRequest.
+        :rtype: str
         """
-        return self.container['border_color']
+        return self.container['border_edge']
 
-    @border_color.setter
-    def border_color(self, border_color):
+    @border_edge.setter
+    def border_edge(self, border_edge):
         """
-        Sets the border_color of this RangeSetOutlineBorderRequest.
+        Sets the border_edge of this RangeSetOutlineBorderRequest.
 
-        :param border_color: The border_color of this RangeSetOutlineBorderRequest.
-        :type: Color
+        :param border_edge: The border_edge of this RangeSetOutlineBorderRequest.
+        :type: str
         """
 
-        self.container['border_color'] = border_color
+        self.container['border_edge'] = border_edge
 
     def to_dict(self):
         """

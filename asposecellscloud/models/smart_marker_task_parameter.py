@@ -32,14 +32,14 @@ class SmartMarkerTaskParameter(TaskParameter):
     """
     swagger_types = {
         'source_workbook': 'FileSource',
-        'destination_workbook': 'FileSource',
-        'xml_file': 'FileSource'
+        'xml_file': 'FileSource',
+        'destination_workbook': 'FileSource'
     }
 
     attribute_map = {
         'source_workbook': 'SourceWorkbook',
-        'destination_workbook': 'DestinationWorkbook',
-        'xml_file': 'xmlFile'
+        'xml_file': 'xmlFile',
+        'destination_workbook': 'DestinationWorkbook'
     }
     
     @staticmethod
@@ -55,7 +55,7 @@ class SmartMarkerTaskParameter(TaskParameter):
             return self.container[attr]
         return None
 
-    def __init__(self, source_workbook=None, destination_workbook=None, xml_file=None, **kw):
+    def __init__(self, source_workbook=None, xml_file=None, destination_workbook=None, **kw):
         super(SmartMarkerTaskParameter, self).__init__(**kw)
 		    
         """
@@ -63,15 +63,15 @@ class SmartMarkerTaskParameter(TaskParameter):
         """
 
         self.container['source_workbook'] = None
-        self.container['destination_workbook'] = None
         self.container['xml_file'] = None
+        self.container['destination_workbook'] = None
 
         if source_workbook is not None:
           self.source_workbook = source_workbook
-        if destination_workbook is not None:
-          self.destination_workbook = destination_workbook
         if xml_file is not None:
           self.xml_file = xml_file
+        if destination_workbook is not None:
+          self.destination_workbook = destination_workbook
 
     @property
     def source_workbook(self):
@@ -95,27 +95,6 @@ class SmartMarkerTaskParameter(TaskParameter):
         self.container['source_workbook'] = source_workbook
 
     @property
-    def destination_workbook(self):
-        """
-        Gets the destination_workbook of this SmartMarkerTaskParameter.
-
-        :return: The destination_workbook of this SmartMarkerTaskParameter.
-        :rtype: FileSource
-        """
-        return self.container['destination_workbook']
-
-    @destination_workbook.setter
-    def destination_workbook(self, destination_workbook):
-        """
-        Sets the destination_workbook of this SmartMarkerTaskParameter.
-
-        :param destination_workbook: The destination_workbook of this SmartMarkerTaskParameter.
-        :type: FileSource
-        """
-
-        self.container['destination_workbook'] = destination_workbook
-
-    @property
     def xml_file(self):
         """
         Gets the xml_file of this SmartMarkerTaskParameter.
@@ -135,6 +114,27 @@ class SmartMarkerTaskParameter(TaskParameter):
         """
 
         self.container['xml_file'] = xml_file
+
+    @property
+    def destination_workbook(self):
+        """
+        Gets the destination_workbook of this SmartMarkerTaskParameter.
+
+        :return: The destination_workbook of this SmartMarkerTaskParameter.
+        :rtype: FileSource
+        """
+        return self.container['destination_workbook']
+
+    @destination_workbook.setter
+    def destination_workbook(self, destination_workbook):
+        """
+        Sets the destination_workbook of this SmartMarkerTaskParameter.
+
+        :param destination_workbook: The destination_workbook of this SmartMarkerTaskParameter.
+        :type: FileSource
+        """
+
+        self.container['destination_workbook'] = destination_workbook
 
     def to_dict(self):
         """

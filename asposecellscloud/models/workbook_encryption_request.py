@@ -31,15 +31,15 @@ class WorkbookEncryptionRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'encryption_type': 'str',
+        'password': 'str',
         'key_length': 'int',
-        'password': 'str'
+        'encryption_type': 'str'
     }
 
     attribute_map = {
-        'encryption_type': 'EncryptionType',
+        'password': 'Password',
         'key_length': 'KeyLength',
-        'password': 'Password'
+        'encryption_type': 'EncryptionType'
     }
     
     @staticmethod
@@ -55,7 +55,7 @@ class WorkbookEncryptionRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self, encryption_type=None, key_length=None, password=None, **kw):
+    def __init__(self, password=None, key_length=None, encryption_type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -65,38 +65,38 @@ class WorkbookEncryptionRequest(object):
         WorkbookEncryptionRequest - a model defined in Swagger
         """
 
-        self.container['encryption_type'] = None
-        self.container['key_length'] = None
         self.container['password'] = None
+        self.container['key_length'] = None
+        self.container['encryption_type'] = None
 
-        if encryption_type is not None:
-          self.encryption_type = encryption_type
-        self.key_length = key_length
         if password is not None:
           self.password = password
+        self.key_length = key_length
+        if encryption_type is not None:
+          self.encryption_type = encryption_type
 
     @property
-    def encryption_type(self):
+    def password(self):
         """
-        Gets the encryption_type of this WorkbookEncryptionRequest.
-        Workbook encription type.
+        Gets the password of this WorkbookEncryptionRequest.
+        Encription password.
 
-        :return: The encryption_type of this WorkbookEncryptionRequest.
+        :return: The password of this WorkbookEncryptionRequest.
         :rtype: str
         """
-        return self.container['encryption_type']
+        return self.container['password']
 
-    @encryption_type.setter
-    def encryption_type(self, encryption_type):
+    @password.setter
+    def password(self, password):
         """
-        Sets the encryption_type of this WorkbookEncryptionRequest.
-        Workbook encription type.
+        Sets the password of this WorkbookEncryptionRequest.
+        Encription password.
 
-        :param encryption_type: The encryption_type of this WorkbookEncryptionRequest.
+        :param password: The password of this WorkbookEncryptionRequest.
         :type: str
         """
 
-        self.container['encryption_type'] = encryption_type
+        self.container['password'] = password
 
     @property
     def key_length(self):
@@ -126,27 +126,27 @@ class WorkbookEncryptionRequest(object):
         self.container['key_length'] = key_length
 
     @property
-    def password(self):
+    def encryption_type(self):
         """
-        Gets the password of this WorkbookEncryptionRequest.
-        Encription password.
+        Gets the encryption_type of this WorkbookEncryptionRequest.
+        Workbook encription type.
 
-        :return: The password of this WorkbookEncryptionRequest.
+        :return: The encryption_type of this WorkbookEncryptionRequest.
         :rtype: str
         """
-        return self.container['password']
+        return self.container['encryption_type']
 
-    @password.setter
-    def password(self, password):
+    @encryption_type.setter
+    def encryption_type(self, encryption_type):
         """
-        Sets the password of this WorkbookEncryptionRequest.
-        Encription password.
+        Sets the encryption_type of this WorkbookEncryptionRequest.
+        Workbook encription type.
 
-        :param password: The password of this WorkbookEncryptionRequest.
+        :param encryption_type: The encryption_type of this WorkbookEncryptionRequest.
         :type: str
         """
 
-        self.container['password'] = password
+        self.container['encryption_type'] = encryption_type
 
     def to_dict(self):
         """

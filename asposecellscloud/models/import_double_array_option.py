@@ -31,17 +31,17 @@ class ImportDoubleArrayOption(ImportOption):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'first_row': 'int',
-        'first_column': 'int',
+        'data': 'list[float]',
         'is_vertical': 'bool',
-        'data': 'list[float]'
+        'first_row': 'int',
+        'first_column': 'int'
     }
 
     attribute_map = {
-        'first_row': 'FirstRow',
-        'first_column': 'FirstColumn',
+        'data': 'Data',
         'is_vertical': 'IsVertical',
-        'data': 'Data'
+        'first_row': 'FirstRow',
+        'first_column': 'FirstColumn'
     }
     
     @staticmethod
@@ -57,26 +57,68 @@ class ImportDoubleArrayOption(ImportOption):
             return self.container[attr]
         return None
 
-    def __init__(self, first_row=None, first_column=None, is_vertical=None, data=None, **kw):
+    def __init__(self, data=None, is_vertical=None, first_row=None, first_column=None, **kw):
         super(ImportDoubleArrayOption, self).__init__(**kw)
 		    
         """
         ImportDoubleArrayOption - a model defined in Swagger
         """
 
+        self.container['data'] = None
+        self.container['is_vertical'] = None
         self.container['first_row'] = None
         self.container['first_column'] = None
-        self.container['is_vertical'] = None
-        self.container['data'] = None
 
+        if data is not None:
+          self.data = data
+        if is_vertical is not None:
+          self.is_vertical = is_vertical
         if first_row is not None:
           self.first_row = first_row
         if first_column is not None:
           self.first_column = first_column
-        if is_vertical is not None:
-          self.is_vertical = is_vertical
-        if data is not None:
-          self.data = data
+
+    @property
+    def data(self):
+        """
+        Gets the data of this ImportDoubleArrayOption.
+
+        :return: The data of this ImportDoubleArrayOption.
+        :rtype: list[float]
+        """
+        return self.container['data']
+
+    @data.setter
+    def data(self, data):
+        """
+        Sets the data of this ImportDoubleArrayOption.
+
+        :param data: The data of this ImportDoubleArrayOption.
+        :type: list[float]
+        """
+
+        self.container['data'] = data
+
+    @property
+    def is_vertical(self):
+        """
+        Gets the is_vertical of this ImportDoubleArrayOption.
+
+        :return: The is_vertical of this ImportDoubleArrayOption.
+        :rtype: bool
+        """
+        return self.container['is_vertical']
+
+    @is_vertical.setter
+    def is_vertical(self, is_vertical):
+        """
+        Sets the is_vertical of this ImportDoubleArrayOption.
+
+        :param is_vertical: The is_vertical of this ImportDoubleArrayOption.
+        :type: bool
+        """
+
+        self.container['is_vertical'] = is_vertical
 
     @property
     def first_row(self):
@@ -119,48 +161,6 @@ class ImportDoubleArrayOption(ImportOption):
         """
 
         self.container['first_column'] = first_column
-
-    @property
-    def is_vertical(self):
-        """
-        Gets the is_vertical of this ImportDoubleArrayOption.
-
-        :return: The is_vertical of this ImportDoubleArrayOption.
-        :rtype: bool
-        """
-        return self.container['is_vertical']
-
-    @is_vertical.setter
-    def is_vertical(self, is_vertical):
-        """
-        Sets the is_vertical of this ImportDoubleArrayOption.
-
-        :param is_vertical: The is_vertical of this ImportDoubleArrayOption.
-        :type: bool
-        """
-
-        self.container['is_vertical'] = is_vertical
-
-    @property
-    def data(self):
-        """
-        Gets the data of this ImportDoubleArrayOption.
-
-        :return: The data of this ImportDoubleArrayOption.
-        :rtype: list[float]
-        """
-        return self.container['data']
-
-    @data.setter
-    def data(self, data):
-        """
-        Sets the data of this ImportDoubleArrayOption.
-
-        :param data: The data of this ImportDoubleArrayOption.
-        :type: list[float]
-        """
-
-        self.container['data'] = data
 
     def to_dict(self):
         """

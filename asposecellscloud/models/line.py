@@ -31,47 +31,47 @@ class Line(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'style': 'str',
+        'is_auto': 'bool',
         'begin_arrow_length': 'str',
-        'begin_arrow_width': 'str',
-        'begin_type': 'str',
-        'cap_type': 'str',
+        'weight': 'str',
+        'gradient_fill': 'GradientFill',
         'color': 'Color',
         'compound_type': 'str',
-        'dash_type': 'str',
-        'end_arrow_length': 'str',
-        'end_arrow_width': 'str',
-        'end_type': 'str',
-        'gradient_fill': 'GradientFill',
-        'is_auto': 'bool',
-        'is_automatic_color': 'bool',
+        'weight_pt': 'float',
         'is_visible': 'bool',
         'join_type': 'str',
-        'style': 'str',
-        'transparency': 'float',
-        'weight': 'str',
-        'weight_pt': 'float'
+        'end_arrow_length': 'str',
+        'is_automatic_color': 'bool',
+        'dash_type': 'str',
+        'begin_type': 'str',
+        'cap_type': 'str',
+        'end_type': 'str',
+        'begin_arrow_width': 'str',
+        'end_arrow_width': 'str',
+        'transparency': 'float'
     }
 
     attribute_map = {
+        'style': 'Style',
+        'is_auto': 'IsAuto',
         'begin_arrow_length': 'BeginArrowLength',
-        'begin_arrow_width': 'BeginArrowWidth',
-        'begin_type': 'BeginType',
-        'cap_type': 'CapType',
+        'weight': 'Weight',
+        'gradient_fill': 'GradientFill',
         'color': 'Color',
         'compound_type': 'CompoundType',
-        'dash_type': 'DashType',
-        'end_arrow_length': 'EndArrowLength',
-        'end_arrow_width': 'EndArrowWidth',
-        'end_type': 'EndType',
-        'gradient_fill': 'GradientFill',
-        'is_auto': 'IsAuto',
-        'is_automatic_color': 'IsAutomaticColor',
+        'weight_pt': 'WeightPt',
         'is_visible': 'IsVisible',
         'join_type': 'JoinType',
-        'style': 'Style',
-        'transparency': 'Transparency',
-        'weight': 'Weight',
-        'weight_pt': 'WeightPt'
+        'end_arrow_length': 'EndArrowLength',
+        'is_automatic_color': 'IsAutomaticColor',
+        'dash_type': 'DashType',
+        'begin_type': 'BeginType',
+        'cap_type': 'CapType',
+        'end_type': 'EndType',
+        'begin_arrow_width': 'BeginArrowWidth',
+        'end_arrow_width': 'EndArrowWidth',
+        'transparency': 'Transparency'
     }
     
     @staticmethod
@@ -87,7 +87,7 @@ class Line(object):
             return self.container[attr]
         return None
 
-    def __init__(self, begin_arrow_length=None, begin_arrow_width=None, begin_type=None, cap_type=None, color=None, compound_type=None, dash_type=None, end_arrow_length=None, end_arrow_width=None, end_type=None, gradient_fill=None, is_auto=None, is_automatic_color=None, is_visible=None, join_type=None, style=None, transparency=None, weight=None, weight_pt=None, **kw):
+    def __init__(self, style=None, is_auto=None, begin_arrow_length=None, weight=None, gradient_fill=None, color=None, compound_type=None, weight_pt=None, is_visible=None, join_type=None, end_arrow_length=None, is_automatic_color=None, dash_type=None, begin_type=None, cap_type=None, end_type=None, begin_arrow_width=None, end_arrow_width=None, transparency=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -97,64 +97,106 @@ class Line(object):
         Line - a model defined in Swagger
         """
 
+        self.container['style'] = None
+        self.container['is_auto'] = None
         self.container['begin_arrow_length'] = None
-        self.container['begin_arrow_width'] = None
-        self.container['begin_type'] = None
-        self.container['cap_type'] = None
+        self.container['weight'] = None
+        self.container['gradient_fill'] = None
         self.container['color'] = None
         self.container['compound_type'] = None
-        self.container['dash_type'] = None
-        self.container['end_arrow_length'] = None
-        self.container['end_arrow_width'] = None
-        self.container['end_type'] = None
-        self.container['gradient_fill'] = None
-        self.container['is_auto'] = None
-        self.container['is_automatic_color'] = None
+        self.container['weight_pt'] = None
         self.container['is_visible'] = None
         self.container['join_type'] = None
-        self.container['style'] = None
+        self.container['end_arrow_length'] = None
+        self.container['is_automatic_color'] = None
+        self.container['dash_type'] = None
+        self.container['begin_type'] = None
+        self.container['cap_type'] = None
+        self.container['end_type'] = None
+        self.container['begin_arrow_width'] = None
+        self.container['end_arrow_width'] = None
         self.container['transparency'] = None
-        self.container['weight'] = None
-        self.container['weight_pt'] = None
 
+        if style is not None:
+          self.style = style
+        if is_auto is not None:
+          self.is_auto = is_auto
         if begin_arrow_length is not None:
           self.begin_arrow_length = begin_arrow_length
-        if begin_arrow_width is not None:
-          self.begin_arrow_width = begin_arrow_width
-        if begin_type is not None:
-          self.begin_type = begin_type
-        if cap_type is not None:
-          self.cap_type = cap_type
+        if weight is not None:
+          self.weight = weight
+        if gradient_fill is not None:
+          self.gradient_fill = gradient_fill
         if color is not None:
           self.color = color
         if compound_type is not None:
           self.compound_type = compound_type
-        if dash_type is not None:
-          self.dash_type = dash_type
-        if end_arrow_length is not None:
-          self.end_arrow_length = end_arrow_length
-        if end_arrow_width is not None:
-          self.end_arrow_width = end_arrow_width
-        if end_type is not None:
-          self.end_type = end_type
-        if gradient_fill is not None:
-          self.gradient_fill = gradient_fill
-        if is_auto is not None:
-          self.is_auto = is_auto
-        if is_automatic_color is not None:
-          self.is_automatic_color = is_automatic_color
+        if weight_pt is not None:
+          self.weight_pt = weight_pt
         if is_visible is not None:
           self.is_visible = is_visible
         if join_type is not None:
           self.join_type = join_type
-        if style is not None:
-          self.style = style
+        if end_arrow_length is not None:
+          self.end_arrow_length = end_arrow_length
+        if is_automatic_color is not None:
+          self.is_automatic_color = is_automatic_color
+        if dash_type is not None:
+          self.dash_type = dash_type
+        if begin_type is not None:
+          self.begin_type = begin_type
+        if cap_type is not None:
+          self.cap_type = cap_type
+        if end_type is not None:
+          self.end_type = end_type
+        if begin_arrow_width is not None:
+          self.begin_arrow_width = begin_arrow_width
+        if end_arrow_width is not None:
+          self.end_arrow_width = end_arrow_width
         if transparency is not None:
           self.transparency = transparency
-        if weight is not None:
-          self.weight = weight
-        if weight_pt is not None:
-          self.weight_pt = weight_pt
+
+    @property
+    def style(self):
+        """
+        Gets the style of this Line.
+
+        :return: The style of this Line.
+        :rtype: str
+        """
+        return self.container['style']
+
+    @style.setter
+    def style(self, style):
+        """
+        Sets the style of this Line.
+
+        :param style: The style of this Line.
+        :type: str
+        """
+
+        self.container['style'] = style
+
+    @property
+    def is_auto(self):
+        """
+        Gets the is_auto of this Line.
+
+        :return: The is_auto of this Line.
+        :rtype: bool
+        """
+        return self.container['is_auto']
+
+    @is_auto.setter
+    def is_auto(self, is_auto):
+        """
+        Sets the is_auto of this Line.
+
+        :param is_auto: The is_auto of this Line.
+        :type: bool
+        """
+
+        self.container['is_auto'] = is_auto
 
     @property
     def begin_arrow_length(self):
@@ -178,67 +220,46 @@ class Line(object):
         self.container['begin_arrow_length'] = begin_arrow_length
 
     @property
-    def begin_arrow_width(self):
+    def weight(self):
         """
-        Gets the begin_arrow_width of this Line.
+        Gets the weight of this Line.
 
-        :return: The begin_arrow_width of this Line.
+        :return: The weight of this Line.
         :rtype: str
         """
-        return self.container['begin_arrow_width']
+        return self.container['weight']
 
-    @begin_arrow_width.setter
-    def begin_arrow_width(self, begin_arrow_width):
+    @weight.setter
+    def weight(self, weight):
         """
-        Sets the begin_arrow_width of this Line.
+        Sets the weight of this Line.
 
-        :param begin_arrow_width: The begin_arrow_width of this Line.
+        :param weight: The weight of this Line.
         :type: str
         """
 
-        self.container['begin_arrow_width'] = begin_arrow_width
+        self.container['weight'] = weight
 
     @property
-    def begin_type(self):
+    def gradient_fill(self):
         """
-        Gets the begin_type of this Line.
+        Gets the gradient_fill of this Line.
 
-        :return: The begin_type of this Line.
-        :rtype: str
+        :return: The gradient_fill of this Line.
+        :rtype: GradientFill
         """
-        return self.container['begin_type']
+        return self.container['gradient_fill']
 
-    @begin_type.setter
-    def begin_type(self, begin_type):
+    @gradient_fill.setter
+    def gradient_fill(self, gradient_fill):
         """
-        Sets the begin_type of this Line.
+        Sets the gradient_fill of this Line.
 
-        :param begin_type: The begin_type of this Line.
-        :type: str
-        """
-
-        self.container['begin_type'] = begin_type
-
-    @property
-    def cap_type(self):
-        """
-        Gets the cap_type of this Line.
-
-        :return: The cap_type of this Line.
-        :rtype: str
-        """
-        return self.container['cap_type']
-
-    @cap_type.setter
-    def cap_type(self, cap_type):
-        """
-        Sets the cap_type of this Line.
-
-        :param cap_type: The cap_type of this Line.
-        :type: str
+        :param gradient_fill: The gradient_fill of this Line.
+        :type: GradientFill
         """
 
-        self.container['cap_type'] = cap_type
+        self.container['gradient_fill'] = gradient_fill
 
     @property
     def color(self):
@@ -283,151 +304,25 @@ class Line(object):
         self.container['compound_type'] = compound_type
 
     @property
-    def dash_type(self):
+    def weight_pt(self):
         """
-        Gets the dash_type of this Line.
+        Gets the weight_pt of this Line.
 
-        :return: The dash_type of this Line.
-        :rtype: str
+        :return: The weight_pt of this Line.
+        :rtype: float
         """
-        return self.container['dash_type']
+        return self.container['weight_pt']
 
-    @dash_type.setter
-    def dash_type(self, dash_type):
+    @weight_pt.setter
+    def weight_pt(self, weight_pt):
         """
-        Sets the dash_type of this Line.
+        Sets the weight_pt of this Line.
 
-        :param dash_type: The dash_type of this Line.
-        :type: str
-        """
-
-        self.container['dash_type'] = dash_type
-
-    @property
-    def end_arrow_length(self):
-        """
-        Gets the end_arrow_length of this Line.
-
-        :return: The end_arrow_length of this Line.
-        :rtype: str
-        """
-        return self.container['end_arrow_length']
-
-    @end_arrow_length.setter
-    def end_arrow_length(self, end_arrow_length):
-        """
-        Sets the end_arrow_length of this Line.
-
-        :param end_arrow_length: The end_arrow_length of this Line.
-        :type: str
+        :param weight_pt: The weight_pt of this Line.
+        :type: float
         """
 
-        self.container['end_arrow_length'] = end_arrow_length
-
-    @property
-    def end_arrow_width(self):
-        """
-        Gets the end_arrow_width of this Line.
-
-        :return: The end_arrow_width of this Line.
-        :rtype: str
-        """
-        return self.container['end_arrow_width']
-
-    @end_arrow_width.setter
-    def end_arrow_width(self, end_arrow_width):
-        """
-        Sets the end_arrow_width of this Line.
-
-        :param end_arrow_width: The end_arrow_width of this Line.
-        :type: str
-        """
-
-        self.container['end_arrow_width'] = end_arrow_width
-
-    @property
-    def end_type(self):
-        """
-        Gets the end_type of this Line.
-
-        :return: The end_type of this Line.
-        :rtype: str
-        """
-        return self.container['end_type']
-
-    @end_type.setter
-    def end_type(self, end_type):
-        """
-        Sets the end_type of this Line.
-
-        :param end_type: The end_type of this Line.
-        :type: str
-        """
-
-        self.container['end_type'] = end_type
-
-    @property
-    def gradient_fill(self):
-        """
-        Gets the gradient_fill of this Line.
-
-        :return: The gradient_fill of this Line.
-        :rtype: GradientFill
-        """
-        return self.container['gradient_fill']
-
-    @gradient_fill.setter
-    def gradient_fill(self, gradient_fill):
-        """
-        Sets the gradient_fill of this Line.
-
-        :param gradient_fill: The gradient_fill of this Line.
-        :type: GradientFill
-        """
-
-        self.container['gradient_fill'] = gradient_fill
-
-    @property
-    def is_auto(self):
-        """
-        Gets the is_auto of this Line.
-
-        :return: The is_auto of this Line.
-        :rtype: bool
-        """
-        return self.container['is_auto']
-
-    @is_auto.setter
-    def is_auto(self, is_auto):
-        """
-        Sets the is_auto of this Line.
-
-        :param is_auto: The is_auto of this Line.
-        :type: bool
-        """
-
-        self.container['is_auto'] = is_auto
-
-    @property
-    def is_automatic_color(self):
-        """
-        Gets the is_automatic_color of this Line.
-
-        :return: The is_automatic_color of this Line.
-        :rtype: bool
-        """
-        return self.container['is_automatic_color']
-
-    @is_automatic_color.setter
-    def is_automatic_color(self, is_automatic_color):
-        """
-        Sets the is_automatic_color of this Line.
-
-        :param is_automatic_color: The is_automatic_color of this Line.
-        :type: bool
-        """
-
-        self.container['is_automatic_color'] = is_automatic_color
+        self.container['weight_pt'] = weight_pt
 
     @property
     def is_visible(self):
@@ -472,25 +367,172 @@ class Line(object):
         self.container['join_type'] = join_type
 
     @property
-    def style(self):
+    def end_arrow_length(self):
         """
-        Gets the style of this Line.
+        Gets the end_arrow_length of this Line.
 
-        :return: The style of this Line.
+        :return: The end_arrow_length of this Line.
         :rtype: str
         """
-        return self.container['style']
+        return self.container['end_arrow_length']
 
-    @style.setter
-    def style(self, style):
+    @end_arrow_length.setter
+    def end_arrow_length(self, end_arrow_length):
         """
-        Sets the style of this Line.
+        Sets the end_arrow_length of this Line.
 
-        :param style: The style of this Line.
+        :param end_arrow_length: The end_arrow_length of this Line.
         :type: str
         """
 
-        self.container['style'] = style
+        self.container['end_arrow_length'] = end_arrow_length
+
+    @property
+    def is_automatic_color(self):
+        """
+        Gets the is_automatic_color of this Line.
+
+        :return: The is_automatic_color of this Line.
+        :rtype: bool
+        """
+        return self.container['is_automatic_color']
+
+    @is_automatic_color.setter
+    def is_automatic_color(self, is_automatic_color):
+        """
+        Sets the is_automatic_color of this Line.
+
+        :param is_automatic_color: The is_automatic_color of this Line.
+        :type: bool
+        """
+
+        self.container['is_automatic_color'] = is_automatic_color
+
+    @property
+    def dash_type(self):
+        """
+        Gets the dash_type of this Line.
+
+        :return: The dash_type of this Line.
+        :rtype: str
+        """
+        return self.container['dash_type']
+
+    @dash_type.setter
+    def dash_type(self, dash_type):
+        """
+        Sets the dash_type of this Line.
+
+        :param dash_type: The dash_type of this Line.
+        :type: str
+        """
+
+        self.container['dash_type'] = dash_type
+
+    @property
+    def begin_type(self):
+        """
+        Gets the begin_type of this Line.
+
+        :return: The begin_type of this Line.
+        :rtype: str
+        """
+        return self.container['begin_type']
+
+    @begin_type.setter
+    def begin_type(self, begin_type):
+        """
+        Sets the begin_type of this Line.
+
+        :param begin_type: The begin_type of this Line.
+        :type: str
+        """
+
+        self.container['begin_type'] = begin_type
+
+    @property
+    def cap_type(self):
+        """
+        Gets the cap_type of this Line.
+
+        :return: The cap_type of this Line.
+        :rtype: str
+        """
+        return self.container['cap_type']
+
+    @cap_type.setter
+    def cap_type(self, cap_type):
+        """
+        Sets the cap_type of this Line.
+
+        :param cap_type: The cap_type of this Line.
+        :type: str
+        """
+
+        self.container['cap_type'] = cap_type
+
+    @property
+    def end_type(self):
+        """
+        Gets the end_type of this Line.
+
+        :return: The end_type of this Line.
+        :rtype: str
+        """
+        return self.container['end_type']
+
+    @end_type.setter
+    def end_type(self, end_type):
+        """
+        Sets the end_type of this Line.
+
+        :param end_type: The end_type of this Line.
+        :type: str
+        """
+
+        self.container['end_type'] = end_type
+
+    @property
+    def begin_arrow_width(self):
+        """
+        Gets the begin_arrow_width of this Line.
+
+        :return: The begin_arrow_width of this Line.
+        :rtype: str
+        """
+        return self.container['begin_arrow_width']
+
+    @begin_arrow_width.setter
+    def begin_arrow_width(self, begin_arrow_width):
+        """
+        Sets the begin_arrow_width of this Line.
+
+        :param begin_arrow_width: The begin_arrow_width of this Line.
+        :type: str
+        """
+
+        self.container['begin_arrow_width'] = begin_arrow_width
+
+    @property
+    def end_arrow_width(self):
+        """
+        Gets the end_arrow_width of this Line.
+
+        :return: The end_arrow_width of this Line.
+        :rtype: str
+        """
+        return self.container['end_arrow_width']
+
+    @end_arrow_width.setter
+    def end_arrow_width(self, end_arrow_width):
+        """
+        Sets the end_arrow_width of this Line.
+
+        :param end_arrow_width: The end_arrow_width of this Line.
+        :type: str
+        """
+
+        self.container['end_arrow_width'] = end_arrow_width
 
     @property
     def transparency(self):
@@ -512,48 +554,6 @@ class Line(object):
         """
 
         self.container['transparency'] = transparency
-
-    @property
-    def weight(self):
-        """
-        Gets the weight of this Line.
-
-        :return: The weight of this Line.
-        :rtype: str
-        """
-        return self.container['weight']
-
-    @weight.setter
-    def weight(self, weight):
-        """
-        Sets the weight of this Line.
-
-        :param weight: The weight of this Line.
-        :type: str
-        """
-
-        self.container['weight'] = weight
-
-    @property
-    def weight_pt(self):
-        """
-        Gets the weight_pt of this Line.
-
-        :return: The weight_pt of this Line.
-        :rtype: float
-        """
-        return self.container['weight_pt']
-
-    @weight_pt.setter
-    def weight_pt(self, weight_pt):
-        """
-        Sets the weight_pt of this Line.
-
-        :param weight_pt: The weight_pt of this Line.
-        :type: float
-        """
-
-        self.container['weight_pt'] = weight_pt
 
     def to_dict(self):
         """

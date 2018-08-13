@@ -26,8 +26,8 @@ else:
     from asposestoragecloud.models import FileExistResponse
 
 grantType = "client_credentials"
-clientId = "your clientId"
-clientSecret = "your clientSecret"
+clientId = "66164C51-693E-4904-A121-545961673EC1"
+clientSecret = "536e76768419db9585afdd37bb5f7533"
 
 def GetAccessToken():
     client = ApiClient('https://api.aspose.cloud/')

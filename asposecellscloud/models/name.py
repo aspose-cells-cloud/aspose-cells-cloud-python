@@ -33,23 +33,23 @@ class Name(object):
     swagger_types = {
         'link': 'Link',
         'comment': 'str',
+        'text': 'str',
         'worksheet_index': 'int',
-        'is_referred': 'bool',
-        'is_visible': 'bool',
         'r1_c1_refers_to': 'str',
         'refers_to': 'str',
-        'text': 'str'
+        'is_referred': 'bool',
+        'is_visible': 'bool'
     }
 
     attribute_map = {
         'link': 'link',
         'comment': 'Comment',
+        'text': 'Text',
         'worksheet_index': 'WorksheetIndex',
-        'is_referred': 'IsReferred',
-        'is_visible': 'IsVisible',
         'r1_c1_refers_to': 'R1C1RefersTo',
         'refers_to': 'RefersTo',
-        'text': 'Text'
+        'is_referred': 'IsReferred',
+        'is_visible': 'IsVisible'
     }
     
     @staticmethod
@@ -65,7 +65,7 @@ class Name(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, comment=None, worksheet_index=None, is_referred=None, is_visible=None, r1_c1_refers_to=None, refers_to=None, text=None, **kw):
+    def __init__(self, link=None, comment=None, text=None, worksheet_index=None, r1_c1_refers_to=None, refers_to=None, is_referred=None, is_visible=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -77,26 +77,26 @@ class Name(object):
 
         self.container['link'] = None
         self.container['comment'] = None
+        self.container['text'] = None
         self.container['worksheet_index'] = None
-        self.container['is_referred'] = None
-        self.container['is_visible'] = None
         self.container['r1_c1_refers_to'] = None
         self.container['refers_to'] = None
-        self.container['text'] = None
+        self.container['is_referred'] = None
+        self.container['is_visible'] = None
 
         if link is not None:
           self.link = link
         if comment is not None:
           self.comment = comment
+        if text is not None:
+          self.text = text
         self.worksheet_index = worksheet_index
-        self.is_referred = is_referred
-        self.is_visible = is_visible
         if r1_c1_refers_to is not None:
           self.r1_c1_refers_to = r1_c1_refers_to
         if refers_to is not None:
           self.refers_to = refers_to
-        if text is not None:
-          self.text = text
+        self.is_referred = is_referred
+        self.is_visible = is_visible
 
     @property
     def link(self):
@@ -141,6 +141,27 @@ class Name(object):
         self.container['comment'] = comment
 
     @property
+    def text(self):
+        """
+        Gets the text of this Name.
+
+        :return: The text of this Name.
+        :rtype: str
+        """
+        return self.container['text']
+
+    @text.setter
+    def text(self, text):
+        """
+        Sets the text of this Name.
+
+        :param text: The text of this Name.
+        :type: str
+        """
+
+        self.container['text'] = text
+
+    @property
     def worksheet_index(self):
         """
         Gets the worksheet_index of this Name.
@@ -164,6 +185,48 @@ class Name(object):
         """
 
         self.container['worksheet_index'] = worksheet_index
+
+    @property
+    def r1_c1_refers_to(self):
+        """
+        Gets the r1_c1_refers_to of this Name.
+
+        :return: The r1_c1_refers_to of this Name.
+        :rtype: str
+        """
+        return self.container['r1_c1_refers_to']
+
+    @r1_c1_refers_to.setter
+    def r1_c1_refers_to(self, r1_c1_refers_to):
+        """
+        Sets the r1_c1_refers_to of this Name.
+
+        :param r1_c1_refers_to: The r1_c1_refers_to of this Name.
+        :type: str
+        """
+
+        self.container['r1_c1_refers_to'] = r1_c1_refers_to
+
+    @property
+    def refers_to(self):
+        """
+        Gets the refers_to of this Name.
+
+        :return: The refers_to of this Name.
+        :rtype: str
+        """
+        return self.container['refers_to']
+
+    @refers_to.setter
+    def refers_to(self, refers_to):
+        """
+        Sets the refers_to of this Name.
+
+        :param refers_to: The refers_to of this Name.
+        :type: str
+        """
+
+        self.container['refers_to'] = refers_to
 
     @property
     def is_referred(self):
@@ -214,69 +277,6 @@ class Name(object):
         """
 
         self.container['is_visible'] = is_visible
-
-    @property
-    def r1_c1_refers_to(self):
-        """
-        Gets the r1_c1_refers_to of this Name.
-
-        :return: The r1_c1_refers_to of this Name.
-        :rtype: str
-        """
-        return self.container['r1_c1_refers_to']
-
-    @r1_c1_refers_to.setter
-    def r1_c1_refers_to(self, r1_c1_refers_to):
-        """
-        Sets the r1_c1_refers_to of this Name.
-
-        :param r1_c1_refers_to: The r1_c1_refers_to of this Name.
-        :type: str
-        """
-
-        self.container['r1_c1_refers_to'] = r1_c1_refers_to
-
-    @property
-    def refers_to(self):
-        """
-        Gets the refers_to of this Name.
-
-        :return: The refers_to of this Name.
-        :rtype: str
-        """
-        return self.container['refers_to']
-
-    @refers_to.setter
-    def refers_to(self, refers_to):
-        """
-        Sets the refers_to of this Name.
-
-        :param refers_to: The refers_to of this Name.
-        :type: str
-        """
-
-        self.container['refers_to'] = refers_to
-
-    @property
-    def text(self):
-        """
-        Gets the text of this Name.
-
-        :return: The text of this Name.
-        :rtype: str
-        """
-        return self.container['text']
-
-    @text.setter
-    def text(self, text):
-        """
-        Sets the text of this Name.
-
-        :param text: The text of this Name.
-        :type: str
-        """
-
-        self.container['text'] = text
 
     def to_dict(self):
         """

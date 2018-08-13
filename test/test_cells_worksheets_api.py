@@ -152,9 +152,10 @@ class TestCellsWorksheetsApi(unittest.TestCase):
         sheet_name ='Sheet1' 
         verticalResolution =100  
         horizontalResolution =90
+        format = "png"
         folder = "Temp"
         AuthUtil.Ready(name, folder)
-        result = self.api.cells_worksheets_get_worksheet(name, sheet_name, vertical_resolution=verticalResolution, horizontal_resolution=horizontalResolution, folder=folder)
+        result = self.api.cells_worksheets_get_worksheet(name, sheet_name, format=format, vertical_resolution=verticalResolution, horizontal_resolution=horizontalResolution, _preload_content=False, folder=folder)
         pass
 
     def test_cells_worksheets_get_worksheet_calculate_formula(self):

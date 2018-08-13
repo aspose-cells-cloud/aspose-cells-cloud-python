@@ -31,18 +31,18 @@ class PageSection(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'section': 'int',
-        'context': 'str',
         'picture': 'str',
+        'section': 'int',
         'fisrt_page_context': 'str',
+        'context': 'str',
         'even_page_context': 'str'
     }
 
     attribute_map = {
-        'section': 'Section',
-        'context': 'Context',
         'picture': 'Picture',
+        'section': 'Section',
         'fisrt_page_context': 'FisrtPageContext',
+        'context': 'Context',
         'even_page_context': 'EvenPageContext'
     }
     
@@ -59,7 +59,7 @@ class PageSection(object):
             return self.container[attr]
         return None
 
-    def __init__(self, section=None, context=None, picture=None, fisrt_page_context=None, even_page_context=None, **kw):
+    def __init__(self, picture=None, section=None, fisrt_page_context=None, context=None, even_page_context=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -69,21 +69,44 @@ class PageSection(object):
         PageSection - a model defined in Swagger
         """
 
-        self.container['section'] = None
-        self.container['context'] = None
         self.container['picture'] = None
+        self.container['section'] = None
         self.container['fisrt_page_context'] = None
+        self.container['context'] = None
         self.container['even_page_context'] = None
 
-        self.section = section
-        if context is not None:
-          self.context = context
         if picture is not None:
           self.picture = picture
+        self.section = section
         if fisrt_page_context is not None:
           self.fisrt_page_context = fisrt_page_context
+        if context is not None:
+          self.context = context
         if even_page_context is not None:
           self.even_page_context = even_page_context
+
+    @property
+    def picture(self):
+        """
+        Gets the picture of this PageSection.
+
+        :return: The picture of this PageSection.
+        :rtype: str
+        """
+        return self.container['picture']
+
+    @picture.setter
+    def picture(self, picture):
+        """
+        Sets the picture of this PageSection.
+
+        :param picture: The picture of this PageSection.
+        :type: str
+        """
+        if picture is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', picture):
+            raise ValueError("Invalid value for `picture`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")
+
+        self.container['picture'] = picture
 
     @property
     def section(self):
@@ -113,52 +136,6 @@ class PageSection(object):
         self.container['section'] = section
 
     @property
-    def context(self):
-        """
-        Gets the context of this PageSection.
-        page context script             
-
-        :return: The context of this PageSection.
-        :rtype: str
-        """
-        return self.container['context']
-
-    @context.setter
-    def context(self, context):
-        """
-        Sets the context of this PageSection.
-        page context script             
-
-        :param context: The context of this PageSection.
-        :type: str
-        """
-
-        self.container['context'] = context
-
-    @property
-    def picture(self):
-        """
-        Gets the picture of this PageSection.
-
-        :return: The picture of this PageSection.
-        :rtype: str
-        """
-        return self.container['picture']
-
-    @picture.setter
-    def picture(self, picture):
-        """
-        Sets the picture of this PageSection.
-
-        :param picture: The picture of this PageSection.
-        :type: str
-        """
-        if picture is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', picture):
-            raise ValueError("Invalid value for `picture`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")
-
-        self.container['picture'] = picture
-
-    @property
     def fisrt_page_context(self):
         """
         Gets the fisrt_page_context of this PageSection.
@@ -180,6 +157,29 @@ class PageSection(object):
         """
 
         self.container['fisrt_page_context'] = fisrt_page_context
+
+    @property
+    def context(self):
+        """
+        Gets the context of this PageSection.
+        page context script             
+
+        :return: The context of this PageSection.
+        :rtype: str
+        """
+        return self.container['context']
+
+    @context.setter
+    def context(self, context):
+        """
+        Sets the context of this PageSection.
+        page context script             
+
+        :param context: The context of this PageSection.
+        :type: str
+        """
+
+        self.container['context'] = context
 
     @property
     def even_page_context(self):

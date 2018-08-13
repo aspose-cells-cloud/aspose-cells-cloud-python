@@ -32,20 +32,20 @@ class ColorScale(object):
     """
     swagger_types = {
         'max_cfvo': 'ConditionalFormattingValue',
-        'max_color': 'Color',
-        'mid_cfvo': 'ConditionalFormattingValue',
         'mid_color': 'Color',
+        'min_color': 'Color',
+        'mid_cfvo': 'ConditionalFormattingValue',
         'min_cfvo': 'ConditionalFormattingValue',
-        'min_color': 'Color'
+        'max_color': 'Color'
     }
 
     attribute_map = {
         'max_cfvo': 'MaxCfvo',
-        'max_color': 'MaxColor',
-        'mid_cfvo': 'MidCfvo',
         'mid_color': 'MidColor',
+        'min_color': 'MinColor',
+        'mid_cfvo': 'MidCfvo',
         'min_cfvo': 'MinCfvo',
-        'min_color': 'MinColor'
+        'max_color': 'MaxColor'
     }
     
     @staticmethod
@@ -61,7 +61,7 @@ class ColorScale(object):
             return self.container[attr]
         return None
 
-    def __init__(self, max_cfvo=None, max_color=None, mid_cfvo=None, mid_color=None, min_cfvo=None, min_color=None, **kw):
+    def __init__(self, max_cfvo=None, mid_color=None, min_color=None, mid_cfvo=None, min_cfvo=None, max_color=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -72,24 +72,24 @@ class ColorScale(object):
         """
 
         self.container['max_cfvo'] = None
-        self.container['max_color'] = None
-        self.container['mid_cfvo'] = None
         self.container['mid_color'] = None
-        self.container['min_cfvo'] = None
         self.container['min_color'] = None
+        self.container['mid_cfvo'] = None
+        self.container['min_cfvo'] = None
+        self.container['max_color'] = None
 
         if max_cfvo is not None:
           self.max_cfvo = max_cfvo
-        if max_color is not None:
-          self.max_color = max_color
-        if mid_cfvo is not None:
-          self.mid_cfvo = mid_cfvo
         if mid_color is not None:
           self.mid_color = mid_color
-        if min_cfvo is not None:
-          self.min_cfvo = min_cfvo
         if min_color is not None:
           self.min_color = min_color
+        if mid_cfvo is not None:
+          self.mid_cfvo = mid_cfvo
+        if min_cfvo is not None:
+          self.min_cfvo = min_cfvo
+        if max_color is not None:
+          self.max_color = max_color
 
     @property
     def max_cfvo(self):
@@ -115,27 +115,50 @@ class ColorScale(object):
         self.container['max_cfvo'] = max_cfvo
 
     @property
-    def max_color(self):
+    def mid_color(self):
         """
-        Gets the max_color of this ColorScale.
-        Get or set the max value object's corresponding color.
+        Gets the mid_color of this ColorScale.
+        Get or set the mid value object's corresponding color.             
 
-        :return: The max_color of this ColorScale.
+        :return: The mid_color of this ColorScale.
         :rtype: Color
         """
-        return self.container['max_color']
+        return self.container['mid_color']
 
-    @max_color.setter
-    def max_color(self, max_color):
+    @mid_color.setter
+    def mid_color(self, mid_color):
         """
-        Sets the max_color of this ColorScale.
-        Get or set the max value object's corresponding color.
+        Sets the mid_color of this ColorScale.
+        Get or set the mid value object's corresponding color.             
 
-        :param max_color: The max_color of this ColorScale.
+        :param mid_color: The mid_color of this ColorScale.
         :type: Color
         """
 
-        self.container['max_color'] = max_color
+        self.container['mid_color'] = mid_color
+
+    @property
+    def min_color(self):
+        """
+        Gets the min_color of this ColorScale.
+        Get or set the min value object's corresponding color.
+
+        :return: The min_color of this ColorScale.
+        :rtype: Color
+        """
+        return self.container['min_color']
+
+    @min_color.setter
+    def min_color(self, min_color):
+        """
+        Sets the min_color of this ColorScale.
+        Get or set the min value object's corresponding color.
+
+        :param min_color: The min_color of this ColorScale.
+        :type: Color
+        """
+
+        self.container['min_color'] = min_color
 
     @property
     def mid_cfvo(self):
@@ -161,29 +184,6 @@ class ColorScale(object):
         self.container['mid_cfvo'] = mid_cfvo
 
     @property
-    def mid_color(self):
-        """
-        Gets the mid_color of this ColorScale.
-        Get or set the mid value object's corresponding color.             
-
-        :return: The mid_color of this ColorScale.
-        :rtype: Color
-        """
-        return self.container['mid_color']
-
-    @mid_color.setter
-    def mid_color(self, mid_color):
-        """
-        Sets the mid_color of this ColorScale.
-        Get or set the mid value object's corresponding color.             
-
-        :param mid_color: The mid_color of this ColorScale.
-        :type: Color
-        """
-
-        self.container['mid_color'] = mid_color
-
-    @property
     def min_cfvo(self):
         """
         Gets the min_cfvo of this ColorScale.
@@ -207,27 +207,27 @@ class ColorScale(object):
         self.container['min_cfvo'] = min_cfvo
 
     @property
-    def min_color(self):
+    def max_color(self):
         """
-        Gets the min_color of this ColorScale.
-        Get or set the min value object's corresponding color.
+        Gets the max_color of this ColorScale.
+        Get or set the max value object's corresponding color.
 
-        :return: The min_color of this ColorScale.
+        :return: The max_color of this ColorScale.
         :rtype: Color
         """
-        return self.container['min_color']
+        return self.container['max_color']
 
-    @min_color.setter
-    def min_color(self, min_color):
+    @max_color.setter
+    def max_color(self, max_color):
         """
-        Sets the min_color of this ColorScale.
-        Get or set the min value object's corresponding color.
+        Sets the max_color of this ColorScale.
+        Get or set the max value object's corresponding color.
 
-        :param min_color: The min_color of this ColorScale.
+        :param max_color: The max_color of this ColorScale.
         :type: Color
         """
 
-        self.container['min_color'] = min_color
+        self.container['max_color'] = max_color
 
     def to_dict(self):
         """

@@ -32,25 +32,25 @@ class Range(object):
     """
     swagger_types = {
         'column_count': 'int',
-        'column_width': 'float',
-        'first_column': 'int',
-        'first_row': 'int',
+        'row_height': 'float',
         'name': 'str',
+        'first_column': 'int',
+        'column_width': 'float',
         'refers_to': 'str',
         'row_count': 'int',
-        'row_height': 'float',
+        'first_row': 'int',
         'worksheet': 'str'
     }
 
     attribute_map = {
         'column_count': 'ColumnCount',
-        'column_width': 'ColumnWidth',
-        'first_column': 'FirstColumn',
-        'first_row': 'FirstRow',
+        'row_height': 'RowHeight',
         'name': 'Name',
+        'first_column': 'FirstColumn',
+        'column_width': 'ColumnWidth',
         'refers_to': 'RefersTo',
         'row_count': 'RowCount',
-        'row_height': 'RowHeight',
+        'first_row': 'FirstRow',
         'worksheet': 'Worksheet'
     }
     
@@ -67,7 +67,7 @@ class Range(object):
             return self.container[attr]
         return None
 
-    def __init__(self, column_count=None, column_width=None, first_column=None, first_row=None, name=None, refers_to=None, row_count=None, row_height=None, worksheet=None, **kw):
+    def __init__(self, column_count=None, row_height=None, name=None, first_column=None, column_width=None, refers_to=None, row_count=None, first_row=None, worksheet=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -78,25 +78,25 @@ class Range(object):
         """
 
         self.container['column_count'] = None
-        self.container['column_width'] = None
-        self.container['first_column'] = None
-        self.container['first_row'] = None
+        self.container['row_height'] = None
         self.container['name'] = None
+        self.container['first_column'] = None
+        self.container['column_width'] = None
         self.container['refers_to'] = None
         self.container['row_count'] = None
-        self.container['row_height'] = None
+        self.container['first_row'] = None
         self.container['worksheet'] = None
 
         self.column_count = column_count
-        self.column_width = column_width
-        self.first_column = first_column
-        self.first_row = first_row
+        self.row_height = row_height
         if name is not None:
           self.name = name
+        self.first_column = first_column
+        self.column_width = column_width
         if refers_to is not None:
           self.refers_to = refers_to
         self.row_count = row_count
-        self.row_height = row_height
+        self.first_row = first_row
         if worksheet is not None:
           self.worksheet = worksheet
 
@@ -128,31 +128,54 @@ class Range(object):
         self.container['column_count'] = column_count
 
     @property
-    def column_width(self):
+    def row_height(self):
         """
-        Gets the column_width of this Range.
-        Sets or gets the column width of this range
+        Gets the row_height of this Range.
+        Sets or gets the height of rows in this range
 
-        :return: The column_width of this Range.
+        :return: The row_height of this Range.
         :rtype: float
         """
-        return self.container['column_width']
+        return self.container['row_height']
 
-    @column_width.setter
-    def column_width(self, column_width):
+    @row_height.setter
+    def row_height(self, row_height):
         """
-        Sets the column_width of this Range.
-        Sets or gets the column width of this range
+        Sets the row_height of this Range.
+        Sets or gets the height of rows in this range
 
-        :param column_width: The column_width of this Range.
+        :param row_height: The row_height of this Range.
         :type: float
         """
         """
-        if column_width is None:
-            raise ValueError("Invalid value for `column_width`, must not be `None`")
+        if row_height is None:
+            raise ValueError("Invalid value for `row_height`, must not be `None`")
         """
 
-        self.container['column_width'] = column_width
+        self.container['row_height'] = row_height
+
+    @property
+    def name(self):
+        """
+        Gets the name of this Range.
+        Gets or sets the name of the range.
+
+        :return: The name of this Range.
+        :rtype: str
+        """
+        return self.container['name']
+
+    @name.setter
+    def name(self, name):
+        """
+        Sets the name of this Range.
+        Gets or sets the name of the range.
+
+        :param name: The name of this Range.
+        :type: str
+        """
+
+        self.container['name'] = name
 
     @property
     def first_column(self):
@@ -182,54 +205,31 @@ class Range(object):
         self.container['first_column'] = first_column
 
     @property
-    def first_row(self):
+    def column_width(self):
         """
-        Gets the first_row of this Range.
-        Gets the index of the first row of the range.
+        Gets the column_width of this Range.
+        Sets or gets the column width of this range
 
-        :return: The first_row of this Range.
-        :rtype: int
+        :return: The column_width of this Range.
+        :rtype: float
         """
-        return self.container['first_row']
+        return self.container['column_width']
 
-    @first_row.setter
-    def first_row(self, first_row):
+    @column_width.setter
+    def column_width(self, column_width):
         """
-        Sets the first_row of this Range.
-        Gets the index of the first row of the range.
+        Sets the column_width of this Range.
+        Sets or gets the column width of this range
 
-        :param first_row: The first_row of this Range.
-        :type: int
+        :param column_width: The column_width of this Range.
+        :type: float
         """
         """
-        if first_row is None:
-            raise ValueError("Invalid value for `first_row`, must not be `None`")
-        """
-
-        self.container['first_row'] = first_row
-
-    @property
-    def name(self):
-        """
-        Gets the name of this Range.
-        Gets or sets the name of the range.
-
-        :return: The name of this Range.
-        :rtype: str
-        """
-        return self.container['name']
-
-    @name.setter
-    def name(self, name):
-        """
-        Sets the name of this Range.
-        Gets or sets the name of the range.
-
-        :param name: The name of this Range.
-        :type: str
+        if column_width is None:
+            raise ValueError("Invalid value for `column_width`, must not be `None`")
         """
 
-        self.container['name'] = name
+        self.container['column_width'] = column_width
 
     @property
     def refers_to(self):
@@ -282,31 +282,31 @@ class Range(object):
         self.container['row_count'] = row_count
 
     @property
-    def row_height(self):
+    def first_row(self):
         """
-        Gets the row_height of this Range.
-        Sets or gets the height of rows in this range
+        Gets the first_row of this Range.
+        Gets the index of the first row of the range.
 
-        :return: The row_height of this Range.
-        :rtype: float
+        :return: The first_row of this Range.
+        :rtype: int
         """
-        return self.container['row_height']
+        return self.container['first_row']
 
-    @row_height.setter
-    def row_height(self, row_height):
+    @first_row.setter
+    def first_row(self, first_row):
         """
-        Sets the row_height of this Range.
-        Sets or gets the height of rows in this range
+        Sets the first_row of this Range.
+        Gets the index of the first row of the range.
 
-        :param row_height: The row_height of this Range.
-        :type: float
+        :param first_row: The first_row of this Range.
+        :type: int
         """
         """
-        if row_height is None:
-            raise ValueError("Invalid value for `row_height`, must not be `None`")
+        if first_row is None:
+            raise ValueError("Invalid value for `first_row`, must not be `None`")
         """
 
-        self.container['row_height'] = row_height
+        self.container['first_row'] = first_row
 
     @property
     def worksheet(self):

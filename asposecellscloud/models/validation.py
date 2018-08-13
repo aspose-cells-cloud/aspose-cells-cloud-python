@@ -32,42 +32,42 @@ class Validation(object):
     """
     swagger_types = {
         'link': 'Link',
-        'alert_style': 'str',
-        'area_list': 'list[CellArea]',
-        'error_message': 'str',
-        'error_title': 'str',
-        'formula1': 'str',
         'formula2': 'str',
-        'ignore_blank': 'bool',
-        'in_cell_drop_down': 'bool',
-        'input_message': 'str',
-        'input_title': 'str',
-        'operator': 'str',
+        'formula1': 'str',
         'show_error': 'bool',
+        'error_message': 'str',
+        'in_cell_drop_down': 'bool',
         'show_input': 'bool',
-        'type': 'str',
+        'alert_style': 'str',
+        'input_title': 'str',
+        'ignore_blank': 'bool',
+        'value2': 'str',
         'value1': 'str',
-        'value2': 'str'
+        'operator': 'str',
+        'error_title': 'str',
+        'type': 'str',
+        'input_message': 'str',
+        'area_list': 'list[CellArea]'
     }
 
     attribute_map = {
         'link': 'link',
-        'alert_style': 'AlertStyle',
-        'area_list': 'AreaList',
-        'error_message': 'ErrorMessage',
-        'error_title': 'ErrorTitle',
-        'formula1': 'Formula1',
         'formula2': 'Formula2',
-        'ignore_blank': 'IgnoreBlank',
-        'in_cell_drop_down': 'InCellDropDown',
-        'input_message': 'InputMessage',
-        'input_title': 'InputTitle',
-        'operator': 'Operator',
+        'formula1': 'Formula1',
         'show_error': 'ShowError',
+        'error_message': 'ErrorMessage',
+        'in_cell_drop_down': 'InCellDropDown',
         'show_input': 'ShowInput',
-        'type': 'Type',
+        'alert_style': 'AlertStyle',
+        'input_title': 'InputTitle',
+        'ignore_blank': 'IgnoreBlank',
+        'value2': 'Value2',
         'value1': 'Value1',
-        'value2': 'Value2'
+        'operator': 'Operator',
+        'error_title': 'ErrorTitle',
+        'type': 'Type',
+        'input_message': 'InputMessage',
+        'area_list': 'AreaList'
     }
     
     @staticmethod
@@ -83,7 +83,7 @@ class Validation(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, alert_style=None, area_list=None, error_message=None, error_title=None, formula1=None, formula2=None, ignore_blank=None, in_cell_drop_down=None, input_message=None, input_title=None, operator=None, show_error=None, show_input=None, type=None, value1=None, value2=None, **kw):
+    def __init__(self, link=None, formula2=None, formula1=None, show_error=None, error_message=None, in_cell_drop_down=None, show_input=None, alert_style=None, input_title=None, ignore_blank=None, value2=None, value1=None, operator=None, error_title=None, type=None, input_message=None, area_list=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -94,57 +94,57 @@ class Validation(object):
         """
 
         self.container['link'] = None
-        self.container['alert_style'] = None
-        self.container['area_list'] = None
-        self.container['error_message'] = None
-        self.container['error_title'] = None
-        self.container['formula1'] = None
         self.container['formula2'] = None
-        self.container['ignore_blank'] = None
-        self.container['in_cell_drop_down'] = None
-        self.container['input_message'] = None
-        self.container['input_title'] = None
-        self.container['operator'] = None
+        self.container['formula1'] = None
         self.container['show_error'] = None
+        self.container['error_message'] = None
+        self.container['in_cell_drop_down'] = None
         self.container['show_input'] = None
-        self.container['type'] = None
-        self.container['value1'] = None
+        self.container['alert_style'] = None
+        self.container['input_title'] = None
+        self.container['ignore_blank'] = None
         self.container['value2'] = None
+        self.container['value1'] = None
+        self.container['operator'] = None
+        self.container['error_title'] = None
+        self.container['type'] = None
+        self.container['input_message'] = None
+        self.container['area_list'] = None
 
         if link is not None:
           self.link = link
-        if alert_style is not None:
-          self.alert_style = alert_style
-        if area_list is not None:
-          self.area_list = area_list
-        if error_message is not None:
-          self.error_message = error_message
-        if error_title is not None:
-          self.error_title = error_title
-        if formula1 is not None:
-          self.formula1 = formula1
         if formula2 is not None:
           self.formula2 = formula2
-        if ignore_blank is not None:
-          self.ignore_blank = ignore_blank
-        if in_cell_drop_down is not None:
-          self.in_cell_drop_down = in_cell_drop_down
-        if input_message is not None:
-          self.input_message = input_message
-        if input_title is not None:
-          self.input_title = input_title
-        if operator is not None:
-          self.operator = operator
+        if formula1 is not None:
+          self.formula1 = formula1
         if show_error is not None:
           self.show_error = show_error
+        if error_message is not None:
+          self.error_message = error_message
+        if in_cell_drop_down is not None:
+          self.in_cell_drop_down = in_cell_drop_down
         if show_input is not None:
           self.show_input = show_input
-        if type is not None:
-          self.type = type
-        if value1 is not None:
-          self.value1 = value1
+        if alert_style is not None:
+          self.alert_style = alert_style
+        if input_title is not None:
+          self.input_title = input_title
+        if ignore_blank is not None:
+          self.ignore_blank = ignore_blank
         if value2 is not None:
           self.value2 = value2
+        if value1 is not None:
+          self.value1 = value1
+        if operator is not None:
+          self.operator = operator
+        if error_title is not None:
+          self.error_title = error_title
+        if type is not None:
+          self.type = type
+        if input_message is not None:
+          self.input_message = input_message
+        if area_list is not None:
+          self.area_list = area_list
 
     @property
     def link(self):
@@ -166,121 +166,6 @@ class Validation(object):
         """
 
         self.container['link'] = link
-
-    @property
-    def alert_style(self):
-        """
-        Gets the alert_style of this Validation.
-        Represents the validation alert style.Information,Stop,Warning             
-
-        :return: The alert_style of this Validation.
-        :rtype: str
-        """
-        return self.container['alert_style']
-
-    @alert_style.setter
-    def alert_style(self, alert_style):
-        """
-        Sets the alert_style of this Validation.
-        Represents the validation alert style.Information,Stop,Warning             
-
-        :param alert_style: The alert_style of this Validation.
-        :type: str
-        """
-
-        self.container['alert_style'] = alert_style
-
-    @property
-    def area_list(self):
-        """
-        Gets the area_list of this Validation.
-        Represents a collection of Aspose.Cells.CellArea which contains the data     validation settings.
-
-        :return: The area_list of this Validation.
-        :rtype: list[CellArea]
-        """
-        return self.container['area_list']
-
-    @area_list.setter
-    def area_list(self, area_list):
-        """
-        Sets the area_list of this Validation.
-        Represents a collection of Aspose.Cells.CellArea which contains the data     validation settings.
-
-        :param area_list: The area_list of this Validation.
-        :type: list[CellArea]
-        """
-
-        self.container['area_list'] = area_list
-
-    @property
-    def error_message(self):
-        """
-        Gets the error_message of this Validation.
-        Represents the data validation error message.
-
-        :return: The error_message of this Validation.
-        :rtype: str
-        """
-        return self.container['error_message']
-
-    @error_message.setter
-    def error_message(self, error_message):
-        """
-        Sets the error_message of this Validation.
-        Represents the data validation error message.
-
-        :param error_message: The error_message of this Validation.
-        :type: str
-        """
-
-        self.container['error_message'] = error_message
-
-    @property
-    def error_title(self):
-        """
-        Gets the error_title of this Validation.
-        Represents the title of the data-validation error dialog box.
-
-        :return: The error_title of this Validation.
-        :rtype: str
-        """
-        return self.container['error_title']
-
-    @error_title.setter
-    def error_title(self, error_title):
-        """
-        Sets the error_title of this Validation.
-        Represents the title of the data-validation error dialog box.
-
-        :param error_title: The error_title of this Validation.
-        :type: str
-        """
-
-        self.container['error_title'] = error_title
-
-    @property
-    def formula1(self):
-        """
-        Gets the formula1 of this Validation.
-        Represents the value or expression associated with the data validation.
-
-        :return: The formula1 of this Validation.
-        :rtype: str
-        """
-        return self.container['formula1']
-
-    @formula1.setter
-    def formula1(self, formula1):
-        """
-        Sets the formula1 of this Validation.
-        Represents the value or expression associated with the data validation.
-
-        :param formula1: The formula1 of this Validation.
-        :type: str
-        """
-
-        self.container['formula1'] = formula1
 
     @property
     def formula2(self):
@@ -306,119 +191,27 @@ class Validation(object):
         self.container['formula2'] = formula2
 
     @property
-    def ignore_blank(self):
+    def formula1(self):
         """
-        Gets the ignore_blank of this Validation.
-        Indicates whether blank values are permitted by the range data validation.
+        Gets the formula1 of this Validation.
+        Represents the value or expression associated with the data validation.
 
-        :return: The ignore_blank of this Validation.
-        :rtype: bool
-        """
-        return self.container['ignore_blank']
-
-    @ignore_blank.setter
-    def ignore_blank(self, ignore_blank):
-        """
-        Sets the ignore_blank of this Validation.
-        Indicates whether blank values are permitted by the range data validation.
-
-        :param ignore_blank: The ignore_blank of this Validation.
-        :type: bool
-        """
-
-        self.container['ignore_blank'] = ignore_blank
-
-    @property
-    def in_cell_drop_down(self):
-        """
-        Gets the in_cell_drop_down of this Validation.
-        Indicates whether data validation displays a drop-down list that contains    acceptable values.
-
-        :return: The in_cell_drop_down of this Validation.
-        :rtype: bool
-        """
-        return self.container['in_cell_drop_down']
-
-    @in_cell_drop_down.setter
-    def in_cell_drop_down(self, in_cell_drop_down):
-        """
-        Sets the in_cell_drop_down of this Validation.
-        Indicates whether data validation displays a drop-down list that contains    acceptable values.
-
-        :param in_cell_drop_down: The in_cell_drop_down of this Validation.
-        :type: bool
-        """
-
-        self.container['in_cell_drop_down'] = in_cell_drop_down
-
-    @property
-    def input_message(self):
-        """
-        Gets the input_message of this Validation.
-        Represents the data validation input message.
-
-        :return: The input_message of this Validation.
+        :return: The formula1 of this Validation.
         :rtype: str
         """
-        return self.container['input_message']
+        return self.container['formula1']
 
-    @input_message.setter
-    def input_message(self, input_message):
+    @formula1.setter
+    def formula1(self, formula1):
         """
-        Sets the input_message of this Validation.
-        Represents the data validation input message.
+        Sets the formula1 of this Validation.
+        Represents the value or expression associated with the data validation.
 
-        :param input_message: The input_message of this Validation.
+        :param formula1: The formula1 of this Validation.
         :type: str
         """
 
-        self.container['input_message'] = input_message
-
-    @property
-    def input_title(self):
-        """
-        Gets the input_title of this Validation.
-        Represents the title of the data-validation input dialog box.
-
-        :return: The input_title of this Validation.
-        :rtype: str
-        """
-        return self.container['input_title']
-
-    @input_title.setter
-    def input_title(self, input_title):
-        """
-        Sets the input_title of this Validation.
-        Represents the title of the data-validation input dialog box.
-
-        :param input_title: The input_title of this Validation.
-        :type: str
-        """
-
-        self.container['input_title'] = input_title
-
-    @property
-    def operator(self):
-        """
-        Gets the operator of this Validation.
-        Represents the operator for the data validation. Between,Equal,GreaterThan,GreaterOrEqual,LessThan,LessOrEqual,None,NotBetween,NotEqual
-
-        :return: The operator of this Validation.
-        :rtype: str
-        """
-        return self.container['operator']
-
-    @operator.setter
-    def operator(self, operator):
-        """
-        Sets the operator of this Validation.
-        Represents the operator for the data validation. Between,Equal,GreaterThan,GreaterOrEqual,LessThan,LessOrEqual,None,NotBetween,NotEqual
-
-        :param operator: The operator of this Validation.
-        :type: str
-        """
-
-        self.container['operator'] = operator
+        self.container['formula1'] = formula1
 
     @property
     def show_error(self):
@@ -444,6 +237,52 @@ class Validation(object):
         self.container['show_error'] = show_error
 
     @property
+    def error_message(self):
+        """
+        Gets the error_message of this Validation.
+        Represents the data validation error message.
+
+        :return: The error_message of this Validation.
+        :rtype: str
+        """
+        return self.container['error_message']
+
+    @error_message.setter
+    def error_message(self, error_message):
+        """
+        Sets the error_message of this Validation.
+        Represents the data validation error message.
+
+        :param error_message: The error_message of this Validation.
+        :type: str
+        """
+
+        self.container['error_message'] = error_message
+
+    @property
+    def in_cell_drop_down(self):
+        """
+        Gets the in_cell_drop_down of this Validation.
+        Indicates whether data validation displays a drop-down list that contains    acceptable values.
+
+        :return: The in_cell_drop_down of this Validation.
+        :rtype: bool
+        """
+        return self.container['in_cell_drop_down']
+
+    @in_cell_drop_down.setter
+    def in_cell_drop_down(self, in_cell_drop_down):
+        """
+        Sets the in_cell_drop_down of this Validation.
+        Indicates whether data validation displays a drop-down list that contains    acceptable values.
+
+        :param in_cell_drop_down: The in_cell_drop_down of this Validation.
+        :type: bool
+        """
+
+        self.container['in_cell_drop_down'] = in_cell_drop_down
+
+    @property
     def show_input(self):
         """
         Gets the show_input of this Validation.
@@ -467,27 +306,96 @@ class Validation(object):
         self.container['show_input'] = show_input
 
     @property
-    def type(self):
+    def alert_style(self):
         """
-        Gets the type of this Validation.
-        Represents the data validation type. AnyValue ,WholeNumber,Decimal,List,Date,Time,TextLength,Custom             
+        Gets the alert_style of this Validation.
+        Represents the validation alert style.Information,Stop,Warning             
 
-        :return: The type of this Validation.
+        :return: The alert_style of this Validation.
         :rtype: str
         """
-        return self.container['type']
+        return self.container['alert_style']
 
-    @type.setter
-    def type(self, type):
+    @alert_style.setter
+    def alert_style(self, alert_style):
         """
-        Sets the type of this Validation.
-        Represents the data validation type. AnyValue ,WholeNumber,Decimal,List,Date,Time,TextLength,Custom             
+        Sets the alert_style of this Validation.
+        Represents the validation alert style.Information,Stop,Warning             
 
-        :param type: The type of this Validation.
+        :param alert_style: The alert_style of this Validation.
         :type: str
         """
 
-        self.container['type'] = type
+        self.container['alert_style'] = alert_style
+
+    @property
+    def input_title(self):
+        """
+        Gets the input_title of this Validation.
+        Represents the title of the data-validation input dialog box.
+
+        :return: The input_title of this Validation.
+        :rtype: str
+        """
+        return self.container['input_title']
+
+    @input_title.setter
+    def input_title(self, input_title):
+        """
+        Sets the input_title of this Validation.
+        Represents the title of the data-validation input dialog box.
+
+        :param input_title: The input_title of this Validation.
+        :type: str
+        """
+
+        self.container['input_title'] = input_title
+
+    @property
+    def ignore_blank(self):
+        """
+        Gets the ignore_blank of this Validation.
+        Indicates whether blank values are permitted by the range data validation.
+
+        :return: The ignore_blank of this Validation.
+        :rtype: bool
+        """
+        return self.container['ignore_blank']
+
+    @ignore_blank.setter
+    def ignore_blank(self, ignore_blank):
+        """
+        Sets the ignore_blank of this Validation.
+        Indicates whether blank values are permitted by the range data validation.
+
+        :param ignore_blank: The ignore_blank of this Validation.
+        :type: bool
+        """
+
+        self.container['ignore_blank'] = ignore_blank
+
+    @property
+    def value2(self):
+        """
+        Gets the value2 of this Validation.
+        Represents the first value associated with the data validation.             
+
+        :return: The value2 of this Validation.
+        :rtype: str
+        """
+        return self.container['value2']
+
+    @value2.setter
+    def value2(self, value2):
+        """
+        Sets the value2 of this Validation.
+        Represents the first value associated with the data validation.             
+
+        :param value2: The value2 of this Validation.
+        :type: str
+        """
+
+        self.container['value2'] = value2
 
     @property
     def value1(self):
@@ -513,27 +421,119 @@ class Validation(object):
         self.container['value1'] = value1
 
     @property
-    def value2(self):
+    def operator(self):
         """
-        Gets the value2 of this Validation.
-        Represents the first value associated with the data validation.             
+        Gets the operator of this Validation.
+        Represents the operator for the data validation. Between,Equal,GreaterThan,GreaterOrEqual,LessThan,LessOrEqual,None,NotBetween,NotEqual
 
-        :return: The value2 of this Validation.
+        :return: The operator of this Validation.
         :rtype: str
         """
-        return self.container['value2']
+        return self.container['operator']
 
-    @value2.setter
-    def value2(self, value2):
+    @operator.setter
+    def operator(self, operator):
         """
-        Sets the value2 of this Validation.
-        Represents the first value associated with the data validation.             
+        Sets the operator of this Validation.
+        Represents the operator for the data validation. Between,Equal,GreaterThan,GreaterOrEqual,LessThan,LessOrEqual,None,NotBetween,NotEqual
 
-        :param value2: The value2 of this Validation.
+        :param operator: The operator of this Validation.
         :type: str
         """
 
-        self.container['value2'] = value2
+        self.container['operator'] = operator
+
+    @property
+    def error_title(self):
+        """
+        Gets the error_title of this Validation.
+        Represents the title of the data-validation error dialog box.
+
+        :return: The error_title of this Validation.
+        :rtype: str
+        """
+        return self.container['error_title']
+
+    @error_title.setter
+    def error_title(self, error_title):
+        """
+        Sets the error_title of this Validation.
+        Represents the title of the data-validation error dialog box.
+
+        :param error_title: The error_title of this Validation.
+        :type: str
+        """
+
+        self.container['error_title'] = error_title
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Validation.
+        Represents the data validation type. AnyValue ,WholeNumber,Decimal,List,Date,Time,TextLength,Custom             
+
+        :return: The type of this Validation.
+        :rtype: str
+        """
+        return self.container['type']
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Validation.
+        Represents the data validation type. AnyValue ,WholeNumber,Decimal,List,Date,Time,TextLength,Custom             
+
+        :param type: The type of this Validation.
+        :type: str
+        """
+
+        self.container['type'] = type
+
+    @property
+    def input_message(self):
+        """
+        Gets the input_message of this Validation.
+        Represents the data validation input message.
+
+        :return: The input_message of this Validation.
+        :rtype: str
+        """
+        return self.container['input_message']
+
+    @input_message.setter
+    def input_message(self, input_message):
+        """
+        Sets the input_message of this Validation.
+        Represents the data validation input message.
+
+        :param input_message: The input_message of this Validation.
+        :type: str
+        """
+
+        self.container['input_message'] = input_message
+
+    @property
+    def area_list(self):
+        """
+        Gets the area_list of this Validation.
+        Represents a collection of Aspose.Cells.CellArea which contains the data     validation settings.
+
+        :return: The area_list of this Validation.
+        :rtype: list[CellArea]
+        """
+        return self.container['area_list']
+
+    @area_list.setter
+    def area_list(self, area_list):
+        """
+        Sets the area_list of this Validation.
+        Represents a collection of Aspose.Cells.CellArea which contains the data     validation settings.
+
+        :param area_list: The area_list of this Validation.
+        :type: list[CellArea]
+        """
+
+        self.container['area_list'] = area_list
 
     def to_dict(self):
         """

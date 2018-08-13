@@ -31,26 +31,26 @@ class FilterColumn(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'field_index': 'int',
         'filter_type': 'str',
         'multiple_filters': 'MultipleFilters',
-        'color_filter': 'ColorFilter',
         'custom_filters': 'list[CustomFilter]',
         'dynamic_filter': 'DynamicFilter',
-        'icon_filter': 'IconFilter',
+        'color_filter': 'ColorFilter',
+        'field_index': 'int',
         'top10_filter': 'Top10Filter',
+        'icon_filter': 'IconFilter',
         'visibledropdown': 'str'
     }
 
     attribute_map = {
-        'field_index': 'FieldIndex',
         'filter_type': 'FilterType',
         'multiple_filters': 'MultipleFilters',
-        'color_filter': 'ColorFilter',
         'custom_filters': 'CustomFilters',
         'dynamic_filter': 'DynamicFilter',
-        'icon_filter': 'IconFilter',
+        'color_filter': 'ColorFilter',
+        'field_index': 'FieldIndex',
         'top10_filter': 'Top10Filter',
+        'icon_filter': 'IconFilter',
         'visibledropdown': 'Visibledropdown'
     }
     
@@ -67,7 +67,7 @@ class FilterColumn(object):
             return self.container[attr]
         return None
 
-    def __init__(self, field_index=None, filter_type=None, multiple_filters=None, color_filter=None, custom_filters=None, dynamic_filter=None, icon_filter=None, top10_filter=None, visibledropdown=None, **kw):
+    def __init__(self, filter_type=None, multiple_filters=None, custom_filters=None, dynamic_filter=None, color_filter=None, field_index=None, top10_filter=None, icon_filter=None, visibledropdown=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -77,58 +77,33 @@ class FilterColumn(object):
         FilterColumn - a model defined in Swagger
         """
 
-        self.container['field_index'] = None
         self.container['filter_type'] = None
         self.container['multiple_filters'] = None
-        self.container['color_filter'] = None
         self.container['custom_filters'] = None
         self.container['dynamic_filter'] = None
-        self.container['icon_filter'] = None
+        self.container['color_filter'] = None
+        self.container['field_index'] = None
         self.container['top10_filter'] = None
+        self.container['icon_filter'] = None
         self.container['visibledropdown'] = None
 
-        self.field_index = field_index
         if filter_type is not None:
           self.filter_type = filter_type
         if multiple_filters is not None:
           self.multiple_filters = multiple_filters
-        if color_filter is not None:
-          self.color_filter = color_filter
         if custom_filters is not None:
           self.custom_filters = custom_filters
         if dynamic_filter is not None:
           self.dynamic_filter = dynamic_filter
-        if icon_filter is not None:
-          self.icon_filter = icon_filter
+        if color_filter is not None:
+          self.color_filter = color_filter
+        self.field_index = field_index
         if top10_filter is not None:
           self.top10_filter = top10_filter
+        if icon_filter is not None:
+          self.icon_filter = icon_filter
         if visibledropdown is not None:
           self.visibledropdown = visibledropdown
-
-    @property
-    def field_index(self):
-        """
-        Gets the field_index of this FilterColumn.
-
-        :return: The field_index of this FilterColumn.
-        :rtype: int
-        """
-        return self.container['field_index']
-
-    @field_index.setter
-    def field_index(self, field_index):
-        """
-        Sets the field_index of this FilterColumn.
-
-        :param field_index: The field_index of this FilterColumn.
-        :type: int
-        """
-        """
-        if field_index is None:
-            raise ValueError("Invalid value for `field_index`, must not be `None`")
-        """
-
-        self.container['field_index'] = field_index
 
     @property
     def filter_type(self):
@@ -173,27 +148,6 @@ class FilterColumn(object):
         self.container['multiple_filters'] = multiple_filters
 
     @property
-    def color_filter(self):
-        """
-        Gets the color_filter of this FilterColumn.
-
-        :return: The color_filter of this FilterColumn.
-        :rtype: ColorFilter
-        """
-        return self.container['color_filter']
-
-    @color_filter.setter
-    def color_filter(self, color_filter):
-        """
-        Sets the color_filter of this FilterColumn.
-
-        :param color_filter: The color_filter of this FilterColumn.
-        :type: ColorFilter
-        """
-
-        self.container['color_filter'] = color_filter
-
-    @property
     def custom_filters(self):
         """
         Gets the custom_filters of this FilterColumn.
@@ -236,25 +190,50 @@ class FilterColumn(object):
         self.container['dynamic_filter'] = dynamic_filter
 
     @property
-    def icon_filter(self):
+    def color_filter(self):
         """
-        Gets the icon_filter of this FilterColumn.
+        Gets the color_filter of this FilterColumn.
 
-        :return: The icon_filter of this FilterColumn.
-        :rtype: IconFilter
+        :return: The color_filter of this FilterColumn.
+        :rtype: ColorFilter
         """
-        return self.container['icon_filter']
+        return self.container['color_filter']
 
-    @icon_filter.setter
-    def icon_filter(self, icon_filter):
+    @color_filter.setter
+    def color_filter(self, color_filter):
         """
-        Sets the icon_filter of this FilterColumn.
+        Sets the color_filter of this FilterColumn.
 
-        :param icon_filter: The icon_filter of this FilterColumn.
-        :type: IconFilter
+        :param color_filter: The color_filter of this FilterColumn.
+        :type: ColorFilter
         """
 
-        self.container['icon_filter'] = icon_filter
+        self.container['color_filter'] = color_filter
+
+    @property
+    def field_index(self):
+        """
+        Gets the field_index of this FilterColumn.
+
+        :return: The field_index of this FilterColumn.
+        :rtype: int
+        """
+        return self.container['field_index']
+
+    @field_index.setter
+    def field_index(self, field_index):
+        """
+        Sets the field_index of this FilterColumn.
+
+        :param field_index: The field_index of this FilterColumn.
+        :type: int
+        """
+        """
+        if field_index is None:
+            raise ValueError("Invalid value for `field_index`, must not be `None`")
+        """
+
+        self.container['field_index'] = field_index
 
     @property
     def top10_filter(self):
@@ -276,6 +255,27 @@ class FilterColumn(object):
         """
 
         self.container['top10_filter'] = top10_filter
+
+    @property
+    def icon_filter(self):
+        """
+        Gets the icon_filter of this FilterColumn.
+
+        :return: The icon_filter of this FilterColumn.
+        :rtype: IconFilter
+        """
+        return self.container['icon_filter']
+
+    @icon_filter.setter
+    def icon_filter(self, icon_filter):
+        """
+        Sets the icon_filter of this FilterColumn.
+
+        :param icon_filter: The icon_filter of this FilterColumn.
+        :type: IconFilter
+        """
+
+        self.container['icon_filter'] = icon_filter
 
     @property
     def visibledropdown(self):

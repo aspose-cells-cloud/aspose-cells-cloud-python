@@ -31,20 +31,20 @@ class ImportCSVDataOption(ImportOption):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'separator_string': 'str',
         'convert_numeric_data': 'bool',
-        'first_row': 'int',
         'first_column': 'int',
         'source_file': 'str',
+        'first_row': 'int',
+        'separator_string': 'str',
         'custom_parsers': 'list[CustomParserConfig]'
     }
 
     attribute_map = {
-        'separator_string': 'SeparatorString',
         'convert_numeric_data': 'ConvertNumericData',
-        'first_row': 'FirstRow',
         'first_column': 'FirstColumn',
         'source_file': 'SourceFile',
+        'first_row': 'FirstRow',
+        'separator_string': 'SeparatorString',
         'custom_parsers': 'CustomParsers'
     }
     
@@ -61,53 +61,32 @@ class ImportCSVDataOption(ImportOption):
             return self.container[attr]
         return None
 
-    def __init__(self, separator_string=None, convert_numeric_data=None, first_row=None, first_column=None, source_file=None, custom_parsers=None, **kw):
+    def __init__(self, convert_numeric_data=None, first_column=None, source_file=None, first_row=None, separator_string=None, custom_parsers=None, **kw):
         super(ImportCSVDataOption, self).__init__(**kw)
 		    
         """
         ImportCSVDataOption - a model defined in Swagger
         """
 
-        self.container['separator_string'] = None
         self.container['convert_numeric_data'] = None
-        self.container['first_row'] = None
         self.container['first_column'] = None
         self.container['source_file'] = None
+        self.container['first_row'] = None
+        self.container['separator_string'] = None
         self.container['custom_parsers'] = None
 
-        if separator_string is not None:
-          self.separator_string = separator_string
         if convert_numeric_data is not None:
           self.convert_numeric_data = convert_numeric_data
-        if first_row is not None:
-          self.first_row = first_row
         if first_column is not None:
           self.first_column = first_column
         if source_file is not None:
           self.source_file = source_file
+        if first_row is not None:
+          self.first_row = first_row
+        if separator_string is not None:
+          self.separator_string = separator_string
         if custom_parsers is not None:
           self.custom_parsers = custom_parsers
-
-    @property
-    def separator_string(self):
-        """
-        Gets the separator_string of this ImportCSVDataOption.
-
-        :return: The separator_string of this ImportCSVDataOption.
-        :rtype: str
-        """
-        return self.container['separator_string']
-
-    @separator_string.setter
-    def separator_string(self, separator_string):
-        """
-        Sets the separator_string of this ImportCSVDataOption.
-
-        :param separator_string: The separator_string of this ImportCSVDataOption.
-        :type: str
-        """
-
-        self.container['separator_string'] = separator_string
 
     @property
     def convert_numeric_data(self):
@@ -129,27 +108,6 @@ class ImportCSVDataOption(ImportOption):
         """
 
         self.container['convert_numeric_data'] = convert_numeric_data
-
-    @property
-    def first_row(self):
-        """
-        Gets the first_row of this ImportCSVDataOption.
-
-        :return: The first_row of this ImportCSVDataOption.
-        :rtype: int
-        """
-        return self.container['first_row']
-
-    @first_row.setter
-    def first_row(self, first_row):
-        """
-        Sets the first_row of this ImportCSVDataOption.
-
-        :param first_row: The first_row of this ImportCSVDataOption.
-        :type: int
-        """
-
-        self.container['first_row'] = first_row
 
     @property
     def first_column(self):
@@ -192,6 +150,48 @@ class ImportCSVDataOption(ImportOption):
         """
 
         self.container['source_file'] = source_file
+
+    @property
+    def first_row(self):
+        """
+        Gets the first_row of this ImportCSVDataOption.
+
+        :return: The first_row of this ImportCSVDataOption.
+        :rtype: int
+        """
+        return self.container['first_row']
+
+    @first_row.setter
+    def first_row(self, first_row):
+        """
+        Sets the first_row of this ImportCSVDataOption.
+
+        :param first_row: The first_row of this ImportCSVDataOption.
+        :type: int
+        """
+
+        self.container['first_row'] = first_row
+
+    @property
+    def separator_string(self):
+        """
+        Gets the separator_string of this ImportCSVDataOption.
+
+        :return: The separator_string of this ImportCSVDataOption.
+        :rtype: str
+        """
+        return self.container['separator_string']
+
+    @separator_string.setter
+    def separator_string(self, separator_string):
+        """
+        Sets the separator_string of this ImportCSVDataOption.
+
+        :param separator_string: The separator_string of this ImportCSVDataOption.
+        :type: str
+        """
+
+        self.container['separator_string'] = separator_string
 
     @property
     def custom_parsers(self):

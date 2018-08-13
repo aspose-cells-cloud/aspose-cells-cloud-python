@@ -31,19 +31,19 @@ class ColorFilter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'filter_by_fill_color': 'str',
-        'pattern': 'str',
         'color': 'CellsColor',
+        'pattern': 'str',
+        'background_color': 'CellsColor',
         'foreground_color_color': 'CellsColor',
-        'background_color': 'CellsColor'
+        'filter_by_fill_color': 'str'
     }
 
     attribute_map = {
-        'filter_by_fill_color': 'FilterByFillColor',
-        'pattern': 'Pattern',
         'color': 'Color',
+        'pattern': 'Pattern',
+        'background_color': 'BackgroundColor',
         'foreground_color_color': 'ForegroundColorColor',
-        'background_color': 'BackgroundColor'
+        'filter_by_fill_color': 'FilterByFillColor'
     }
     
     @staticmethod
@@ -59,7 +59,7 @@ class ColorFilter(object):
             return self.container[attr]
         return None
 
-    def __init__(self, filter_by_fill_color=None, pattern=None, color=None, foreground_color_color=None, background_color=None, **kw):
+    def __init__(self, color=None, pattern=None, background_color=None, foreground_color_color=None, filter_by_fill_color=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -69,64 +69,22 @@ class ColorFilter(object):
         ColorFilter - a model defined in Swagger
         """
 
-        self.container['filter_by_fill_color'] = None
-        self.container['pattern'] = None
         self.container['color'] = None
-        self.container['foreground_color_color'] = None
+        self.container['pattern'] = None
         self.container['background_color'] = None
+        self.container['foreground_color_color'] = None
+        self.container['filter_by_fill_color'] = None
 
-        if filter_by_fill_color is not None:
-          self.filter_by_fill_color = filter_by_fill_color
-        if pattern is not None:
-          self.pattern = pattern
         if color is not None:
           self.color = color
-        if foreground_color_color is not None:
-          self.foreground_color_color = foreground_color_color
+        if pattern is not None:
+          self.pattern = pattern
         if background_color is not None:
           self.background_color = background_color
-
-    @property
-    def filter_by_fill_color(self):
-        """
-        Gets the filter_by_fill_color of this ColorFilter.
-
-        :return: The filter_by_fill_color of this ColorFilter.
-        :rtype: str
-        """
-        return self.container['filter_by_fill_color']
-
-    @filter_by_fill_color.setter
-    def filter_by_fill_color(self, filter_by_fill_color):
-        """
-        Sets the filter_by_fill_color of this ColorFilter.
-
-        :param filter_by_fill_color: The filter_by_fill_color of this ColorFilter.
-        :type: str
-        """
-
-        self.container['filter_by_fill_color'] = filter_by_fill_color
-
-    @property
-    def pattern(self):
-        """
-        Gets the pattern of this ColorFilter.
-
-        :return: The pattern of this ColorFilter.
-        :rtype: str
-        """
-        return self.container['pattern']
-
-    @pattern.setter
-    def pattern(self, pattern):
-        """
-        Sets the pattern of this ColorFilter.
-
-        :param pattern: The pattern of this ColorFilter.
-        :type: str
-        """
-
-        self.container['pattern'] = pattern
+        if foreground_color_color is not None:
+          self.foreground_color_color = foreground_color_color
+        if filter_by_fill_color is not None:
+          self.filter_by_fill_color = filter_by_fill_color
 
     @property
     def color(self):
@@ -150,25 +108,25 @@ class ColorFilter(object):
         self.container['color'] = color
 
     @property
-    def foreground_color_color(self):
+    def pattern(self):
         """
-        Gets the foreground_color_color of this ColorFilter.
+        Gets the pattern of this ColorFilter.
 
-        :return: The foreground_color_color of this ColorFilter.
-        :rtype: CellsColor
+        :return: The pattern of this ColorFilter.
+        :rtype: str
         """
-        return self.container['foreground_color_color']
+        return self.container['pattern']
 
-    @foreground_color_color.setter
-    def foreground_color_color(self, foreground_color_color):
+    @pattern.setter
+    def pattern(self, pattern):
         """
-        Sets the foreground_color_color of this ColorFilter.
+        Sets the pattern of this ColorFilter.
 
-        :param foreground_color_color: The foreground_color_color of this ColorFilter.
-        :type: CellsColor
+        :param pattern: The pattern of this ColorFilter.
+        :type: str
         """
 
-        self.container['foreground_color_color'] = foreground_color_color
+        self.container['pattern'] = pattern
 
     @property
     def background_color(self):
@@ -190,6 +148,48 @@ class ColorFilter(object):
         """
 
         self.container['background_color'] = background_color
+
+    @property
+    def foreground_color_color(self):
+        """
+        Gets the foreground_color_color of this ColorFilter.
+
+        :return: The foreground_color_color of this ColorFilter.
+        :rtype: CellsColor
+        """
+        return self.container['foreground_color_color']
+
+    @foreground_color_color.setter
+    def foreground_color_color(self, foreground_color_color):
+        """
+        Sets the foreground_color_color of this ColorFilter.
+
+        :param foreground_color_color: The foreground_color_color of this ColorFilter.
+        :type: CellsColor
+        """
+
+        self.container['foreground_color_color'] = foreground_color_color
+
+    @property
+    def filter_by_fill_color(self):
+        """
+        Gets the filter_by_fill_color of this ColorFilter.
+
+        :return: The filter_by_fill_color of this ColorFilter.
+        :rtype: str
+        """
+        return self.container['filter_by_fill_color']
+
+    @filter_by_fill_color.setter
+    def filter_by_fill_color(self, filter_by_fill_color):
+        """
+        Sets the filter_by_fill_color of this ColorFilter.
+
+        :param filter_by_fill_color: The filter_by_fill_color of this ColorFilter.
+        :type: str
+        """
+
+        self.container['filter_by_fill_color'] = filter_by_fill_color
 
     def to_dict(self):
         """

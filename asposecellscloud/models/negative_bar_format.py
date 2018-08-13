@@ -32,15 +32,15 @@ class NegativeBarFormat(object):
     """
     swagger_types = {
         'border_color': 'Color',
-        'border_color_type': 'str',
         'color': 'Color',
+        'border_color_type': 'str',
         'color_type': 'str'
     }
 
     attribute_map = {
         'border_color': 'BorderColor',
-        'border_color_type': 'BorderColorType',
         'color': 'Color',
+        'border_color_type': 'BorderColorType',
         'color_type': 'ColorType'
     }
     
@@ -57,7 +57,7 @@ class NegativeBarFormat(object):
             return self.container[attr]
         return None
 
-    def __init__(self, border_color=None, border_color_type=None, color=None, color_type=None, **kw):
+    def __init__(self, border_color=None, color=None, border_color_type=None, color_type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -68,16 +68,16 @@ class NegativeBarFormat(object):
         """
 
         self.container['border_color'] = None
-        self.container['border_color_type'] = None
         self.container['color'] = None
+        self.container['border_color_type'] = None
         self.container['color_type'] = None
 
         if border_color is not None:
           self.border_color = border_color
-        if border_color_type is not None:
-          self.border_color_type = border_color_type
         if color is not None:
           self.color = color
+        if border_color_type is not None:
+          self.border_color_type = border_color_type
         if color_type is not None:
           self.color_type = color_type
 
@@ -105,29 +105,6 @@ class NegativeBarFormat(object):
         self.container['border_color'] = border_color
 
     @property
-    def border_color_type(self):
-        """
-        Gets the border_color_type of this NegativeBarFormat.
-        Gets whether to use the same border color as positive data bars.             
-
-        :return: The border_color_type of this NegativeBarFormat.
-        :rtype: str
-        """
-        return self.container['border_color_type']
-
-    @border_color_type.setter
-    def border_color_type(self, border_color_type):
-        """
-        Sets the border_color_type of this NegativeBarFormat.
-        Gets whether to use the same border color as positive data bars.             
-
-        :param border_color_type: The border_color_type of this NegativeBarFormat.
-        :type: str
-        """
-
-        self.container['border_color_type'] = border_color_type
-
-    @property
     def color(self):
         """
         Gets the color of this NegativeBarFormat.
@@ -149,6 +126,29 @@ class NegativeBarFormat(object):
         """
 
         self.container['color'] = color
+
+    @property
+    def border_color_type(self):
+        """
+        Gets the border_color_type of this NegativeBarFormat.
+        Gets whether to use the same border color as positive data bars.             
+
+        :return: The border_color_type of this NegativeBarFormat.
+        :rtype: str
+        """
+        return self.container['border_color_type']
+
+    @border_color_type.setter
+    def border_color_type(self, border_color_type):
+        """
+        Sets the border_color_type of this NegativeBarFormat.
+        Gets whether to use the same border color as positive data bars.             
+
+        :param border_color_type: The border_color_type of this NegativeBarFormat.
+        :type: str
+        """
+
+        self.container['border_color_type'] = border_color_type
 
     @property
     def color_type(self):

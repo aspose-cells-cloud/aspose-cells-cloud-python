@@ -31,19 +31,19 @@ class Area(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'background_color': 'Color',
-        'fill_format': 'FillFormat',
         'foreground_color': 'Color',
+        'background_color': 'Color',
         'format': 'str',
+        'fill_format': 'FillFormat',
         'invert_if_negative': 'bool',
         'transparency': 'float'
     }
 
     attribute_map = {
-        'background_color': 'BackgroundColor',
-        'fill_format': 'FillFormat',
         'foreground_color': 'ForegroundColor',
+        'background_color': 'BackgroundColor',
         'format': 'Format',
+        'fill_format': 'FillFormat',
         'invert_if_negative': 'InvertIfNegative',
         'transparency': 'Transparency'
     }
@@ -61,7 +61,7 @@ class Area(object):
             return self.container[attr]
         return None
 
-    def __init__(self, background_color=None, fill_format=None, foreground_color=None, format=None, invert_if_negative=None, transparency=None, **kw):
+    def __init__(self, foreground_color=None, background_color=None, format=None, fill_format=None, invert_if_negative=None, transparency=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -71,67 +71,25 @@ class Area(object):
         Area - a model defined in Swagger
         """
 
-        self.container['background_color'] = None
-        self.container['fill_format'] = None
         self.container['foreground_color'] = None
+        self.container['background_color'] = None
         self.container['format'] = None
+        self.container['fill_format'] = None
         self.container['invert_if_negative'] = None
         self.container['transparency'] = None
 
-        if background_color is not None:
-          self.background_color = background_color
-        if fill_format is not None:
-          self.fill_format = fill_format
         if foreground_color is not None:
           self.foreground_color = foreground_color
+        if background_color is not None:
+          self.background_color = background_color
         if format is not None:
           self.format = format
+        if fill_format is not None:
+          self.fill_format = fill_format
         if invert_if_negative is not None:
           self.invert_if_negative = invert_if_negative
         if transparency is not None:
           self.transparency = transparency
-
-    @property
-    def background_color(self):
-        """
-        Gets the background_color of this Area.
-
-        :return: The background_color of this Area.
-        :rtype: Color
-        """
-        return self.container['background_color']
-
-    @background_color.setter
-    def background_color(self, background_color):
-        """
-        Sets the background_color of this Area.
-
-        :param background_color: The background_color of this Area.
-        :type: Color
-        """
-
-        self.container['background_color'] = background_color
-
-    @property
-    def fill_format(self):
-        """
-        Gets the fill_format of this Area.
-
-        :return: The fill_format of this Area.
-        :rtype: FillFormat
-        """
-        return self.container['fill_format']
-
-    @fill_format.setter
-    def fill_format(self, fill_format):
-        """
-        Sets the fill_format of this Area.
-
-        :param fill_format: The fill_format of this Area.
-        :type: FillFormat
-        """
-
-        self.container['fill_format'] = fill_format
 
     @property
     def foreground_color(self):
@@ -155,6 +113,27 @@ class Area(object):
         self.container['foreground_color'] = foreground_color
 
     @property
+    def background_color(self):
+        """
+        Gets the background_color of this Area.
+
+        :return: The background_color of this Area.
+        :rtype: Color
+        """
+        return self.container['background_color']
+
+    @background_color.setter
+    def background_color(self, background_color):
+        """
+        Sets the background_color of this Area.
+
+        :param background_color: The background_color of this Area.
+        :type: Color
+        """
+
+        self.container['background_color'] = background_color
+
+    @property
     def format(self):
         """
         Gets the format of this Area.
@@ -174,6 +153,27 @@ class Area(object):
         """
 
         self.container['format'] = format
+
+    @property
+    def fill_format(self):
+        """
+        Gets the fill_format of this Area.
+
+        :return: The fill_format of this Area.
+        :rtype: FillFormat
+        """
+        return self.container['fill_format']
+
+    @fill_format.setter
+    def fill_format(self, fill_format):
+        """
+        Sets the fill_format of this Area.
+
+        :param fill_format: The fill_format of this Area.
+        :type: FillFormat
+        """
+
+        self.container['fill_format'] = fill_format
 
     @property
     def invert_if_negative(self):

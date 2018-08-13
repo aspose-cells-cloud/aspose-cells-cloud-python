@@ -32,56 +32,56 @@ class Style(object):
     """
     swagger_types = {
         'link': 'Link',
-        'font': 'Font',
-        'name': 'str',
-        'culture_custom': 'str',
-        'custom': 'str',
-        'background_color': 'Color',
-        'foreground_color': 'Color',
-        'is_formula_hidden': 'bool',
-        'is_date_time': 'bool',
-        'is_text_wrapped': 'bool',
-        'is_gradient': 'bool',
-        'is_locked': 'bool',
-        'is_percent': 'bool',
-        'shrink_to_fit': 'bool',
-        'indent_level': 'int',
-        'number': 'int',
-        'rotation_angle': 'int',
         'pattern': 'str',
         'text_direction': 'str',
-        'vertical_alignment': 'str',
-        'horizontal_alignment': 'str',
+        'custom': 'str',
+        'shrink_to_fit': 'bool',
+        'is_date_time': 'bool',
+        'culture_custom': 'str',
+        'rotation_angle': 'int',
+        'indent_level': 'int',
+        'is_percent': 'bool',
+        'foreground_color': 'Color',
+        'name': 'str',
+        'foreground_theme_color': 'ThemeColor',
         'border_collection': 'list[Border]',
+        'is_locked': 'bool',
+        'vertical_alignment': 'str',
+        'background_color': 'Color',
         'background_theme_color': 'ThemeColor',
-        'foreground_theme_color': 'ThemeColor'
+        'is_formula_hidden': 'bool',
+        'is_gradient': 'bool',
+        'number': 'int',
+        'horizontal_alignment': 'str',
+        'is_text_wrapped': 'bool',
+        'font': 'Font'
     }
 
     attribute_map = {
         'link': 'link',
-        'font': 'Font',
-        'name': 'Name',
-        'culture_custom': 'CultureCustom',
-        'custom': 'Custom',
-        'background_color': 'BackgroundColor',
-        'foreground_color': 'ForegroundColor',
-        'is_formula_hidden': 'IsFormulaHidden',
-        'is_date_time': 'IsDateTime',
-        'is_text_wrapped': 'IsTextWrapped',
-        'is_gradient': 'IsGradient',
-        'is_locked': 'IsLocked',
-        'is_percent': 'IsPercent',
-        'shrink_to_fit': 'ShrinkToFit',
-        'indent_level': 'IndentLevel',
-        'number': 'Number',
-        'rotation_angle': 'RotationAngle',
         'pattern': 'Pattern',
         'text_direction': 'TextDirection',
-        'vertical_alignment': 'VerticalAlignment',
-        'horizontal_alignment': 'HorizontalAlignment',
+        'custom': 'Custom',
+        'shrink_to_fit': 'ShrinkToFit',
+        'is_date_time': 'IsDateTime',
+        'culture_custom': 'CultureCustom',
+        'rotation_angle': 'RotationAngle',
+        'indent_level': 'IndentLevel',
+        'is_percent': 'IsPercent',
+        'foreground_color': 'ForegroundColor',
+        'name': 'Name',
+        'foreground_theme_color': 'ForegroundThemeColor',
         'border_collection': 'BorderCollection',
+        'is_locked': 'IsLocked',
+        'vertical_alignment': 'VerticalAlignment',
+        'background_color': 'BackgroundColor',
         'background_theme_color': 'BackgroundThemeColor',
-        'foreground_theme_color': 'ForegroundThemeColor'
+        'is_formula_hidden': 'IsFormulaHidden',
+        'is_gradient': 'IsGradient',
+        'number': 'Number',
+        'horizontal_alignment': 'HorizontalAlignment',
+        'is_text_wrapped': 'IsTextWrapped',
+        'font': 'Font'
     }
     
     @staticmethod
@@ -97,7 +97,7 @@ class Style(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, font=None, name=None, culture_custom=None, custom=None, background_color=None, foreground_color=None, is_formula_hidden=None, is_date_time=None, is_text_wrapped=None, is_gradient=None, is_locked=None, is_percent=None, shrink_to_fit=None, indent_level=None, number=None, rotation_angle=None, pattern=None, text_direction=None, vertical_alignment=None, horizontal_alignment=None, border_collection=None, background_theme_color=None, foreground_theme_color=None, **kw):
+    def __init__(self, link=None, pattern=None, text_direction=None, custom=None, shrink_to_fit=None, is_date_time=None, culture_custom=None, rotation_angle=None, indent_level=None, is_percent=None, foreground_color=None, name=None, foreground_theme_color=None, border_collection=None, is_locked=None, vertical_alignment=None, background_color=None, background_theme_color=None, is_formula_hidden=None, is_gradient=None, number=None, horizontal_alignment=None, is_text_wrapped=None, font=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -108,78 +108,78 @@ class Style(object):
         """
 
         self.container['link'] = None
-        self.container['font'] = None
-        self.container['name'] = None
-        self.container['culture_custom'] = None
-        self.container['custom'] = None
-        self.container['background_color'] = None
-        self.container['foreground_color'] = None
-        self.container['is_formula_hidden'] = None
-        self.container['is_date_time'] = None
-        self.container['is_text_wrapped'] = None
-        self.container['is_gradient'] = None
-        self.container['is_locked'] = None
-        self.container['is_percent'] = None
-        self.container['shrink_to_fit'] = None
-        self.container['indent_level'] = None
-        self.container['number'] = None
-        self.container['rotation_angle'] = None
         self.container['pattern'] = None
         self.container['text_direction'] = None
-        self.container['vertical_alignment'] = None
-        self.container['horizontal_alignment'] = None
-        self.container['border_collection'] = None
-        self.container['background_theme_color'] = None
+        self.container['custom'] = None
+        self.container['shrink_to_fit'] = None
+        self.container['is_date_time'] = None
+        self.container['culture_custom'] = None
+        self.container['rotation_angle'] = None
+        self.container['indent_level'] = None
+        self.container['is_percent'] = None
+        self.container['foreground_color'] = None
+        self.container['name'] = None
         self.container['foreground_theme_color'] = None
+        self.container['border_collection'] = None
+        self.container['is_locked'] = None
+        self.container['vertical_alignment'] = None
+        self.container['background_color'] = None
+        self.container['background_theme_color'] = None
+        self.container['is_formula_hidden'] = None
+        self.container['is_gradient'] = None
+        self.container['number'] = None
+        self.container['horizontal_alignment'] = None
+        self.container['is_text_wrapped'] = None
+        self.container['font'] = None
 
         if link is not None:
           self.link = link
-        if font is not None:
-          self.font = font
-        if name is not None:
-          self.name = name
-        if culture_custom is not None:
-          self.culture_custom = culture_custom
-        if custom is not None:
-          self.custom = custom
-        if background_color is not None:
-          self.background_color = background_color
-        if foreground_color is not None:
-          self.foreground_color = foreground_color
-        if is_formula_hidden is not None:
-          self.is_formula_hidden = is_formula_hidden
-        if is_date_time is not None:
-          self.is_date_time = is_date_time
-        if is_text_wrapped is not None:
-          self.is_text_wrapped = is_text_wrapped
-        if is_gradient is not None:
-          self.is_gradient = is_gradient
-        if is_locked is not None:
-          self.is_locked = is_locked
-        if is_percent is not None:
-          self.is_percent = is_percent
-        if shrink_to_fit is not None:
-          self.shrink_to_fit = shrink_to_fit
-        if indent_level is not None:
-          self.indent_level = indent_level
-        if number is not None:
-          self.number = number
-        if rotation_angle is not None:
-          self.rotation_angle = rotation_angle
         if pattern is not None:
           self.pattern = pattern
         if text_direction is not None:
           self.text_direction = text_direction
-        if vertical_alignment is not None:
-          self.vertical_alignment = vertical_alignment
-        if horizontal_alignment is not None:
-          self.horizontal_alignment = horizontal_alignment
-        if border_collection is not None:
-          self.border_collection = border_collection
-        if background_theme_color is not None:
-          self.background_theme_color = background_theme_color
+        if custom is not None:
+          self.custom = custom
+        if shrink_to_fit is not None:
+          self.shrink_to_fit = shrink_to_fit
+        if is_date_time is not None:
+          self.is_date_time = is_date_time
+        if culture_custom is not None:
+          self.culture_custom = culture_custom
+        if rotation_angle is not None:
+          self.rotation_angle = rotation_angle
+        if indent_level is not None:
+          self.indent_level = indent_level
+        if is_percent is not None:
+          self.is_percent = is_percent
+        if foreground_color is not None:
+          self.foreground_color = foreground_color
+        if name is not None:
+          self.name = name
         if foreground_theme_color is not None:
           self.foreground_theme_color = foreground_theme_color
+        if border_collection is not None:
+          self.border_collection = border_collection
+        if is_locked is not None:
+          self.is_locked = is_locked
+        if vertical_alignment is not None:
+          self.vertical_alignment = vertical_alignment
+        if background_color is not None:
+          self.background_color = background_color
+        if background_theme_color is not None:
+          self.background_theme_color = background_theme_color
+        if is_formula_hidden is not None:
+          self.is_formula_hidden = is_formula_hidden
+        if is_gradient is not None:
+          self.is_gradient = is_gradient
+        if number is not None:
+          self.number = number
+        if horizontal_alignment is not None:
+          self.horizontal_alignment = horizontal_alignment
+        if is_text_wrapped is not None:
+          self.is_text_wrapped = is_text_wrapped
+        if font is not None:
+          self.font = font
 
     @property
     def link(self):
@@ -201,342 +201,6 @@ class Style(object):
         """
 
         self.container['link'] = link
-
-    @property
-    def font(self):
-        """
-        Gets the font of this Style.
-
-        :return: The font of this Style.
-        :rtype: Font
-        """
-        return self.container['font']
-
-    @font.setter
-    def font(self, font):
-        """
-        Sets the font of this Style.
-
-        :param font: The font of this Style.
-        :type: Font
-        """
-
-        self.container['font'] = font
-
-    @property
-    def name(self):
-        """
-        Gets the name of this Style.
-
-        :return: The name of this Style.
-        :rtype: str
-        """
-        return self.container['name']
-
-    @name.setter
-    def name(self, name):
-        """
-        Sets the name of this Style.
-
-        :param name: The name of this Style.
-        :type: str
-        """
-
-        self.container['name'] = name
-
-    @property
-    def culture_custom(self):
-        """
-        Gets the culture_custom of this Style.
-
-        :return: The culture_custom of this Style.
-        :rtype: str
-        """
-        return self.container['culture_custom']
-
-    @culture_custom.setter
-    def culture_custom(self, culture_custom):
-        """
-        Sets the culture_custom of this Style.
-
-        :param culture_custom: The culture_custom of this Style.
-        :type: str
-        """
-
-        self.container['culture_custom'] = culture_custom
-
-    @property
-    def custom(self):
-        """
-        Gets the custom of this Style.
-
-        :return: The custom of this Style.
-        :rtype: str
-        """
-        return self.container['custom']
-
-    @custom.setter
-    def custom(self, custom):
-        """
-        Sets the custom of this Style.
-
-        :param custom: The custom of this Style.
-        :type: str
-        """
-
-        self.container['custom'] = custom
-
-    @property
-    def background_color(self):
-        """
-        Gets the background_color of this Style.
-
-        :return: The background_color of this Style.
-        :rtype: Color
-        """
-        return self.container['background_color']
-
-    @background_color.setter
-    def background_color(self, background_color):
-        """
-        Sets the background_color of this Style.
-
-        :param background_color: The background_color of this Style.
-        :type: Color
-        """
-
-        self.container['background_color'] = background_color
-
-    @property
-    def foreground_color(self):
-        """
-        Gets the foreground_color of this Style.
-
-        :return: The foreground_color of this Style.
-        :rtype: Color
-        """
-        return self.container['foreground_color']
-
-    @foreground_color.setter
-    def foreground_color(self, foreground_color):
-        """
-        Sets the foreground_color of this Style.
-
-        :param foreground_color: The foreground_color of this Style.
-        :type: Color
-        """
-
-        self.container['foreground_color'] = foreground_color
-
-    @property
-    def is_formula_hidden(self):
-        """
-        Gets the is_formula_hidden of this Style.
-
-        :return: The is_formula_hidden of this Style.
-        :rtype: bool
-        """
-        return self.container['is_formula_hidden']
-
-    @is_formula_hidden.setter
-    def is_formula_hidden(self, is_formula_hidden):
-        """
-        Sets the is_formula_hidden of this Style.
-
-        :param is_formula_hidden: The is_formula_hidden of this Style.
-        :type: bool
-        """
-
-        self.container['is_formula_hidden'] = is_formula_hidden
-
-    @property
-    def is_date_time(self):
-        """
-        Gets the is_date_time of this Style.
-
-        :return: The is_date_time of this Style.
-        :rtype: bool
-        """
-        return self.container['is_date_time']
-
-    @is_date_time.setter
-    def is_date_time(self, is_date_time):
-        """
-        Sets the is_date_time of this Style.
-
-        :param is_date_time: The is_date_time of this Style.
-        :type: bool
-        """
-
-        self.container['is_date_time'] = is_date_time
-
-    @property
-    def is_text_wrapped(self):
-        """
-        Gets the is_text_wrapped of this Style.
-
-        :return: The is_text_wrapped of this Style.
-        :rtype: bool
-        """
-        return self.container['is_text_wrapped']
-
-    @is_text_wrapped.setter
-    def is_text_wrapped(self, is_text_wrapped):
-        """
-        Sets the is_text_wrapped of this Style.
-
-        :param is_text_wrapped: The is_text_wrapped of this Style.
-        :type: bool
-        """
-
-        self.container['is_text_wrapped'] = is_text_wrapped
-
-    @property
-    def is_gradient(self):
-        """
-        Gets the is_gradient of this Style.
-
-        :return: The is_gradient of this Style.
-        :rtype: bool
-        """
-        return self.container['is_gradient']
-
-    @is_gradient.setter
-    def is_gradient(self, is_gradient):
-        """
-        Sets the is_gradient of this Style.
-
-        :param is_gradient: The is_gradient of this Style.
-        :type: bool
-        """
-
-        self.container['is_gradient'] = is_gradient
-
-    @property
-    def is_locked(self):
-        """
-        Gets the is_locked of this Style.
-
-        :return: The is_locked of this Style.
-        :rtype: bool
-        """
-        return self.container['is_locked']
-
-    @is_locked.setter
-    def is_locked(self, is_locked):
-        """
-        Sets the is_locked of this Style.
-
-        :param is_locked: The is_locked of this Style.
-        :type: bool
-        """
-
-        self.container['is_locked'] = is_locked
-
-    @property
-    def is_percent(self):
-        """
-        Gets the is_percent of this Style.
-
-        :return: The is_percent of this Style.
-        :rtype: bool
-        """
-        return self.container['is_percent']
-
-    @is_percent.setter
-    def is_percent(self, is_percent):
-        """
-        Sets the is_percent of this Style.
-
-        :param is_percent: The is_percent of this Style.
-        :type: bool
-        """
-
-        self.container['is_percent'] = is_percent
-
-    @property
-    def shrink_to_fit(self):
-        """
-        Gets the shrink_to_fit of this Style.
-
-        :return: The shrink_to_fit of this Style.
-        :rtype: bool
-        """
-        return self.container['shrink_to_fit']
-
-    @shrink_to_fit.setter
-    def shrink_to_fit(self, shrink_to_fit):
-        """
-        Sets the shrink_to_fit of this Style.
-
-        :param shrink_to_fit: The shrink_to_fit of this Style.
-        :type: bool
-        """
-
-        self.container['shrink_to_fit'] = shrink_to_fit
-
-    @property
-    def indent_level(self):
-        """
-        Gets the indent_level of this Style.
-
-        :return: The indent_level of this Style.
-        :rtype: int
-        """
-        return self.container['indent_level']
-
-    @indent_level.setter
-    def indent_level(self, indent_level):
-        """
-        Sets the indent_level of this Style.
-
-        :param indent_level: The indent_level of this Style.
-        :type: int
-        """
-
-        self.container['indent_level'] = indent_level
-
-    @property
-    def number(self):
-        """
-        Gets the number of this Style.
-
-        :return: The number of this Style.
-        :rtype: int
-        """
-        return self.container['number']
-
-    @number.setter
-    def number(self, number):
-        """
-        Sets the number of this Style.
-
-        :param number: The number of this Style.
-        :type: int
-        """
-
-        self.container['number'] = number
-
-    @property
-    def rotation_angle(self):
-        """
-        Gets the rotation_angle of this Style.
-
-        :return: The rotation_angle of this Style.
-        :rtype: int
-        """
-        return self.container['rotation_angle']
-
-    @rotation_angle.setter
-    def rotation_angle(self, rotation_angle):
-        """
-        Sets the rotation_angle of this Style.
-
-        :param rotation_angle: The rotation_angle of this Style.
-        :type: int
-        """
-
-        self.container['rotation_angle'] = rotation_angle
 
     @property
     def pattern(self):
@@ -581,46 +245,214 @@ class Style(object):
         self.container['text_direction'] = text_direction
 
     @property
-    def vertical_alignment(self):
+    def custom(self):
         """
-        Gets the vertical_alignment of this Style.
+        Gets the custom of this Style.
 
-        :return: The vertical_alignment of this Style.
+        :return: The custom of this Style.
         :rtype: str
         """
-        return self.container['vertical_alignment']
+        return self.container['custom']
 
-    @vertical_alignment.setter
-    def vertical_alignment(self, vertical_alignment):
+    @custom.setter
+    def custom(self, custom):
         """
-        Sets the vertical_alignment of this Style.
+        Sets the custom of this Style.
 
-        :param vertical_alignment: The vertical_alignment of this Style.
+        :param custom: The custom of this Style.
         :type: str
         """
 
-        self.container['vertical_alignment'] = vertical_alignment
+        self.container['custom'] = custom
 
     @property
-    def horizontal_alignment(self):
+    def shrink_to_fit(self):
         """
-        Gets the horizontal_alignment of this Style.
+        Gets the shrink_to_fit of this Style.
 
-        :return: The horizontal_alignment of this Style.
+        :return: The shrink_to_fit of this Style.
+        :rtype: bool
+        """
+        return self.container['shrink_to_fit']
+
+    @shrink_to_fit.setter
+    def shrink_to_fit(self, shrink_to_fit):
+        """
+        Sets the shrink_to_fit of this Style.
+
+        :param shrink_to_fit: The shrink_to_fit of this Style.
+        :type: bool
+        """
+
+        self.container['shrink_to_fit'] = shrink_to_fit
+
+    @property
+    def is_date_time(self):
+        """
+        Gets the is_date_time of this Style.
+
+        :return: The is_date_time of this Style.
+        :rtype: bool
+        """
+        return self.container['is_date_time']
+
+    @is_date_time.setter
+    def is_date_time(self, is_date_time):
+        """
+        Sets the is_date_time of this Style.
+
+        :param is_date_time: The is_date_time of this Style.
+        :type: bool
+        """
+
+        self.container['is_date_time'] = is_date_time
+
+    @property
+    def culture_custom(self):
+        """
+        Gets the culture_custom of this Style.
+
+        :return: The culture_custom of this Style.
         :rtype: str
         """
-        return self.container['horizontal_alignment']
+        return self.container['culture_custom']
 
-    @horizontal_alignment.setter
-    def horizontal_alignment(self, horizontal_alignment):
+    @culture_custom.setter
+    def culture_custom(self, culture_custom):
         """
-        Sets the horizontal_alignment of this Style.
+        Sets the culture_custom of this Style.
 
-        :param horizontal_alignment: The horizontal_alignment of this Style.
+        :param culture_custom: The culture_custom of this Style.
         :type: str
         """
 
-        self.container['horizontal_alignment'] = horizontal_alignment
+        self.container['culture_custom'] = culture_custom
+
+    @property
+    def rotation_angle(self):
+        """
+        Gets the rotation_angle of this Style.
+
+        :return: The rotation_angle of this Style.
+        :rtype: int
+        """
+        return self.container['rotation_angle']
+
+    @rotation_angle.setter
+    def rotation_angle(self, rotation_angle):
+        """
+        Sets the rotation_angle of this Style.
+
+        :param rotation_angle: The rotation_angle of this Style.
+        :type: int
+        """
+
+        self.container['rotation_angle'] = rotation_angle
+
+    @property
+    def indent_level(self):
+        """
+        Gets the indent_level of this Style.
+
+        :return: The indent_level of this Style.
+        :rtype: int
+        """
+        return self.container['indent_level']
+
+    @indent_level.setter
+    def indent_level(self, indent_level):
+        """
+        Sets the indent_level of this Style.
+
+        :param indent_level: The indent_level of this Style.
+        :type: int
+        """
+
+        self.container['indent_level'] = indent_level
+
+    @property
+    def is_percent(self):
+        """
+        Gets the is_percent of this Style.
+
+        :return: The is_percent of this Style.
+        :rtype: bool
+        """
+        return self.container['is_percent']
+
+    @is_percent.setter
+    def is_percent(self, is_percent):
+        """
+        Sets the is_percent of this Style.
+
+        :param is_percent: The is_percent of this Style.
+        :type: bool
+        """
+
+        self.container['is_percent'] = is_percent
+
+    @property
+    def foreground_color(self):
+        """
+        Gets the foreground_color of this Style.
+
+        :return: The foreground_color of this Style.
+        :rtype: Color
+        """
+        return self.container['foreground_color']
+
+    @foreground_color.setter
+    def foreground_color(self, foreground_color):
+        """
+        Sets the foreground_color of this Style.
+
+        :param foreground_color: The foreground_color of this Style.
+        :type: Color
+        """
+
+        self.container['foreground_color'] = foreground_color
+
+    @property
+    def name(self):
+        """
+        Gets the name of this Style.
+
+        :return: The name of this Style.
+        :rtype: str
+        """
+        return self.container['name']
+
+    @name.setter
+    def name(self, name):
+        """
+        Sets the name of this Style.
+
+        :param name: The name of this Style.
+        :type: str
+        """
+
+        self.container['name'] = name
+
+    @property
+    def foreground_theme_color(self):
+        """
+        Gets the foreground_theme_color of this Style.
+
+        :return: The foreground_theme_color of this Style.
+        :rtype: ThemeColor
+        """
+        return self.container['foreground_theme_color']
+
+    @foreground_theme_color.setter
+    def foreground_theme_color(self, foreground_theme_color):
+        """
+        Sets the foreground_theme_color of this Style.
+
+        :param foreground_theme_color: The foreground_theme_color of this Style.
+        :type: ThemeColor
+        """
+
+        self.container['foreground_theme_color'] = foreground_theme_color
 
     @property
     def border_collection(self):
@@ -644,6 +476,69 @@ class Style(object):
         self.container['border_collection'] = border_collection
 
     @property
+    def is_locked(self):
+        """
+        Gets the is_locked of this Style.
+
+        :return: The is_locked of this Style.
+        :rtype: bool
+        """
+        return self.container['is_locked']
+
+    @is_locked.setter
+    def is_locked(self, is_locked):
+        """
+        Sets the is_locked of this Style.
+
+        :param is_locked: The is_locked of this Style.
+        :type: bool
+        """
+
+        self.container['is_locked'] = is_locked
+
+    @property
+    def vertical_alignment(self):
+        """
+        Gets the vertical_alignment of this Style.
+
+        :return: The vertical_alignment of this Style.
+        :rtype: str
+        """
+        return self.container['vertical_alignment']
+
+    @vertical_alignment.setter
+    def vertical_alignment(self, vertical_alignment):
+        """
+        Sets the vertical_alignment of this Style.
+
+        :param vertical_alignment: The vertical_alignment of this Style.
+        :type: str
+        """
+
+        self.container['vertical_alignment'] = vertical_alignment
+
+    @property
+    def background_color(self):
+        """
+        Gets the background_color of this Style.
+
+        :return: The background_color of this Style.
+        :rtype: Color
+        """
+        return self.container['background_color']
+
+    @background_color.setter
+    def background_color(self, background_color):
+        """
+        Sets the background_color of this Style.
+
+        :param background_color: The background_color of this Style.
+        :type: Color
+        """
+
+        self.container['background_color'] = background_color
+
+    @property
     def background_theme_color(self):
         """
         Gets the background_theme_color of this Style.
@@ -665,25 +560,130 @@ class Style(object):
         self.container['background_theme_color'] = background_theme_color
 
     @property
-    def foreground_theme_color(self):
+    def is_formula_hidden(self):
         """
-        Gets the foreground_theme_color of this Style.
+        Gets the is_formula_hidden of this Style.
 
-        :return: The foreground_theme_color of this Style.
-        :rtype: ThemeColor
+        :return: The is_formula_hidden of this Style.
+        :rtype: bool
         """
-        return self.container['foreground_theme_color']
+        return self.container['is_formula_hidden']
 
-    @foreground_theme_color.setter
-    def foreground_theme_color(self, foreground_theme_color):
+    @is_formula_hidden.setter
+    def is_formula_hidden(self, is_formula_hidden):
         """
-        Sets the foreground_theme_color of this Style.
+        Sets the is_formula_hidden of this Style.
 
-        :param foreground_theme_color: The foreground_theme_color of this Style.
-        :type: ThemeColor
+        :param is_formula_hidden: The is_formula_hidden of this Style.
+        :type: bool
         """
 
-        self.container['foreground_theme_color'] = foreground_theme_color
+        self.container['is_formula_hidden'] = is_formula_hidden
+
+    @property
+    def is_gradient(self):
+        """
+        Gets the is_gradient of this Style.
+
+        :return: The is_gradient of this Style.
+        :rtype: bool
+        """
+        return self.container['is_gradient']
+
+    @is_gradient.setter
+    def is_gradient(self, is_gradient):
+        """
+        Sets the is_gradient of this Style.
+
+        :param is_gradient: The is_gradient of this Style.
+        :type: bool
+        """
+
+        self.container['is_gradient'] = is_gradient
+
+    @property
+    def number(self):
+        """
+        Gets the number of this Style.
+
+        :return: The number of this Style.
+        :rtype: int
+        """
+        return self.container['number']
+
+    @number.setter
+    def number(self, number):
+        """
+        Sets the number of this Style.
+
+        :param number: The number of this Style.
+        :type: int
+        """
+
+        self.container['number'] = number
+
+    @property
+    def horizontal_alignment(self):
+        """
+        Gets the horizontal_alignment of this Style.
+
+        :return: The horizontal_alignment of this Style.
+        :rtype: str
+        """
+        return self.container['horizontal_alignment']
+
+    @horizontal_alignment.setter
+    def horizontal_alignment(self, horizontal_alignment):
+        """
+        Sets the horizontal_alignment of this Style.
+
+        :param horizontal_alignment: The horizontal_alignment of this Style.
+        :type: str
+        """
+
+        self.container['horizontal_alignment'] = horizontal_alignment
+
+    @property
+    def is_text_wrapped(self):
+        """
+        Gets the is_text_wrapped of this Style.
+
+        :return: The is_text_wrapped of this Style.
+        :rtype: bool
+        """
+        return self.container['is_text_wrapped']
+
+    @is_text_wrapped.setter
+    def is_text_wrapped(self, is_text_wrapped):
+        """
+        Sets the is_text_wrapped of this Style.
+
+        :param is_text_wrapped: The is_text_wrapped of this Style.
+        :type: bool
+        """
+
+        self.container['is_text_wrapped'] = is_text_wrapped
+
+    @property
+    def font(self):
+        """
+        Gets the font of this Style.
+
+        :return: The font of this Style.
+        :rtype: Font
+        """
+        return self.container['font']
+
+    @font.setter
+    def font(self, font):
+        """
+        Sets the font of this Style.
+
+        :param font: The font of this Style.
+        :type: Font
+        """
+
+        self.container['font'] = font
 
     def to_dict(self):
         """

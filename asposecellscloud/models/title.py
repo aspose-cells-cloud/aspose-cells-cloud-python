@@ -31,51 +31,51 @@ class Title(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'area': 'Area',
-        'auto_scale_font': 'bool',
-        'background_mode': 'str',
-        'border': 'Line',
-        'font': 'Font',
-        'is_automatic_size': 'bool',
         'is_inner_mode': 'bool',
-        'shadow': 'bool',
         'shape_properties': 'list[LinkElement]',
-        'width': 'int',
+        'auto_scale_font': 'bool',
+        'area': 'Area',
         'height': 'int',
-        'x': 'int',
+        'width': 'int',
+        'background_mode': 'str',
+        'is_automatic_size': 'bool',
         'y': 'int',
+        'x': 'int',
+        'shadow': 'bool',
+        'font': 'Font',
+        'border': 'Line',
         'link': 'Link',
-        'is_visible': 'bool',
         'linked_source': 'str',
-        'rotation_angle': 'int',
         'text': 'str',
+        'is_visible': 'bool',
         'text_direction': 'str',
-        'text_horizontal_alignment': 'str',
-        'text_vertical_alignment': 'str'
+        'rotation_angle': 'int',
+        'text_vertical_alignment': 'str',
+        'text_horizontal_alignment': 'str'
     }
 
     attribute_map = {
-        'area': 'Area',
-        'auto_scale_font': 'AutoScaleFont',
-        'background_mode': 'BackgroundMode',
-        'border': 'Border',
-        'font': 'Font',
-        'is_automatic_size': 'IsAutomaticSize',
         'is_inner_mode': 'IsInnerMode',
-        'shadow': 'Shadow',
         'shape_properties': 'ShapeProperties',
-        'width': 'Width',
+        'auto_scale_font': 'AutoScaleFont',
+        'area': 'Area',
         'height': 'Height',
-        'x': 'X',
+        'width': 'Width',
+        'background_mode': 'BackgroundMode',
+        'is_automatic_size': 'IsAutomaticSize',
         'y': 'Y',
+        'x': 'X',
+        'shadow': 'Shadow',
+        'font': 'Font',
+        'border': 'Border',
         'link': 'link',
-        'is_visible': 'IsVisible',
         'linked_source': 'LinkedSource',
-        'rotation_angle': 'RotationAngle',
         'text': 'Text',
+        'is_visible': 'IsVisible',
         'text_direction': 'TextDirection',
-        'text_horizontal_alignment': 'TextHorizontalAlignment',
-        'text_vertical_alignment': 'TextVerticalAlignment'
+        'rotation_angle': 'RotationAngle',
+        'text_vertical_alignment': 'TextVerticalAlignment',
+        'text_horizontal_alignment': 'TextHorizontalAlignment'
     }
     
     @staticmethod
@@ -91,7 +91,7 @@ class Title(object):
             return self.container[attr]
         return None
 
-    def __init__(self, area=None, auto_scale_font=None, background_mode=None, border=None, font=None, is_automatic_size=None, is_inner_mode=None, shadow=None, shape_properties=None, width=None, height=None, x=None, y=None, link=None, is_visible=None, linked_source=None, rotation_angle=None, text=None, text_direction=None, text_horizontal_alignment=None, text_vertical_alignment=None, **kw):
+    def __init__(self, is_inner_mode=None, shape_properties=None, auto_scale_font=None, area=None, height=None, width=None, background_mode=None, is_automatic_size=None, y=None, x=None, shadow=None, font=None, border=None, link=None, linked_source=None, text=None, is_visible=None, text_direction=None, rotation_angle=None, text_vertical_alignment=None, text_horizontal_alignment=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -101,196 +101,70 @@ class Title(object):
         Title - a model defined in Swagger
         """
 
-        self.container['area'] = None
-        self.container['auto_scale_font'] = None
-        self.container['background_mode'] = None
-        self.container['border'] = None
-        self.container['font'] = None
-        self.container['is_automatic_size'] = None
         self.container['is_inner_mode'] = None
-        self.container['shadow'] = None
         self.container['shape_properties'] = None
-        self.container['width'] = None
+        self.container['auto_scale_font'] = None
+        self.container['area'] = None
         self.container['height'] = None
-        self.container['x'] = None
+        self.container['width'] = None
+        self.container['background_mode'] = None
+        self.container['is_automatic_size'] = None
         self.container['y'] = None
+        self.container['x'] = None
+        self.container['shadow'] = None
+        self.container['font'] = None
+        self.container['border'] = None
         self.container['link'] = None
-        self.container['is_visible'] = None
         self.container['linked_source'] = None
-        self.container['rotation_angle'] = None
         self.container['text'] = None
+        self.container['is_visible'] = None
         self.container['text_direction'] = None
-        self.container['text_horizontal_alignment'] = None
+        self.container['rotation_angle'] = None
         self.container['text_vertical_alignment'] = None
+        self.container['text_horizontal_alignment'] = None
 
-        if area is not None:
-          self.area = area
-        if auto_scale_font is not None:
-          self.auto_scale_font = auto_scale_font
-        if background_mode is not None:
-          self.background_mode = background_mode
-        if border is not None:
-          self.border = border
-        if font is not None:
-          self.font = font
-        if is_automatic_size is not None:
-          self.is_automatic_size = is_automatic_size
         if is_inner_mode is not None:
           self.is_inner_mode = is_inner_mode
-        if shadow is not None:
-          self.shadow = shadow
         if shape_properties is not None:
           self.shape_properties = shape_properties
-        if width is not None:
-          self.width = width
+        if auto_scale_font is not None:
+          self.auto_scale_font = auto_scale_font
+        if area is not None:
+          self.area = area
         if height is not None:
           self.height = height
-        if x is not None:
-          self.x = x
+        if width is not None:
+          self.width = width
+        if background_mode is not None:
+          self.background_mode = background_mode
+        if is_automatic_size is not None:
+          self.is_automatic_size = is_automatic_size
         if y is not None:
           self.y = y
+        if x is not None:
+          self.x = x
+        if shadow is not None:
+          self.shadow = shadow
+        if font is not None:
+          self.font = font
+        if border is not None:
+          self.border = border
         if link is not None:
           self.link = link
-        if is_visible is not None:
-          self.is_visible = is_visible
         if linked_source is not None:
           self.linked_source = linked_source
-        if rotation_angle is not None:
-          self.rotation_angle = rotation_angle
         if text is not None:
           self.text = text
+        if is_visible is not None:
+          self.is_visible = is_visible
         if text_direction is not None:
           self.text_direction = text_direction
-        if text_horizontal_alignment is not None:
-          self.text_horizontal_alignment = text_horizontal_alignment
+        if rotation_angle is not None:
+          self.rotation_angle = rotation_angle
         if text_vertical_alignment is not None:
           self.text_vertical_alignment = text_vertical_alignment
-
-    @property
-    def area(self):
-        """
-        Gets the area of this Title.
-
-        :return: The area of this Title.
-        :rtype: Area
-        """
-        return self.container['area']
-
-    @area.setter
-    def area(self, area):
-        """
-        Sets the area of this Title.
-
-        :param area: The area of this Title.
-        :type: Area
-        """
-
-        self.container['area'] = area
-
-    @property
-    def auto_scale_font(self):
-        """
-        Gets the auto_scale_font of this Title.
-
-        :return: The auto_scale_font of this Title.
-        :rtype: bool
-        """
-        return self.container['auto_scale_font']
-
-    @auto_scale_font.setter
-    def auto_scale_font(self, auto_scale_font):
-        """
-        Sets the auto_scale_font of this Title.
-
-        :param auto_scale_font: The auto_scale_font of this Title.
-        :type: bool
-        """
-
-        self.container['auto_scale_font'] = auto_scale_font
-
-    @property
-    def background_mode(self):
-        """
-        Gets the background_mode of this Title.
-
-        :return: The background_mode of this Title.
-        :rtype: str
-        """
-        return self.container['background_mode']
-
-    @background_mode.setter
-    def background_mode(self, background_mode):
-        """
-        Sets the background_mode of this Title.
-
-        :param background_mode: The background_mode of this Title.
-        :type: str
-        """
-
-        self.container['background_mode'] = background_mode
-
-    @property
-    def border(self):
-        """
-        Gets the border of this Title.
-
-        :return: The border of this Title.
-        :rtype: Line
-        """
-        return self.container['border']
-
-    @border.setter
-    def border(self, border):
-        """
-        Sets the border of this Title.
-
-        :param border: The border of this Title.
-        :type: Line
-        """
-
-        self.container['border'] = border
-
-    @property
-    def font(self):
-        """
-        Gets the font of this Title.
-
-        :return: The font of this Title.
-        :rtype: Font
-        """
-        return self.container['font']
-
-    @font.setter
-    def font(self, font):
-        """
-        Sets the font of this Title.
-
-        :param font: The font of this Title.
-        :type: Font
-        """
-
-        self.container['font'] = font
-
-    @property
-    def is_automatic_size(self):
-        """
-        Gets the is_automatic_size of this Title.
-
-        :return: The is_automatic_size of this Title.
-        :rtype: bool
-        """
-        return self.container['is_automatic_size']
-
-    @is_automatic_size.setter
-    def is_automatic_size(self, is_automatic_size):
-        """
-        Sets the is_automatic_size of this Title.
-
-        :param is_automatic_size: The is_automatic_size of this Title.
-        :type: bool
-        """
-
-        self.container['is_automatic_size'] = is_automatic_size
+        if text_horizontal_alignment is not None:
+          self.text_horizontal_alignment = text_horizontal_alignment
 
     @property
     def is_inner_mode(self):
@@ -314,27 +188,6 @@ class Title(object):
         self.container['is_inner_mode'] = is_inner_mode
 
     @property
-    def shadow(self):
-        """
-        Gets the shadow of this Title.
-
-        :return: The shadow of this Title.
-        :rtype: bool
-        """
-        return self.container['shadow']
-
-    @shadow.setter
-    def shadow(self, shadow):
-        """
-        Sets the shadow of this Title.
-
-        :param shadow: The shadow of this Title.
-        :type: bool
-        """
-
-        self.container['shadow'] = shadow
-
-    @property
     def shape_properties(self):
         """
         Gets the shape_properties of this Title.
@@ -356,25 +209,46 @@ class Title(object):
         self.container['shape_properties'] = shape_properties
 
     @property
-    def width(self):
+    def auto_scale_font(self):
         """
-        Gets the width of this Title.
+        Gets the auto_scale_font of this Title.
 
-        :return: The width of this Title.
-        :rtype: int
+        :return: The auto_scale_font of this Title.
+        :rtype: bool
         """
-        return self.container['width']
+        return self.container['auto_scale_font']
 
-    @width.setter
-    def width(self, width):
+    @auto_scale_font.setter
+    def auto_scale_font(self, auto_scale_font):
         """
-        Sets the width of this Title.
+        Sets the auto_scale_font of this Title.
 
-        :param width: The width of this Title.
-        :type: int
+        :param auto_scale_font: The auto_scale_font of this Title.
+        :type: bool
         """
 
-        self.container['width'] = width
+        self.container['auto_scale_font'] = auto_scale_font
+
+    @property
+    def area(self):
+        """
+        Gets the area of this Title.
+
+        :return: The area of this Title.
+        :rtype: Area
+        """
+        return self.container['area']
+
+    @area.setter
+    def area(self, area):
+        """
+        Sets the area of this Title.
+
+        :param area: The area of this Title.
+        :type: Area
+        """
+
+        self.container['area'] = area
 
     @property
     def height(self):
@@ -398,25 +272,67 @@ class Title(object):
         self.container['height'] = height
 
     @property
-    def x(self):
+    def width(self):
         """
-        Gets the x of this Title.
+        Gets the width of this Title.
 
-        :return: The x of this Title.
+        :return: The width of this Title.
         :rtype: int
         """
-        return self.container['x']
+        return self.container['width']
 
-    @x.setter
-    def x(self, x):
+    @width.setter
+    def width(self, width):
         """
-        Sets the x of this Title.
+        Sets the width of this Title.
 
-        :param x: The x of this Title.
+        :param width: The width of this Title.
         :type: int
         """
 
-        self.container['x'] = x
+        self.container['width'] = width
+
+    @property
+    def background_mode(self):
+        """
+        Gets the background_mode of this Title.
+
+        :return: The background_mode of this Title.
+        :rtype: str
+        """
+        return self.container['background_mode']
+
+    @background_mode.setter
+    def background_mode(self, background_mode):
+        """
+        Sets the background_mode of this Title.
+
+        :param background_mode: The background_mode of this Title.
+        :type: str
+        """
+
+        self.container['background_mode'] = background_mode
+
+    @property
+    def is_automatic_size(self):
+        """
+        Gets the is_automatic_size of this Title.
+
+        :return: The is_automatic_size of this Title.
+        :rtype: bool
+        """
+        return self.container['is_automatic_size']
+
+    @is_automatic_size.setter
+    def is_automatic_size(self, is_automatic_size):
+        """
+        Sets the is_automatic_size of this Title.
+
+        :param is_automatic_size: The is_automatic_size of this Title.
+        :type: bool
+        """
+
+        self.container['is_automatic_size'] = is_automatic_size
 
     @property
     def y(self):
@@ -440,6 +356,90 @@ class Title(object):
         self.container['y'] = y
 
     @property
+    def x(self):
+        """
+        Gets the x of this Title.
+
+        :return: The x of this Title.
+        :rtype: int
+        """
+        return self.container['x']
+
+    @x.setter
+    def x(self, x):
+        """
+        Sets the x of this Title.
+
+        :param x: The x of this Title.
+        :type: int
+        """
+
+        self.container['x'] = x
+
+    @property
+    def shadow(self):
+        """
+        Gets the shadow of this Title.
+
+        :return: The shadow of this Title.
+        :rtype: bool
+        """
+        return self.container['shadow']
+
+    @shadow.setter
+    def shadow(self, shadow):
+        """
+        Sets the shadow of this Title.
+
+        :param shadow: The shadow of this Title.
+        :type: bool
+        """
+
+        self.container['shadow'] = shadow
+
+    @property
+    def font(self):
+        """
+        Gets the font of this Title.
+
+        :return: The font of this Title.
+        :rtype: Font
+        """
+        return self.container['font']
+
+    @font.setter
+    def font(self, font):
+        """
+        Sets the font of this Title.
+
+        :param font: The font of this Title.
+        :type: Font
+        """
+
+        self.container['font'] = font
+
+    @property
+    def border(self):
+        """
+        Gets the border of this Title.
+
+        :return: The border of this Title.
+        :rtype: Line
+        """
+        return self.container['border']
+
+    @border.setter
+    def border(self, border):
+        """
+        Sets the border of this Title.
+
+        :param border: The border of this Title.
+        :type: Line
+        """
+
+        self.container['border'] = border
+
+    @property
     def link(self):
         """
         Gets the link of this Title.
@@ -459,27 +459,6 @@ class Title(object):
         """
 
         self.container['link'] = link
-
-    @property
-    def is_visible(self):
-        """
-        Gets the is_visible of this Title.
-
-        :return: The is_visible of this Title.
-        :rtype: bool
-        """
-        return self.container['is_visible']
-
-    @is_visible.setter
-    def is_visible(self, is_visible):
-        """
-        Sets the is_visible of this Title.
-
-        :param is_visible: The is_visible of this Title.
-        :type: bool
-        """
-
-        self.container['is_visible'] = is_visible
 
     @property
     def linked_source(self):
@@ -503,27 +482,6 @@ class Title(object):
         self.container['linked_source'] = linked_source
 
     @property
-    def rotation_angle(self):
-        """
-        Gets the rotation_angle of this Title.
-
-        :return: The rotation_angle of this Title.
-        :rtype: int
-        """
-        return self.container['rotation_angle']
-
-    @rotation_angle.setter
-    def rotation_angle(self, rotation_angle):
-        """
-        Sets the rotation_angle of this Title.
-
-        :param rotation_angle: The rotation_angle of this Title.
-        :type: int
-        """
-
-        self.container['rotation_angle'] = rotation_angle
-
-    @property
     def text(self):
         """
         Gets the text of this Title.
@@ -543,6 +501,27 @@ class Title(object):
         """
 
         self.container['text'] = text
+
+    @property
+    def is_visible(self):
+        """
+        Gets the is_visible of this Title.
+
+        :return: The is_visible of this Title.
+        :rtype: bool
+        """
+        return self.container['is_visible']
+
+    @is_visible.setter
+    def is_visible(self, is_visible):
+        """
+        Sets the is_visible of this Title.
+
+        :param is_visible: The is_visible of this Title.
+        :type: bool
+        """
+
+        self.container['is_visible'] = is_visible
 
     @property
     def text_direction(self):
@@ -566,25 +545,25 @@ class Title(object):
         self.container['text_direction'] = text_direction
 
     @property
-    def text_horizontal_alignment(self):
+    def rotation_angle(self):
         """
-        Gets the text_horizontal_alignment of this Title.
+        Gets the rotation_angle of this Title.
 
-        :return: The text_horizontal_alignment of this Title.
-        :rtype: str
+        :return: The rotation_angle of this Title.
+        :rtype: int
         """
-        return self.container['text_horizontal_alignment']
+        return self.container['rotation_angle']
 
-    @text_horizontal_alignment.setter
-    def text_horizontal_alignment(self, text_horizontal_alignment):
+    @rotation_angle.setter
+    def rotation_angle(self, rotation_angle):
         """
-        Sets the text_horizontal_alignment of this Title.
+        Sets the rotation_angle of this Title.
 
-        :param text_horizontal_alignment: The text_horizontal_alignment of this Title.
-        :type: str
+        :param rotation_angle: The rotation_angle of this Title.
+        :type: int
         """
 
-        self.container['text_horizontal_alignment'] = text_horizontal_alignment
+        self.container['rotation_angle'] = rotation_angle
 
     @property
     def text_vertical_alignment(self):
@@ -606,6 +585,27 @@ class Title(object):
         """
 
         self.container['text_vertical_alignment'] = text_vertical_alignment
+
+    @property
+    def text_horizontal_alignment(self):
+        """
+        Gets the text_horizontal_alignment of this Title.
+
+        :return: The text_horizontal_alignment of this Title.
+        :rtype: str
+        """
+        return self.container['text_horizontal_alignment']
+
+    @text_horizontal_alignment.setter
+    def text_horizontal_alignment(self, text_horizontal_alignment):
+        """
+        Sets the text_horizontal_alignment of this Title.
+
+        :param text_horizontal_alignment: The text_horizontal_alignment of this Title.
+        :type: str
+        """
+
+        self.container['text_horizontal_alignment'] = text_horizontal_alignment
 
     def to_dict(self):
         """

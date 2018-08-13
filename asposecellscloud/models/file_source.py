@@ -31,13 +31,13 @@ class FileSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'file_source_type': 'str',
-        'file_path': 'str'
+        'file_path': 'str',
+        'file_source_type': 'str'
     }
 
     attribute_map = {
-        'file_source_type': 'FileSourceType',
-        'file_path': 'FilePath'
+        'file_path': 'FilePath',
+        'file_source_type': 'FileSourceType'
     }
     
     @staticmethod
@@ -53,7 +53,7 @@ class FileSource(object):
             return self.container[attr]
         return None
 
-    def __init__(self, file_source_type=None, file_path=None, **kw):
+    def __init__(self, file_path=None, file_source_type=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -63,34 +63,13 @@ class FileSource(object):
         FileSource - a model defined in Swagger
         """
 
-        self.container['file_source_type'] = None
         self.container['file_path'] = None
+        self.container['file_source_type'] = None
 
-        if file_source_type is not None:
-          self.file_source_type = file_source_type
         if file_path is not None:
           self.file_path = file_path
-
-    @property
-    def file_source_type(self):
-        """
-        Gets the file_source_type of this FileSource.
-
-        :return: The file_source_type of this FileSource.
-        :rtype: str
-        """
-        return self.container['file_source_type']
-
-    @file_source_type.setter
-    def file_source_type(self, file_source_type):
-        """
-        Sets the file_source_type of this FileSource.
-
-        :param file_source_type: The file_source_type of this FileSource.
-        :type: str
-        """
-
-        self.container['file_source_type'] = file_source_type
+        if file_source_type is not None:
+          self.file_source_type = file_source_type
 
     @property
     def file_path(self):
@@ -112,6 +91,27 @@ class FileSource(object):
         """
 
         self.container['file_path'] = file_path
+
+    @property
+    def file_source_type(self):
+        """
+        Gets the file_source_type of this FileSource.
+
+        :return: The file_source_type of this FileSource.
+        :rtype: str
+        """
+        return self.container['file_source_type']
+
+    @file_source_type.setter
+    def file_source_type(self, file_source_type):
+        """
+        Sets the file_source_type of this FileSource.
+
+        :param file_source_type: The file_source_type of this FileSource.
+        :type: str
+        """
+
+        self.container['file_source_type'] = file_source_type
 
     def to_dict(self):
         """

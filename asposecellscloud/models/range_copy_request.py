@@ -31,15 +31,15 @@ class RangeCopyRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'operate': 'str',
         'source': 'Range',
+        'operate': 'str',
         'target': 'Range',
         'paste_options': 'PasteOptions'
     }
 
     attribute_map = {
-        'operate': 'Operate',
         'source': 'Source',
+        'operate': 'Operate',
         'target': 'Target',
         'paste_options': 'PasteOptions'
     }
@@ -57,7 +57,7 @@ class RangeCopyRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self, operate=None, source=None, target=None, paste_options=None, **kw):
+    def __init__(self, source=None, operate=None, target=None, paste_options=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -67,40 +67,19 @@ class RangeCopyRequest(object):
         RangeCopyRequest - a model defined in Swagger
         """
 
-        self.container['operate'] = None
         self.container['source'] = None
+        self.container['operate'] = None
         self.container['target'] = None
         self.container['paste_options'] = None
 
-        if operate is not None:
-          self.operate = operate
         if source is not None:
           self.source = source
+        if operate is not None:
+          self.operate = operate
         if target is not None:
           self.target = target
         if paste_options is not None:
           self.paste_options = paste_options
-
-    @property
-    def operate(self):
-        """
-        Gets the operate of this RangeCopyRequest.
-
-        :return: The operate of this RangeCopyRequest.
-        :rtype: str
-        """
-        return self.container['operate']
-
-    @operate.setter
-    def operate(self, operate):
-        """
-        Sets the operate of this RangeCopyRequest.
-
-        :param operate: The operate of this RangeCopyRequest.
-        :type: str
-        """
-
-        self.container['operate'] = operate
 
     @property
     def source(self):
@@ -122,6 +101,27 @@ class RangeCopyRequest(object):
         """
 
         self.container['source'] = source
+
+    @property
+    def operate(self):
+        """
+        Gets the operate of this RangeCopyRequest.
+
+        :return: The operate of this RangeCopyRequest.
+        :rtype: str
+        """
+        return self.container['operate']
+
+    @operate.setter
+    def operate(self, operate):
+        """
+        Sets the operate of this RangeCopyRequest.
+
+        :param operate: The operate of this RangeCopyRequest.
+        :type: str
+        """
+
+        self.container['operate'] = operate
 
     @property
     def target(self):

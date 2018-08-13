@@ -31,26 +31,26 @@ class PivotFilter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'auto_filter': 'AutoFilter',
         'evaluation_order': 'int',
-        'field_index': 'int',
-        'filter_type': 'str',
-        'measure_fld_index': 'int',
-        'member_property_field_index': 'int',
         'name': 'str',
+        'filter_type': 'str',
+        'auto_filter': 'AutoFilter',
+        'field_index': 'int',
+        'measure_fld_index': 'int',
         'value1': 'str',
+        'member_property_field_index': 'int',
         'value2': 'str'
     }
 
     attribute_map = {
-        'auto_filter': 'AutoFilter',
         'evaluation_order': 'EvaluationOrder',
-        'field_index': 'FieldIndex',
-        'filter_type': 'FilterType',
-        'measure_fld_index': 'MeasureFldIndex',
-        'member_property_field_index': 'MemberPropertyFieldIndex',
         'name': 'Name',
+        'filter_type': 'FilterType',
+        'auto_filter': 'AutoFilter',
+        'field_index': 'FieldIndex',
+        'measure_fld_index': 'MeasureFldIndex',
         'value1': 'Value1',
+        'member_property_field_index': 'MemberPropertyFieldIndex',
         'value2': 'Value2'
     }
     
@@ -67,7 +67,7 @@ class PivotFilter(object):
             return self.container[attr]
         return None
 
-    def __init__(self, auto_filter=None, evaluation_order=None, field_index=None, filter_type=None, measure_fld_index=None, member_property_field_index=None, name=None, value1=None, value2=None, **kw):
+    def __init__(self, evaluation_order=None, name=None, filter_type=None, auto_filter=None, field_index=None, measure_fld_index=None, value1=None, member_property_field_index=None, value2=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -77,57 +77,34 @@ class PivotFilter(object):
         PivotFilter - a model defined in Swagger
         """
 
-        self.container['auto_filter'] = None
         self.container['evaluation_order'] = None
-        self.container['field_index'] = None
-        self.container['filter_type'] = None
-        self.container['measure_fld_index'] = None
-        self.container['member_property_field_index'] = None
         self.container['name'] = None
+        self.container['filter_type'] = None
+        self.container['auto_filter'] = None
+        self.container['field_index'] = None
+        self.container['measure_fld_index'] = None
         self.container['value1'] = None
+        self.container['member_property_field_index'] = None
         self.container['value2'] = None
 
-        if auto_filter is not None:
-          self.auto_filter = auto_filter
         if evaluation_order is not None:
           self.evaluation_order = evaluation_order
-        if field_index is not None:
-          self.field_index = field_index
-        if filter_type is not None:
-          self.filter_type = filter_type
-        if measure_fld_index is not None:
-          self.measure_fld_index = measure_fld_index
-        if member_property_field_index is not None:
-          self.member_property_field_index = member_property_field_index
         if name is not None:
           self.name = name
+        if filter_type is not None:
+          self.filter_type = filter_type
+        if auto_filter is not None:
+          self.auto_filter = auto_filter
+        if field_index is not None:
+          self.field_index = field_index
+        if measure_fld_index is not None:
+          self.measure_fld_index = measure_fld_index
         if value1 is not None:
           self.value1 = value1
+        if member_property_field_index is not None:
+          self.member_property_field_index = member_property_field_index
         if value2 is not None:
           self.value2 = value2
-
-    @property
-    def auto_filter(self):
-        """
-        Gets the auto_filter of this PivotFilter.
-        Gets the autofilter of the pivot filter.
-
-        :return: The auto_filter of this PivotFilter.
-        :rtype: AutoFilter
-        """
-        return self.container['auto_filter']
-
-    @auto_filter.setter
-    def auto_filter(self, auto_filter):
-        """
-        Sets the auto_filter of this PivotFilter.
-        Gets the autofilter of the pivot filter.
-
-        :param auto_filter: The auto_filter of this PivotFilter.
-        :type: AutoFilter
-        """
-
-        self.container['auto_filter'] = auto_filter
 
     @property
     def evaluation_order(self):
@@ -153,27 +130,27 @@ class PivotFilter(object):
         self.container['evaluation_order'] = evaluation_order
 
     @property
-    def field_index(self):
+    def name(self):
         """
-        Gets the field_index of this PivotFilter.
-        Gets the field index of the pivot filter.
+        Gets the name of this PivotFilter.
+        Gets the name of the pivot filter.
 
-        :return: The field_index of this PivotFilter.
-        :rtype: int
+        :return: The name of this PivotFilter.
+        :rtype: str
         """
-        return self.container['field_index']
+        return self.container['name']
 
-    @field_index.setter
-    def field_index(self, field_index):
+    @name.setter
+    def name(self, name):
         """
-        Sets the field_index of this PivotFilter.
-        Gets the field index of the pivot filter.
+        Sets the name of this PivotFilter.
+        Gets the name of the pivot filter.
 
-        :param field_index: The field_index of this PivotFilter.
-        :type: int
+        :param name: The name of this PivotFilter.
+        :type: str
         """
 
-        self.container['field_index'] = field_index
+        self.container['name'] = name
 
     @property
     def filter_type(self):
@@ -199,6 +176,52 @@ class PivotFilter(object):
         self.container['filter_type'] = filter_type
 
     @property
+    def auto_filter(self):
+        """
+        Gets the auto_filter of this PivotFilter.
+        Gets the autofilter of the pivot filter.
+
+        :return: The auto_filter of this PivotFilter.
+        :rtype: AutoFilter
+        """
+        return self.container['auto_filter']
+
+    @auto_filter.setter
+    def auto_filter(self, auto_filter):
+        """
+        Sets the auto_filter of this PivotFilter.
+        Gets the autofilter of the pivot filter.
+
+        :param auto_filter: The auto_filter of this PivotFilter.
+        :type: AutoFilter
+        """
+
+        self.container['auto_filter'] = auto_filter
+
+    @property
+    def field_index(self):
+        """
+        Gets the field_index of this PivotFilter.
+        Gets the field index of the pivot filter.
+
+        :return: The field_index of this PivotFilter.
+        :rtype: int
+        """
+        return self.container['field_index']
+
+    @field_index.setter
+    def field_index(self, field_index):
+        """
+        Sets the field_index of this PivotFilter.
+        Gets the field index of the pivot filter.
+
+        :param field_index: The field_index of this PivotFilter.
+        :type: int
+        """
+
+        self.container['field_index'] = field_index
+
+    @property
     def measure_fld_index(self):
         """
         Gets the measure_fld_index of this PivotFilter.
@@ -222,52 +245,6 @@ class PivotFilter(object):
         self.container['measure_fld_index'] = measure_fld_index
 
     @property
-    def member_property_field_index(self):
-        """
-        Gets the member_property_field_index of this PivotFilter.
-        Gets the member property field index of the pivot filter.             
-
-        :return: The member_property_field_index of this PivotFilter.
-        :rtype: int
-        """
-        return self.container['member_property_field_index']
-
-    @member_property_field_index.setter
-    def member_property_field_index(self, member_property_field_index):
-        """
-        Sets the member_property_field_index of this PivotFilter.
-        Gets the member property field index of the pivot filter.             
-
-        :param member_property_field_index: The member_property_field_index of this PivotFilter.
-        :type: int
-        """
-
-        self.container['member_property_field_index'] = member_property_field_index
-
-    @property
-    def name(self):
-        """
-        Gets the name of this PivotFilter.
-        Gets the name of the pivot filter.
-
-        :return: The name of this PivotFilter.
-        :rtype: str
-        """
-        return self.container['name']
-
-    @name.setter
-    def name(self, name):
-        """
-        Sets the name of this PivotFilter.
-        Gets the name of the pivot filter.
-
-        :param name: The name of this PivotFilter.
-        :type: str
-        """
-
-        self.container['name'] = name
-
-    @property
     def value1(self):
         """
         Gets the value1 of this PivotFilter.
@@ -289,6 +266,29 @@ class PivotFilter(object):
         """
 
         self.container['value1'] = value1
+
+    @property
+    def member_property_field_index(self):
+        """
+        Gets the member_property_field_index of this PivotFilter.
+        Gets the member property field index of the pivot filter.             
+
+        :return: The member_property_field_index of this PivotFilter.
+        :rtype: int
+        """
+        return self.container['member_property_field_index']
+
+    @member_property_field_index.setter
+    def member_property_field_index(self, member_property_field_index):
+        """
+        Sets the member_property_field_index of this PivotFilter.
+        Gets the member property field index of the pivot filter.             
+
+        :param member_property_field_index: The member_property_field_index of this PivotFilter.
+        :type: int
+        """
+
+        self.container['member_property_field_index'] = member_property_field_index
 
     @property
     def value2(self):

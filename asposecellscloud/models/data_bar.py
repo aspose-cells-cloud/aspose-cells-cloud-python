@@ -31,32 +31,32 @@ class DataBar(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'axis_color': 'Color',
-        'axis_position': 'str',
-        'bar_border': 'DataBarBorder',
-        'bar_fill_type': 'str',
-        'color': 'Color',
         'direction': 'str',
         'max_cfvo': 'ConditionalFormattingValue',
-        'max_length': 'int',
-        'min_cfvo': 'ConditionalFormattingValue',
+        'color': 'Color',
         'min_length': 'int',
+        'bar_fill_type': 'str',
+        'min_cfvo': 'ConditionalFormattingValue',
+        'axis_position': 'str',
         'negative_bar_format': 'NegativeBarFormat',
+        'bar_border': 'DataBarBorder',
+        'axis_color': 'Color',
+        'max_length': 'int',
         'show_value': 'bool'
     }
 
     attribute_map = {
-        'axis_color': 'AxisColor',
-        'axis_position': 'AxisPosition',
-        'bar_border': 'BarBorder',
-        'bar_fill_type': 'BarFillType',
-        'color': 'Color',
         'direction': 'Direction',
         'max_cfvo': 'MaxCfvo',
-        'max_length': 'MaxLength',
-        'min_cfvo': 'MinCfvo',
+        'color': 'Color',
         'min_length': 'MinLength',
+        'bar_fill_type': 'BarFillType',
+        'min_cfvo': 'MinCfvo',
+        'axis_position': 'AxisPosition',
         'negative_bar_format': 'NegativeBarFormat',
+        'bar_border': 'BarBorder',
+        'axis_color': 'AxisColor',
+        'max_length': 'MaxLength',
         'show_value': 'ShowValue'
     }
     
@@ -73,7 +73,7 @@ class DataBar(object):
             return self.container[attr]
         return None
 
-    def __init__(self, axis_color=None, axis_position=None, bar_border=None, bar_fill_type=None, color=None, direction=None, max_cfvo=None, max_length=None, min_cfvo=None, min_length=None, negative_bar_format=None, show_value=None, **kw):
+    def __init__(self, direction=None, max_cfvo=None, color=None, min_length=None, bar_fill_type=None, min_cfvo=None, axis_position=None, negative_bar_format=None, bar_border=None, axis_color=None, max_length=None, show_value=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -83,158 +83,43 @@ class DataBar(object):
         DataBar - a model defined in Swagger
         """
 
-        self.container['axis_color'] = None
-        self.container['axis_position'] = None
-        self.container['bar_border'] = None
-        self.container['bar_fill_type'] = None
-        self.container['color'] = None
         self.container['direction'] = None
         self.container['max_cfvo'] = None
-        self.container['max_length'] = None
-        self.container['min_cfvo'] = None
+        self.container['color'] = None
         self.container['min_length'] = None
+        self.container['bar_fill_type'] = None
+        self.container['min_cfvo'] = None
+        self.container['axis_position'] = None
         self.container['negative_bar_format'] = None
+        self.container['bar_border'] = None
+        self.container['axis_color'] = None
+        self.container['max_length'] = None
         self.container['show_value'] = None
 
-        if axis_color is not None:
-          self.axis_color = axis_color
-        if axis_position is not None:
-          self.axis_position = axis_position
-        if bar_border is not None:
-          self.bar_border = bar_border
-        if bar_fill_type is not None:
-          self.bar_fill_type = bar_fill_type
-        if color is not None:
-          self.color = color
         if direction is not None:
           self.direction = direction
         if max_cfvo is not None:
           self.max_cfvo = max_cfvo
-        if max_length is not None:
-          self.max_length = max_length
-        if min_cfvo is not None:
-          self.min_cfvo = min_cfvo
+        if color is not None:
+          self.color = color
         if min_length is not None:
           self.min_length = min_length
+        if bar_fill_type is not None:
+          self.bar_fill_type = bar_fill_type
+        if min_cfvo is not None:
+          self.min_cfvo = min_cfvo
+        if axis_position is not None:
+          self.axis_position = axis_position
         if negative_bar_format is not None:
           self.negative_bar_format = negative_bar_format
+        if bar_border is not None:
+          self.bar_border = bar_border
+        if axis_color is not None:
+          self.axis_color = axis_color
+        if max_length is not None:
+          self.max_length = max_length
         if show_value is not None:
           self.show_value = show_value
-
-    @property
-    def axis_color(self):
-        """
-        Gets the axis_color of this DataBar.
-        Gets the color of the axis for cells with conditional formatting as data bars.
-
-        :return: The axis_color of this DataBar.
-        :rtype: Color
-        """
-        return self.container['axis_color']
-
-    @axis_color.setter
-    def axis_color(self, axis_color):
-        """
-        Sets the axis_color of this DataBar.
-        Gets the color of the axis for cells with conditional formatting as data bars.
-
-        :param axis_color: The axis_color of this DataBar.
-        :type: Color
-        """
-
-        self.container['axis_color'] = axis_color
-
-    @property
-    def axis_position(self):
-        """
-        Gets the axis_position of this DataBar.
-        Gets or sets the position of the axis of the data bars specified by a conditional    formatting rule.
-
-        :return: The axis_position of this DataBar.
-        :rtype: str
-        """
-        return self.container['axis_position']
-
-    @axis_position.setter
-    def axis_position(self, axis_position):
-        """
-        Sets the axis_position of this DataBar.
-        Gets or sets the position of the axis of the data bars specified by a conditional    formatting rule.
-
-        :param axis_position: The axis_position of this DataBar.
-        :type: str
-        """
-
-        self.container['axis_position'] = axis_position
-
-    @property
-    def bar_border(self):
-        """
-        Gets the bar_border of this DataBar.
-        Gets an object that specifies the border of a data bar.
-
-        :return: The bar_border of this DataBar.
-        :rtype: DataBarBorder
-        """
-        return self.container['bar_border']
-
-    @bar_border.setter
-    def bar_border(self, bar_border):
-        """
-        Sets the bar_border of this DataBar.
-        Gets an object that specifies the border of a data bar.
-
-        :param bar_border: The bar_border of this DataBar.
-        :type: DataBarBorder
-        """
-
-        self.container['bar_border'] = bar_border
-
-    @property
-    def bar_fill_type(self):
-        """
-        Gets the bar_fill_type of this DataBar.
-        Gets or sets how a data bar is filled with color.
-
-        :return: The bar_fill_type of this DataBar.
-        :rtype: str
-        """
-        return self.container['bar_fill_type']
-
-    @bar_fill_type.setter
-    def bar_fill_type(self, bar_fill_type):
-        """
-        Sets the bar_fill_type of this DataBar.
-        Gets or sets how a data bar is filled with color.
-
-        :param bar_fill_type: The bar_fill_type of this DataBar.
-        :type: str
-        """
-
-        self.container['bar_fill_type'] = bar_fill_type
-
-    @property
-    def color(self):
-        """
-        Gets the color of this DataBar.
-        Get or set this DataBar's Color.             
-
-        :return: The color of this DataBar.
-        :rtype: Color
-        """
-        return self.container['color']
-
-    @color.setter
-    def color(self, color):
-        """
-        Sets the color of this DataBar.
-        Get or set this DataBar's Color.             
-
-        :param color: The color of this DataBar.
-        :type: Color
-        """
-
-        self.container['color'] = color
 
     @property
     def direction(self):
@@ -283,50 +168,27 @@ class DataBar(object):
         self.container['max_cfvo'] = max_cfvo
 
     @property
-    def max_length(self):
+    def color(self):
         """
-        Gets the max_length of this DataBar.
-        Represents the max length of data bar .
+        Gets the color of this DataBar.
+        Get or set this DataBar's Color.             
 
-        :return: The max_length of this DataBar.
-        :rtype: int
+        :return: The color of this DataBar.
+        :rtype: Color
         """
-        return self.container['max_length']
+        return self.container['color']
 
-    @max_length.setter
-    def max_length(self, max_length):
+    @color.setter
+    def color(self, color):
         """
-        Sets the max_length of this DataBar.
-        Represents the max length of data bar .
+        Sets the color of this DataBar.
+        Get or set this DataBar's Color.             
 
-        :param max_length: The max_length of this DataBar.
-        :type: int
-        """
-
-        self.container['max_length'] = max_length
-
-    @property
-    def min_cfvo(self):
-        """
-        Gets the min_cfvo of this DataBar.
-        Get or set this DataBar's min value object.  Cannot set null or CFValueObject   with type FormatConditionValueType.Max to it.             
-
-        :return: The min_cfvo of this DataBar.
-        :rtype: ConditionalFormattingValue
-        """
-        return self.container['min_cfvo']
-
-    @min_cfvo.setter
-    def min_cfvo(self, min_cfvo):
-        """
-        Sets the min_cfvo of this DataBar.
-        Get or set this DataBar's min value object.  Cannot set null or CFValueObject   with type FormatConditionValueType.Max to it.             
-
-        :param min_cfvo: The min_cfvo of this DataBar.
-        :type: ConditionalFormattingValue
+        :param color: The color of this DataBar.
+        :type: Color
         """
 
-        self.container['min_cfvo'] = min_cfvo
+        self.container['color'] = color
 
     @property
     def min_length(self):
@@ -352,6 +214,75 @@ class DataBar(object):
         self.container['min_length'] = min_length
 
     @property
+    def bar_fill_type(self):
+        """
+        Gets the bar_fill_type of this DataBar.
+        Gets or sets how a data bar is filled with color.
+
+        :return: The bar_fill_type of this DataBar.
+        :rtype: str
+        """
+        return self.container['bar_fill_type']
+
+    @bar_fill_type.setter
+    def bar_fill_type(self, bar_fill_type):
+        """
+        Sets the bar_fill_type of this DataBar.
+        Gets or sets how a data bar is filled with color.
+
+        :param bar_fill_type: The bar_fill_type of this DataBar.
+        :type: str
+        """
+
+        self.container['bar_fill_type'] = bar_fill_type
+
+    @property
+    def min_cfvo(self):
+        """
+        Gets the min_cfvo of this DataBar.
+        Get or set this DataBar's min value object.  Cannot set null or CFValueObject   with type FormatConditionValueType.Max to it.             
+
+        :return: The min_cfvo of this DataBar.
+        :rtype: ConditionalFormattingValue
+        """
+        return self.container['min_cfvo']
+
+    @min_cfvo.setter
+    def min_cfvo(self, min_cfvo):
+        """
+        Sets the min_cfvo of this DataBar.
+        Get or set this DataBar's min value object.  Cannot set null or CFValueObject   with type FormatConditionValueType.Max to it.             
+
+        :param min_cfvo: The min_cfvo of this DataBar.
+        :type: ConditionalFormattingValue
+        """
+
+        self.container['min_cfvo'] = min_cfvo
+
+    @property
+    def axis_position(self):
+        """
+        Gets the axis_position of this DataBar.
+        Gets or sets the position of the axis of the data bars specified by a conditional    formatting rule.
+
+        :return: The axis_position of this DataBar.
+        :rtype: str
+        """
+        return self.container['axis_position']
+
+    @axis_position.setter
+    def axis_position(self, axis_position):
+        """
+        Sets the axis_position of this DataBar.
+        Gets or sets the position of the axis of the data bars specified by a conditional    formatting rule.
+
+        :param axis_position: The axis_position of this DataBar.
+        :type: str
+        """
+
+        self.container['axis_position'] = axis_position
+
+    @property
     def negative_bar_format(self):
         """
         Gets the negative_bar_format of this DataBar.
@@ -373,6 +304,75 @@ class DataBar(object):
         """
 
         self.container['negative_bar_format'] = negative_bar_format
+
+    @property
+    def bar_border(self):
+        """
+        Gets the bar_border of this DataBar.
+        Gets an object that specifies the border of a data bar.
+
+        :return: The bar_border of this DataBar.
+        :rtype: DataBarBorder
+        """
+        return self.container['bar_border']
+
+    @bar_border.setter
+    def bar_border(self, bar_border):
+        """
+        Sets the bar_border of this DataBar.
+        Gets an object that specifies the border of a data bar.
+
+        :param bar_border: The bar_border of this DataBar.
+        :type: DataBarBorder
+        """
+
+        self.container['bar_border'] = bar_border
+
+    @property
+    def axis_color(self):
+        """
+        Gets the axis_color of this DataBar.
+        Gets the color of the axis for cells with conditional formatting as data bars.
+
+        :return: The axis_color of this DataBar.
+        :rtype: Color
+        """
+        return self.container['axis_color']
+
+    @axis_color.setter
+    def axis_color(self, axis_color):
+        """
+        Sets the axis_color of this DataBar.
+        Gets the color of the axis for cells with conditional formatting as data bars.
+
+        :param axis_color: The axis_color of this DataBar.
+        :type: Color
+        """
+
+        self.container['axis_color'] = axis_color
+
+    @property
+    def max_length(self):
+        """
+        Gets the max_length of this DataBar.
+        Represents the max length of data bar .
+
+        :return: The max_length of this DataBar.
+        :rtype: int
+        """
+        return self.container['max_length']
+
+    @max_length.setter
+    def max_length(self, max_length):
+        """
+        Sets the max_length of this DataBar.
+        Represents the max length of data bar .
+
+        :param max_length: The max_length of this DataBar.
+        :type: int
+        """
+
+        self.container['max_length'] = max_length
 
     @property
     def show_value(self):

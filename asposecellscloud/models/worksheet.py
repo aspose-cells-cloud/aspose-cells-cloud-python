@@ -31,73 +31,73 @@ class Worksheet(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'list[Link]',
-        'display_right_to_left': 'bool',
-        'display_zeros': 'bool',
-        'first_visible_column': 'int',
-        'first_visible_row': 'int',
-        'name': 'str',
         'index': 'int',
-        'is_gridlines_visible': 'bool',
-        'is_outline_shown': 'bool',
-        'is_page_break_preview': 'bool',
+        'pictures': 'LinkElement',
+        'charts': 'LinkElement',
+        'comments': 'LinkElement',
+        'hyperlinks': 'LinkElement',
         'is_visible': 'bool',
-        'is_protected': 'bool',
+        'view_type': 'str',
+        'type': 'str',
+        'is_gridlines_visible': 'bool',
         'is_row_column_headers_visible': 'bool',
-        'is_ruler_visible': 'bool',
+        'is_page_break_preview': 'bool',
+        'display_zeros': 'bool',
+        'transition_evaluation': 'bool',
+        'display_right_to_left': 'bool',
+        'first_visible_column': 'int',
+        'ole_objects': 'LinkElement',
+        'is_outline_shown': 'bool',
+        'name': 'str',
+        'auto_shapes': 'LinkElement',
+        'cells': 'LinkElement',
+        'validations': 'LinkElement',
+        'zoom': 'int',
+        'conditional_formattings': 'LinkElement',
         'is_selected': 'bool',
         'tab_color': 'Color',
+        'first_visible_row': 'int',
         'transition_entry': 'bool',
-        'transition_evaluation': 'bool',
-        'type': 'str',
-        'view_type': 'str',
         'visibility_type': 'str',
-        'zoom': 'int',
-        'cells': 'LinkElement',
-        'charts': 'LinkElement',
-        'auto_shapes': 'LinkElement',
-        'ole_objects': 'LinkElement',
-        'comments': 'LinkElement',
-        'pictures': 'LinkElement',
-        'merged_cells': 'LinkElement',
-        'validations': 'LinkElement',
-        'conditional_formattings': 'LinkElement',
-        'hyperlinks': 'LinkElement'
+        'is_ruler_visible': 'bool',
+        'links': 'list[Link]',
+        'is_protected': 'bool',
+        'merged_cells': 'LinkElement'
     }
 
     attribute_map = {
-        'links': 'Links',
-        'display_right_to_left': 'DisplayRightToLeft',
-        'display_zeros': 'DisplayZeros',
-        'first_visible_column': 'FirstVisibleColumn',
-        'first_visible_row': 'FirstVisibleRow',
-        'name': 'Name',
         'index': 'Index',
-        'is_gridlines_visible': 'IsGridlinesVisible',
-        'is_outline_shown': 'IsOutlineShown',
-        'is_page_break_preview': 'IsPageBreakPreview',
+        'pictures': 'Pictures',
+        'charts': 'Charts',
+        'comments': 'Comments',
+        'hyperlinks': 'Hyperlinks',
         'is_visible': 'IsVisible',
-        'is_protected': 'IsProtected',
+        'view_type': 'ViewType',
+        'type': 'Type',
+        'is_gridlines_visible': 'IsGridlinesVisible',
         'is_row_column_headers_visible': 'IsRowColumnHeadersVisible',
-        'is_ruler_visible': 'IsRulerVisible',
+        'is_page_break_preview': 'IsPageBreakPreview',
+        'display_zeros': 'DisplayZeros',
+        'transition_evaluation': 'TransitionEvaluation',
+        'display_right_to_left': 'DisplayRightToLeft',
+        'first_visible_column': 'FirstVisibleColumn',
+        'ole_objects': 'OleObjects',
+        'is_outline_shown': 'IsOutlineShown',
+        'name': 'Name',
+        'auto_shapes': 'AutoShapes',
+        'cells': 'Cells',
+        'validations': 'Validations',
+        'zoom': 'Zoom',
+        'conditional_formattings': 'ConditionalFormattings',
         'is_selected': 'IsSelected',
         'tab_color': 'TabColor',
+        'first_visible_row': 'FirstVisibleRow',
         'transition_entry': 'TransitionEntry',
-        'transition_evaluation': 'TransitionEvaluation',
-        'type': 'Type',
-        'view_type': 'ViewType',
         'visibility_type': 'VisibilityType',
-        'zoom': 'Zoom',
-        'cells': 'Cells',
-        'charts': 'Charts',
-        'auto_shapes': 'AutoShapes',
-        'ole_objects': 'OleObjects',
-        'comments': 'Comments',
-        'pictures': 'Pictures',
-        'merged_cells': 'MergedCells',
-        'validations': 'Validations',
-        'conditional_formattings': 'ConditionalFormattings',
-        'hyperlinks': 'Hyperlinks'
+        'is_ruler_visible': 'IsRulerVisible',
+        'links': 'Links',
+        'is_protected': 'IsProtected',
+        'merged_cells': 'MergedCells'
     }
     
     @staticmethod
@@ -113,7 +113,7 @@ class Worksheet(object):
             return self.container[attr]
         return None
 
-    def __init__(self, links=None, display_right_to_left=None, display_zeros=None, first_visible_column=None, first_visible_row=None, name=None, index=None, is_gridlines_visible=None, is_outline_shown=None, is_page_break_preview=None, is_visible=None, is_protected=None, is_row_column_headers_visible=None, is_ruler_visible=None, is_selected=None, tab_color=None, transition_entry=None, transition_evaluation=None, type=None, view_type=None, visibility_type=None, zoom=None, cells=None, charts=None, auto_shapes=None, ole_objects=None, comments=None, pictures=None, merged_cells=None, validations=None, conditional_formattings=None, hyperlinks=None, **kw):
+    def __init__(self, index=None, pictures=None, charts=None, comments=None, hyperlinks=None, is_visible=None, view_type=None, type=None, is_gridlines_visible=None, is_row_column_headers_visible=None, is_page_break_preview=None, display_zeros=None, transition_evaluation=None, display_right_to_left=None, first_visible_column=None, ole_objects=None, is_outline_shown=None, name=None, auto_shapes=None, cells=None, validations=None, zoom=None, conditional_formattings=None, is_selected=None, tab_color=None, first_visible_row=None, transition_entry=None, visibility_type=None, is_ruler_visible=None, links=None, is_protected=None, merged_cells=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -123,237 +123,101 @@ class Worksheet(object):
         Worksheet - a model defined in Swagger
         """
 
-        self.container['links'] = None
-        self.container['display_right_to_left'] = None
-        self.container['display_zeros'] = None
-        self.container['first_visible_column'] = None
-        self.container['first_visible_row'] = None
-        self.container['name'] = None
         self.container['index'] = None
-        self.container['is_gridlines_visible'] = None
-        self.container['is_outline_shown'] = None
-        self.container['is_page_break_preview'] = None
+        self.container['pictures'] = None
+        self.container['charts'] = None
+        self.container['comments'] = None
+        self.container['hyperlinks'] = None
         self.container['is_visible'] = None
-        self.container['is_protected'] = None
+        self.container['view_type'] = None
+        self.container['type'] = None
+        self.container['is_gridlines_visible'] = None
         self.container['is_row_column_headers_visible'] = None
-        self.container['is_ruler_visible'] = None
+        self.container['is_page_break_preview'] = None
+        self.container['display_zeros'] = None
+        self.container['transition_evaluation'] = None
+        self.container['display_right_to_left'] = None
+        self.container['first_visible_column'] = None
+        self.container['ole_objects'] = None
+        self.container['is_outline_shown'] = None
+        self.container['name'] = None
+        self.container['auto_shapes'] = None
+        self.container['cells'] = None
+        self.container['validations'] = None
+        self.container['zoom'] = None
+        self.container['conditional_formattings'] = None
         self.container['is_selected'] = None
         self.container['tab_color'] = None
+        self.container['first_visible_row'] = None
         self.container['transition_entry'] = None
-        self.container['transition_evaluation'] = None
-        self.container['type'] = None
-        self.container['view_type'] = None
         self.container['visibility_type'] = None
-        self.container['zoom'] = None
-        self.container['cells'] = None
-        self.container['charts'] = None
-        self.container['auto_shapes'] = None
-        self.container['ole_objects'] = None
-        self.container['comments'] = None
-        self.container['pictures'] = None
+        self.container['is_ruler_visible'] = None
+        self.container['links'] = None
+        self.container['is_protected'] = None
         self.container['merged_cells'] = None
-        self.container['validations'] = None
-        self.container['conditional_formattings'] = None
-        self.container['hyperlinks'] = None
 
-        if links is not None:
-          self.links = links
-        if display_right_to_left is not None:
-          self.display_right_to_left = display_right_to_left
-        if display_zeros is not None:
-          self.display_zeros = display_zeros
-        if first_visible_column is not None:
-          self.first_visible_column = first_visible_column
-        if first_visible_row is not None:
-          self.first_visible_row = first_visible_row
-        if name is not None:
-          self.name = name
         self.index = index
-        if is_gridlines_visible is not None:
-          self.is_gridlines_visible = is_gridlines_visible
-        if is_outline_shown is not None:
-          self.is_outline_shown = is_outline_shown
-        if is_page_break_preview is not None:
-          self.is_page_break_preview = is_page_break_preview
+        if pictures is not None:
+          self.pictures = pictures
+        if charts is not None:
+          self.charts = charts
+        if comments is not None:
+          self.comments = comments
+        if hyperlinks is not None:
+          self.hyperlinks = hyperlinks
         if is_visible is not None:
           self.is_visible = is_visible
-        self.is_protected = is_protected
+        if view_type is not None:
+          self.view_type = view_type
+        if type is not None:
+          self.type = type
+        if is_gridlines_visible is not None:
+          self.is_gridlines_visible = is_gridlines_visible
         if is_row_column_headers_visible is not None:
           self.is_row_column_headers_visible = is_row_column_headers_visible
-        if is_ruler_visible is not None:
-          self.is_ruler_visible = is_ruler_visible
+        if is_page_break_preview is not None:
+          self.is_page_break_preview = is_page_break_preview
+        if display_zeros is not None:
+          self.display_zeros = display_zeros
+        if transition_evaluation is not None:
+          self.transition_evaluation = transition_evaluation
+        if display_right_to_left is not None:
+          self.display_right_to_left = display_right_to_left
+        if first_visible_column is not None:
+          self.first_visible_column = first_visible_column
+        if ole_objects is not None:
+          self.ole_objects = ole_objects
+        if is_outline_shown is not None:
+          self.is_outline_shown = is_outline_shown
+        if name is not None:
+          self.name = name
+        if auto_shapes is not None:
+          self.auto_shapes = auto_shapes
+        if cells is not None:
+          self.cells = cells
+        if validations is not None:
+          self.validations = validations
+        if zoom is not None:
+          self.zoom = zoom
+        if conditional_formattings is not None:
+          self.conditional_formattings = conditional_formattings
         if is_selected is not None:
           self.is_selected = is_selected
         if tab_color is not None:
           self.tab_color = tab_color
+        if first_visible_row is not None:
+          self.first_visible_row = first_visible_row
         if transition_entry is not None:
           self.transition_entry = transition_entry
-        if transition_evaluation is not None:
-          self.transition_evaluation = transition_evaluation
-        if type is not None:
-          self.type = type
-        if view_type is not None:
-          self.view_type = view_type
         if visibility_type is not None:
           self.visibility_type = visibility_type
-        if zoom is not None:
-          self.zoom = zoom
-        if cells is not None:
-          self.cells = cells
-        if charts is not None:
-          self.charts = charts
-        if auto_shapes is not None:
-          self.auto_shapes = auto_shapes
-        if ole_objects is not None:
-          self.ole_objects = ole_objects
-        if comments is not None:
-          self.comments = comments
-        if pictures is not None:
-          self.pictures = pictures
+        if is_ruler_visible is not None:
+          self.is_ruler_visible = is_ruler_visible
+        if links is not None:
+          self.links = links
+        self.is_protected = is_protected
         if merged_cells is not None:
           self.merged_cells = merged_cells
-        if validations is not None:
-          self.validations = validations
-        if conditional_formattings is not None:
-          self.conditional_formattings = conditional_formattings
-        if hyperlinks is not None:
-          self.hyperlinks = hyperlinks
-
-    @property
-    def links(self):
-        """
-        Gets the links of this Worksheet.
-
-        :return: The links of this Worksheet.
-        :rtype: list[Link]
-        """
-        return self.container['links']
-
-    @links.setter
-    def links(self, links):
-        """
-        Sets the links of this Worksheet.
-
-        :param links: The links of this Worksheet.
-        :type: list[Link]
-        """
-
-        self.container['links'] = links
-
-    @property
-    def display_right_to_left(self):
-        """
-        Gets the display_right_to_left of this Worksheet.
-        Indicates if the specified worksheet is displayed from right to left instead    of from left to right.  Default is false.             
-
-        :return: The display_right_to_left of this Worksheet.
-        :rtype: bool
-        """
-        return self.container['display_right_to_left']
-
-    @display_right_to_left.setter
-    def display_right_to_left(self, display_right_to_left):
-        """
-        Sets the display_right_to_left of this Worksheet.
-        Indicates if the specified worksheet is displayed from right to left instead    of from left to right.  Default is false.             
-
-        :param display_right_to_left: The display_right_to_left of this Worksheet.
-        :type: bool
-        """
-
-        self.container['display_right_to_left'] = display_right_to_left
-
-    @property
-    def display_zeros(self):
-        """
-        Gets the display_zeros of this Worksheet.
-        True if zero values are displayed.
-
-        :return: The display_zeros of this Worksheet.
-        :rtype: bool
-        """
-        return self.container['display_zeros']
-
-    @display_zeros.setter
-    def display_zeros(self, display_zeros):
-        """
-        Sets the display_zeros of this Worksheet.
-        True if zero values are displayed.
-
-        :param display_zeros: The display_zeros of this Worksheet.
-        :type: bool
-        """
-
-        self.container['display_zeros'] = display_zeros
-
-    @property
-    def first_visible_column(self):
-        """
-        Gets the first_visible_column of this Worksheet.
-        Represents first visible column index.
-
-        :return: The first_visible_column of this Worksheet.
-        :rtype: int
-        """
-        return self.container['first_visible_column']
-
-    @first_visible_column.setter
-    def first_visible_column(self, first_visible_column):
-        """
-        Sets the first_visible_column of this Worksheet.
-        Represents first visible column index.
-
-        :param first_visible_column: The first_visible_column of this Worksheet.
-        :type: int
-        """
-
-        self.container['first_visible_column'] = first_visible_column
-
-    @property
-    def first_visible_row(self):
-        """
-        Gets the first_visible_row of this Worksheet.
-        Represents first visible row index.             
-
-        :return: The first_visible_row of this Worksheet.
-        :rtype: int
-        """
-        return self.container['first_visible_row']
-
-    @first_visible_row.setter
-    def first_visible_row(self, first_visible_row):
-        """
-        Sets the first_visible_row of this Worksheet.
-        Represents first visible row index.             
-
-        :param first_visible_row: The first_visible_row of this Worksheet.
-        :type: int
-        """
-
-        self.container['first_visible_row'] = first_visible_row
-
-    @property
-    def name(self):
-        """
-        Gets the name of this Worksheet.
-        Gets or sets the name of the worksheet.             
-
-        :return: The name of this Worksheet.
-        :rtype: str
-        """
-        return self.container['name']
-
-    @name.setter
-    def name(self, name):
-        """
-        Sets the name of this Worksheet.
-        Gets or sets the name of the worksheet.             
-
-        :param name: The name of this Worksheet.
-        :type: str
-        """
-
-        self.container['name'] = name
 
     @property
     def index(self):
@@ -383,73 +247,88 @@ class Worksheet(object):
         self.container['index'] = index
 
     @property
-    def is_gridlines_visible(self):
+    def pictures(self):
         """
-        Gets the is_gridlines_visible of this Worksheet.
-        Gets or sets a value indicating whether the gridelines are visible.Default     is true.
+        Gets the pictures of this Worksheet.
 
-        :return: The is_gridlines_visible of this Worksheet.
-        :rtype: bool
+        :return: The pictures of this Worksheet.
+        :rtype: LinkElement
         """
-        return self.container['is_gridlines_visible']
+        return self.container['pictures']
 
-    @is_gridlines_visible.setter
-    def is_gridlines_visible(self, is_gridlines_visible):
+    @pictures.setter
+    def pictures(self, pictures):
         """
-        Sets the is_gridlines_visible of this Worksheet.
-        Gets or sets a value indicating whether the gridelines are visible.Default     is true.
+        Sets the pictures of this Worksheet.
 
-        :param is_gridlines_visible: The is_gridlines_visible of this Worksheet.
-        :type: bool
+        :param pictures: The pictures of this Worksheet.
+        :type: LinkElement
         """
 
-        self.container['is_gridlines_visible'] = is_gridlines_visible
+        self.container['pictures'] = pictures
 
     @property
-    def is_outline_shown(self):
+    def charts(self):
         """
-        Gets the is_outline_shown of this Worksheet.
-        Indicates whether show outline.             
+        Gets the charts of this Worksheet.
 
-        :return: The is_outline_shown of this Worksheet.
-        :rtype: bool
+        :return: The charts of this Worksheet.
+        :rtype: LinkElement
         """
-        return self.container['is_outline_shown']
+        return self.container['charts']
 
-    @is_outline_shown.setter
-    def is_outline_shown(self, is_outline_shown):
+    @charts.setter
+    def charts(self, charts):
         """
-        Sets the is_outline_shown of this Worksheet.
-        Indicates whether show outline.             
+        Sets the charts of this Worksheet.
 
-        :param is_outline_shown: The is_outline_shown of this Worksheet.
-        :type: bool
+        :param charts: The charts of this Worksheet.
+        :type: LinkElement
         """
 
-        self.container['is_outline_shown'] = is_outline_shown
+        self.container['charts'] = charts
 
     @property
-    def is_page_break_preview(self):
+    def comments(self):
         """
-        Gets the is_page_break_preview of this Worksheet.
-        Indications the specified worksheet is shown in normal view or page break preview.
+        Gets the comments of this Worksheet.
 
-        :return: The is_page_break_preview of this Worksheet.
-        :rtype: bool
+        :return: The comments of this Worksheet.
+        :rtype: LinkElement
         """
-        return self.container['is_page_break_preview']
+        return self.container['comments']
 
-    @is_page_break_preview.setter
-    def is_page_break_preview(self, is_page_break_preview):
+    @comments.setter
+    def comments(self, comments):
         """
-        Sets the is_page_break_preview of this Worksheet.
-        Indications the specified worksheet is shown in normal view or page break preview.
+        Sets the comments of this Worksheet.
 
-        :param is_page_break_preview: The is_page_break_preview of this Worksheet.
-        :type: bool
+        :param comments: The comments of this Worksheet.
+        :type: LinkElement
         """
 
-        self.container['is_page_break_preview'] = is_page_break_preview
+        self.container['comments'] = comments
+
+    @property
+    def hyperlinks(self):
+        """
+        Gets the hyperlinks of this Worksheet.
+
+        :return: The hyperlinks of this Worksheet.
+        :rtype: LinkElement
+        """
+        return self.container['hyperlinks']
+
+    @hyperlinks.setter
+    def hyperlinks(self, hyperlinks):
+        """
+        Sets the hyperlinks of this Worksheet.
+
+        :param hyperlinks: The hyperlinks of this Worksheet.
+        :type: LinkElement
+        """
+
+        self.container['hyperlinks'] = hyperlinks
 
     @property
     def is_visible(self):
@@ -475,31 +354,73 @@ class Worksheet(object):
         self.container['is_visible'] = is_visible
 
     @property
-    def is_protected(self):
+    def view_type(self):
         """
-        Gets the is_protected of this Worksheet.
-        Indicates if the worksheet is protected.
+        Gets the view_type of this Worksheet.
+        Gets and sets the view type.
 
-        :return: The is_protected of this Worksheet.
+        :return: The view_type of this Worksheet.
+        :rtype: str
+        """
+        return self.container['view_type']
+
+    @view_type.setter
+    def view_type(self, view_type):
+        """
+        Sets the view_type of this Worksheet.
+        Gets and sets the view type.
+
+        :param view_type: The view_type of this Worksheet.
+        :type: str
+        """
+
+        self.container['view_type'] = view_type
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Worksheet.
+        Represents worksheet type
+
+        :return: The type of this Worksheet.
+        :rtype: str
+        """
+        return self.container['type']
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Worksheet.
+        Represents worksheet type
+
+        :param type: The type of this Worksheet.
+        :type: str
+        """
+
+        self.container['type'] = type
+
+    @property
+    def is_gridlines_visible(self):
+        """
+        Gets the is_gridlines_visible of this Worksheet.
+        Gets or sets a value indicating whether the gridelines are visible.Default     is true.
+
+        :return: The is_gridlines_visible of this Worksheet.
         :rtype: bool
         """
-        return self.container['is_protected']
+        return self.container['is_gridlines_visible']
 
-    @is_protected.setter
-    def is_protected(self, is_protected):
+    @is_gridlines_visible.setter
+    def is_gridlines_visible(self, is_gridlines_visible):
         """
-        Sets the is_protected of this Worksheet.
-        Indicates if the worksheet is protected.
+        Sets the is_gridlines_visible of this Worksheet.
+        Gets or sets a value indicating whether the gridelines are visible.Default     is true.
 
-        :param is_protected: The is_protected of this Worksheet.
+        :param is_gridlines_visible: The is_gridlines_visible of this Worksheet.
         :type: bool
         """
-        """
-        if is_protected is None:
-            raise ValueError("Invalid value for `is_protected`, must not be `None`")
-        """
 
-        self.container['is_protected'] = is_protected
+        self.container['is_gridlines_visible'] = is_gridlines_visible
 
     @property
     def is_row_column_headers_visible(self):
@@ -525,27 +446,293 @@ class Worksheet(object):
         self.container['is_row_column_headers_visible'] = is_row_column_headers_visible
 
     @property
-    def is_ruler_visible(self):
+    def is_page_break_preview(self):
         """
-        Gets the is_ruler_visible of this Worksheet.
-        Indicates whether the ruler is visible. Only apply for page break preview.
+        Gets the is_page_break_preview of this Worksheet.
+        Indications the specified worksheet is shown in normal view or page break preview.
 
-        :return: The is_ruler_visible of this Worksheet.
+        :return: The is_page_break_preview of this Worksheet.
         :rtype: bool
         """
-        return self.container['is_ruler_visible']
+        return self.container['is_page_break_preview']
 
-    @is_ruler_visible.setter
-    def is_ruler_visible(self, is_ruler_visible):
+    @is_page_break_preview.setter
+    def is_page_break_preview(self, is_page_break_preview):
         """
-        Sets the is_ruler_visible of this Worksheet.
-        Indicates whether the ruler is visible. Only apply for page break preview.
+        Sets the is_page_break_preview of this Worksheet.
+        Indications the specified worksheet is shown in normal view or page break preview.
 
-        :param is_ruler_visible: The is_ruler_visible of this Worksheet.
+        :param is_page_break_preview: The is_page_break_preview of this Worksheet.
         :type: bool
         """
 
-        self.container['is_ruler_visible'] = is_ruler_visible
+        self.container['is_page_break_preview'] = is_page_break_preview
+
+    @property
+    def display_zeros(self):
+        """
+        Gets the display_zeros of this Worksheet.
+        True if zero values are displayed.
+
+        :return: The display_zeros of this Worksheet.
+        :rtype: bool
+        """
+        return self.container['display_zeros']
+
+    @display_zeros.setter
+    def display_zeros(self, display_zeros):
+        """
+        Sets the display_zeros of this Worksheet.
+        True if zero values are displayed.
+
+        :param display_zeros: The display_zeros of this Worksheet.
+        :type: bool
+        """
+
+        self.container['display_zeros'] = display_zeros
+
+    @property
+    def transition_evaluation(self):
+        """
+        Gets the transition_evaluation of this Worksheet.
+        Flag indicating whether the Transition Formula Evaluation (Lotus compatibility) option is enabled.             
+
+        :return: The transition_evaluation of this Worksheet.
+        :rtype: bool
+        """
+        return self.container['transition_evaluation']
+
+    @transition_evaluation.setter
+    def transition_evaluation(self, transition_evaluation):
+        """
+        Sets the transition_evaluation of this Worksheet.
+        Flag indicating whether the Transition Formula Evaluation (Lotus compatibility) option is enabled.             
+
+        :param transition_evaluation: The transition_evaluation of this Worksheet.
+        :type: bool
+        """
+
+        self.container['transition_evaluation'] = transition_evaluation
+
+    @property
+    def display_right_to_left(self):
+        """
+        Gets the display_right_to_left of this Worksheet.
+        Indicates if the specified worksheet is displayed from right to left instead    of from left to right.  Default is false.             
+
+        :return: The display_right_to_left of this Worksheet.
+        :rtype: bool
+        """
+        return self.container['display_right_to_left']
+
+    @display_right_to_left.setter
+    def display_right_to_left(self, display_right_to_left):
+        """
+        Sets the display_right_to_left of this Worksheet.
+        Indicates if the specified worksheet is displayed from right to left instead    of from left to right.  Default is false.             
+
+        :param display_right_to_left: The display_right_to_left of this Worksheet.
+        :type: bool
+        """
+
+        self.container['display_right_to_left'] = display_right_to_left
+
+    @property
+    def first_visible_column(self):
+        """
+        Gets the first_visible_column of this Worksheet.
+        Represents first visible column index.
+
+        :return: The first_visible_column of this Worksheet.
+        :rtype: int
+        """
+        return self.container['first_visible_column']
+
+    @first_visible_column.setter
+    def first_visible_column(self, first_visible_column):
+        """
+        Sets the first_visible_column of this Worksheet.
+        Represents first visible column index.
+
+        :param first_visible_column: The first_visible_column of this Worksheet.
+        :type: int
+        """
+
+        self.container['first_visible_column'] = first_visible_column
+
+    @property
+    def ole_objects(self):
+        """
+        Gets the ole_objects of this Worksheet.
+
+        :return: The ole_objects of this Worksheet.
+        :rtype: LinkElement
+        """
+        return self.container['ole_objects']
+
+    @ole_objects.setter
+    def ole_objects(self, ole_objects):
+        """
+        Sets the ole_objects of this Worksheet.
+
+        :param ole_objects: The ole_objects of this Worksheet.
+        :type: LinkElement
+        """
+
+        self.container['ole_objects'] = ole_objects
+
+    @property
+    def is_outline_shown(self):
+        """
+        Gets the is_outline_shown of this Worksheet.
+        Indicates whether show outline.             
+
+        :return: The is_outline_shown of this Worksheet.
+        :rtype: bool
+        """
+        return self.container['is_outline_shown']
+
+    @is_outline_shown.setter
+    def is_outline_shown(self, is_outline_shown):
+        """
+        Sets the is_outline_shown of this Worksheet.
+        Indicates whether show outline.             
+
+        :param is_outline_shown: The is_outline_shown of this Worksheet.
+        :type: bool
+        """
+
+        self.container['is_outline_shown'] = is_outline_shown
+
+    @property
+    def name(self):
+        """
+        Gets the name of this Worksheet.
+        Gets or sets the name of the worksheet.             
+
+        :return: The name of this Worksheet.
+        :rtype: str
+        """
+        return self.container['name']
+
+    @name.setter
+    def name(self, name):
+        """
+        Sets the name of this Worksheet.
+        Gets or sets the name of the worksheet.             
+
+        :param name: The name of this Worksheet.
+        :type: str
+        """
+
+        self.container['name'] = name
+
+    @property
+    def auto_shapes(self):
+        """
+        Gets the auto_shapes of this Worksheet.
+
+        :return: The auto_shapes of this Worksheet.
+        :rtype: LinkElement
+        """
+        return self.container['auto_shapes']
+
+    @auto_shapes.setter
+    def auto_shapes(self, auto_shapes):
+        """
+        Sets the auto_shapes of this Worksheet.
+
+        :param auto_shapes: The auto_shapes of this Worksheet.
+        :type: LinkElement
+        """
+
+        self.container['auto_shapes'] = auto_shapes
+
+    @property
+    def cells(self):
+        """
+        Gets the cells of this Worksheet.
+
+        :return: The cells of this Worksheet.
+        :rtype: LinkElement
+        """
+        return self.container['cells']
+
+    @cells.setter
+    def cells(self, cells):
+        """
+        Sets the cells of this Worksheet.
+
+        :param cells: The cells of this Worksheet.
+        :type: LinkElement
+        """
+
+        self.container['cells'] = cells
+
+    @property
+    def validations(self):
+        """
+        Gets the validations of this Worksheet.
+
+        :return: The validations of this Worksheet.
+        :rtype: LinkElement
+        """
+        return self.container['validations']
+
+    @validations.setter
+    def validations(self, validations):
+        """
+        Sets the validations of this Worksheet.
+
+        :param validations: The validations of this Worksheet.
+        :type: LinkElement
+        """
+
+        self.container['validations'] = validations
+
+    @property
+    def zoom(self):
+        """
+        Gets the zoom of this Worksheet.
+        Represents the scaling factor in percent. It should be btween 10 and 400.             
+
+        :return: The zoom of this Worksheet.
+        :rtype: int
+        """
+        return self.container['zoom']
+
+    @zoom.setter
+    def zoom(self, zoom):
+        """
+        Sets the zoom of this Worksheet.
+        Represents the scaling factor in percent. It should be btween 10 and 400.             
+
+        :param zoom: The zoom of this Worksheet.
+        :type: int
+        """
+
+        self.container['zoom'] = zoom
+
+    @property
+    def conditional_formattings(self):
+        """
+        Gets the conditional_formattings of this Worksheet.
+
+        :return: The conditional_formattings of this Worksheet.
+        :rtype: LinkElement
+        """
+        return self.container['conditional_formattings']
+
+    @conditional_formattings.setter
+    def conditional_formattings(self, conditional_formattings):
+        """
+        Sets the conditional_formattings of this Worksheet.
+
+        :param conditional_formattings: The conditional_formattings of this Worksheet.
+        :type: LinkElement
+        """
+
+        self.container['conditional_formattings'] = conditional_formattings
 
     @property
     def is_selected(self):
@@ -594,6 +781,29 @@ class Worksheet(object):
         self.container['tab_color'] = tab_color
 
     @property
+    def first_visible_row(self):
+        """
+        Gets the first_visible_row of this Worksheet.
+        Represents first visible row index.             
+
+        :return: The first_visible_row of this Worksheet.
+        :rtype: int
+        """
+        return self.container['first_visible_row']
+
+    @first_visible_row.setter
+    def first_visible_row(self, first_visible_row):
+        """
+        Sets the first_visible_row of this Worksheet.
+        Represents first visible row index.             
+
+        :param first_visible_row: The first_visible_row of this Worksheet.
+        :type: int
+        """
+
+        self.container['first_visible_row'] = first_visible_row
+
+    @property
     def transition_entry(self):
         """
         Gets the transition_entry of this Worksheet.
@@ -615,75 +825,6 @@ class Worksheet(object):
         """
 
         self.container['transition_entry'] = transition_entry
-
-    @property
-    def transition_evaluation(self):
-        """
-        Gets the transition_evaluation of this Worksheet.
-        Flag indicating whether the Transition Formula Evaluation (Lotus compatibility) option is enabled.             
-
-        :return: The transition_evaluation of this Worksheet.
-        :rtype: bool
-        """
-        return self.container['transition_evaluation']
-
-    @transition_evaluation.setter
-    def transition_evaluation(self, transition_evaluation):
-        """
-        Sets the transition_evaluation of this Worksheet.
-        Flag indicating whether the Transition Formula Evaluation (Lotus compatibility) option is enabled.             
-
-        :param transition_evaluation: The transition_evaluation of this Worksheet.
-        :type: bool
-        """
-
-        self.container['transition_evaluation'] = transition_evaluation
-
-    @property
-    def type(self):
-        """
-        Gets the type of this Worksheet.
-        Represents worksheet type
-
-        :return: The type of this Worksheet.
-        :rtype: str
-        """
-        return self.container['type']
-
-    @type.setter
-    def type(self, type):
-        """
-        Sets the type of this Worksheet.
-        Represents worksheet type
-
-        :param type: The type of this Worksheet.
-        :type: str
-        """
-
-        self.container['type'] = type
-
-    @property
-    def view_type(self):
-        """
-        Gets the view_type of this Worksheet.
-        Gets and sets the view type.
-
-        :return: The view_type of this Worksheet.
-        :rtype: str
-        """
-        return self.container['view_type']
-
-    @view_type.setter
-    def view_type(self, view_type):
-        """
-        Sets the view_type of this Worksheet.
-        Gets and sets the view type.
-
-        :param view_type: The view_type of this Worksheet.
-        :type: str
-        """
-
-        self.container['view_type'] = view_type
 
     @property
     def visibility_type(self):
@@ -709,153 +850,75 @@ class Worksheet(object):
         self.container['visibility_type'] = visibility_type
 
     @property
-    def zoom(self):
+    def is_ruler_visible(self):
         """
-        Gets the zoom of this Worksheet.
-        Represents the scaling factor in percent. It should be btween 10 and 400.             
+        Gets the is_ruler_visible of this Worksheet.
+        Indicates whether the ruler is visible. Only apply for page break preview.
 
-        :return: The zoom of this Worksheet.
-        :rtype: int
+        :return: The is_ruler_visible of this Worksheet.
+        :rtype: bool
         """
-        return self.container['zoom']
+        return self.container['is_ruler_visible']
 
-    @zoom.setter
-    def zoom(self, zoom):
+    @is_ruler_visible.setter
+    def is_ruler_visible(self, is_ruler_visible):
         """
-        Sets the zoom of this Worksheet.
-        Represents the scaling factor in percent. It should be btween 10 and 400.             
+        Sets the is_ruler_visible of this Worksheet.
+        Indicates whether the ruler is visible. Only apply for page break preview.
 
-        :param zoom: The zoom of this Worksheet.
-        :type: int
+        :param is_ruler_visible: The is_ruler_visible of this Worksheet.
+        :type: bool
         """
 
-        self.container['zoom'] = zoom
+        self.container['is_ruler_visible'] = is_ruler_visible
 
     @property
-    def cells(self):
+    def links(self):
         """
-        Gets the cells of this Worksheet.
+        Gets the links of this Worksheet.
 
-        :return: The cells of this Worksheet.
-        :rtype: LinkElement
+        :return: The links of this Worksheet.
+        :rtype: list[Link]
         """
-        return self.container['cells']
+        return self.container['links']
 
-    @cells.setter
-    def cells(self, cells):
+    @links.setter
+    def links(self, links):
         """
-        Sets the cells of this Worksheet.
+        Sets the links of this Worksheet.
 
-        :param cells: The cells of this Worksheet.
-        :type: LinkElement
+        :param links: The links of this Worksheet.
+        :type: list[Link]
         """
 
-        self.container['cells'] = cells
+        self.container['links'] = links
 
     @property
-    def charts(self):
+    def is_protected(self):
         """
-        Gets the charts of this Worksheet.
+        Gets the is_protected of this Worksheet.
+        Indicates if the worksheet is protected.
 
-        :return: The charts of this Worksheet.
-        :rtype: LinkElement
+        :return: The is_protected of this Worksheet.
+        :rtype: bool
         """
-        return self.container['charts']
+        return self.container['is_protected']
 
-    @charts.setter
-    def charts(self, charts):
+    @is_protected.setter
+    def is_protected(self, is_protected):
         """
-        Sets the charts of this Worksheet.
+        Sets the is_protected of this Worksheet.
+        Indicates if the worksheet is protected.
 
-        :param charts: The charts of this Worksheet.
-        :type: LinkElement
+        :param is_protected: The is_protected of this Worksheet.
+        :type: bool
         """
-
-        self.container['charts'] = charts
-
-    @property
-    def auto_shapes(self):
         """
-        Gets the auto_shapes of this Worksheet.
-
-        :return: The auto_shapes of this Worksheet.
-        :rtype: LinkElement
-        """
-        return self.container['auto_shapes']
-
-    @auto_shapes.setter
-    def auto_shapes(self, auto_shapes):
-        """
-        Sets the auto_shapes of this Worksheet.
-
-        :param auto_shapes: The auto_shapes of this Worksheet.
-        :type: LinkElement
+        if is_protected is None:
+            raise ValueError("Invalid value for `is_protected`, must not be `None`")
         """
 
-        self.container['auto_shapes'] = auto_shapes
-
-    @property
-    def ole_objects(self):
-        """
-        Gets the ole_objects of this Worksheet.
-
-        :return: The ole_objects of this Worksheet.
-        :rtype: LinkElement
-        """
-        return self.container['ole_objects']
-
-    @ole_objects.setter
-    def ole_objects(self, ole_objects):
-        """
-        Sets the ole_objects of this Worksheet.
-
-        :param ole_objects: The ole_objects of this Worksheet.
-        :type: LinkElement
-        """
-
-        self.container['ole_objects'] = ole_objects
-
-    @property
-    def comments(self):
-        """
-        Gets the comments of this Worksheet.
-
-        :return: The comments of this Worksheet.
-        :rtype: LinkElement
-        """
-        return self.container['comments']
-
-    @comments.setter
-    def comments(self, comments):
-        """
-        Sets the comments of this Worksheet.
-
-        :param comments: The comments of this Worksheet.
-        :type: LinkElement
-        """
-
-        self.container['comments'] = comments
-
-    @property
-    def pictures(self):
-        """
-        Gets the pictures of this Worksheet.
-
-        :return: The pictures of this Worksheet.
-        :rtype: LinkElement
-        """
-        return self.container['pictures']
-
-    @pictures.setter
-    def pictures(self, pictures):
-        """
-        Sets the pictures of this Worksheet.
-
-        :param pictures: The pictures of this Worksheet.
-        :type: LinkElement
-        """
-
-        self.container['pictures'] = pictures
+        self.container['is_protected'] = is_protected
 
     @property
     def merged_cells(self):
@@ -877,69 +940,6 @@ class Worksheet(object):
         """
 
         self.container['merged_cells'] = merged_cells
-
-    @property
-    def validations(self):
-        """
-        Gets the validations of this Worksheet.
-
-        :return: The validations of this Worksheet.
-        :rtype: LinkElement
-        """
-        return self.container['validations']
-
-    @validations.setter
-    def validations(self, validations):
-        """
-        Sets the validations of this Worksheet.
-
-        :param validations: The validations of this Worksheet.
-        :type: LinkElement
-        """
-
-        self.container['validations'] = validations
-
-    @property
-    def conditional_formattings(self):
-        """
-        Gets the conditional_formattings of this Worksheet.
-
-        :return: The conditional_formattings of this Worksheet.
-        :rtype: LinkElement
-        """
-        return self.container['conditional_formattings']
-
-    @conditional_formattings.setter
-    def conditional_formattings(self, conditional_formattings):
-        """
-        Sets the conditional_formattings of this Worksheet.
-
-        :param conditional_formattings: The conditional_formattings of this Worksheet.
-        :type: LinkElement
-        """
-
-        self.container['conditional_formattings'] = conditional_formattings
-
-    @property
-    def hyperlinks(self):
-        """
-        Gets the hyperlinks of this Worksheet.
-
-        :return: The hyperlinks of this Worksheet.
-        :rtype: LinkElement
-        """
-        return self.container['hyperlinks']
-
-    @hyperlinks.setter
-    def hyperlinks(self, hyperlinks):
-        """
-        Sets the hyperlinks of this Worksheet.
-
-        :param hyperlinks: The hyperlinks of this Worksheet.
-        :type: LinkElement
-        """
-
-        self.container['hyperlinks'] = hyperlinks
 
     def to_dict(self):
         """

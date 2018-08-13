@@ -32,24 +32,24 @@ class Row(object):
     """
     swagger_types = {
         'link': 'Link',
+        'index': 'int',
+        'style': 'LinkElement',
         'group_level': 'int',
         'height': 'float',
-        'index': 'int',
-        'is_blank': 'bool',
         'is_height_matched': 'bool',
         'is_hidden': 'bool',
-        'style': 'LinkElement'
+        'is_blank': 'bool'
     }
 
     attribute_map = {
         'link': 'link',
+        'index': 'Index',
+        'style': 'Style',
         'group_level': 'GroupLevel',
         'height': 'Height',
-        'index': 'Index',
-        'is_blank': 'IsBlank',
         'is_height_matched': 'IsHeightMatched',
         'is_hidden': 'IsHidden',
-        'style': 'Style'
+        'is_blank': 'IsBlank'
     }
     
     @staticmethod
@@ -65,7 +65,7 @@ class Row(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, group_level=None, height=None, index=None, is_blank=None, is_height_matched=None, is_hidden=None, style=None, **kw):
+    def __init__(self, link=None, index=None, style=None, group_level=None, height=None, is_height_matched=None, is_hidden=None, is_blank=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -76,30 +76,30 @@ class Row(object):
         """
 
         self.container['link'] = None
+        self.container['index'] = None
+        self.container['style'] = None
         self.container['group_level'] = None
         self.container['height'] = None
-        self.container['index'] = None
-        self.container['is_blank'] = None
         self.container['is_height_matched'] = None
         self.container['is_hidden'] = None
-        self.container['style'] = None
+        self.container['is_blank'] = None
 
         if link is not None:
           self.link = link
+        if index is not None:
+          self.index = index
+        if style is not None:
+          self.style = style
         if group_level is not None:
           self.group_level = group_level
         if height is not None:
           self.height = height
-        if index is not None:
-          self.index = index
-        if is_blank is not None:
-          self.is_blank = is_blank
         if is_height_matched is not None:
           self.is_height_matched = is_height_matched
         if is_hidden is not None:
           self.is_hidden = is_hidden
-        if style is not None:
-          self.style = style
+        if is_blank is not None:
+          self.is_blank = is_blank
 
     @property
     def link(self):
@@ -121,6 +121,48 @@ class Row(object):
         """
 
         self.container['link'] = link
+
+    @property
+    def index(self):
+        """
+        Gets the index of this Row.
+
+        :return: The index of this Row.
+        :rtype: int
+        """
+        return self.container['index']
+
+    @index.setter
+    def index(self, index):
+        """
+        Sets the index of this Row.
+
+        :param index: The index of this Row.
+        :type: int
+        """
+
+        self.container['index'] = index
+
+    @property
+    def style(self):
+        """
+        Gets the style of this Row.
+
+        :return: The style of this Row.
+        :rtype: LinkElement
+        """
+        return self.container['style']
+
+    @style.setter
+    def style(self, style):
+        """
+        Sets the style of this Row.
+
+        :param style: The style of this Row.
+        :type: LinkElement
+        """
+
+        self.container['style'] = style
 
     @property
     def group_level(self):
@@ -165,48 +207,6 @@ class Row(object):
         self.container['height'] = height
 
     @property
-    def index(self):
-        """
-        Gets the index of this Row.
-
-        :return: The index of this Row.
-        :rtype: int
-        """
-        return self.container['index']
-
-    @index.setter
-    def index(self, index):
-        """
-        Sets the index of this Row.
-
-        :param index: The index of this Row.
-        :type: int
-        """
-
-        self.container['index'] = index
-
-    @property
-    def is_blank(self):
-        """
-        Gets the is_blank of this Row.
-
-        :return: The is_blank of this Row.
-        :rtype: bool
-        """
-        return self.container['is_blank']
-
-    @is_blank.setter
-    def is_blank(self, is_blank):
-        """
-        Sets the is_blank of this Row.
-
-        :param is_blank: The is_blank of this Row.
-        :type: bool
-        """
-
-        self.container['is_blank'] = is_blank
-
-    @property
     def is_height_matched(self):
         """
         Gets the is_height_matched of this Row.
@@ -249,25 +249,25 @@ class Row(object):
         self.container['is_hidden'] = is_hidden
 
     @property
-    def style(self):
+    def is_blank(self):
         """
-        Gets the style of this Row.
+        Gets the is_blank of this Row.
 
-        :return: The style of this Row.
-        :rtype: LinkElement
+        :return: The is_blank of this Row.
+        :rtype: bool
         """
-        return self.container['style']
+        return self.container['is_blank']
 
-    @style.setter
-    def style(self, style):
+    @is_blank.setter
+    def is_blank(self, is_blank):
         """
-        Sets the style of this Row.
+        Sets the is_blank of this Row.
 
-        :param style: The style of this Row.
-        :type: LinkElement
+        :param is_blank: The is_blank of this Row.
+        :type: bool
         """
 
-        self.container['style'] = style
+        self.container['is_blank'] = is_blank
 
     def to_dict(self):
         """

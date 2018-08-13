@@ -32,32 +32,32 @@ class Comment(object):
     """
     swagger_types = {
         'link': 'Link',
-        'cell_name': 'str',
-        'author': 'str',
-        'html_note': 'str',
-        'note': 'str',
         'auto_size': 'bool',
+        'author': 'str',
         'is_visible': 'bool',
-        'width': 'int',
-        'height': 'int',
-        'text_horizontal_alignment': 'str',
         'text_orientation_type': 'str',
-        'text_vertical_alignment': 'str'
+        'height': 'int',
+        'note': 'str',
+        'width': 'int',
+        'text_vertical_alignment': 'str',
+        'cell_name': 'str',
+        'html_note': 'str',
+        'text_horizontal_alignment': 'str'
     }
 
     attribute_map = {
         'link': 'link',
-        'cell_name': 'CellName',
-        'author': 'Author',
-        'html_note': 'HtmlNote',
-        'note': 'Note',
         'auto_size': 'AutoSize',
+        'author': 'Author',
         'is_visible': 'IsVisible',
-        'width': 'Width',
-        'height': 'Height',
-        'text_horizontal_alignment': 'TextHorizontalAlignment',
         'text_orientation_type': 'TextOrientationType',
-        'text_vertical_alignment': 'TextVerticalAlignment'
+        'height': 'Height',
+        'note': 'Note',
+        'width': 'Width',
+        'text_vertical_alignment': 'TextVerticalAlignment',
+        'cell_name': 'CellName',
+        'html_note': 'HtmlNote',
+        'text_horizontal_alignment': 'TextHorizontalAlignment'
     }
     
     @staticmethod
@@ -73,7 +73,7 @@ class Comment(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, cell_name=None, author=None, html_note=None, note=None, auto_size=None, is_visible=None, width=None, height=None, text_horizontal_alignment=None, text_orientation_type=None, text_vertical_alignment=None, **kw):
+    def __init__(self, link=None, auto_size=None, author=None, is_visible=None, text_orientation_type=None, height=None, note=None, width=None, text_vertical_alignment=None, cell_name=None, html_note=None, text_horizontal_alignment=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -84,42 +84,42 @@ class Comment(object):
         """
 
         self.container['link'] = None
-        self.container['cell_name'] = None
-        self.container['author'] = None
-        self.container['html_note'] = None
-        self.container['note'] = None
         self.container['auto_size'] = None
+        self.container['author'] = None
         self.container['is_visible'] = None
-        self.container['width'] = None
-        self.container['height'] = None
-        self.container['text_horizontal_alignment'] = None
         self.container['text_orientation_type'] = None
+        self.container['height'] = None
+        self.container['note'] = None
+        self.container['width'] = None
         self.container['text_vertical_alignment'] = None
+        self.container['cell_name'] = None
+        self.container['html_note'] = None
+        self.container['text_horizontal_alignment'] = None
 
         if link is not None:
           self.link = link
-        if cell_name is not None:
-          self.cell_name = cell_name
-        if author is not None:
-          self.author = author
-        if html_note is not None:
-          self.html_note = html_note
-        if note is not None:
-          self.note = note
         if auto_size is not None:
           self.auto_size = auto_size
+        if author is not None:
+          self.author = author
         if is_visible is not None:
           self.is_visible = is_visible
-        if width is not None:
-          self.width = width
-        if height is not None:
-          self.height = height
-        if text_horizontal_alignment is not None:
-          self.text_horizontal_alignment = text_horizontal_alignment
         if text_orientation_type is not None:
           self.text_orientation_type = text_orientation_type
+        if height is not None:
+          self.height = height
+        if note is not None:
+          self.note = note
+        if width is not None:
+          self.width = width
         if text_vertical_alignment is not None:
           self.text_vertical_alignment = text_vertical_alignment
+        if cell_name is not None:
+          self.cell_name = cell_name
+        if html_note is not None:
+          self.html_note = html_note
+        if text_horizontal_alignment is not None:
+          self.text_horizontal_alignment = text_horizontal_alignment
 
     @property
     def link(self):
@@ -143,25 +143,25 @@ class Comment(object):
         self.container['link'] = link
 
     @property
-    def cell_name(self):
+    def auto_size(self):
         """
-        Gets the cell_name of this Comment.
+        Gets the auto_size of this Comment.
 
-        :return: The cell_name of this Comment.
-        :rtype: str
+        :return: The auto_size of this Comment.
+        :rtype: bool
         """
-        return self.container['cell_name']
+        return self.container['auto_size']
 
-    @cell_name.setter
-    def cell_name(self, cell_name):
+    @auto_size.setter
+    def auto_size(self, auto_size):
         """
-        Sets the cell_name of this Comment.
+        Sets the auto_size of this Comment.
 
-        :param cell_name: The cell_name of this Comment.
-        :type: str
+        :param auto_size: The auto_size of this Comment.
+        :type: bool
         """
 
-        self.container['cell_name'] = cell_name
+        self.container['auto_size'] = auto_size
 
     @property
     def author(self):
@@ -185,69 +185,6 @@ class Comment(object):
         self.container['author'] = author
 
     @property
-    def html_note(self):
-        """
-        Gets the html_note of this Comment.
-
-        :return: The html_note of this Comment.
-        :rtype: str
-        """
-        return self.container['html_note']
-
-    @html_note.setter
-    def html_note(self, html_note):
-        """
-        Sets the html_note of this Comment.
-
-        :param html_note: The html_note of this Comment.
-        :type: str
-        """
-
-        self.container['html_note'] = html_note
-
-    @property
-    def note(self):
-        """
-        Gets the note of this Comment.
-
-        :return: The note of this Comment.
-        :rtype: str
-        """
-        return self.container['note']
-
-    @note.setter
-    def note(self, note):
-        """
-        Sets the note of this Comment.
-
-        :param note: The note of this Comment.
-        :type: str
-        """
-
-        self.container['note'] = note
-
-    @property
-    def auto_size(self):
-        """
-        Gets the auto_size of this Comment.
-
-        :return: The auto_size of this Comment.
-        :rtype: bool
-        """
-        return self.container['auto_size']
-
-    @auto_size.setter
-    def auto_size(self, auto_size):
-        """
-        Sets the auto_size of this Comment.
-
-        :param auto_size: The auto_size of this Comment.
-        :type: bool
-        """
-
-        self.container['auto_size'] = auto_size
-
-    @property
     def is_visible(self):
         """
         Gets the is_visible of this Comment.
@@ -267,69 +204,6 @@ class Comment(object):
         """
 
         self.container['is_visible'] = is_visible
-
-    @property
-    def width(self):
-        """
-        Gets the width of this Comment.
-
-        :return: The width of this Comment.
-        :rtype: int
-        """
-        return self.container['width']
-
-    @width.setter
-    def width(self, width):
-        """
-        Sets the width of this Comment.
-
-        :param width: The width of this Comment.
-        :type: int
-        """
-
-        self.container['width'] = width
-
-    @property
-    def height(self):
-        """
-        Gets the height of this Comment.
-
-        :return: The height of this Comment.
-        :rtype: int
-        """
-        return self.container['height']
-
-    @height.setter
-    def height(self, height):
-        """
-        Sets the height of this Comment.
-
-        :param height: The height of this Comment.
-        :type: int
-        """
-
-        self.container['height'] = height
-
-    @property
-    def text_horizontal_alignment(self):
-        """
-        Gets the text_horizontal_alignment of this Comment.
-
-        :return: The text_horizontal_alignment of this Comment.
-        :rtype: str
-        """
-        return self.container['text_horizontal_alignment']
-
-    @text_horizontal_alignment.setter
-    def text_horizontal_alignment(self, text_horizontal_alignment):
-        """
-        Sets the text_horizontal_alignment of this Comment.
-
-        :param text_horizontal_alignment: The text_horizontal_alignment of this Comment.
-        :type: str
-        """
-
-        self.container['text_horizontal_alignment'] = text_horizontal_alignment
 
     @property
     def text_orientation_type(self):
@@ -353,6 +227,69 @@ class Comment(object):
         self.container['text_orientation_type'] = text_orientation_type
 
     @property
+    def height(self):
+        """
+        Gets the height of this Comment.
+
+        :return: The height of this Comment.
+        :rtype: int
+        """
+        return self.container['height']
+
+    @height.setter
+    def height(self, height):
+        """
+        Sets the height of this Comment.
+
+        :param height: The height of this Comment.
+        :type: int
+        """
+
+        self.container['height'] = height
+
+    @property
+    def note(self):
+        """
+        Gets the note of this Comment.
+
+        :return: The note of this Comment.
+        :rtype: str
+        """
+        return self.container['note']
+
+    @note.setter
+    def note(self, note):
+        """
+        Sets the note of this Comment.
+
+        :param note: The note of this Comment.
+        :type: str
+        """
+
+        self.container['note'] = note
+
+    @property
+    def width(self):
+        """
+        Gets the width of this Comment.
+
+        :return: The width of this Comment.
+        :rtype: int
+        """
+        return self.container['width']
+
+    @width.setter
+    def width(self, width):
+        """
+        Sets the width of this Comment.
+
+        :param width: The width of this Comment.
+        :type: int
+        """
+
+        self.container['width'] = width
+
+    @property
     def text_vertical_alignment(self):
         """
         Gets the text_vertical_alignment of this Comment.
@@ -372,6 +309,69 @@ class Comment(object):
         """
 
         self.container['text_vertical_alignment'] = text_vertical_alignment
+
+    @property
+    def cell_name(self):
+        """
+        Gets the cell_name of this Comment.
+
+        :return: The cell_name of this Comment.
+        :rtype: str
+        """
+        return self.container['cell_name']
+
+    @cell_name.setter
+    def cell_name(self, cell_name):
+        """
+        Sets the cell_name of this Comment.
+
+        :param cell_name: The cell_name of this Comment.
+        :type: str
+        """
+
+        self.container['cell_name'] = cell_name
+
+    @property
+    def html_note(self):
+        """
+        Gets the html_note of this Comment.
+
+        :return: The html_note of this Comment.
+        :rtype: str
+        """
+        return self.container['html_note']
+
+    @html_note.setter
+    def html_note(self, html_note):
+        """
+        Sets the html_note of this Comment.
+
+        :param html_note: The html_note of this Comment.
+        :type: str
+        """
+
+        self.container['html_note'] = html_note
+
+    @property
+    def text_horizontal_alignment(self):
+        """
+        Gets the text_horizontal_alignment of this Comment.
+
+        :return: The text_horizontal_alignment of this Comment.
+        :rtype: str
+        """
+        return self.container['text_horizontal_alignment']
+
+    @text_horizontal_alignment.setter
+    def text_horizontal_alignment(self, text_horizontal_alignment):
+        """
+        Sets the text_horizontal_alignment of this Comment.
+
+        :param text_horizontal_alignment: The text_horizontal_alignment of this Comment.
+        :type: str
+        """
+
+        self.container['text_horizontal_alignment'] = text_horizontal_alignment
 
     def to_dict(self):
         """

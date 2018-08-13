@@ -31,21 +31,21 @@ class PicFormatOption(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
-        'scale': 'float',
-        'left': 'float',
         'right': 'float',
+        'bottom': 'float',
         'top': 'float',
-        'bottom': 'float'
+        'scale': 'float',
+        'type': 'str',
+        'left': 'float'
     }
 
     attribute_map = {
-        'type': 'Type',
-        'scale': 'Scale',
-        'left': 'Left',
         'right': 'Right',
+        'bottom': 'Bottom',
         'top': 'Top',
-        'bottom': 'Bottom'
+        'scale': 'Scale',
+        'type': 'Type',
+        'left': 'Left'
     }
     
     @staticmethod
@@ -61,7 +61,7 @@ class PicFormatOption(object):
             return self.container[attr]
         return None
 
-    def __init__(self, type=None, scale=None, left=None, right=None, top=None, bottom=None, **kw):
+    def __init__(self, right=None, bottom=None, top=None, scale=None, type=None, left=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -71,88 +71,25 @@ class PicFormatOption(object):
         PicFormatOption - a model defined in Swagger
         """
 
-        self.container['type'] = None
-        self.container['scale'] = None
-        self.container['left'] = None
         self.container['right'] = None
-        self.container['top'] = None
         self.container['bottom'] = None
+        self.container['top'] = None
+        self.container['scale'] = None
+        self.container['type'] = None
+        self.container['left'] = None
 
-        if type is not None:
-          self.type = type
-        if scale is not None:
-          self.scale = scale
-        if left is not None:
-          self.left = left
         if right is not None:
           self.right = right
-        if top is not None:
-          self.top = top
         if bottom is not None:
           self.bottom = bottom
-
-    @property
-    def type(self):
-        """
-        Gets the type of this PicFormatOption.
-
-        :return: The type of this PicFormatOption.
-        :rtype: str
-        """
-        return self.container['type']
-
-    @type.setter
-    def type(self, type):
-        """
-        Sets the type of this PicFormatOption.
-
-        :param type: The type of this PicFormatOption.
-        :type: str
-        """
-
-        self.container['type'] = type
-
-    @property
-    def scale(self):
-        """
-        Gets the scale of this PicFormatOption.
-
-        :return: The scale of this PicFormatOption.
-        :rtype: float
-        """
-        return self.container['scale']
-
-    @scale.setter
-    def scale(self, scale):
-        """
-        Sets the scale of this PicFormatOption.
-
-        :param scale: The scale of this PicFormatOption.
-        :type: float
-        """
-
-        self.container['scale'] = scale
-
-    @property
-    def left(self):
-        """
-        Gets the left of this PicFormatOption.
-
-        :return: The left of this PicFormatOption.
-        :rtype: float
-        """
-        return self.container['left']
-
-    @left.setter
-    def left(self, left):
-        """
-        Sets the left of this PicFormatOption.
-
-        :param left: The left of this PicFormatOption.
-        :type: float
-        """
-
-        self.container['left'] = left
+        if top is not None:
+          self.top = top
+        if scale is not None:
+          self.scale = scale
+        if type is not None:
+          self.type = type
+        if left is not None:
+          self.left = left
 
     @property
     def right(self):
@@ -176,6 +113,27 @@ class PicFormatOption(object):
         self.container['right'] = right
 
     @property
+    def bottom(self):
+        """
+        Gets the bottom of this PicFormatOption.
+
+        :return: The bottom of this PicFormatOption.
+        :rtype: float
+        """
+        return self.container['bottom']
+
+    @bottom.setter
+    def bottom(self, bottom):
+        """
+        Sets the bottom of this PicFormatOption.
+
+        :param bottom: The bottom of this PicFormatOption.
+        :type: float
+        """
+
+        self.container['bottom'] = bottom
+
+    @property
     def top(self):
         """
         Gets the top of this PicFormatOption.
@@ -197,25 +155,67 @@ class PicFormatOption(object):
         self.container['top'] = top
 
     @property
-    def bottom(self):
+    def scale(self):
         """
-        Gets the bottom of this PicFormatOption.
+        Gets the scale of this PicFormatOption.
 
-        :return: The bottom of this PicFormatOption.
+        :return: The scale of this PicFormatOption.
         :rtype: float
         """
-        return self.container['bottom']
+        return self.container['scale']
 
-    @bottom.setter
-    def bottom(self, bottom):
+    @scale.setter
+    def scale(self, scale):
         """
-        Sets the bottom of this PicFormatOption.
+        Sets the scale of this PicFormatOption.
 
-        :param bottom: The bottom of this PicFormatOption.
+        :param scale: The scale of this PicFormatOption.
         :type: float
         """
 
-        self.container['bottom'] = bottom
+        self.container['scale'] = scale
+
+    @property
+    def type(self):
+        """
+        Gets the type of this PicFormatOption.
+
+        :return: The type of this PicFormatOption.
+        :rtype: str
+        """
+        return self.container['type']
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this PicFormatOption.
+
+        :param type: The type of this PicFormatOption.
+        :type: str
+        """
+
+        self.container['type'] = type
+
+    @property
+    def left(self):
+        """
+        Gets the left of this PicFormatOption.
+
+        :return: The left of this PicFormatOption.
+        :rtype: float
+        """
+        return self.container['left']
+
+    @left.setter
+    def left(self, left):
+        """
+        Sets the left of this PicFormatOption.
+
+        :param left: The left of this PicFormatOption.
+        :type: float
+        """
+
+        self.container['left'] = left
 
     def to_dict(self):
         """

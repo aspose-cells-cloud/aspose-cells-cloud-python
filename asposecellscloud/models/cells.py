@@ -32,22 +32,22 @@ class Cells(object):
     """
     swagger_types = {
         'link': 'Link',
-        'max_row': 'int',
-        'max_column': 'int',
-        'cell_count': 'int',
         'rows': 'LinkElement',
-        'columns': 'LinkElement',
-        'cell_list': 'list[LinkElement]'
+        'cell_count': 'int',
+        'max_row': 'int',
+        'cell_list': 'list[LinkElement]',
+        'max_column': 'int',
+        'columns': 'LinkElement'
     }
 
     attribute_map = {
         'link': 'link',
-        'max_row': 'MaxRow',
-        'max_column': 'MaxColumn',
-        'cell_count': 'CellCount',
         'rows': 'Rows',
-        'columns': 'Columns',
-        'cell_list': 'CellList'
+        'cell_count': 'CellCount',
+        'max_row': 'MaxRow',
+        'cell_list': 'CellList',
+        'max_column': 'MaxColumn',
+        'columns': 'Columns'
     }
     
     @staticmethod
@@ -63,7 +63,7 @@ class Cells(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, max_row=None, max_column=None, cell_count=None, rows=None, columns=None, cell_list=None, **kw):
+    def __init__(self, link=None, rows=None, cell_count=None, max_row=None, cell_list=None, max_column=None, columns=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -74,24 +74,24 @@ class Cells(object):
         """
 
         self.container['link'] = None
-        self.container['max_row'] = None
-        self.container['max_column'] = None
-        self.container['cell_count'] = None
         self.container['rows'] = None
-        self.container['columns'] = None
+        self.container['cell_count'] = None
+        self.container['max_row'] = None
         self.container['cell_list'] = None
+        self.container['max_column'] = None
+        self.container['columns'] = None
 
         if link is not None:
           self.link = link
-        self.max_row = max_row
-        self.max_column = max_column
-        self.cell_count = cell_count
         if rows is not None:
           self.rows = rows
-        if columns is not None:
-          self.columns = columns
+        self.cell_count = cell_count
+        self.max_row = max_row
         if cell_list is not None:
           self.cell_list = cell_list
+        self.max_column = max_column
+        if columns is not None:
+          self.columns = columns
 
     @property
     def link(self):
@@ -113,6 +113,52 @@ class Cells(object):
         """
 
         self.container['link'] = link
+
+    @property
+    def rows(self):
+        """
+        Gets the rows of this Cells.
+
+        :return: The rows of this Cells.
+        :rtype: LinkElement
+        """
+        return self.container['rows']
+
+    @rows.setter
+    def rows(self, rows):
+        """
+        Sets the rows of this Cells.
+
+        :param rows: The rows of this Cells.
+        :type: LinkElement
+        """
+
+        self.container['rows'] = rows
+
+    @property
+    def cell_count(self):
+        """
+        Gets the cell_count of this Cells.
+
+        :return: The cell_count of this Cells.
+        :rtype: int
+        """
+        return self.container['cell_count']
+
+    @cell_count.setter
+    def cell_count(self, cell_count):
+        """
+        Sets the cell_count of this Cells.
+
+        :param cell_count: The cell_count of this Cells.
+        :type: int
+        """
+        """
+        if cell_count is None:
+            raise ValueError("Invalid value for `cell_count`, must not be `None`")
+        """
+
+        self.container['cell_count'] = cell_count
 
     @property
     def max_row(self):
@@ -138,6 +184,27 @@ class Cells(object):
         """
 
         self.container['max_row'] = max_row
+
+    @property
+    def cell_list(self):
+        """
+        Gets the cell_list of this Cells.
+
+        :return: The cell_list of this Cells.
+        :rtype: list[LinkElement]
+        """
+        return self.container['cell_list']
+
+    @cell_list.setter
+    def cell_list(self, cell_list):
+        """
+        Sets the cell_list of this Cells.
+
+        :param cell_list: The cell_list of this Cells.
+        :type: list[LinkElement]
+        """
+
+        self.container['cell_list'] = cell_list
 
     @property
     def max_column(self):
@@ -167,52 +234,6 @@ class Cells(object):
         self.container['max_column'] = max_column
 
     @property
-    def cell_count(self):
-        """
-        Gets the cell_count of this Cells.
-
-        :return: The cell_count of this Cells.
-        :rtype: int
-        """
-        return self.container['cell_count']
-
-    @cell_count.setter
-    def cell_count(self, cell_count):
-        """
-        Sets the cell_count of this Cells.
-
-        :param cell_count: The cell_count of this Cells.
-        :type: int
-        """
-        """
-        if cell_count is None:
-            raise ValueError("Invalid value for `cell_count`, must not be `None`")
-        """
-
-        self.container['cell_count'] = cell_count
-
-    @property
-    def rows(self):
-        """
-        Gets the rows of this Cells.
-
-        :return: The rows of this Cells.
-        :rtype: LinkElement
-        """
-        return self.container['rows']
-
-    @rows.setter
-    def rows(self, rows):
-        """
-        Sets the rows of this Cells.
-
-        :param rows: The rows of this Cells.
-        :type: LinkElement
-        """
-
-        self.container['rows'] = rows
-
-    @property
     def columns(self):
         """
         Gets the columns of this Cells.
@@ -232,27 +253,6 @@ class Cells(object):
         """
 
         self.container['columns'] = columns
-
-    @property
-    def cell_list(self):
-        """
-        Gets the cell_list of this Cells.
-
-        :return: The cell_list of this Cells.
-        :rtype: list[LinkElement]
-        """
-        return self.container['cell_list']
-
-    @cell_list.setter
-    def cell_list(self, cell_list):
-        """
-        Sets the cell_list of this Cells.
-
-        :param cell_list: The cell_list of this Cells.
-        :type: list[LinkElement]
-        """
-
-        self.container['cell_list'] = cell_list
 
     def to_dict(self):
         """

@@ -32,14 +32,14 @@ class CustomParserConfig(object):
     """
     swagger_types = {
         'column_index': 'int',
-        'parse_method': 'str',
-        'custom_style': 'str'
+        'custom_style': 'str',
+        'parse_method': 'str'
     }
 
     attribute_map = {
         'column_index': 'ColumnIndex',
-        'parse_method': 'ParseMethod',
-        'custom_style': 'CustomStyle'
+        'custom_style': 'CustomStyle',
+        'parse_method': 'ParseMethod'
     }
     
     @staticmethod
@@ -55,7 +55,7 @@ class CustomParserConfig(object):
             return self.container[attr]
         return None
 
-    def __init__(self, column_index=None, parse_method=None, custom_style=None, **kw):
+    def __init__(self, column_index=None, custom_style=None, parse_method=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -66,15 +66,15 @@ class CustomParserConfig(object):
         """
 
         self.container['column_index'] = None
-        self.container['parse_method'] = None
         self.container['custom_style'] = None
+        self.container['parse_method'] = None
 
         if column_index is not None:
           self.column_index = column_index
-        if parse_method is not None:
-          self.parse_method = parse_method
         if custom_style is not None:
           self.custom_style = custom_style
+        if parse_method is not None:
+          self.parse_method = parse_method
 
     @property
     def column_index(self):
@@ -98,27 +98,6 @@ class CustomParserConfig(object):
         self.container['column_index'] = column_index
 
     @property
-    def parse_method(self):
-        """
-        Gets the parse_method of this CustomParserConfig.
-
-        :return: The parse_method of this CustomParserConfig.
-        :rtype: str
-        """
-        return self.container['parse_method']
-
-    @parse_method.setter
-    def parse_method(self, parse_method):
-        """
-        Sets the parse_method of this CustomParserConfig.
-
-        :param parse_method: The parse_method of this CustomParserConfig.
-        :type: str
-        """
-
-        self.container['parse_method'] = parse_method
-
-    @property
     def custom_style(self):
         """
         Gets the custom_style of this CustomParserConfig.
@@ -138,6 +117,27 @@ class CustomParserConfig(object):
         """
 
         self.container['custom_style'] = custom_style
+
+    @property
+    def parse_method(self):
+        """
+        Gets the parse_method of this CustomParserConfig.
+
+        :return: The parse_method of this CustomParserConfig.
+        :rtype: str
+        """
+        return self.container['parse_method']
+
+    @parse_method.setter
+    def parse_method(self, parse_method):
+        """
+        Sets the parse_method of this CustomParserConfig.
+
+        :param parse_method: The parse_method of this CustomParserConfig.
+        :type: str
+        """
+
+        self.container['parse_method'] = parse_method
 
     def to_dict(self):
         """

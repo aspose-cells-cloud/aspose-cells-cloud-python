@@ -32,18 +32,18 @@ class Hyperlink(object):
     """
     swagger_types = {
         'link': 'Link',
-        'address': 'str',
-        'area': 'CellArea',
         'screen_tip': 'str',
-        'text_to_display': 'str'
+        'area': 'CellArea',
+        'text_to_display': 'str',
+        'address': 'str'
     }
 
     attribute_map = {
         'link': 'link',
-        'address': 'Address',
-        'area': 'Area',
         'screen_tip': 'ScreenTip',
-        'text_to_display': 'TextToDisplay'
+        'area': 'Area',
+        'text_to_display': 'TextToDisplay',
+        'address': 'Address'
     }
     
     @staticmethod
@@ -59,7 +59,7 @@ class Hyperlink(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, address=None, area=None, screen_tip=None, text_to_display=None, **kw):
+    def __init__(self, link=None, screen_tip=None, area=None, text_to_display=None, address=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -70,21 +70,21 @@ class Hyperlink(object):
         """
 
         self.container['link'] = None
-        self.container['address'] = None
-        self.container['area'] = None
         self.container['screen_tip'] = None
+        self.container['area'] = None
         self.container['text_to_display'] = None
+        self.container['address'] = None
 
         if link is not None:
           self.link = link
-        if address is not None:
-          self.address = address
-        if area is not None:
-          self.area = area
         if screen_tip is not None:
           self.screen_tip = screen_tip
+        if area is not None:
+          self.area = area
         if text_to_display is not None:
           self.text_to_display = text_to_display
+        if address is not None:
+          self.address = address
 
     @property
     def link(self):
@@ -108,25 +108,25 @@ class Hyperlink(object):
         self.container['link'] = link
 
     @property
-    def address(self):
+    def screen_tip(self):
         """
-        Gets the address of this Hyperlink.
+        Gets the screen_tip of this Hyperlink.
 
-        :return: The address of this Hyperlink.
+        :return: The screen_tip of this Hyperlink.
         :rtype: str
         """
-        return self.container['address']
+        return self.container['screen_tip']
 
-    @address.setter
-    def address(self, address):
+    @screen_tip.setter
+    def screen_tip(self, screen_tip):
         """
-        Sets the address of this Hyperlink.
+        Sets the screen_tip of this Hyperlink.
 
-        :param address: The address of this Hyperlink.
+        :param screen_tip: The screen_tip of this Hyperlink.
         :type: str
         """
 
-        self.container['address'] = address
+        self.container['screen_tip'] = screen_tip
 
     @property
     def area(self):
@@ -150,27 +150,6 @@ class Hyperlink(object):
         self.container['area'] = area
 
     @property
-    def screen_tip(self):
-        """
-        Gets the screen_tip of this Hyperlink.
-
-        :return: The screen_tip of this Hyperlink.
-        :rtype: str
-        """
-        return self.container['screen_tip']
-
-    @screen_tip.setter
-    def screen_tip(self, screen_tip):
-        """
-        Sets the screen_tip of this Hyperlink.
-
-        :param screen_tip: The screen_tip of this Hyperlink.
-        :type: str
-        """
-
-        self.container['screen_tip'] = screen_tip
-
-    @property
     def text_to_display(self):
         """
         Gets the text_to_display of this Hyperlink.
@@ -190,6 +169,27 @@ class Hyperlink(object):
         """
 
         self.container['text_to_display'] = text_to_display
+
+    @property
+    def address(self):
+        """
+        Gets the address of this Hyperlink.
+
+        :return: The address of this Hyperlink.
+        :rtype: str
+        """
+        return self.container['address']
+
+    @address.setter
+    def address(self, address):
+        """
+        Sets the address of this Hyperlink.
+
+        :param address: The address of this Hyperlink.
+        :type: str
+        """
+
+        self.container['address'] = address
 
     def to_dict(self):
         """
