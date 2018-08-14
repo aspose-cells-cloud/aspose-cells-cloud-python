@@ -10,20 +10,7 @@ import asposecellscloud
 from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.o_auth_api import OAuthApi
 from asposecellscloud.api_client import ApiClient
-
-PY2 = sys.version_info[0] == 2
-if PY2:
-    import asposestoragecloud
-    from asposestoragecloud.StorageApi import StorageApi
-    from asposestoragecloud.ApiClient import ApiClient as StorageApiClient
-    from asposestoragecloud.ApiClient import ApiException
-    from asposestoragecloud.models import FileExistResponse
-else:
-    import asposestoragecloud
-    from asposestoragecloud.StorageApi3 import StorageApi3 as StorageApi
-    from asposestoragecloud.ApiClient3 import ApiClient3 as StorageApiClient
-    from asposestoragecloud.ApiClient3 import ApiException
-    from asposestoragecloud.models import FileExistResponse
+import asposestoragecloud
 
 grantType = "client_credentials"
 clientId = "66164C51-693E-4904-A121-545961673EC1"
@@ -46,13 +33,15 @@ def GetApiClient():
 
 
 def Ready(filename, folder):
-    storage_apiClient = StorageApiClient(clientSecret, clientId)
-    storageApi = StorageApi(storage_apiClient)
+    storage_apiClient = asposestoragecloud.ApiClient(clientSecret, clientId)
+    storageApi = asposestoragecloud.StorageApi(storage_apiClient)
   
     path = folder + '/' + filename
     fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + filename
-    response = storageApi.PutCreate(path, fullfilename)
+    with open(fullfilename, 'rb') as file_object:
+        contents = file_object.read()
+        response = storageApi.put_create(path, contents)
+        if response['Status'] == "OK":
+            return True
 
-    if response.Status == "OK":
-        return True
     return False

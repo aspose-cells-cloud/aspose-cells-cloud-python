@@ -15,7 +15,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "asposecellscloud"
-VERSION = "18.4"
+VERSION = "18.8"
 # To install the library, run the following
 #
 # python setup.py install
@@ -39,6 +39,7 @@ setup(
     long_description="Aspose.Cells Cloud SDK for Python allows you to use Aspose.Cells APIs in your Python applications",
     classifiers=[
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.6',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
