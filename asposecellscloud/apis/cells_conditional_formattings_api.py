@@ -57,6 +57,7 @@ class CellsConditionalFormattingsApi(object):
         :param str sheet_name: (required)
         :param int index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -85,12 +86,13 @@ class CellsConditionalFormattingsApi(object):
         :param str sheet_name: (required)
         :param int index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'index', 'folder']
+        all_params = ['name', 'sheet_name', 'index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -129,6 +131,8 @@ class CellsConditionalFormattingsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -182,6 +186,7 @@ class CellsConditionalFormattingsApi(object):
         :param int total_rows: (required)
         :param int total_columns: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -213,12 +218,13 @@ class CellsConditionalFormattingsApi(object):
         :param int total_rows: (required)
         :param int total_columns: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'start_row', 'start_column', 'total_rows', 'total_columns', 'folder']
+        all_params = ['name', 'sheet_name', 'start_row', 'start_column', 'total_rows', 'total_columns', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -272,6 +278,8 @@ class CellsConditionalFormattingsApi(object):
             query_params.append(('totalColumns', params['total_columns']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -321,6 +329,7 @@ class CellsConditionalFormattingsApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -348,12 +357,13 @@ class CellsConditionalFormattingsApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -387,6 +397,8 @@ class CellsConditionalFormattingsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -437,6 +449,7 @@ class CellsConditionalFormattingsApi(object):
         :param str sheet_name: (required)
         :param int index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: ConditionalFormattingResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -465,12 +478,13 @@ class CellsConditionalFormattingsApi(object):
         :param str sheet_name: (required)
         :param int index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: ConditionalFormattingResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'index', 'folder']
+        all_params = ['name', 'sheet_name', 'index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -509,6 +523,8 @@ class CellsConditionalFormattingsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -558,6 +574,7 @@ class CellsConditionalFormattingsApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: ConditionalFormattingsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -585,12 +602,13 @@ class CellsConditionalFormattingsApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: ConditionalFormattingsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -624,6 +642,8 @@ class CellsConditionalFormattingsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -675,6 +695,7 @@ class CellsConditionalFormattingsApi(object):
         :param str cell_area: (required)
         :param FormatCondition formatcondition:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -704,12 +725,13 @@ class CellsConditionalFormattingsApi(object):
         :param str cell_area: (required)
         :param FormatCondition formatcondition:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'cell_area', 'formatcondition', 'folder']
+        all_params = ['name', 'sheet_name', 'cell_area', 'formatcondition', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -748,6 +770,8 @@ class CellsConditionalFormattingsApi(object):
             query_params.append(('cellArea', params['cell_area']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -805,6 +829,7 @@ class CellsConditionalFormattingsApi(object):
         :param str formula1: (required)
         :param str formula2: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -838,12 +863,13 @@ class CellsConditionalFormattingsApi(object):
         :param str formula1: (required)
         :param str formula2: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'index', 'cell_area', 'type', 'operator_type', 'formula1', 'formula2', 'folder']
+        all_params = ['name', 'sheet_name', 'index', 'cell_area', 'type', 'operator_type', 'formula1', 'formula2', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -907,6 +933,8 @@ class CellsConditionalFormattingsApi(object):
             query_params.append(('formula2', params['formula2']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -958,6 +986,7 @@ class CellsConditionalFormattingsApi(object):
         :param int index: (required)
         :param str cell_area: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -987,12 +1016,13 @@ class CellsConditionalFormattingsApi(object):
         :param int index: (required)
         :param str cell_area: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'index', 'cell_area', 'folder']
+        all_params = ['name', 'sheet_name', 'index', 'cell_area', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1036,6 +1066,8 @@ class CellsConditionalFormattingsApi(object):
             query_params.append(('cellArea', params['cell_area']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1090,6 +1122,7 @@ class CellsConditionalFormattingsApi(object):
         :param str formula1: (required)
         :param str formula2: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1122,12 +1155,13 @@ class CellsConditionalFormattingsApi(object):
         :param str formula1: (required)
         :param str formula2: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'index', 'type', 'operator_type', 'formula1', 'formula2', 'folder']
+        all_params = ['name', 'sheet_name', 'index', 'type', 'operator_type', 'formula1', 'formula2', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1186,6 +1220,8 @@ class CellsConditionalFormattingsApi(object):
             query_params.append(('formula2', params['formula2']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

@@ -56,6 +56,7 @@ class CellsPageSetupApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -83,12 +84,13 @@ class CellsPageSetupApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -122,6 +124,8 @@ class CellsPageSetupApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -171,6 +175,7 @@ class CellsPageSetupApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: PageSectionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -198,12 +203,13 @@ class CellsPageSetupApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: PageSectionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -237,6 +243,8 @@ class CellsPageSetupApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -286,6 +294,7 @@ class CellsPageSetupApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: PageSectionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -313,12 +322,13 @@ class CellsPageSetupApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: PageSectionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -352,6 +362,8 @@ class CellsPageSetupApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -401,6 +413,7 @@ class CellsPageSetupApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: PageSetupResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -428,12 +441,13 @@ class CellsPageSetupApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: PageSetupResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -467,6 +481,8 @@ class CellsPageSetupApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -519,6 +535,7 @@ class CellsPageSetupApi(object):
         :param str script: (required)
         :param bool is_first_page: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -549,12 +566,13 @@ class CellsPageSetupApi(object):
         :param str script: (required)
         :param bool is_first_page: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'section', 'script', 'is_first_page', 'folder']
+        all_params = ['name', 'sheet_name', 'section', 'script', 'is_first_page', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -603,6 +621,8 @@ class CellsPageSetupApi(object):
             query_params.append(('isFirstPage', params['is_first_page']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -655,6 +675,7 @@ class CellsPageSetupApi(object):
         :param str script: (required)
         :param bool is_first_page: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -685,12 +706,13 @@ class CellsPageSetupApi(object):
         :param str script: (required)
         :param bool is_first_page: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'section', 'script', 'is_first_page', 'folder']
+        all_params = ['name', 'sheet_name', 'section', 'script', 'is_first_page', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -739,6 +761,8 @@ class CellsPageSetupApi(object):
             query_params.append(('isFirstPage', params['is_first_page']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -789,6 +813,7 @@ class CellsPageSetupApi(object):
         :param str sheet_name: (required)
         :param PageSetup page_setup:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -817,12 +842,13 @@ class CellsPageSetupApi(object):
         :param str sheet_name: (required)
         :param PageSetup page_setup:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'page_setup', 'folder']
+        all_params = ['name', 'sheet_name', 'page_setup', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -856,6 +882,8 @@ class CellsPageSetupApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

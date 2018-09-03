@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **cells_page_breaks_delete_horizontal_page_break**
-> SaaSposeResponse cells_page_breaks_delete_horizontal_page_break(name, sheet_name, index, folder=folder)
+> SaaSposeResponse cells_page_breaks_delete_horizontal_page_break(name, sheet_name, index, folder=folder, storage=storage)
 
 
 
@@ -35,9 +35,10 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 index = 56 # int | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_page_breaks_delete_horizontal_page_break(name, sheet_name, index, folder=folder)
+    api_response = api_instance.cells_page_breaks_delete_horizontal_page_break(name, sheet_name, index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPageBreaksApi->cells_page_breaks_delete_horizontal_page_break: %s\n" % e)
@@ -51,6 +52,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **index** | **int**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -68,7 +70,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_page_breaks_delete_horizontal_page_breaks**
-> SaaSposeResponse cells_page_breaks_delete_horizontal_page_breaks(name, sheet_name, row=row, folder=folder)
+> SaaSposeResponse cells_page_breaks_delete_horizontal_page_breaks(name, sheet_name, row=row, folder=folder, storage=storage)
 
 
 
@@ -86,9 +88,10 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 row = 56 # int |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_page_breaks_delete_horizontal_page_breaks(name, sheet_name, row=row, folder=folder)
+    api_response = api_instance.cells_page_breaks_delete_horizontal_page_breaks(name, sheet_name, row=row, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPageBreaksApi->cells_page_breaks_delete_horizontal_page_breaks: %s\n" % e)
@@ -102,6 +105,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **row** | **int**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -119,7 +123,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_page_breaks_delete_vertical_page_break**
-> SaaSposeResponse cells_page_breaks_delete_vertical_page_break(name, sheet_name, index, folder=folder)
+> SaaSposeResponse cells_page_breaks_delete_vertical_page_break(name, sheet_name, index, folder=folder, storage=storage)
 
 
 
@@ -137,9 +141,10 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 index = 56 # int | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_page_breaks_delete_vertical_page_break(name, sheet_name, index, folder=folder)
+    api_response = api_instance.cells_page_breaks_delete_vertical_page_break(name, sheet_name, index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPageBreaksApi->cells_page_breaks_delete_vertical_page_break: %s\n" % e)
@@ -153,6 +158,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **index** | **int**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -170,7 +176,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_page_breaks_delete_vertical_page_breaks**
-> SaaSposeResponse cells_page_breaks_delete_vertical_page_breaks(name, sheet_name, column=column, folder=folder)
+> SaaSposeResponse cells_page_breaks_delete_vertical_page_breaks(name, sheet_name, column=column, folder=folder, storage=storage)
 
 
 
@@ -188,9 +194,10 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 column = 56 # int |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_page_breaks_delete_vertical_page_breaks(name, sheet_name, column=column, folder=folder)
+    api_response = api_instance.cells_page_breaks_delete_vertical_page_breaks(name, sheet_name, column=column, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPageBreaksApi->cells_page_breaks_delete_vertical_page_breaks: %s\n" % e)
@@ -204,6 +211,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **column** | **int**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -221,7 +229,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_page_breaks_get_horizontal_page_break**
-> HorizontalPageBreakResponse cells_page_breaks_get_horizontal_page_break(name, sheet_name, index, folder=folder)
+> HorizontalPageBreakResponse cells_page_breaks_get_horizontal_page_break(name, sheet_name, index, folder=folder, storage=storage)
 
 
 
@@ -239,9 +247,10 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 index = 56 # int | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_page_breaks_get_horizontal_page_break(name, sheet_name, index, folder=folder)
+    api_response = api_instance.cells_page_breaks_get_horizontal_page_break(name, sheet_name, index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPageBreaksApi->cells_page_breaks_get_horizontal_page_break: %s\n" % e)
@@ -255,6 +264,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **index** | **int**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -272,7 +282,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_page_breaks_get_horizontal_page_breaks**
-> HorizontalPageBreaksResponse cells_page_breaks_get_horizontal_page_breaks(name, sheet_name, folder=folder)
+> HorizontalPageBreaksResponse cells_page_breaks_get_horizontal_page_breaks(name, sheet_name, folder=folder, storage=storage)
 
 
 
@@ -289,9 +299,10 @@ api_instance = asposecellscloud.CellsPageBreaksApi()
 name = 'name_example' # str | 
 sheet_name = 'sheet_name_example' # str | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_page_breaks_get_horizontal_page_breaks(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_page_breaks_get_horizontal_page_breaks(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPageBreaksApi->cells_page_breaks_get_horizontal_page_breaks: %s\n" % e)
@@ -304,6 +315,7 @@ Name | Type | Description  | Notes
  **name** | **str**|  | 
  **sheet_name** | **str**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -321,7 +333,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_page_breaks_get_vertical_page_break**
-> VerticalPageBreakResponse cells_page_breaks_get_vertical_page_break(name, sheet_name, index, folder=folder)
+> VerticalPageBreakResponse cells_page_breaks_get_vertical_page_break(name, sheet_name, index, folder=folder, storage=storage)
 
 
 
@@ -339,9 +351,10 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 index = 56 # int | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_page_breaks_get_vertical_page_break(name, sheet_name, index, folder=folder)
+    api_response = api_instance.cells_page_breaks_get_vertical_page_break(name, sheet_name, index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPageBreaksApi->cells_page_breaks_get_vertical_page_break: %s\n" % e)
@@ -355,6 +368,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **index** | **int**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -372,7 +386,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_page_breaks_get_vertical_page_breaks**
-> VerticalPageBreaksResponse cells_page_breaks_get_vertical_page_breaks(name, sheet_name, folder=folder)
+> VerticalPageBreaksResponse cells_page_breaks_get_vertical_page_breaks(name, sheet_name, folder=folder, storage=storage)
 
 
 
@@ -389,9 +403,10 @@ api_instance = asposecellscloud.CellsPageBreaksApi()
 name = 'name_example' # str | 
 sheet_name = 'sheet_name_example' # str | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_page_breaks_get_vertical_page_breaks(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_page_breaks_get_vertical_page_breaks(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPageBreaksApi->cells_page_breaks_get_vertical_page_breaks: %s\n" % e)
@@ -404,6 +419,7 @@ Name | Type | Description  | Notes
  **name** | **str**|  | 
  **sheet_name** | **str**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -421,7 +437,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_page_breaks_put_horizontal_page_break**
-> SaaSposeResponse cells_page_breaks_put_horizontal_page_break(name, sheet_name, cellname=cellname, row=row, column=column, start_column=start_column, end_column=end_column, folder=folder)
+> SaaSposeResponse cells_page_breaks_put_horizontal_page_break(name, sheet_name, cellname=cellname, row=row, column=column, start_column=start_column, end_column=end_column, folder=folder, storage=storage)
 
 
 
@@ -443,9 +459,10 @@ column = 56 # int |  (optional)
 start_column = 56 # int |  (optional)
 end_column = 56 # int |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_page_breaks_put_horizontal_page_break(name, sheet_name, cellname=cellname, row=row, column=column, start_column=start_column, end_column=end_column, folder=folder)
+    api_response = api_instance.cells_page_breaks_put_horizontal_page_break(name, sheet_name, cellname=cellname, row=row, column=column, start_column=start_column, end_column=end_column, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPageBreaksApi->cells_page_breaks_put_horizontal_page_break: %s\n" % e)
@@ -463,6 +480,7 @@ Name | Type | Description  | Notes
  **start_column** | **int**|  | [optional] 
  **end_column** | **int**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -480,7 +498,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_page_breaks_put_vertical_page_break**
-> SaaSposeResponse cells_page_breaks_put_vertical_page_break(name, sheet_name, cellname=cellname, column=column, row=row, start_row=start_row, end_row=end_row, folder=folder)
+> SaaSposeResponse cells_page_breaks_put_vertical_page_break(name, sheet_name, cellname=cellname, column=column, row=row, start_row=start_row, end_row=end_row, folder=folder, storage=storage)
 
 
 
@@ -502,9 +520,10 @@ row = 56 # int |  (optional)
 start_row = 56 # int |  (optional)
 end_row = 56 # int |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_page_breaks_put_vertical_page_break(name, sheet_name, cellname=cellname, column=column, row=row, start_row=start_row, end_row=end_row, folder=folder)
+    api_response = api_instance.cells_page_breaks_put_vertical_page_break(name, sheet_name, cellname=cellname, column=column, row=row, start_row=start_row, end_row=end_row, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPageBreaksApi->cells_page_breaks_put_vertical_page_break: %s\n" % e)
@@ -522,6 +541,7 @@ Name | Type | Description  | Notes
  **start_row** | **int**|  | [optional] 
  **end_row** | **int**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 

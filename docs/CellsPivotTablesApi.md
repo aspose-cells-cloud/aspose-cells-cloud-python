@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 
 # **cells_pivot_tables_delete_pivot_table_field**
-> SaaSposeResponse cells_pivot_tables_delete_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, request=request, folder=folder)
+> SaaSposeResponse cells_pivot_tables_delete_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, request=request, folder=folder, storage=storage)
 
 Delete pivot field into into pivot table
 
@@ -46,10 +46,11 @@ pivot_table_index = 56 # int | Pivot table index
 pivot_field_type = 'pivot_field_type_example' # str | The fields area type.
 request = asposecellscloud.PivotTableFieldRequest() # PivotTableFieldRequest | Dto that conrains field indexes (optional)
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete pivot field into into pivot table
-    api_response = api_instance.cells_pivot_tables_delete_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, request=request, folder=folder)
+    api_response = api_instance.cells_pivot_tables_delete_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, request=request, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_delete_pivot_table_field: %s\n" % e)
@@ -65,6 +66,7 @@ Name | Type | Description  | Notes
  **pivot_field_type** | **str**| The fields area type. | 
  **request** | [**PivotTableFieldRequest**](PivotTableFieldRequest.md)| Dto that conrains field indexes | [optional] 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -82,7 +84,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_delete_worksheet_pivot_table**
-> SaaSposeResponse cells_pivot_tables_delete_worksheet_pivot_table(name, sheet_name, pivot_table_index, folder=folder)
+> SaaSposeResponse cells_pivot_tables_delete_worksheet_pivot_table(name, sheet_name, pivot_table_index, folder=folder, storage=storage)
 
 Delete worksheet pivot table by index
 
@@ -100,10 +102,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 pivot_table_index = 56 # int | Pivot table index
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete worksheet pivot table by index
-    api_response = api_instance.cells_pivot_tables_delete_worksheet_pivot_table(name, sheet_name, pivot_table_index, folder=folder)
+    api_response = api_instance.cells_pivot_tables_delete_worksheet_pivot_table(name, sheet_name, pivot_table_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_delete_worksheet_pivot_table: %s\n" % e)
@@ -117,6 +120,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worksheet name. | 
  **pivot_table_index** | **int**| Pivot table index | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -134,7 +138,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_delete_worksheet_pivot_table_filter**
-> SaaSposeResponse cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, field_index, need_re_calculate=need_re_calculate, folder=folder)
+> SaaSposeResponse cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, field_index, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
 
 delete  pivot filter for piovt table             
 
@@ -154,10 +158,11 @@ pivot_table_index = 56 # int |
 field_index = 56 # int | 
 need_re_calculate = false # bool |  (optional) (default to false)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # delete  pivot filter for piovt table             
-    api_response = api_instance.cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, field_index, need_re_calculate=need_re_calculate, folder=folder)
+    api_response = api_instance.cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, field_index, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_delete_worksheet_pivot_table_filter: %s\n" % e)
@@ -173,6 +178,7 @@ Name | Type | Description  | Notes
  **field_index** | **int**|  | 
  **need_re_calculate** | **bool**|  | [optional] [default to false]
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -190,7 +196,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_delete_worksheet_pivot_table_filters**
-> SaaSposeResponse cells_pivot_tables_delete_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, need_re_calculate=need_re_calculate, folder=folder)
+> SaaSposeResponse cells_pivot_tables_delete_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
 
 delete all pivot filters for piovt table
 
@@ -209,10 +215,11 @@ sheet_name = 'sheet_name_example' # str |
 pivot_table_index = 56 # int | 
 need_re_calculate = false # bool |  (optional) (default to false)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # delete all pivot filters for piovt table
-    api_response = api_instance.cells_pivot_tables_delete_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, need_re_calculate=need_re_calculate, folder=folder)
+    api_response = api_instance.cells_pivot_tables_delete_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_delete_worksheet_pivot_table_filters: %s\n" % e)
@@ -227,6 +234,7 @@ Name | Type | Description  | Notes
  **pivot_table_index** | **int**|  | 
  **need_re_calculate** | **bool**|  | [optional] [default to false]
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -244,7 +252,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_delete_worksheet_pivot_tables**
-> SaaSposeResponse cells_pivot_tables_delete_worksheet_pivot_tables(name, sheet_name, folder=folder)
+> SaaSposeResponse cells_pivot_tables_delete_worksheet_pivot_tables(name, sheet_name, folder=folder, storage=storage)
 
 Delete worksheet pivot tables
 
@@ -261,10 +269,11 @@ api_instance = asposecellscloud.CellsPivotTablesApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete worksheet pivot tables
-    api_response = api_instance.cells_pivot_tables_delete_worksheet_pivot_tables(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_pivot_tables_delete_worksheet_pivot_tables(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_delete_worksheet_pivot_tables: %s\n" % e)
@@ -277,6 +286,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| The worksheet name. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -294,7 +304,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_get_pivot_table_field**
-> PivotFieldResponse cells_pivot_tables_get_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, folder=folder)
+> PivotFieldResponse cells_pivot_tables_get_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, folder=folder, storage=storage)
 
 Get pivot field into into pivot table
 
@@ -314,10 +324,11 @@ pivot_table_index = 56 # int | Pivot table index
 pivot_field_index = 56 # int | The field index in the base fields.
 pivot_field_type = 'pivot_field_type_example' # str | The fields area type.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get pivot field into into pivot table
-    api_response = api_instance.cells_pivot_tables_get_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, folder=folder)
+    api_response = api_instance.cells_pivot_tables_get_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_get_pivot_table_field: %s\n" % e)
@@ -333,6 +344,7 @@ Name | Type | Description  | Notes
  **pivot_field_index** | **int**| The field index in the base fields. | 
  **pivot_field_type** | **str**| The fields area type. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -350,7 +362,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_get_worksheet_pivot_table**
-> PivotTableResponse cells_pivot_tables_get_worksheet_pivot_table(name, sheet_name, pivottable_index, folder=folder)
+> PivotTableResponse cells_pivot_tables_get_worksheet_pivot_table(name, sheet_name, pivottable_index, folder=folder, storage=storage)
 
 Get worksheet pivottable info by index.
 
@@ -368,10 +380,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 pivottable_index = 56 # int | 
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get worksheet pivottable info by index.
-    api_response = api_instance.cells_pivot_tables_get_worksheet_pivot_table(name, sheet_name, pivottable_index, folder=folder)
+    api_response = api_instance.cells_pivot_tables_get_worksheet_pivot_table(name, sheet_name, pivottable_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_get_worksheet_pivot_table: %s\n" % e)
@@ -385,6 +398,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worksheet name. | 
  **pivottable_index** | **int**|  | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -402,7 +416,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_get_worksheet_pivot_table_filter**
-> PivotFilterResponse cells_pivot_tables_get_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter_index, folder=folder)
+> PivotFilterResponse cells_pivot_tables_get_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter_index, folder=folder, storage=storage)
 
 
 
@@ -421,9 +435,10 @@ sheet_name = 'sheet_name_example' # str |
 pivot_table_index = 56 # int | 
 filter_index = 56 # int | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_pivot_tables_get_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter_index, folder=folder)
+    api_response = api_instance.cells_pivot_tables_get_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_get_worksheet_pivot_table_filter: %s\n" % e)
@@ -438,6 +453,7 @@ Name | Type | Description  | Notes
  **pivot_table_index** | **int**|  | 
  **filter_index** | **int**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -455,7 +471,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_get_worksheet_pivot_table_filters**
-> PivotFiltersResponse cells_pivot_tables_get_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, folder=folder)
+> PivotFiltersResponse cells_pivot_tables_get_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, folder=folder, storage=storage)
 
 
 
@@ -473,9 +489,10 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 pivot_table_index = 56 # int | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_pivot_tables_get_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, folder=folder)
+    api_response = api_instance.cells_pivot_tables_get_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_get_worksheet_pivot_table_filters: %s\n" % e)
@@ -489,6 +506,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **pivot_table_index** | **int**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -506,7 +524,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_get_worksheet_pivot_tables**
-> PivotTablesResponse cells_pivot_tables_get_worksheet_pivot_tables(name, sheet_name, folder=folder)
+> PivotTablesResponse cells_pivot_tables_get_worksheet_pivot_tables(name, sheet_name, folder=folder, storage=storage)
 
 Get worksheet pivottables info.
 
@@ -523,10 +541,11 @@ api_instance = asposecellscloud.CellsPivotTablesApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get worksheet pivottables info.
-    api_response = api_instance.cells_pivot_tables_get_worksheet_pivot_tables(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_pivot_tables_get_worksheet_pivot_tables(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_get_worksheet_pivot_tables: %s\n" % e)
@@ -539,6 +558,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| The worksheet name. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -556,7 +576,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_post_pivot_table_cell_style**
-> SaaSposeResponse cells_pivot_tables_post_pivot_table_cell_style(name, sheet_name, pivot_table_index, column, row, style=style, need_re_calculate=need_re_calculate, folder=folder)
+> SaaSposeResponse cells_pivot_tables_post_pivot_table_cell_style(name, sheet_name, pivot_table_index, column, row, style=style, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
 
 Update cell style for pivot table
 
@@ -578,10 +598,11 @@ row = 56 # int |
 style = asposecellscloud.Style() # Style | Style dto in request body. (optional)
 need_re_calculate = false # bool |  (optional) (default to false)
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Update cell style for pivot table
-    api_response = api_instance.cells_pivot_tables_post_pivot_table_cell_style(name, sheet_name, pivot_table_index, column, row, style=style, need_re_calculate=need_re_calculate, folder=folder)
+    api_response = api_instance.cells_pivot_tables_post_pivot_table_cell_style(name, sheet_name, pivot_table_index, column, row, style=style, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_post_pivot_table_cell_style: %s\n" % e)
@@ -599,6 +620,7 @@ Name | Type | Description  | Notes
  **style** | [**Style**](Style.md)| Style dto in request body. | [optional] 
  **need_re_calculate** | **bool**|  | [optional] [default to false]
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -616,7 +638,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_post_pivot_table_field_hide_item**
-> SaaSposeResponse cells_pivot_tables_post_pivot_table_field_hide_item(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide, need_re_calculate=need_re_calculate, folder=folder)
+> SaaSposeResponse cells_pivot_tables_post_pivot_table_field_hide_item(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
 
 
 
@@ -639,9 +661,10 @@ item_index = 56 # int |
 is_hide = true # bool | 
 need_re_calculate = false # bool |  (optional) (default to false)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_pivot_tables_post_pivot_table_field_hide_item(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide, need_re_calculate=need_re_calculate, folder=folder)
+    api_response = api_instance.cells_pivot_tables_post_pivot_table_field_hide_item(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_post_pivot_table_field_hide_item: %s\n" % e)
@@ -660,6 +683,7 @@ Name | Type | Description  | Notes
  **is_hide** | **bool**|  | 
  **need_re_calculate** | **bool**|  | [optional] [default to false]
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -677,7 +701,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_post_pivot_table_field_move_to**
-> SaaSposeResponse cells_pivot_tables_post_pivot_table_field_move_to(name, sheet_name, pivot_table_index, field_index, _from, to, folder=folder)
+> SaaSposeResponse cells_pivot_tables_post_pivot_table_field_move_to(name, sheet_name, pivot_table_index, field_index, _from, to, folder=folder, storage=storage)
 
 
 
@@ -698,9 +722,10 @@ field_index = 56 # int |
 _from = '_from_example' # str | 
 to = 'to_example' # str | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_pivot_tables_post_pivot_table_field_move_to(name, sheet_name, pivot_table_index, field_index, _from, to, folder=folder)
+    api_response = api_instance.cells_pivot_tables_post_pivot_table_field_move_to(name, sheet_name, pivot_table_index, field_index, _from, to, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_post_pivot_table_field_move_to: %s\n" % e)
@@ -717,6 +742,7 @@ Name | Type | Description  | Notes
  **_from** | **str**|  | 
  **to** | **str**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -734,7 +760,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_post_pivot_table_style**
-> SaaSposeResponse cells_pivot_tables_post_pivot_table_style(name, sheet_name, pivot_table_index, style=style, need_re_calculate=need_re_calculate, folder=folder)
+> SaaSposeResponse cells_pivot_tables_post_pivot_table_style(name, sheet_name, pivot_table_index, style=style, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
 
 Update style for pivot table
 
@@ -754,10 +780,11 @@ pivot_table_index = 56 # int | Pivot table index
 style = asposecellscloud.Style() # Style | Style dto in request body. (optional)
 need_re_calculate = false # bool |  (optional) (default to false)
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Update style for pivot table
-    api_response = api_instance.cells_pivot_tables_post_pivot_table_style(name, sheet_name, pivot_table_index, style=style, need_re_calculate=need_re_calculate, folder=folder)
+    api_response = api_instance.cells_pivot_tables_post_pivot_table_style(name, sheet_name, pivot_table_index, style=style, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_post_pivot_table_style: %s\n" % e)
@@ -773,6 +800,7 @@ Name | Type | Description  | Notes
  **style** | [**Style**](Style.md)| Style dto in request body. | [optional] 
  **need_re_calculate** | **bool**|  | [optional] [default to false]
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -790,7 +818,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_post_worksheet_pivot_table_calculate**
-> SaaSposeResponse cells_pivot_tables_post_worksheet_pivot_table_calculate(name, sheet_name, pivot_table_index, folder=folder)
+> SaaSposeResponse cells_pivot_tables_post_worksheet_pivot_table_calculate(name, sheet_name, pivot_table_index, folder=folder, storage=storage)
 
 Calculates pivottable's data to cells.
 
@@ -808,10 +836,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 pivot_table_index = 56 # int | Pivot table index
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Calculates pivottable's data to cells.
-    api_response = api_instance.cells_pivot_tables_post_worksheet_pivot_table_calculate(name, sheet_name, pivot_table_index, folder=folder)
+    api_response = api_instance.cells_pivot_tables_post_worksheet_pivot_table_calculate(name, sheet_name, pivot_table_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_post_worksheet_pivot_table_calculate: %s\n" % e)
@@ -825,6 +854,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worksheet name. | 
  **pivot_table_index** | **int**| Pivot table index | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -842,7 +872,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_post_worksheet_pivot_table_move**
-> SaaSposeResponse cells_pivot_tables_post_worksheet_pivot_table_move(name, sheet_name, pivot_table_index, row=row, column=column, dest_cell_name=dest_cell_name, folder=folder)
+> SaaSposeResponse cells_pivot_tables_post_worksheet_pivot_table_move(name, sheet_name, pivot_table_index, row=row, column=column, dest_cell_name=dest_cell_name, folder=folder, storage=storage)
 
 
 
@@ -863,9 +893,10 @@ row = 56 # int |  (optional)
 column = 56 # int |  (optional)
 dest_cell_name = 'dest_cell_name_example' # str |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_pivot_tables_post_worksheet_pivot_table_move(name, sheet_name, pivot_table_index, row=row, column=column, dest_cell_name=dest_cell_name, folder=folder)
+    api_response = api_instance.cells_pivot_tables_post_worksheet_pivot_table_move(name, sheet_name, pivot_table_index, row=row, column=column, dest_cell_name=dest_cell_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_post_worksheet_pivot_table_move: %s\n" % e)
@@ -882,6 +913,7 @@ Name | Type | Description  | Notes
  **column** | **int**|  | [optional] 
  **dest_cell_name** | **str**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -899,7 +931,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_put_pivot_table_field**
-> SaaSposeResponse cells_pivot_tables_put_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, request=request, need_re_calculate=need_re_calculate, folder=folder)
+> SaaSposeResponse cells_pivot_tables_put_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, request=request, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
 
 Add pivot field into into pivot table
 
@@ -920,10 +952,11 @@ pivot_field_type = 'pivot_field_type_example' # str | The fields area type.
 request = asposecellscloud.PivotTableFieldRequest() # PivotTableFieldRequest | Dto that conrains field indexes (optional)
 need_re_calculate = false # bool |  (optional) (default to false)
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Add pivot field into into pivot table
-    api_response = api_instance.cells_pivot_tables_put_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, request=request, need_re_calculate=need_re_calculate, folder=folder)
+    api_response = api_instance.cells_pivot_tables_put_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, request=request, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_put_pivot_table_field: %s\n" % e)
@@ -940,6 +973,7 @@ Name | Type | Description  | Notes
  **request** | [**PivotTableFieldRequest**](PivotTableFieldRequest.md)| Dto that conrains field indexes | [optional] 
  **need_re_calculate** | **bool**|  | [optional] [default to false]
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -957,7 +991,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_put_worksheet_pivot_table**
-> PivotTableResponse cells_pivot_tables_put_worksheet_pivot_table(name, sheet_name, request=request, folder=folder, source_data=source_data, dest_cell_name=dest_cell_name, table_name=table_name, use_same_source=use_same_source)
+> PivotTableResponse cells_pivot_tables_put_worksheet_pivot_table(name, sheet_name, request=request, folder=folder, storage=storage, source_data=source_data, dest_cell_name=dest_cell_name, table_name=table_name, use_same_source=use_same_source)
 
 Add a pivot table into worksheet.
 
@@ -975,6 +1009,7 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 request = asposecellscloud.CreatePivotTableRequest() # CreatePivotTableRequest | CreatePivotTableRequest dto in request body. (optional)
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 source_data = 'source_data_example' # str | The data for the new PivotTable cache. (optional)
 dest_cell_name = 'dest_cell_name_example' # str | The cell in the upper-left corner of the PivotTable report's destination range. (optional)
 table_name = 'table_name_example' # str | The name of the new PivotTable report. (optional)
@@ -982,7 +1017,7 @@ use_same_source = true # bool | Indicates whether using same data source when an
 
 try: 
     # Add a pivot table into worksheet.
-    api_response = api_instance.cells_pivot_tables_put_worksheet_pivot_table(name, sheet_name, request=request, folder=folder, source_data=source_data, dest_cell_name=dest_cell_name, table_name=table_name, use_same_source=use_same_source)
+    api_response = api_instance.cells_pivot_tables_put_worksheet_pivot_table(name, sheet_name, request=request, folder=folder, storage=storage, source_data=source_data, dest_cell_name=dest_cell_name, table_name=table_name, use_same_source=use_same_source)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_put_worksheet_pivot_table: %s\n" % e)
@@ -996,6 +1031,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worksheet name. | 
  **request** | [**CreatePivotTableRequest**](CreatePivotTableRequest.md)| CreatePivotTableRequest dto in request body. | [optional] 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
  **source_data** | **str**| The data for the new PivotTable cache. | [optional] 
  **dest_cell_name** | **str**| The cell in the upper-left corner of the PivotTable report&#39;s destination range. | [optional] 
  **table_name** | **str**| The name of the new PivotTable report. | [optional] 
@@ -1017,7 +1053,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pivot_tables_put_worksheet_pivot_table_filter**
-> SaaSposeResponse cells_pivot_tables_put_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter=filter, need_re_calculate=need_re_calculate, folder=folder)
+> SaaSposeResponse cells_pivot_tables_put_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter=filter, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
 
 Add pivot filter for piovt table index
 
@@ -1037,10 +1073,11 @@ pivot_table_index = 56 # int |
 filter = asposecellscloud.PivotFilter() # PivotFilter |  (optional)
 need_re_calculate = false # bool |  (optional) (default to false)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Add pivot filter for piovt table index
-    api_response = api_instance.cells_pivot_tables_put_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter=filter, need_re_calculate=need_re_calculate, folder=folder)
+    api_response = api_instance.cells_pivot_tables_put_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter=filter, need_re_calculate=need_re_calculate, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPivotTablesApi->cells_pivot_tables_put_worksheet_pivot_table_filter: %s\n" % e)
@@ -1056,6 +1093,7 @@ Name | Type | Description  | Notes
  **filter** | [**PivotFilter**](PivotFilter.md)|  | [optional] 
  **need_re_calculate** | **bool**|  | [optional] [default to false]
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 

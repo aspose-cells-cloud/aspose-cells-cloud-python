@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **cells_auto_filter_delete_worksheet_date_filter**
-> SaaSposeResponse cells_auto_filter_delete_worksheet_date_filter(name, sheet_name, field_index, date_time_grouping_type, year=year, month=month, day=day, hour=hour, minute=minute, second=second, folder=folder)
+> SaaSposeResponse cells_auto_filter_delete_worksheet_date_filter(name, sheet_name, field_index, date_time_grouping_type, year=year, month=month, day=day, hour=hour, minute=minute, second=second, folder=folder, storage=storage)
 
 Removes a date filter.             
 
@@ -45,10 +45,11 @@ hour = 0 # int |  (optional) (default to 0)
 minute = 0 # int |  (optional) (default to 0)
 second = 0 # int |  (optional) (default to 0)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Removes a date filter.             
-    api_response = api_instance.cells_auto_filter_delete_worksheet_date_filter(name, sheet_name, field_index, date_time_grouping_type, year=year, month=month, day=day, hour=hour, minute=minute, second=second, folder=folder)
+    api_response = api_instance.cells_auto_filter_delete_worksheet_date_filter(name, sheet_name, field_index, date_time_grouping_type, year=year, month=month, day=day, hour=hour, minute=minute, second=second, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_delete_worksheet_date_filter: %s\n" % e)
@@ -69,6 +70,7 @@ Name | Type | Description  | Notes
  **minute** | **int**|  | [optional] [default to 0]
  **second** | **int**|  | [optional] [default to 0]
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -86,7 +88,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_delete_worksheet_filter**
-> SaaSposeResponse cells_auto_filter_delete_worksheet_filter(name, sheet_name, field_index, criteria=criteria, folder=folder)
+> SaaSposeResponse cells_auto_filter_delete_worksheet_filter(name, sheet_name, field_index, criteria=criteria, folder=folder, storage=storage)
 
 Delete a filter for a filter column.             
 
@@ -105,10 +107,11 @@ sheet_name = 'sheet_name_example' # str |
 field_index = 56 # int | 
 criteria = 'criteria_example' # str |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete a filter for a filter column.             
-    api_response = api_instance.cells_auto_filter_delete_worksheet_filter(name, sheet_name, field_index, criteria=criteria, folder=folder)
+    api_response = api_instance.cells_auto_filter_delete_worksheet_filter(name, sheet_name, field_index, criteria=criteria, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_delete_worksheet_filter: %s\n" % e)
@@ -123,6 +126,7 @@ Name | Type | Description  | Notes
  **field_index** | **int**|  | 
  **criteria** | **str**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -140,7 +144,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_get_worksheet_auto_filter**
-> AutoFilterResponse cells_auto_filter_get_worksheet_auto_filter(name, sheet_name, folder=folder)
+> AutoFilterResponse cells_auto_filter_get_worksheet_auto_filter(name, sheet_name, folder=folder, storage=storage)
 
 Get Auto filter Description
 
@@ -157,10 +161,11 @@ api_instance = asposecellscloud.CellsAutoFilterApi()
 name = 'name_example' # str | 
 sheet_name = 'sheet_name_example' # str | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get Auto filter Description
-    api_response = api_instance.cells_auto_filter_get_worksheet_auto_filter(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_auto_filter_get_worksheet_auto_filter(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_get_worksheet_auto_filter: %s\n" % e)
@@ -173,6 +178,7 @@ Name | Type | Description  | Notes
  **name** | **str**|  | 
  **sheet_name** | **str**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -190,7 +196,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_post_worksheet_auto_filter_refresh**
-> SaaSposeResponse cells_auto_filter_post_worksheet_auto_filter_refresh(name, sheet_name, folder=folder)
+> SaaSposeResponse cells_auto_filter_post_worksheet_auto_filter_refresh(name, sheet_name, folder=folder, storage=storage)
 
 
 
@@ -207,9 +213,10 @@ api_instance = asposecellscloud.CellsAutoFilterApi()
 name = 'name_example' # str | 
 sheet_name = 'sheet_name_example' # str | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_auto_filter_post_worksheet_auto_filter_refresh(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_auto_filter_post_worksheet_auto_filter_refresh(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_post_worksheet_auto_filter_refresh: %s\n" % e)
@@ -222,6 +229,7 @@ Name | Type | Description  | Notes
  **name** | **str**|  | 
  **sheet_name** | **str**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -239,7 +247,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_post_worksheet_match_blanks**
-> SaaSposeResponse cells_auto_filter_post_worksheet_match_blanks(name, sheet_name, field_index, folder=folder)
+> SaaSposeResponse cells_auto_filter_post_worksheet_match_blanks(name, sheet_name, field_index, folder=folder, storage=storage)
 
 Match all blank cell in the list.
 
@@ -257,10 +265,11 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 field_index = 56 # int | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Match all blank cell in the list.
-    api_response = api_instance.cells_auto_filter_post_worksheet_match_blanks(name, sheet_name, field_index, folder=folder)
+    api_response = api_instance.cells_auto_filter_post_worksheet_match_blanks(name, sheet_name, field_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_post_worksheet_match_blanks: %s\n" % e)
@@ -274,6 +283,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **field_index** | **int**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -291,7 +301,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_post_worksheet_match_non_blanks**
-> SaaSposeResponse cells_auto_filter_post_worksheet_match_non_blanks(name, sheet_name, field_index, folder=folder)
+> SaaSposeResponse cells_auto_filter_post_worksheet_match_non_blanks(name, sheet_name, field_index, folder=folder, storage=storage)
 
 Match all not blank cell in the list.             
 
@@ -309,10 +319,11 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 field_index = 56 # int | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Match all not blank cell in the list.             
-    api_response = api_instance.cells_auto_filter_post_worksheet_match_non_blanks(name, sheet_name, field_index, folder=folder)
+    api_response = api_instance.cells_auto_filter_post_worksheet_match_non_blanks(name, sheet_name, field_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_post_worksheet_match_non_blanks: %s\n" % e)
@@ -326,6 +337,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **field_index** | **int**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -343,7 +355,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_put_worksheet_color_filter**
-> SaaSposeResponse cells_auto_filter_put_worksheet_color_filter(name, sheet_name, range, field_index, color_filter=color_filter, match_blanks=match_blanks, refresh=refresh, folder=folder)
+> SaaSposeResponse cells_auto_filter_put_worksheet_color_filter(name, sheet_name, range, field_index, color_filter=color_filter, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
 
 
 
@@ -365,9 +377,10 @@ color_filter = asposecellscloud.ColorFilterRequest() # ColorFilterRequest |  (op
 match_blanks = true # bool |  (optional)
 refresh = true # bool |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_auto_filter_put_worksheet_color_filter(name, sheet_name, range, field_index, color_filter=color_filter, match_blanks=match_blanks, refresh=refresh, folder=folder)
+    api_response = api_instance.cells_auto_filter_put_worksheet_color_filter(name, sheet_name, range, field_index, color_filter=color_filter, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_put_worksheet_color_filter: %s\n" % e)
@@ -385,6 +398,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **bool**|  | [optional] 
  **refresh** | **bool**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -402,7 +416,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_put_worksheet_custom_filter**
-> SaaSposeResponse cells_auto_filter_put_worksheet_custom_filter(name, sheet_name, range, field_index, operator_type1, criteria1, is_and=is_and, operator_type2=operator_type2, criteria2=criteria2, match_blanks=match_blanks, refresh=refresh, folder=folder)
+> SaaSposeResponse cells_auto_filter_put_worksheet_custom_filter(name, sheet_name, range, field_index, operator_type1, criteria1, is_and=is_and, operator_type2=operator_type2, criteria2=criteria2, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
 
 Filters a list with a custom criteria.             
 
@@ -428,10 +442,11 @@ criteria2 = 'criteria2_example' # str |  (optional)
 match_blanks = true # bool |  (optional)
 refresh = true # bool |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Filters a list with a custom criteria.             
-    api_response = api_instance.cells_auto_filter_put_worksheet_custom_filter(name, sheet_name, range, field_index, operator_type1, criteria1, is_and=is_and, operator_type2=operator_type2, criteria2=criteria2, match_blanks=match_blanks, refresh=refresh, folder=folder)
+    api_response = api_instance.cells_auto_filter_put_worksheet_custom_filter(name, sheet_name, range, field_index, operator_type1, criteria1, is_and=is_and, operator_type2=operator_type2, criteria2=criteria2, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_put_worksheet_custom_filter: %s\n" % e)
@@ -453,6 +468,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **bool**|  | [optional] 
  **refresh** | **bool**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -470,7 +486,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_put_worksheet_date_filter**
-> SaaSposeResponse cells_auto_filter_put_worksheet_date_filter(name, sheet_name, range, field_index, date_time_grouping_type, year=year, month=month, day=day, hour=hour, minute=minute, second=second, match_blanks=match_blanks, refresh=refresh, folder=folder)
+> SaaSposeResponse cells_auto_filter_put_worksheet_date_filter(name, sheet_name, range, field_index, date_time_grouping_type, year=year, month=month, day=day, hour=hour, minute=minute, second=second, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
 
 add date filter in worksheet 
 
@@ -498,10 +514,11 @@ second = 0 # int |  (optional) (default to 0)
 match_blanks = true # bool |  (optional)
 refresh = true # bool |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # add date filter in worksheet 
-    api_response = api_instance.cells_auto_filter_put_worksheet_date_filter(name, sheet_name, range, field_index, date_time_grouping_type, year=year, month=month, day=day, hour=hour, minute=minute, second=second, match_blanks=match_blanks, refresh=refresh, folder=folder)
+    api_response = api_instance.cells_auto_filter_put_worksheet_date_filter(name, sheet_name, range, field_index, date_time_grouping_type, year=year, month=month, day=day, hour=hour, minute=minute, second=second, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_put_worksheet_date_filter: %s\n" % e)
@@ -525,6 +542,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **bool**|  | [optional] 
  **refresh** | **bool**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -542,7 +560,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_put_worksheet_dynamic_filter**
-> SaaSposeResponse cells_auto_filter_put_worksheet_dynamic_filter(name, sheet_name, range, field_index, dynamic_filter_type, match_blanks=match_blanks, refresh=refresh, folder=folder)
+> SaaSposeResponse cells_auto_filter_put_worksheet_dynamic_filter(name, sheet_name, range, field_index, dynamic_filter_type, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
 
 
 
@@ -564,9 +582,10 @@ dynamic_filter_type = 'dynamic_filter_type_example' # str |
 match_blanks = true # bool |  (optional)
 refresh = true # bool |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_auto_filter_put_worksheet_dynamic_filter(name, sheet_name, range, field_index, dynamic_filter_type, match_blanks=match_blanks, refresh=refresh, folder=folder)
+    api_response = api_instance.cells_auto_filter_put_worksheet_dynamic_filter(name, sheet_name, range, field_index, dynamic_filter_type, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_put_worksheet_dynamic_filter: %s\n" % e)
@@ -584,6 +603,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **bool**|  | [optional] 
  **refresh** | **bool**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -601,7 +621,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_put_worksheet_filter**
-> SaaSposeResponse cells_auto_filter_put_worksheet_filter(name, sheet_name, range, field_index, criteria, match_blanks=match_blanks, refresh=refresh, folder=folder)
+> SaaSposeResponse cells_auto_filter_put_worksheet_filter(name, sheet_name, range, field_index, criteria, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
 
 Adds a filter for a filter column.             
 
@@ -623,10 +643,11 @@ criteria = 'criteria_example' # str |
 match_blanks = true # bool |  (optional)
 refresh = true # bool |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Adds a filter for a filter column.             
-    api_response = api_instance.cells_auto_filter_put_worksheet_filter(name, sheet_name, range, field_index, criteria, match_blanks=match_blanks, refresh=refresh, folder=folder)
+    api_response = api_instance.cells_auto_filter_put_worksheet_filter(name, sheet_name, range, field_index, criteria, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_put_worksheet_filter: %s\n" % e)
@@ -644,6 +665,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **bool**|  | [optional] 
  **refresh** | **bool**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -661,7 +683,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_put_worksheet_filter_top10**
-> SaaSposeResponse cells_auto_filter_put_worksheet_filter_top10(name, sheet_name, range, field_index, is_top, is_percent, item_count, match_blanks=match_blanks, refresh=refresh, folder=folder)
+> SaaSposeResponse cells_auto_filter_put_worksheet_filter_top10(name, sheet_name, range, field_index, is_top, is_percent, item_count, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
 
 Filter the top 10 item in the list
 
@@ -685,10 +707,11 @@ item_count = 56 # int |
 match_blanks = true # bool |  (optional)
 refresh = true # bool |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Filter the top 10 item in the list
-    api_response = api_instance.cells_auto_filter_put_worksheet_filter_top10(name, sheet_name, range, field_index, is_top, is_percent, item_count, match_blanks=match_blanks, refresh=refresh, folder=folder)
+    api_response = api_instance.cells_auto_filter_put_worksheet_filter_top10(name, sheet_name, range, field_index, is_top, is_percent, item_count, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_put_worksheet_filter_top10: %s\n" % e)
@@ -708,6 +731,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **bool**|  | [optional] 
  **refresh** | **bool**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -725,7 +749,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_auto_filter_put_worksheet_icon_filter**
-> SaaSposeResponse cells_auto_filter_put_worksheet_icon_filter(name, sheet_name, range, field_index, icon_set_type, icon_id, match_blanks=match_blanks, refresh=refresh, folder=folder)
+> SaaSposeResponse cells_auto_filter_put_worksheet_icon_filter(name, sheet_name, range, field_index, icon_set_type, icon_id, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
 
 Adds an icon filter.
 
@@ -748,10 +772,11 @@ icon_id = 56 # int |
 match_blanks = true # bool |  (optional)
 refresh = true # bool |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Adds an icon filter.
-    api_response = api_instance.cells_auto_filter_put_worksheet_icon_filter(name, sheet_name, range, field_index, icon_set_type, icon_id, match_blanks=match_blanks, refresh=refresh, folder=folder)
+    api_response = api_instance.cells_auto_filter_put_worksheet_icon_filter(name, sheet_name, range, field_index, icon_set_type, icon_id, match_blanks=match_blanks, refresh=refresh, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoFilterApi->cells_auto_filter_put_worksheet_icon_filter: %s\n" % e)
@@ -770,6 +795,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **bool**|  | [optional] 
  **refresh** | **bool**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 

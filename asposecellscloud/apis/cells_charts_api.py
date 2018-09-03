@@ -57,6 +57,7 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -85,12 +86,13 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -129,6 +131,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -179,6 +183,7 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -207,12 +212,13 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -251,6 +257,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -300,6 +308,7 @@ class CellsChartsApi(object):
         :param str name: Workbook name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -327,12 +336,13 @@ class CellsChartsApi(object):
         :param str name: Workbook name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -366,6 +376,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -416,6 +428,7 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: ChartsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -444,12 +457,13 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: ChartsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -488,6 +502,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -539,6 +555,7 @@ class CellsChartsApi(object):
         :param int chart_number: The chart number. (required)
         :param str format: The exported file format.
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
@@ -568,12 +585,13 @@ class CellsChartsApi(object):
         :param int chart_number: The chart number. (required)
         :param str format: The exported file format.
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_number', 'format', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_number', 'format', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -614,6 +632,8 @@ class CellsChartsApi(object):
             query_params.append(('format', params['format']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -664,6 +684,7 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: LegendResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -692,12 +713,13 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: LegendResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -736,6 +758,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -786,6 +810,7 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: TitleResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -814,12 +839,13 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: TitleResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -858,6 +884,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -907,6 +935,7 @@ class CellsChartsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ChartsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -934,12 +963,13 @@ class CellsChartsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ChartsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -973,6 +1003,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1024,6 +1056,7 @@ class CellsChartsApi(object):
         :param int chart_index: (required)
         :param Chart chart:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1053,12 +1086,13 @@ class CellsChartsApi(object):
         :param int chart_index: (required)
         :param Chart chart:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'chart', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'chart', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1097,6 +1131,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1150,6 +1186,7 @@ class CellsChartsApi(object):
         :param int chart_index: The chart index. (required)
         :param Legend legend:
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: LegendResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1179,12 +1216,13 @@ class CellsChartsApi(object):
         :param int chart_index: The chart index. (required)
         :param Legend legend:
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: LegendResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'legend', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'legend', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1223,6 +1261,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1276,6 +1316,7 @@ class CellsChartsApi(object):
         :param int chart_index: The chart index. (required)
         :param Title title: Chart title
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: TitleResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1305,12 +1346,13 @@ class CellsChartsApi(object):
         :param int chart_index: The chart index. (required)
         :param Title title: Chart title
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: TitleResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'title', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'title', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1349,6 +1391,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1410,6 +1454,7 @@ class CellsChartsApi(object):
         :param bool is_auto_get_serial_name: Specifies whether auto update serial name. 
         :param str title: Specifies chart title name.
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: ChartsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1447,12 +1492,13 @@ class CellsChartsApi(object):
         :param bool is_auto_get_serial_name: Specifies whether auto update serial name. 
         :param str title: Specifies chart title name.
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: ChartsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_type', 'upper_left_row', 'upper_left_column', 'lower_right_row', 'lower_right_column', 'area', 'is_vertical', 'category_data', 'is_auto_get_serial_name', 'title', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_type', 'upper_left_row', 'upper_left_column', 'lower_right_row', 'lower_right_column', 'area', 'is_vertical', 'category_data', 'is_auto_get_serial_name', 'title', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1509,6 +1555,8 @@ class CellsChartsApi(object):
             query_params.append(('title', params['title']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1559,6 +1607,7 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1587,12 +1636,13 @@ class CellsChartsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1631,6 +1681,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1682,6 +1734,7 @@ class CellsChartsApi(object):
         :param int chart_index: The chart index. (required)
         :param Title title: Chart title.
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: TitleResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1711,12 +1764,13 @@ class CellsChartsApi(object):
         :param int chart_index: The chart index. (required)
         :param Title title: Chart title.
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: TitleResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'title', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'title', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1755,6 +1809,8 @@ class CellsChartsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

@@ -55,6 +55,7 @@ class CellsPropertiesApi(object):
             for asynchronous request. (optional)
         :param str name: The document name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: CellsDocumentPropertiesResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -81,12 +82,13 @@ class CellsPropertiesApi(object):
             for asynchronous request. (optional)
         :param str name: The document name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: CellsDocumentPropertiesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'folder']
+        all_params = ['name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -115,6 +117,8 @@ class CellsPropertiesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -164,6 +168,7 @@ class CellsPropertiesApi(object):
         :param str name: The document name. (required)
         :param str property_name: The property name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: CellsDocumentPropertiesResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -191,12 +196,13 @@ class CellsPropertiesApi(object):
         :param str name: The document name. (required)
         :param str property_name: The property name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: CellsDocumentPropertiesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'property_name', 'folder']
+        all_params = ['name', 'property_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -230,6 +236,8 @@ class CellsPropertiesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -278,6 +286,7 @@ class CellsPropertiesApi(object):
             for asynchronous request. (optional)
         :param str name: The document name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: CellsDocumentPropertiesResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -304,12 +313,13 @@ class CellsPropertiesApi(object):
             for asynchronous request. (optional)
         :param str name: The document name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: CellsDocumentPropertiesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'folder']
+        all_params = ['name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -338,6 +348,8 @@ class CellsPropertiesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -387,6 +399,7 @@ class CellsPropertiesApi(object):
         :param str name: The document name. (required)
         :param str property_name: The property name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: CellsDocumentPropertyResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -414,12 +427,13 @@ class CellsPropertiesApi(object):
         :param str name: The document name. (required)
         :param str property_name: The property name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: CellsDocumentPropertyResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'property_name', 'folder']
+        all_params = ['name', 'property_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -453,6 +467,8 @@ class CellsPropertiesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -503,6 +519,7 @@ class CellsPropertiesApi(object):
         :param str property_name: The property name. (required)
         :param CellsDocumentProperty _property: with new property value.
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: CellsDocumentPropertyResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -531,12 +548,13 @@ class CellsPropertiesApi(object):
         :param str property_name: The property name. (required)
         :param CellsDocumentProperty _property: with new property value.
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: CellsDocumentPropertyResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'property_name', '_property', 'folder']
+        all_params = ['name', 'property_name', '_property', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -570,6 +588,8 @@ class CellsPropertiesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

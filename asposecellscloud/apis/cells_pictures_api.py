@@ -57,6 +57,7 @@ class CellsPicturesApi(object):
         :param str sheet_name: The worsheet name. (required)
         :param int picture_index: Picture index (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -85,12 +86,13 @@ class CellsPicturesApi(object):
         :param str sheet_name: The worsheet name. (required)
         :param int picture_index: Picture index (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'picture_index', 'folder']
+        all_params = ['name', 'sheet_name', 'picture_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -129,6 +131,8 @@ class CellsPicturesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -178,6 +182,7 @@ class CellsPicturesApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -205,12 +210,13 @@ class CellsPicturesApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -244,6 +250,8 @@ class CellsPicturesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -294,6 +302,7 @@ class CellsPicturesApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int picture_number: The picture number. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
@@ -322,12 +331,13 @@ class CellsPicturesApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int picture_number: The picture number. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'picture_number', 'folder']
+        all_params = ['name', 'sheet_name', 'picture_number', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -366,6 +376,8 @@ class CellsPicturesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -415,6 +427,7 @@ class CellsPicturesApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: PicturesResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -442,12 +455,13 @@ class CellsPicturesApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: PicturesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -481,6 +495,8 @@ class CellsPicturesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -532,6 +548,7 @@ class CellsPicturesApi(object):
         :param int picture_index: The picture's index. (required)
         :param Picture picture: Picture object
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: PictureResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -561,12 +578,13 @@ class CellsPicturesApi(object):
         :param int picture_index: The picture's index. (required)
         :param Picture picture: Picture object
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: PictureResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'picture_index', 'picture', 'folder']
+        all_params = ['name', 'sheet_name', 'picture_index', 'picture', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -605,6 +623,8 @@ class CellsPicturesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -662,6 +682,7 @@ class CellsPicturesApi(object):
         :param int lower_right_column: The image low right column.
         :param str picture_path: The picture path, if not provided the picture data is inspected in the request body.
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: PicturesResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -695,12 +716,13 @@ class CellsPicturesApi(object):
         :param int lower_right_column: The image low right column.
         :param str picture_path: The picture path, if not provided the picture data is inspected in the request body.
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: PicturesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'picture', 'upper_left_row', 'upper_left_column', 'lower_right_row', 'lower_right_column', 'picture_path', 'folder']
+        all_params = ['name', 'sheet_name', 'picture', 'upper_left_row', 'upper_left_column', 'lower_right_row', 'lower_right_column', 'picture_path', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -744,6 +766,8 @@ class CellsPicturesApi(object):
             query_params.append(('picturePath', params['picture_path']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

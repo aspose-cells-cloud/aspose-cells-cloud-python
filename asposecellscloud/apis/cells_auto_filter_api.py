@@ -64,6 +64,7 @@ class CellsAutoFilterApi(object):
         :param int minute:
         :param int second:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -99,12 +100,13 @@ class CellsAutoFilterApi(object):
         :param int minute:
         :param int second:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'field_index', 'date_time_grouping_type', 'year', 'month', 'day', 'hour', 'minute', 'second', 'folder']
+        all_params = ['name', 'sheet_name', 'field_index', 'date_time_grouping_type', 'year', 'month', 'day', 'hour', 'minute', 'second', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -160,6 +162,8 @@ class CellsAutoFilterApi(object):
             query_params.append(('second', params['second']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -211,6 +215,7 @@ class CellsAutoFilterApi(object):
         :param int field_index: (required)
         :param str criteria:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -240,12 +245,13 @@ class CellsAutoFilterApi(object):
         :param int field_index: (required)
         :param str criteria:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'field_index', 'criteria', 'folder']
+        all_params = ['name', 'sheet_name', 'field_index', 'criteria', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -286,6 +292,8 @@ class CellsAutoFilterApi(object):
             query_params.append(('criteria', params['criteria']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -335,6 +343,7 @@ class CellsAutoFilterApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: AutoFilterResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -362,12 +371,13 @@ class CellsAutoFilterApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: AutoFilterResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -401,6 +411,8 @@ class CellsAutoFilterApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -449,6 +461,7 @@ class CellsAutoFilterApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -475,12 +488,13 @@ class CellsAutoFilterApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -514,6 +528,8 @@ class CellsAutoFilterApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -564,6 +580,7 @@ class CellsAutoFilterApi(object):
         :param str sheet_name: (required)
         :param int field_index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -592,12 +609,13 @@ class CellsAutoFilterApi(object):
         :param str sheet_name: (required)
         :param int field_index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'field_index', 'folder']
+        all_params = ['name', 'sheet_name', 'field_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -636,6 +654,8 @@ class CellsAutoFilterApi(object):
             query_params.append(('fieldIndex', params['field_index']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -686,6 +706,7 @@ class CellsAutoFilterApi(object):
         :param str sheet_name: (required)
         :param int field_index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -714,12 +735,13 @@ class CellsAutoFilterApi(object):
         :param str sheet_name: (required)
         :param int field_index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'field_index', 'folder']
+        all_params = ['name', 'sheet_name', 'field_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -758,6 +780,8 @@ class CellsAutoFilterApi(object):
             query_params.append(('fieldIndex', params['field_index']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -811,6 +835,7 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -842,12 +867,13 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'range', 'field_index', 'color_filter', 'match_blanks', 'refresh', 'folder']
+        all_params = ['name', 'sheet_name', 'range', 'field_index', 'color_filter', 'match_blanks', 'refresh', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -895,6 +921,8 @@ class CellsAutoFilterApi(object):
             query_params.append(('refresh', params['refresh']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -955,6 +983,7 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -991,12 +1020,13 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'range', 'field_index', 'operator_type1', 'criteria1', 'is_and', 'operator_type2', 'criteria2', 'match_blanks', 'refresh', 'folder']
+        all_params = ['name', 'sheet_name', 'range', 'field_index', 'operator_type1', 'criteria1', 'is_and', 'operator_type2', 'criteria2', 'match_blanks', 'refresh', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1060,6 +1090,8 @@ class CellsAutoFilterApi(object):
             query_params.append(('refresh', params['refresh']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1120,6 +1152,7 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1158,12 +1191,13 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'range', 'field_index', 'date_time_grouping_type', 'year', 'month', 'day', 'hour', 'minute', 'second', 'match_blanks', 'refresh', 'folder']
+        all_params = ['name', 'sheet_name', 'range', 'field_index', 'date_time_grouping_type', 'year', 'month', 'day', 'hour', 'minute', 'second', 'match_blanks', 'refresh', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1228,6 +1262,8 @@ class CellsAutoFilterApi(object):
             query_params.append(('refresh', params['refresh']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1281,6 +1317,7 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1312,12 +1349,13 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'range', 'field_index', 'dynamic_filter_type', 'match_blanks', 'refresh', 'folder']
+        all_params = ['name', 'sheet_name', 'range', 'field_index', 'dynamic_filter_type', 'match_blanks', 'refresh', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1370,6 +1408,8 @@ class CellsAutoFilterApi(object):
             query_params.append(('refresh', params['refresh']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1424,6 +1464,7 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1456,12 +1497,13 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'range', 'field_index', 'criteria', 'match_blanks', 'refresh', 'folder']
+        all_params = ['name', 'sheet_name', 'range', 'field_index', 'criteria', 'match_blanks', 'refresh', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1514,6 +1556,8 @@ class CellsAutoFilterApi(object):
             query_params.append(('refresh', params['refresh']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1570,6 +1614,7 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1604,12 +1649,13 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'range', 'field_index', 'is_top', 'is_percent', 'item_count', 'match_blanks', 'refresh', 'folder']
+        all_params = ['name', 'sheet_name', 'range', 'field_index', 'is_top', 'is_percent', 'item_count', 'match_blanks', 'refresh', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1672,6 +1718,8 @@ class CellsAutoFilterApi(object):
             query_params.append(('refresh', params['refresh']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1727,6 +1775,7 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1760,12 +1809,13 @@ class CellsAutoFilterApi(object):
         :param bool match_blanks:
         :param bool refresh:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'range', 'field_index', 'icon_set_type', 'icon_id', 'match_blanks', 'refresh', 'folder']
+        all_params = ['name', 'sheet_name', 'range', 'field_index', 'icon_set_type', 'icon_id', 'match_blanks', 'refresh', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1823,6 +1873,8 @@ class CellsAutoFilterApi(object):
             query_params.append(('refresh', params['refresh']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

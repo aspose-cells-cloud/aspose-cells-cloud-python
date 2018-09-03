@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **cells_save_as_post_document_save_as**
-> SaveResponse cells_save_as_post_document_save_as(name, save_options=save_options, newfilename=newfilename, is_auto_fit_rows=is_auto_fit_rows, is_auto_fit_columns=is_auto_fit_columns, folder=folder)
+> SaveResponse cells_save_as_post_document_save_as(name, save_options=save_options, newfilename=newfilename, is_auto_fit_rows=is_auto_fit_rows, is_auto_fit_columns=is_auto_fit_columns, folder=folder, storage=storage)
 
 Convert document and save result to storage.
 
@@ -28,10 +28,11 @@ newfilename = 'newfilename_example' # str | The new file name. (optional)
 is_auto_fit_rows = false # bool | Autofit rows. (optional) (default to false)
 is_auto_fit_columns = false # bool | Autofit columns. (optional) (default to false)
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Convert document and save result to storage.
-    api_response = api_instance.cells_save_as_post_document_save_as(name, save_options=save_options, newfilename=newfilename, is_auto_fit_rows=is_auto_fit_rows, is_auto_fit_columns=is_auto_fit_columns, folder=folder)
+    api_response = api_instance.cells_save_as_post_document_save_as(name, save_options=save_options, newfilename=newfilename, is_auto_fit_rows=is_auto_fit_rows, is_auto_fit_columns=is_auto_fit_columns, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsSaveAsApi->cells_save_as_post_document_save_as: %s\n" % e)
@@ -47,6 +48,7 @@ Name | Type | Description  | Notes
  **is_auto_fit_rows** | **bool**| Autofit rows. | [optional] [default to false]
  **is_auto_fit_columns** | **bool**| Autofit columns. | [optional] [default to false]
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 

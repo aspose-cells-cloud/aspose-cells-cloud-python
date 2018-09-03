@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 # **cells_charts_delete_worksheet_chart_legend**
-> SaaSposeResponse cells_charts_delete_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder)
+> SaaSposeResponse cells_charts_delete_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder, storage=storage)
 
 Hide legend in chart
 
@@ -39,10 +39,11 @@ name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Hide legend in chart
-    api_response = api_instance.cells_charts_delete_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder)
+    api_response = api_instance.cells_charts_delete_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_delete_worksheet_chart_legend: %s\n" % e)
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **chart_index** | **int**| The chart index. | 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -73,7 +75,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_delete_worksheet_chart_title**
-> SaaSposeResponse cells_charts_delete_worksheet_chart_title(name, sheet_name, chart_index, folder=folder)
+> SaaSposeResponse cells_charts_delete_worksheet_chart_title(name, sheet_name, chart_index, folder=folder, storage=storage)
 
 Hide title in chart
 
@@ -91,10 +93,11 @@ name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Hide title in chart
-    api_response = api_instance.cells_charts_delete_worksheet_chart_title(name, sheet_name, chart_index, folder=folder)
+    api_response = api_instance.cells_charts_delete_worksheet_chart_title(name, sheet_name, chart_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_delete_worksheet_chart_title: %s\n" % e)
@@ -108,6 +111,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **chart_index** | **int**| The chart index. | 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -125,7 +129,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_delete_worksheet_clear_charts**
-> SaaSposeResponse cells_charts_delete_worksheet_clear_charts(name, sheet_name, folder=folder)
+> SaaSposeResponse cells_charts_delete_worksheet_clear_charts(name, sheet_name, folder=folder, storage=storage)
 
 Clear the charts.
 
@@ -142,10 +146,11 @@ api_instance = asposecellscloud.CellsChartsApi()
 name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Clear the charts.
-    api_response = api_instance.cells_charts_delete_worksheet_clear_charts(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_charts_delete_worksheet_clear_charts(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_delete_worksheet_clear_charts: %s\n" % e)
@@ -158,6 +163,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Workbook name. | 
  **sheet_name** | **str**| The worksheet name. | 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -175,7 +181,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_delete_worksheet_delete_chart**
-> ChartsResponse cells_charts_delete_worksheet_delete_chart(name, sheet_name, chart_index, folder=folder)
+> ChartsResponse cells_charts_delete_worksheet_delete_chart(name, sheet_name, chart_index, folder=folder, storage=storage)
 
 Delete worksheet chart by index.
 
@@ -193,10 +199,11 @@ name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete worksheet chart by index.
-    api_response = api_instance.cells_charts_delete_worksheet_delete_chart(name, sheet_name, chart_index, folder=folder)
+    api_response = api_instance.cells_charts_delete_worksheet_delete_chart(name, sheet_name, chart_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_delete_worksheet_delete_chart: %s\n" % e)
@@ -210,6 +217,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **chart_index** | **int**| The chart index. | 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -227,7 +235,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_get_worksheet_chart**
-> file cells_charts_get_worksheet_chart(name, sheet_name, chart_number, format=format, folder=folder)
+> file cells_charts_get_worksheet_chart(name, sheet_name, chart_number, format=format, folder=folder, storage=storage)
 
 Get chart info.
 
@@ -246,10 +254,11 @@ sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_number = 56 # int | The chart number.
 format = 'format_example' # str | The exported file format. (optional)
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get chart info.
-    api_response = api_instance.cells_charts_get_worksheet_chart(name, sheet_name, chart_number, format=format, folder=folder)
+    api_response = api_instance.cells_charts_get_worksheet_chart(name, sheet_name, chart_number, format=format, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_get_worksheet_chart: %s\n" % e)
@@ -264,6 +273,7 @@ Name | Type | Description  | Notes
  **chart_number** | **int**| The chart number. | 
  **format** | **str**| The exported file format. | [optional] 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -281,7 +291,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_get_worksheet_chart_legend**
-> LegendResponse cells_charts_get_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder)
+> LegendResponse cells_charts_get_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder, storage=storage)
 
 Get chart legend
 
@@ -299,10 +309,11 @@ name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get chart legend
-    api_response = api_instance.cells_charts_get_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder)
+    api_response = api_instance.cells_charts_get_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_get_worksheet_chart_legend: %s\n" % e)
@@ -316,6 +327,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **chart_index** | **int**| The chart index. | 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -333,7 +345,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_get_worksheet_chart_title**
-> TitleResponse cells_charts_get_worksheet_chart_title(name, sheet_name, chart_index, folder=folder)
+> TitleResponse cells_charts_get_worksheet_chart_title(name, sheet_name, chart_index, folder=folder, storage=storage)
 
 Get chart title
 
@@ -351,10 +363,11 @@ name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get chart title
-    api_response = api_instance.cells_charts_get_worksheet_chart_title(name, sheet_name, chart_index, folder=folder)
+    api_response = api_instance.cells_charts_get_worksheet_chart_title(name, sheet_name, chart_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_get_worksheet_chart_title: %s\n" % e)
@@ -368,6 +381,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **chart_index** | **int**| The chart index. | 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -385,7 +399,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_get_worksheet_charts**
-> ChartsResponse cells_charts_get_worksheet_charts(name, sheet_name, folder=folder)
+> ChartsResponse cells_charts_get_worksheet_charts(name, sheet_name, folder=folder, storage=storage)
 
 Get worksheet charts info.
 
@@ -402,10 +416,11 @@ api_instance = asposecellscloud.CellsChartsApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get worksheet charts info.
-    api_response = api_instance.cells_charts_get_worksheet_charts(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_charts_get_worksheet_charts(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_get_worksheet_charts: %s\n" % e)
@@ -418,6 +433,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| The worksheet name. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -435,7 +451,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_post_worksheet_chart**
-> SaaSposeResponse cells_charts_post_worksheet_chart(name, sheet_name, chart_index, chart=chart, folder=folder)
+> SaaSposeResponse cells_charts_post_worksheet_chart(name, sheet_name, chart_index, chart=chart, folder=folder, storage=storage)
 
 Update chart propreties
 
@@ -454,10 +470,11 @@ sheet_name = 'sheet_name_example' # str |
 chart_index = 56 # int | 
 chart = asposecellscloud.Chart() # Chart |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Update chart propreties
-    api_response = api_instance.cells_charts_post_worksheet_chart(name, sheet_name, chart_index, chart=chart, folder=folder)
+    api_response = api_instance.cells_charts_post_worksheet_chart(name, sheet_name, chart_index, chart=chart, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_post_worksheet_chart: %s\n" % e)
@@ -472,6 +489,7 @@ Name | Type | Description  | Notes
  **chart_index** | **int**|  | 
  **chart** | [**Chart**](Chart.md)|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -489,7 +507,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_post_worksheet_chart_legend**
-> LegendResponse cells_charts_post_worksheet_chart_legend(name, sheet_name, chart_index, legend=legend, folder=folder)
+> LegendResponse cells_charts_post_worksheet_chart_legend(name, sheet_name, chart_index, legend=legend, folder=folder, storage=storage)
 
 Update chart legend
 
@@ -508,10 +526,11 @@ sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 legend = asposecellscloud.Legend() # Legend |  (optional)
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Update chart legend
-    api_response = api_instance.cells_charts_post_worksheet_chart_legend(name, sheet_name, chart_index, legend=legend, folder=folder)
+    api_response = api_instance.cells_charts_post_worksheet_chart_legend(name, sheet_name, chart_index, legend=legend, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_post_worksheet_chart_legend: %s\n" % e)
@@ -526,6 +545,7 @@ Name | Type | Description  | Notes
  **chart_index** | **int**| The chart index. | 
  **legend** | [**Legend**](Legend.md)|  | [optional] 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -543,7 +563,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_post_worksheet_chart_title**
-> TitleResponse cells_charts_post_worksheet_chart_title(name, sheet_name, chart_index, title=title, folder=folder)
+> TitleResponse cells_charts_post_worksheet_chart_title(name, sheet_name, chart_index, title=title, folder=folder, storage=storage)
 
 Update chart title
 
@@ -562,10 +582,11 @@ sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 title = asposecellscloud.Title() # Title | Chart title (optional)
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Update chart title
-    api_response = api_instance.cells_charts_post_worksheet_chart_title(name, sheet_name, chart_index, title=title, folder=folder)
+    api_response = api_instance.cells_charts_post_worksheet_chart_title(name, sheet_name, chart_index, title=title, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_post_worksheet_chart_title: %s\n" % e)
@@ -580,6 +601,7 @@ Name | Type | Description  | Notes
  **chart_index** | **int**| The chart index. | 
  **title** | [**Title**](Title.md)| Chart title | [optional] 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -597,7 +619,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_put_worksheet_add_chart**
-> ChartsResponse cells_charts_put_worksheet_add_chart(name, sheet_name, chart_type, upper_left_row=upper_left_row, upper_left_column=upper_left_column, lower_right_row=lower_right_row, lower_right_column=lower_right_column, area=area, is_vertical=is_vertical, category_data=category_data, is_auto_get_serial_name=is_auto_get_serial_name, title=title, folder=folder)
+> ChartsResponse cells_charts_put_worksheet_add_chart(name, sheet_name, chart_type, upper_left_row=upper_left_row, upper_left_column=upper_left_column, lower_right_row=lower_right_row, lower_right_column=lower_right_column, area=area, is_vertical=is_vertical, category_data=category_data, is_auto_get_serial_name=is_auto_get_serial_name, title=title, folder=folder, storage=storage)
 
 Add new chart to worksheet.
 
@@ -624,10 +646,11 @@ category_data = 'category_data_example' # str | Gets or sets the range of catego
 is_auto_get_serial_name = true # bool | Specifies whether auto update serial name.  (optional) (default to true)
 title = 'title_example' # str | Specifies chart title name. (optional)
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Add new chart to worksheet.
-    api_response = api_instance.cells_charts_put_worksheet_add_chart(name, sheet_name, chart_type, upper_left_row=upper_left_row, upper_left_column=upper_left_column, lower_right_row=lower_right_row, lower_right_column=lower_right_column, area=area, is_vertical=is_vertical, category_data=category_data, is_auto_get_serial_name=is_auto_get_serial_name, title=title, folder=folder)
+    api_response = api_instance.cells_charts_put_worksheet_add_chart(name, sheet_name, chart_type, upper_left_row=upper_left_row, upper_left_column=upper_left_column, lower_right_row=lower_right_row, lower_right_column=lower_right_column, area=area, is_vertical=is_vertical, category_data=category_data, is_auto_get_serial_name=is_auto_get_serial_name, title=title, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_put_worksheet_add_chart: %s\n" % e)
@@ -650,6 +673,7 @@ Name | Type | Description  | Notes
  **is_auto_get_serial_name** | **bool**| Specifies whether auto update serial name.  | [optional] [default to true]
  **title** | **str**| Specifies chart title name. | [optional] 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -667,7 +691,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_put_worksheet_chart_legend**
-> SaaSposeResponse cells_charts_put_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder)
+> SaaSposeResponse cells_charts_put_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder, storage=storage)
 
 Show legend in chart
 
@@ -685,10 +709,11 @@ name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Show legend in chart
-    api_response = api_instance.cells_charts_put_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder)
+    api_response = api_instance.cells_charts_put_worksheet_chart_legend(name, sheet_name, chart_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_put_worksheet_chart_legend: %s\n" % e)
@@ -702,6 +727,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **chart_index** | **int**| The chart index. | 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -719,7 +745,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_charts_put_worksheet_chart_title**
-> TitleResponse cells_charts_put_worksheet_chart_title(name, sheet_name, chart_index, title=title, folder=folder)
+> TitleResponse cells_charts_put_worksheet_chart_title(name, sheet_name, chart_index, title=title, folder=folder, storage=storage)
 
 Add chart title / Set chart title visible
 
@@ -738,10 +764,11 @@ sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 title = asposecellscloud.Title() # Title | Chart title. (optional)
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Add chart title / Set chart title visible
-    api_response = api_instance.cells_charts_put_worksheet_chart_title(name, sheet_name, chart_index, title=title, folder=folder)
+    api_response = api_instance.cells_charts_put_worksheet_chart_title(name, sheet_name, chart_index, title=title, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartsApi->cells_charts_put_worksheet_chart_title: %s\n" % e)
@@ -756,6 +783,7 @@ Name | Type | Description  | Notes
  **chart_index** | **int**| The chart index. | 
  **title** | [**Title**](Title.md)| Chart title. | [optional] 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 

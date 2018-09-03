@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **cells_pictures_delete_worksheet_picture**
-> SaaSposeResponse cells_pictures_delete_worksheet_picture(name, sheet_name, picture_index, folder=folder)
+> SaaSposeResponse cells_pictures_delete_worksheet_picture(name, sheet_name, picture_index, folder=folder, storage=storage)
 
 Delete a picture object in worksheet
 
@@ -31,10 +31,11 @@ name = 'name_example' # str | The workbook name.
 sheet_name = 'sheet_name_example' # str | The worsheet name.
 picture_index = 56 # int | Picture index
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete a picture object in worksheet
-    api_response = api_instance.cells_pictures_delete_worksheet_picture(name, sheet_name, picture_index, folder=folder)
+    api_response = api_instance.cells_pictures_delete_worksheet_picture(name, sheet_name, picture_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPicturesApi->cells_pictures_delete_worksheet_picture: %s\n" % e)
@@ -48,6 +49,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worsheet name. | 
  **picture_index** | **int**| Picture index | 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -65,7 +67,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pictures_delete_worksheet_pictures**
-> SaaSposeResponse cells_pictures_delete_worksheet_pictures(name, sheet_name, folder=folder)
+> SaaSposeResponse cells_pictures_delete_worksheet_pictures(name, sheet_name, folder=folder, storage=storage)
 
 Delete all pictures in worksheet.
 
@@ -82,10 +84,11 @@ api_instance = asposecellscloud.CellsPicturesApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete all pictures in worksheet.
-    api_response = api_instance.cells_pictures_delete_worksheet_pictures(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_pictures_delete_worksheet_pictures(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPicturesApi->cells_pictures_delete_worksheet_pictures: %s\n" % e)
@@ -98,6 +101,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| Worksheet name. | 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -115,7 +119,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pictures_get_worksheet_picture**
-> file cells_pictures_get_worksheet_picture(name, sheet_name, picture_number, folder=folder)
+> file cells_pictures_get_worksheet_picture(name, sheet_name, picture_number, folder=folder, storage=storage)
 
 GRead worksheet picture by number.
 
@@ -133,10 +137,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 picture_number = 56 # int | The picture number.
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # GRead worksheet picture by number.
-    api_response = api_instance.cells_pictures_get_worksheet_picture(name, sheet_name, picture_number, folder=folder)
+    api_response = api_instance.cells_pictures_get_worksheet_picture(name, sheet_name, picture_number, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPicturesApi->cells_pictures_get_worksheet_picture: %s\n" % e)
@@ -150,6 +155,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **picture_number** | **int**| The picture number. | 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -167,7 +173,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pictures_get_worksheet_pictures**
-> PicturesResponse cells_pictures_get_worksheet_pictures(name, sheet_name, folder=folder)
+> PicturesResponse cells_pictures_get_worksheet_pictures(name, sheet_name, folder=folder, storage=storage)
 
 Read worksheet pictures.
 
@@ -184,10 +190,11 @@ api_instance = asposecellscloud.CellsPicturesApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Read worksheet pictures.
-    api_response = api_instance.cells_pictures_get_worksheet_pictures(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_pictures_get_worksheet_pictures(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPicturesApi->cells_pictures_get_worksheet_pictures: %s\n" % e)
@@ -200,6 +207,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| The worksheet name. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -217,7 +225,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pictures_post_worksheet_picture**
-> PictureResponse cells_pictures_post_worksheet_picture(name, sheet_name, picture_index, picture=picture, folder=folder)
+> PictureResponse cells_pictures_post_worksheet_picture(name, sheet_name, picture_index, picture=picture, folder=folder, storage=storage)
 
 Update worksheet picture by index.
 
@@ -236,10 +244,11 @@ sheet_name = 'sheet_name_example' # str | Worksheet name.
 picture_index = 56 # int | The picture's index.
 picture = asposecellscloud.Picture() # Picture | Picture object (optional)
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Update worksheet picture by index.
-    api_response = api_instance.cells_pictures_post_worksheet_picture(name, sheet_name, picture_index, picture=picture, folder=folder)
+    api_response = api_instance.cells_pictures_post_worksheet_picture(name, sheet_name, picture_index, picture=picture, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPicturesApi->cells_pictures_post_worksheet_picture: %s\n" % e)
@@ -254,6 +263,7 @@ Name | Type | Description  | Notes
  **picture_index** | **int**| The picture&#39;s index. | 
  **picture** | [**Picture**](Picture.md)| Picture object | [optional] 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -271,7 +281,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pictures_put_worksheet_add_picture**
-> PicturesResponse cells_pictures_put_worksheet_add_picture(name, sheet_name, picture=picture, upper_left_row=upper_left_row, upper_left_column=upper_left_column, lower_right_row=lower_right_row, lower_right_column=lower_right_column, picture_path=picture_path, folder=folder)
+> PicturesResponse cells_pictures_put_worksheet_add_picture(name, sheet_name, picture=picture, upper_left_row=upper_left_row, upper_left_column=upper_left_column, lower_right_row=lower_right_row, lower_right_column=lower_right_column, picture_path=picture_path, folder=folder, storage=storage)
 
 Add a new worksheet picture.
 
@@ -294,10 +304,11 @@ lower_right_row = 0 # int | The image low right row. (optional) (default to 0)
 lower_right_column = 0 # int | The image low right column. (optional) (default to 0)
 picture_path = 'picture_path_example' # str | The picture path, if not provided the picture data is inspected in the request body. (optional)
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Add a new worksheet picture.
-    api_response = api_instance.cells_pictures_put_worksheet_add_picture(name, sheet_name, picture=picture, upper_left_row=upper_left_row, upper_left_column=upper_left_column, lower_right_row=lower_right_row, lower_right_column=lower_right_column, picture_path=picture_path, folder=folder)
+    api_response = api_instance.cells_pictures_put_worksheet_add_picture(name, sheet_name, picture=picture, upper_left_row=upper_left_row, upper_left_column=upper_left_column, lower_right_row=lower_right_row, lower_right_column=lower_right_column, picture_path=picture_path, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPicturesApi->cells_pictures_put_worksheet_add_picture: %s\n" % e)
@@ -316,6 +327,7 @@ Name | Type | Description  | Notes
  **lower_right_column** | **int**| The image low right column. | [optional] [default to 0]
  **picture_path** | **str**| The picture path, if not provided the picture data is inspected in the request body. | [optional] 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 

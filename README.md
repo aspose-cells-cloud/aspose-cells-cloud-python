@@ -2,7 +2,7 @@
 
 Aspose.Cells Cloud SDK for Python allows you to use Aspose.Cells APIs in your Python applications
 
-- Package version: 18.4
+- Package version: 18.9
 - Build package: io.swagger.codegen.languages.PythonClientCodegen
 
 ## Requirements.
@@ -54,10 +54,11 @@ column_index = 56 # int | The column index.
 columns = 56 # int | The columns.
 update_reference = true # bool | The update reference.
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try:
     # Delete worksheet columns.
-    api_response = api_instance.cells_delete_worksheet_columns(name, sheet_name, column_index, columns, update_reference, folder=folder)
+    api_response = api_instance.cells_delete_worksheet_columns(name, sheet_name, column_index, columns, update_reference, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsApi->cells_delete_worksheet_columns: %s\n" % e)
@@ -353,6 +354,7 @@ Class | Method | HTTP request | Description
  - [PasswordRequest](docs/PasswordRequest.md)
  - [PasteOptions](docs/PasteOptions.md)
  - [PatternFill](docs/PatternFill.md)
+ - [PdfSecurityOptions](docs/PdfSecurityOptions.md)
  - [PicFormatOption](docs/PicFormatOption.md)
  - [PivotField](docs/PivotField.md)
  - [PivotFilter](docs/PivotFilter.md)
@@ -421,6 +423,7 @@ Class | Method | HTTP request | Description
  - [ConditionalFormattings](docs/ConditionalFormattings.md)
  - [ConditionalFormattingsResponse](docs/ConditionalFormattingsResponse.md)
  - [ConvertTaskParameter](docs/ConvertTaskParameter.md)
+ - [DifSaveOptions](docs/DifSaveOptions.md)
  - [FillFormatResponse](docs/FillFormatResponse.md)
  - [FormatCondition](docs/FormatCondition.md)
  - [HorizontalPageBreakResponse](docs/HorizontalPageBreakResponse.md)
@@ -430,6 +433,7 @@ Class | Method | HTTP request | Description
  - [HyperlinkResponse](docs/HyperlinkResponse.md)
  - [Hyperlinks](docs/Hyperlinks.md)
  - [HyperlinksResponse](docs/HyperlinksResponse.md)
+ - [ImageSaveOptions](docs/ImageSaveOptions.md)
  - [ImportBatchDataOption](docs/ImportBatchDataOption.md)
  - [ImportCSVDataOption](docs/ImportCSVDataOption.md)
  - [ImportDataTaskParameter](docs/ImportDataTaskParameter.md)
@@ -452,14 +456,17 @@ Class | Method | HTTP request | Description
  - [NameResponse](docs/NameResponse.md)
  - [Names](docs/Names.md)
  - [NamesResponse](docs/NamesResponse.md)
+ - [OdsSaveOptions](docs/OdsSaveOptions.md)
  - [OleObjectResponse](docs/OleObjectResponse.md)
  - [OleObjects](docs/OleObjects.md)
  - [OleObjectsResponse](docs/OleObjectsResponse.md)
+ - [OoxmlSaveOptions](docs/OoxmlSaveOptions.md)
  - [PageBreakOperateParameter](docs/PageBreakOperateParameter.md)
  - [PageSectionsResponse](docs/PageSectionsResponse.md)
  - [PageSetup](docs/PageSetup.md)
  - [PageSetupOperateParameter](docs/PageSetupOperateParameter.md)
  - [PageSetupResponse](docs/PageSetupResponse.md)
+ - [PdfSaveOptions](docs/PdfSaveOptions.md)
  - [PictureResponse](docs/PictureResponse.md)
  - [Pictures](docs/Pictures.md)
  - [PicturesResponse](docs/PicturesResponse.md)
@@ -489,13 +496,16 @@ Class | Method | HTTP request | Description
  - [SplitResultDocument](docs/SplitResultDocument.md)
  - [SplitResultResponse](docs/SplitResultResponse.md)
  - [SplitWorkbookTaskParameter](docs/SplitWorkbookTaskParameter.md)
+ - [SpreadsheetML2003SaveOptions](docs/SpreadsheetML2003SaveOptions.md)
  - [Style](docs/Style.md)
  - [StyleResponse](docs/StyleResponse.md)
+ - [SvgSaveOptions](docs/SvgSaveOptions.md)
  - [TextItem](docs/TextItem.md)
  - [TextItems](docs/TextItems.md)
  - [TextItemsResponse](docs/TextItemsResponse.md)
  - [TextOptions](docs/TextOptions.md)
  - [TitleResponse](docs/TitleResponse.md)
+ - [TxtSaveOptions](docs/TxtSaveOptions.md)
  - [Validation](docs/Validation.md)
  - [ValidationResponse](docs/ValidationResponse.md)
  - [Validations](docs/Validations.md)
@@ -512,6 +522,9 @@ Class | Method | HTTP request | Description
  - [WorksheetResponse](docs/WorksheetResponse.md)
  - [Worksheets](docs/Worksheets.md)
  - [WorksheetsResponse](docs/WorksheetsResponse.md)
+ - [XlsSaveOptions](docs/XlsSaveOptions.md)
+ - [XlsbSaveOptions](docs/XlsbSaveOptions.md)
+ - [XpsSaveOptions](docs/XpsSaveOptions.md)
  - [ChartArea](docs/ChartArea.md)
  - [Legend](docs/Legend.md)
  - [OleObject](docs/OleObject.md)

@@ -574,12 +574,11 @@ class TestCellsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         cellName = 'C1' 
-        value = '1'
-        type ='Date'
-        formula = '=Now()'
         folder = "Temp"
         AuthUtil.Ready(name, folder)
-        self.api.cells_post_worksheet_cell_set_value(name, sheet_name, cellName, value=value, type=type, formula=formula, folder=folder)
+        self.api.cells_post_worksheet_cell_set_value(name, sheet_name, cellName, value="1", type="String", folder=folder)
+        self.api.cells_post_worksheet_cell_set_value(name, sheet_name, cellName, value="1", type="int", folder=folder)
+        self.api.cells_post_worksheet_cell_set_value(name, sheet_name, cellName, value="2018/10/09", type="DateTime", formula='=Now()', folder=folder)
         pass
 
     def test_cells_post_worksheet_merge(self):

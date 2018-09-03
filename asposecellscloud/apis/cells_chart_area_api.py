@@ -57,6 +57,7 @@ class CellsChartAreaApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: Workbook folder.
+        :param str storage: storage name.
         :return: ChartAreaResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -85,12 +86,13 @@ class CellsChartAreaApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: Workbook folder.
+        :param str storage: storage name.
         :return: ChartAreaResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -129,6 +131,8 @@ class CellsChartAreaApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -179,6 +183,7 @@ class CellsChartAreaApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: Workbook folder.
+        :param str storage: storage name.
         :return: LineResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -207,12 +212,13 @@ class CellsChartAreaApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: Workbook folder.
+        :param str storage: storage name.
         :return: LineResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -251,6 +257,8 @@ class CellsChartAreaApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -301,6 +309,7 @@ class CellsChartAreaApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: Workbook folder.
+        :param str storage: storage name.
         :return: FillFormatResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -329,12 +338,13 @@ class CellsChartAreaApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int chart_index: The chart index. (required)
         :param str folder: Workbook folder.
+        :param str storage: storage name.
         :return: FillFormatResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_index', 'folder']
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -373,6 +383,8 @@ class CellsChartAreaApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

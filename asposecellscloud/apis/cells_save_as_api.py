@@ -59,6 +59,7 @@ class CellsSaveAsApi(object):
         :param bool is_auto_fit_rows: Autofit rows.
         :param bool is_auto_fit_columns: Autofit columns.
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: SaveResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -89,12 +90,13 @@ class CellsSaveAsApi(object):
         :param bool is_auto_fit_rows: Autofit rows.
         :param bool is_auto_fit_columns: Autofit columns.
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: SaveResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'save_options', 'newfilename', 'is_auto_fit_rows', 'is_auto_fit_columns', 'folder']
+        all_params = ['name', 'save_options', 'newfilename', 'is_auto_fit_rows', 'is_auto_fit_columns', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -129,6 +131,8 @@ class CellsSaveAsApi(object):
             query_params.append(('isAutoFitColumns', params['is_auto_fit_columns']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

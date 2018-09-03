@@ -32,7 +32,7 @@ def GetApiClient():
     return api_client
 
 
-def Ready(filename, folder):
+def Ready(filename, folder, storage=None):
     storage_apiClient = asposestoragecloud.ApiClient(clientSecret, clientId)
     storageApi = asposestoragecloud.StorageApi(storage_apiClient)
   
@@ -40,7 +40,11 @@ def Ready(filename, folder):
     fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + filename
     with open(fullfilename, 'rb') as file_object:
         contents = file_object.read()
-        response = storageApi.put_create(path, contents)
+        response = None
+        if storage == None:
+            response = storageApi.put_create(path, contents)
+        else:    
+            response = storageApi.put_create(path, contents, storage=storage)
         if response['Status'] == "OK":
             return True
 

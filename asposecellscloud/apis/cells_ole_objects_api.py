@@ -57,6 +57,7 @@ class CellsOleObjectsApi(object):
         :param str sheet_name: The worsheet name. (required)
         :param int ole_object_index: Ole object index (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -85,12 +86,13 @@ class CellsOleObjectsApi(object):
         :param str sheet_name: The worsheet name. (required)
         :param int ole_object_index: Ole object index (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'ole_object_index', 'folder']
+        all_params = ['name', 'sheet_name', 'ole_object_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -129,6 +131,8 @@ class CellsOleObjectsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -178,6 +182,7 @@ class CellsOleObjectsApi(object):
         :param str name: The workbook name. (required)
         :param str sheet_name: The worsheet name. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -205,12 +210,13 @@ class CellsOleObjectsApi(object):
         :param str name: The workbook name. (required)
         :param str sheet_name: The worsheet name. (required)
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -244,6 +250,8 @@ class CellsOleObjectsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -294,6 +302,7 @@ class CellsOleObjectsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int object_number: The object number. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
@@ -322,12 +331,13 @@ class CellsOleObjectsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int object_number: The object number. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'object_number', 'folder']
+        all_params = ['name', 'sheet_name', 'object_number', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -366,6 +376,8 @@ class CellsOleObjectsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -415,6 +427,7 @@ class CellsOleObjectsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: OleObjectsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -442,12 +455,13 @@ class CellsOleObjectsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: OleObjectsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -481,6 +495,8 @@ class CellsOleObjectsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -532,6 +548,7 @@ class CellsOleObjectsApi(object):
         :param int ole_object_index: Ole object index (required)
         :param OleObject ole: Ole Object
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -561,12 +578,13 @@ class CellsOleObjectsApi(object):
         :param int ole_object_index: Ole object index (required)
         :param OleObject ole: Ole Object
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'ole_object_index', 'ole', 'folder']
+        all_params = ['name', 'sheet_name', 'ole_object_index', 'ole', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -605,6 +623,8 @@ class CellsOleObjectsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -663,6 +683,7 @@ class CellsOleObjectsApi(object):
         :param str ole_file: OLE filename
         :param str image_file: Image filename
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: OleObjectResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -697,12 +718,13 @@ class CellsOleObjectsApi(object):
         :param str ole_file: OLE filename
         :param str image_file: Image filename
         :param str folder: The workbook folder.
+        :param str storage: storage name.
         :return: OleObjectResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'ole_object', 'upper_left_row', 'upper_left_column', 'height', 'width', 'ole_file', 'image_file', 'folder']
+        all_params = ['name', 'sheet_name', 'ole_object', 'upper_left_row', 'upper_left_column', 'height', 'width', 'ole_file', 'image_file', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -748,6 +770,8 @@ class CellsOleObjectsApi(object):
             query_params.append(('imageFile', params['image_file']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

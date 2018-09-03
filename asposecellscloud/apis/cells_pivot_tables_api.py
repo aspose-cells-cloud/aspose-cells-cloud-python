@@ -59,6 +59,7 @@ class CellsPivotTablesApi(object):
         :param str pivot_field_type: The fields area type. (required)
         :param PivotTableFieldRequest request: Dto that conrains field indexes
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -89,12 +90,13 @@ class CellsPivotTablesApi(object):
         :param str pivot_field_type: The fields area type. (required)
         :param PivotTableFieldRequest request: Dto that conrains field indexes
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'pivot_field_type', 'request', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'pivot_field_type', 'request', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -138,6 +140,8 @@ class CellsPivotTablesApi(object):
             query_params.append(('pivotFieldType', params['pivot_field_type']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -190,6 +194,7 @@ class CellsPivotTablesApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param int pivot_table_index: Pivot table index (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -218,12 +223,13 @@ class CellsPivotTablesApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param int pivot_table_index: Pivot table index (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -262,6 +268,8 @@ class CellsPivotTablesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -314,6 +322,7 @@ class CellsPivotTablesApi(object):
         :param int field_index: (required)
         :param bool need_re_calculate:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -344,12 +353,13 @@ class CellsPivotTablesApi(object):
         :param int field_index: (required)
         :param bool need_re_calculate:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'field_index', 'need_re_calculate', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'field_index', 'need_re_calculate', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -395,6 +405,8 @@ class CellsPivotTablesApi(object):
             query_params.append(('needReCalculate', params['need_re_calculate']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -446,6 +458,7 @@ class CellsPivotTablesApi(object):
         :param int pivot_table_index: (required)
         :param bool need_re_calculate:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -475,12 +488,13 @@ class CellsPivotTablesApi(object):
         :param int pivot_table_index: (required)
         :param bool need_re_calculate:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'need_re_calculate', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'need_re_calculate', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -521,6 +535,8 @@ class CellsPivotTablesApi(object):
             query_params.append(('needReCalculate', params['need_re_calculate']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -570,6 +586,7 @@ class CellsPivotTablesApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -597,12 +614,13 @@ class CellsPivotTablesApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -636,6 +654,8 @@ class CellsPivotTablesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -688,6 +708,7 @@ class CellsPivotTablesApi(object):
         :param int pivot_field_index: The field index in the base fields. (required)
         :param str pivot_field_type: The fields area type. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: PivotFieldResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -718,12 +739,13 @@ class CellsPivotTablesApi(object):
         :param int pivot_field_index: The field index in the base fields. (required)
         :param str pivot_field_type: The fields area type. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: PivotFieldResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'pivot_field_index', 'pivot_field_type', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'pivot_field_index', 'pivot_field_type', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -772,6 +794,8 @@ class CellsPivotTablesApi(object):
             query_params.append(('pivotFieldType', params['pivot_field_type']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -822,6 +846,7 @@ class CellsPivotTablesApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param int pivottable_index: (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: PivotTableResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -850,12 +875,13 @@ class CellsPivotTablesApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param int pivottable_index: (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: PivotTableResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivottable_index', 'folder']
+        all_params = ['name', 'sheet_name', 'pivottable_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -894,6 +920,8 @@ class CellsPivotTablesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -944,6 +972,7 @@ class CellsPivotTablesApi(object):
         :param int pivot_table_index: (required)
         :param int filter_index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: PivotFilterResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -972,12 +1001,13 @@ class CellsPivotTablesApi(object):
         :param int pivot_table_index: (required)
         :param int filter_index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: PivotFilterResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'filter_index', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'filter_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1021,6 +1051,8 @@ class CellsPivotTablesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1070,6 +1102,7 @@ class CellsPivotTablesApi(object):
         :param str sheet_name: (required)
         :param int pivot_table_index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: PivotFiltersResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1097,12 +1130,13 @@ class CellsPivotTablesApi(object):
         :param str sheet_name: (required)
         :param int pivot_table_index: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: PivotFiltersResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1141,6 +1175,8 @@ class CellsPivotTablesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1190,6 +1226,7 @@ class CellsPivotTablesApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: PivotTablesResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1217,12 +1254,13 @@ class CellsPivotTablesApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: PivotTablesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1256,6 +1294,8 @@ class CellsPivotTablesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1310,6 +1350,7 @@ class CellsPivotTablesApi(object):
         :param Style style: Style dto in request body.
         :param bool need_re_calculate:
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1342,12 +1383,13 @@ class CellsPivotTablesApi(object):
         :param Style style: Style dto in request body.
         :param bool need_re_calculate:
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'column', 'row', 'style', 'need_re_calculate', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'column', 'row', 'style', 'need_re_calculate', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1398,6 +1440,8 @@ class CellsPivotTablesApi(object):
             query_params.append(('needReCalculate', params['need_re_calculate']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1454,6 +1498,7 @@ class CellsPivotTablesApi(object):
         :param bool is_hide: (required)
         :param bool need_re_calculate:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1486,12 +1531,13 @@ class CellsPivotTablesApi(object):
         :param bool is_hide: (required)
         :param bool need_re_calculate:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'pivot_field_type', 'field_index', 'item_index', 'is_hide', 'need_re_calculate', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'pivot_field_type', 'field_index', 'item_index', 'is_hide', 'need_re_calculate', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1552,6 +1598,8 @@ class CellsPivotTablesApi(object):
             query_params.append(('needReCalculate', params['need_re_calculate']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1604,6 +1652,7 @@ class CellsPivotTablesApi(object):
         :param str _from: (required)
         :param str to: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1634,12 +1683,13 @@ class CellsPivotTablesApi(object):
         :param str _from: (required)
         :param str to: (required)
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'field_index', '_from', 'to', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'field_index', '_from', 'to', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1693,6 +1743,8 @@ class CellsPivotTablesApi(object):
             query_params.append(('to', params['to']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1745,6 +1797,7 @@ class CellsPivotTablesApi(object):
         :param Style style: Style dto in request body.
         :param bool need_re_calculate:
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1775,12 +1828,13 @@ class CellsPivotTablesApi(object):
         :param Style style: Style dto in request body.
         :param bool need_re_calculate:
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'style', 'need_re_calculate', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'style', 'need_re_calculate', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1821,6 +1875,8 @@ class CellsPivotTablesApi(object):
             query_params.append(('needReCalculate', params['need_re_calculate']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1873,6 +1929,7 @@ class CellsPivotTablesApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param int pivot_table_index: Pivot table index (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1901,12 +1958,13 @@ class CellsPivotTablesApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param int pivot_table_index: Pivot table index (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1945,6 +2003,8 @@ class CellsPivotTablesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -1997,6 +2057,7 @@ class CellsPivotTablesApi(object):
         :param int column:
         :param str dest_cell_name:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2027,12 +2088,13 @@ class CellsPivotTablesApi(object):
         :param int column:
         :param str dest_cell_name:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'row', 'column', 'dest_cell_name', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'row', 'column', 'dest_cell_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2077,6 +2139,8 @@ class CellsPivotTablesApi(object):
             query_params.append(('destCellName', params['dest_cell_name']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -2130,6 +2194,7 @@ class CellsPivotTablesApi(object):
         :param PivotTableFieldRequest request: Dto that conrains field indexes
         :param bool need_re_calculate:
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2161,12 +2226,13 @@ class CellsPivotTablesApi(object):
         :param PivotTableFieldRequest request: Dto that conrains field indexes
         :param bool need_re_calculate:
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'pivot_field_type', 'request', 'need_re_calculate', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'pivot_field_type', 'request', 'need_re_calculate', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2212,6 +2278,8 @@ class CellsPivotTablesApi(object):
             query_params.append(('needReCalculate', params['need_re_calculate']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -2264,6 +2332,7 @@ class CellsPivotTablesApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param CreatePivotTableRequest request: CreatePivotTableRequest dto in request body.
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :param str source_data: The data for the new PivotTable cache.
         :param str dest_cell_name: The cell in the upper-left corner of the PivotTable report's destination range.
         :param str table_name: The name of the new PivotTable report.
@@ -2296,6 +2365,7 @@ class CellsPivotTablesApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param CreatePivotTableRequest request: CreatePivotTableRequest dto in request body.
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :param str source_data: The data for the new PivotTable cache.
         :param str dest_cell_name: The cell in the upper-left corner of the PivotTable report's destination range.
         :param str table_name: The name of the new PivotTable report.
@@ -2305,7 +2375,7 @@ class CellsPivotTablesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'request', 'folder', 'source_data', 'dest_cell_name', 'table_name', 'use_same_source']
+        all_params = ['name', 'sheet_name', 'request', 'folder', 'storage', 'source_data', 'dest_cell_name', 'table_name', 'use_same_source']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2339,6 +2409,8 @@ class CellsPivotTablesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
         if 'source_data' in params:
             query_params.append(('sourceData', params['source_data']))
         if 'dest_cell_name' in params:
@@ -2401,6 +2473,7 @@ class CellsPivotTablesApi(object):
         :param PivotFilter filter:
         :param bool need_re_calculate:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2431,12 +2504,13 @@ class CellsPivotTablesApi(object):
         :param PivotFilter filter:
         :param bool need_re_calculate:
         :param str folder:
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'pivot_table_index', 'filter', 'need_re_calculate', 'folder']
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'filter', 'need_re_calculate', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2477,6 +2551,8 @@ class CellsPivotTablesApi(object):
             query_params.append(('needReCalculate', params['need_re_calculate']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **cells_ole_objects_delete_worksheet_ole_object**
-> SaaSposeResponse cells_ole_objects_delete_worksheet_ole_object(name, sheet_name, ole_object_index, folder=folder)
+> SaaSposeResponse cells_ole_objects_delete_worksheet_ole_object(name, sheet_name, ole_object_index, folder=folder, storage=storage)
 
 Delete OLE object.
 
@@ -31,10 +31,11 @@ name = 'name_example' # str | The workbook name.
 sheet_name = 'sheet_name_example' # str | The worsheet name.
 ole_object_index = 56 # int | Ole object index
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete OLE object.
-    api_response = api_instance.cells_ole_objects_delete_worksheet_ole_object(name, sheet_name, ole_object_index, folder=folder)
+    api_response = api_instance.cells_ole_objects_delete_worksheet_ole_object(name, sheet_name, ole_object_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsOleObjectsApi->cells_ole_objects_delete_worksheet_ole_object: %s\n" % e)
@@ -48,6 +49,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worsheet name. | 
  **ole_object_index** | **int**| Ole object index | 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -65,7 +67,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_ole_objects_delete_worksheet_ole_objects**
-> SaaSposeResponse cells_ole_objects_delete_worksheet_ole_objects(name, sheet_name, folder=folder)
+> SaaSposeResponse cells_ole_objects_delete_worksheet_ole_objects(name, sheet_name, folder=folder, storage=storage)
 
 Delete all OLE objects.
 
@@ -82,10 +84,11 @@ api_instance = asposecellscloud.CellsOleObjectsApi()
 name = 'name_example' # str | The workbook name.
 sheet_name = 'sheet_name_example' # str | The worsheet name.
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete all OLE objects.
-    api_response = api_instance.cells_ole_objects_delete_worksheet_ole_objects(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_ole_objects_delete_worksheet_ole_objects(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsOleObjectsApi->cells_ole_objects_delete_worksheet_ole_objects: %s\n" % e)
@@ -98,6 +101,7 @@ Name | Type | Description  | Notes
  **name** | **str**| The workbook name. | 
  **sheet_name** | **str**| The worsheet name. | 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -115,7 +119,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_ole_objects_get_worksheet_ole_object**
-> file cells_ole_objects_get_worksheet_ole_object(name, sheet_name, object_number, folder=folder)
+> file cells_ole_objects_get_worksheet_ole_object(name, sheet_name, object_number, folder=folder, storage=storage)
 
 Get OLE object info.
 
@@ -133,10 +137,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 object_number = 56 # int | The object number.
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get OLE object info.
-    api_response = api_instance.cells_ole_objects_get_worksheet_ole_object(name, sheet_name, object_number, folder=folder)
+    api_response = api_instance.cells_ole_objects_get_worksheet_ole_object(name, sheet_name, object_number, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsOleObjectsApi->cells_ole_objects_get_worksheet_ole_object: %s\n" % e)
@@ -150,6 +155,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **object_number** | **int**| The object number. | 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -167,7 +173,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_ole_objects_get_worksheet_ole_objects**
-> OleObjectsResponse cells_ole_objects_get_worksheet_ole_objects(name, sheet_name, folder=folder)
+> OleObjectsResponse cells_ole_objects_get_worksheet_ole_objects(name, sheet_name, folder=folder, storage=storage)
 
 Get worksheet OLE objects info.
 
@@ -184,10 +190,11 @@ api_instance = asposecellscloud.CellsOleObjectsApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get worksheet OLE objects info.
-    api_response = api_instance.cells_ole_objects_get_worksheet_ole_objects(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_ole_objects_get_worksheet_ole_objects(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsOleObjectsApi->cells_ole_objects_get_worksheet_ole_objects: %s\n" % e)
@@ -200,6 +207,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| The worksheet name. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -217,7 +225,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_ole_objects_post_update_worksheet_ole_object**
-> SaaSposeResponse cells_ole_objects_post_update_worksheet_ole_object(name, sheet_name, ole_object_index, ole=ole, folder=folder)
+> SaaSposeResponse cells_ole_objects_post_update_worksheet_ole_object(name, sheet_name, ole_object_index, ole=ole, folder=folder, storage=storage)
 
 Update OLE object.
 
@@ -236,10 +244,11 @@ sheet_name = 'sheet_name_example' # str | The worsheet name.
 ole_object_index = 56 # int | Ole object index
 ole = asposecellscloud.OleObject() # OleObject | Ole Object (optional)
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Update OLE object.
-    api_response = api_instance.cells_ole_objects_post_update_worksheet_ole_object(name, sheet_name, ole_object_index, ole=ole, folder=folder)
+    api_response = api_instance.cells_ole_objects_post_update_worksheet_ole_object(name, sheet_name, ole_object_index, ole=ole, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsOleObjectsApi->cells_ole_objects_post_update_worksheet_ole_object: %s\n" % e)
@@ -254,6 +263,7 @@ Name | Type | Description  | Notes
  **ole_object_index** | **int**| Ole object index | 
  **ole** | [**OleObject**](OleObject.md)| Ole Object | [optional] 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -271,7 +281,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_ole_objects_put_worksheet_ole_object**
-> OleObjectResponse cells_ole_objects_put_worksheet_ole_object(name, sheet_name, ole_object=ole_object, upper_left_row=upper_left_row, upper_left_column=upper_left_column, height=height, width=width, ole_file=ole_file, image_file=image_file, folder=folder)
+> OleObjectResponse cells_ole_objects_put_worksheet_ole_object(name, sheet_name, ole_object=ole_object, upper_left_row=upper_left_row, upper_left_column=upper_left_column, height=height, width=width, ole_file=ole_file, image_file=image_file, folder=folder, storage=storage)
 
 Add OLE object
 
@@ -295,10 +305,11 @@ width = 0 # int | Width of oleObject, in unit of pixel (optional) (default to 0)
 ole_file = 'ole_file_example' # str | OLE filename (optional)
 image_file = 'image_file_example' # str | Image filename (optional)
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Add OLE object
-    api_response = api_instance.cells_ole_objects_put_worksheet_ole_object(name, sheet_name, ole_object=ole_object, upper_left_row=upper_left_row, upper_left_column=upper_left_column, height=height, width=width, ole_file=ole_file, image_file=image_file, folder=folder)
+    api_response = api_instance.cells_ole_objects_put_worksheet_ole_object(name, sheet_name, ole_object=ole_object, upper_left_row=upper_left_row, upper_left_column=upper_left_column, height=height, width=width, ole_file=ole_file, image_file=image_file, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsOleObjectsApi->cells_ole_objects_put_worksheet_ole_object: %s\n" % e)
@@ -318,6 +329,7 @@ Name | Type | Description  | Notes
  **ole_file** | **str**| OLE filename | [optional] 
  **image_file** | **str**| Image filename | [optional] 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 

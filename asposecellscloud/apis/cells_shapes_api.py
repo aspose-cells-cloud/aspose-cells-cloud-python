@@ -57,6 +57,7 @@ class CellsShapesApi(object):
         :param str sheet_name: worksheet name. (required)
         :param int shapeindex: shape index in worksheet shapes. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -85,12 +86,13 @@ class CellsShapesApi(object):
         :param str sheet_name: worksheet name. (required)
         :param int shapeindex: shape index in worksheet shapes. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'shapeindex', 'folder']
+        all_params = ['name', 'sheet_name', 'shapeindex', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -129,6 +131,8 @@ class CellsShapesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -178,6 +182,7 @@ class CellsShapesApi(object):
         :param str name: document name. (required)
         :param str sheet_name: worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -205,12 +210,13 @@ class CellsShapesApi(object):
         :param str name: document name. (required)
         :param str sheet_name: worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -244,6 +250,8 @@ class CellsShapesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -294,6 +302,7 @@ class CellsShapesApi(object):
         :param str sheet_name: worksheet name. (required)
         :param int shapeindex: shape index in worksheet shapes. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ShapeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -322,12 +331,13 @@ class CellsShapesApi(object):
         :param str sheet_name: worksheet name. (required)
         :param int shapeindex: shape index in worksheet shapes. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ShapeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'shapeindex', 'folder']
+        all_params = ['name', 'sheet_name', 'shapeindex', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -366,6 +376,8 @@ class CellsShapesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -415,6 +427,7 @@ class CellsShapesApi(object):
         :param str name: document name. (required)
         :param str sheet_name: worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ShapesResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -442,12 +455,13 @@ class CellsShapesApi(object):
         :param str name: document name. (required)
         :param str sheet_name: worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ShapesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -481,6 +495,8 @@ class CellsShapesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -532,6 +548,7 @@ class CellsShapesApi(object):
         :param int shapeindex: shape index in worksheet shapes. (required)
         :param Shape dto:
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -561,12 +578,13 @@ class CellsShapesApi(object):
         :param int shapeindex: shape index in worksheet shapes. (required)
         :param Shape dto:
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'shapeindex', 'dto', 'folder']
+        all_params = ['name', 'sheet_name', 'shapeindex', 'dto', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -605,6 +623,8 @@ class CellsShapesApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -663,6 +683,7 @@ class CellsShapesApi(object):
         :param int width: Represents the height of Spinner, in unit of pixel. (required)
         :param int height: Represents the width of Spinner, in unit of pixel. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ShapeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -697,12 +718,13 @@ class CellsShapesApi(object):
         :param int width: Represents the height of Spinner, in unit of pixel. (required)
         :param int height: Represents the width of Spinner, in unit of pixel. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ShapeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'drawing_type', 'upper_left_row', 'upper_left_column', 'top', 'left', 'width', 'height', 'folder']
+        all_params = ['name', 'sheet_name', 'drawing_type', 'upper_left_row', 'upper_left_column', 'top', 'left', 'width', 'height', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -771,6 +793,8 @@ class CellsShapesApi(object):
             query_params.append(('height', params['height']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

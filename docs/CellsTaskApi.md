@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **cells_task_post_run_task**
-> file cells_task_post_run_task(task_data)
+> object cells_task_post_run_task(task_data)
 
 Run tasks  
 
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**file**](file.md)
+**object**
 
 ### Authorization
 

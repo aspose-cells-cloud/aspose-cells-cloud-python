@@ -40,7 +40,7 @@ Method | HTTP request | Description
 
 
 # **cells_worksheets_delete_unprotect_worksheet**
-> WorksheetResponse cells_worksheets_delete_unprotect_worksheet(name, sheet_name, protect_parameter=protect_parameter, folder=folder)
+> WorksheetResponse cells_worksheets_delete_unprotect_worksheet(name, sheet_name, protect_parameter=protect_parameter, folder=folder, storage=storage)
 
 Unprotect worksheet.
 
@@ -58,10 +58,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 protect_parameter = asposecellscloud.ProtectSheetParameter() # ProtectSheetParameter | with protection settings. Only password is used here. (optional)
 folder = 'folder_example' # str | Document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Unprotect worksheet.
-    api_response = api_instance.cells_worksheets_delete_unprotect_worksheet(name, sheet_name, protect_parameter=protect_parameter, folder=folder)
+    api_response = api_instance.cells_worksheets_delete_unprotect_worksheet(name, sheet_name, protect_parameter=protect_parameter, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_delete_unprotect_worksheet: %s\n" % e)
@@ -75,6 +76,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worksheet name. | 
  **protect_parameter** | [**ProtectSheetParameter**](ProtectSheetParameter.md)| with protection settings. Only password is used here. | [optional] 
  **folder** | **str**| Document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -92,7 +94,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_delete_worksheet**
-> WorksheetsResponse cells_worksheets_delete_worksheet(name, sheet_name, folder=folder)
+> WorksheetsResponse cells_worksheets_delete_worksheet(name, sheet_name, folder=folder, storage=storage)
 
 Delete worksheet.
 
@@ -109,10 +111,11 @@ api_instance = asposecellscloud.CellsWorksheetsApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete worksheet.
-    api_response = api_instance.cells_worksheets_delete_worksheet(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_worksheets_delete_worksheet(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_delete_worksheet: %s\n" % e)
@@ -125,6 +128,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| The worksheet name. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -142,7 +146,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_delete_worksheet_background**
-> SaaSposeResponse cells_worksheets_delete_worksheet_background(name, sheet_name, folder=folder)
+> SaaSposeResponse cells_worksheets_delete_worksheet_background(name, sheet_name, folder=folder, storage=storage)
 
 Set worksheet background image.
 
@@ -159,10 +163,11 @@ api_instance = asposecellscloud.CellsWorksheetsApi()
 name = 'name_example' # str | 
 sheet_name = 'sheet_name_example' # str | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Set worksheet background image.
-    api_response = api_instance.cells_worksheets_delete_worksheet_background(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_worksheets_delete_worksheet_background(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_delete_worksheet_background: %s\n" % e)
@@ -175,6 +180,7 @@ Name | Type | Description  | Notes
  **name** | **str**|  | 
  **sheet_name** | **str**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -192,7 +198,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_delete_worksheet_comment**
-> SaaSposeResponse cells_worksheets_delete_worksheet_comment(name, sheet_name, cell_name, folder=folder)
+> SaaSposeResponse cells_worksheets_delete_worksheet_comment(name, sheet_name, cell_name, folder=folder, storage=storage)
 
 Delete worksheet's cell comment.
 
@@ -210,10 +216,11 @@ name = 'name_example' # str | The document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 cell_name = 'cell_name_example' # str | The cell name
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete worksheet's cell comment.
-    api_response = api_instance.cells_worksheets_delete_worksheet_comment(name, sheet_name, cell_name, folder=folder)
+    api_response = api_instance.cells_worksheets_delete_worksheet_comment(name, sheet_name, cell_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_delete_worksheet_comment: %s\n" % e)
@@ -227,6 +234,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worksheet name. | 
  **cell_name** | **str**| The cell name | 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -244,7 +252,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_delete_worksheet_comments**
-> SaaSposeResponse cells_worksheets_delete_worksheet_comments(name, sheet_name, folder=folder)
+> SaaSposeResponse cells_worksheets_delete_worksheet_comments(name, sheet_name, folder=folder, storage=storage)
 
 Delete all comments for worksheet.
 
@@ -261,10 +269,11 @@ api_instance = asposecellscloud.CellsWorksheetsApi()
 name = 'name_example' # str | 
 sheet_name = 'sheet_name_example' # str | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete all comments for worksheet.
-    api_response = api_instance.cells_worksheets_delete_worksheet_comments(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_worksheets_delete_worksheet_comments(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_delete_worksheet_comments: %s\n" % e)
@@ -277,6 +286,7 @@ Name | Type | Description  | Notes
  **name** | **str**|  | 
  **sheet_name** | **str**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -294,7 +304,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_delete_worksheet_freeze_panes**
-> SaaSposeResponse cells_worksheets_delete_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, folder=folder)
+> SaaSposeResponse cells_worksheets_delete_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, folder=folder, storage=storage)
 
 Unfreeze panes
 
@@ -315,10 +325,11 @@ column = 56 # int |
 freezed_rows = 56 # int | 
 freezed_columns = 56 # int | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Unfreeze panes
-    api_response = api_instance.cells_worksheets_delete_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, folder=folder)
+    api_response = api_instance.cells_worksheets_delete_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_delete_worksheet_freeze_panes: %s\n" % e)
@@ -335,6 +346,7 @@ Name | Type | Description  | Notes
  **freezed_rows** | **int**|  | 
  **freezed_columns** | **int**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -352,7 +364,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_get_named_ranges**
-> RangesResponse cells_worksheets_get_named_ranges(name, folder=folder)
+> RangesResponse cells_worksheets_get_named_ranges(name, folder=folder, storage=storage)
 
 Read worksheets ranges info.
 
@@ -368,10 +380,11 @@ from pprint import pprint
 api_instance = asposecellscloud.CellsWorksheetsApi()
 name = 'name_example' # str | Document name.
 folder = 'folder_example' # str | Document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Read worksheets ranges info.
-    api_response = api_instance.cells_worksheets_get_named_ranges(name, folder=folder)
+    api_response = api_instance.cells_worksheets_get_named_ranges(name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_get_named_ranges: %s\n" % e)
@@ -383,6 +396,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document name. | 
  **folder** | **str**| Document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -400,7 +414,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_get_worksheet**
-> file cells_worksheets_get_worksheet(name, sheet_name, format=format, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, folder=folder)
+> file cells_worksheets_get_worksheet(name, sheet_name, format=format, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, folder=folder, storage=storage)
 
 Read worksheet info or export.
 
@@ -420,10 +434,11 @@ format = 'format_example' # str | The exported file format. (optional)
 vertical_resolution = 0 # int | Image vertical resolution. (optional) (default to 0)
 horizontal_resolution = 0 # int | Image horizontal resolution. (optional) (default to 0)
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Read worksheet info or export.
-    api_response = api_instance.cells_worksheets_get_worksheet(name, sheet_name, format=format, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, folder=folder)
+    api_response = api_instance.cells_worksheets_get_worksheet(name, sheet_name, format=format, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_get_worksheet: %s\n" % e)
@@ -439,6 +454,7 @@ Name | Type | Description  | Notes
  **vertical_resolution** | **int**| Image vertical resolution. | [optional] [default to 0]
  **horizontal_resolution** | **int**| Image horizontal resolution. | [optional] [default to 0]
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -456,7 +472,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_get_worksheet_calculate_formula**
-> SingleValueResponse cells_worksheets_get_worksheet_calculate_formula(name, sheet_name, formula, folder=folder)
+> SingleValueResponse cells_worksheets_get_worksheet_calculate_formula(name, sheet_name, formula, folder=folder, storage=storage)
 
 Calculate formula value.
 
@@ -474,10 +490,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 formula = 'formula_example' # str | The formula.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Calculate formula value.
-    api_response = api_instance.cells_worksheets_get_worksheet_calculate_formula(name, sheet_name, formula, folder=folder)
+    api_response = api_instance.cells_worksheets_get_worksheet_calculate_formula(name, sheet_name, formula, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_get_worksheet_calculate_formula: %s\n" % e)
@@ -491,6 +508,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **formula** | **str**| The formula. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -508,7 +526,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_get_worksheet_comment**
-> CommentResponse cells_worksheets_get_worksheet_comment(name, sheet_name, cell_name, folder=folder)
+> CommentResponse cells_worksheets_get_worksheet_comment(name, sheet_name, cell_name, folder=folder, storage=storage)
 
 Get worksheet comment by cell name.
 
@@ -526,10 +544,11 @@ name = 'name_example' # str | The document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 cell_name = 'cell_name_example' # str | The cell name
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get worksheet comment by cell name.
-    api_response = api_instance.cells_worksheets_get_worksheet_comment(name, sheet_name, cell_name, folder=folder)
+    api_response = api_instance.cells_worksheets_get_worksheet_comment(name, sheet_name, cell_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_get_worksheet_comment: %s\n" % e)
@@ -543,6 +562,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worksheet name. | 
  **cell_name** | **str**| The cell name | 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -560,7 +580,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_get_worksheet_comments**
-> CommentsResponse cells_worksheets_get_worksheet_comments(name, sheet_name, folder=folder)
+> CommentsResponse cells_worksheets_get_worksheet_comments(name, sheet_name, folder=folder, storage=storage)
 
 Get worksheet comments.
 
@@ -577,10 +597,11 @@ api_instance = asposecellscloud.CellsWorksheetsApi()
 name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get worksheet comments.
-    api_response = api_instance.cells_worksheets_get_worksheet_comments(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_worksheets_get_worksheet_comments(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_get_worksheet_comments: %s\n" % e)
@@ -593,6 +614,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Workbook name. | 
  **sheet_name** | **str**| The worksheet name. | 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -610,7 +632,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_get_worksheet_merged_cell**
-> MergedCellResponse cells_worksheets_get_worksheet_merged_cell(name, sheet_name, merged_cell_index, folder=folder)
+> MergedCellResponse cells_worksheets_get_worksheet_merged_cell(name, sheet_name, merged_cell_index, folder=folder, storage=storage)
 
 Get worksheet merged cell by its index.
 
@@ -628,10 +650,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 merged_cell_index = 56 # int | Merged cell index.
 folder = 'folder_example' # str | Document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get worksheet merged cell by its index.
-    api_response = api_instance.cells_worksheets_get_worksheet_merged_cell(name, sheet_name, merged_cell_index, folder=folder)
+    api_response = api_instance.cells_worksheets_get_worksheet_merged_cell(name, sheet_name, merged_cell_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_get_worksheet_merged_cell: %s\n" % e)
@@ -645,6 +668,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **merged_cell_index** | **int**| Merged cell index. | 
  **folder** | **str**| Document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -662,7 +686,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_get_worksheet_merged_cells**
-> MergedCellsResponse cells_worksheets_get_worksheet_merged_cells(name, sheet_name, folder=folder)
+> MergedCellsResponse cells_worksheets_get_worksheet_merged_cells(name, sheet_name, folder=folder, storage=storage)
 
 Get worksheet merged cells.
 
@@ -679,10 +703,11 @@ api_instance = asposecellscloud.CellsWorksheetsApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The workseet name.
 folder = 'folder_example' # str | Document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get worksheet merged cells.
-    api_response = api_instance.cells_worksheets_get_worksheet_merged_cells(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_worksheets_get_worksheet_merged_cells(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_get_worksheet_merged_cells: %s\n" % e)
@@ -695,6 +720,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| The workseet name. | 
  **folder** | **str**| Document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -712,7 +738,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_get_worksheet_text_items**
-> TextItemsResponse cells_worksheets_get_worksheet_text_items(name, sheet_name, folder=folder)
+> TextItemsResponse cells_worksheets_get_worksheet_text_items(name, sheet_name, folder=folder, storage=storage)
 
 Get worksheet text items.
 
@@ -729,10 +755,11 @@ api_instance = asposecellscloud.CellsWorksheetsApi()
 name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 folder = 'folder_example' # str | The workbook's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get worksheet text items.
-    api_response = api_instance.cells_worksheets_get_worksheet_text_items(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_worksheets_get_worksheet_text_items(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_get_worksheet_text_items: %s\n" % e)
@@ -745,6 +772,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Workbook name. | 
  **sheet_name** | **str**| The worksheet name. | 
  **folder** | **str**| The workbook&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -762,7 +790,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_get_worksheets**
-> WorksheetsResponse cells_worksheets_get_worksheets(name, folder=folder)
+> WorksheetsResponse cells_worksheets_get_worksheets(name, folder=folder, storage=storage)
 
 Read worksheets info.
 
@@ -778,10 +806,11 @@ from pprint import pprint
 api_instance = asposecellscloud.CellsWorksheetsApi()
 name = 'name_example' # str | Document name.
 folder = 'folder_example' # str | Document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Read worksheets info.
-    api_response = api_instance.cells_worksheets_get_worksheets(name, folder=folder)
+    api_response = api_instance.cells_worksheets_get_worksheets(name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_get_worksheets: %s\n" % e)
@@ -793,6 +822,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document name. | 
  **folder** | **str**| Document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -810,7 +840,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_autofit_worksheet_columns**
-> SaaSposeResponse cells_worksheets_post_autofit_worksheet_columns(name, sheet_name, first_column, last_column, auto_fitter_options=auto_fitter_options, first_row=first_row, last_row=last_row, folder=folder)
+> SaaSposeResponse cells_worksheets_post_autofit_worksheet_columns(name, sheet_name, first_column, last_column, auto_fitter_options=auto_fitter_options, first_row=first_row, last_row=last_row, folder=folder, storage=storage)
 
 
 
@@ -832,9 +862,10 @@ auto_fitter_options = asposecellscloud.AutoFitterOptions() # AutoFitterOptions |
 first_row = 56 # int |  (optional)
 last_row = 56 # int |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_worksheets_post_autofit_worksheet_columns(name, sheet_name, first_column, last_column, auto_fitter_options=auto_fitter_options, first_row=first_row, last_row=last_row, folder=folder)
+    api_response = api_instance.cells_worksheets_post_autofit_worksheet_columns(name, sheet_name, first_column, last_column, auto_fitter_options=auto_fitter_options, first_row=first_row, last_row=last_row, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_autofit_worksheet_columns: %s\n" % e)
@@ -852,6 +883,7 @@ Name | Type | Description  | Notes
  **first_row** | **int**|  | [optional] 
  **last_row** | **int**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -869,7 +901,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_autofit_worksheet_row**
-> SaaSposeResponse cells_worksheets_post_autofit_worksheet_row(name, sheet_name, row_index, first_column, last_column, auto_fitter_options=auto_fitter_options, folder=folder)
+> SaaSposeResponse cells_worksheets_post_autofit_worksheet_row(name, sheet_name, row_index, first_column, last_column, auto_fitter_options=auto_fitter_options, folder=folder, storage=storage)
 
 
 
@@ -890,9 +922,10 @@ first_column = 56 # int |
 last_column = 56 # int | 
 auto_fitter_options = asposecellscloud.AutoFitterOptions() # AutoFitterOptions |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_worksheets_post_autofit_worksheet_row(name, sheet_name, row_index, first_column, last_column, auto_fitter_options=auto_fitter_options, folder=folder)
+    api_response = api_instance.cells_worksheets_post_autofit_worksheet_row(name, sheet_name, row_index, first_column, last_column, auto_fitter_options=auto_fitter_options, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_autofit_worksheet_row: %s\n" % e)
@@ -909,6 +942,7 @@ Name | Type | Description  | Notes
  **last_column** | **int**|  | 
  **auto_fitter_options** | [**AutoFitterOptions**](AutoFitterOptions.md)|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -926,7 +960,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_autofit_worksheet_rows**
-> SaaSposeResponse cells_worksheets_post_autofit_worksheet_rows(name, sheet_name, auto_fitter_options=auto_fitter_options, start_row=start_row, end_row=end_row, only_auto=only_auto, folder=folder)
+> SaaSposeResponse cells_worksheets_post_autofit_worksheet_rows(name, sheet_name, auto_fitter_options=auto_fitter_options, start_row=start_row, end_row=end_row, only_auto=only_auto, folder=folder, storage=storage)
 
 Autofit worksheet rows.
 
@@ -947,10 +981,11 @@ start_row = 56 # int | Start row. (optional)
 end_row = 56 # int | End row. (optional)
 only_auto = false # bool | Only auto. (optional) (default to false)
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Autofit worksheet rows.
-    api_response = api_instance.cells_worksheets_post_autofit_worksheet_rows(name, sheet_name, auto_fitter_options=auto_fitter_options, start_row=start_row, end_row=end_row, only_auto=only_auto, folder=folder)
+    api_response = api_instance.cells_worksheets_post_autofit_worksheet_rows(name, sheet_name, auto_fitter_options=auto_fitter_options, start_row=start_row, end_row=end_row, only_auto=only_auto, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_autofit_worksheet_rows: %s\n" % e)
@@ -967,6 +1002,7 @@ Name | Type | Description  | Notes
  **end_row** | **int**| End row. | [optional] 
  **only_auto** | **bool**| Only auto. | [optional] [default to false]
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -984,7 +1020,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_copy_worksheet**
-> SaaSposeResponse cells_worksheets_post_copy_worksheet(name, sheet_name, source_sheet, options=options, source_workbook=source_workbook, source_folder=source_folder, folder=folder)
+> SaaSposeResponse cells_worksheets_post_copy_worksheet(name, sheet_name, source_sheet, options=options, source_workbook=source_workbook, source_folder=source_folder, folder=folder, storage=storage)
 
 
 
@@ -1005,9 +1041,10 @@ options = asposecellscloud.CopyOptions() # CopyOptions |  (optional)
 source_workbook = 'source_workbook_example' # str |  (optional)
 source_folder = 'source_folder_example' # str |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_worksheets_post_copy_worksheet(name, sheet_name, source_sheet, options=options, source_workbook=source_workbook, source_folder=source_folder, folder=folder)
+    api_response = api_instance.cells_worksheets_post_copy_worksheet(name, sheet_name, source_sheet, options=options, source_workbook=source_workbook, source_folder=source_folder, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_copy_worksheet: %s\n" % e)
@@ -1024,6 +1061,7 @@ Name | Type | Description  | Notes
  **source_workbook** | **str**|  | [optional] 
  **source_folder** | **str**|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1041,7 +1079,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_move_worksheet**
-> WorksheetsResponse cells_worksheets_post_move_worksheet(name, sheet_name, moving=moving, folder=folder)
+> WorksheetsResponse cells_worksheets_post_move_worksheet(name, sheet_name, moving=moving, folder=folder, storage=storage)
 
 Move worksheet.
 
@@ -1059,10 +1097,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 moving = asposecellscloud.WorksheetMovingRequest() # WorksheetMovingRequest | with moving parameters. (optional)
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Move worksheet.
-    api_response = api_instance.cells_worksheets_post_move_worksheet(name, sheet_name, moving=moving, folder=folder)
+    api_response = api_instance.cells_worksheets_post_move_worksheet(name, sheet_name, moving=moving, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_move_worksheet: %s\n" % e)
@@ -1076,6 +1115,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worksheet name. | 
  **moving** | [**WorksheetMovingRequest**](WorksheetMovingRequest.md)| with moving parameters. | [optional] 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1093,7 +1133,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_rename_worksheet**
-> SaaSposeResponse cells_worksheets_post_rename_worksheet(name, sheet_name, newname, folder=folder)
+> SaaSposeResponse cells_worksheets_post_rename_worksheet(name, sheet_name, newname, folder=folder, storage=storage)
 
 Rename worksheet
 
@@ -1111,10 +1151,11 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 newname = 'newname_example' # str | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Rename worksheet
-    api_response = api_instance.cells_worksheets_post_rename_worksheet(name, sheet_name, newname, folder=folder)
+    api_response = api_instance.cells_worksheets_post_rename_worksheet(name, sheet_name, newname, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_rename_worksheet: %s\n" % e)
@@ -1128,6 +1169,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **newname** | **str**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1145,7 +1187,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_update_worksheet_property**
-> WorksheetResponse cells_worksheets_post_update_worksheet_property(name, sheet_name, sheet=sheet, folder=folder)
+> WorksheetResponse cells_worksheets_post_update_worksheet_property(name, sheet_name, sheet=sheet, folder=folder, storage=storage)
 
 Update worksheet property
 
@@ -1163,10 +1205,11 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 sheet = asposecellscloud.Worksheet() # Worksheet |  (optional)
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Update worksheet property
-    api_response = api_instance.cells_worksheets_post_update_worksheet_property(name, sheet_name, sheet=sheet, folder=folder)
+    api_response = api_instance.cells_worksheets_post_update_worksheet_property(name, sheet_name, sheet=sheet, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_update_worksheet_property: %s\n" % e)
@@ -1180,6 +1223,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **sheet** | [**Worksheet**](Worksheet.md)|  | [optional] 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1197,7 +1241,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_update_worksheet_zoom**
-> SaaSposeResponse cells_worksheets_post_update_worksheet_zoom(name, sheet_name, value, folder=folder)
+> SaaSposeResponse cells_worksheets_post_update_worksheet_zoom(name, sheet_name, value, folder=folder, storage=storage)
 
 
 
@@ -1215,9 +1259,10 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 value = 56 # int | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_worksheets_post_update_worksheet_zoom(name, sheet_name, value, folder=folder)
+    api_response = api_instance.cells_worksheets_post_update_worksheet_zoom(name, sheet_name, value, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_update_worksheet_zoom: %s\n" % e)
@@ -1231,6 +1276,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **value** | **int**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1248,7 +1294,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_worksheet_comment**
-> SaaSposeResponse cells_worksheets_post_worksheet_comment(name, sheet_name, cell_name, comment=comment, folder=folder)
+> SaaSposeResponse cells_worksheets_post_worksheet_comment(name, sheet_name, cell_name, comment=comment, folder=folder, storage=storage)
 
 Update worksheet's cell comment.
 
@@ -1267,10 +1313,11 @@ sheet_name = 'sheet_name_example' # str | The worksheet name.
 cell_name = 'cell_name_example' # str | The cell name
 comment = asposecellscloud.Comment() # Comment | Comment object (optional)
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Update worksheet's cell comment.
-    api_response = api_instance.cells_worksheets_post_worksheet_comment(name, sheet_name, cell_name, comment=comment, folder=folder)
+    api_response = api_instance.cells_worksheets_post_worksheet_comment(name, sheet_name, cell_name, comment=comment, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_worksheet_comment: %s\n" % e)
@@ -1285,6 +1332,7 @@ Name | Type | Description  | Notes
  **cell_name** | **str**| The cell name | 
  **comment** | [**Comment**](Comment.md)| Comment object | [optional] 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1302,7 +1350,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_worksheet_range_sort**
-> SaaSposeResponse cells_worksheets_post_worksheet_range_sort(name, sheet_name, cell_area, data_sorter=data_sorter, folder=folder)
+> SaaSposeResponse cells_worksheets_post_worksheet_range_sort(name, sheet_name, cell_area, data_sorter=data_sorter, folder=folder, storage=storage)
 
 Sort worksheet range.
 
@@ -1321,10 +1369,11 @@ sheet_name = 'sheet_name_example' # str | The worksheet name.
 cell_area = 'cell_area_example' # str | The range to sort.
 data_sorter = asposecellscloud.DataSorter() # DataSorter | with sorting settings. (optional)
 folder = 'folder_example' # str | The workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Sort worksheet range.
-    api_response = api_instance.cells_worksheets_post_worksheet_range_sort(name, sheet_name, cell_area, data_sorter=data_sorter, folder=folder)
+    api_response = api_instance.cells_worksheets_post_worksheet_range_sort(name, sheet_name, cell_area, data_sorter=data_sorter, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_worksheet_range_sort: %s\n" % e)
@@ -1339,6 +1388,7 @@ Name | Type | Description  | Notes
  **cell_area** | **str**| The range to sort. | 
  **data_sorter** | [**DataSorter**](DataSorter.md)| with sorting settings. | [optional] 
  **folder** | **str**| The workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1356,7 +1406,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_worksheet_text_search**
-> TextItemsResponse cells_worksheets_post_worksheet_text_search(name, sheet_name, text, folder=folder)
+> TextItemsResponse cells_worksheets_post_worksheet_text_search(name, sheet_name, text, folder=folder, storage=storage)
 
 Search text.
 
@@ -1374,10 +1424,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 text = 'text_example' # str | Text to search.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Search text.
-    api_response = api_instance.cells_worksheets_post_worksheet_text_search(name, sheet_name, text, folder=folder)
+    api_response = api_instance.cells_worksheets_post_worksheet_text_search(name, sheet_name, text, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_worksheet_text_search: %s\n" % e)
@@ -1391,6 +1442,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worksheet name. | 
  **text** | **str**| Text to search. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1408,7 +1460,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_post_worsheet_text_replace**
-> WorksheetReplaceResponse cells_worksheets_post_worsheet_text_replace(name, sheet_name, old_value, new_value, folder=folder)
+> WorksheetReplaceResponse cells_worksheets_post_worsheet_text_replace(name, sheet_name, old_value, new_value, folder=folder, storage=storage)
 
 Replace text.
 
@@ -1427,10 +1479,11 @@ sheet_name = 'sheet_name_example' # str | Worksheet name.
 old_value = 'old_value_example' # str | The old text to replace.
 new_value = 'new_value_example' # str | The new text to replace by.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Replace text.
-    api_response = api_instance.cells_worksheets_post_worsheet_text_replace(name, sheet_name, old_value, new_value, folder=folder)
+    api_response = api_instance.cells_worksheets_post_worsheet_text_replace(name, sheet_name, old_value, new_value, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_post_worsheet_text_replace: %s\n" % e)
@@ -1445,6 +1498,7 @@ Name | Type | Description  | Notes
  **old_value** | **str**| The old text to replace. | 
  **new_value** | **str**| The new text to replace by. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1462,7 +1516,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_put_add_new_worksheet**
-> WorksheetsResponse cells_worksheets_put_add_new_worksheet(name, sheet_name, position=position, sheettype=sheettype, folder=folder)
+> WorksheetsResponse cells_worksheets_put_add_new_worksheet(name, sheet_name, position=position, sheettype=sheettype, folder=folder, storage=storage)
 
 Add new worksheet.
 
@@ -1481,10 +1535,11 @@ sheet_name = 'sheet_name_example' # str | The new sheet name.
 position = 56 # int | The new sheet position. (optional)
 sheettype = 'sheettype_example' # str | The new sheet type. (optional)
 folder = 'folder_example' # str | Document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Add new worksheet.
-    api_response = api_instance.cells_worksheets_put_add_new_worksheet(name, sheet_name, position=position, sheettype=sheettype, folder=folder)
+    api_response = api_instance.cells_worksheets_put_add_new_worksheet(name, sheet_name, position=position, sheettype=sheettype, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_put_add_new_worksheet: %s\n" % e)
@@ -1499,6 +1554,7 @@ Name | Type | Description  | Notes
  **position** | **int**| The new sheet position. | [optional] 
  **sheettype** | **str**| The new sheet type. | [optional] 
  **folder** | **str**| Document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1516,7 +1572,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_put_change_visibility_worksheet**
-> WorksheetResponse cells_worksheets_put_change_visibility_worksheet(name, sheet_name, is_visible, folder=folder)
+> WorksheetResponse cells_worksheets_put_change_visibility_worksheet(name, sheet_name, is_visible, folder=folder, storage=storage)
 
 Change worksheet visibility.
 
@@ -1534,10 +1590,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 is_visible = true # bool | New worksheet visibility value.
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Change worksheet visibility.
-    api_response = api_instance.cells_worksheets_put_change_visibility_worksheet(name, sheet_name, is_visible, folder=folder)
+    api_response = api_instance.cells_worksheets_put_change_visibility_worksheet(name, sheet_name, is_visible, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_put_change_visibility_worksheet: %s\n" % e)
@@ -1551,6 +1608,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **is_visible** | **bool**| New worksheet visibility value. | 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1568,7 +1626,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_put_protect_worksheet**
-> WorksheetResponse cells_worksheets_put_protect_worksheet(name, sheet_name, protect_parameter=protect_parameter, folder=folder)
+> WorksheetResponse cells_worksheets_put_protect_worksheet(name, sheet_name, protect_parameter=protect_parameter, folder=folder, storage=storage)
 
 Protect worksheet.
 
@@ -1586,10 +1644,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | The worksheet name.
 protect_parameter = asposecellscloud.ProtectSheetParameter() # ProtectSheetParameter | with protection settings. (optional)
 folder = 'folder_example' # str | Document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Protect worksheet.
-    api_response = api_instance.cells_worksheets_put_protect_worksheet(name, sheet_name, protect_parameter=protect_parameter, folder=folder)
+    api_response = api_instance.cells_worksheets_put_protect_worksheet(name, sheet_name, protect_parameter=protect_parameter, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_put_protect_worksheet: %s\n" % e)
@@ -1603,6 +1662,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| The worksheet name. | 
  **protect_parameter** | [**ProtectSheetParameter**](ProtectSheetParameter.md)| with protection settings. | [optional] 
  **folder** | **str**| Document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1620,7 +1680,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_put_worksheet_background**
-> SaaSposeResponse cells_worksheets_put_worksheet_background(name, sheet_name, png, folder=folder)
+> SaaSposeResponse cells_worksheets_put_worksheet_background(name, sheet_name, png, folder=folder, storage=storage)
 
 Set worksheet background image.
 
@@ -1638,10 +1698,11 @@ name = 'name_example' # str |
 sheet_name = 'sheet_name_example' # str | 
 png = 'B' # str | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Set worksheet background image.
-    api_response = api_instance.cells_worksheets_put_worksheet_background(name, sheet_name, png, folder=folder)
+    api_response = api_instance.cells_worksheets_put_worksheet_background(name, sheet_name, png, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_put_worksheet_background: %s\n" % e)
@@ -1655,6 +1716,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**|  | 
  **png** | **str**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1672,7 +1734,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_put_worksheet_comment**
-> CommentResponse cells_worksheets_put_worksheet_comment(name, sheet_name, cell_name, comment=comment, folder=folder)
+> CommentResponse cells_worksheets_put_worksheet_comment(name, sheet_name, cell_name, comment=comment, folder=folder, storage=storage)
 
 Add worksheet's cell comment.
 
@@ -1691,10 +1753,11 @@ sheet_name = 'sheet_name_example' # str | The worksheet name.
 cell_name = 'cell_name_example' # str | The cell name
 comment = asposecellscloud.Comment() # Comment | Comment object (optional)
 folder = 'folder_example' # str | The document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Add worksheet's cell comment.
-    api_response = api_instance.cells_worksheets_put_worksheet_comment(name, sheet_name, cell_name, comment=comment, folder=folder)
+    api_response = api_instance.cells_worksheets_put_worksheet_comment(name, sheet_name, cell_name, comment=comment, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_put_worksheet_comment: %s\n" % e)
@@ -1709,6 +1772,7 @@ Name | Type | Description  | Notes
  **cell_name** | **str**| The cell name | 
  **comment** | [**Comment**](Comment.md)| Comment object | [optional] 
  **folder** | **str**| The document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -1726,7 +1790,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_put_worksheet_freeze_panes**
-> SaaSposeResponse cells_worksheets_put_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, folder=folder)
+> SaaSposeResponse cells_worksheets_put_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, folder=folder, storage=storage)
 
 Set freeze panes
 
@@ -1747,10 +1811,11 @@ column = 56 # int |
 freezed_rows = 56 # int | 
 freezed_columns = 56 # int | 
 folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Set freeze panes
-    api_response = api_instance.cells_worksheets_put_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, folder=folder)
+    api_response = api_instance.cells_worksheets_put_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetsApi->cells_worksheets_put_worksheet_freeze_panes: %s\n" % e)
@@ -1767,6 +1832,7 @@ Name | Type | Description  | Notes
  **freezed_rows** | **int**|  | 
  **freezed_columns** | **int**|  | 
  **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 

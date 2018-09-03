@@ -57,6 +57,7 @@ class CellsWorksheetValidationsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int validation_index: The validation index. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ValidationResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -85,12 +86,13 @@ class CellsWorksheetValidationsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int validation_index: The validation index. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ValidationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'validation_index', 'folder']
+        all_params = ['name', 'sheet_name', 'validation_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -129,6 +131,8 @@ class CellsWorksheetValidationsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -179,6 +183,7 @@ class CellsWorksheetValidationsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int validation_index: The validation index. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ValidationResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -207,12 +212,13 @@ class CellsWorksheetValidationsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int validation_index: The validation index. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ValidationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'validation_index', 'folder']
+        all_params = ['name', 'sheet_name', 'validation_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -251,6 +257,8 @@ class CellsWorksheetValidationsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -300,6 +308,7 @@ class CellsWorksheetValidationsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param str folder: Document folder.
+        :param str storage: storage name.
         :return: ValidationsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -327,12 +336,13 @@ class CellsWorksheetValidationsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param str folder: Document folder.
+        :param str storage: storage name.
         :return: ValidationsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -366,6 +376,8 @@ class CellsWorksheetValidationsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -417,6 +429,7 @@ class CellsWorksheetValidationsApi(object):
         :param int validation_index: The validation index. (required)
         :param Validation validation:
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ValidationResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -446,12 +459,13 @@ class CellsWorksheetValidationsApi(object):
         :param int validation_index: The validation index. (required)
         :param Validation validation:
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ValidationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'validation_index', 'validation', 'folder']
+        all_params = ['name', 'sheet_name', 'validation_index', 'validation', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -490,6 +504,8 @@ class CellsWorksheetValidationsApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -542,6 +558,7 @@ class CellsWorksheetValidationsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param str range: Specified cells area
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ValidationResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -570,12 +587,13 @@ class CellsWorksheetValidationsApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param str range: Specified cells area
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: ValidationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'range', 'folder']
+        all_params = ['name', 'sheet_name', 'range', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -611,6 +629,8 @@ class CellsWorksheetValidationsApi(object):
             query_params.append(('range', params['range']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

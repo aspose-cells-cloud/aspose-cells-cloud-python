@@ -57,6 +57,7 @@ class CellsHypelinksApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int hyperlink_index: The hyperlink's index. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -85,12 +86,13 @@ class CellsHypelinksApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int hyperlink_index: The hyperlink's index. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'hyperlink_index', 'folder']
+        all_params = ['name', 'sheet_name', 'hyperlink_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -129,6 +131,8 @@ class CellsHypelinksApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -178,6 +182,7 @@ class CellsHypelinksApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -205,12 +210,13 @@ class CellsHypelinksApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: SaaSposeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -244,6 +250,8 @@ class CellsHypelinksApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -294,6 +302,7 @@ class CellsHypelinksApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int hyperlink_index: The hyperlink's index. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: HyperlinkResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -322,12 +331,13 @@ class CellsHypelinksApi(object):
         :param str sheet_name: Worksheet name. (required)
         :param int hyperlink_index: The hyperlink's index. (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: HyperlinkResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'hyperlink_index', 'folder']
+        all_params = ['name', 'sheet_name', 'hyperlink_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -366,6 +376,8 @@ class CellsHypelinksApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -415,6 +427,7 @@ class CellsHypelinksApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: HyperlinksResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -442,12 +455,13 @@ class CellsHypelinksApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param str folder: Document's folder.
+        :param str storage: storage name.
         :return: HyperlinksResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'folder']
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -481,6 +495,8 @@ class CellsHypelinksApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -532,6 +548,7 @@ class CellsHypelinksApi(object):
         :param int hyperlink_index: The hyperlink's index. (required)
         :param Hyperlink hyperlink: Hyperlink object
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: HyperlinkResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -561,12 +578,13 @@ class CellsHypelinksApi(object):
         :param int hyperlink_index: The hyperlink's index. (required)
         :param Hyperlink hyperlink: Hyperlink object
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: HyperlinkResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'hyperlink_index', 'hyperlink', 'folder']
+        all_params = ['name', 'sheet_name', 'hyperlink_index', 'hyperlink', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -605,6 +623,8 @@ class CellsHypelinksApi(object):
         query_params = []
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 
@@ -661,6 +681,7 @@ class CellsHypelinksApi(object):
         :param int total_columns: (required)
         :param str address: (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: HyperlinkResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -693,12 +714,13 @@ class CellsHypelinksApi(object):
         :param int total_columns: (required)
         :param str address: (required)
         :param str folder: The document folder.
+        :param str storage: storage name.
         :return: HyperlinkResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'first_row', 'first_column', 'total_rows', 'total_columns', 'address', 'folder']
+        all_params = ['name', 'sheet_name', 'first_row', 'first_column', 'total_rows', 'total_columns', 'address', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -757,6 +779,8 @@ class CellsHypelinksApi(object):
             query_params.append(('address', params['address']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
 
         header_params = {}
 

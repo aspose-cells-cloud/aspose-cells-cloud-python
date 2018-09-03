@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **cells_worksheet_validations_delete_worksheet_validation**
-> ValidationResponse cells_worksheet_validations_delete_worksheet_validation(name, sheet_name, validation_index, folder=folder)
+> ValidationResponse cells_worksheet_validations_delete_worksheet_validation(name, sheet_name, validation_index, folder=folder, storage=storage)
 
 Delete worksheet validation by index.
 
@@ -30,10 +30,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 validation_index = 56 # int | The validation index.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Delete worksheet validation by index.
-    api_response = api_instance.cells_worksheet_validations_delete_worksheet_validation(name, sheet_name, validation_index, folder=folder)
+    api_response = api_instance.cells_worksheet_validations_delete_worksheet_validation(name, sheet_name, validation_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetValidationsApi->cells_worksheet_validations_delete_worksheet_validation: %s\n" % e)
@@ -47,6 +48,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **validation_index** | **int**| The validation index. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -64,7 +66,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheet_validations_get_worksheet_validation**
-> ValidationResponse cells_worksheet_validations_get_worksheet_validation(name, sheet_name, validation_index, folder=folder)
+> ValidationResponse cells_worksheet_validations_get_worksheet_validation(name, sheet_name, validation_index, folder=folder, storage=storage)
 
 Get worksheet validation by index.
 
@@ -82,10 +84,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 validation_index = 56 # int | The validation index.
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get worksheet validation by index.
-    api_response = api_instance.cells_worksheet_validations_get_worksheet_validation(name, sheet_name, validation_index, folder=folder)
+    api_response = api_instance.cells_worksheet_validations_get_worksheet_validation(name, sheet_name, validation_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetValidationsApi->cells_worksheet_validations_get_worksheet_validation: %s\n" % e)
@@ -99,6 +102,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **validation_index** | **int**| The validation index. | 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -116,7 +120,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheet_validations_get_worksheet_validations**
-> ValidationsResponse cells_worksheet_validations_get_worksheet_validations(name, sheet_name, folder=folder)
+> ValidationsResponse cells_worksheet_validations_get_worksheet_validations(name, sheet_name, folder=folder, storage=storage)
 
 Get worksheet validations.
 
@@ -133,10 +137,11 @@ api_instance = asposecellscloud.CellsWorksheetValidationsApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 folder = 'folder_example' # str | Document folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get worksheet validations.
-    api_response = api_instance.cells_worksheet_validations_get_worksheet_validations(name, sheet_name, folder=folder)
+    api_response = api_instance.cells_worksheet_validations_get_worksheet_validations(name, sheet_name, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetValidationsApi->cells_worksheet_validations_get_worksheet_validations: %s\n" % e)
@@ -149,6 +154,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| Worksheet name. | 
  **folder** | **str**| Document folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -166,7 +172,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheet_validations_post_worksheet_validation**
-> ValidationResponse cells_worksheet_validations_post_worksheet_validation(name, sheet_name, validation_index, validation=validation, folder=folder)
+> ValidationResponse cells_worksheet_validations_post_worksheet_validation(name, sheet_name, validation_index, validation=validation, folder=folder, storage=storage)
 
 Update worksheet validation by index.
 
@@ -185,10 +191,11 @@ sheet_name = 'sheet_name_example' # str | Worksheet name.
 validation_index = 56 # int | The validation index.
 validation = asposecellscloud.Validation() # Validation |  (optional)
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Update worksheet validation by index.
-    api_response = api_instance.cells_worksheet_validations_post_worksheet_validation(name, sheet_name, validation_index, validation=validation, folder=folder)
+    api_response = api_instance.cells_worksheet_validations_post_worksheet_validation(name, sheet_name, validation_index, validation=validation, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetValidationsApi->cells_worksheet_validations_post_worksheet_validation: %s\n" % e)
@@ -203,6 +210,7 @@ Name | Type | Description  | Notes
  **validation_index** | **int**| The validation index. | 
  **validation** | [**Validation**](Validation.md)|  | [optional] 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -220,7 +228,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheet_validations_put_worksheet_validation**
-> ValidationResponse cells_worksheet_validations_put_worksheet_validation(name, sheet_name, range=range, folder=folder)
+> ValidationResponse cells_worksheet_validations_put_worksheet_validation(name, sheet_name, range=range, folder=folder, storage=storage)
 
 Add worksheet validation at index.
 
@@ -238,10 +246,11 @@ name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 range = 'range_example' # str | Specified cells area (optional)
 folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Add worksheet validation at index.
-    api_response = api_instance.cells_worksheet_validations_put_worksheet_validation(name, sheet_name, range=range, folder=folder)
+    api_response = api_instance.cells_worksheet_validations_put_worksheet_validation(name, sheet_name, range=range, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorksheetValidationsApi->cells_worksheet_validations_put_worksheet_validation: %s\n" % e)
@@ -255,6 +264,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **range** | **str**| Specified cells area | [optional] 
  **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 

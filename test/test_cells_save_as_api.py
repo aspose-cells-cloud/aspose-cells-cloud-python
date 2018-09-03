@@ -70,6 +70,25 @@ class TestCellsSaveAsApi(unittest.TestCase):
         result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder)
         pass
 
+    def test_cells_save_as_post_document_save_as_pdf_dropbox(self):
+        """
+        Test case for cells_save_as_post_document_save_as
+
+        Convert document and save result to storage.
+        """
+        name ='Book1.xlsx'    
+        saveOptions = PdfSaveOptions()
+        saveOptions.OnePagePerSheet = True
+        saveOptions.SaveFormat = "pdf"
+        newfilename = "newbook.pdf"
+        isAutoFitRows= True
+        isAutoFitColumns= True
+        folder = "Temp"
+        storage = "DropBox"
+        AuthUtil.Ready(name, folder, storage=storage)
+        result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder, storage=storage)
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

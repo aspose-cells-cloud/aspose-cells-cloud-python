@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **cells_chart_area_get_chart_area**
-> ChartAreaResponse cells_chart_area_get_chart_area(name, sheet_name, chart_index, folder=folder)
+> ChartAreaResponse cells_chart_area_get_chart_area(name, sheet_name, chart_index, folder=folder, storage=storage)
 
 Get chart area info.
 
@@ -28,10 +28,11 @@ name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 folder = 'folder_example' # str | Workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get chart area info.
-    api_response = api_instance.cells_chart_area_get_chart_area(name, sheet_name, chart_index, folder=folder)
+    api_response = api_instance.cells_chart_area_get_chart_area(name, sheet_name, chart_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartAreaApi->cells_chart_area_get_chart_area: %s\n" % e)
@@ -45,6 +46,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **chart_index** | **int**| The chart index. | 
  **folder** | **str**| Workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -62,7 +64,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_chart_area_get_chart_area_border**
-> LineResponse cells_chart_area_get_chart_area_border(name, sheet_name, chart_index, folder=folder)
+> LineResponse cells_chart_area_get_chart_area_border(name, sheet_name, chart_index, folder=folder, storage=storage)
 
 Get chart area border info.
 
@@ -80,10 +82,11 @@ name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 folder = 'folder_example' # str | Workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get chart area border info.
-    api_response = api_instance.cells_chart_area_get_chart_area_border(name, sheet_name, chart_index, folder=folder)
+    api_response = api_instance.cells_chart_area_get_chart_area_border(name, sheet_name, chart_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartAreaApi->cells_chart_area_get_chart_area_border: %s\n" % e)
@@ -97,6 +100,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **chart_index** | **int**| The chart index. | 
  **folder** | **str**| Workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
@@ -114,7 +118,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_chart_area_get_chart_area_fill_format**
-> FillFormatResponse cells_chart_area_get_chart_area_fill_format(name, sheet_name, chart_index, folder=folder)
+> FillFormatResponse cells_chart_area_get_chart_area_fill_format(name, sheet_name, chart_index, folder=folder, storage=storage)
 
 Get chart area fill format info.
 
@@ -132,10 +136,11 @@ name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 chart_index = 56 # int | The chart index.
 folder = 'folder_example' # str | Workbook folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get chart area fill format info.
-    api_response = api_instance.cells_chart_area_get_chart_area_fill_format(name, sheet_name, chart_index, folder=folder)
+    api_response = api_instance.cells_chart_area_get_chart_area_fill_format(name, sheet_name, chart_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsChartAreaApi->cells_chart_area_get_chart_area_fill_format: %s\n" % e)
@@ -149,6 +154,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **str**| Worksheet name. | 
  **chart_index** | **int**| The chart index. | 
  **folder** | **str**| Workbook folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
 
 ### Return type
 
