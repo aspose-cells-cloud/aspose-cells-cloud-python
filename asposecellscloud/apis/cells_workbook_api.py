@@ -630,9 +630,12 @@ class CellsWorkbookApi(object):
             for asynchronous request. (optional)
         :param str name: The document name. (required)
         :param str password: The document password.
+        :param str format: The exported file format.
         :param bool is_auto_fit: Set document rows to be autofit.
+        :param bool only_save_table: Only save table data.
         :param str folder: The document folder.
         :param str storage: storage name.
+        :param str out_path: The document output folder.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
@@ -659,15 +662,18 @@ class CellsWorkbookApi(object):
             for asynchronous request. (optional)
         :param str name: The document name. (required)
         :param str password: The document password.
+        :param str format: The exported file format.
         :param bool is_auto_fit: Set document rows to be autofit.
+        :param bool only_save_table: Only save table data.
         :param str folder: The document folder.
         :param str storage: storage name.
+        :param str out_path: The document output folder.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'password', 'is_auto_fit', 'folder', 'storage']
+        all_params = ['name', 'password', 'format', 'is_auto_fit', 'only_save_table', 'folder', 'storage', 'out_path']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -696,12 +702,18 @@ class CellsWorkbookApi(object):
         query_params = []
         if 'password' in params:
             query_params.append(('password', params['password']))
+        if 'format' in params:
+            query_params.append(('format', params['format']))
         if 'is_auto_fit' in params:
             query_params.append(('isAutoFit', params['is_auto_fit']))
+        if 'only_save_table' in params:
+            query_params.append(('onlySaveTable', params['only_save_table']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
         if 'storage' in params:
             query_params.append(('storage', params['storage']))
+        if 'out_path' in params:
+            query_params.append(('outPath', params['out_path']))
 
         header_params = {}
 

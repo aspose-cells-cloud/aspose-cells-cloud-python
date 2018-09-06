@@ -301,6 +301,7 @@ class CellsOleObjectsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param int object_number: The object number. (required)
+        :param str format: The exported object format.
         :param str folder: The document folder.
         :param str storage: storage name.
         :return: file
@@ -330,6 +331,7 @@ class CellsOleObjectsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param int object_number: The object number. (required)
+        :param str format: The exported object format.
         :param str folder: The document folder.
         :param str storage: storage name.
         :return: file
@@ -337,7 +339,7 @@ class CellsOleObjectsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'object_number', 'folder', 'storage']
+        all_params = ['name', 'sheet_name', 'object_number', 'format', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -374,6 +376,8 @@ class CellsOleObjectsApi(object):
             path_params['objectNumber'] = params['object_number']
 
         query_params = []
+        if 'format' in params:
+            query_params.append(('format', params['format']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
         if 'storage' in params:

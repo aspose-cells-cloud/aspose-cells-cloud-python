@@ -289,7 +289,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_workbook_get_workbook**
-> file cells_workbook_get_workbook(name, password=password, is_auto_fit=is_auto_fit, folder=folder, storage=storage)
+> file cells_workbook_get_workbook(name, password=password, format=format, is_auto_fit=is_auto_fit, only_save_table=only_save_table, folder=folder, storage=storage, out_path=out_path)
 
 Read workbook info or export.
 
@@ -305,13 +305,16 @@ from pprint import pprint
 api_instance = asposecellscloud.CellsWorkbookApi()
 name = 'name_example' # str | The document name.
 password = 'password_example' # str | The document password. (optional)
+format = 'format_example' # str | The exported file format. (optional)
 is_auto_fit = false # bool | Set document rows to be autofit. (optional) (default to false)
+only_save_table = false # bool | Only save table data. (optional) (default to false)
 folder = 'folder_example' # str | The document folder. (optional)
 storage = 'storage_example' # str | storage name. (optional)
+out_path = 'out_path_example' # str | The document output folder. (optional)
 
 try: 
     # Read workbook info or export.
-    api_response = api_instance.cells_workbook_get_workbook(name, password=password, is_auto_fit=is_auto_fit, folder=folder, storage=storage)
+    api_response = api_instance.cells_workbook_get_workbook(name, password=password, format=format, is_auto_fit=is_auto_fit, only_save_table=only_save_table, folder=folder, storage=storage, out_path=out_path)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorkbookApi->cells_workbook_get_workbook: %s\n" % e)
@@ -323,9 +326,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| The document name. | 
  **password** | **str**| The document password. | [optional] 
+ **format** | **str**| The exported file format. | [optional] 
  **is_auto_fit** | **bool**| Set document rows to be autofit. | [optional] [default to false]
+ **only_save_table** | **bool**| Only save table data. | [optional] [default to false]
  **folder** | **str**| The document folder. | [optional] 
  **storage** | **str**| storage name. | [optional] 
+ **out_path** | **str**| The document output folder. | [optional] 
 
 ### Return type
 

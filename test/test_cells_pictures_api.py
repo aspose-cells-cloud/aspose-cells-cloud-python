@@ -77,6 +77,20 @@ class TestCellsPicturesApi(unittest.TestCase):
         result = self.api.cells_pictures_get_worksheet_picture(name, sheet_name,pictureIndex,folder=folder)
         pass
 
+    def test_cells_pictures_get_worksheet_picture_format(self):
+        """
+        Test case for cells_pictures_get_worksheet_picture_format
+
+        GRead worksheet picture by number.
+        """
+        name ='Book1.xlsx'
+        sheet_name ='Sheet6'
+        pictureIndex = 0         
+        folder = "Temp"
+        AuthUtil.Ready(name, folder)
+        result = self.api.cells_pictures_get_worksheet_picture(name, sheet_name,pictureIndex,format="png", folder=folder)
+        pass
+
     def test_cells_pictures_get_worksheet_pictures(self):
         """
         Test case for cells_pictures_get_worksheet_pictures

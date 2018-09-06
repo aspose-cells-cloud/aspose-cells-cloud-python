@@ -56,6 +56,7 @@ class CellsAutoshapesApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param int autoshape_number: The autoshape number. (required)
+        :param str format: Exported format.
         :param str folder: The document folder.
         :param str storage: storage name.
         :return: file
@@ -85,6 +86,7 @@ class CellsAutoshapesApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param int autoshape_number: The autoshape number. (required)
+        :param str format: Exported format.
         :param str folder: The document folder.
         :param str storage: storage name.
         :return: file
@@ -92,7 +94,7 @@ class CellsAutoshapesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'autoshape_number', 'folder', 'storage']
+        all_params = ['name', 'sheet_name', 'autoshape_number', 'format', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -129,6 +131,8 @@ class CellsAutoshapesApi(object):
             path_params['autoshapeNumber'] = params['autoshape_number']
 
         query_params = []
+        if 'format' in params:
+            query_params.append(('format', params['format']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
         if 'storage' in params:

@@ -143,13 +143,17 @@ class ApiClient(object):
 
         # request url
         url = self.host + resource_path
+        
+        preload_content = _preload_content
+        if response_type == 'file':
+            preload_content = False
 
         # perform request and return response
         response_data = self.request(method, url,
                                      query_params=query_params,
                                      headers=header_params,
                                      post_params=post_params, body=body,
-                                     _preload_content=_preload_content,
+                                     _preload_content=preload_content,
                                      _request_timeout=_request_timeout)
 
         self.last_response = response_data

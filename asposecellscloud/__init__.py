@@ -101,6 +101,7 @@ from .models.worksheet import Worksheet
 from .models.worksheet_moving_request import WorksheetMovingRequest
 from .models.auto_filter import AutoFilter
 from .models.auto_filter_response import AutoFilterResponse
+from .models.auto_shape_response import AutoShapeResponse
 from .models.auto_shapes import AutoShapes
 from .models.auto_shapes_response import AutoShapesResponse
 from .models.cell import Cell
@@ -233,6 +234,7 @@ from .models.worksheets_response import WorksheetsResponse
 from .models.xls_save_options import XlsSaveOptions
 from .models.xlsb_save_options import XlsbSaveOptions
 from .models.xps_save_options import XpsSaveOptions
+from .models.auto_shape import AutoShape
 from .models.chart_area import ChartArea
 from .models.legend import Legend
 from .models.ole_object import OleObject

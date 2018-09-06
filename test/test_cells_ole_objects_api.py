@@ -78,6 +78,20 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         result = self.api.cells_ole_objects_get_worksheet_ole_object(name, sheet_name,oleObjectIndex,folder=folder)
         pass
 
+    def test_cells_ole_objects_get_worksheet_ole_object_format(self):
+        """
+        Test case for cells_ole_objects_get_worksheet_ole_object_format
+
+        Get OLE object info.
+        """
+        name ='Book1.xlsx'
+        sheet_name ='Sheet6'
+        oleObjectIndex = 0         
+        folder = "Temp"
+        AuthUtil.Ready(name, folder)
+        result = self.api.cells_ole_objects_get_worksheet_ole_object(name, sheet_name,oleObjectIndex,format="png",folder=folder)
+        pass
+
     def test_cells_ole_objects_get_worksheet_ole_objects(self):
         """
         Test case for cells_ole_objects_get_worksheet_ole_objects

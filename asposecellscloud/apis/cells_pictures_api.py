@@ -285,7 +285,7 @@ class CellsPicturesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def cells_pictures_get_worksheet_picture(self, name, sheet_name, picture_number, **kwargs):
+    def cells_pictures_get_worksheet_picture(self, name, sheet_name, picture_index, **kwargs):
         """
         GRead worksheet picture by number.
         This method makes a synchronous HTTP request by default. To make an
@@ -294,13 +294,14 @@ class CellsPicturesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_pictures_get_worksheet_picture(name, sheet_name, picture_number, callback=callback_function)
+        >>> thread = api.cells_pictures_get_worksheet_picture(name, sheet_name, picture_index, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
-        :param int picture_number: The picture number. (required)
+        :param int picture_index: The picture index. (required)
+        :param str format: The exported object format.
         :param str folder: The document folder.
         :param str storage: storage name.
         :return: file
@@ -309,12 +310,12 @@ class CellsPicturesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.cells_pictures_get_worksheet_picture_with_http_info(name, sheet_name, picture_number, **kwargs)
+            return self.cells_pictures_get_worksheet_picture_with_http_info(name, sheet_name, picture_index, **kwargs)
         else:
-            (data) = self.cells_pictures_get_worksheet_picture_with_http_info(name, sheet_name, picture_number, **kwargs)
+            (data) = self.cells_pictures_get_worksheet_picture_with_http_info(name, sheet_name, picture_index, **kwargs)
             return data
 
-    def cells_pictures_get_worksheet_picture_with_http_info(self, name, sheet_name, picture_number, **kwargs):
+    def cells_pictures_get_worksheet_picture_with_http_info(self, name, sheet_name, picture_index, **kwargs):
         """
         GRead worksheet picture by number.
         This method makes a synchronous HTTP request by default. To make an
@@ -323,13 +324,14 @@ class CellsPicturesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_pictures_get_worksheet_picture_with_http_info(name, sheet_name, picture_number, callback=callback_function)
+        >>> thread = api.cells_pictures_get_worksheet_picture_with_http_info(name, sheet_name, picture_index, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Document name. (required)
         :param str sheet_name: Worksheet name. (required)
-        :param int picture_number: The picture number. (required)
+        :param int picture_index: The picture index. (required)
+        :param str format: The exported object format.
         :param str folder: The document folder.
         :param str storage: storage name.
         :return: file
@@ -337,7 +339,7 @@ class CellsPicturesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'picture_number', 'folder', 'storage']
+        all_params = ['name', 'sheet_name', 'picture_index', 'format', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -358,9 +360,9 @@ class CellsPicturesApi(object):
         # verify the required parameter 'sheet_name' is set
         if ('sheet_name' not in params) or (params['sheet_name'] is None):
             raise ValueError("Missing the required parameter `sheet_name` when calling `cells_pictures_get_worksheet_picture`")
-        # verify the required parameter 'picture_number' is set
-        if ('picture_number' not in params) or (params['picture_number'] is None):
-            raise ValueError("Missing the required parameter `picture_number` when calling `cells_pictures_get_worksheet_picture`")
+        # verify the required parameter 'picture_index' is set
+        if ('picture_index' not in params) or (params['picture_index'] is None):
+            raise ValueError("Missing the required parameter `picture_index` when calling `cells_pictures_get_worksheet_picture`")
 
 
         collection_formats = {}
@@ -370,10 +372,12 @@ class CellsPicturesApi(object):
             path_params['name'] = params['name']
         if 'sheet_name' in params:
             path_params['sheetName'] = params['sheet_name']
-        if 'picture_number' in params:
-            path_params['pictureNumber'] = params['picture_number']
+        if 'picture_index' in params:
+            path_params['pictureIndex'] = params['picture_index']
 
         query_params = []
+        if 'format' in params:
+            query_params.append(('format', params['format']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
         if 'storage' in params:
@@ -396,7 +400,7 @@ class CellsPicturesApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/pictures/{pictureNumber}', 'GET',
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/pictures/{pictureIndex}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

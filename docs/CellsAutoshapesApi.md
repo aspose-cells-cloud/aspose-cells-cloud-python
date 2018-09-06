@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **cells_autoshapes_get_worksheet_autoshape**
-> file cells_autoshapes_get_worksheet_autoshape(name, sheet_name, autoshape_number, folder=folder, storage=storage)
+> file cells_autoshapes_get_worksheet_autoshape(name, sheet_name, autoshape_number, format=format, folder=folder, storage=storage)
 
 Get autoshape info.
 
@@ -26,12 +26,13 @@ api_instance = asposecellscloud.CellsAutoshapesApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 autoshape_number = 56 # int | The autoshape number.
+format = 'format_example' # str | Exported format. (optional)
 folder = 'folder_example' # str | The document folder. (optional)
 storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get autoshape info.
-    api_response = api_instance.cells_autoshapes_get_worksheet_autoshape(name, sheet_name, autoshape_number, folder=folder, storage=storage)
+    api_response = api_instance.cells_autoshapes_get_worksheet_autoshape(name, sheet_name, autoshape_number, format=format, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsAutoshapesApi->cells_autoshapes_get_worksheet_autoshape: %s\n" % e)
@@ -44,6 +45,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| Worksheet name. | 
  **autoshape_number** | **int**| The autoshape number. | 
+ **format** | **str**| Exported format. | [optional] 
  **folder** | **str**| The document folder. | [optional] 
  **storage** | **str**| storage name. | [optional] 
 

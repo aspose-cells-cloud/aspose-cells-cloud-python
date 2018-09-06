@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cells_pictures_delete_worksheet_picture**](CellsPicturesApi.md#cells_pictures_delete_worksheet_picture) | **DELETE** /cells/{name}/worksheets/{sheetName}/pictures/{pictureIndex} | Delete a picture object in worksheet
 [**cells_pictures_delete_worksheet_pictures**](CellsPicturesApi.md#cells_pictures_delete_worksheet_pictures) | **DELETE** /cells/{name}/worksheets/{sheetName}/pictures | Delete all pictures in worksheet.
-[**cells_pictures_get_worksheet_picture**](CellsPicturesApi.md#cells_pictures_get_worksheet_picture) | **GET** /cells/{name}/worksheets/{sheetName}/pictures/{pictureNumber} | GRead worksheet picture by number.
+[**cells_pictures_get_worksheet_picture**](CellsPicturesApi.md#cells_pictures_get_worksheet_picture) | **GET** /cells/{name}/worksheets/{sheetName}/pictures/{pictureIndex} | GRead worksheet picture by number.
 [**cells_pictures_get_worksheet_pictures**](CellsPicturesApi.md#cells_pictures_get_worksheet_pictures) | **GET** /cells/{name}/worksheets/{sheetName}/pictures | Read worksheet pictures.
 [**cells_pictures_post_worksheet_picture**](CellsPicturesApi.md#cells_pictures_post_worksheet_picture) | **POST** /cells/{name}/worksheets/{sheetName}/pictures/{pictureIndex} | Update worksheet picture by index.
 [**cells_pictures_put_worksheet_add_picture**](CellsPicturesApi.md#cells_pictures_put_worksheet_add_picture) | **PUT** /cells/{name}/worksheets/{sheetName}/pictures | Add a new worksheet picture.
@@ -119,7 +119,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_pictures_get_worksheet_picture**
-> file cells_pictures_get_worksheet_picture(name, sheet_name, picture_number, folder=folder, storage=storage)
+> file cells_pictures_get_worksheet_picture(name, sheet_name, picture_index, format=format, folder=folder, storage=storage)
 
 GRead worksheet picture by number.
 
@@ -135,13 +135,14 @@ from pprint import pprint
 api_instance = asposecellscloud.CellsPicturesApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
-picture_number = 56 # int | The picture number.
+picture_index = 56 # int | The picture index.
+format = 'format_example' # str | The exported object format. (optional)
 folder = 'folder_example' # str | The document folder. (optional)
 storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # GRead worksheet picture by number.
-    api_response = api_instance.cells_pictures_get_worksheet_picture(name, sheet_name, picture_number, folder=folder, storage=storage)
+    api_response = api_instance.cells_pictures_get_worksheet_picture(name, sheet_name, picture_index, format=format, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsPicturesApi->cells_pictures_get_worksheet_picture: %s\n" % e)
@@ -153,7 +154,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| Worksheet name. | 
- **picture_number** | **int**| The picture number. | 
+ **picture_index** | **int**| The picture index. | 
+ **format** | **str**| The exported object format. | [optional] 
  **folder** | **str**| The document folder. | [optional] 
  **storage** | **str**| storage name. | [optional] 
 

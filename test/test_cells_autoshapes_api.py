@@ -48,6 +48,20 @@ class TestCellsAutoshapesApi(unittest.TestCase):
         result = self.api.cells_autoshapes_get_worksheet_autoshape(name, sheet_name,autoshapeNumber, folder=folder)
         pass
 
+    def test_cells_autoshapes_get_worksheet_autoshape_format(self):
+        """
+        Test case for cells_autoshapes_get_worksheet_autoshape with format
+
+        Get autoshape info.
+        """
+        name ='myDocument.xlsx'
+        sheet_name ='Sheet2'
+        autoshapeNumber = 4  
+        folder = "Temp"
+        AuthUtil.Ready(name, folder)
+        result = self.api.cells_autoshapes_get_worksheet_autoshape(name, sheet_name,autoshapeNumber, format="png", folder=folder)
+        pass
+
     def test_cells_autoshapes_get_worksheet_autoshapes(self):
         """
         Test case for cells_autoshapes_get_worksheet_autoshapes

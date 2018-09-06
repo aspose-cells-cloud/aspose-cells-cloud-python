@@ -123,6 +123,20 @@ class TestCellsWorkbookApi(unittest.TestCase):
         result = self.api.cells_workbook_get_workbook(name,password=password,is_auto_fit=isAutoFit, folder=folder)
         pass
 
+    def test_cells_workbook_get_workbook_format(self):
+        """
+        Test case for cells_workbook_get_workbook with format
+
+        Read workbook info or export.
+        """
+        name ='Book1.xlsx'       
+        folder = "Temp"
+        password = None
+        isAutoFit = True
+        AuthUtil.Ready(name, folder)
+        result = self.api.cells_workbook_get_workbook(name,password=password,format="xlsx", is_auto_fit=isAutoFit, folder=folder)
+        pass
+
     def test_cells_workbook_get_workbook_default_style(self):
         """
         Test case for cells_workbook_get_workbook_default_style
@@ -290,9 +304,8 @@ class TestCellsWorkbookApi(unittest.TestCase):
         name ='Book1.xlsx'       
         folder = "Temp"
         xmlFile = "ReportData.xml"
-        outPath = None
         AuthUtil.Ready(name, folder)
-        result = self.api.cells_workbook_post_workbook_get_smart_marker_result(name, xml_file=xmlFile, folder= folder,out_path=outPath)
+        result = self.api.cells_workbook_post_workbook_get_smart_marker_result(name, xml_file=xmlFile, folder= folder)
         pass
 
     def test_cells_workbook_post_workbook_settings(self):
@@ -375,7 +388,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         format ='xlsx'       
         password = None
         outPath = None      
-        result = self.api.cells_workbook_put_convert_workbook(format=format, password=password, out_path=outPath)
+        result = self.api.cells_workbook_put_convert_workbook(format=format)
         pass
 
     def test_cells_workbook_put_document_protect_from_changes(self):

@@ -119,7 +119,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_ole_objects_get_worksheet_ole_object**
-> file cells_ole_objects_get_worksheet_ole_object(name, sheet_name, object_number, folder=folder, storage=storage)
+> file cells_ole_objects_get_worksheet_ole_object(name, sheet_name, object_number, format=format, folder=folder, storage=storage)
 
 Get OLE object info.
 
@@ -136,12 +136,13 @@ api_instance = asposecellscloud.CellsOleObjectsApi()
 name = 'name_example' # str | Document name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 object_number = 56 # int | The object number.
+format = 'format_example' # str | The exported object format. (optional)
 folder = 'folder_example' # str | The document folder. (optional)
 storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Get OLE object info.
-    api_response = api_instance.cells_ole_objects_get_worksheet_ole_object(name, sheet_name, object_number, folder=folder, storage=storage)
+    api_response = api_instance.cells_ole_objects_get_worksheet_ole_object(name, sheet_name, object_number, format=format, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsOleObjectsApi->cells_ole_objects_get_worksheet_ole_object: %s\n" % e)
@@ -154,6 +155,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Document name. | 
  **sheet_name** | **str**| Worksheet name. | 
  **object_number** | **int**| The object number. | 
+ **format** | **str**| The exported object format. | [optional] 
  **folder** | **str**| The document folder. | [optional] 
  **storage** | **str**| storage name. | [optional] 
 
