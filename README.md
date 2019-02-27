@@ -2,7 +2,7 @@
 
 Aspose.Cells Cloud SDK for Python allows you to use Aspose.Cells APIs in your Python applications
 
-- Package version: 18.9
+- Package version: 19.2.1
 - Build package: io.swagger.codegen.languages.PythonClientCodegen
 
 ## Requirements.
@@ -74,6 +74,7 @@ Class | Method | HTTP request | Description
 *CellsApi* | [**cells_delete_worksheet_columns**](docs/CellsApi.md#cells_delete_worksheet_columns) | **DELETE** /cells/{name}/worksheets/{sheetName}/cells/columns/{columnIndex} | Delete worksheet columns.
 *CellsApi* | [**cells_delete_worksheet_row**](docs/CellsApi.md#cells_delete_worksheet_row) | **DELETE** /cells/{name}/worksheets/{sheetName}/cells/rows/{rowIndex} | Delete worksheet row.
 *CellsApi* | [**cells_delete_worksheet_rows**](docs/CellsApi.md#cells_delete_worksheet_rows) | **DELETE** /cells/{name}/worksheets/{sheetName}/cells/rows | Delete several worksheet rows.
+*CellsApi* | [**cells_get_cell_html_string**](docs/CellsApi.md#cells_get_cell_html_string) | **GET** /cells/{name}/worksheets/{sheetName}/cells/{cellName}/htmlstring | Read cell data by cell&#39;s name.
 *CellsApi* | [**cells_get_worksheet_cell**](docs/CellsApi.md#cells_get_worksheet_cell) | **GET** /cells/{name}/worksheets/{sheetName}/cells/{cellOrMethodName} | Read cell data by cell&#39;s name.
 *CellsApi* | [**cells_get_worksheet_cell_style**](docs/CellsApi.md#cells_get_worksheet_cell_style) | **GET** /cells/{name}/worksheets/{sheetName}/cells/{cellName}/style | Read cell&#39;s style info.
 *CellsApi* | [**cells_get_worksheet_cells**](docs/CellsApi.md#cells_get_worksheet_cells) | **GET** /cells/{name}/worksheets/{sheetName}/cells | Get cells info.
@@ -191,7 +192,7 @@ Class | Method | HTTP request | Description
 *CellsPageSetupApi* | [**cells_page_setup_post_page_setup**](docs/CellsPageSetupApi.md#cells_page_setup_post_page_setup) | **POST** /cells/{name}/worksheets/{sheetName}/pagesetup | Update Page Setup information.
 *CellsPicturesApi* | [**cells_pictures_delete_worksheet_picture**](docs/CellsPicturesApi.md#cells_pictures_delete_worksheet_picture) | **DELETE** /cells/{name}/worksheets/{sheetName}/pictures/{pictureIndex} | Delete a picture object in worksheet
 *CellsPicturesApi* | [**cells_pictures_delete_worksheet_pictures**](docs/CellsPicturesApi.md#cells_pictures_delete_worksheet_pictures) | **DELETE** /cells/{name}/worksheets/{sheetName}/pictures | Delete all pictures in worksheet.
-*CellsPicturesApi* | [**cells_pictures_get_worksheet_picture**](docs/CellsPicturesApi.md#cells_pictures_get_worksheet_picture) | **GET** /cells/{name}/worksheets/{sheetName}/pictures/{pictureNumber} | GRead worksheet picture by number.
+*CellsPicturesApi* | [**cells_pictures_get_worksheet_picture**](docs/CellsPicturesApi.md#cells_pictures_get_worksheet_picture) | **GET** /cells/{name}/worksheets/{sheetName}/pictures/{pictureIndex} | GRead worksheet picture by number.
 *CellsPicturesApi* | [**cells_pictures_get_worksheet_pictures**](docs/CellsPicturesApi.md#cells_pictures_get_worksheet_pictures) | **GET** /cells/{name}/worksheets/{sheetName}/pictures | Read worksheet pictures.
 *CellsPicturesApi* | [**cells_pictures_post_worksheet_picture**](docs/CellsPicturesApi.md#cells_pictures_post_worksheet_picture) | **POST** /cells/{name}/worksheets/{sheetName}/pictures/{pictureIndex} | Update worksheet picture by index.
 *CellsPicturesApi* | [**cells_pictures_put_worksheet_add_picture**](docs/CellsPicturesApi.md#cells_pictures_put_worksheet_add_picture) | **PUT** /cells/{name}/worksheets/{sheetName}/pictures | Add a new worksheet picture.
@@ -430,6 +431,7 @@ Class | Method | HTTP request | Description
  - [HorizontalPageBreakResponse](docs/HorizontalPageBreakResponse.md)
  - [HorizontalPageBreaks](docs/HorizontalPageBreaks.md)
  - [HorizontalPageBreaksResponse](docs/HorizontalPageBreaksResponse.md)
+ - [HtmlSaveOptions](docs/HtmlSaveOptions.md)
  - [Hyperlink](docs/Hyperlink.md)
  - [HyperlinkResponse](docs/HyperlinkResponse.md)
  - [Hyperlinks](docs/Hyperlinks.md)
@@ -449,6 +451,7 @@ Class | Method | HTTP request | Description
  - [ListObjectResponse](docs/ListObjectResponse.md)
  - [ListObjects](docs/ListObjects.md)
  - [ListObjectsResponse](docs/ListObjectsResponse.md)
+ - [MHtmlSaveOptions](docs/MHtmlSaveOptions.md)
  - [MergedCell](docs/MergedCell.md)
  - [MergedCellResponse](docs/MergedCellResponse.md)
  - [MergedCells](docs/MergedCells.md)

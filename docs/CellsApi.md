@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**cells_delete_worksheet_columns**](CellsApi.md#cells_delete_worksheet_columns) | **DELETE** /cells/{name}/worksheets/{sheetName}/cells/columns/{columnIndex} | Delete worksheet columns.
 [**cells_delete_worksheet_row**](CellsApi.md#cells_delete_worksheet_row) | **DELETE** /cells/{name}/worksheets/{sheetName}/cells/rows/{rowIndex} | Delete worksheet row.
 [**cells_delete_worksheet_rows**](CellsApi.md#cells_delete_worksheet_rows) | **DELETE** /cells/{name}/worksheets/{sheetName}/cells/rows | Delete several worksheet rows.
+[**cells_get_cell_html_string**](CellsApi.md#cells_get_cell_html_string) | **GET** /cells/{name}/worksheets/{sheetName}/cells/{cellName}/htmlstring | Read cell data by cell&#39;s name.
 [**cells_get_worksheet_cell**](CellsApi.md#cells_get_worksheet_cell) | **GET** /cells/{name}/worksheets/{sheetName}/cells/{cellOrMethodName} | Read cell data by cell&#39;s name.
 [**cells_get_worksheet_cell_style**](CellsApi.md#cells_get_worksheet_cell_style) | **GET** /cells/{name}/worksheets/{sheetName}/cells/{cellName}/style | Read cell&#39;s style info.
 [**cells_get_worksheet_cells**](CellsApi.md#cells_get_worksheet_cells) | **GET** /cells/{name}/worksheets/{sheetName}/cells | Get cells info.
@@ -203,6 +204,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SaaSposeResponse**](SaaSposeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cells_get_cell_html_string**
+> object cells_get_cell_html_string(name, sheet_name, cell_name, folder=folder, storage=storage)
+
+Read cell data by cell's name.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import asposecellscloud
+from asposecellscloud.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = asposecellscloud.CellsApi()
+name = 'name_example' # str | Document name.
+sheet_name = 'sheet_name_example' # str | Worksheet name.
+cell_name = 'cell_name_example' # str | The cell's  name.
+folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
+
+try: 
+    # Read cell data by cell's name.
+    api_response = api_instance.cells_get_cell_html_string(name, sheet_name, cell_name, folder=folder, storage=storage)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CellsApi->cells_get_cell_html_string: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Document name. | 
+ **sheet_name** | **str**| Worksheet name. | 
+ **cell_name** | **str**| The cell&#39;s  name. | 
+ **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
+
+### Return type
+
+**object**
 
 ### Authorization
 

@@ -16,6 +16,7 @@ from __future__ import absolute_import
 import os
 import sys
 import unittest
+import warnings
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -32,6 +33,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
     """ CellsAutoFilterApi unit test stubs """
 
     def setUp(self):
+        warnings.simplefilter("ignore", ResourceWarning)
         self.api_client = AuthUtil.GetApiClient()
         self.api = asposecellscloud.apis.cells_auto_filter_api.CellsAutoFilterApi(self.api_client)
 

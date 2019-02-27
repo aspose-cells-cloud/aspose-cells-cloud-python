@@ -16,6 +16,7 @@ from __future__ import absolute_import
 import os
 import sys
 import unittest
+import warnings
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -32,6 +33,7 @@ class TestCellsApi(unittest.TestCase):
     """ CellsApi unit test stubs """
 
     def setUp(self):
+        warnings.simplefilter("ignore", ResourceWarning)
         self.api_client = AuthUtil.GetApiClient()
         self.api = asposecellscloud.apis.cells_api.CellsApi(self.api_client)
 
@@ -402,6 +404,20 @@ class TestCellsApi(unittest.TestCase):
         folder = "Temp"
         AuthUtil.Ready(name, folder)
         self.api.cells_post_row_style(name, sheet_name, rowIndex, style=style,folder=folder)
+        pass
+
+    def test_cells_get_cell_html_string(self):
+        """
+        Test case for cells_get_cell_html_string
+
+        Set htmlstring value into cell
+        """
+        name ='Book1.xlsx'
+        sheet_name ='Sheet1'
+        cellName = 'C1' 
+        folder = "Temp"
+        AuthUtil.Ready(name, folder)
+        self.api.cells_get_cell_html_string(name, sheet_name, cellName,folder=folder)
         pass
 
     def test_cells_post_set_cell_html_string(self):

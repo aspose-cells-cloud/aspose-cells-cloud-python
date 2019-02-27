@@ -138,6 +138,7 @@ from .format_condition import FormatCondition
 from .horizontal_page_break_response import HorizontalPageBreakResponse
 from .horizontal_page_breaks import HorizontalPageBreaks
 from .horizontal_page_breaks_response import HorizontalPageBreaksResponse
+from .html_save_options import HtmlSaveOptions
 from .hyperlink import Hyperlink
 from .hyperlink_response import HyperlinkResponse
 from .hyperlinks import Hyperlinks
@@ -157,6 +158,7 @@ from .list_object_operate_parameter import ListObjectOperateParameter
 from .list_object_response import ListObjectResponse
 from .list_objects import ListObjects
 from .list_objects_response import ListObjectsResponse
+from .m_html_save_options import MHtmlSaveOptions
 from .merged_cell import MergedCell
 from .merged_cell_response import MergedCellResponse
 from .merged_cells import MergedCells

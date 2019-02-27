@@ -2762,7 +2762,7 @@ class CellsWorkbookApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def cells_workbook_put_convert_workbook(self, **kwargs):
+    def cells_workbook_put_convert_workbook(self, workbook, **kwargs):
         """
         Convert workbook from request content to some format.
         This method makes a synchronous HTTP request by default. To make an
@@ -2771,10 +2771,11 @@ class CellsWorkbookApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_workbook_put_convert_workbook(callback=callback_function)
+        >>> thread = api.cells_workbook_put_convert_workbook(workbook, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str workbook: (required)
         :param str format: The format to convert.
         :param str password: The workbook password.
         :param str out_path: Path to save result
@@ -2784,12 +2785,12 @@ class CellsWorkbookApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.cells_workbook_put_convert_workbook_with_http_info(**kwargs)
+            return self.cells_workbook_put_convert_workbook_with_http_info(workbook, **kwargs)
         else:
-            (data) = self.cells_workbook_put_convert_workbook_with_http_info(**kwargs)
+            (data) = self.cells_workbook_put_convert_workbook_with_http_info(workbook, **kwargs)
             return data
 
-    def cells_workbook_put_convert_workbook_with_http_info(self, **kwargs):
+    def cells_workbook_put_convert_workbook_with_http_info(self, workbook, **kwargs):
         """
         Convert workbook from request content to some format.
         This method makes a synchronous HTTP request by default. To make an
@@ -2798,10 +2799,11 @@ class CellsWorkbookApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_workbook_put_convert_workbook_with_http_info(callback=callback_function)
+        >>> thread = api.cells_workbook_put_convert_workbook_with_http_info(workbook, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str workbook: (required)
         :param str format: The format to convert.
         :param str password: The workbook password.
         :param str out_path: Path to save result
@@ -2810,7 +2812,7 @@ class CellsWorkbookApi(object):
                  returns the request thread.
         """
 
-        all_params = ['format', 'password', 'out_path']
+        all_params = ['workbook', 'format', 'password', 'out_path']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2825,6 +2827,9 @@ class CellsWorkbookApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'workbook' is set
+        if ('workbook' not in params) or (params['workbook'] is None):
+            raise ValueError("Missing the required parameter `workbook` when calling `cells_workbook_put_convert_workbook`")
 
 
         collection_formats = {}
@@ -2845,6 +2850,8 @@ class CellsWorkbookApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'workbook' in params:
+            body_params = params['workbook']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])

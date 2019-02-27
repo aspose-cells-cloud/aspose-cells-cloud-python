@@ -16,6 +16,7 @@ from __future__ import absolute_import
 import os
 import sys
 import unittest
+import warnings
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -36,6 +37,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
     """ CellsWorkbookApi unit test stubs """
 
     def setUp(self):
+        warnings.simplefilter("ignore",ResourceWarning)
         self.api_client = AuthUtil.GetApiClient()
         self.api = asposecellscloud.apis.cells_workbook_api.CellsWorkbookApi(self.api_client)
 
@@ -385,10 +387,14 @@ class TestCellsWorkbookApi(unittest.TestCase):
 
         Convert workbook from request content to some format.
         """
-        format ='xlsx'       
+        fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        f = open(fullfilename, 'rb')
+        workbook = f.read()
+        f.close()
+        format ='pdf'       
         password = None
         outPath = None      
-        result = self.api.cells_workbook_put_convert_workbook(format=format)
+        result = self.api.cells_workbook_put_convert_workbook(workbook,format=format)
         pass
 
     def test_cells_workbook_put_document_protect_from_changes(self):

@@ -1244,7 +1244,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_workbook_put_convert_workbook**
-> file cells_workbook_put_convert_workbook(format=format, password=password, out_path=out_path)
+> file cells_workbook_put_convert_workbook(workbook, format=format, password=password, out_path=out_path)
 
 Convert workbook from request content to some format.
 
@@ -1258,13 +1258,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = asposecellscloud.CellsWorkbookApi()
+workbook = 'B' # str | 
 format = 'format_example' # str | The format to convert. (optional)
 password = 'password_example' # str | The workbook password. (optional)
 out_path = 'out_path_example' # str | Path to save result (optional)
 
 try: 
     # Convert workbook from request content to some format.
-    api_response = api_instance.cells_workbook_put_convert_workbook(format=format, password=password, out_path=out_path)
+    api_response = api_instance.cells_workbook_put_convert_workbook(workbook, format=format, password=password, out_path=out_path)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsWorkbookApi->cells_workbook_put_convert_workbook: %s\n" % e)
@@ -1274,6 +1275,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **workbook** | **str**|  | 
  **format** | **str**| The format to convert. | [optional] 
  **password** | **str**| The workbook password. | [optional] 
  **out_path** | **str**| Path to save result | [optional] 

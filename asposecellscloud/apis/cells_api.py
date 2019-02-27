@@ -440,6 +440,132 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def cells_get_cell_html_string(self, name, sheet_name, cell_name, **kwargs):
+        """
+        Read cell data by cell's name.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_get_cell_html_string(name, sheet_name, cell_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Document name. (required)
+        :param str sheet_name: Worksheet name. (required)
+        :param str cell_name: The cell's  name. (required)
+        :param str folder: Document's folder.
+        :param str storage: storage name.
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.cells_get_cell_html_string_with_http_info(name, sheet_name, cell_name, **kwargs)
+        else:
+            (data) = self.cells_get_cell_html_string_with_http_info(name, sheet_name, cell_name, **kwargs)
+            return data
+
+    def cells_get_cell_html_string_with_http_info(self, name, sheet_name, cell_name, **kwargs):
+        """
+        Read cell data by cell's name.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_get_cell_html_string_with_http_info(name, sheet_name, cell_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Document name. (required)
+        :param str sheet_name: Worksheet name. (required)
+        :param str cell_name: The cell's  name. (required)
+        :param str folder: Document's folder.
+        :param str storage: storage name.
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'cell_name', 'folder', 'storage']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_get_cell_html_string" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_get_cell_html_string`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_get_cell_html_string`")
+        # verify the required parameter 'cell_name' is set
+        if ('cell_name' not in params) or (params['cell_name'] is None):
+            raise ValueError("Missing the required parameter `cell_name` when calling `cells_get_cell_html_string`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'cell_name' in params:
+            path_params['cellName'] = params['cell_name']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/cells/{cellName}/htmlstring', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='object',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def cells_get_worksheet_cell(self, name, sheet_name, cell_or_method_name, **kwargs):
         """
         Read cell data by cell's name.
