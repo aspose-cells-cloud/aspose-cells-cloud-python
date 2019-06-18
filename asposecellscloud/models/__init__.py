@@ -159,6 +159,7 @@ from .list_object_response import ListObjectResponse
 from .list_objects import ListObjects
 from .list_objects_response import ListObjectsResponse
 from .m_html_save_options import MHtmlSaveOptions
+from .markdown_save_options import MarkdownSaveOptions
 from .merged_cell import MergedCell
 from .merged_cell_response import MergedCellResponse
 from .merged_cells import MergedCells

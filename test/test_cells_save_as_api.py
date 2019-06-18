@@ -53,7 +53,22 @@ class TestCellsSaveAsApi(unittest.TestCase):
         AuthUtil.Ready(name, folder)
         result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder)
         pass
-        
+    def test_cells_save_as_post_document_save_as_md(self):
+        """
+        Test case for cells_save_as_post_document_save_as
+
+        Convert document and save result to storage.
+        """
+        name ='Book1.xlsx'    
+        saveOptions = None
+        newfilename = "newbook.md"
+        isAutoFitRows= True
+        isAutoFitColumns= True
+        folder = "Temp"
+        AuthUtil.Ready(name, folder)
+        result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder)
+        pass
+
     def test_cells_save_as_post_document_save_as_pdf(self):
         """
         Test case for cells_save_as_post_document_save_as

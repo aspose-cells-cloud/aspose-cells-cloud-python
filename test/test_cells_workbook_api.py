@@ -139,6 +139,20 @@ class TestCellsWorkbookApi(unittest.TestCase):
         result = self.api.cells_workbook_get_workbook(name,password=password,format="xlsx", is_auto_fit=isAutoFit, folder=folder)
         pass
 
+    def test_cells_workbook_get_workbook_format_md(self):
+        """
+        Test case for cells_workbook_get_workbook with format
+
+        Read workbook info or export.
+        """
+        name ='Book1.xlsx'       
+        folder = "Temp"
+        password = None
+        isAutoFit = True
+        AuthUtil.Ready(name, folder)
+        result = self.api.cells_workbook_get_workbook(name,password=password,format="md", is_auto_fit=isAutoFit, folder=folder)
+        pass
+
     def test_cells_workbook_get_workbook_default_style(self):
         """
         Test case for cells_workbook_get_workbook_default_style
