@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_autoshapes_api import CellsAutoshapesApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 
 class TestCellsAutoshapesApi(unittest.TestCase):
@@ -30,8 +30,8 @@ class TestCellsAutoshapesApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore", ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_autoshapes_api.CellsAutoshapesApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -46,7 +46,7 @@ class TestCellsAutoshapesApi(unittest.TestCase):
         sheet_name ='Sheet2'
         autoshapeNumber = 4  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_autoshapes_get_worksheet_autoshape(name, sheet_name,autoshapeNumber, folder=folder)
         pass
 
@@ -60,7 +60,7 @@ class TestCellsAutoshapesApi(unittest.TestCase):
         sheet_name ='Sheet2'
         autoshapeNumber = 4  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_autoshapes_get_worksheet_autoshape(name, sheet_name,autoshapeNumber, format="png", folder=folder)
         pass
 
@@ -73,7 +73,7 @@ class TestCellsAutoshapesApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet2'
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_autoshapes_get_worksheet_autoshapes(name, sheet_name, folder=folder)
         pass
 

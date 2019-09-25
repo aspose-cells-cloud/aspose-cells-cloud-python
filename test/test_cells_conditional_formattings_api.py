@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_conditional_formattings_api import CellsConditionalFormattingsApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import FormatCondition
 
@@ -31,8 +31,8 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore", ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_conditional_formattings_api.CellsConditionalFormattingsApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -47,7 +47,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_conditional_formattings_delete_worksheet_conditional_formatting(name, sheet_name,index,folder=folder)
         pass
 
@@ -64,7 +64,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         totalRows = 4
         totalColumns = 6     
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_conditional_formattings_delete_worksheet_conditional_formatting_area(name, sheet_name,startRow,startColumn, totalRows,totalColumns,folder=folder)
         pass
 
@@ -77,7 +77,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'   
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_conditional_formattings_delete_worksheet_conditional_formattings(name, sheet_name,folder=folder)
         pass
 
@@ -91,7 +91,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_conditional_formattings_get_worksheet_conditional_formatting(name, sheet_name,index,folder=folder)
         pass
 
@@ -105,7 +105,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_conditional_formattings_get_worksheet_conditional_formattings(name, sheet_name,folder=folder)
         pass
 
@@ -124,7 +124,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         formatcondition.formula1 = "v1"
         formatcondition.formula2 = "v2"
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_conditional_formattings_put_worksheet_conditional_formatting(name, sheet_name,cellArea,formatcondition=formatcondition,folder=folder)
         pass
 
@@ -143,7 +143,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         formula1 = "v1"     
         formula2 = "v2"         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_conditional_formattings_put_worksheet_format_condition(name, sheet_name,index , cellArea,   type,  operatorType ,formula1,formula2, folder=folder)
         pass
 
@@ -158,7 +158,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         index = 0       
         cellArea = "A1:C10"       
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_conditional_formattings_put_worksheet_format_condition_area(name, sheet_name, index, cellArea , folder=folder)
         pass
 
@@ -176,7 +176,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         formula1 = "v1"     
         formula2 = "v2"         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_conditional_formattings_put_worksheet_format_condition_condition(name, sheet_name, index , type,  operatorType ,formula1,formula2, folder=folder)
         pass
 

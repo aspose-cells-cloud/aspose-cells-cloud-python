@@ -15,7 +15,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "asposecellscloud"
-VERSION = "19.6"
+VERSION = "19.9"
 # To install the library, run the following
 #
 # python setup.py install
@@ -28,7 +28,7 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "asp
 setup(
     name=NAME,
     version=VERSION,
-    description="Aspose.Cells.Cloud for Python",
+    description="Aspose.Cells Cloud for Python",
     author="Nick Liu",
     author_email="nick.liu@aspose.com",
     url="https://github.com/aspose-cells-cloud/aspose-cells-cloud-python",

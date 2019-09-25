@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_list_objects_api import CellsListObjectsApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import ListObject
 from asposecellscloud.models import DataSorter
@@ -33,8 +33,8 @@ class TestCellsListObjectsApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore",ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_list_objects_api.CellsListObjectsApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -49,7 +49,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         sheet_name ='Sheet7'
         listObjectIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_list_objects_delete_worksheet_list_object(name, sheet_name , listObjectIndex , folder=folder)
         pass
 
@@ -63,7 +63,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         sheet_name ='Sheet7'
         listObjectIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_list_objects_delete_worksheet_list_objects(name, sheet_name,folder=folder)
         pass
 
@@ -77,7 +77,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         sheet_name ='Sheet7'
         listObjectIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_list_objects_get_worksheet_list_object(name, sheet_name,listObjectIndex,folder=folder)
         pass
 
@@ -91,7 +91,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         sheet_name ='Sheet7'
         listObjectIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_list_objects_get_worksheet_list_objects(name, sheet_name,folder=folder)
         pass
 
@@ -107,7 +107,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         listObject = ListObject()
         listObject.show_header_row = True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_list_objects_post_worksheet_list_object(name, sheet_name,listObjectIndex,list_object=listObject,folder=folder)
         pass
 
@@ -121,7 +121,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         sheet_name ='Sheet7'
         listObjectIndex = 0   
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_list_objects_post_worksheet_list_object_convert_to_range(name, sheet_name,listObjectIndex,folder=folder)
         pass
 
@@ -137,7 +137,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         dataSorter = DataSorter()
         dataSorter.case_sensitive = True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_list_objects_post_worksheet_list_object_sort_table(name, sheet_name,listObjectIndex,data_sorter=dataSorter,folder=folder)
         pass
 
@@ -159,7 +159,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         request.pivot_field_rows = [1]
         request.source_data = '=Sheet2!A1:E8'
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table(name, sheet_name,listObjectIndex,destsheetName, request=request,folder=folder)
         pass
 
@@ -177,7 +177,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         endColumn = 3         
         folder = "Temp"
         hasHeaders = True 
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_list_objects_put_worksheet_list_object(name, sheet_name,startRow,startColumn, endRow, endColumn,folder=folder,has_headers=hasHeaders)
         pass
 

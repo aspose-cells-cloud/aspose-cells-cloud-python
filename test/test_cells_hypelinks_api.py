@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_hypelinks_api import CellsHypelinksApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import Hyperlink
 
@@ -31,8 +31,9 @@ class TestCellsHypelinksApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore", ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_hypelinks_api.CellsHypelinksApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+
 
     def tearDown(self):
         pass
@@ -47,7 +48,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_hypelinks_delete_worksheet_hyperlink(name, sheet_name,hyperlinkIndex,folder=folder)
         pass
 
@@ -61,7 +62,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_hypelinks_delete_worksheet_hyperlinks(name, sheet_name,folder=folder)
         pass
 
@@ -75,7 +76,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_hypelinks_get_worksheet_hyperlink(name, sheet_name,hyperlinkIndex,folder=folder)
         pass
 
@@ -89,7 +90,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_hypelinks_get_worksheet_hyperlinks(name, sheet_name,folder=folder)
         pass
 
@@ -105,7 +106,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         folder = "Temp"
         hyperlink = Hyperlink()
         hyperlink.address = 'http://wwww.aspose.com'
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_hypelinks_post_worksheet_hyperlink(name, sheet_name, hyperlinkIndex , hyperlink = hyperlink , folder=folder)
         pass
 
@@ -123,7 +124,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         totalColumns = 3 
         address = 'http://www.aspose.com'    
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_hypelinks_put_worksheet_hyperlink(name, sheet_name,firstRow,firstColumn,totalRows,totalColumns,address,folder=folder)
         pass
 

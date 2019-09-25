@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_task_api import CellsTaskApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import TaskDescription
 from asposecellscloud.models import SplitWorkbookTaskParameter
@@ -34,8 +34,8 @@ class TestCellsTaskApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore",ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_task_api.CellsTaskApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -48,7 +48,7 @@ class TestCellsTaskApi(unittest.TestCase):
         """
         name ='Book1.xlsx'
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api,name, folder)
         task1 = TaskDescription()
         task1.task_type = 'SplitWorkbook'
         param1 = SplitWorkbookTaskParameter()

@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_save_as_api import CellsSaveAsApi
+from asposecellscloud.apis.cells_api import CellsApi
 from asposecellscloud.models import PdfSaveOptions
 import AuthUtil
 
@@ -32,8 +32,8 @@ class TestCellsSaveAsApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore",ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_save_as_api.CellsSaveAsApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -50,7 +50,7 @@ class TestCellsSaveAsApi(unittest.TestCase):
         isAutoFitRows= True
         isAutoFitColumns= True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder)
         pass
     def test_cells_save_as_post_document_save_as_md(self):
@@ -65,7 +65,7 @@ class TestCellsSaveAsApi(unittest.TestCase):
         isAutoFitRows= True
         isAutoFitColumns= True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder)
         pass
 
@@ -83,7 +83,7 @@ class TestCellsSaveAsApi(unittest.TestCase):
         isAutoFitRows= True
         isAutoFitColumns= True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder)
         pass
 
@@ -102,7 +102,7 @@ class TestCellsSaveAsApi(unittest.TestCase):
         isAutoFitColumns= True
         folder = "Temp"
         storage = "DropBox"
-        AuthUtil.Ready(name, folder, storage=storage)
+        # AuthUtil.Ready(name, folder, storage)
         result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder, storage=storage)
         pass
 

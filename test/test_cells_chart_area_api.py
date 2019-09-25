@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_chart_area_api import CellsChartAreaApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 
 
@@ -31,8 +31,9 @@ class TestCellsChartAreaApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore", ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_chart_area_api.CellsChartAreaApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+
 
     def tearDown(self):
         pass
@@ -47,7 +48,7 @@ class TestCellsChartAreaApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 0  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_chart_area_get_chart_area(name, sheet_name,chartIndex, folder=folder)
         pass
 
@@ -61,7 +62,7 @@ class TestCellsChartAreaApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 0  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_chart_area_get_chart_area_border(name, sheet_name,chartIndex, folder=folder)
         pass
 
@@ -75,7 +76,7 @@ class TestCellsChartAreaApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 0  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_chart_area_get_chart_area_fill_format(name, sheet_name,chartIndex, folder = folder)
         pass
 

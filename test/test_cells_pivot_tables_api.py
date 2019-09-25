@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_pivot_tables_api import CellsPivotTablesApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import PivotTableFieldRequest
 from asposecellscloud.models import PivotFilter
@@ -39,8 +39,8 @@ class TestCellsPivotTablesApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore",ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_pivot_tables_api.CellsPivotTablesApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -58,7 +58,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         request = PivotTableFieldRequest()
         request.data = [1]
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_delete_pivot_table_field(name, sheet_name, pivot_table_index=pivotTableIndex, pivot_field_type=pivotFieldType,request=request,folder=folder)
         pass
 
@@ -75,7 +75,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         request = PivotTableFieldRequest()
         request.data = [1]
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_delete_worksheet_pivot_table(name, sheet_name, pivotTableIndex, folder=folder)
         pass
 
@@ -91,7 +91,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         fieldIndex = 0
         needReCalculate = True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivotTableIndex,  fieldIndex,need_re_calculate=needReCalculate,folder=folder)
         pass
 
@@ -107,7 +107,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         fieldIndex = 0
         needReCalculate = True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_delete_worksheet_pivot_table_filters(name, sheet_name,pivotTableIndex,need_re_calculate=needReCalculate, folder=folder)
         pass
 
@@ -122,7 +122,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotTableIndex = 0
         fieldIndex = 0
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_delete_worksheet_pivot_tables(name, sheet_name, folder=folder)
         pass
 
@@ -138,7 +138,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotFieldIndex = 0
         pivotFieldType = "Row"
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_get_pivot_table_field(name, sheet_name,pivotTableIndex, pivotFieldIndex,pivotFieldType,folder=folder)
         pass
 
@@ -153,7 +153,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotTableIndex = 0
         fieldIndex = 0
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_get_worksheet_pivot_table(name, sheet_name,pivotTableIndex, folder=folder)
         pass
 
@@ -182,7 +182,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         autoFilter.filter_columns = [filterColumn]
         pivotFilter.auto_filter = autoFilter
 
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_put_worksheet_pivot_table_filter(name, sheet_name,pivotTableIndex, filter=pivotFilter, need_re_calculate=needReCalculate,folder=folder)
         result = self.api.cells_pivot_tables_get_worksheet_pivot_table_filter(name, sheet_name,pivotTableIndex, filterIndex, folder=folder)
         pass
@@ -198,7 +198,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotTableIndex = 0
         fieldIndex = 0
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_get_worksheet_pivot_table_filters(name, sheet_name,pivotTableIndex, folder=folder)
         pass
 
@@ -213,7 +213,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotTableIndex = 0
         fieldIndex = 0
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_get_worksheet_pivot_tables(name, sheet_name, folder=folder)
         pass
 
@@ -234,7 +234,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         style.font = font
         needReCalculate = True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_post_pivot_table_cell_style(name, sheet_name, pivotTableIndex ,column,row ,style=style,need_re_calculate=needReCalculate  ,folder=folder)
         pass
 
@@ -253,7 +253,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         isHide = True
         needReCalculate = True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_post_pivot_table_field_hide_item(name, sheet_name, pivotTableIndex ,pivotFieldType,fieldIndex ,itemIndex,isHide,need_re_calculate=needReCalculate  ,folder=folder)
         pass
 
@@ -270,7 +270,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         _from = "Row"
         to = "Column"
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_post_pivot_table_field_move_to(name, sheet_name, pivotTableIndex ,fieldIndex ,_from,to ,folder=folder)
         pass
 
@@ -289,7 +289,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         style.font = font
         needReCalculate = True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_post_pivot_table_style(name, sheet_name, pivotTableIndex ,style=style,need_re_calculate=needReCalculate,folder=folder)
         pass
 
@@ -303,7 +303,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         sheet_name ='Sheet4'
         pivotTableIndex = 0
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_post_worksheet_pivot_table_calculate(name, sheet_name, pivotTableIndex ,folder=folder)
         pass
 
@@ -321,7 +321,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         destCellName = 'C10'
         needReCalculate = 'true'
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_post_worksheet_pivot_table_move(name, sheet_name, pivotTableIndex ,row=row, column=column,dest_cell_name=destCellName ,folder=folder)
         pass
 
@@ -338,7 +338,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         request = PivotTableFieldRequest()
         request.data = [1]
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_put_pivot_table_field(name, sheet_name, pivotTableIndex, pivotFieldType,request=request,need_re_calculate=True,folder=folder)
         pass
 
@@ -359,7 +359,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         tableName = "TestPivot"
         useSameSource = 'true'
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_put_worksheet_pivot_table(name, sheet_name, request=None, folder=folder,source_data=sourceData,dest_cell_name=destCellName,table_name=tableName,use_same_source=useSameSource)
         pass
 
@@ -389,7 +389,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         autoFilter.filter_columns = [filterColumn]
         pivotFilter.auto_filter = autoFilter
 
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pivot_tables_put_worksheet_pivot_table_filter(name, sheet_name,pivotTableIndex, filter=pivotFilter, need_re_calculate=needReCalculate,folder=folder)
         pass
 

@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_properties_api import CellsPropertiesApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import CellsDocumentProperty
 
@@ -32,8 +32,8 @@ class TestCellsPropertiesApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore",ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_properties_api.CellsPropertiesApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -46,7 +46,7 @@ class TestCellsPropertiesApi(unittest.TestCase):
         """
         name ='Book1.xlsx'      
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_properties_delete_document_properties(name,folder=folder)
         pass
 
@@ -59,7 +59,7 @@ class TestCellsPropertiesApi(unittest.TestCase):
         name ='Book1.xlsx' 
         propertyName = "Author"    
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_properties_delete_document_property(name, propertyName ,folder=folder)
         pass
 
@@ -71,7 +71,7 @@ class TestCellsPropertiesApi(unittest.TestCase):
         """
         name ='Book1.xlsx'       
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_properties_get_document_properties(name,folder=folder)
         pass
 
@@ -84,7 +84,7 @@ class TestCellsPropertiesApi(unittest.TestCase):
         name ='Book1.xlsx'
         propertyName = "Author"       
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_properties_get_document_property(name,propertyName,folder=folder)
         pass
 
@@ -100,7 +100,7 @@ class TestCellsPropertiesApi(unittest.TestCase):
         _property.name = "Author"
         _property.value = "Val"
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_properties_put_document_property(name,propertyName,_property=_property,folder=folder)
         pass
 

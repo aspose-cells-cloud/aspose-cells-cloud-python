@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_page_breaks_api import CellsPageBreaksApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 
 
@@ -31,8 +31,8 @@ class TestCellsPageBreaksApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore",ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_page_breaks_api.CellsPageBreaksApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -47,7 +47,7 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_breaks_delete_horizontal_page_break(name, sheet_name,index,folder=folder)
         pass
 
@@ -61,7 +61,7 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         row = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_breaks_delete_horizontal_page_breaks(name, sheet_name,row=row,folder=folder)
         pass
 
@@ -75,7 +75,7 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_breaks_delete_vertical_page_break(name, sheet_name,index,folder=folder)
         pass
 
@@ -89,7 +89,7 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         column = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_breaks_delete_vertical_page_breaks(name, sheet_name,column=column,folder=folder)
         pass
 
@@ -103,7 +103,7 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_breaks_get_horizontal_page_break(name, sheet_name,index,folder=folder)
         pass
 
@@ -116,7 +116,7 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_breaks_get_horizontal_page_breaks(name, sheet_name,folder=folder)
         pass
 
@@ -130,7 +130,7 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_breaks_get_vertical_page_break(name, sheet_name,index,folder=folder)
         pass
 
@@ -144,7 +144,7 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_breaks_get_vertical_page_breaks(name, sheet_name,folder=folder)
         pass
 
@@ -162,7 +162,7 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         startColumn = 1  
         endColumn = 1      
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_breaks_put_horizontal_page_break(name, sheet_name, cellname=cellname,row=row, column=column ,start_column=startColumn,end_column=endColumn,folder=folder)
         pass
 
@@ -180,7 +180,7 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         startRow = 1  
         endRow = 1      
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_breaks_put_vertical_page_break(name, sheet_name, cellname=cellname,column=column, row=row ,start_row=startRow,end_row=endRow,folder=folder)
         pass
 

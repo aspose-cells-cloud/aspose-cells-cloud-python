@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_ole_objects_api import CellsOleObjectsApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import OleObject
 
@@ -32,8 +32,8 @@ class TestCellsOleObjectsApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore",ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_ole_objects_api.CellsOleObjectsApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -48,7 +48,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         sheet_name ='Sheet6'
         oleObjectIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ole_objects_delete_worksheet_ole_object(name, sheet_name,oleObjectIndex,folder=folder)
         pass
 
@@ -62,7 +62,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         sheet_name ='Sheet6'
         oleObjectIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ole_objects_delete_worksheet_ole_objects(name, sheet_name,folder=folder)
         pass
 
@@ -76,7 +76,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         sheet_name ='Sheet6'
         oleObjectIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ole_objects_get_worksheet_ole_object(name, sheet_name,oleObjectIndex,folder=folder)
         pass
 
@@ -90,7 +90,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         sheet_name ='Sheet6'
         oleObjectIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ole_objects_get_worksheet_ole_object(name, sheet_name,oleObjectIndex,format="png",folder=folder)
         pass
 
@@ -104,7 +104,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         sheet_name ='Sheet6'
         oleObjectIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ole_objects_get_worksheet_ole_objects(name, sheet_name,folder=folder)
         pass
 
@@ -123,7 +123,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         ole.height = 90
         ole.width = 78
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ole_objects_post_update_worksheet_ole_object(name, sheet_name,oleObjectIndex,ole=ole,folder=folder)
         pass
 
@@ -143,7 +143,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         oleFile = 'OLEDoc.docx'  
         imageFile = 'word.jpg'  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ole_objects_put_worksheet_ole_object(name, sheet_name, ole_object=ole,upper_left_row=upperLeftRow,upper_left_column=upperLeftColumn,height=height,width=width,ole_file=oleFile, image_file=imageFile,folder=folder)
         pass
 

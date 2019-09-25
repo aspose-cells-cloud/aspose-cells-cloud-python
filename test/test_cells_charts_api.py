@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_charts_api import CellsChartsApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import Chart
 from asposecellscloud.models import Legend
@@ -33,8 +33,9 @@ class TestCellsChartsApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore", ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_charts_api.CellsChartsApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+
 
     def tearDown(self):
         pass
@@ -49,7 +50,7 @@ class TestCellsChartsApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 1  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_delete_worksheet_chart_legend(name, sheet_name,chartIndex, folder=folder)
         pass
 
@@ -63,7 +64,7 @@ class TestCellsChartsApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 1  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_delete_worksheet_chart_title(name, sheet_name,chartIndex, folder=folder)
         pass
 
@@ -77,7 +78,7 @@ class TestCellsChartsApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 1  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_delete_worksheet_clear_charts(name, sheet_name, folder=folder)
         pass
 
@@ -91,7 +92,7 @@ class TestCellsChartsApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 0  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_delete_worksheet_delete_chart(name, sheet_name,chartIndex, folder=folder)
         pass
 
@@ -106,7 +107,7 @@ class TestCellsChartsApi(unittest.TestCase):
         chartIndex = 0  
         format = 'png'
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_get_worksheet_chart(name, sheet_name, chartIndex, format=format, folder=folder)
         pass
 
@@ -120,7 +121,7 @@ class TestCellsChartsApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 0  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_get_worksheet_chart_legend(name, sheet_name,chartIndex, folder=folder)
         pass
 
@@ -134,7 +135,7 @@ class TestCellsChartsApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 0  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_get_worksheet_chart_title(name, sheet_name,chartIndex, folder=folder)
         pass
 
@@ -148,7 +149,7 @@ class TestCellsChartsApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 0  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_get_worksheet_charts(name, sheet_name, folder=folder)
         pass
 
@@ -164,7 +165,7 @@ class TestCellsChartsApi(unittest.TestCase):
         chart = Chart()
         chart.auto_scaling = True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_post_worksheet_chart(name, sheet_name, chartIndex , chart=chart , folder=folder)
         pass
 
@@ -180,7 +181,7 @@ class TestCellsChartsApi(unittest.TestCase):
         legend = Legend()
         legend.width = 10
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_post_worksheet_chart_legend(name, sheet_name, chartIndex , legend=legend , folder=folder)
         pass
 
@@ -196,7 +197,7 @@ class TestCellsChartsApi(unittest.TestCase):
         title = Title()
         title.text = "test"
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_post_worksheet_chart_title(name, sheet_name, chartIndex , title = title, folder=folder)
         pass
 
@@ -219,7 +220,7 @@ class TestCellsChartsApi(unittest.TestCase):
         isAutoGetSerialName = None  
         title = None  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_put_worksheet_add_chart(name, sheet_name, chartType , upper_left_row=upperLeftRow , upper_left_column=upperLeftColumn, lower_right_row=lowerRightRow, lower_right_column=lowerRightColumn, area=area, is_vertical=isVertical, category_data=categoryData,is_auto_get_serial_name=isAutoGetSerialName,title=title, folder=folder)
         pass
 
@@ -233,7 +234,7 @@ class TestCellsChartsApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 0  
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_put_worksheet_chart_legend(name, sheet_name, chartIndex , folder=folder)
         pass
 
@@ -249,7 +250,7 @@ class TestCellsChartsApi(unittest.TestCase):
         title = Title()
         title.text = "test"
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_charts_put_worksheet_chart_title(name, sheet_name, chartIndex ,title=title, folder=folder)
         pass
 

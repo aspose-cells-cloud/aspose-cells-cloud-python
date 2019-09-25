@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_page_setup_api import CellsPageSetupApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import PageSetup
 
@@ -31,8 +31,8 @@ class TestCellsPageSetupApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore",ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_page_setup_api.CellsPageSetupApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -47,7 +47,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_setup_delete_header_footer(name, sheet_name,folder=folder)
         pass
 
@@ -61,7 +61,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_setup_get_footer(name, sheet_name,folder=folder)
         pass
 
@@ -75,7 +75,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_setup_get_header(name, sheet_name,folder=folder)
         pass
 
@@ -89,7 +89,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_setup_get_page_setup(name, sheet_name,folder=folder)
         pass
 
@@ -105,7 +105,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         script = "test"
         isFirstPage = 'true'     
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_setup_post_footer(name, sheet_name,section, script ,  isFirstPage,folder=folder)
         pass
 
@@ -121,7 +121,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         script = "test"
         isFirstPage = True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_setup_post_header(name, sheet_name,section, script ,  isFirstPage,folder=folder)
         pass
 
@@ -136,7 +136,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         pageSetup = PageSetup() 
         pageSetup.black_and_white = True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_page_setup_post_page_setup(name, sheet_name, page_setup=pageSetup,folder=folder)
         pass
 

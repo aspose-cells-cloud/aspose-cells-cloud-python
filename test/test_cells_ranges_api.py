@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_ranges_api import CellsRangesApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import Range
 from asposecellscloud.models import RangeSetOutlineBorderRequest
@@ -39,8 +39,8 @@ class TestCellsRangesApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore",ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_ranges_api.CellsRangesApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -54,7 +54,7 @@ class TestCellsRangesApi(unittest.TestCase):
         name ='Book1.xlsx'  
         sheet_name ='Sheet1'    
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         firstRow = 0
         firstColumn = 0
         rowCount = 3
@@ -82,7 +82,7 @@ class TestCellsRangesApi(unittest.TestCase):
         value = 10.01
         range = Range(column_count=1, column_width = 10.1, first_column = 1, first_row = 1, row_count = 10, row_height=10)
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ranges_post_worksheet_cells_range_column_width(name, sheet_name, value,range=range,folder=folder)
         pass
 
@@ -96,7 +96,7 @@ class TestCellsRangesApi(unittest.TestCase):
         sheet_name ='Sheet1'    
         range = Range(column_count=1, column_width = 10.1, first_column = 1, first_row = 1, row_count = 10, row_height=10)
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ranges_post_worksheet_cells_range_merge(name, sheet_name,range=range,folder=folder)
         pass
 
@@ -112,7 +112,7 @@ class TestCellsRangesApi(unittest.TestCase):
         destColumn = 1  
         range = Range(column_count=1, column_width = 10.1, first_column = 1, first_row = 1, row_count = 10, row_height=10)
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ranges_post_worksheet_cells_range_move_to(name, sheet_name,destRow, destColumn,range=range,folder=folder)
         pass
 
@@ -132,7 +132,7 @@ class TestCellsRangesApi(unittest.TestCase):
         range = Range(column_count=1, column_width = 10.1, first_column = 1, first_row = 1, row_count = 10, row_height=10)
         rangeOperate.range = range
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ranges_post_worksheet_cells_range_outline_border(name, sheet_name,range_operate=rangeOperate,folder=folder)
         pass
 
@@ -147,7 +147,7 @@ class TestCellsRangesApi(unittest.TestCase):
         value = 10.01
         range = Range(column_count=1, column_width = 10.1, first_column = 1, first_row = 1, row_count = 10, row_height=10)
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ranges_post_worksheet_cells_range_row_height(name, sheet_name, value,range=range,folder=folder)
         pass
 
@@ -168,7 +168,7 @@ class TestCellsRangesApi(unittest.TestCase):
         range = Range(column_count=1, column_width = 10.1, first_column = 1, first_row = 1, row_count = 10, row_height=10)
         rangeOperate.range = range
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ranges_post_worksheet_cells_range_style(name, sheet_name,range_operate=rangeOperate,folder=folder)
         pass
 
@@ -182,7 +182,7 @@ class TestCellsRangesApi(unittest.TestCase):
         sheet_name ='Sheet1'    
         range = Range(column_count=1, column_width = 10.1, first_column = 1, first_row = 1, row_count = 10, row_height=10)
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ranges_post_worksheet_cells_range_unmerge(name, sheet_name,range=range,folder=folder)
         pass
 
@@ -199,7 +199,7 @@ class TestCellsRangesApi(unittest.TestCase):
         isConverted = True
         setStyle = True
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ranges_post_worksheet_cells_range_value(name, sheet_name,value,range=range,is_converted=isConverted, set_style = setStyle,folder=folder)
         pass
 
@@ -221,7 +221,7 @@ class TestCellsRangesApi(unittest.TestCase):
         rangeOperate.source = range
         rangeOperate.target = range2
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_ranges_post_worksheet_cells_ranges(name, sheet_name, range_operate=rangeOperate,folder=folder)
         pass
 

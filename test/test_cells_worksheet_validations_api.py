@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_worksheet_validations_api import CellsWorksheetValidationsApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import Validation
 from asposecellscloud.models import CellArea
@@ -33,8 +33,8 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore",ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_worksheet_validations_api.CellsWorksheetValidationsApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -49,7 +49,7 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         validationIndex = 0
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_worksheet_validations_delete_worksheet_validation(name, sheet_name, validationIndex, folder=folder)
         pass
 
@@ -63,7 +63,7 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         validationIndex = 0
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_worksheet_validations_get_worksheet_validation(name, sheet_name, validationIndex, folder=folder)
         pass
 
@@ -77,7 +77,7 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         validationIndex = 0
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_worksheet_validations_get_worksheet_validations(name, sheet_name, folder=folder)
         pass
 
@@ -99,7 +99,7 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         validation.ignore_blank = True
         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_worksheet_validations_post_worksheet_validation(name, sheet_name,validationIndex, validation=validation,folder=folder)
         pass
 
@@ -113,7 +113,7 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         _range = 'A1:c10'      
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_worksheet_validations_put_worksheet_validation(name, sheet_name,range=_range,folder=folder)
         pass
 

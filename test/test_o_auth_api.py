@@ -21,7 +21,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.o_auth_api import OAuthApi
+from asposecellscloud.api.cells_api import CellsApi
 from asposecellscloud.api_client import ApiClient
 import AuthUtil
 

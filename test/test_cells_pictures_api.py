@@ -22,7 +22,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_pictures_api import CellsPicturesApi
+from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import Picture
 
@@ -31,8 +31,8 @@ class TestCellsPicturesApi(unittest.TestCase):
 
     def setUp(self):
         warnings.simplefilter("ignore",ResourceWarning)
-        self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_pictures_api.CellsPicturesApi(self.api_client)
+        # self.api_client = AuthUtil.GetApiClient()
+        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
 
     def tearDown(self):
         pass
@@ -47,7 +47,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         sheet_name ='Sheet6'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pictures_delete_worksheet_pictures(name, sheet_name,folder=folder)
         pass
 
@@ -61,7 +61,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         sheet_name ='Sheet6'
         pictureIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pictures_delete_worksheet_picture(name, sheet_name,pictureIndex,folder=folder)
         pass
 
@@ -75,7 +75,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         sheet_name ='Sheet6'
         pictureIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pictures_get_worksheet_picture(name, sheet_name,pictureIndex,folder=folder)
         pass
 
@@ -89,7 +89,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         sheet_name ='Sheet6'
         pictureIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pictures_get_worksheet_picture(name, sheet_name,pictureIndex,format="png", folder=folder)
         pass
 
@@ -103,7 +103,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         sheet_name ='Sheet6'
         pictureIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pictures_get_worksheet_pictures(name, sheet_name,folder=folder)
         pass
 
@@ -119,7 +119,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         picture = Picture()
         picture.left = 10
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pictures_post_worksheet_picture(name, sheet_name, pictureIndex , picture=picture,folder=folder)
         pass
 
@@ -138,7 +138,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         lowerRightColumn = 10   
         picturePath = 'WaterMark.png'        
         folder = "Temp"
-        AuthUtil.Ready(name, folder)
+        AuthUtil.Ready(self.api, name, folder)
         result = self.api.cells_pictures_put_worksheet_add_picture(name, sheet_name, picture=picture, upper_left_row=upperLeftRow,upper_left_column=upperLeftColumn,lower_right_row=lowerRightRow,lower_right_column=lowerRightColumn,picture_path=picturePath, folder=folder)
         pass
 
