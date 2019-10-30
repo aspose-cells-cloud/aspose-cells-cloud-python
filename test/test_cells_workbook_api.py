@@ -31,15 +31,16 @@ from asposecellscloud.models import CalculationOptions
 from asposecellscloud.models import WorkbookSettings
 from asposecellscloud.models import PasswordRequest
 from datetime import datetime
-
+global_api = None
 
 class TestCellsWorkbookApi(unittest.TestCase):
     """ CellsWorkbookApi unit test stubs """
 
     def setUp(self):
-        warnings.simplefilter("ignore",ResourceWarning)
-        # self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+        global global_api
+        if global_api is None:
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+        self.api = global_api
 
     def tearDown(self):
         pass
@@ -55,8 +56,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         encryption.password = "123456"
         encryption.encryption_type = "XOR"
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_delete_decrypt_document(name, encryption=encryption,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_delete_document_unprotect_from_changes(self):
@@ -67,8 +70,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         """
         name ='Book1.xlsx'       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_delete_document_unprotect_from_changes(name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_delete_unprotect_document(self):
@@ -82,8 +87,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         protection = WorkbookProtectionRequest()
         protection.password = "123"
         protection.protection_type = "All"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_delete_unprotect_document(name, protection=protection, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_delete_workbook_name(self):
@@ -95,8 +102,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         name ='Book1.xlsx'       
         folder = "Temp"
         name_name = "Name_2"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_delete_workbook_name(name, name_name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_delete_workbook_names(self):
@@ -107,8 +116,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         """
         name ='Book1.xlsx'       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_delete_workbook_names(name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_get_workbook(self):
@@ -121,8 +132,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         folder = "Temp"
         password = None
         isAutoFit = True
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook(name,password=password,is_auto_fit=isAutoFit, folder=folder)
+        # self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_get_workbook_format(self):
@@ -135,8 +148,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         folder = "Temp"
         password = None
         isAutoFit = True
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook(name,password=password,format="xlsx", is_auto_fit=isAutoFit, folder=folder)
+        # self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_get_workbook_format_md(self):
@@ -149,8 +164,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         folder = "Temp"
         password = None
         isAutoFit = True
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook(name,password=password,format="md", is_auto_fit=isAutoFit, folder=folder)
+        # self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_get_workbook_default_style(self):
@@ -161,8 +178,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         """
         name ='Book1.xlsx'       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook_default_style(name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_get_workbook_name(self):
@@ -174,8 +193,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         name ='Book1.xlsx'       
         folder = "Temp"
         nameName = "Name_2"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook_name(name, nameName, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_get_workbook_name_value(self):
@@ -187,8 +208,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         name ='Book1.xlsx'       
         folder = "Temp"
         name_name = "Name_2"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook_name_value(name, name_name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_get_workbook_names(self):
@@ -199,8 +222,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         """
         name ='Book1.xlsx'       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook_names(name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_get_workbook_text_items(self):
@@ -211,8 +236,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         """
         name ='Book1.xlsx'       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook_text_items(name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_get_workbook_settings(self):
@@ -223,8 +250,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         """
         name ='Book1.xlsx'       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook_settings(name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_post_autofit_workbook_rows(self):
@@ -239,8 +268,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         startRow = 1
         endRow = 100
         onlyAuto = True
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_post_autofit_workbook_rows(name, auto_fitter_options=autoFitterOptions, start_row = startRow, end_row=endRow, only_auto=onlyAuto , folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_post_encrypt_document(self):
@@ -258,8 +289,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         startRow = 1
         endRow = 100
         onlyAuto = True
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_post_encrypt_document(name, encryption=encryption,  folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_post_import_data(self):
@@ -277,8 +310,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         data.import_data_type = 'IntArray'
         data.is_vertical = True
         data.data = [1, 2, 3, 4]
-        AuthUtil.Ready(self.api, name, folder)
-        result = self.api.cells_workbook_post_import_data(name, importdata=data,  folder=folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_workbook_post_import_data(name, import_data=data,  folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_post_protect_document(self):
@@ -292,8 +327,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         protection = WorkbookProtectionRequest()
         protection.password = "123"
         protection.protection_type = "All"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_post_protect_document(name, protection=protection,  folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_post_workbook_calculate_formula(self):
@@ -307,8 +344,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         options = CalculationOptions()
         options.ignore_error = True
         ignore_error = True
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_post_workbook_calculate_formula(name, options=options, ignore_error=ignore_error, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_post_workbook_get_smart_marker_result(self):
@@ -320,8 +359,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         name ='Book1.xlsx'       
         folder = "Temp"
         xmlFile = "ReportData.xml"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_post_workbook_get_smart_marker_result(name, xml_file=xmlFile, folder= folder)
+        # self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_post_workbook_settings(self):
@@ -334,8 +375,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         folder = "Temp"
         settings = WorkbookSettings()
         settings.auto_compress_pictures = True
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_post_workbook_settings(name, settings=settings,  folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_post_workbook_split(self):
@@ -351,8 +394,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         to = 3
         horizontalResolution = 100
         verticalResolution = 90
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_post_workbook_split(name, format=format, _from=_from, to=to, horizontal_resolution=horizontalResolution, vertical_resolution=verticalResolution,  folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_post_workbooks_merge(self):
@@ -364,8 +409,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         name ='Book1.xlsx'       
         folder = "Temp"
         formatmergeWith = "myDocument.xlsx"      
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_post_workbooks_merge(name, formatmergeWith,  folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_post_workbooks_text_replace(self):
@@ -378,8 +425,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         folder = "Temp"
         oldValue = "!22"
         newValue = "22"    
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_post_workbooks_text_replace(name, oldValue,newValue,  folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_post_workbooks_text_search(self):
@@ -391,8 +440,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         name ='Book1.xlsx'       
         folder = "Temp"
         text = "!test"      
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_post_workbooks_text_search(name, text,  folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_put_convert_workbook(self):
@@ -409,6 +460,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         password = None
         outPath = None      
         result = self.api.cells_workbook_put_convert_workbook(workbook,format=format)
+        # self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_put_document_protect_from_changes(self):
@@ -421,8 +473,10 @@ class TestCellsWorkbookApi(unittest.TestCase):
         folder = "Temp"
         password = PasswordRequest()
         password.password = "123456"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_put_document_protect_from_changes(name, password=password,  folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_workbook_put_workbook_create(self):
@@ -440,6 +494,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         template_file = folder + "/" + templateFile
         data_file = folder + "/" + dataFile
         result = self.api.cells_workbook_put_workbook_create(name, template_file=template_file, data_file=data_file,  folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
 

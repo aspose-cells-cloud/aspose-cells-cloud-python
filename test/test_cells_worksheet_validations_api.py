@@ -26,15 +26,16 @@ from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import Validation
 from asposecellscloud.models import CellArea
-
+global_api = None
 
 class TestCellsWorksheetValidationsApi(unittest.TestCase):
     """ CellsWorksheetValidationsApi unit test stubs """
 
     def setUp(self):
-        warnings.simplefilter("ignore",ResourceWarning)
-        # self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+        global global_api
+        if global_api is None:
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+        self.api = global_api
 
     def tearDown(self):
         pass
@@ -49,8 +50,10 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         validationIndex = 0
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_worksheet_validations_delete_worksheet_validation(name, sheet_name, validationIndex, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_worksheet_validations_get_worksheet_validation(self):
@@ -63,8 +66,10 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         validationIndex = 0
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_worksheet_validations_get_worksheet_validation(name, sheet_name, validationIndex, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_worksheet_validations_get_worksheet_validations(self):
@@ -77,8 +82,10 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         validationIndex = 0
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_worksheet_validations_get_worksheet_validations(name, sheet_name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_worksheet_validations_post_worksheet_validation(self):
@@ -99,8 +106,10 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         validation.ignore_blank = True
         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_worksheet_validations_post_worksheet_validation(name, sheet_name,validationIndex, validation=validation,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_worksheet_validations_put_worksheet_validation(self):
@@ -113,8 +122,10 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         _range = 'A1:c10'      
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_worksheet_validations_put_worksheet_validation(name, sheet_name,range=_range,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
 

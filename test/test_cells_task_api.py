@@ -28,14 +28,16 @@ from asposecellscloud.models import TaskDescription
 from asposecellscloud.models import SplitWorkbookTaskParameter
 from asposecellscloud.models import FileSource
 from asposecellscloud.models import TaskData
+global_api = None
 
 class TestCellsTaskApi(unittest.TestCase):
     """ CellsTaskApi unit test stubs """
 
     def setUp(self):
-        warnings.simplefilter("ignore",ResourceWarning)
-        # self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+        global global_api
+        if global_api is None:
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+        self.api = global_api
 
     def tearDown(self):
         pass
@@ -48,7 +50,8 @@ class TestCellsTaskApi(unittest.TestCase):
         """
         name ='Book1.xlsx'
         folder = "Temp"
-        AuthUtil.Ready(self.api,name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)  
         task1 = TaskDescription()
         task1.task_type = 'SplitWorkbook'
         param1 = SplitWorkbookTaskParameter()
@@ -67,6 +70,7 @@ class TestCellsTaskApi(unittest.TestCase):
         tasks = [task1]
         taskData.tasks = tasks
         result = self.api.cells_task_post_run_task(taskData)
+        # self.assertEqual(result.code,200)
         pass
 
 

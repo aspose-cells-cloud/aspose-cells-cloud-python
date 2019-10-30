@@ -36,20 +36,24 @@ from ..api_client import ApiClient
 
 class CellsApi(object):
 
-
-    def __init__(self,appsid, appkey, api_client=None):
+    def __init__(self,appsid, appkey, version='v3.0', api_client=None):
         self.appsid = appsid
         self.appkey = appkey
         self.api_client =  ApiClient('https://api.aspose.cloud')
-        self.auth_data = self.o_auth_post("client_credentials", appsid, appkey)
+        self.access_token = self.api_client.get_access_token("client_credentials", appsid, appkey,version)
+        # self.auth_data = self.o_auth_post("client_credentials", appsid, appkey)
         config = Configuration()
+        if version == 'v1.1':
+            config.host = "https://api.aspose.cloud/v1.1"
         if api_client:
             self.api_client = api_client
         else:
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_default_header("Authorization", "Bearer " + self.auth_data.access_token)
+        self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
+        # self.api_client.set_default_header("Authorization", "Bearer " + self.auth_data.access_token)
+
 
     def cells_auto_filter_delete_worksheet_date_filter(self, name, sheet_name, field_index, date_time_grouping_type, **kwargs):
         """
@@ -5005,7 +5009,7 @@ class CellsApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str cell_area: (required)
-        :param FormatCondition formatcondition:
+        :param FormatCondition format_condition:
         :param str folder:
         :param str storage: storage name.
         :return: CellsCloudResponse
@@ -5035,7 +5039,7 @@ class CellsApi(object):
         :param str name: (required)
         :param str sheet_name: (required)
         :param str cell_area: (required)
-        :param FormatCondition formatcondition:
+        :param FormatCondition format_condition:
         :param str folder:
         :param str storage: storage name.
         :return: CellsCloudResponse
@@ -5043,7 +5047,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'cell_area', 'formatcondition', 'folder', 'storage']
+        all_params = ['name', 'sheet_name', 'cell_area', 'format_condition', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5091,8 +5095,8 @@ class CellsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'formatcondition' in params:
-            body_params = params['formatcondition']
+        if 'format_condition' in params:
+            body_params = params['format_condition']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -16880,7 +16884,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def cells_post_set_cell_html_string(self, name, sheet_name, cell_name, **kwargs):
+    def cells_post_set_cell_html_string(self, name, sheet_name, cell_name, html_string, **kwargs):
         """
         Set htmlstring value into cell
         This method makes a synchronous HTTP request by default. To make an
@@ -16889,13 +16893,14 @@ class CellsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_post_set_cell_html_string(name, sheet_name, cell_name, callback=callback_function)
+        >>> thread = api.cells_post_set_cell_html_string(name, sheet_name, cell_name, html_string, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Workbook name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param str cell_name: The cell name. (required)
+        :param str html_string: (required)
         :param str folder: The workbook folder.
         :param str storage: storage name.
         :return: CellResponse
@@ -16904,12 +16909,12 @@ class CellsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, **kwargs)
+            return self.cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, **kwargs)
         else:
-            (data) = self.cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, **kwargs)
+            (data) = self.cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, **kwargs)
             return data
 
-    def cells_post_set_cell_html_string_with_http_info(self, name, sheet_name, cell_name, **kwargs):
+    def cells_post_set_cell_html_string_with_http_info(self, name, sheet_name, cell_name, html_string, **kwargs):
         """
         Set htmlstring value into cell
         This method makes a synchronous HTTP request by default. To make an
@@ -16918,13 +16923,14 @@ class CellsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, callback=callback_function)
+        >>> thread = api.cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Workbook name. (required)
         :param str sheet_name: Worksheet name. (required)
         :param str cell_name: The cell name. (required)
+        :param str html_string: (required)
         :param str folder: The workbook folder.
         :param str storage: storage name.
         :return: CellResponse
@@ -16932,7 +16938,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'cell_name', 'folder', 'storage']
+        all_params = ['name', 'sheet_name', 'cell_name', 'html_string', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -16956,6 +16962,9 @@ class CellsApi(object):
         # verify the required parameter 'cell_name' is set
         if ('cell_name' not in params) or (params['cell_name'] is None):
             raise ValueError("Missing the required parameter `cell_name` when calling `cells_post_set_cell_html_string`")
+        # verify the required parameter 'html_string' is set
+        if ('html_string' not in params) or (params['html_string'] is None):
+            raise ValueError("Missing the required parameter `html_string` when calling `cells_post_set_cell_html_string`")
 
 
         collection_formats = {}
@@ -16980,6 +16989,8 @@ class CellsApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'html_string' in params:
+            body_params = params['html_string']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -23573,7 +23584,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def cells_workbook_post_import_data(self, name, importdata, **kwargs):
+    def cells_workbook_post_import_data(self, name, import_data, **kwargs):
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -23581,12 +23592,12 @@ class CellsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_workbook_post_import_data(name, importdata, callback=callback_function)
+        >>> thread = api.cells_workbook_post_import_data(name, import_data, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: (required)
-        :param ImportOption importdata: (required)
+        :param ImportOption import_data: (required)
         :param str folder:
         :param str storage: storage name.
         :return: CellsCloudResponse
@@ -23595,12 +23606,12 @@ class CellsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.cells_workbook_post_import_data_with_http_info(name, importdata, **kwargs)
+            return self.cells_workbook_post_import_data_with_http_info(name, import_data, **kwargs)
         else:
-            (data) = self.cells_workbook_post_import_data_with_http_info(name, importdata, **kwargs)
+            (data) = self.cells_workbook_post_import_data_with_http_info(name, import_data, **kwargs)
             return data
 
-    def cells_workbook_post_import_data_with_http_info(self, name, importdata, **kwargs):
+    def cells_workbook_post_import_data_with_http_info(self, name, import_data, **kwargs):
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -23608,12 +23619,12 @@ class CellsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_workbook_post_import_data_with_http_info(name, importdata, callback=callback_function)
+        >>> thread = api.cells_workbook_post_import_data_with_http_info(name, import_data, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: (required)
-        :param ImportOption importdata: (required)
+        :param ImportOption import_data: (required)
         :param str folder:
         :param str storage: storage name.
         :return: CellsCloudResponse
@@ -23621,7 +23632,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'importdata', 'folder', 'storage']
+        all_params = ['name', 'import_data', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -23639,9 +23650,9 @@ class CellsApi(object):
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `cells_workbook_post_import_data`")
-        # verify the required parameter 'importdata' is set
-        if ('importdata' not in params) or (params['importdata'] is None):
-            raise ValueError("Missing the required parameter `importdata` when calling `cells_workbook_post_import_data`")
+        # verify the required parameter 'import_data' is set
+        if ('import_data' not in params) or (params['import_data'] is None):
+            raise ValueError("Missing the required parameter `import_data` when calling `cells_workbook_post_import_data`")
 
 
         collection_formats = {}
@@ -23662,8 +23673,8 @@ class CellsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'importdata' in params:
-            body_params = params['importdata']
+        if 'import_data' in params:
+            body_params = params['import_data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -25129,6 +25140,125 @@ class CellsApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='ValidationResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_worksheet_validations_delete_worksheet_validations(self, name, sheet_name, **kwargs):
+        """
+        Clear all validation in worksheet.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_worksheet_validations_delete_worksheet_validations(name, sheet_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Document name. (required)
+        :param str sheet_name: Worksheet name. (required)
+        :param str folder: Document's folder.
+        :param str storage: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.cells_worksheet_validations_delete_worksheet_validations_with_http_info(name, sheet_name, **kwargs)
+        else:
+            (data) = self.cells_worksheet_validations_delete_worksheet_validations_with_http_info(name, sheet_name, **kwargs)
+            return data
+
+    def cells_worksheet_validations_delete_worksheet_validations_with_http_info(self, name, sheet_name, **kwargs):
+        """
+        Clear all validation in worksheet.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_worksheet_validations_delete_worksheet_validations_with_http_info(name, sheet_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Document name. (required)
+        :param str sheet_name: Worksheet name. (required)
+        :param str folder: Document's folder.
+        :param str storage: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'folder', 'storage']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_worksheet_validations_delete_worksheet_validations" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_worksheet_validations_delete_worksheet_validations`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_worksheet_validations_delete_worksheet_validations`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/validations', 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

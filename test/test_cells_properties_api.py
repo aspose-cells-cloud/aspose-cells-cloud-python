@@ -25,15 +25,16 @@ from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import CellsDocumentProperty
-
+global_api = None
 
 class TestCellsPropertiesApi(unittest.TestCase):
     """ CellsPropertiesApi unit test stubs """
 
     def setUp(self):
-        warnings.simplefilter("ignore",ResourceWarning)
-        # self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+        global global_api
+        if global_api is None:
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+        self.api = global_api
 
     def tearDown(self):
         pass
@@ -46,8 +47,10 @@ class TestCellsPropertiesApi(unittest.TestCase):
         """
         name ='Book1.xlsx'      
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_properties_delete_document_properties(name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_properties_delete_document_property(self):
@@ -59,8 +62,10 @@ class TestCellsPropertiesApi(unittest.TestCase):
         name ='Book1.xlsx' 
         propertyName = "Author"    
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_properties_delete_document_property(name, propertyName ,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_properties_get_document_properties(self):
@@ -71,8 +76,10 @@ class TestCellsPropertiesApi(unittest.TestCase):
         """
         name ='Book1.xlsx'       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_properties_get_document_properties(name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_properties_get_document_property(self):
@@ -84,8 +91,10 @@ class TestCellsPropertiesApi(unittest.TestCase):
         name ='Book1.xlsx'
         propertyName = "Author"       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_properties_get_document_property(name,propertyName,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_properties_put_document_property(self):
@@ -100,8 +109,10 @@ class TestCellsPropertiesApi(unittest.TestCase):
         _property.name = "Author"
         _property.value = "Val"
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_properties_put_document_property(name,propertyName,_property=_property,folder=folder)
+        self.assertEqual(result.code,201)
         pass
 
 

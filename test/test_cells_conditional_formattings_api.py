@@ -25,14 +25,15 @@ from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import FormatCondition
-
+global_api = None
 class TestCellsConditionalFormattingsApi(unittest.TestCase):
     """ CellsConditionalFormattingsApi unit test stubs """
 
     def setUp(self):
-        warnings.simplefilter("ignore", ResourceWarning)
-        # self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+        global global_api
+        if global_api is None:
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+        self.api = global_api
 
     def tearDown(self):
         pass
@@ -47,8 +48,10 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_delete_worksheet_conditional_formatting(name, sheet_name,index,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_conditional_formattings_delete_worksheet_conditional_formatting_area(self):
@@ -64,8 +67,10 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         totalRows = 4
         totalColumns = 6     
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_delete_worksheet_conditional_formatting_area(name, sheet_name,startRow,startColumn, totalRows,totalColumns,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_conditional_formattings_delete_worksheet_conditional_formattings(self):
@@ -77,8 +82,10 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'   
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_delete_worksheet_conditional_formattings(name, sheet_name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_conditional_formattings_get_worksheet_conditional_formatting(self):
@@ -91,8 +98,10 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_get_worksheet_conditional_formatting(name, sheet_name,index,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_conditional_formattings_get_worksheet_conditional_formattings(self):
@@ -105,8 +114,10 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_get_worksheet_conditional_formattings(name, sheet_name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_conditional_formattings_put_worksheet_conditional_formatting(self):
@@ -124,8 +135,10 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         formatcondition.formula1 = "v1"
         formatcondition.formula2 = "v2"
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
-        result = self.api.cells_conditional_formattings_put_worksheet_conditional_formatting(name, sheet_name,cellArea,formatcondition=formatcondition,folder=folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
+        result = self.api.cells_conditional_formattings_put_worksheet_conditional_formatting(name, sheet_name,cellArea,format_condition=formatcondition,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_conditional_formattings_put_worksheet_format_condition(self):
@@ -143,8 +156,10 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         formula1 = "v1"     
         formula2 = "v2"         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_put_worksheet_format_condition(name, sheet_name,index , cellArea,   type,  operatorType ,formula1,formula2, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_conditional_formattings_put_worksheet_format_condition_area(self):
@@ -158,8 +173,10 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         index = 0       
         cellArea = "A1:C10"       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_put_worksheet_format_condition_area(name, sheet_name, index, cellArea , folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_conditional_formattings_put_worksheet_format_condition_condition(self):
@@ -176,8 +193,10 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         formula1 = "v1"     
         formula2 = "v2"         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_put_worksheet_format_condition_condition(name, sheet_name, index , type,  operatorType ,formula1,formula2, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
 

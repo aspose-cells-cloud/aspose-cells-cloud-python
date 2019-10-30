@@ -24,15 +24,16 @@ import asposecellscloud
 from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
-
+global_api = None
 
 class TestCellsPageBreaksApi(unittest.TestCase):
     """ CellsPageBreaksApi unit test stubs """
 
     def setUp(self):
-        warnings.simplefilter("ignore",ResourceWarning)
-        # self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+        global global_api
+        if global_api is None:
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+        self.api = global_api
 
     def tearDown(self):
         pass
@@ -47,8 +48,10 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_breaks_delete_horizontal_page_break(name, sheet_name,index,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_breaks_delete_horizontal_page_breaks(self):
@@ -61,8 +64,10 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         row = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_breaks_delete_horizontal_page_breaks(name, sheet_name,row=row,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_breaks_delete_vertical_page_break(self):
@@ -75,8 +80,10 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_breaks_delete_vertical_page_break(name, sheet_name,index,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_breaks_delete_vertical_page_breaks(self):
@@ -89,8 +96,10 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         column = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_breaks_delete_vertical_page_breaks(name, sheet_name,column=column,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_breaks_get_horizontal_page_break(self):
@@ -103,8 +112,10 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_breaks_get_horizontal_page_break(name, sheet_name,index,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_breaks_get_horizontal_page_breaks(self):
@@ -116,8 +127,10 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'  
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_breaks_get_horizontal_page_breaks(name, sheet_name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_breaks_get_vertical_page_break(self):
@@ -130,8 +143,10 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_breaks_get_vertical_page_break(name, sheet_name,index,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_breaks_get_vertical_page_breaks(self):
@@ -144,8 +159,10 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_breaks_get_vertical_page_breaks(name, sheet_name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_breaks_put_horizontal_page_break(self):
@@ -162,8 +179,10 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         startColumn = 1  
         endColumn = 1      
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_breaks_put_horizontal_page_break(name, sheet_name, cellname=cellname,row=row, column=column ,start_column=startColumn,end_column=endColumn,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_breaks_put_vertical_page_break(self):
@@ -180,8 +199,10 @@ class TestCellsPageBreaksApi(unittest.TestCase):
         startRow = 1  
         endRow = 1      
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_breaks_put_vertical_page_break(name, sheet_name, cellname=cellname,column=column, row=row ,start_row=startRow,end_row=endRow,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
 

@@ -24,14 +24,16 @@ import asposecellscloud
 from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
+global_api = None
 
 class TestCellsAutoshapesApi(unittest.TestCase):
     """ CellsAutoshapesApi unit test stubs """
 
     def setUp(self):
-        warnings.simplefilter("ignore", ResourceWarning)
-        # self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+        global global_api
+        if global_api is None:
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+        self.api = global_api
 
     def tearDown(self):
         pass
@@ -46,8 +48,10 @@ class TestCellsAutoshapesApi(unittest.TestCase):
         sheet_name ='Sheet2'
         autoshapeNumber = 4  
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_autoshapes_get_worksheet_autoshape(name, sheet_name,autoshapeNumber, folder=folder)
+        # self.assertEqual(result.code,200)
         pass
 
     def test_cells_autoshapes_get_worksheet_autoshape_format(self):
@@ -60,8 +64,10 @@ class TestCellsAutoshapesApi(unittest.TestCase):
         sheet_name ='Sheet2'
         autoshapeNumber = 4  
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_autoshapes_get_worksheet_autoshape(name, sheet_name,autoshapeNumber, format="png", folder=folder)
+        # self.assertEqual(result.code,200)
         pass
 
     def test_cells_autoshapes_get_worksheet_autoshapes(self):
@@ -73,8 +79,10 @@ class TestCellsAutoshapesApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet2'
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_autoshapes_get_worksheet_autoshapes(name, sheet_name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
 

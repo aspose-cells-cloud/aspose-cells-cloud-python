@@ -25,14 +25,16 @@ from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import PageSetup
+global_api = None
 
 class TestCellsPageSetupApi(unittest.TestCase):
     """ CellsPageSetupApi unit test stubs """
 
     def setUp(self):
-        warnings.simplefilter("ignore",ResourceWarning)
-        # self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+        global global_api
+        if global_api is None:
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+        self.api = global_api
 
     def tearDown(self):
         pass
@@ -47,8 +49,10 @@ class TestCellsPageSetupApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_delete_header_footer(name, sheet_name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_setup_get_footer(self):
@@ -61,8 +65,10 @@ class TestCellsPageSetupApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_get_footer(name, sheet_name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_setup_get_header(self):
@@ -75,8 +81,10 @@ class TestCellsPageSetupApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_get_header(name, sheet_name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_setup_get_page_setup(self):
@@ -89,8 +97,10 @@ class TestCellsPageSetupApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_get_page_setup(name, sheet_name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_setup_post_footer(self):
@@ -105,8 +115,10 @@ class TestCellsPageSetupApi(unittest.TestCase):
         script = "test"
         isFirstPage = 'true'     
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_post_footer(name, sheet_name,section, script ,  isFirstPage,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_setup_post_header(self):
@@ -121,8 +133,10 @@ class TestCellsPageSetupApi(unittest.TestCase):
         script = "test"
         isFirstPage = True
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_post_header(name, sheet_name,section, script ,  isFirstPage,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_page_setup_post_page_setup(self):
@@ -136,8 +150,10 @@ class TestCellsPageSetupApi(unittest.TestCase):
         pageSetup = PageSetup() 
         pageSetup.black_and_white = True
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_post_page_setup(name, sheet_name, page_setup=pageSetup,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
 

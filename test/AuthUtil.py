@@ -41,6 +41,8 @@ def Ready(api, filename, folder, storage=None):
     path = folder + '/' + filename
     fullfilename = "D:/Projects/Aspose/Aspose.Cloud/Aspose.Cells.Cloud.SDK/src/TestData/" + filename
     response = api.upload_file(path, fullfilename)
+    return response
+
     # with open(fullfilename, 'rb') as file_object:
     #     contents = file_object.read()
     # response = None

@@ -25,14 +25,16 @@ from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import Hyperlink
-
+global_api = None
 class TestCellsHypelinksApi(unittest.TestCase):
     """ CellsHypelinksApi unit test stubs """
 
     def setUp(self):
-        warnings.simplefilter("ignore", ResourceWarning)
-        # self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+        global global_api
+        if global_api is None:
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+        self.api = global_api
+
 
 
     def tearDown(self):
@@ -48,8 +50,10 @@ class TestCellsHypelinksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_hypelinks_delete_worksheet_hyperlink(name, sheet_name,hyperlinkIndex,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_hypelinks_delete_worksheet_hyperlinks(self):
@@ -62,8 +66,10 @@ class TestCellsHypelinksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_hypelinks_delete_worksheet_hyperlinks(name, sheet_name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_hypelinks_get_worksheet_hyperlink(self):
@@ -76,8 +82,10 @@ class TestCellsHypelinksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_hypelinks_get_worksheet_hyperlink(name, sheet_name,hyperlinkIndex,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_hypelinks_get_worksheet_hyperlinks(self):
@@ -90,8 +98,10 @@ class TestCellsHypelinksApi(unittest.TestCase):
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_hypelinks_get_worksheet_hyperlinks(name, sheet_name,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_hypelinks_post_worksheet_hyperlink(self):
@@ -106,8 +116,10 @@ class TestCellsHypelinksApi(unittest.TestCase):
         folder = "Temp"
         hyperlink = Hyperlink()
         hyperlink.address = 'http://wwww.aspose.com'
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_hypelinks_post_worksheet_hyperlink(name, sheet_name, hyperlinkIndex , hyperlink = hyperlink , folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_hypelinks_put_worksheet_hyperlink(self):
@@ -124,8 +136,10 @@ class TestCellsHypelinksApi(unittest.TestCase):
         totalColumns = 3 
         address = 'http://www.aspose.com'    
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_hypelinks_put_worksheet_hyperlink(name, sheet_name,firstRow,firstColumn,totalRows,totalColumns,address,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
 

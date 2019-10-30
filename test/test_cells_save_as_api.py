@@ -25,15 +25,16 @@ from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
 from asposecellscloud.models import PdfSaveOptions
 import AuthUtil
-
+global_api = None
 
 class TestCellsSaveAsApi(unittest.TestCase):
     """ CellsSaveAsApi unit test stubs """
 
     def setUp(self):
-        warnings.simplefilter("ignore",ResourceWarning)
-        # self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+        global global_api
+        if global_api is None:
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+        self.api = global_api
 
     def tearDown(self):
         pass
@@ -50,8 +51,10 @@ class TestCellsSaveAsApi(unittest.TestCase):
         isAutoFitRows= True
         isAutoFitColumns= True
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder)
+        self.assertEqual(result.code,200)
         pass
     def test_cells_save_as_post_document_save_as_md(self):
         """
@@ -65,8 +68,10 @@ class TestCellsSaveAsApi(unittest.TestCase):
         isAutoFitRows= True
         isAutoFitColumns= True
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_save_as_post_document_save_as_pdf(self):
@@ -83,8 +88,10 @@ class TestCellsSaveAsApi(unittest.TestCase):
         isAutoFitRows= True
         isAutoFitColumns= True
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_save_as_post_document_save_as_pdf_dropbox(self):
@@ -104,6 +111,7 @@ class TestCellsSaveAsApi(unittest.TestCase):
         storage = "DropBox"
         # AuthUtil.Ready(name, folder, storage)
         result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=newfilename,is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder, storage=storage)
+        self.assertEqual(result.code,200)
         pass
 
 

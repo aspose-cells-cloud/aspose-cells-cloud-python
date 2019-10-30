@@ -198,6 +198,7 @@ Method | HTTP request | Description
 [**cells_workbook_put_document_protect_from_changes**](CellsApi.md#cells_workbook_put_document_protect_from_changes) | **PUT** /cells/{name}/writeProtection | Protect document from changes.
 [**cells_workbook_put_workbook_create**](CellsApi.md#cells_workbook_put_workbook_create) | **PUT** /cells/{name} | Create new workbook using deferent methods.
 [**cells_worksheet_validations_delete_worksheet_validation**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validation) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Delete worksheet validation by index.
+[**cells_worksheet_validations_delete_worksheet_validations**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validations) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations | Clear all validation in worksheet.
 [**cells_worksheet_validations_get_worksheet_validation**](CellsApi.md#cells_worksheet_validations_get_worksheet_validation) | **GET** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Get worksheet validation by index.
 [**cells_worksheet_validations_get_worksheet_validations**](CellsApi.md#cells_worksheet_validations_get_worksheet_validations) | **GET** /cells/{name}/worksheets/{sheetName}/validations | Get worksheet validations.
 [**cells_worksheet_validations_post_worksheet_validation**](CellsApi.md#cells_worksheet_validations_post_worksheet_validation) | **POST** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Update worksheet validation by index.
@@ -2368,7 +2369,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_conditional_formattings_put_worksheet_conditional_formatting**
-> CellsCloudResponse cells_conditional_formattings_put_worksheet_conditional_formatting(name, sheet_name, cell_area, formatcondition=formatcondition, folder=folder, storage=storage)
+> CellsCloudResponse cells_conditional_formattings_put_worksheet_conditional_formatting(name, sheet_name, cell_area, format_condition=format_condition, folder=folder, storage=storage)
 
 Add a condition formatting.
 
@@ -2385,13 +2386,13 @@ api_instance = asposecellscloud.CellsApi()
 name = 'name_example' # str | 
 sheet_name = 'sheet_name_example' # str | 
 cell_area = 'cell_area_example' # str | 
-formatcondition = asposecellscloud.FormatCondition() # FormatCondition |  (optional)
+format_condition = asposecellscloud.FormatCondition() # FormatCondition |  (optional)
 folder = 'folder_example' # str |  (optional)
 storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Add a condition formatting.
-    api_response = api_instance.cells_conditional_formattings_put_worksheet_conditional_formatting(name, sheet_name, cell_area, formatcondition=formatcondition, folder=folder, storage=storage)
+    api_response = api_instance.cells_conditional_formattings_put_worksheet_conditional_formatting(name, sheet_name, cell_area, format_condition=format_condition, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsApi->cells_conditional_formattings_put_worksheet_conditional_formatting: %s\n" % e)
@@ -2404,7 +2405,7 @@ Name | Type | Description  | Notes
  **name** | **str**|  | 
  **sheet_name** | **str**|  | 
  **cell_area** | **str**|  | 
- **formatcondition** | [**FormatCondition**](FormatCondition.md)|  | [optional] 
+ **format_condition** | [**FormatCondition**](FormatCondition.md)|  | [optional] 
  **folder** | **str**|  | [optional] 
  **storage** | **str**| storage name. | [optional] 
 
@@ -7466,7 +7467,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_post_set_cell_html_string**
-> CellResponse cells_post_set_cell_html_string(name, sheet_name, cell_name, folder=folder, storage=storage)
+> CellResponse cells_post_set_cell_html_string(name, sheet_name, cell_name, html_string, folder=folder, storage=storage)
 
 Set htmlstring value into cell
 
@@ -7483,12 +7484,13 @@ api_instance = asposecellscloud.CellsApi()
 name = 'name_example' # str | Workbook name.
 sheet_name = 'sheet_name_example' # str | Worksheet name.
 cell_name = 'cell_name_example' # str | The cell name.
+html_string = 'B' # str | 
 folder = 'folder_example' # str | The workbook folder. (optional)
 storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Set htmlstring value into cell
-    api_response = api_instance.cells_post_set_cell_html_string(name, sheet_name, cell_name, folder=folder, storage=storage)
+    api_response = api_instance.cells_post_set_cell_html_string(name, sheet_name, cell_name, html_string, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsApi->cells_post_set_cell_html_string: %s\n" % e)
@@ -7501,6 +7503,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Workbook name. | 
  **sheet_name** | **str**| Worksheet name. | 
  **cell_name** | **str**| The cell name. | 
+ **html_string** | **str**|  | 
  **folder** | **str**| The workbook folder. | [optional] 
  **storage** | **str**| storage name. | [optional] 
 
@@ -10370,7 +10373,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_workbook_post_import_data**
-> CellsCloudResponse cells_workbook_post_import_data(name, importdata, folder=folder, storage=storage)
+> CellsCloudResponse cells_workbook_post_import_data(name, import_data, folder=folder, storage=storage)
 
 
 
@@ -10385,12 +10388,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = asposecellscloud.CellsApi()
 name = 'name_example' # str | 
-importdata = asposecellscloud.ImportOption() # ImportOption | 
+import_data = asposecellscloud.ImportOption() # ImportOption | 
 folder = 'folder_example' # str |  (optional)
 storage = 'storage_example' # str | storage name. (optional)
 
 try: 
-    api_response = api_instance.cells_workbook_post_import_data(name, importdata, folder=folder, storage=storage)
+    api_response = api_instance.cells_workbook_post_import_data(name, import_data, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsApi->cells_workbook_post_import_data: %s\n" % e)
@@ -10401,7 +10404,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**|  | 
- **importdata** | [**ImportOption**](ImportOption.md)|  | 
+ **import_data** | [**ImportOption**](ImportOption.md)|  | 
  **folder** | **str**|  | [optional] 
  **storage** | **str**| storage name. | [optional] 
 
@@ -11050,6 +11053,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ValidationResponse**](ValidationResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cells_worksheet_validations_delete_worksheet_validations**
+> CellsCloudResponse cells_worksheet_validations_delete_worksheet_validations(name, sheet_name, folder=folder, storage=storage)
+
+Clear all validation in worksheet.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import asposecellscloud
+from asposecellscloud.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = asposecellscloud.CellsApi()
+name = 'name_example' # str | Document name.
+sheet_name = 'sheet_name_example' # str | Worksheet name.
+folder = 'folder_example' # str | Document's folder. (optional)
+storage = 'storage_example' # str | storage name. (optional)
+
+try: 
+    # Clear all validation in worksheet.
+    api_response = api_instance.cells_worksheet_validations_delete_worksheet_validations(name, sheet_name, folder=folder, storage=storage)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CellsApi->cells_worksheet_validations_delete_worksheet_validations: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Document name. | 
+ **sheet_name** | **str**| Worksheet name. | 
+ **folder** | **str**| Document&#39;s folder. | [optional] 
+ **storage** | **str**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
 
 ### Authorization
 

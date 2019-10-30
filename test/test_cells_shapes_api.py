@@ -25,15 +25,16 @@ from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import Shape
-
+global_api = None
 
 class TestCellsShapesApi(unittest.TestCase):
     """ CellsShapesApi unit test stubs """
 
     def setUp(self):
-        warnings.simplefilter("ignore",ResourceWarning)
-        # self.api_client = AuthUtil.GetApiClient()
-        self.api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey())
+        global global_api
+        if global_api is None:
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+        self.api = global_api
 
     def tearDown(self):
         pass
@@ -48,8 +49,10 @@ class TestCellsShapesApi(unittest.TestCase):
         sheet_name ='Sheet1'    
         shapeindex = 0       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_delete_worksheet_shape(name, sheet_name, shapeindex,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_shapes_delete_worksheet_shapes(self):
@@ -62,8 +65,10 @@ class TestCellsShapesApi(unittest.TestCase):
         sheet_name ='Sheet1'    
         shapeindex = 0       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_delete_worksheet_shapes(name, sheet_name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_shapes_get_worksheet_shape(self):
@@ -76,8 +81,10 @@ class TestCellsShapesApi(unittest.TestCase):
         sheet_name ='Sheet1'    
         shapeindex = 0       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_get_worksheet_shape(name, sheet_name, shapeindex,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_shapes_get_worksheet_shapes(self):
@@ -90,8 +97,10 @@ class TestCellsShapesApi(unittest.TestCase):
         sheet_name ='Sheet1'    
         shapeindex = 0       
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_get_worksheet_shapes(name, sheet_name, folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_shapes_post_worksheet_shape(self):
@@ -106,8 +115,10 @@ class TestCellsShapesApi(unittest.TestCase):
         dto = Shape()
         dto.lower_right_column = 10
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_post_worksheet_shape(name, sheet_name, shapeindex,dto=dto,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_shapes_put_worksheet_shape(self):
@@ -126,8 +137,10 @@ class TestCellsShapesApi(unittest.TestCase):
         width= 100 
         height= 90 
         folder = "Temp"
-        AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_put_worksheet_shape(name, sheet_name, drawingType,upperLeftRow,upperLeftColumn, top, left, width, height,folder=folder)
+        self.assertEqual(result.code,200)
         pass
 
 
