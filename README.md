@@ -1,7 +1,7 @@
 # Aspose.Cells Cloud SDK for Python 
 
 - API version: 3.0
-- SDK version: 19.10
+- SDK version: 20.1
 
 This repository contains Aspose.Cells Cloud SDK for Python source code. This SDK allows you to work with Aspose.Cells Cloud REST APIs in your Python applications quickly and easily, with zero initial cost.
 
@@ -48,15 +48,13 @@ All Aspose.Cells Cloud SDKs are licensed under [MIT License](https://github.com/
 
 The complete source code is available in this repository folder. You can either directly use it in your project via source code or get [PyPi](https://pypi.org/project/asposecellscloud) (recommended).  For more details, please visit our [documentation website](https://docs.aspose.cloud/display/cellscloud/Available+SDKs).
 
- 
 
 ### Prerequisites
 
  
 
-To use Aspose.Cells Cloud  SDK  you need to register an account with [Aspose Cloud](https://www.aspose.cloud/) and lookup/create App Key and SID at [Cloud Dashboard](https://dashboard.aspose.cloud/#/apps). There is free quota available. For more details, see [Aspose Cloud Pricing](https://purchase.aspose.cloud/pricing).
+To use Aspose Cells Cloud SDK for Python you need to register an account with [Aspose Cloud](https://www.aspose.cloud/) and lookup/create App Key and SID at [Cloud Dashboard](https://dashboard.aspose.cloud/#/apps). There is free quota available. For more details, see [Aspose Cloud Pricing](https://purchase.aspose.cloud/pricing).
 
- 
 
 ## Installation & Usage
 
@@ -99,9 +97,6 @@ require asposecellscloud
 # Tests
 
 [Tests](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/tree/master/test) contain various examples of using the SDK.
-
-
-
 
 
 # Contact Us

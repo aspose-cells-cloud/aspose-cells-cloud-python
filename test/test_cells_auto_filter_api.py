@@ -28,6 +28,7 @@ import AuthUtil
 from asposecellscloud.models import ColorFilterRequest
 from asposecellscloud.models import Color
 from asposecellscloud.models import CellsColor
+from asposecellscloud.models import ThemeColor
 global_api = None
 class TestCellsAutoFilterApi(unittest.TestCase):
     """ CellsAutoFilterApi unit test stubs """
@@ -155,9 +156,16 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         fieldIndex = 0  
         colorFilter = ColorFilterRequest()
         color = Color(0, 255, 0, 0)
-        cellColor = CellsColor()
-        cellColor.color = color
+        themeColor = ThemeColor(tint=1.0,color_type='Text2')
+        cellColor = CellsColor(theme_color=themeColor,color=color,type='Automatic')
         colorFilter.foreground_color = cellColor
+
+        color1 = Color(0, 255, 0, 0)
+        themeColor1 = ThemeColor(tint=1.0,color_type='Text2')
+        cellColor1 = CellsColor(theme_color=themeColor1,color=color1,type='Automatic')
+        colorFilter.background_color = cellColor
+
+
         colorFilter.pattern = 'Solid'
         matchBlanks = True
         refresh = True
