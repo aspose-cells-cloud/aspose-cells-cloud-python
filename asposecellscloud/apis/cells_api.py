@@ -26,6 +26,7 @@ from __future__ import absolute_import
 import sys
 import os
 import re
+import time
 
 # python 2 and python 3 compatibility library
 from six import iteritems
@@ -39,6 +40,7 @@ class CellsApi(object):
     def __init__(self,appsid, appkey, version='v3.0', api_client=None):
         self.appsid = appsid
         self.appkey = appkey
+        self.version = version 
         self.api_client =  ApiClient('https://api.aspose.cloud')
         self.access_token = self.api_client.get_access_token("client_credentials", appsid, appkey,version)
         # self.auth_data = self.o_auth_post("client_credentials", appsid, appkey)
@@ -52,8 +54,17 @@ class CellsApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
         self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
+        self.get_access_token_time = time.clock()
         # self.api_client.set_default_header("Authorization", "Bearer " + self.auth_data.access_token)
 
+    def check_access_token(self):
+        if self.access_token:
+            timediff = time.clock() - self.get_access_token_time
+            if timediff > 86300 :
+                api_client =  ApiClient('https://api.aspose.cloud')
+                self.access_token = api_client.get_access_token("client_credentials", self.appsid, self.appkey,self.version)
+                self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
+                self.get_access_token_time = time.clock()
 
     def cells_auto_filter_delete_worksheet_date_filter(self, name, sheet_name, field_index, date_time_grouping_type, **kwargs):
         """
@@ -85,6 +96,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_delete_worksheet_date_filter_with_http_info(name, sheet_name, field_index, date_time_grouping_type, **kwargs)
         else:
@@ -236,6 +248,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_delete_worksheet_filter_with_http_info(name, sheet_name, field_index, **kwargs)
         else:
@@ -364,6 +377,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_get_worksheet_auto_filter_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -482,6 +496,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_post_worksheet_auto_filter_refresh_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -601,6 +616,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_post_worksheet_match_blanks_with_http_info(name, sheet_name, field_index, **kwargs)
         else:
@@ -727,6 +743,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_post_worksheet_match_non_blanks_with_http_info(name, sheet_name, field_index, **kwargs)
         else:
@@ -856,6 +873,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_put_worksheet_color_filter_with_http_info(name, sheet_name, range, field_index, **kwargs)
         else:
@@ -1004,6 +1022,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_put_worksheet_custom_filter_with_http_info(name, sheet_name, range, field_index, operator_type1, criteria1, **kwargs)
         else:
@@ -1173,6 +1192,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_put_worksheet_date_filter_with_http_info(name, sheet_name, range, field_index, date_time_grouping_type, **kwargs)
         else:
@@ -1338,6 +1358,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_put_worksheet_dynamic_filter_with_http_info(name, sheet_name, range, field_index, dynamic_filter_type, **kwargs)
         else:
@@ -1485,6 +1506,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_put_worksheet_filter_with_http_info(name, sheet_name, range, field_index, criteria, **kwargs)
         else:
@@ -1635,6 +1657,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_put_worksheet_filter_top10_with_http_info(name, sheet_name, range, field_index, is_top, is_percent, item_count, **kwargs)
         else:
@@ -1796,6 +1819,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_auto_filter_put_worksheet_icon_filter_with_http_info(name, sheet_name, range, field_index, icon_set_type, icon_id, **kwargs)
         else:
@@ -1947,6 +1971,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_autoshapes_get_worksheet_autoshape_with_http_info(name, sheet_name, autoshape_number, **kwargs)
         else:
@@ -2075,6 +2100,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_autoshapes_get_worksheet_autoshapes_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -2195,6 +2221,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_chart_area_get_chart_area_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -2321,6 +2348,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_chart_area_get_chart_area_border_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -2447,6 +2475,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_chart_area_get_chart_area_fill_format_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -2573,6 +2602,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_delete_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -2699,6 +2729,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_delete_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -2824,6 +2855,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_delete_worksheet_clear_charts_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -2944,6 +2976,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_delete_worksheet_delete_chart_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -3071,6 +3104,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_get_worksheet_chart_with_http_info(name, sheet_name, chart_number, **kwargs)
         else:
@@ -3200,6 +3234,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_get_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -3326,6 +3361,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_get_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -3451,6 +3487,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_get_worksheet_charts_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -3572,6 +3609,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_post_worksheet_chart_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -3702,6 +3740,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_post_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -3832,6 +3871,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_post_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -3970,6 +4010,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_put_worksheet_add_chart_with_http_info(name, sheet_name, chart_type, **kwargs)
         else:
@@ -4123,6 +4164,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_put_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -4250,6 +4292,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_charts_put_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, **kwargs)
         else:
@@ -4379,6 +4422,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_conditional_formattings_delete_worksheet_conditional_formatting_with_http_info(name, sheet_name, index, **kwargs)
         else:
@@ -4508,6 +4552,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_conditional_formattings_delete_worksheet_conditional_formatting_area_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, **kwargs)
         else:
@@ -4651,6 +4696,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_conditional_formattings_delete_worksheet_conditional_formattings_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -4771,6 +4817,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_conditional_formattings_get_worksheet_conditional_formatting_with_http_info(name, sheet_name, index, **kwargs)
         else:
@@ -4896,6 +4943,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_conditional_formattings_get_worksheet_conditional_formattings_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -5017,6 +5065,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_conditional_formattings_put_worksheet_conditional_formatting_with_http_info(name, sheet_name, cell_area, **kwargs)
         else:
@@ -5151,6 +5200,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_conditional_formattings_put_worksheet_format_condition_with_http_info(name, sheet_name, index, cell_area, type, operator_type, formula1, formula2, **kwargs)
         else:
@@ -5308,6 +5358,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_conditional_formattings_put_worksheet_format_condition_area_with_http_info(name, sheet_name, index, cell_area, **kwargs)
         else:
@@ -5444,6 +5495,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_conditional_formattings_put_worksheet_format_condition_condition_with_http_info(name, sheet_name, index, type, operator_type, formula1, formula2, **kwargs)
         else:
@@ -5596,6 +5648,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_delete_worksheet_columns_with_http_info(name, sheet_name, column_index, columns, update_reference, **kwargs)
         else:
@@ -5734,6 +5787,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_delete_worksheet_row_with_http_info(name, sheet_name, row_index, **kwargs)
         else:
@@ -5862,6 +5916,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_delete_worksheet_rows_with_http_info(name, sheet_name, startrow, **kwargs)
         else:
@@ -5994,6 +6049,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_get_cell_html_string_with_http_info(name, sheet_name, cell_name, **kwargs)
         else:
@@ -6120,6 +6176,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_get_worksheet_cell_with_http_info(name, sheet_name, cell_or_method_name, **kwargs)
         else:
@@ -6246,6 +6303,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_get_worksheet_cell_style_with_http_info(name, sheet_name, cell_name, **kwargs)
         else:
@@ -6373,6 +6431,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_get_worksheet_cells_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -6499,6 +6558,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_get_worksheet_column_with_http_info(name, sheet_name, column_index, **kwargs)
         else:
@@ -6624,6 +6684,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_get_worksheet_columns_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -6744,6 +6805,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_get_worksheet_row_with_http_info(name, sheet_name, row_index, **kwargs)
         else:
@@ -6869,6 +6931,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_get_worksheet_rows_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -6989,6 +7052,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_hypelinks_delete_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, **kwargs)
         else:
@@ -7114,6 +7178,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_hypelinks_delete_worksheet_hyperlinks_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -7234,6 +7299,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_hypelinks_get_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, **kwargs)
         else:
@@ -7359,6 +7425,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_hypelinks_get_worksheet_hyperlinks_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -7480,6 +7547,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_hypelinks_post_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, **kwargs)
         else:
@@ -7613,6 +7681,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_hypelinks_put_worksheet_hyperlink_with_http_info(name, sheet_name, first_row, first_column, total_rows, total_columns, address, **kwargs)
         else:
@@ -7763,6 +7832,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_list_objects_delete_worksheet_list_object_with_http_info(name, sheet_name, list_object_index, **kwargs)
         else:
@@ -7888,6 +7958,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_list_objects_delete_worksheet_list_objects_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -8008,6 +8079,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_list_objects_get_worksheet_list_object_with_http_info(name, sheet_name, listobjectindex, **kwargs)
         else:
@@ -8133,6 +8205,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_list_objects_get_worksheet_list_objects_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -8254,6 +8327,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_list_objects_post_worksheet_list_object_with_http_info(name, sheet_name, list_object_index, **kwargs)
         else:
@@ -8382,6 +8456,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_list_objects_post_worksheet_list_object_convert_to_range_with_http_info(name, sheet_name, list_object_index, **kwargs)
         else:
@@ -8507,6 +8582,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_list_objects_post_worksheet_list_object_sort_table_with_http_info(name, sheet_name, list_object_index, **kwargs)
         else:
@@ -8636,6 +8712,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table_with_http_info(name, sheet_name, list_object_index, destsheet_name, **kwargs)
         else:
@@ -8775,6 +8852,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_list_objects_put_worksheet_list_object_with_http_info(name, sheet_name, start_row, start_column, end_row, end_column, **kwargs)
         else:
@@ -8925,6 +9003,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ole_objects_delete_worksheet_ole_object_with_http_info(name, sheet_name, ole_object_index, **kwargs)
         else:
@@ -9050,6 +9129,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ole_objects_delete_worksheet_ole_objects_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -9171,6 +9251,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ole_objects_get_worksheet_ole_object_with_http_info(name, sheet_name, object_number, **kwargs)
         else:
@@ -9299,6 +9380,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ole_objects_get_worksheet_ole_objects_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -9420,6 +9502,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ole_objects_post_update_worksheet_ole_object_with_http_info(name, sheet_name, ole_object_index, **kwargs)
         else:
@@ -9555,6 +9638,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ole_objects_put_worksheet_ole_object_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -9695,6 +9779,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_breaks_delete_horizontal_page_break_with_http_info(name, sheet_name, index, **kwargs)
         else:
@@ -9819,6 +9904,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_breaks_delete_horizontal_page_breaks_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -9940,6 +10026,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_breaks_delete_vertical_page_break_with_http_info(name, sheet_name, index, **kwargs)
         else:
@@ -10064,6 +10151,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_breaks_delete_vertical_page_breaks_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -10185,6 +10273,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_breaks_get_horizontal_page_break_with_http_info(name, sheet_name, index, **kwargs)
         else:
@@ -10308,6 +10397,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_breaks_get_horizontal_page_breaks_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -10426,6 +10516,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_breaks_get_vertical_page_break_with_http_info(name, sheet_name, index, **kwargs)
         else:
@@ -10549,6 +10640,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_breaks_get_vertical_page_breaks_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -10671,6 +10763,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_breaks_put_horizontal_page_break_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -10808,6 +10901,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_breaks_put_vertical_page_break_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -10941,6 +11035,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_setup_delete_header_footer_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -11060,6 +11155,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_setup_get_footer_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -11179,6 +11275,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_setup_get_header_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -11298,6 +11395,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_setup_get_page_setup_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -11420,6 +11518,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_setup_post_footer_with_http_info(name, sheet_name, section, script, is_first_page, **kwargs)
         else:
@@ -11560,6 +11659,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_setup_post_header_with_http_info(name, sheet_name, section, script, is_first_page, **kwargs)
         else:
@@ -11698,6 +11798,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_page_setup_post_page_setup_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -11821,6 +11922,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pictures_delete_worksheet_picture_with_http_info(name, sheet_name, picture_index, **kwargs)
         else:
@@ -11946,6 +12048,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pictures_delete_worksheet_pictures_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -12067,6 +12170,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pictures_get_worksheet_picture_with_http_info(name, sheet_name, picture_index, **kwargs)
         else:
@@ -12195,6 +12299,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pictures_get_worksheet_pictures_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -12316,6 +12421,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pictures_post_worksheet_picture_with_http_info(name, sheet_name, picture_index, **kwargs)
         else:
@@ -12450,6 +12556,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pictures_put_worksheet_add_picture_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -12590,6 +12697,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_delete_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, **kwargs)
         else:
@@ -12725,6 +12833,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_delete_worksheet_pivot_table_with_http_info(name, sheet_name, pivot_table_index, **kwargs)
         else:
@@ -12853,6 +12962,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_delete_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, field_index, **kwargs)
         else:
@@ -12989,6 +13099,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_delete_worksheet_pivot_table_filters_with_http_info(name, sheet_name, pivot_table_index, **kwargs)
         else:
@@ -13117,6 +13228,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_delete_worksheet_pivot_tables_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -13239,6 +13351,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_get_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, **kwargs)
         else:
@@ -13377,6 +13490,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_get_worksheet_pivot_table_with_http_info(name, sheet_name, pivottable_index, **kwargs)
         else:
@@ -13503,6 +13617,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_get_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, filter_index, **kwargs)
         else:
@@ -13633,6 +13748,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_get_worksheet_pivot_table_filters_with_http_info(name, sheet_name, pivot_table_index, **kwargs)
         else:
@@ -13757,6 +13873,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_get_worksheet_pivot_tables_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -13881,6 +13998,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_post_pivot_table_cell_style_with_http_info(name, sheet_name, pivot_table_index, column, row, **kwargs)
         else:
@@ -14029,6 +14147,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_post_pivot_table_field_hide_item_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide, **kwargs)
         else:
@@ -14183,6 +14302,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_post_pivot_table_field_move_to_with_http_info(name, sheet_name, pivot_table_index, field_index, _from, to, **kwargs)
         else:
@@ -14328,6 +14448,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_post_pivot_table_style_with_http_info(name, sheet_name, pivot_table_index, **kwargs)
         else:
@@ -14460,6 +14581,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_post_worksheet_pivot_table_calculate_with_http_info(name, sheet_name, pivot_table_index, **kwargs)
         else:
@@ -14588,6 +14710,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_post_worksheet_pivot_table_move_with_http_info(name, sheet_name, pivot_table_index, **kwargs)
         else:
@@ -14725,6 +14848,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_put_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, **kwargs)
         else:
@@ -14867,6 +14991,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_put_worksheet_pivot_table_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -15004,6 +15129,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_pivot_tables_put_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, **kwargs)
         else:
@@ -15137,6 +15263,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_cell_calculate_with_http_info(name, sheet_name, cell_name, **kwargs)
         else:
@@ -15267,6 +15394,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_cell_characters_with_http_info(name, sheet_name, cell_name, **kwargs)
         else:
@@ -15400,6 +15528,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_clear_contents_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -15539,6 +15668,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_clear_formats_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -15675,6 +15805,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_column_style_with_http_info(name, sheet_name, column_index, **kwargs)
         else:
@@ -15808,6 +15939,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_copy_cell_into_cell_with_http_info(name, dest_cell_name, sheet_name, worksheet, **kwargs)
         else:
@@ -15952,6 +16084,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_copy_worksheet_columns_with_http_info(name, sheet_name, source_column_index, destination_column_index, column_number, **kwargs)
         else:
@@ -16096,6 +16229,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_copy_worksheet_rows_with_http_info(name, sheet_name, source_row_index, destination_row_index, row_number, **kwargs)
         else:
@@ -16239,6 +16373,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_group_worksheet_columns_with_http_info(name, sheet_name, first_index, last_index, **kwargs)
         else:
@@ -16376,6 +16511,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_group_worksheet_rows_with_http_info(name, sheet_name, first_index, last_index, **kwargs)
         else:
@@ -16512,6 +16648,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_hide_worksheet_columns_with_http_info(name, sheet_name, start_column, total_columns, **kwargs)
         else:
@@ -16645,6 +16782,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_hide_worksheet_rows_with_http_info(name, sheet_name, startrow, total_rows, **kwargs)
         else:
@@ -16778,6 +16916,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_row_style_with_http_info(name, sheet_name, row_index, **kwargs)
         else:
@@ -16908,6 +17047,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, **kwargs)
         else:
@@ -17042,6 +17182,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_set_cell_range_value_with_http_info(name, sheet_name, cellarea, value, type, **kwargs)
         else:
@@ -17181,6 +17322,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, **kwargs)
         else:
@@ -17314,6 +17456,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_ungroup_worksheet_columns_with_http_info(name, sheet_name, first_index, last_index, **kwargs)
         else:
@@ -17448,6 +17591,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_ungroup_worksheet_rows_with_http_info(name, sheet_name, first_index, last_index, **kwargs)
         else:
@@ -17585,6 +17729,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_unhide_worksheet_columns_with_http_info(name, sheet_name, startcolumn, total_columns, **kwargs)
         else:
@@ -17722,6 +17867,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_unhide_worksheet_rows_with_http_info(name, sheet_name, startrow, total_rows, **kwargs)
         else:
@@ -17858,6 +18004,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_update_worksheet_cell_style_with_http_info(name, sheet_name, cell_name, **kwargs)
         else:
@@ -17988,6 +18135,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_update_worksheet_range_style_with_http_info(name, sheet_name, range, **kwargs)
         else:
@@ -18118,6 +18266,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_update_worksheet_row_with_http_info(name, sheet_name, row_index, **kwargs)
         else:
@@ -18250,6 +18399,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_worksheet_cell_set_value_with_http_info(name, sheet_name, cell_name, **kwargs)
         else:
@@ -18388,6 +18538,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_worksheet_merge_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, **kwargs)
         else:
@@ -18535,6 +18686,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_post_worksheet_unmerge_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, **kwargs)
         else:
@@ -18677,6 +18829,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_properties_delete_document_properties_with_http_info(name, **kwargs)
         else:
@@ -18790,6 +18943,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_properties_delete_document_property_with_http_info(name, property_name, **kwargs)
         else:
@@ -18908,6 +19062,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_properties_get_document_properties_with_http_info(name, **kwargs)
         else:
@@ -19021,6 +19176,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_properties_get_document_property_with_http_info(name, property_name, **kwargs)
         else:
@@ -19141,6 +19297,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_properties_put_document_property_with_http_info(name, property_name, **kwargs)
         else:
@@ -19266,6 +19423,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_put_insert_worksheet_columns_with_http_info(name, sheet_name, column_index, columns, **kwargs)
         else:
@@ -19401,6 +19559,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_put_insert_worksheet_row_with_http_info(name, sheet_name, row_index, **kwargs)
         else:
@@ -19529,6 +19688,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_put_insert_worksheet_rows_with_http_info(name, sheet_name, startrow, **kwargs)
         else:
@@ -19665,6 +19825,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ranges_get_worksheet_cells_range_value_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -19801,6 +19962,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ranges_post_worksheet_cells_range_column_width_with_http_info(name, sheet_name, value, **kwargs)
         else:
@@ -19930,6 +20092,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ranges_post_worksheet_cells_range_merge_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -20055,6 +20218,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ranges_post_worksheet_cells_range_move_to_with_http_info(name, sheet_name, dest_row, dest_column, **kwargs)
         else:
@@ -20190,6 +20354,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ranges_post_worksheet_cells_range_outline_border_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -20314,6 +20479,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ranges_post_worksheet_cells_range_row_height_with_http_info(name, sheet_name, value, **kwargs)
         else:
@@ -20443,6 +20609,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ranges_post_worksheet_cells_range_style_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -20566,6 +20733,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ranges_post_worksheet_cells_range_unmerge_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -20692,6 +20860,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ranges_post_worksheet_cells_range_value_with_http_info(name, sheet_name, value, **kwargs)
         else:
@@ -20827,6 +20996,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_ranges_post_worksheet_cells_ranges_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -20952,6 +21122,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_save_as_post_document_save_as_with_http_info(name, **kwargs)
         else:
@@ -21078,6 +21249,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_shapes_delete_worksheet_shape_with_http_info(name, sheet_name, shapeindex, **kwargs)
         else:
@@ -21203,6 +21375,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_shapes_delete_worksheet_shapes_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -21323,6 +21496,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_shapes_get_worksheet_shape_with_http_info(name, sheet_name, shapeindex, **kwargs)
         else:
@@ -21448,6 +21622,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_shapes_get_worksheet_shapes_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -21569,6 +21744,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_shapes_post_worksheet_shape_with_http_info(name, sheet_name, shapeindex, **kwargs)
         else:
@@ -21704,6 +21880,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_shapes_put_worksheet_shape_with_http_info(name, sheet_name, drawing_type, upper_left_row, upper_left_column, top, left, width, height, **kwargs)
         else:
@@ -21862,6 +22039,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_task_post_run_task_with_http_info(task_data, **kwargs)
         else:
@@ -21969,6 +22147,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_delete_decrypt_document_with_http_info(name, **kwargs)
         else:
@@ -22084,6 +22263,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_delete_document_unprotect_from_changes_with_http_info(name, **kwargs)
         else:
@@ -22197,6 +22377,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_delete_unprotect_document_with_http_info(name, **kwargs)
         else:
@@ -22313,6 +22494,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_delete_workbook_name_with_http_info(name, name_name, **kwargs)
         else:
@@ -22431,6 +22613,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_delete_workbook_names_with_http_info(name, **kwargs)
         else:
@@ -22548,6 +22731,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_get_workbook_with_http_info(name, **kwargs)
         else:
@@ -22675,6 +22859,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_get_workbook_default_style_with_http_info(name, **kwargs)
         else:
@@ -22788,6 +22973,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_get_workbook_name_with_http_info(name, name_name, **kwargs)
         else:
@@ -22907,6 +23093,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_get_workbook_name_value_with_http_info(name, name_name, **kwargs)
         else:
@@ -23025,6 +23212,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_get_workbook_names_with_http_info(name, **kwargs)
         else:
@@ -23137,6 +23325,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_get_workbook_settings_with_http_info(name, **kwargs)
         else:
@@ -23249,6 +23438,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_get_workbook_text_items_with_http_info(name, **kwargs)
         else:
@@ -23365,6 +23555,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_post_autofit_workbook_rows_with_http_info(name, **kwargs)
         else:
@@ -23490,6 +23681,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_post_encrypt_document_with_http_info(name, **kwargs)
         else:
@@ -23605,6 +23797,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_post_import_data_with_http_info(name, import_data, **kwargs)
         else:
@@ -23723,6 +23916,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_post_protect_document_with_http_info(name, **kwargs)
         else:
@@ -23840,6 +24034,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_post_workbook_calculate_formula_with_http_info(name, **kwargs)
         else:
@@ -23960,6 +24155,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_post_workbook_get_smart_marker_result_with_http_info(name, **kwargs)
         else:
@@ -24079,6 +24275,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_post_workbook_settings_with_http_info(name, **kwargs)
         else:
@@ -24199,6 +24396,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_post_workbook_split_with_http_info(name, **kwargs)
         else:
@@ -24327,6 +24525,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_post_workbooks_merge_with_http_info(name, merge_with, **kwargs)
         else:
@@ -24447,6 +24646,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_post_workbooks_text_replace_with_http_info(name, old_value, new_value, **kwargs)
         else:
@@ -24572,6 +24772,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_post_workbooks_text_search_with_http_info(name, text, **kwargs)
         else:
@@ -24691,6 +24892,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_put_convert_workbook_with_http_info(workbook, **kwargs)
         else:
@@ -24807,6 +25009,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_put_document_protect_from_changes_with_http_info(name, **kwargs)
         else:
@@ -24924,6 +25127,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_workbook_put_workbook_create_with_http_info(name, **kwargs)
         else:
@@ -25044,6 +25248,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheet_validations_delete_worksheet_validation_with_http_info(name, sheet_name, validation_index, **kwargs)
         else:
@@ -25169,6 +25374,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheet_validations_delete_worksheet_validations_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -25289,6 +25495,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheet_validations_get_worksheet_validation_with_http_info(name, sheet_name, validation_index, **kwargs)
         else:
@@ -25414,6 +25621,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheet_validations_get_worksheet_validations_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -25535,6 +25743,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheet_validations_post_worksheet_validation_with_http_info(name, sheet_name, validation_index, **kwargs)
         else:
@@ -25665,6 +25874,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheet_validations_put_worksheet_validation_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -25791,6 +26001,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_delete_unprotect_worksheet_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -25913,6 +26124,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_delete_worksheet_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -26032,6 +26244,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_delete_worksheet_background_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -26152,6 +26365,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_delete_worksheet_comment_with_http_info(name, sheet_name, cell_name, **kwargs)
         else:
@@ -26277,6 +26491,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_delete_worksheet_comments_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -26400,6 +26615,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_delete_worksheet_freeze_panes_with_http_info(name, sheet_name, row, column, freezed_rows, freezed_columns, **kwargs)
         else:
@@ -26542,6 +26758,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_get_named_ranges_with_http_info(name, **kwargs)
         else:
@@ -26658,6 +26875,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_get_worksheet_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -26787,6 +27005,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_get_worksheet_calculate_formula_with_http_info(name, sheet_name, formula, **kwargs)
         else:
@@ -26913,6 +27132,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_get_worksheet_comment_with_http_info(name, sheet_name, cell_name, **kwargs)
         else:
@@ -27038,6 +27258,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_get_worksheet_comments_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -27158,6 +27379,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_get_worksheet_merged_cell_with_http_info(name, sheet_name, merged_cell_index, **kwargs)
         else:
@@ -27283,6 +27505,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_get_worksheet_merged_cells_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -27402,6 +27625,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_get_worksheet_text_items_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -27520,6 +27744,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_get_worksheets_with_http_info(name, **kwargs)
         else:
@@ -27637,6 +27862,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_autofit_worksheet_columns_with_http_info(name, sheet_name, first_column, last_column, **kwargs)
         else:
@@ -27779,6 +28005,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_autofit_worksheet_row_with_http_info(name, sheet_name, row_index, first_column, last_column, **kwargs)
         else:
@@ -27922,6 +28149,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_autofit_worksheet_rows_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -28056,6 +28284,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_copy_worksheet_with_http_info(name, sheet_name, source_sheet, **kwargs)
         else:
@@ -28190,6 +28419,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_move_worksheet_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -28313,6 +28543,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_rename_worksheet_with_http_info(name, sheet_name, newname, **kwargs)
         else:
@@ -28439,6 +28670,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_update_worksheet_property_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -28561,6 +28793,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_update_worksheet_zoom_with_http_info(name, sheet_name, value, **kwargs)
         else:
@@ -28687,6 +28920,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_worksheet_comment_with_http_info(name, sheet_name, cell_name, **kwargs)
         else:
@@ -28817,6 +29051,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_worksheet_range_sort_with_http_info(name, sheet_name, cell_area, **kwargs)
         else:
@@ -28946,6 +29181,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_worksheet_text_search_with_http_info(name, sheet_name, text, **kwargs)
         else:
@@ -29073,6 +29309,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_post_worsheet_text_replace_with_http_info(name, sheet_name, old_value, new_value, **kwargs)
         else:
@@ -29206,6 +29443,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_put_add_new_worksheet_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -29332,6 +29570,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_put_change_visibility_worksheet_with_http_info(name, sheet_name, is_visible, **kwargs)
         else:
@@ -29458,6 +29697,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_put_protect_worksheet_with_http_info(name, sheet_name, **kwargs)
         else:
@@ -29581,6 +29821,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_put_worksheet_background_with_http_info(name, sheet_name, png, **kwargs)
         else:
@@ -29708,6 +29949,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_put_worksheet_comment_with_http_info(name, sheet_name, cell_name, **kwargs)
         else:
@@ -29840,6 +30082,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.cells_worksheets_put_worksheet_freeze_panes_with_http_info(name, sheet_name, row, column, freezed_rows, freezed_columns, **kwargs)
         else:
@@ -29984,6 +30227,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.copy_file_with_http_info(src_path, dest_path, **kwargs)
         else:
@@ -30106,6 +30350,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.copy_folder_with_http_info(src_path, dest_path, **kwargs)
         else:
@@ -30223,6 +30468,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.create_folder_with_http_info(path, **kwargs)
         else:
@@ -30332,6 +30578,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.delete_file_with_http_info(path, **kwargs)
         else:
@@ -30444,6 +30691,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.delete_folder_with_http_info(path, **kwargs)
         else:
@@ -30556,6 +30804,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.download_file_with_http_info(path, **kwargs)
         else:
@@ -30666,6 +30915,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.get_disc_usage_with_http_info(**kwargs)
         else:
@@ -30768,6 +31018,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.get_file_versions_with_http_info(path, **kwargs)
         else:
@@ -30876,6 +31127,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.get_files_list_with_http_info(path, **kwargs)
         else:
@@ -30987,6 +31239,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.move_file_with_http_info(src_path, dest_path, **kwargs)
         else:
@@ -31109,6 +31362,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.move_folder_with_http_info(src_path, dest_path, **kwargs)
         else:
@@ -31227,6 +31481,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.o_auth_post_with_http_info(grant_type, client_id, client_secret, **kwargs)
         else:
@@ -31345,6 +31600,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.object_exists_with_http_info(path, **kwargs)
         else:
@@ -31455,6 +31711,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.storage_exists_with_http_info(storage_name, **kwargs)
         else:
@@ -31561,6 +31818,7 @@ class CellsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
+        self.check_access_token()
         if kwargs.get('callback'):
             return self.upload_file_with_http_info(path, file, **kwargs)
         else:

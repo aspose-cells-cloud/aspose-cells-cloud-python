@@ -28,9 +28,9 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "asp
 setup(
     name=NAME,
     version=VERSION,
-    description="Aspose.Cells Cloud for Python",
-    author="Nick Liu",
-    author_email="nick.liu@aspose.com",
+    description="Aspose.Cells.Cloud SDK",
+    author="Aspose Cloud",
+    author_email="aspose.cloud@aspose.com",
     url="https://github.com/aspose-cells-cloud/aspose-cells-cloud-python",
     keywords=["aspose", "cells", "cloud"],
     install_requires=REQUIRES,
