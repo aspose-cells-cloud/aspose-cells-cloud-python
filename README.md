@@ -1,115 +1,93 @@
-# Aspose.Cells Cloud SDK for Python 
+Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Microsoft Excel® spreadsheet generation, manipulation, conversion & inspection features into your own Python applications.
 
-- API version: 3.0
-- SDK version: 20.1
+[Aspose.Cells Cloud SDK for Python](https://products.aspose.cloud/cells/python) offers Excel® file creation, manipulation, conversion, & rendering. Developers can format worksheets, rows, columns or cells to the most granular level, create & manipulate chart & pivot tables, render worksheets, charts and specific data ranges to PDF & images, add & calculate Excel's built-in and custom formulas and much more. Feel free to explore the [Developer's Guide](https://docs.aspose.cloud/display/cellscloud/Developer+Guide) for all usage scenarios. 
 
-This repository contains Aspose.Cells Cloud SDK for Python source code. This SDK allows you to work with Aspose.Cells Cloud REST APIs in your Python applications quickly and easily, with zero initial cost.
+## Manipulate Excel Files in the Cloud with Python
 
+- Create Excel files via API.
+- Create & refresh Pivot Tables & charts.
+- Create & manipulate spark-lines & conditional formatting.
+- Convert charts, worksheets or data ranges to images or PDF.
+- Manage comments & hyperlinks.
+- Set complex formulas & calculate results via API.
+- Set protection on workbook, worksheet, cell, column or row.
+- Create & manipulate named ranges.
+- Populate worksheets through Smart Markers.
+- Convert worksheets to PDF, XPS & SVG formats.
+- Inter-convert files to popular Excel formats.
 
+## Feature & Enhancements in Version 20.4
 
-# Key Features
+- Support to export area or page of sheet to JPEG.
+- Support to add background for workbook.
+- Enhancement for splitting workbook.
+- Enhancement for create workbook.
 
-- Conversion between various document-related formats (20+ formats supported), including PDF<->Excel conversion
+## Read & Write Spreadsheet Formats
 
-- Splitting Excel documents
+**Microsoft Excel:** XLS, XLSX, XLSB, XLSM, XLT, XLTX, XLTM
+**OpenOffice:** ODS
+**SpreadsheetML:** XML
+**Text:** CSV, TSV, TXT (TabDelimited)
+**Web:** HTML, MHTML
+**PDF**
 
-- Accessing Excel document metadata and statistics
+## Save Spreadsheet As
 
-- Find and replace
+DIF, HTML, MHTML,PNG,JPG, TIFF, XPS, SVG, MD (Markdown), ODS ,xlsx,xls,xlsb, PDF,XML,TXT,CSV
 
-- Watermarks and protection
+## Read Spreadsheet Formats
 
-- Full read & write access to Cells Object Model, including workbook, worksheet, cell, shapes, tables, list object ,ole Object,headers/footers and many others
+SXC, FODS
 
-  
+## Storage API Support
 
-See [API Reference](https://apireference.aspose.cloud/cells/) for full API specification.
-
-
-
-# Storage API support
-
-#### Since version 19.9 SDK includes support of storage operations for better user experience and unification, so now there's no need to use 2 different SDKs!
+Since version 19.9, SDK includes support of storage operations for better user experience and unification, so now there's no need to use 2 different SDKs!
 
 It gives you an ability to:
 
-- Upload, download, copy, move and delete files, including versions handling (if you are using Cloud storage that supports this feature - true by default)
-- Create, copy, move and delete folders
-- Copy and move files and folders accross separate storages in scope of a single operation
-- Check if certain file, folder or storage exists
+- Upload, download, copy, move and delete files, including versions handling (if you are using Cloud storage that supports this feature - true by default).
+- Create, copy, move and delete folders.
+- Copy and move files and folders across separate storages in scope of a single operation.
+- Check if certain file, folder or storage exists.
 
-# Licensing
+## Getting Started with Aspose.Cells Cloud SDK for Python
 
-All Aspose.Cells Cloud SDKs are licensed under [MIT License](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE).
+Firstly, create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/apps) to get your application information and free quota to use the API. Now execute `pip install asposecellscloud` from the command line to get the get the SDK from PIP. The complete source code is available at [GitHub Repository](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python).
 
+## Create Spreadsheet from a Template in the Cloud via Python
 
+```python
 
-# How to use the SDK?
+    #Instantiate Aspose Cells API SDK
+    cellsApi = asposecellscloud.apis.cells_api.CellsApi(GetAPPSID(),GetAPPKey(),"v3.0")
 
-The complete source code is available in this repository folder. You can either directly use it in your project via source code or get [PyPi](https://pypi.org/project/asposecellscloud) (recommended).  For more details, please visit our [documentation website](https://docs.aspose.cloud/display/cellscloud/Available+SDKs).
-
-
-### Prerequisites
-
- 
-
-To use Aspose Cells Cloud SDK for Python you need to register an account with [Aspose Cloud](https://www.aspose.cloud/) and lookup/create App Key and SID at [Cloud Dashboard](https://dashboard.aspose.cloud/#/apps). There is free quota available. For more details, see [Aspose Cloud Pricing](https://purchase.aspose.cloud/pricing).
-
-
-## Installation & Usage
-
-### pip install
-
-If the python package is hosted on Github, you can install directly from Github
-
-```
-pip install asposecellscloud
+    templateFile ='Book1.xlsx'       
+    folder = "Temp"
+    name = "NewBook" + datetime.now().strftime("%Y%m%d%H%M%S") + ".xlsx"    
+    dataFile = "ReportData.xml"  
+    template_file = folder + "/" + templateFile
+    data_file = folder + "/" + dataFile
+    fullfilename = os.path.dirname(os.path.realpath(__file__)) +  "/" + templateFile
+    api.upload_file(template_file, fullfilename)
+    fullfilename = os.path.dirname(os.path.realpath(__file__)) +  "/" + data_file
+    api.upload_file(data_file, fullfilename)
+    result = cellsApi.cells_workbook_put_workbook_create(name, template_file=template_file, data_file=data_file,  folder=folder)
+    self.assertEqual(result.code,200)
 ```
 
-(you may need to run `pip` with root permission: `sudo pip install asposecellscloud)
+## Convert Excel to PDF via Python 
 
-Then import the package:
+```python
+    #Instantiate Aspose Cells API SDK
+    cellsApi = asposecellscloud.apis.cells_api.CellsApi(GetAPPSID(),GetAPPKey(),"v3.0")
 
-```
-import asposecellscloud
-```
-
-### Setuptools
-
-Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
-
-```
-python setup.py install --user
+    fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+    format ='pdf'       
+    password = None
+    outPath = None      
+    result = cellsApi.cells_workbook_put_convert_workbook(fullfilename,format=format)
+    # self.assertEqual(result.code,200)
 ```
 
-(or `sudo python setup.py install` to install the package for all users)
-
-Then import the package:
-
-```
-require asposecellscloud
-```
-
-### Sample usage
-
-
-
-# Tests
-
-[Tests](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/tree/master/test) contain various examples of using the SDK.
-
-
-# Contact Us
-
-Your feedback is very important to us. Please feel free to contact via
-
-- [**Free Support Forum**](https://forum.aspose.cloud/c/cells)
-- [**Paid Support Helpdesk**](https://helpdesk.aspose.cloud/)
-
-# Resources
-
-- [**Web API reference**](https://apireference.aspose.cloud/cells/)
-- [**Website**](https://www.aspose.cloud)
-- [**Product Home**](https://products.aspose.cloud/cells)
-- [**Documentation**](https://docs.aspose.cloud/display/cellscloud/Home)
-- [**Blog**](https://blog.aspose.cloud/category/cells/)
+[Product Page](https://products.aspose.cloud/cells/python) | [Documentation](https://docs.aspose.cloud/display/cellscloud/Home) | [Live Demo](https://products.aspose.app/cells/family) | [API Reference](https://apireference.aspose.cloud/cells/) | [Code Samples](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python) | [Blog](https://blog.aspose.cloud/category/cells/) | [Free Support](https://forum.aspose.cloud/c/cells) | [Free Trial](https://dashboard.aspose.cloud/#/apps)

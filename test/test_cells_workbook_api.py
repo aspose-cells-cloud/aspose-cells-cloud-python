@@ -453,13 +453,13 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Convert workbook from request content to some format.
         """
         fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
-        f = open(fullfilename, 'rb')
-        workbook = f.read()
-        f.close()
+        # f = open(fullfilename, 'rb')
+        # workbook = f.read()
+        # f.close()
         format ='pdf'       
         password = None
         outPath = None      
-        result = self.api.cells_workbook_put_convert_workbook(workbook,format=format)
+        result = self.api.cells_workbook_put_convert_workbook(fullfilename,format=format)
         # self.assertEqual(result.code,200)
         pass
 
@@ -497,6 +497,43 @@ class TestCellsWorkbookApi(unittest.TestCase):
         self.assertEqual(result.code,200)
         pass
 
+    def test_cells_workbook_put_workbook_background(self):
+        """
+        Test case for test_cells_workbook_put_workbook_background
+
+        Set workbook background image.
+        """
+        name = "Book1.xlsx"
+        sheet_name ='Sheet1' 
+        isVisible = True
+        sheettype = "VB" 
+        folder = "Temp"
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "WaterMark.png"
+        f = open(fullfilename, 'rb')
+        png = f.read()
+        f.close()
+        result = self.api.cells_workbook_put_workbook_background(name,  png, folder=folder)
+        self.assertEqual(result.code,200)
+        pass
+
+    def test_cells_workbook_delete_workbook_background(self):
+        """
+        Test case for test_cells_workbook_delete_workbook_background
+
+        Set workbook background image.
+        """
+        name = "Book1.xlsx"
+        sheet_name ='Sheet1' 
+        isVisible = True
+        sheettype = "VB" 
+        folder = "Temp"
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_workbook_delete_workbook_background(name,   folder=folder)
+        self.assertEqual(result.code,200)
+        pass
 
 if __name__ == '__main__':
     unittest.main()

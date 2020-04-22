@@ -174,6 +174,7 @@ Method | HTTP request | Description
 [**cells_workbook_delete_decrypt_document**](CellsApi.md#cells_workbook_delete_decrypt_document) | **DELETE** /cells/{name}/encryption | Decrypt document.
 [**cells_workbook_delete_document_unprotect_from_changes**](CellsApi.md#cells_workbook_delete_document_unprotect_from_changes) | **DELETE** /cells/{name}/writeProtection | Unprotect document from changes.
 [**cells_workbook_delete_unprotect_document**](CellsApi.md#cells_workbook_delete_unprotect_document) | **DELETE** /cells/{name}/protection | Unprotect document.
+[**cells_workbook_delete_workbook_background**](CellsApi.md#cells_workbook_delete_workbook_background) | **DELETE** /cells/{name}/background | Set worksheet background image.
 [**cells_workbook_delete_workbook_name**](CellsApi.md#cells_workbook_delete_workbook_name) | **DELETE** /cells/{name}/names/{nameName} | Clean workbook&#39;s names.
 [**cells_workbook_delete_workbook_names**](CellsApi.md#cells_workbook_delete_workbook_names) | **DELETE** /cells/{name}/names | Clean workbook&#39;s names.
 [**cells_workbook_get_workbook**](CellsApi.md#cells_workbook_get_workbook) | **GET** /cells/{name} | Read workbook info or export.
@@ -196,6 +197,7 @@ Method | HTTP request | Description
 [**cells_workbook_post_workbooks_text_search**](CellsApi.md#cells_workbook_post_workbooks_text_search) | **POST** /cells/{name}/findText | Search text.
 [**cells_workbook_put_convert_workbook**](CellsApi.md#cells_workbook_put_convert_workbook) | **PUT** /cells/convert | Convert workbook from request content to some format.
 [**cells_workbook_put_document_protect_from_changes**](CellsApi.md#cells_workbook_put_document_protect_from_changes) | **PUT** /cells/{name}/writeProtection | Protect document from changes.
+[**cells_workbook_put_workbook_background**](CellsApi.md#cells_workbook_put_workbook_background) | **PUT** /cells/{name}/background | Set workbook background image.
 [**cells_workbook_put_workbook_create**](CellsApi.md#cells_workbook_put_workbook_create) | **PUT** /cells/{name} | Create new workbook using deferent methods.
 [**cells_worksheet_validations_delete_worksheet_validation**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validation) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Delete worksheet validation by index.
 [**cells_worksheet_validations_delete_worksheet_validations**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validations) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations | Clear all validation in worksheet.
@@ -9796,6 +9798,56 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **cells_workbook_delete_workbook_background**
+> CellsCloudResponse cells_workbook_delete_workbook_background(name, folder=folder, storage=storage)
+
+Set worksheet background image.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import asposecellscloud
+from asposecellscloud.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = asposecellscloud.CellsApi()
+name = 'name_example' # str | 
+folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
+
+try: 
+    # Set worksheet background image.
+    api_response = api_instance.cells_workbook_delete_workbook_background(name, folder=folder, storage=storage)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CellsApi->cells_workbook_delete_workbook_background: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**|  | 
+ **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **cells_workbook_delete_workbook_name**
 > CellsCloudResponse cells_workbook_delete_workbook_name(name, name_name, folder=folder, storage=storage)
 
@@ -10636,7 +10688,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_workbook_post_workbook_split**
-> SplitResultResponse cells_workbook_post_workbook_split(name, format=format, _from=_from, to=to, horizontal_resolution=horizontal_resolution, vertical_resolution=vertical_resolution, folder=folder, storage=storage)
+> SplitResultResponse cells_workbook_post_workbook_split(name, format=format, _from=_from, to=to, horizontal_resolution=horizontal_resolution, vertical_resolution=vertical_resolution, folder=folder, out_folder=out_folder, storage=storage)
 
 Split workbook.
 
@@ -10657,11 +10709,12 @@ to = 0 # int | End worksheet index. (optional) (default to 0)
 horizontal_resolution = 0 # int | Image horizontal resolution. (optional) (default to 0)
 vertical_resolution = 0 # int | Image vertical resolution. (optional) (default to 0)
 folder = 'folder_example' # str | The workbook folder. (optional)
+out_folder = 'out_folder_example' # str | out Folder. (optional)
 storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Split workbook.
-    api_response = api_instance.cells_workbook_post_workbook_split(name, format=format, _from=_from, to=to, horizontal_resolution=horizontal_resolution, vertical_resolution=vertical_resolution, folder=folder, storage=storage)
+    api_response = api_instance.cells_workbook_post_workbook_split(name, format=format, _from=_from, to=to, horizontal_resolution=horizontal_resolution, vertical_resolution=vertical_resolution, folder=folder, out_folder=out_folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsApi->cells_workbook_post_workbook_split: %s\n" % e)
@@ -10678,6 +10731,7 @@ Name | Type | Description  | Notes
  **horizontal_resolution** | **int**| Image horizontal resolution. | [optional] [default to 0]
  **vertical_resolution** | **int**| Image vertical resolution. | [optional] [default to 0]
  **folder** | **str**| The workbook folder. | [optional] 
+ **out_folder** | **str**| out Folder. | [optional] 
  **storage** | **str**| storage name. | [optional] 
 
 ### Return type
@@ -10868,7 +10922,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = asposecellscloud.CellsApi()
-workbook = 'B' # str | 
+workbook = '/path/to/file.txt' # file | 
 format = 'format_example' # str | The format to convert. (optional)
 password = 'password_example' # str | The workbook password. (optional)
 out_path = 'out_path_example' # str | Path to save result (optional)
@@ -10885,7 +10939,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workbook** | **str**|  | 
+ **workbook** | **file**|  | 
  **format** | **str**| The format to convert. | [optional] 
  **password** | **str**| The workbook password. | [optional] 
  **out_path** | **str**| Path to save result | [optional] 
@@ -10957,8 +11011,60 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **cells_workbook_put_workbook_background**
+> CellsCloudResponse cells_workbook_put_workbook_background(name, png, folder=folder, storage=storage)
+
+Set workbook background image.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import asposecellscloud
+from asposecellscloud.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = asposecellscloud.CellsApi()
+name = 'name_example' # str | 
+png = 'B' # str | 
+folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
+
+try: 
+    # Set workbook background image.
+    api_response = api_instance.cells_workbook_put_workbook_background(name, png, folder=folder, storage=storage)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CellsApi->cells_workbook_put_workbook_background: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**|  | 
+ **png** | **str**|  | 
+ **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **cells_workbook_put_workbook_create**
-> WorkbookResponse cells_workbook_put_workbook_create(name, template_file=template_file, data_file=data_file, folder=folder, storage=storage)
+> WorkbookResponse cells_workbook_put_workbook_create(name, template_file=template_file, data_file=data_file, is_write_over=is_write_over, folder=folder, storage=storage)
 
 Create new workbook using deferent methods.
 
@@ -10975,12 +11081,13 @@ api_instance = asposecellscloud.CellsApi()
 name = 'name_example' # str | The new document name.
 template_file = 'template_file_example' # str | The template file, if the data not provided default workbook is created. (optional)
 data_file = 'data_file_example' # str | Smart marker data file, if the data not provided the request content is checked for the data. (optional)
+is_write_over = true # bool | write over file. (optional)
 folder = 'folder_example' # str | The new document folder. (optional)
 storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Create new workbook using deferent methods.
-    api_response = api_instance.cells_workbook_put_workbook_create(name, template_file=template_file, data_file=data_file, folder=folder, storage=storage)
+    api_response = api_instance.cells_workbook_put_workbook_create(name, template_file=template_file, data_file=data_file, is_write_over=is_write_over, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsApi->cells_workbook_put_workbook_create: %s\n" % e)
@@ -10993,6 +11100,7 @@ Name | Type | Description  | Notes
  **name** | **str**| The new document name. | 
  **template_file** | **str**| The template file, if the data not provided default workbook is created. | [optional] 
  **data_file** | **str**| Smart marker data file, if the data not provided the request content is checked for the data. | [optional] 
+ **is_write_over** | **bool**| write over file. | [optional] 
  **folder** | **str**| The new document folder. | [optional] 
  **storage** | **str**| storage name. | [optional] 
 
@@ -11710,7 +11818,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cells_worksheets_get_worksheet**
-> file cells_worksheets_get_worksheet(name, sheet_name, format=format, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, folder=folder, storage=storage)
+> file cells_worksheets_get_worksheet(name, sheet_name, format=format, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, area=area, page_index=page_index, folder=folder, storage=storage)
 
 Read worksheet info or export.
 
@@ -11729,12 +11837,14 @@ sheet_name = 'sheet_name_example' # str | The worksheet name.
 format = 'format_example' # str | The exported file format. (optional)
 vertical_resolution = 0 # int | Image vertical resolution. (optional) (default to 0)
 horizontal_resolution = 0 # int | Image horizontal resolution. (optional) (default to 0)
+area = 'area_example' # str | Exported area. (optional)
+page_index = 56 # int | Exported page index. (optional)
 folder = 'folder_example' # str | The document folder. (optional)
 storage = 'storage_example' # str | storage name. (optional)
 
 try: 
     # Read worksheet info or export.
-    api_response = api_instance.cells_worksheets_get_worksheet(name, sheet_name, format=format, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, folder=folder, storage=storage)
+    api_response = api_instance.cells_worksheets_get_worksheet(name, sheet_name, format=format, vertical_resolution=vertical_resolution, horizontal_resolution=horizontal_resolution, area=area, page_index=page_index, folder=folder, storage=storage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CellsApi->cells_worksheets_get_worksheet: %s\n" % e)
@@ -11749,6 +11859,8 @@ Name | Type | Description  | Notes
  **format** | **str**| The exported file format. | [optional] 
  **vertical_resolution** | **int**| Image vertical resolution. | [optional] [default to 0]
  **horizontal_resolution** | **int**| Image horizontal resolution. | [optional] [default to 0]
+ **area** | **str**| Exported area. | [optional] 
+ **page_index** | **int**| Exported page index. | [optional] 
  **folder** | **str**| The document folder. | [optional] 
  **storage** | **str**| storage name. | [optional] 
 

@@ -22472,6 +22472,119 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def cells_workbook_delete_workbook_background(self, name, **kwargs):
+        """
+        Set worksheet background image.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_workbook_delete_workbook_background(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str folder:
+        :param str storage: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_workbook_delete_workbook_background_with_http_info(name, **kwargs)
+        else:
+            (data) = self.cells_workbook_delete_workbook_background_with_http_info(name, **kwargs)
+            return data
+
+    def cells_workbook_delete_workbook_background_with_http_info(self, name, **kwargs):
+        """
+        Set worksheet background image.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_workbook_delete_workbook_background_with_http_info(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str folder:
+        :param str storage: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'folder', 'storage']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_workbook_delete_workbook_background" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_workbook_delete_workbook_background`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/background', 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def cells_workbook_delete_workbook_name(self, name, name_name, **kwargs):
         """
         Clean workbook's names.
@@ -24390,6 +24503,7 @@ class CellsApi(object):
         :param int horizontal_resolution: Image horizontal resolution.
         :param int vertical_resolution: Image vertical resolution.
         :param str folder: The workbook folder.
+        :param str out_folder: out Folder.
         :param str storage: storage name.
         :return: SplitResultResponse
                  If the method is called asynchronously,
@@ -24423,13 +24537,14 @@ class CellsApi(object):
         :param int horizontal_resolution: Image horizontal resolution.
         :param int vertical_resolution: Image vertical resolution.
         :param str folder: The workbook folder.
+        :param str out_folder: out Folder.
         :param str storage: storage name.
         :return: SplitResultResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'format', '_from', 'to', 'horizontal_resolution', 'vertical_resolution', 'folder', 'storage']
+        all_params = ['name', 'format', '_from', 'to', 'horizontal_resolution', 'vertical_resolution', 'folder', 'out_folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -24468,6 +24583,8 @@ class CellsApi(object):
             query_params.append(('verticalResolution', params['vertical_resolution']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
+        if 'out_folder' in params:
+            query_params.append(('outFolder', params['out_folder']))
         if 'storage' in params:
             query_params.append(('storage', params['storage']))
 
@@ -24883,7 +25000,7 @@ class CellsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str workbook: (required)
+        :param file workbook: (required)
         :param str format: The format to convert.
         :param str password: The workbook password.
         :param str out_path: Path to save result
@@ -24912,7 +25029,7 @@ class CellsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str workbook: (required)
+        :param file workbook: (required)
         :param str format: The format to convert.
         :param str password: The workbook password.
         :param str out_path: Path to save result
@@ -24957,10 +25074,10 @@ class CellsApi(object):
 
         form_params = []
         local_var_files = {}
+        if 'workbook' in params:
+            local_var_files['workbook'] = params['workbook']
 
         body_params = None
-        if 'workbook' in params:
-            body_params = params['workbook']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -25104,6 +25221,126 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def cells_workbook_put_workbook_background(self, name, png, **kwargs):
+        """
+        Set workbook background image.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_workbook_put_workbook_background(name, png, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str png: (required)
+        :param str folder:
+        :param str storage: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_workbook_put_workbook_background_with_http_info(name, png, **kwargs)
+        else:
+            (data) = self.cells_workbook_put_workbook_background_with_http_info(name, png, **kwargs)
+            return data
+
+    def cells_workbook_put_workbook_background_with_http_info(self, name, png, **kwargs):
+        """
+        Set workbook background image.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_workbook_put_workbook_background_with_http_info(name, png, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str png: (required)
+        :param str folder:
+        :param str storage: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'png', 'folder', 'storage']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_workbook_put_workbook_background" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_workbook_put_workbook_background`")
+        # verify the required parameter 'png' is set
+        if ('png' not in params) or (params['png'] is None):
+            raise ValueError("Missing the required parameter `png` when calling `cells_workbook_put_workbook_background`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage' in params:
+            query_params.append(('storage', params['storage']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'png' in params:
+            body_params = params['png']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/background', 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def cells_workbook_put_workbook_create(self, name, **kwargs):
         """
         Create new workbook using deferent methods.
@@ -25120,6 +25357,7 @@ class CellsApi(object):
         :param str name: The new document name. (required)
         :param str template_file: The template file, if the data not provided default workbook is created.
         :param str data_file: Smart marker data file, if the data not provided the request content is checked for the data.
+        :param bool is_write_over: write over file.
         :param str folder: The new document folder.
         :param str storage: storage name.
         :return: WorkbookResponse
@@ -25150,6 +25388,7 @@ class CellsApi(object):
         :param str name: The new document name. (required)
         :param str template_file: The template file, if the data not provided default workbook is created.
         :param str data_file: Smart marker data file, if the data not provided the request content is checked for the data.
+        :param bool is_write_over: write over file.
         :param str folder: The new document folder.
         :param str storage: storage name.
         :return: WorkbookResponse
@@ -25157,7 +25396,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'template_file', 'data_file', 'folder', 'storage']
+        all_params = ['name', 'template_file', 'data_file', 'is_write_over', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -25188,6 +25427,8 @@ class CellsApi(object):
             query_params.append(('templateFile', params['template_file']))
         if 'data_file' in params:
             query_params.append(('dataFile', params['data_file']))
+        if 'is_write_over' in params:
+            query_params.append(('isWriteOver', params['is_write_over']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
         if 'storage' in params:
@@ -26868,6 +27109,8 @@ class CellsApi(object):
         :param str format: The exported file format.
         :param int vertical_resolution: Image vertical resolution.
         :param int horizontal_resolution: Image horizontal resolution.
+        :param str area: Exported area.
+        :param int page_index: Exported page index.
         :param str folder: The document folder.
         :param str storage: storage name.
         :return: file
@@ -26900,6 +27143,8 @@ class CellsApi(object):
         :param str format: The exported file format.
         :param int vertical_resolution: Image vertical resolution.
         :param int horizontal_resolution: Image horizontal resolution.
+        :param str area: Exported area.
+        :param int page_index: Exported page index.
         :param str folder: The document folder.
         :param str storage: storage name.
         :return: file
@@ -26907,7 +27152,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'format', 'vertical_resolution', 'horizontal_resolution', 'folder', 'storage']
+        all_params = ['name', 'sheet_name', 'format', 'vertical_resolution', 'horizontal_resolution', 'area', 'page_index', 'folder', 'storage']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -26945,6 +27190,10 @@ class CellsApi(object):
             query_params.append(('verticalResolution', params['vertical_resolution']))
         if 'horizontal_resolution' in params:
             query_params.append(('horizontalResolution', params['horizontal_resolution']))
+        if 'area' in params:
+            query_params.append(('area', params['area']))
+        if 'page_index' in params:
+            query_params.append(('pageIndex', params['page_index']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
         if 'storage' in params:
