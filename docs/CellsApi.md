@@ -199,6 +199,7 @@ Method | HTTP request | Description
 [**cells_workbook_put_document_protect_from_changes**](CellsApi.md#cells_workbook_put_document_protect_from_changes) | **PUT** /cells/{name}/writeProtection | Protect document from changes.
 [**cells_workbook_put_workbook_background**](CellsApi.md#cells_workbook_put_workbook_background) | **PUT** /cells/{name}/background | Set workbook background image.
 [**cells_workbook_put_workbook_create**](CellsApi.md#cells_workbook_put_workbook_create) | **PUT** /cells/{name} | Create new workbook using deferent methods.
+[**cells_workbook_put_workbook_water_marker**](CellsApi.md#cells_workbook_put_workbook_water_marker) | **PUT** /cells/{name}/watermarker | Set workbook background image.
 [**cells_worksheet_validations_delete_worksheet_validation**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validation) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Delete worksheet validation by index.
 [**cells_worksheet_validations_delete_worksheet_validations**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validations) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations | Clear all validation in worksheet.
 [**cells_worksheet_validations_get_worksheet_validation**](CellsApi.md#cells_worksheet_validations_get_worksheet_validation) | **GET** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Get worksheet validation by index.
@@ -11107,6 +11108,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WorkbookResponse**](WorkbookResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cells_workbook_put_workbook_water_marker**
+> CellsCloudResponse cells_workbook_put_workbook_water_marker(name, folder=folder, storage=storage, text_water_marker_request=text_water_marker_request)
+
+Set workbook background image.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import asposecellscloud
+from asposecellscloud.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = asposecellscloud.CellsApi()
+name = 'name_example' # str | 
+folder = 'folder_example' # str |  (optional)
+storage = 'storage_example' # str | storage name. (optional)
+text_water_marker_request = asposecellscloud.TextWaterMarkerRequest() # TextWaterMarkerRequest | The text water marker request. (optional)
+
+try: 
+    # Set workbook background image.
+    api_response = api_instance.cells_workbook_put_workbook_water_marker(name, folder=folder, storage=storage, text_water_marker_request=text_water_marker_request)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CellsApi->cells_workbook_put_workbook_water_marker: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**|  | 
+ **folder** | **str**|  | [optional] 
+ **storage** | **str**| storage name. | [optional] 
+ **text_water_marker_request** | [**TextWaterMarkerRequest**](TextWaterMarkerRequest.md)| The text water marker request. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
 
 ### Authorization
 

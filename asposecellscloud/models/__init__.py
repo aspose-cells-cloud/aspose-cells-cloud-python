@@ -105,6 +105,7 @@ from .storage_file import StorageFile
 from .task_data import TaskData
 from .task_description import TaskDescription
 from .task_parameter import TaskParameter
+from .text_water_marker_request import TextWaterMarkerRequest
 from .texture_fill import TextureFill
 from .theme_color import ThemeColor
 from .tile_pic_option import TilePicOption

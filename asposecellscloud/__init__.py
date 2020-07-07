@@ -105,6 +105,7 @@ from .models.storage_file import StorageFile
 from .models.task_data import TaskData
 from .models.task_description import TaskDescription
 from .models.task_parameter import TaskParameter
+from .models.text_water_marker_request import TextWaterMarkerRequest
 from .models.texture_fill import TextureFill
 from .models.theme_color import ThemeColor
 from .models.tile_pic_option import TilePicOption
