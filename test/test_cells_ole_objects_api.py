@@ -48,7 +48,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet6'
         oleObjectIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_ole_objects_delete_worksheet_ole_object(name, sheet_name,oleObjectIndex,folder=folder)
@@ -64,7 +64,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet6'
         oleObjectIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_ole_objects_delete_worksheet_ole_objects(name, sheet_name,folder=folder)
@@ -80,7 +80,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet6'
         oleObjectIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_ole_objects_get_worksheet_ole_object(name, sheet_name,oleObjectIndex,folder=folder)
@@ -96,7 +96,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet6'
         oleObjectIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_ole_objects_get_worksheet_ole_object(name, sheet_name,oleObjectIndex,format="png",folder=folder)
@@ -112,7 +112,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet6'
         oleObjectIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_ole_objects_get_worksheet_ole_objects(name, sheet_name,folder=folder)
@@ -133,7 +133,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         ole.right = 10
         ole.height = 90
         ole.width = 78
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_ole_objects_post_update_worksheet_ole_object(name, sheet_name,oleObjectIndex,ole=ole,folder=folder)
@@ -155,10 +155,12 @@ class TestCellsOleObjectsApi(unittest.TestCase):
         width = 80  
         oleFile = 'OLEDoc.docx'  
         imageFile = 'word.jpg'  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, oleFile, folder)
+        result = AuthUtil.Ready(self.api, imageFile, folder)
         self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_ole_objects_put_worksheet_ole_object(name, sheet_name, ole_object=ole,upper_left_row=upperLeftRow,upper_left_column=upperLeftColumn,height=height,width=width,ole_file=oleFile, image_file=imageFile,folder=folder)
+        result = self.api.cells_ole_objects_put_worksheet_ole_object(name, sheet_name, ole_object=ole,upper_left_row=upperLeftRow,upper_left_column=upperLeftColumn,height=height,width=width,ole_file=(folder +'/'+oleFile), image_file=(folder +'/'+imageFile),folder=folder)
         self.assertEqual(result.code,200)
         pass
 

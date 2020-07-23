@@ -46,7 +46,7 @@ class TestCellsPropertiesApi(unittest.TestCase):
         Delete all custom document properties and clean built-in ones.
         """
         name ='Book1.xlsx'      
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_properties_delete_document_properties(name,folder=folder)
@@ -61,7 +61,7 @@ class TestCellsPropertiesApi(unittest.TestCase):
         """
         name ='Book1.xlsx' 
         propertyName = "Author"    
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_properties_delete_document_property(name, propertyName ,folder=folder)
@@ -75,7 +75,7 @@ class TestCellsPropertiesApi(unittest.TestCase):
         Read document properties.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_properties_get_document_properties(name,folder=folder)
@@ -90,7 +90,7 @@ class TestCellsPropertiesApi(unittest.TestCase):
         """
         name ='Book1.xlsx'
         propertyName = "Author"       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_properties_get_document_property(name,propertyName,folder=folder)
@@ -108,7 +108,7 @@ class TestCellsPropertiesApi(unittest.TestCase):
         _property = CellsDocumentProperty()  
         _property.name = "Author"
         _property.value = "Val"
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_properties_put_document_property(name,propertyName,_property=_property,folder=folder)

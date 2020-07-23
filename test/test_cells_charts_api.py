@@ -50,7 +50,7 @@ class TestCellsChartsApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 1  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_delete_worksheet_chart_legend(name, sheet_name,chartIndex, folder=folder)
@@ -66,7 +66,7 @@ class TestCellsChartsApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 1  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_delete_worksheet_chart_title(name, sheet_name,chartIndex, folder=folder)
@@ -82,7 +82,7 @@ class TestCellsChartsApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 1  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_delete_worksheet_clear_charts(name, sheet_name, folder=folder)
@@ -98,7 +98,7 @@ class TestCellsChartsApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 0  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_delete_worksheet_delete_chart(name, sheet_name,chartIndex, folder=folder)
@@ -115,7 +115,7 @@ class TestCellsChartsApi(unittest.TestCase):
         sheet_name ='Sheet3'
         chartIndex = 0  
         format = 'png'
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_get_worksheet_chart(name, sheet_name, chartIndex, format=format, folder=folder)
@@ -131,7 +131,7 @@ class TestCellsChartsApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 0  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_get_worksheet_chart_legend(name, sheet_name,chartIndex, folder=folder)
@@ -147,7 +147,7 @@ class TestCellsChartsApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 0  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_get_worksheet_chart_title(name, sheet_name,chartIndex, folder=folder)
@@ -163,7 +163,7 @@ class TestCellsChartsApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 0  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_get_worksheet_charts(name, sheet_name, folder=folder)
@@ -181,7 +181,7 @@ class TestCellsChartsApi(unittest.TestCase):
         chartIndex = 0  
         chart = Chart()
         chart.auto_scaling = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_post_worksheet_chart(name, sheet_name, chartIndex , chart=chart , folder=folder)
@@ -199,7 +199,7 @@ class TestCellsChartsApi(unittest.TestCase):
         chartIndex = 0  
         legend = Legend()
         legend.width = 10
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_post_worksheet_chart_legend(name, sheet_name, chartIndex , legend=legend , folder=folder)
@@ -217,7 +217,7 @@ class TestCellsChartsApi(unittest.TestCase):
         chartIndex = 0  
         title = Title()
         title.text = "test"
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_post_worksheet_chart_title(name, sheet_name, chartIndex , title = title, folder=folder)
@@ -242,7 +242,7 @@ class TestCellsChartsApi(unittest.TestCase):
         categoryData = None  
         isAutoGetSerialName = None  
         title = None  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_put_worksheet_add_chart(name, sheet_name, chartType , upper_left_row=upperLeftRow , upper_left_column=upperLeftColumn, lower_right_row=lowerRightRow, lower_right_column=lowerRightColumn, area=area, is_vertical=isVertical, category_data=categoryData,is_auto_get_serial_name=isAutoGetSerialName,title=title, folder=folder)
@@ -258,7 +258,7 @@ class TestCellsChartsApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 0  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_put_worksheet_chart_legend(name, sheet_name, chartIndex , folder=folder)
@@ -276,7 +276,7 @@ class TestCellsChartsApi(unittest.TestCase):
         chartIndex = 0  
         title = Title()
         title.text = "test"
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_charts_put_worksheet_chart_title(name, sheet_name, chartIndex ,title=title, folder=folder)

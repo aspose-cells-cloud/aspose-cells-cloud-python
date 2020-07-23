@@ -52,7 +52,7 @@ class TestCellsApi(unittest.TestCase):
         column_index = 1 
         columns = 2
         update_reference = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)        
         result = self.api.cells_delete_worksheet_columns(name, sheet_name, column_index, columns, update_reference, folder = folder)
@@ -68,7 +68,7 @@ class TestCellsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         row_index = 1  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -87,7 +87,7 @@ class TestCellsApi(unittest.TestCase):
         startrow = 1  
         total_rows =2
         update_reference = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -104,7 +104,7 @@ class TestCellsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         cell_or_method_name = 'C1'  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -121,7 +121,7 @@ class TestCellsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         cellName = 'C1'  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -139,7 +139,7 @@ class TestCellsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         offest = 2  
         count =10
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -156,7 +156,7 @@ class TestCellsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         columnIndex = 2  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -172,7 +172,7 @@ class TestCellsApi(unittest.TestCase):
         """
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -189,7 +189,7 @@ class TestCellsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         rowIndex = 1  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -205,7 +205,7 @@ class TestCellsApi(unittest.TestCase):
         """
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -225,7 +225,7 @@ class TestCellsApi(unittest.TestCase):
         options = CalculationOptions()
         options.recursive = True
         options.ignore_error = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -233,26 +233,26 @@ class TestCellsApi(unittest.TestCase):
         self.assertEqual(result.code,200)
         pass
 
-    def test_cells_post_cell_characters(self):
-        """
-        Test case for cells_post_cell_characters
+    # def test_cells_post_cell_characters(self):
+    #     """
+    #     Test case for cells_post_cell_characters
 
-        Set cell characters 
-        """
-        name ='Book1.xlsx'
-        sheet_name ='Sheet2'
-        cellName = 'G8'
-        font = Font()
-        font.size = 10.0
-        fs1 = FontSetting(font, 2, 0)
-        options = [fs1]
-        folder = "Temp"
-        result = AuthUtil.Ready(self.api, name, folder)
-        self.assertTrue(len(result.uploaded)>0)
+    #     Set cell characters 
+    #     """
+    #     name ='Book1.xlsx'
+    #     sheet_name ='Sheet2'
+    #     cellName = 'G8'
+    #     font = Font()
+    #     font.size = 10.0
+    #     fs1 = FontSetting(font, 2, 0)
+    #     options = [fs1]
+    #     folder = "PythonTest"
+    #     result = AuthUtil.Ready(self.api, name, folder)
+    #     self.assertTrue(len(result.uploaded)>0)
         
-        result = self.api.cells_post_cell_characters(name, sheet_name, cellName, options=options, folder=folder)
-        self.assertEqual(result.code,200)
-        pass
+    #     result = self.api.cells_post_cell_characters(name, sheet_name, cellName, options=options, folder=folder)
+    #     self.assertEqual(result.code,200)
+    #     pass
 
     def test_cells_post_clear_contents(self):
         """
@@ -267,7 +267,7 @@ class TestCellsApi(unittest.TestCase):
         startColumn =1
         endRow = 3
         endColumn = 3
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -288,7 +288,7 @@ class TestCellsApi(unittest.TestCase):
         startColumn =1
         endRow = 3
         endColumn = 3
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -310,7 +310,7 @@ class TestCellsApi(unittest.TestCase):
         font.is_bold = True
         font.size = 10
         style.font = font
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -331,7 +331,7 @@ class TestCellsApi(unittest.TestCase):
         cellName ='B1' 
         row =1
         column =2       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -351,7 +351,7 @@ class TestCellsApi(unittest.TestCase):
         destinationColumnIndex = 21
         columnNumber =1 
         worksheet ='Sheet2'       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -371,7 +371,7 @@ class TestCellsApi(unittest.TestCase):
         destinationRowIndex = 21
         rowNumber =1 
         worksheet ='Sheet2'       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -390,7 +390,7 @@ class TestCellsApi(unittest.TestCase):
         firstIndex = 1  
         lastIndex = 21
         hide ='true'       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -409,7 +409,7 @@ class TestCellsApi(unittest.TestCase):
         firstIndex = 1  
         lastIndex = 21
         hide ='true'       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -427,7 +427,7 @@ class TestCellsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         startColumn = 1  
         totalColumns = 21
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -445,7 +445,7 @@ class TestCellsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         startrow = 1  
         totalRows = 21
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -467,7 +467,7 @@ class TestCellsApi(unittest.TestCase):
         font.is_bold = True
         font.size = 10
         style.font = font
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -484,7 +484,7 @@ class TestCellsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         cellName = 'C1' 
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -502,7 +502,7 @@ class TestCellsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         cellName = 'C1'
         html_string = "http://api.aspose.cloud/v3.0/cells" 
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -521,7 +521,7 @@ class TestCellsApi(unittest.TestCase):
         cellarea = 'A1:C10' 
         value = '12345' 
         type = 'String' 
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -539,7 +539,7 @@ class TestCellsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         columnIndex = 1 
         width = '10'
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -557,7 +557,7 @@ class TestCellsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         firstIndex = 1 
         lastIndex = 10
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -576,7 +576,7 @@ class TestCellsApi(unittest.TestCase):
         firstIndex = 1 
         lastIndex = 10
         isAll = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -595,7 +595,7 @@ class TestCellsApi(unittest.TestCase):
         startcolumn = 1 
         totalColumns = 10
         width =20.0
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -614,7 +614,7 @@ class TestCellsApi(unittest.TestCase):
         startrow = 1 
         totalRows = 10
         height =20.0
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -636,7 +636,7 @@ class TestCellsApi(unittest.TestCase):
         font.is_bold = True
         font.size = 10
         style.font = font
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -658,7 +658,7 @@ class TestCellsApi(unittest.TestCase):
         font.is_bold = True
         font.size = 10
         style.font = font
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -676,7 +676,7 @@ class TestCellsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         rowIndex = 1 
         height = 10.0
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -693,7 +693,7 @@ class TestCellsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         cellName = 'C1' 
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -715,7 +715,7 @@ class TestCellsApi(unittest.TestCase):
         startColumn = 1
         totalRows =10
         totalColumns = 2
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
@@ -735,7 +735,7 @@ class TestCellsApi(unittest.TestCase):
         startColumn = 1
         totalRows =10
         totalColumns = 2
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)        
         result = self.api.cells_post_worksheet_unmerge(name, sheet_name, startRow, startColumn,totalRows ,totalColumns , folder = folder)
@@ -753,7 +753,7 @@ class TestCellsApi(unittest.TestCase):
         columnIndex = 1 
         columns = 11
         updateReference = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)        
         result = self.api.cells_put_insert_worksheet_columns(name, sheet_name, columnIndex, columns,update_reference = updateReference , folder = folder)
@@ -769,7 +769,7 @@ class TestCellsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         rowIndex = 1
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_put_insert_worksheet_row(name, sheet_name, rowIndex , folder = folder)
@@ -787,7 +787,7 @@ class TestCellsApi(unittest.TestCase):
         startrow = 1
         totalRows = 11
         updateReference = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         

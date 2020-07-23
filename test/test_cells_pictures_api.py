@@ -47,7 +47,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet6'
         index = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pictures_delete_worksheet_pictures(name, sheet_name,folder=folder)
@@ -63,7 +63,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet6'
         pictureIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pictures_delete_worksheet_picture(name, sheet_name,pictureIndex,folder=folder)
@@ -79,7 +79,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet6'
         pictureIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pictures_get_worksheet_picture(name, sheet_name,pictureIndex,folder=folder)
@@ -95,7 +95,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet6'
         pictureIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pictures_get_worksheet_picture(name, sheet_name,pictureIndex,format="png", folder=folder)
@@ -111,7 +111,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet6'
         pictureIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pictures_get_worksheet_pictures(name, sheet_name,folder=folder)
@@ -129,7 +129,7 @@ class TestCellsPicturesApi(unittest.TestCase):
         pictureIndex = 0   
         picture = Picture()
         picture.left = 10
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pictures_post_worksheet_picture(name, sheet_name, pictureIndex , picture=picture,folder=folder)
@@ -150,10 +150,11 @@ class TestCellsPicturesApi(unittest.TestCase):
         lowerRightRow = 10   
         lowerRightColumn = 10   
         picturePath = 'WaterMark.png'        
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, picturePath, folder)
         self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_pictures_put_worksheet_add_picture(name, sheet_name, picture=picture, upper_left_row=upperLeftRow,upper_left_column=upperLeftColumn,lower_right_row=lowerRightRow,lower_right_column=lowerRightColumn,picture_path=picturePath, folder=folder)
+        result = self.api.cells_pictures_put_worksheet_add_picture(name, sheet_name, picture=picture, upper_left_row=upperLeftRow,upper_left_column=upperLeftColumn,lower_right_row=lowerRightRow,lower_right_column=lowerRightColumn,picture_path=(folder + '/'+ picturePath), folder=folder)
         self.assertEqual(result.code,200)
         pass
 

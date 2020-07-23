@@ -47,7 +47,7 @@ class TestCellsAutoshapesApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet2'
         autoshapeNumber = 4  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_autoshapes_get_worksheet_autoshape(name, sheet_name,autoshapeNumber, folder=folder)
@@ -63,7 +63,7 @@ class TestCellsAutoshapesApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet2'
         autoshapeNumber = 4  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_autoshapes_get_worksheet_autoshape(name, sheet_name,autoshapeNumber, format="png", folder=folder)
@@ -78,7 +78,7 @@ class TestCellsAutoshapesApi(unittest.TestCase):
         """
         name ='myDocument.xlsx'
         sheet_name ='Sheet2'
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_autoshapes_get_worksheet_autoshapes(name, sheet_name, folder=folder)

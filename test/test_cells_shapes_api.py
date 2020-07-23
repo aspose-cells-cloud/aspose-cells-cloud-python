@@ -48,7 +48,7 @@ class TestCellsShapesApi(unittest.TestCase):
         name ='Book1.xlsx'  
         sheet_name ='Sheet1'    
         shapeindex = 0       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_delete_worksheet_shape(name, sheet_name, shapeindex,folder=folder)
@@ -64,7 +64,7 @@ class TestCellsShapesApi(unittest.TestCase):
         name ='Book1.xlsx'  
         sheet_name ='Sheet1'    
         shapeindex = 0       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_delete_worksheet_shapes(name, sheet_name, folder=folder)
@@ -80,7 +80,7 @@ class TestCellsShapesApi(unittest.TestCase):
         name ='Book1.xlsx'  
         sheet_name ='Sheet1'    
         shapeindex = 0       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_get_worksheet_shape(name, sheet_name, shapeindex,folder=folder)
@@ -96,7 +96,7 @@ class TestCellsShapesApi(unittest.TestCase):
         name ='Book1.xlsx'  
         sheet_name ='Sheet1'    
         shapeindex = 0       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_get_worksheet_shapes(name, sheet_name, folder=folder)
@@ -114,7 +114,7 @@ class TestCellsShapesApi(unittest.TestCase):
         shapeindex = 0   
         dto = Shape()
         dto.lower_right_column = 10
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_post_worksheet_shape(name, sheet_name, shapeindex,dto=dto,folder=folder)
@@ -136,7 +136,7 @@ class TestCellsShapesApi(unittest.TestCase):
         left= 10
         width= 100 
         height= 90 
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_shapes_put_worksheet_shape(name, sheet_name, drawingType,upperLeftRow,upperLeftColumn, top, left, width, height,folder=folder)

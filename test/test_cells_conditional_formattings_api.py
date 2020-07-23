@@ -47,7 +47,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         index = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_delete_worksheet_conditional_formatting(name, sheet_name,index,folder=folder)
@@ -66,7 +66,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         startColumn = 1
         totalRows = 4
         totalColumns = 6     
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_delete_worksheet_conditional_formatting_area(name, sheet_name,startRow,startColumn, totalRows,totalColumns,folder=folder)
@@ -81,7 +81,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         """
         name ='Book1.xlsx'
         sheet_name ='Sheet1'   
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_delete_worksheet_conditional_formattings(name, sheet_name,folder=folder)
@@ -97,7 +97,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         index = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_get_worksheet_conditional_formatting(name, sheet_name,index,folder=folder)
@@ -113,7 +113,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         index = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_get_worksheet_conditional_formattings(name, sheet_name,folder=folder)
@@ -134,7 +134,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         formatcondition.operator = "Between"
         formatcondition.formula1 = "v1"
         formatcondition.formula2 = "v2"
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_put_worksheet_conditional_formatting(name, sheet_name,cellArea,format_condition=formatcondition,folder=folder)
@@ -155,7 +155,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         operatorType = "Between"     
         formula1 = "v1"     
         formula2 = "v2"         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_put_worksheet_format_condition(name, sheet_name,index , cellArea,   type,  operatorType ,formula1,formula2, folder=folder)
@@ -172,7 +172,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         sheet_name ='Sheet1'
         index = 0       
         cellArea = "A1:C10"       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_put_worksheet_format_condition_area(name, sheet_name, index, cellArea , folder=folder)
@@ -192,7 +192,7 @@ class TestCellsConditionalFormattingsApi(unittest.TestCase):
         operatorType = "Between"     
         formula1 = "v1"     
         formula2 = "v2"         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_conditional_formattings_put_worksheet_format_condition_condition(name, sheet_name, index , type,  operatorType ,formula1,formula2, folder=folder)

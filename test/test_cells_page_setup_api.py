@@ -48,7 +48,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         index = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_delete_header_footer(name, sheet_name,folder=folder)
@@ -64,7 +64,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         index = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_get_footer(name, sheet_name,folder=folder)
@@ -80,7 +80,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         index = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_get_header(name, sheet_name,folder=folder)
@@ -96,7 +96,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         index = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_get_page_setup(name, sheet_name,folder=folder)
@@ -114,7 +114,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         section = 0    
         script = "test"
         isFirstPage = 'true'     
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_post_footer(name, sheet_name,section, script ,  isFirstPage,folder=folder)
@@ -132,7 +132,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         section = 1    
         script = "test"
         isFirstPage = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_post_header(name, sheet_name,section, script ,  isFirstPage,folder=folder)
@@ -149,7 +149,7 @@ class TestCellsPageSetupApi(unittest.TestCase):
         sheet_name ='Sheet1'
         pageSetup = PageSetup() 
         pageSetup.black_and_white = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_page_setup_post_page_setup(name, sheet_name, page_setup=pageSetup,folder=folder)

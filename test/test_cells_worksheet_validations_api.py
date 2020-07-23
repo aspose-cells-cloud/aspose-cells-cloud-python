@@ -49,7 +49,7 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         validationIndex = 0
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_worksheet_validations_delete_worksheet_validation(name, sheet_name, validationIndex, folder=folder)
@@ -65,7 +65,7 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         validationIndex = 0
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_worksheet_validations_get_worksheet_validation(name, sheet_name, validationIndex, folder=folder)
@@ -81,7 +81,7 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         validationIndex = 0
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_worksheet_validations_get_worksheet_validations(name, sheet_name, folder=folder)
@@ -105,7 +105,7 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         validation.type = "Custom"
         validation.ignore_blank = True
         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_worksheet_validations_post_worksheet_validation(name, sheet_name,validationIndex, validation=validation,folder=folder)
@@ -121,7 +121,7 @@ class TestCellsWorksheetValidationsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         _range = 'A1:c10'      
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_worksheet_validations_put_worksheet_validation(name, sheet_name,range=_range,folder=folder)

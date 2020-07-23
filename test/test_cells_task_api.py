@@ -49,7 +49,7 @@ class TestCellsTaskApi(unittest.TestCase):
         Run tasks  
         """
         name ='Book1.xlsx'
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)  
         task1 = TaskDescription()

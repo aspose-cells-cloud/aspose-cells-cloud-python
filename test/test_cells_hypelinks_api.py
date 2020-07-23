@@ -49,7 +49,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_hypelinks_delete_worksheet_hyperlink(name, sheet_name,hyperlinkIndex,folder=folder)
@@ -65,7 +65,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_hypelinks_delete_worksheet_hyperlinks(name, sheet_name,folder=folder)
@@ -81,7 +81,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_hypelinks_get_worksheet_hyperlink(name, sheet_name,hyperlinkIndex,folder=folder)
@@ -97,7 +97,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_hypelinks_get_worksheet_hyperlinks(name, sheet_name,folder=folder)
@@ -113,7 +113,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         hyperlinkIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         hyperlink = Hyperlink()
         hyperlink.address = 'http://wwww.aspose.com'
         result = AuthUtil.Ready(self.api, name, folder)
@@ -135,7 +135,7 @@ class TestCellsHypelinksApi(unittest.TestCase):
         totalRows = 2 
         totalColumns = 3 
         address = 'http://www.aspose.com'    
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_hypelinks_put_worksheet_hyperlink(name, sheet_name,firstRow,firstColumn,totalRows,totalColumns,address,folder=folder)

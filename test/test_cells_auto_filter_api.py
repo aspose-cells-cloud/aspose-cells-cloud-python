@@ -58,7 +58,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         hour = 10
         minute = 10
         second = 10
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)        
         result = result = self.api.cells_auto_filter_delete_worksheet_date_filter(name, sheet_name,fieldIndex, dateTimeGroupingType,year=year,month=month,day=day,hour=hour,minute=minute,second=second,folder=folder)
@@ -75,7 +75,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         sheet_name ='Sheet1'
         fieldIndex = 0  
         criteria ="Day"       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_delete_worksheet_filter(name, sheet_name,fieldIndex, criteria=criteria,folder=folder)
@@ -90,7 +90,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         """
         name ='Book1.xlsx'
         sheet_name ='Sheet1'     
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_get_worksheet_auto_filter(name, sheet_name, folder=folder)
@@ -105,7 +105,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         """
         name ='Book1.xlsx'
         sheet_name ='Sheet1'     
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_post_worksheet_auto_filter_refresh(name, sheet_name,folder=folder)
@@ -121,7 +121,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         fieldIndex = 0  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_post_worksheet_match_blanks(name, sheet_name,fieldIndex, folder=folder)
@@ -137,7 +137,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet1'
         fieldIndex = 0  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_post_worksheet_match_non_blanks(name, sheet_name,fieldIndex, folder=folder)
@@ -169,7 +169,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         colorFilter.pattern = 'Solid'
         matchBlanks = True
         refresh = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_put_worksheet_color_filter(name, sheet_name,range ,fieldIndex, color_filter = colorFilter , match_blanks = matchBlanks, refresh = refresh, folder = folder)
@@ -193,7 +193,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         criteria2 = "test"
         matchBlanks = True
         refresh = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_put_worksheet_custom_filter(name, sheet_name,range ,fieldIndex, operatorType1 , criteria1,is_and=isAnd, operator_type2=operatorType2 , criteria2=criteria2,match_blanks=matchBlanks, refresh=refresh, folder=folder)
@@ -219,7 +219,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         second = 10
         matchBlanks =True
         refresh =True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_put_worksheet_date_filter(name, sheet_name, range,fieldIndex, dateTimeGroupingType,year=year,month=month,day=day,hour=hour,minute=minute,second=second,match_blanks=matchBlanks, refresh=refresh,folder=folder)
@@ -239,7 +239,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         dynamicFilterType = "May"        
         matchBlanks =True
         refresh =True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_put_worksheet_dynamic_filter(name, sheet_name, range,fieldIndex, dynamicFilterType,match_blanks=matchBlanks, refresh=refresh,folder=folder)
@@ -259,7 +259,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         criteria ="May"        
         matchBlanks =True
         refresh =True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_put_worksheet_filter(name, sheet_name, range,fieldIndex, criteria,match_blanks=matchBlanks, refresh=refresh,folder=folder)
@@ -281,7 +281,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         itemCount =1        
         matchBlanks =True
         refresh =True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_put_worksheet_filter_top10(name, sheet_name, range,fieldIndex, isTop,isPercent, itemCount,match_blanks= matchBlanks,refresh= refresh,folder=folder)
@@ -302,7 +302,7 @@ class TestCellsAutoFilterApi(unittest.TestCase):
         iconId =1        
         matchBlanks =True
         refresh =True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         result = self.api.cells_auto_filter_put_worksheet_icon_filter(name, sheet_name, range,fieldIndex, iconSetType,iconId, match_blanks=matchBlanks, refresh=refresh,folder=folder)

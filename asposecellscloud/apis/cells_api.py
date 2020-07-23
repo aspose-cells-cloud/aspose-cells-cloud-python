@@ -37,16 +37,20 @@ from ..api_client import ApiClient
 
 class CellsApi(object):
 
-    def __init__(self,appsid, appkey, version='v3.0', api_client=None):
+    def __init__(self,appsid, appkey, version='v3.0', base_uri= 'https://api.aspose.cloud', api_client=None):
         self.appsid = appsid
         self.appkey = appkey
         self.version = version 
-        self.api_client =  ApiClient('https://api.aspose.cloud')
+        if base_uri[-1] == '/' :
+            self.base_uri = base_uri[0:len(base_uri)-1]
+        else:
+            self.base_uri = base_uri
+
+        self.api_client =  ApiClient(base_uri)
         self.access_token = self.api_client.get_access_token("client_credentials", appsid, appkey,version)
         # self.auth_data = self.o_auth_post("client_credentials", appsid, appkey)
         config = Configuration()
-        if version == 'v1.1':
-            config.host = "https://api.aspose.cloud/v1.1"
+        config.host = self.base_uri +'/' + self.version
         if api_client:
             self.api_client = api_client
         else:
@@ -61,7 +65,7 @@ class CellsApi(object):
         if self.access_token:
             timediff = time.clock() - self.get_access_token_time
             if timediff > 86300 :
-                api_client =  ApiClient('https://api.aspose.cloud')
+                api_client =  ApiClient(self.base_uri)
                 self.access_token = api_client.get_access_token("client_credentials", self.appsid, self.appkey,self.version)
                 self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
                 self.get_access_token_time = time.clock()

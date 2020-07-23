@@ -55,7 +55,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         encryption = WorkbookEncryptionRequest(key_length = 128)
         encryption.password = "123456"
         encryption.encryption_type = "XOR"
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_delete_decrypt_document(name, encryption=encryption,folder=folder)
@@ -69,7 +69,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Unprotect document from changes.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_delete_document_unprotect_from_changes(name, folder=folder)
@@ -83,7 +83,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Unprotect document.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         protection = WorkbookProtectionRequest()
         protection.password = "123"
         protection.protection_type = "All"
@@ -100,7 +100,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Clean workbook's names.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         name_name = "Name_2"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
@@ -115,7 +115,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Clean workbook's names.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_delete_workbook_names(name, folder=folder)
@@ -129,7 +129,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Read workbook info or export.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         password = None
         isAutoFit = True
         result = AuthUtil.Ready(self.api, name, folder)
@@ -145,7 +145,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Read workbook info or export.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         password = None
         isAutoFit = True
         result = AuthUtil.Ready(self.api, name, folder)
@@ -161,7 +161,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Read workbook info or export.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         password = None
         isAutoFit = True
         result = AuthUtil.Ready(self.api, name, folder)
@@ -177,7 +177,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Read workbook default style info.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook_default_style(name, folder=folder)
@@ -191,7 +191,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Read workbook's name.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         nameName = "Name_2"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
@@ -206,7 +206,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Get workbook's name value.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         name_name = "Name_2"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
@@ -221,7 +221,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Read workbook's names.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook_names(name, folder=folder)
@@ -235,7 +235,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Read workbook's text items.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook_text_items(name, folder=folder)
@@ -249,7 +249,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Get Workbook Settings DTO
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_get_workbook_settings(name, folder=folder)
@@ -263,7 +263,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Autofit workbook rows.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         autoFitterOptions = None
         startRow = 1
         endRow = 100
@@ -281,7 +281,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Encript document.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         encryption = WorkbookEncryptionRequest(key_length = 128)
         encryption.password = "123456"
         encryption.encryption_type = "XOR"
@@ -302,7 +302,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         data = ImportIntArrayOption()
         data.destination_worksheet = 'Sheet1'
         data.first_column = 1
@@ -323,7 +323,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Protect document.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         protection = WorkbookProtectionRequest()
         protection.password = "123"
         protection.protection_type = "All"
@@ -340,7 +340,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Calculate all formulas in workbook.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         options = CalculationOptions()
         options.ignore_error = True
         ignore_error = True
@@ -357,11 +357,12 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Smart marker processing result.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         xmlFile = "ReportData.xml"
         result = AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, xmlFile, folder)
         self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_workbook_post_workbook_get_smart_marker_result(name, xml_file=xmlFile, folder= folder)
+        result = self.api.cells_workbook_post_workbook_get_smart_marker_result(name, xml_file=(folder + '/' + xmlFile), folder= folder)
         # self.assertEqual(result.code,200)
         pass
 
@@ -372,7 +373,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Update Workbook setting 
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         settings = WorkbookSettings()
         settings.auto_compress_pictures = True
         result = AuthUtil.Ready(self.api, name, folder)
@@ -388,7 +389,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Split workbook.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         format = "png"
         _from = 1
         to = 3
@@ -396,7 +397,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         verticalResolution = 90
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_workbook_post_workbook_split(name, format=format, _from=_from, to=to, horizontal_resolution=horizontalResolution, vertical_resolution=verticalResolution,  folder=folder)
+        result = self.api.cells_workbook_post_workbook_split(name, format=format, _from=_from, to=to, horizontal_resolution=horizontalResolution, vertical_resolution=verticalResolution,  folder=folder,out_folder=folder)
         self.assertEqual(result.code,200)
         pass
 
@@ -407,11 +408,12 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Merge workbooks.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         formatmergeWith = "myDocument.xlsx"      
         result = AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, formatmergeWith, folder)
         self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_workbook_post_workbooks_merge(name, formatmergeWith,  folder=folder)
+        result = self.api.cells_workbook_post_workbooks_merge(name,folder +'/'+ formatmergeWith,  folder=folder)
         self.assertEqual(result.code,200)
         pass
 
@@ -422,7 +424,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Replace text.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         oldValue = "!22"
         newValue = "22"    
         result = AuthUtil.Ready(self.api, name, folder)
@@ -438,7 +440,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Search text.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         text = "!test"      
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
@@ -453,9 +455,9 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Convert workbook from request content to some format.
         """
         fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
-        # f = open(fullfilename, 'rb')
-        # workbook = f.read()
-        # f.close()
+        f = open(fullfilename, 'rb')
+        workbook = f.read()
+        f.close()
         format ='pdf'       
         password = None
         outPath = None      
@@ -470,7 +472,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Protect document from changes.
         """
         name ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         password = PasswordRequest()
         password.password = "123456"
         result = AuthUtil.Ready(self.api, name, folder)
@@ -486,7 +488,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         Create new workbook using deferent methods.
         """
         templateFile ='Book1.xlsx'       
-        folder = "Temp"
+        folder = "PythonTest"
         name = "NewBook" + datetime.now().strftime("%Y%m%d%H%M%S") + ".xlsx"    
         dataFile = "ReportData.xml"  
         AuthUtil.Ready(self.api,templateFile, folder)
@@ -507,7 +509,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         sheet_name ='Sheet1' 
         isVisible = True
         sheettype = "VB" 
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "WaterMark.png"
@@ -528,7 +530,7 @@ class TestCellsWorkbookApi(unittest.TestCase):
         sheet_name ='Sheet1' 
         isVisible = True
         sheettype = "VB" 
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_workbook_delete_workbook_background(name,   folder=folder)

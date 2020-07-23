@@ -49,7 +49,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet7'
         listObjectIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_list_objects_delete_worksheet_list_object(name, sheet_name , listObjectIndex , folder=folder)
@@ -65,7 +65,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet7'
         listObjectIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_list_objects_delete_worksheet_list_objects(name, sheet_name,folder=folder)
@@ -81,7 +81,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet7'
         listObjectIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_list_objects_get_worksheet_list_object(name, sheet_name,listObjectIndex,folder=folder)
@@ -97,7 +97,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet7'
         listObjectIndex = 0         
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_list_objects_get_worksheet_list_objects(name, sheet_name,folder=folder)
@@ -115,7 +115,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         listObjectIndex = 0   
         listObject = ListObject()
         listObject.show_header_row = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_list_objects_post_worksheet_list_object(name, sheet_name,listObjectIndex,list_object=listObject,folder=folder)
@@ -131,7 +131,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         name ='Book1.xlsx'
         sheet_name ='Sheet7'
         listObjectIndex = 0   
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_list_objects_post_worksheet_list_object_convert_to_range(name, sheet_name,listObjectIndex,folder=folder)
@@ -149,7 +149,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         listObjectIndex = 0   
         dataSorter = DataSorter()
         dataSorter.case_sensitive = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_list_objects_post_worksheet_list_object_sort_table(name, sheet_name,listObjectIndex,data_sorter=dataSorter,folder=folder)
@@ -173,7 +173,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         request.pivot_field_data = [0]
         request.pivot_field_rows = [1]
         request.source_data = '=Sheet2!A1:E8'
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table(name, sheet_name,listObjectIndex,destsheetName, request=request,folder=folder)
@@ -192,7 +192,7 @@ class TestCellsListObjectsApi(unittest.TestCase):
         startColumn =1 
         endRow = 2 
         endColumn = 3         
-        folder = "Temp"
+        folder = "PythonTest"
         hasHeaders = True 
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 

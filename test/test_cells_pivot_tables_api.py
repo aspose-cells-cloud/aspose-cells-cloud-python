@@ -58,7 +58,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotFieldType = "row"
         request = PivotTableFieldRequest()
         request.data = [1]
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_delete_pivot_table_field(name, sheet_name, pivot_table_index=pivotTableIndex, pivot_field_type=pivotFieldType,request=request,folder=folder)
@@ -77,30 +77,13 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotFieldType = "row"
         request = PivotTableFieldRequest()
         request.data = [1]
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_delete_worksheet_pivot_table(name, sheet_name, pivotTableIndex, folder=folder)
         self.assertEqual(result.code,200)
         pass
 
-    def test_cells_pivot_tables_delete_worksheet_pivot_table_filter(self):
-        """
-        Test case for cells_pivot_tables_delete_worksheet_pivot_table_filter
-
-        delete  pivot filter for piovt table             
-        """
-        name ='TestCase.xlsx'
-        sheet_name ='Sheet4'
-        pivotTableIndex = 0
-        fieldIndex = 0
-        needReCalculate = True
-        folder = "Temp"
-        result = AuthUtil.Ready(self.api, name, folder)
-        self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivotTableIndex,  fieldIndex,need_re_calculate=needReCalculate,folder=folder)
-        self.assertEqual(result.code,200)
-        pass
 
     def test_cells_pivot_tables_delete_worksheet_pivot_table_filters(self):
         """
@@ -113,7 +96,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotTableIndex = 0
         fieldIndex = 0
         needReCalculate = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_delete_worksheet_pivot_table_filters(name, sheet_name,pivotTableIndex,need_re_calculate=needReCalculate, folder=folder)
@@ -130,7 +113,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         sheet_name ='Sheet4'
         pivotTableIndex = 0
         fieldIndex = 0
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_delete_worksheet_pivot_tables(name, sheet_name, folder=folder)
@@ -148,7 +131,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotTableIndex = 0
         pivotFieldIndex = 0
         pivotFieldType = "Row"
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_get_pivot_table_field(name, sheet_name,pivotTableIndex, pivotFieldIndex,pivotFieldType,folder=folder)
@@ -165,7 +148,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         sheet_name ='Sheet4'
         pivotTableIndex = 0
         fieldIndex = 0
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_get_worksheet_pivot_table(name, sheet_name,pivotTableIndex, folder=folder)
@@ -183,7 +166,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotTableIndex = 0
         filterIndex = 0
         needReCalculate = 'true'
-        folder = "Temp"
+        folder = "PythonTest"
         pivotFilter = PivotFilter()
         pivotFilter.field_index = 1
         pivotFilter.filter_type = "Count"
@@ -215,7 +198,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         sheet_name ='Sheet4'
         pivotTableIndex = 0
         fieldIndex = 0
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_get_worksheet_pivot_table_filters(name, sheet_name,pivotTableIndex, folder=folder)
@@ -232,7 +215,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         sheet_name ='Sheet4'
         pivotTableIndex = 0
         fieldIndex = 0
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_get_worksheet_pivot_tables(name, sheet_name, folder=folder)
@@ -255,7 +238,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         font.size = 17
         style.font = font
         needReCalculate = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_post_pivot_table_cell_style(name, sheet_name, pivotTableIndex ,column,row ,style=style,need_re_calculate=needReCalculate  ,folder=folder)
@@ -276,7 +259,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         itemIndex = 1
         isHide = True
         needReCalculate = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_post_pivot_table_field_hide_item(name, sheet_name, pivotTableIndex ,pivotFieldType,fieldIndex ,itemIndex,isHide,need_re_calculate=needReCalculate  ,folder=folder)
@@ -295,7 +278,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         fieldIndex = 0
         _from = "Row"
         to = "Column"
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_post_pivot_table_field_move_to(name, sheet_name, pivotTableIndex ,fieldIndex ,_from,to ,folder=folder)
@@ -316,7 +299,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         font.size = 17
         style.font = font
         needReCalculate = True
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_post_pivot_table_style(name, sheet_name, pivotTableIndex ,style=style,need_re_calculate=needReCalculate,folder=folder)
@@ -332,7 +315,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         name ='TestCase.xlsx'
         sheet_name ='Sheet4'
         pivotTableIndex = 0
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_post_worksheet_pivot_table_calculate(name, sheet_name, pivotTableIndex ,folder=folder)
@@ -352,7 +335,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         row = 1
         destCellName = 'C10'
         needReCalculate = 'true'
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_post_worksheet_pivot_table_move(name, sheet_name, pivotTableIndex ,row=row, column=column,dest_cell_name=destCellName ,folder=folder)
@@ -371,7 +354,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotFieldType = "row"
         request = PivotTableFieldRequest()
         request.data = [1]
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_put_pivot_table_field(name, sheet_name, pivotTableIndex, pivotFieldType,request=request,need_re_calculate=True,folder=folder)
@@ -394,7 +377,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         destCellName = "C1"
         tableName = "TestPivot"
         useSameSource = 'true'
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_put_worksheet_pivot_table(name, sheet_name, request=None, folder=folder,source_data=sourceData,dest_cell_name=destCellName,table_name=tableName,use_same_source=useSameSource)
@@ -412,7 +395,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         pivotTableIndex = 0
         fieldIndex = 0
         needReCalculate = True
-        folder = "Temp"
+        folder = "PythonTest"
         pivotFilter = PivotFilter()
         pivotFilter.field_index = 1
         pivotFilter.filter_type = "Count"
@@ -430,6 +413,8 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_put_worksheet_pivot_table_filter(name, sheet_name,pivotTableIndex, filter=pivotFilter, need_re_calculate=needReCalculate,folder=folder)
+        self.assertEqual(result.code,200)
+        result = self.api.cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivotTableIndex,  fieldIndex,need_re_calculate=needReCalculate,folder=folder)
         self.assertEqual(result.code,200)
         pass
 

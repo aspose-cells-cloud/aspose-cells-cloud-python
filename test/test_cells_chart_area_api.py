@@ -47,7 +47,7 @@ class TestCellsChartAreaApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 0  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_chart_area_get_chart_area(name, sheet_name,chartIndex, folder=folder)
@@ -63,7 +63,7 @@ class TestCellsChartAreaApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 0  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_chart_area_get_chart_area_border(name, sheet_name,chartIndex, folder=folder)
@@ -79,7 +79,7 @@ class TestCellsChartAreaApi(unittest.TestCase):
         name ='myDocument.xlsx'
         sheet_name ='Sheet3'
         chartIndex = 0  
-        folder = "Temp"
+        folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_chart_area_get_chart_area_fill_format(name, sheet_name,chartIndex, folder = folder)
