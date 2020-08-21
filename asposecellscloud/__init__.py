@@ -32,6 +32,7 @@ from .models.border import Border
 from .models.calculation_options import CalculationOptions
 from .models.cell_area import CellArea
 from .models.cell_value import CellValue
+from .models.cells_cloud_file_info import CellsCloudFileInfo
 from .models.cells_cloud_response import CellsCloudResponse
 from .models.cells_color import CellsColor
 from .models.color import Color

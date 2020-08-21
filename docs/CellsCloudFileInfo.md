@@ -1,9 +1,12 @@
-# SplitResult
+# CellsCloudFileInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**documents** | [**list[CellsCloudFileInfo]**](CellsCloudFileInfo.md) |  | [optional] 
+**name** | **str** |  | [optional] 
+**size** | **int** |  | 
+**folder** | **str** |  | [optional] 
+**storage** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

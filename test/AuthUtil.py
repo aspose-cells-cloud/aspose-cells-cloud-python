@@ -35,22 +35,18 @@ def GetApiClient():
     return api_client
 
 
-def Ready(api, filename, folder, storage=None):
-
-  
+def Ready(api, filename, folder,storage=None):
     path = folder + '/' + filename
-    fullfilename = "D:/Projects/Aspose/Aspose.Cloud/Aspose.Cells.Cloud.SDK/src/TestData/" + filename
-    response = api.upload_file(path, fullfilename)
+    fullfilename = "D:/Projects/Aspose/Aspose.Cells.Cloud.SDK/src/TestData/" + filename
+    if storage == None:
+        response = api.upload_file(path, fullfilename)
+    else:
+        response = api.upload_file(path, fullfilename, storage_name=storage)
     return response
 
-    # with open(fullfilename, 'rb') as file_object:
-    #     contents = file_object.read()
-    # response = None
-    # if storage == None:
-    #     response = api.upload_file(path, fullfilename)
-    # else:    
-    #     response = api.upload_file(path, fullfilename, storage)
-    #     if response['Status'] == "OK":
-    #         return True
-    
-    # return False
+def ReadyStorage(api, filename, folder, storage ):
+    path = folder + '/' + filename
+    fullfilename = "D:/Projects/Aspose/Aspose.Cells.Cloud.SDK/src/TestData/" + filename
+    response = api.upload_file(path, fullfilename, storage_name=storage)
+    return response
+

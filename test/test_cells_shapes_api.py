@@ -139,7 +139,7 @@ class TestCellsShapesApi(unittest.TestCase):
         folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_shapes_put_worksheet_shape(name, sheet_name, drawingType,upperLeftRow,upperLeftColumn, top, left, width, height,folder=folder)
+        result = self.api.cells_shapes_put_worksheet_shape(name, sheet_name, drawing_type=drawingType,upper_left_row=upperLeftRow,upper_left_column=upperLeftColumn, top=top, left=left,width=width, height=height,folder=folder)
         self.assertEqual(result.code,200)
         pass
 

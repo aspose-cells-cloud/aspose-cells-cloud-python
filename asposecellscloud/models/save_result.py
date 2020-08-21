@@ -41,15 +41,11 @@ class SaveResult(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'source_document': 'Link',
-        'dest_document': 'Link',
-        'additional_items': 'list[Link]'
+        'documents': 'list[CellsCloudFileInfo]'
     }
 
     attribute_map = {
-        'source_document': 'SourceDocument',
-        'dest_document': 'DestDocument',
-        'additional_items': 'AdditionalItems'
+        'documents': 'Documents'
     }
     
     @staticmethod
@@ -65,7 +61,7 @@ class SaveResult(object):
             return self.container[attr]
         return None
 
-    def __init__(self, source_document=None, dest_document=None, additional_items=None, **kw):
+    def __init__(self, documents=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -75,79 +71,31 @@ class SaveResult(object):
         SaveResult - a model defined in Swagger
         """
 
-        self.container['source_document'] = None
-        self.container['dest_document'] = None
-        self.container['additional_items'] = None
+        self.container['documents'] = None
 
-        if source_document is not None:
-          self.source_document = source_document
-        if dest_document is not None:
-          self.dest_document = dest_document
-        if additional_items is not None:
-          self.additional_items = additional_items
+        if documents is not None:
+          self.documents = documents
 
     @property
-    def source_document(self):
+    def documents(self):
         """
-        Gets the source_document of this SaveResult.
+        Gets the documents of this SaveResult.
 
-        :return: The source_document of this SaveResult.
-        :rtype: Link
+        :return: The documents of this SaveResult.
+        :rtype: list[CellsCloudFileInfo]
         """
-        return self.container['source_document']
+        return self.container['documents']
 
-    @source_document.setter
-    def source_document(self, source_document):
+    @documents.setter
+    def documents(self, documents):
         """
-        Sets the source_document of this SaveResult.
+        Sets the documents of this SaveResult.
 
-        :param source_document: The source_document of this SaveResult.
-        :type: Link
-        """
-
-        self.container['source_document'] = source_document
-
-    @property
-    def dest_document(self):
-        """
-        Gets the dest_document of this SaveResult.
-
-        :return: The dest_document of this SaveResult.
-        :rtype: Link
-        """
-        return self.container['dest_document']
-
-    @dest_document.setter
-    def dest_document(self, dest_document):
-        """
-        Sets the dest_document of this SaveResult.
-
-        :param dest_document: The dest_document of this SaveResult.
-        :type: Link
+        :param documents: The documents of this SaveResult.
+        :type: list[CellsCloudFileInfo]
         """
 
-        self.container['dest_document'] = dest_document
-
-    @property
-    def additional_items(self):
-        """
-        Gets the additional_items of this SaveResult.
-
-        :return: The additional_items of this SaveResult.
-        :rtype: list[Link]
-        """
-        return self.container['additional_items']
-
-    @additional_items.setter
-    def additional_items(self, additional_items):
-        """
-        Sets the additional_items of this SaveResult.
-
-        :param additional_items: The additional_items of this SaveResult.
-        :type: list[Link]
-        """
-
-        self.container['additional_items'] = additional_items
+        self.container['documents'] = documents
 
     def to_dict(self):
         """

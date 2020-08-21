@@ -108,9 +108,9 @@ class TestCellsSaveAsApi(unittest.TestCase):
         isAutoFitRows= True
         isAutoFitColumns= True
         folder = "PythonTest"
-        storage = "DropBox"
-        # AuthUtil.Ready(name, folder, storage)
-        result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=(folder +'/' + newfilename),is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder, storage=storage)
+        storage = 'DropBox'
+        AuthUtil.Ready(self.api,name, folder, storage )
+        result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=(folder +'/' + newfilename),is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder, storage_name=storage)
         self.assertEqual(result.code,200)
         pass
 
