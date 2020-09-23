@@ -1,10 +1,11 @@
-# FilesUploadResult
+# Sparkline
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uploaded** | **list[str]** | List of uploaded file names | [optional] 
-**errors** | [**list[CellsError]**](CellsError.md) | List of errors. | [optional] 
+**column** | **int** |  | 
+**data_range** | **str** |  | [optional] 
+**row** | **int** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

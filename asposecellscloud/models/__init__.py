@@ -35,6 +35,7 @@ from .cell_value import CellValue
 from .cells_cloud_file_info import CellsCloudFileInfo
 from .cells_cloud_response import CellsCloudResponse
 from .cells_color import CellsColor
+from .cells_error import CellsError
 from .color import Color
 from .color_filter import ColorFilter
 from .color_filter_request import ColorFilterRequest
@@ -50,7 +51,6 @@ from .data_bar_border import DataBarBorder
 from .data_sorter import DataSorter
 from .disc_usage import DiscUsage
 from .dynamic_filter import DynamicFilter
-from .error import Error
 from .error_details import ErrorDetails
 from .file_source import FileSource
 from .file_versions import FileVersions
@@ -100,6 +100,9 @@ from .shadow_effect import ShadowEffect
 from .single_value import SingleValue
 from .solid_fill import SolidFill
 from .sort_key import SortKey
+from .sparkline import Sparkline
+from .sparkline_group import SparklineGroup
+from .sparkline_groups import SparklineGroups
 from .split_result import SplitResult
 from .storage_exist import StorageExist
 from .storage_file import StorageFile
@@ -227,6 +230,8 @@ from .shapes import Shapes
 from .shapes_response import ShapesResponse
 from .single_value_response import SingleValueResponse
 from .smart_marker_task_parameter import SmartMarkerTaskParameter
+from .sparkline_group_response import SparklineGroupResponse
+from .sparkline_groups_response import SparklineGroupsResponse
 from .split_result_document import SplitResultDocument
 from .split_result_response import SplitResultResponse
 from .split_workbook_task_parameter import SplitWorkbookTaskParameter

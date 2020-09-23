@@ -33,7 +33,7 @@ class TestCellsOleObjectsApi(unittest.TestCase):
     def setUp(self):
         global global_api
         if global_api is None:
-           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0",AuthUtil.GetBaseUrl())
         self.api = global_api
 
     def tearDown(self):

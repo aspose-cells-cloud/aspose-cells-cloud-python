@@ -4009,6 +4009,10 @@ class CellsApi(object):
         :param str title: Specifies chart title name.
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
+        :param bool data_labels:
+        :param str data_labels_position:
+        :param str pivot_table_sheet:
+        :param str pivot_table_name:
         :return: ChartsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4048,12 +4052,16 @@ class CellsApi(object):
         :param str title: Specifies chart title name.
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
+        :param bool data_labels:
+        :param str data_labels_position:
+        :param str pivot_table_sheet:
+        :param str pivot_table_name:
         :return: ChartsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'chart_type', 'upper_left_row', 'upper_left_column', 'lower_right_row', 'lower_right_column', 'area', 'is_vertical', 'category_data', 'is_auto_get_serial_name', 'title', 'folder', 'storage_name']
+        all_params = ['name', 'sheet_name', 'chart_type', 'upper_left_row', 'upper_left_column', 'lower_right_row', 'lower_right_column', 'area', 'is_vertical', 'category_data', 'is_auto_get_serial_name', 'title', 'folder', 'storage_name', 'data_labels', 'data_labels_position', 'pivot_table_sheet', 'pivot_table_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4112,6 +4120,14 @@ class CellsApi(object):
             query_params.append(('folder', params['folder']))
         if 'storage_name' in params:
             query_params.append(('storageName', params['storage_name']))
+        if 'data_labels' in params:
+            query_params.append(('dataLabels', params['data_labels']))
+        if 'data_labels_position' in params:
+            query_params.append(('dataLabelsPosition', params['data_labels_position']))
+        if 'pivot_table_sheet' in params:
+            query_params.append(('pivotTableSheet', params['pivot_table_sheet']))
+        if 'pivot_table_name' in params:
+            query_params.append(('pivotTableName', params['pivot_table_name']))
 
         header_params = {}
 
@@ -14562,6 +14578,291 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def cells_pivot_tables_post_pivot_table_update_pivot_field(self, name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_pivot_tables_post_pivot_table_update_pivot_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int pivot_table_index: (required)
+        :param int pivot_field_index: (required)
+        :param str pivot_field_type: (required)
+        :param PivotField pivot_field: (required)
+        :param bool need_re_calculate:
+        :param str folder:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_pivot_tables_post_pivot_table_update_pivot_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, **kwargs)
+        else:
+            (data) = self.cells_pivot_tables_post_pivot_table_update_pivot_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, **kwargs)
+            return data
+
+    def cells_pivot_tables_post_pivot_table_update_pivot_field_with_http_info(self, name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_pivot_tables_post_pivot_table_update_pivot_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int pivot_table_index: (required)
+        :param int pivot_field_index: (required)
+        :param str pivot_field_type: (required)
+        :param PivotField pivot_field: (required)
+        :param bool need_re_calculate:
+        :param str folder:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'pivot_field_index', 'pivot_field_type', 'pivot_field', 'need_re_calculate', 'folder']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_pivot_tables_post_pivot_table_update_pivot_field" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_pivot_tables_post_pivot_table_update_pivot_field`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_pivot_tables_post_pivot_table_update_pivot_field`")
+        # verify the required parameter 'pivot_table_index' is set
+        if ('pivot_table_index' not in params) or (params['pivot_table_index'] is None):
+            raise ValueError("Missing the required parameter `pivot_table_index` when calling `cells_pivot_tables_post_pivot_table_update_pivot_field`")
+        # verify the required parameter 'pivot_field_index' is set
+        if ('pivot_field_index' not in params) or (params['pivot_field_index'] is None):
+            raise ValueError("Missing the required parameter `pivot_field_index` when calling `cells_pivot_tables_post_pivot_table_update_pivot_field`")
+        # verify the required parameter 'pivot_field_type' is set
+        if ('pivot_field_type' not in params) or (params['pivot_field_type'] is None):
+            raise ValueError("Missing the required parameter `pivot_field_type` when calling `cells_pivot_tables_post_pivot_table_update_pivot_field`")
+        # verify the required parameter 'pivot_field' is set
+        if ('pivot_field' not in params) or (params['pivot_field'] is None):
+            raise ValueError("Missing the required parameter `pivot_field` when calling `cells_pivot_tables_post_pivot_table_update_pivot_field`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'pivot_table_index' in params:
+            path_params['pivotTableIndex'] = params['pivot_table_index']
+        if 'pivot_field_index' in params:
+            path_params['pivotFieldIndex'] = params['pivot_field_index']
+
+        query_params = []
+        if 'pivot_field_type' in params:
+            query_params.append(('pivotFieldType', params['pivot_field_type']))
+        if 'need_re_calculate' in params:
+            query_params.append(('needReCalculate', params['need_re_calculate']))
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'pivot_field' in params:
+            body_params = params['pivot_field']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotFields/{pivotFieldIndex}', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_pivot_tables_post_pivot_table_update_pivot_fields(self, name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_pivot_tables_post_pivot_table_update_pivot_fields(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int pivot_table_index: (required)
+        :param str pivot_field_type: (required)
+        :param PivotField pivot_field: (required)
+        :param bool need_re_calculate:
+        :param str folder:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_pivot_tables_post_pivot_table_update_pivot_fields_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, **kwargs)
+        else:
+            (data) = self.cells_pivot_tables_post_pivot_table_update_pivot_fields_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, **kwargs)
+            return data
+
+    def cells_pivot_tables_post_pivot_table_update_pivot_fields_with_http_info(self, name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_pivot_tables_post_pivot_table_update_pivot_fields_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int pivot_table_index: (required)
+        :param str pivot_field_type: (required)
+        :param PivotField pivot_field: (required)
+        :param bool need_re_calculate:
+        :param str folder:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'pivot_table_index', 'pivot_field_type', 'pivot_field', 'need_re_calculate', 'folder']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_pivot_tables_post_pivot_table_update_pivot_fields" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_pivot_tables_post_pivot_table_update_pivot_fields`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_pivot_tables_post_pivot_table_update_pivot_fields`")
+        # verify the required parameter 'pivot_table_index' is set
+        if ('pivot_table_index' not in params) or (params['pivot_table_index'] is None):
+            raise ValueError("Missing the required parameter `pivot_table_index` when calling `cells_pivot_tables_post_pivot_table_update_pivot_fields`")
+        # verify the required parameter 'pivot_field_type' is set
+        if ('pivot_field_type' not in params) or (params['pivot_field_type'] is None):
+            raise ValueError("Missing the required parameter `pivot_field_type` when calling `cells_pivot_tables_post_pivot_table_update_pivot_fields`")
+        # verify the required parameter 'pivot_field' is set
+        if ('pivot_field' not in params) or (params['pivot_field'] is None):
+            raise ValueError("Missing the required parameter `pivot_field` when calling `cells_pivot_tables_post_pivot_table_update_pivot_fields`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'pivot_table_index' in params:
+            path_params['pivotTableIndex'] = params['pivot_table_index']
+
+        query_params = []
+        if 'pivot_field_type' in params:
+            query_params.append(('pivotFieldType', params['pivot_field_type']))
+        if 'need_re_calculate' in params:
+            query_params.append(('needReCalculate', params['need_re_calculate']))
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'pivot_field' in params:
+            body_params = params['pivot_field']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotFields', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def cells_pivot_tables_post_worksheet_pivot_table_calculate(self, name, sheet_name, pivot_table_index, **kwargs):
         """
         Calculates pivottable's data to cells.
@@ -22000,6 +22301,772 @@ class CellsApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='ShapeResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_sparkline_groups_delete_worksheet_sparkline_group(self, name, sheet_name, sparkline_group_index, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_delete_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int sparkline_group_index: (required)
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_sparkline_groups_delete_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, **kwargs)
+        else:
+            (data) = self.cells_sparkline_groups_delete_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, **kwargs)
+            return data
+
+    def cells_sparkline_groups_delete_worksheet_sparkline_group_with_http_info(self, name, sheet_name, sparkline_group_index, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_delete_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int sparkline_group_index: (required)
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'sparkline_group_index', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_sparkline_groups_delete_worksheet_sparkline_group" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_sparkline_groups_delete_worksheet_sparkline_group`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_sparkline_groups_delete_worksheet_sparkline_group`")
+        # verify the required parameter 'sparkline_group_index' is set
+        if ('sparkline_group_index' not in params) or (params['sparkline_group_index'] is None):
+            raise ValueError("Missing the required parameter `sparkline_group_index` when calling `cells_sparkline_groups_delete_worksheet_sparkline_group`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'sparkline_group_index' in params:
+            path_params['sparklineGroupIndex'] = params['sparkline_group_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/sparklinegroups/{sparklineGroupIndex}', 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_sparkline_groups_delete_worksheet_sparkline_groups(self, name, sheet_name, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_delete_worksheet_sparkline_groups(name, sheet_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_sparkline_groups_delete_worksheet_sparkline_groups_with_http_info(name, sheet_name, **kwargs)
+        else:
+            (data) = self.cells_sparkline_groups_delete_worksheet_sparkline_groups_with_http_info(name, sheet_name, **kwargs)
+            return data
+
+    def cells_sparkline_groups_delete_worksheet_sparkline_groups_with_http_info(self, name, sheet_name, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_delete_worksheet_sparkline_groups_with_http_info(name, sheet_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_sparkline_groups_delete_worksheet_sparkline_groups" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_sparkline_groups_delete_worksheet_sparkline_groups`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_sparkline_groups_delete_worksheet_sparkline_groups`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/sparklinegroups', 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_sparkline_groups_get_worksheet_sparkline_group(self, name, sheet_name, sparkline_group_index, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_get_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int sparkline_group_index: (required)
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: SparklineGroupResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_sparkline_groups_get_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, **kwargs)
+        else:
+            (data) = self.cells_sparkline_groups_get_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, **kwargs)
+            return data
+
+    def cells_sparkline_groups_get_worksheet_sparkline_group_with_http_info(self, name, sheet_name, sparkline_group_index, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_get_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int sparkline_group_index: (required)
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: SparklineGroupResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'sparkline_group_index', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_sparkline_groups_get_worksheet_sparkline_group" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_sparkline_groups_get_worksheet_sparkline_group`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_sparkline_groups_get_worksheet_sparkline_group`")
+        # verify the required parameter 'sparkline_group_index' is set
+        if ('sparkline_group_index' not in params) or (params['sparkline_group_index'] is None):
+            raise ValueError("Missing the required parameter `sparkline_group_index` when calling `cells_sparkline_groups_get_worksheet_sparkline_group`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'sparkline_group_index' in params:
+            path_params['sparklineGroupIndex'] = params['sparkline_group_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/sparklinegroups/{sparklineGroupIndex}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='SparklineGroupResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_sparkline_groups_get_worksheet_sparkline_groups(self, name, sheet_name, **kwargs):
+        """
+        Get worksheet charts description.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_get_worksheet_sparkline_groups(name, sheet_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Document name. (required)
+        :param str sheet_name: The worksheet name. (required)
+        :param str folder: Document's folder.
+        :param str storage_name: storage name.
+        :return: SparklineGroupsResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_sparkline_groups_get_worksheet_sparkline_groups_with_http_info(name, sheet_name, **kwargs)
+        else:
+            (data) = self.cells_sparkline_groups_get_worksheet_sparkline_groups_with_http_info(name, sheet_name, **kwargs)
+            return data
+
+    def cells_sparkline_groups_get_worksheet_sparkline_groups_with_http_info(self, name, sheet_name, **kwargs):
+        """
+        Get worksheet charts description.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_get_worksheet_sparkline_groups_with_http_info(name, sheet_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Document name. (required)
+        :param str sheet_name: The worksheet name. (required)
+        :param str folder: Document's folder.
+        :param str storage_name: storage name.
+        :return: SparklineGroupsResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_sparkline_groups_get_worksheet_sparkline_groups" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_sparkline_groups_get_worksheet_sparkline_groups`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_sparkline_groups_get_worksheet_sparkline_groups`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/sparklinegroups', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='SparklineGroupsResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_sparkline_groups_post_worksheet_sparkline_group(self, name, sheet_name, sparkline_group_index, sparkline_group, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_post_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, sparkline_group, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int sparkline_group_index: (required)
+        :param SparklineGroup sparkline_group: (required)
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_sparkline_groups_post_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, sparkline_group, **kwargs)
+        else:
+            (data) = self.cells_sparkline_groups_post_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, sparkline_group, **kwargs)
+            return data
+
+    def cells_sparkline_groups_post_worksheet_sparkline_group_with_http_info(self, name, sheet_name, sparkline_group_index, sparkline_group, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_post_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, sparkline_group, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int sparkline_group_index: (required)
+        :param SparklineGroup sparkline_group: (required)
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'sparkline_group_index', 'sparkline_group', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_sparkline_groups_post_worksheet_sparkline_group" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_sparkline_groups_post_worksheet_sparkline_group`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_sparkline_groups_post_worksheet_sparkline_group`")
+        # verify the required parameter 'sparkline_group_index' is set
+        if ('sparkline_group_index' not in params) or (params['sparkline_group_index'] is None):
+            raise ValueError("Missing the required parameter `sparkline_group_index` when calling `cells_sparkline_groups_post_worksheet_sparkline_group`")
+        # verify the required parameter 'sparkline_group' is set
+        if ('sparkline_group' not in params) or (params['sparkline_group'] is None):
+            raise ValueError("Missing the required parameter `sparkline_group` when calling `cells_sparkline_groups_post_worksheet_sparkline_group`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+
+        query_params = []
+        if 'sparkline_group_index' in params:
+            query_params.append(('sparklineGroupIndex', params['sparkline_group_index']))
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'sparkline_group' in params:
+            body_params = params['sparkline_group']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/sparklinegroups/{sparklineGroupIndex}', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_sparkline_groups_put_worksheet_sparkline_group(self, name, sheet_name, type, data_range, is_vertical, location_range, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_put_worksheet_sparkline_group(name, sheet_name, type, data_range, is_vertical, location_range, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param str type: (required)
+        :param str data_range: (required)
+        :param bool is_vertical: (required)
+        :param str location_range: (required)
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_sparkline_groups_put_worksheet_sparkline_group_with_http_info(name, sheet_name, type, data_range, is_vertical, location_range, **kwargs)
+        else:
+            (data) = self.cells_sparkline_groups_put_worksheet_sparkline_group_with_http_info(name, sheet_name, type, data_range, is_vertical, location_range, **kwargs)
+            return data
+
+    def cells_sparkline_groups_put_worksheet_sparkline_group_with_http_info(self, name, sheet_name, type, data_range, is_vertical, location_range, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_sparkline_groups_put_worksheet_sparkline_group_with_http_info(name, sheet_name, type, data_range, is_vertical, location_range, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param str type: (required)
+        :param str data_range: (required)
+        :param bool is_vertical: (required)
+        :param str location_range: (required)
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'type', 'data_range', 'is_vertical', 'location_range', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_sparkline_groups_put_worksheet_sparkline_group" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_sparkline_groups_put_worksheet_sparkline_group`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_sparkline_groups_put_worksheet_sparkline_group`")
+        # verify the required parameter 'type' is set
+        if ('type' not in params) or (params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `cells_sparkline_groups_put_worksheet_sparkline_group`")
+        # verify the required parameter 'data_range' is set
+        if ('data_range' not in params) or (params['data_range'] is None):
+            raise ValueError("Missing the required parameter `data_range` when calling `cells_sparkline_groups_put_worksheet_sparkline_group`")
+        # verify the required parameter 'is_vertical' is set
+        if ('is_vertical' not in params) or (params['is_vertical'] is None):
+            raise ValueError("Missing the required parameter `is_vertical` when calling `cells_sparkline_groups_put_worksheet_sparkline_group`")
+        # verify the required parameter 'location_range' is set
+        if ('location_range' not in params) or (params['location_range'] is None):
+            raise ValueError("Missing the required parameter `location_range` when calling `cells_sparkline_groups_put_worksheet_sparkline_group`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+
+        query_params = []
+        if 'type' in params:
+            query_params.append(('type', params['type']))
+        if 'data_range' in params:
+            query_params.append(('dataRange', params['data_range']))
+        if 'is_vertical' in params:
+            query_params.append(('isVertical', params['is_vertical']))
+        if 'location_range' in params:
+            query_params.append(('locationRange', params['location_range']))
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/sparklinegroups', 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

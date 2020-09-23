@@ -26,6 +26,7 @@ from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import PivotTableFieldRequest
 from asposecellscloud.models import PivotFilter
+from asposecellscloud.models import PivotField
 from asposecellscloud.models import AutoFilter
 from asposecellscloud.models import FilterColumn
 from asposecellscloud.models import Top10Filter
@@ -40,7 +41,7 @@ class TestCellsPivotTablesApi(unittest.TestCase):
     def setUp(self):
         global global_api
         if global_api is None:
-           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0",AuthUtil.GetBaseUrl())
         self.api = global_api
 
     def tearDown(self):
@@ -282,6 +283,25 @@ class TestCellsPivotTablesApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_pivot_tables_post_pivot_table_field_move_to(name, sheet_name, pivotTableIndex ,fieldIndex ,_from,to ,folder=folder)
+        self.assertEqual(result.code,200)
+        pass
+    def test_cells_pivot_tables_post_pivot_table_update_pivot_field(self):
+        """
+        Test case for cells_pivot_tables_post_pivot_table_update_pivot_field
+
+        
+        """
+        name ='TestCase.xlsx'
+        sheet_name ='Sheet4'
+        pivotTableIndex = 0
+        fieldIndex = 0
+        pivotField = PivotField()
+        pivotField.number = 5
+        to = "Column"
+        folder = "PythonTest"
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_pivot_tables_post_pivot_table_update_pivot_field(name, sheet_name, pivotTableIndex ,fieldIndex ,"Row", pivotField,folder=folder)
         self.assertEqual(result.code,200)
         pass
 

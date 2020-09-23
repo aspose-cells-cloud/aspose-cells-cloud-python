@@ -35,6 +35,7 @@ from .models.cell_value import CellValue
 from .models.cells_cloud_file_info import CellsCloudFileInfo
 from .models.cells_cloud_response import CellsCloudResponse
 from .models.cells_color import CellsColor
+from .models.cells_error import CellsError
 from .models.color import Color
 from .models.color_filter import ColorFilter
 from .models.color_filter_request import ColorFilterRequest
@@ -50,7 +51,6 @@ from .models.data_bar_border import DataBarBorder
 from .models.data_sorter import DataSorter
 from .models.disc_usage import DiscUsage
 from .models.dynamic_filter import DynamicFilter
-from .models.error import Error
 from .models.error_details import ErrorDetails
 from .models.file_source import FileSource
 from .models.file_versions import FileVersions
@@ -100,6 +100,9 @@ from .models.shadow_effect import ShadowEffect
 from .models.single_value import SingleValue
 from .models.solid_fill import SolidFill
 from .models.sort_key import SortKey
+from .models.sparkline import Sparkline
+from .models.sparkline_group import SparklineGroup
+from .models.sparkline_groups import SparklineGroups
 from .models.split_result import SplitResult
 from .models.storage_exist import StorageExist
 from .models.storage_file import StorageFile
@@ -227,6 +230,8 @@ from .models.shapes import Shapes
 from .models.shapes_response import ShapesResponse
 from .models.single_value_response import SingleValueResponse
 from .models.smart_marker_task_parameter import SmartMarkerTaskParameter
+from .models.sparkline_group_response import SparklineGroupResponse
+from .models.sparkline_groups_response import SparklineGroupsResponse
 from .models.split_result_document import SplitResultDocument
 from .models.split_result_response import SplitResultResponse
 from .models.split_workbook_task_parameter import SplitWorkbookTaskParameter

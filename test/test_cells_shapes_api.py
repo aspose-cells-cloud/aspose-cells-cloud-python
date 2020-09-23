@@ -33,7 +33,7 @@ class TestCellsShapesApi(unittest.TestCase):
     def setUp(self):
         global global_api
         if global_api is None:
-           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0",AuthUtil.GetBaseUrl())
         self.api = global_api
 
     def tearDown(self):
@@ -139,7 +139,7 @@ class TestCellsShapesApi(unittest.TestCase):
         folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_shapes_put_worksheet_shape(name, sheet_name, drawing_type=drawingType,upper_left_row=upperLeftRow,upper_left_column=upperLeftColumn, top=top, left=left,width=width, height=height,folder=folder)
+        result = self.api.cells_shapes_put_worksheet_shape(name, sheet_name,drawing_type=drawingType,upper_left_row=upperLeftRow,upper_left_column=upperLeftColumn, top=top, left=left, width=width, height=    height,folder=folder)
         self.assertEqual(result.code,200)
         pass
 

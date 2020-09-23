@@ -33,7 +33,7 @@ class TestCellsSaveAsApi(unittest.TestCase):
     def setUp(self):
         global global_api
         if global_api is None:
-           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0")
+           global_api = asposecellscloud.apis.cells_api.CellsApi(AuthUtil.GetAPPSID(),AuthUtil.GetAPPKey(),"v3.0",AuthUtil.GetBaseUrl())
         self.api = global_api
 
     def tearDown(self):
@@ -108,8 +108,8 @@ class TestCellsSaveAsApi(unittest.TestCase):
         isAutoFitRows= True
         isAutoFitColumns= True
         folder = "PythonTest"
-        storage = 'DropBox'
-        AuthUtil.Ready(self.api,name, folder, storage )
+        storage = "DropBox"
+        # AuthUtil.Ready(name, folder, storage)
         result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=(folder +'/' + newfilename),is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder, storage_name=storage)
         self.assertEqual(result.code,200)
         pass

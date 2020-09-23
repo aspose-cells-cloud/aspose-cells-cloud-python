@@ -1,10 +1,9 @@
-# FilesUploadResult
+# SparklineGroupResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uploaded** | **list[str]** | List of uploaded file names | [optional] 
-**errors** | [**list[CellsError]**](CellsError.md) | List of errors. | [optional] 
+**sparkline_group** | [**SparklineGroup**](SparklineGroup.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
