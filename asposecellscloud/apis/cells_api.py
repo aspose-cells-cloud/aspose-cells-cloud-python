@@ -58,17 +58,17 @@ class CellsApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
         self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
-        self.get_access_token_time = time.clock()
+        self.get_access_token_time = time.process_time()
         # self.api_client.set_default_header("Authorization", "Bearer " + self.auth_data.access_token)
 
     def check_access_token(self):
         if self.access_token:
-            timediff = time.clock() - self.get_access_token_time
+            timediff = time.process_time() - self.get_access_token_time
             if timediff > 86300 :
                 api_client =  ApiClient(self.base_uri)
                 self.access_token = api_client.get_access_token("client_credentials", self.appsid, self.appkey,self.version)
                 self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
-                self.get_access_token_time = time.clock()
+                self.get_access_token_time = time.process_time()
 
     def cells_auto_filter_delete_worksheet_date_filter(self, name, sheet_name, field_index, date_time_grouping_type, **kwargs):
         """

@@ -10,7 +10,7 @@ import asposecellscloud
 from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
 from asposecellscloud.api_client import ApiClient
-import asposestoragecloud
+
 
 grantType = "client_credentials"
 clientId = "91A2FD07-BBA1-4B32-9112-ABFB1FE8AEBD"
@@ -41,7 +41,7 @@ def Ready(api, filename, folder, storage=None):
 
   
     path = folder + '/' + filename
-    fullfilename = "D:/Projects/Aspose/Aspose.Cells.Cloud.SDK/src/TestData/" + filename
+    fullfilename = "TestData/" + filename
     response = api.upload_file(path, fullfilename)
     return response
 
