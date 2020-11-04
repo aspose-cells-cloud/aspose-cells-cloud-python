@@ -13,8 +13,8 @@ from asposecellscloud.api_client import ApiClient
 
 
 grantType = "client_credentials"
-clientId = "91A2FD07-BBA1-4B32-9112-ABFB1FE8AEBD"
-clientSecret = "0fbf678c5ecabdb5caca48452a736dd0"
+clientId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx"
+clientSecret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 def GetBaseUrl():
     return 'https://api-qa.aspose.cloud';
 def GetAPPSID():
