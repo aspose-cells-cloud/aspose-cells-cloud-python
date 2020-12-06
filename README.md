@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/20.10)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/20.11)
 
 
 # Python SDK for Spreadsheet Processing in Cloud
@@ -21,10 +21,10 @@ Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate M
 - Convert worksheets to PDF, XPS & SVG formats.
 - Inter-convert files to popular Excel formats.
 
-## Enhancements in Version 20.10
+## Enhancements in Version 20.11
 
-- Support to upload large file.
-- Enhancement for post sparkline group API.
+- Support Aspose.Cells Cloud for Docker.
+- Replace app sid to client id
 
 ## Read & Write Spreadsheet Formats
 
@@ -68,7 +68,7 @@ Firstly, create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/
 ```python
 
     #Instantiate Aspose Cells API SDK
-    cellsApi = asposecellscloud.apis.cells_api.CellsApi(GetAPPSID(),GetAPPKey(),"v3.0")
+    cellsApi = asposecellscloud.apis.cells_api.CellsApi(GetClientId(),GetClientSecret(),"v3.0")
 
     templateFile ='Book1.xlsx'       
     folder = "Temp"
@@ -88,7 +88,7 @@ Firstly, create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/
 
 ```python
     #Instantiate Aspose Cells API SDK
-    cellsApi = asposecellscloud.apis.cells_api.CellsApi(GetAPPSID(),GetAPPKey(),"v3.0")
+    cellsApi = asposecellscloud.apis.cells_api.CellsApi(GetClientId(),GetClientSecret(),"v3.0")
 
     fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
     format ='pdf'       

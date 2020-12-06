@@ -37,18 +37,23 @@ from ..api_client import ApiClient
 
 class CellsApi(object):
 
-    def __init__(self,appsid, appkey, version='v3.0', base_uri= 'https://api.aspose.cloud', api_client=None):
-        self.appsid = appsid
-        self.appkey = appkey
+    def __init__(self,clientid, clientsecret, version='v3.0', base_uri= 'https://api.aspose.cloud', api_client=None):
+        self.clientid = clientid
+        self.clientsecret = clientsecret
         self.version = version 
         if base_uri[-1] == '/' :
             self.base_uri = base_uri[0:len(base_uri)-1]
         else:
             self.base_uri = base_uri
-
+        if not clientid or not clientsecret  : 
+            self.needAuth = False
+        else:
+            self.needAuth = True
+        
         self.api_client =  ApiClient(base_uri)
-        self.access_token = self.api_client.get_access_token("client_credentials", appsid, appkey,version)
-        # self.auth_data = self.o_auth_post("client_credentials", appsid, appkey)
+        if self.needAuth :
+            self.access_token = self.api_client.get_access_token("client_credentials", clientid, clientsecret,version)
+        # self.auth_data = self.o_auth_post("client_credentials", clientid, clientsecret)
         config = Configuration()
         config.host = self.base_uri +'/' + self.version
         if api_client:
@@ -57,18 +62,20 @@ class CellsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
+        if self.needAuth :            
+            self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
         self.get_access_token_time =  time.process_time()
         # self.api_client.set_default_header("Authorization", "Bearer " + self.auth_data.access_token)
 
     def check_access_token(self):
-        if self.access_token:
-            timediff =  time.process_time() - self.get_access_token_time
-            if timediff > 86300 :
-                api_client =  ApiClient(self.base_uri)
-                self.access_token = api_client.get_access_token("client_credentials", self.appsid, self.appkey,self.version)
-                self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
-                self.get_access_token_time =  time.process_time()
+        if self.needAuth :
+            if self.access_token:
+                timediff =  time.process_time() - self.get_access_token_time
+                if timediff > 86300 :
+                    api_client =  ApiClient(self.base_uri)
+                    self.access_token = api_client.get_access_token("client_credentials", self.clientid, self.clientsecret,self.version)
+                    self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
+                    self.get_access_token_time =  time.process_time()
 
     def cells_auto_filter_delete_worksheet_date_filter(self, name, sheet_name, field_index, date_time_grouping_type, **kwargs):
         """

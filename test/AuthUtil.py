@@ -13,26 +13,34 @@ from asposecellscloud.api_client import ApiClient
 
 
 grantType = "client_credentials"
-clientId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx"
-clientSecret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+clientId = os.getenv('CellsCloudTestClientId')
+clientSecret = os.getenv('CellsCloudTestClientSecret')
 def GetBaseUrl():
-    return 'https://api-qa.aspose.cloud';
-def GetAPPSID():
+    return os.getenv('CellsCloudTestApiBaseUrl')
+def GetClientId():
     return clientId
-def GetAPPKey():
+def GetClientSecret():
     return clientSecret
 def GetAccessToken():
-    client = ApiClient('https://api-qa.aspose.cloud')
+    client = ApiClient(GetBaseUrl())
     api = asposecellscloud.apis.cells_api.CellsApi(client)
     data = api.o_auth_post(grantType, clientId, clientSecret)
     return data.access_token
-
+def GetAppUrl():
+    appurl = GetBaseUrl()
+    if not appurl.endswith('/'):
+        appurl.append('/')
+    appurl.append('v3.0')    
+    return appurl 
+def IsDockerSDK():
+    return True
+    
 api_client = None
 
 def GetApiClient():
     global api_client
     if api_client == None:
-        api_client = ApiClient('https://api-qa.aspose.cloud/v3.0')
+        api_client = ApiClient(GetAppUrl())
         api_client.set_default_header("Authorization", "Bearer " + GetAccessToken())
     return api_client
 
