@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Copyright (c) 2020 Aspose.Cells Cloud
+Copyright (c) 2021 Aspose.Cells Cloud
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -45,15 +45,16 @@ class CellsApi(object):
             self.base_uri = base_uri[0:len(base_uri)-1]
         else:
             self.base_uri = base_uri
+        
         if not clientid or not clientsecret  : 
             self.needAuth = False
         else:
             self.needAuth = True
-        
+
         self.api_client =  ApiClient(base_uri)
         if self.needAuth :
             self.access_token = self.api_client.get_access_token("client_credentials", clientid, clientsecret,version)
-        # self.auth_data = self.o_auth_post("client_credentials", clientid, clientsecret)
+        # self.auth_data = self.o_auth_post("client_credentials", appsid, appkey)
         config = Configuration()
         config.host = self.base_uri +'/' + self.version
         if api_client:
@@ -20110,6 +20111,140 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def cells_ranges_delete_worksheet_cells_range(self, name, sheet_name, range, shift, **kwargs):
+        """
+        Delete range in the worksheet
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_ranges_delete_worksheet_cells_range(name, sheet_name, range, shift, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: workbook name (required)
+        :param str sheet_name: worksheet name (required)
+        :param str range: range (required)
+        :param str shift: Represent the shift options when deleting a range of cells. (Left,Up)  (required)
+        :param str folder: Workbook folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_ranges_delete_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, **kwargs)
+        else:
+            (data) = self.cells_ranges_delete_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, **kwargs)
+            return data
+
+    def cells_ranges_delete_worksheet_cells_range_with_http_info(self, name, sheet_name, range, shift, **kwargs):
+        """
+        Delete range in the worksheet
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_ranges_delete_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: workbook name (required)
+        :param str sheet_name: worksheet name (required)
+        :param str range: range (required)
+        :param str shift: Represent the shift options when deleting a range of cells. (Left,Up)  (required)
+        :param str folder: Workbook folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'range', 'shift', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_ranges_delete_worksheet_cells_range" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_ranges_delete_worksheet_cells_range`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_ranges_delete_worksheet_cells_range`")
+        # verify the required parameter 'range' is set
+        if ('range' not in params) or (params['range'] is None):
+            raise ValueError("Missing the required parameter `range` when calling `cells_ranges_delete_worksheet_cells_range`")
+        # verify the required parameter 'shift' is set
+        if ('shift' not in params) or (params['shift'] is None):
+            raise ValueError("Missing the required parameter `shift` when calling `cells_ranges_delete_worksheet_cells_range`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+
+        query_params = []
+        if 'range' in params:
+            query_params.append(('range', params['range']))
+        if 'shift' in params:
+            query_params.append(('shift', params['shift']))
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/ranges', 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def cells_ranges_get_worksheet_cells_range_value(self, name, sheet_name, **kwargs):
         """
         Get cells list in a range by range name or row column indexes  
@@ -21395,6 +21530,140 @@ class CellsApi(object):
         auth_settings = []
 
         return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/ranges', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_ranges_put_worksheet_cells_range(self, name, sheet_name, range, shift, **kwargs):
+        """
+        Insert range in the worksheet
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_ranges_put_worksheet_cells_range(name, sheet_name, range, shift, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: workbook name (required)
+        :param str sheet_name: worksheet name (required)
+        :param str range: range (required)
+        :param str shift: Represent the shift options when deleting a range of cells. (Right,Down)  (required)
+        :param str folder: Workbook folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_ranges_put_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, **kwargs)
+        else:
+            (data) = self.cells_ranges_put_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, **kwargs)
+            return data
+
+    def cells_ranges_put_worksheet_cells_range_with_http_info(self, name, sheet_name, range, shift, **kwargs):
+        """
+        Insert range in the worksheet
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_ranges_put_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: workbook name (required)
+        :param str sheet_name: worksheet name (required)
+        :param str range: range (required)
+        :param str shift: Represent the shift options when deleting a range of cells. (Right,Down)  (required)
+        :param str folder: Workbook folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'range', 'shift', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_ranges_put_worksheet_cells_range" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_ranges_put_worksheet_cells_range`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_ranges_put_worksheet_cells_range`")
+        # verify the required parameter 'range' is set
+        if ('range' not in params) or (params['range'] is None):
+            raise ValueError("Missing the required parameter `range` when calling `cells_ranges_put_worksheet_cells_range`")
+        # verify the required parameter 'shift' is set
+        if ('shift' not in params) or (params['shift'] is None):
+            raise ValueError("Missing the required parameter `shift` when calling `cells_ranges_put_worksheet_cells_range`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+
+        query_params = []
+        if 'range' in params:
+            query_params.append(('range', params['range']))
+        if 'shift' in params:
+            query_params.append(('shift', params['shift']))
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/ranges', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

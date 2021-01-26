@@ -245,7 +245,38 @@ class TestCellsRangesApi(unittest.TestCase):
         result = self.api.cells_ranges_post_worksheet_cells_ranges(name, sheet_name, range_operate=rangeOperate,folder=folder)
         self.assertEqual(result.code,200)
         pass
+    def test_cells_ranges_put_worksheet_cells_range(self):
+        """
+        Test case for cells_ranges_put_worksheet_cells_range
 
+        copy range in the worksheet
+        """
+        name ='Book1.xlsx'  
+        sheet_name ='Sheet1' 
+        range = 'A1:B5'
+        shift = 'Down'
+        folder = "PythonTest"
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_ranges_put_worksheet_cells_range(name, sheet_name, rarange,shift,folder=folder)
+        self.assertEqual(result.code,200)
+        pass
+    def test_cells_ranges_delete_worksheet_cells_range(self):
+        """
+        Test case for cells_ranges_delete_worksheet_cells_range
+
+        copy range in the worksheet
+        """
+        name ='Book1.xlsx'  
+        sheet_name ='Sheet1' 
+        range = 'A1:B5'
+        shift = 'Up'
+        folder = "PythonTest"
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_ranges_delete_worksheet_cells_range(name, sheet_name, rarange,shift,folder=folder)
+        self.assertEqual(result.code,200)
+        pass
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Copyright (c) 2020 Aspose.Cells Cloud
+Copyright (c) 2021 Aspose.Cells Cloud
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -156,6 +156,7 @@ from .models.conditional_formatting_response import ConditionalFormattingRespons
 from .models.conditional_formattings import ConditionalFormattings
 from .models.conditional_formattings_response import ConditionalFormattingsResponse
 from .models.convert_task_parameter import ConvertTaskParameter
+from .models.convert_worksheet_task_parameter import ConvertWorksheetTaskParameter
 from .models.dif_save_options import DifSaveOptions
 from .models.file_version import FileVersion
 from .models.fill_format_response import FillFormatResponse
