@@ -41,7 +41,7 @@ class ChartOperateParameter(OperateParameter):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'string': 'str',
+        'title': 'str',
         'area': 'str',
         'category_data': 'str',
         'upper_left_row': 'int',
@@ -53,7 +53,7 @@ class ChartOperateParameter(OperateParameter):
     }
 
     attribute_map = {
-        'string': 'string',
+        'title': 'Title',
         'area': 'Area',
         'category_data': 'CategoryData',
         'upper_left_row': 'UpperLeftRow',
@@ -77,14 +77,14 @@ class ChartOperateParameter(OperateParameter):
             return self.container[attr]
         return None
 
-    def __init__(self, string=None, area=None, category_data=None, upper_left_row=None, lower_right_column=None, lower_right_row=None, is_auto_get_serial_name=None, chart_type=None, is_vertical=None, **kw):
+    def __init__(self, title=None, area=None, category_data=None, upper_left_row=None, lower_right_column=None, lower_right_row=None, is_auto_get_serial_name=None, chart_type=None, is_vertical=None, **kw):
         super(ChartOperateParameter, self).__init__(**kw)
 		    
         """
         ChartOperateParameter - a model defined in Swagger
         """
 
-        self.container['string'] = None
+        self.container['title'] = None
         self.container['area'] = None
         self.container['category_data'] = None
         self.container['upper_left_row'] = None
@@ -94,8 +94,8 @@ class ChartOperateParameter(OperateParameter):
         self.container['chart_type'] = None
         self.container['is_vertical'] = None
 
-        if string is not None:
-          self.string = string
+        if title is not None:
+          self.title = title
         if area is not None:
           self.area = area
         if category_data is not None:
@@ -114,25 +114,25 @@ class ChartOperateParameter(OperateParameter):
           self.is_vertical = is_vertical
 
     @property
-    def string(self):
+    def title(self):
         """
-        Gets the string of this ChartOperateParameter.
+        Gets the title of this ChartOperateParameter.
 
-        :return: The string of this ChartOperateParameter.
+        :return: The title of this ChartOperateParameter.
         :rtype: str
         """
-        return self.container['string']
+        return self.container['title']
 
-    @string.setter
-    def string(self, string):
+    @title.setter
+    def title(self, title):
         """
-        Sets the string of this ChartOperateParameter.
+        Sets the title of this ChartOperateParameter.
 
-        :param string: The string of this ChartOperateParameter.
+        :param title: The title of this ChartOperateParameter.
         :type: str
         """
 
-        self.container['string'] = string
+        self.container['title'] = title
 
     @property
     def area(self):

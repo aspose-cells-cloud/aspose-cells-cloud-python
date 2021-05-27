@@ -5671,7 +5671,7 @@ class CellsApi(object):
         :param bool update_reference: The update reference. (required)
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: ColumnsResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5703,7 +5703,7 @@ class CellsApi(object):
         :param bool update_reference: The update reference. (required)
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: ColumnsResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5784,7 +5784,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ColumnsResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -17630,7 +17630,7 @@ class CellsApi(object):
         :param float width: The width. (required)
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: ColumnResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17661,7 +17661,7 @@ class CellsApi(object):
         :param float width: The width. (required)
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: ColumnResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17737,7 +17737,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ColumnResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -18574,7 +18574,7 @@ class CellsApi(object):
         :param float height: The new row height.
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: RowResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -18605,7 +18605,7 @@ class CellsApi(object):
         :param float height: The new row height.
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: RowResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -18678,7 +18678,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='RowResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -19731,7 +19731,7 @@ class CellsApi(object):
         :param bool update_reference: The update reference.
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: ColumnsResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -19763,7 +19763,7 @@ class CellsApi(object):
         :param bool update_reference: The update reference.
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: ColumnsResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -19841,7 +19841,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ColumnsResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -19867,7 +19867,7 @@ class CellsApi(object):
         :param int row_index: The new row index. (required)
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: RowResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -19897,7 +19897,7 @@ class CellsApi(object):
         :param int row_index: The new row index. (required)
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: RowResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -19968,7 +19968,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='RowResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -24973,6 +24973,131 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def cells_workbook_post_autofit_workbook_columns(self, name, **kwargs):
+        """
+        Autofit workbook columns.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_workbook_post_autofit_workbook_columns(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Document name. (required)
+        :param AutoFitterOptions auto_fitter_options: Auto Fitter Options.
+        :param int start_column: Start column.
+        :param int end_column: End column.
+        :param str folder: Document's folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_workbook_post_autofit_workbook_columns_with_http_info(name, **kwargs)
+        else:
+            (data) = self.cells_workbook_post_autofit_workbook_columns_with_http_info(name, **kwargs)
+            return data
+
+    def cells_workbook_post_autofit_workbook_columns_with_http_info(self, name, **kwargs):
+        """
+        Autofit workbook columns.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_workbook_post_autofit_workbook_columns_with_http_info(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Document name. (required)
+        :param AutoFitterOptions auto_fitter_options: Auto Fitter Options.
+        :param int start_column: Start column.
+        :param int end_column: End column.
+        :param str folder: Document's folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'auto_fitter_options', 'start_column', 'end_column', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_workbook_post_autofit_workbook_columns" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_workbook_post_autofit_workbook_columns`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = []
+        if 'start_column' in params:
+            query_params.append(('startColumn', params['start_column']))
+        if 'end_column' in params:
+            query_params.append(('endColumn', params['end_column']))
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'auto_fitter_options' in params:
+            body_params = params['auto_fitter_options']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/autofitcolumns', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def cells_workbook_post_autofit_workbook_rows(self, name, **kwargs):
         """
         Autofit workbook rows.
@@ -26317,7 +26442,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def cells_workbook_put_convert_workbook(self, workbook, **kwargs):
+    def cells_workbook_put_convert_workbook(self, file, **kwargs):
         """
         Convert workbook from request content to some format.
         This method makes a synchronous HTTP request by default. To make an
@@ -26326,11 +26451,11 @@ class CellsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_workbook_put_convert_workbook(workbook, callback=callback_function)
+        >>> thread = api.cells_workbook_put_convert_workbook(file, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param file workbook: (required)
+        :param file file: (required)
         :param str format: The format to convert.
         :param str password: The workbook password.
         :param str out_path: Path to save result
@@ -26341,12 +26466,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.cells_workbook_put_convert_workbook_with_http_info(workbook, **kwargs)
+            return self.cells_workbook_put_convert_workbook_with_http_info(file, **kwargs)
         else:
-            (data) = self.cells_workbook_put_convert_workbook_with_http_info(workbook, **kwargs)
+            (data) = self.cells_workbook_put_convert_workbook_with_http_info(file, **kwargs)
             return data
 
-    def cells_workbook_put_convert_workbook_with_http_info(self, workbook, **kwargs):
+    def cells_workbook_put_convert_workbook_with_http_info(self, file, **kwargs):
         """
         Convert workbook from request content to some format.
         This method makes a synchronous HTTP request by default. To make an
@@ -26355,11 +26480,11 @@ class CellsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_workbook_put_convert_workbook_with_http_info(workbook, callback=callback_function)
+        >>> thread = api.cells_workbook_put_convert_workbook_with_http_info(file, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param file workbook: (required)
+        :param file file: (required)
         :param str format: The format to convert.
         :param str password: The workbook password.
         :param str out_path: Path to save result
@@ -26368,7 +26493,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['workbook', 'format', 'password', 'out_path']
+        all_params = ['file', 'format', 'password', 'out_path']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -26383,9 +26508,9 @@ class CellsApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'workbook' is set
-        if ('workbook' not in params) or (params['workbook'] is None):
-            raise ValueError("Missing the required parameter `workbook` when calling `cells_workbook_put_convert_workbook`")
+        # verify the required parameter 'file' is set
+        if ('file' not in params) or (params['file'] is None):
+            raise ValueError("Missing the required parameter `file` when calling `cells_workbook_put_convert_workbook`")
 
 
         collection_formats = {}
@@ -26404,8 +26529,8 @@ class CellsApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'workbook' in params:
-            local_var_files['workbook'] = params['workbook']
+        if 'file' in params:
+            local_var_files['File'] = params['file']
 
         body_params = None
         # HTTP header `Accept`
@@ -26414,7 +26539,7 @@ class CellsApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json'])
+            select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
         auth_settings = []

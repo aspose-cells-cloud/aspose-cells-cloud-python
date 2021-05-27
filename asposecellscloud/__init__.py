@@ -258,6 +258,7 @@ from .models.workbook_replace_response import WorkbookReplaceResponse
 from .models.workbook_response import WorkbookResponse
 from .models.workbook_settings_operate_parameter import WorkbookSettingsOperateParameter
 from .models.workbook_settings_response import WorkbookSettingsResponse
+from .models.worksheet_operate_parameter import WorksheetOperateParameter
 from .models.worksheet_replace_response import WorksheetReplaceResponse
 from .models.worksheet_response import WorksheetResponse
 from .models.worksheets import Worksheets

@@ -53,14 +53,3 @@ def Ready(api, filename, folder, storage=None):
     response = api.upload_file(path, fullfilename)
     return response
 
-    # with open(fullfilename, 'rb') as file_object:
-    #     contents = file_object.read()
-    # response = None
-    # if storage == None:
-    #     response = api.upload_file(path, fullfilename)
-    # else:    
-    #     response = api.upload_file(path, fullfilename, storage)
-    #     if response['Status'] == "OK":
-    #         return True
-    
-    # return False

@@ -258,6 +258,7 @@ from .workbook_replace_response import WorkbookReplaceResponse
 from .workbook_response import WorkbookResponse
 from .workbook_settings_operate_parameter import WorkbookSettingsOperateParameter
 from .workbook_settings_response import WorkbookSettingsResponse
+from .worksheet_operate_parameter import WorksheetOperateParameter
 from .worksheet_replace_response import WorksheetReplaceResponse
 from .worksheet_response import WorksheetResponse
 from .worksheets import Worksheets

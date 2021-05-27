@@ -258,7 +258,7 @@ class TestCellsRangesApi(unittest.TestCase):
         folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_ranges_put_worksheet_cells_range(name, sheet_name, rarange,shift,folder=folder)
+        result = self.api.cells_ranges_put_worksheet_cells_range(name, sheet_name, range,shift,folder=folder)
         self.assertEqual(result.code,200)
         pass
     def test_cells_ranges_delete_worksheet_cells_range(self):
@@ -274,7 +274,7 @@ class TestCellsRangesApi(unittest.TestCase):
         folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_ranges_delete_worksheet_cells_range(name, sheet_name, rarange,shift,folder=folder)
+        result = self.api.cells_ranges_delete_worksheet_cells_range(name, sheet_name, range,shift,folder=folder)
         self.assertEqual(result.code,200)
         pass
 

@@ -275,6 +275,24 @@ class TestCellsWorkbookApi(unittest.TestCase):
         self.assertEqual(result.code,200)
         pass
 
+    def test_cells_workbook_post_autofit_workbook_columns(self):
+        """
+        Test case for cells_workbook_post_autofit_workbook_rows
+
+        Autofit workbook rows.
+        """
+        name ='Book1.xlsx'       
+        folder = "PythonTest"
+        autoFitterOptions = None
+        startcolumn = 1
+        endcolumn = 100
+        onlyAuto = True
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_workbook_post_autofit_workbook_columns(name, auto_fitter_options=autoFitterOptions, start_column = startcolumn, end_column=endcolumn, folder=folder)
+        self.assertEqual(result.code,200)
+        pass
+
     def test_cells_workbook_post_encrypt_document(self):
         """
         Test case for cells_workbook_post_encrypt_document
