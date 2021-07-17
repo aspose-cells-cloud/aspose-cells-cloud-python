@@ -52,9 +52,11 @@ from .data_sorter import DataSorter
 from .disc_usage import DiscUsage
 from .dynamic_filter import DynamicFilter
 from .error_details import ErrorDetails
+from .file_info import FileInfo
 from .file_source import FileSource
 from .file_versions import FileVersions
 from .files_list import FilesList
+from .files_result import FilesResult
 from .files_upload_result import FilesUploadResult
 from .fill_format import FillFormat
 from .filter_column import FilterColumn

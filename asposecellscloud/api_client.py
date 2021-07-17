@@ -83,7 +83,7 @@ class ApiClient(object):
             self.host = host
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/21.5/python'
+        self.user_agent = 'Swagger-Codegen/21.6/python'
 
     @property
     def user_agent(self):
@@ -136,10 +136,17 @@ class ApiClient(object):
             query_params = self.sanitize_for_serialization(query_params)
             query_params = self.parameters_to_tuples(query_params,
                                                      collection_formats)
-
+        # body
+        if body:
+            body = self.sanitize_for_serialization(body)
+            
         # post parameters
         if post_params or files:
+            body = None
             post_params = self.prepare_post_parameters(post_params, files)
+            if body:
+                post_params.append(tuple(["Body", tuple(["Body",repr(self.sanitize_for_serialization(body)) , ""])]))
+
             post_params = self.sanitize_for_serialization(post_params)
             post_params = self.parameters_to_tuples(post_params,
                                                     collection_formats)
@@ -147,9 +154,7 @@ class ApiClient(object):
         # auth setting
         self.update_params_for_auth(header_params, query_params, auth_settings)
 
-        # body
-        if body:
-            body = self.sanitize_for_serialization(body)
+
 
         # request url
         url = self.host + resource_path

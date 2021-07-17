@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.test_cells_workbook_api.TestCellsWorkbookApi-20210519020521" tests="31" file="test/test_cells_workbook_api.py" time="20.958" timestamp="2021-05-19T02:08:21" failures="0" errors="0" skipped="0">
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_delete_decrypt_document" time="0.843" timestamp="2021-05-19T02:08:01" file="test\test_cells_workbook_api.py" line="49">
+		<!--
+        Test case for cells_workbook_delete_decrypt_document
+
+        Decrypt document.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_delete_document_unprotect_from_changes" time="0.701" timestamp="2021-05-19T02:08:02" file="test\test_cells_workbook_api.py" line="66">
+		<!--
+        Test case for cells_workbook_delete_document_unprotect_from_changes
+
+        Unprotect document from changes.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_delete_unprotect_document" time="0.988" timestamp="2021-05-19T02:08:03" file="test\test_cells_workbook_api.py" line="80">
+		<!--
+        Test case for cells_workbook_delete_unprotect_document
+
+        Unprotect document.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_delete_workbook_background" time="0.650" timestamp="2021-05-19T02:08:03" file="test\test_cells_workbook_api.py" line="542">
+		<!--
+        Test case for test_cells_workbook_delete_workbook_background
+
+        Set workbook background image.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_delete_workbook_name" time="0.734" timestamp="2021-05-19T02:08:04" file="test\test_cells_workbook_api.py" line="97">
+		<!--
+        Test case for cells_workbook_delete_workbook_name
+
+        Clean workbook's names.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_delete_workbook_names" time="0.771" timestamp="2021-05-19T02:08:05" file="test\test_cells_workbook_api.py" line="112">
+		<!--
+        Test case for cells_workbook_delete_workbook_names
+
+        Clean workbook's names.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_get_workbook" time="0.312" timestamp="2021-05-19T02:08:05" file="test\test_cells_workbook_api.py" line="126">
+		<!--
+        Test case for cells_workbook_get_workbook
+
+        Read workbook info or export.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_get_workbook_default_style" time="0.301" timestamp="2021-05-19T02:08:05" file="test\test_cells_workbook_api.py" line="174">
+		<!--
+        Test case for cells_workbook_get_workbook_default_style
+
+        Read workbook default style info.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_get_workbook_format" time="0.542" timestamp="2021-05-19T02:08:06" file="test\test_cells_workbook_api.py" line="142">
+		<!--
+        Test case for cells_workbook_get_workbook with format
+
+        Read workbook info or export.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_get_workbook_format_md" time="0.438" timestamp="2021-05-19T02:08:06" file="test\test_cells_workbook_api.py" line="158">
+		<!--
+        Test case for cells_workbook_get_workbook with format
+
+        Read workbook info or export.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_get_workbook_name" time="0.283" timestamp="2021-05-19T02:08:07" file="test\test_cells_workbook_api.py" line="188">
+		<!--
+        Test case for cells_workbook_get_workbook_name
+
+        Read workbook's name.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_get_workbook_name_value" time="0.313" timestamp="2021-05-19T02:08:07" file="test\test_cells_workbook_api.py" line="203">
+		<!--
+        Test case for cells_workbook_get_workbook_name_value
+
+        Get workbook's name value.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_get_workbook_names" time="0.346" timestamp="2021-05-19T02:08:07" file="test\test_cells_workbook_api.py" line="218">
+		<!--
+        Test case for cells_workbook_get_workbook_names
+
+        Read workbook's names.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_get_workbook_settings" time="0.328" timestamp="2021-05-19T02:08:08" file="test\test_cells_workbook_api.py" line="246">
+		<!--
+        Test case for cells_workbook_get_workbook_settings
+
+        Get Workbook Settings DTO
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_get_workbook_text_items" time="0.594" timestamp="2021-05-19T02:08:08" file="test\test_cells_workbook_api.py" line="232">
+		<!--
+        Test case for cells_workbook_get_workbook_text_items
+
+        Read workbook's text items.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_autofit_workbook_columns" time="0.893" timestamp="2021-05-19T02:08:09" file="test\test_cells_workbook_api.py" line="278">
+		<!--
+        Test case for cells_workbook_post_autofit_workbook_rows
+
+        Autofit workbook rows.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_autofit_workbook_rows" time="0.743" timestamp="2021-05-19T02:08:10" file="test\test_cells_workbook_api.py" line="260">
+		<!--
+        Test case for cells_workbook_post_autofit_workbook_rows
+
+        Autofit workbook rows.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_encrypt_document" time="0.830" timestamp="2021-05-19T02:08:11" file="test\test_cells_workbook_api.py" line="296">
+		<!--
+        Test case for cells_workbook_post_encrypt_document
+
+        Encript document.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_import_data" time="0.675" timestamp="2021-05-19T02:08:11" file="test\test_cells_workbook_api.py" line="317">
+		<!--
+        Test case for cells_workbook_post_import_data
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_protect_document" time="0.797" timestamp="2021-05-19T02:08:12" file="test\test_cells_workbook_api.py" line="338">
+		<!--
+        Test case for cells_workbook_post_protect_document
+
+        Protect document.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_workbook_calculate_formula" time="0.852" timestamp="2021-05-19T02:08:13" file="test\test_cells_workbook_api.py" line="355">
+		<!--
+        Test case for cells_workbook_post_workbook_calculate_formula
+
+        Calculate all formulas in workbook.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_workbook_get_smart_marker_result" time="1.081" timestamp="2021-05-19T02:08:14" file="test\test_cells_workbook_api.py" line="372">
+		<!--
+        Test case for cells_workbook_post_workbook_get_smart_marker_result
+
+        Smart marker processing result.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_workbook_settings" time="0.740" timestamp="2021-05-19T02:08:15" file="test\test_cells_workbook_api.py" line="388">
+		<!--
+        Test case for cells_workbook_post_workbook_settings
+
+        Update Workbook setting 
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_workbook_split" time="0.937" timestamp="2021-05-19T02:08:16" file="test\test_cells_workbook_api.py" line="404">
+		<!--
+        Test case for cells_workbook_post_workbook_split
+
+        Split workbook.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_workbooks_merge" time="1.165" timestamp="2021-05-19T02:08:17" file="test\test_cells_workbook_api.py" line="423">
+		<!--
+        Test case for cells_workbook_post_workbooks_merge
+
+        Merge workbooks.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_workbooks_text_replace" time="0.819" timestamp="2021-05-19T02:08:18" file="test\test_cells_workbook_api.py" line="439">
+		<!--
+        Test case for cells_workbook_post_workbooks_text_replace
+
+        Replace text.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_post_workbooks_text_search" time="0.297" timestamp="2021-05-19T02:08:18" file="test\test_cells_workbook_api.py" line="455">
+		<!--
+        Test case for cells_workbook_post_workbooks_text_search
+
+        Search text.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_put_convert_workbook" time="0.360" timestamp="2021-05-19T02:08:18" file="test\test_cells_workbook_api.py" line="470">
+		<!--
+        Test case for cells_workbook_put_convert_workbook
+
+        Convert workbook from request content to some format.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_put_document_protect_from_changes" time="0.825" timestamp="2021-05-19T02:08:19" file="test\test_cells_workbook_api.py" line="487">
+		<!--
+        Test case for cells_workbook_put_document_protect_from_changes
+
+        Protect document from changes.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_put_workbook_background" time="0.748" timestamp="2021-05-19T02:08:20" file="test\test_cells_workbook_api.py" line="521">
+		<!--
+        Test case for test_cells_workbook_put_workbook_background
+
+        Set workbook background image.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_workbook_api.TestCellsWorkbookApi" name="test_cells_workbook_put_workbook_create" time="1.050" timestamp="2021-05-19T02:08:21" file="test\test_cells_workbook_api.py" line="503">
+		<!--
+        Test case for cells_workbook_put_workbook_create
+
+        Create new workbook using deferent methods.
+        -->
+	</testcase>
+</testsuite>

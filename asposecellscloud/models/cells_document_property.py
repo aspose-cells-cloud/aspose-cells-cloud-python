@@ -42,16 +42,22 @@ class CellsDocumentProperty(object):
     """
     swagger_types = {
         'link': 'Link',
-        'built_in': 'str',
         'name': 'str',
-        'value': 'str'
+        'value': 'str',
+        'is_linked_to_content': 'str',
+        'source': 'str',
+        'type': 'str',
+        'is_generated_name': 'str'
     }
 
     attribute_map = {
         'link': 'link',
-        'built_in': 'BuiltIn',
         'name': 'Name',
-        'value': 'Value'
+        'value': 'Value',
+        'is_linked_to_content': 'IsLinkedToContent',
+        'source': 'Source',
+        'type': 'Type',
+        'is_generated_name': 'IsGeneratedName'
     }
     
     @staticmethod
@@ -67,7 +73,7 @@ class CellsDocumentProperty(object):
             return self.container[attr]
         return None
 
-    def __init__(self, link=None, built_in=None, name=None, value=None, **kw):
+    def __init__(self, link=None, name=None, value=None, is_linked_to_content=None, source=None, type=None, is_generated_name=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -78,18 +84,27 @@ class CellsDocumentProperty(object):
         """
 
         self.container['link'] = None
-        self.container['built_in'] = None
         self.container['name'] = None
         self.container['value'] = None
+        self.container['is_linked_to_content'] = None
+        self.container['source'] = None
+        self.container['type'] = None
+        self.container['is_generated_name'] = None
 
         if link is not None:
           self.link = link
-        if built_in is not None:
-          self.built_in = built_in
         if name is not None:
           self.name = name
         if value is not None:
           self.value = value
+        if is_linked_to_content is not None:
+          self.is_linked_to_content = is_linked_to_content
+        if source is not None:
+          self.source = source
+        if type is not None:
+          self.type = type
+        if is_generated_name is not None:
+          self.is_generated_name = is_generated_name
 
     @property
     def link(self):
@@ -113,30 +128,10 @@ class CellsDocumentProperty(object):
         self.container['link'] = link
 
     @property
-    def built_in(self):
-        """
-        Gets the built_in of this CellsDocumentProperty.
-
-        :return: The built_in of this CellsDocumentProperty.
-        :rtype: str
-        """
-        return self.container['built_in']
-
-    @built_in.setter
-    def built_in(self, built_in):
-        """
-        Sets the built_in of this CellsDocumentProperty.
-
-        :param built_in: The built_in of this CellsDocumentProperty.
-        :type: str
-        """
-
-        self.container['built_in'] = built_in
-
-    @property
     def name(self):
         """
         Gets the name of this CellsDocumentProperty.
+        Returns the name of the property.             
 
         :return: The name of this CellsDocumentProperty.
         :rtype: str
@@ -147,6 +142,7 @@ class CellsDocumentProperty(object):
     def name(self, name):
         """
         Sets the name of this CellsDocumentProperty.
+        Returns the name of the property.             
 
         :param name: The name of this CellsDocumentProperty.
         :type: str
@@ -158,6 +154,7 @@ class CellsDocumentProperty(object):
     def value(self):
         """
         Gets the value of this CellsDocumentProperty.
+        Gets or sets the value of the property.
 
         :return: The value of this CellsDocumentProperty.
         :rtype: str
@@ -168,12 +165,105 @@ class CellsDocumentProperty(object):
     def value(self, value):
         """
         Sets the value of this CellsDocumentProperty.
+        Gets or sets the value of the property.
 
         :param value: The value of this CellsDocumentProperty.
         :type: str
         """
 
         self.container['value'] = value
+
+    @property
+    def is_linked_to_content(self):
+        """
+        Gets the is_linked_to_content of this CellsDocumentProperty.
+        Indicates whether this property is linked to content
+
+        :return: The is_linked_to_content of this CellsDocumentProperty.
+        :rtype: str
+        """
+        return self.container['is_linked_to_content']
+
+    @is_linked_to_content.setter
+    def is_linked_to_content(self, is_linked_to_content):
+        """
+        Sets the is_linked_to_content of this CellsDocumentProperty.
+        Indicates whether this property is linked to content
+
+        :param is_linked_to_content: The is_linked_to_content of this CellsDocumentProperty.
+        :type: str
+        """
+
+        self.container['is_linked_to_content'] = is_linked_to_content
+
+    @property
+    def source(self):
+        """
+        Gets the source of this CellsDocumentProperty.
+        The linked content source.
+
+        :return: The source of this CellsDocumentProperty.
+        :rtype: str
+        """
+        return self.container['source']
+
+    @source.setter
+    def source(self, source):
+        """
+        Sets the source of this CellsDocumentProperty.
+        The linked content source.
+
+        :param source: The source of this CellsDocumentProperty.
+        :type: str
+        """
+
+        self.container['source'] = source
+
+    @property
+    def type(self):
+        """
+        Gets the type of this CellsDocumentProperty.
+        Gets the data type of the property.             
+
+        :return: The type of this CellsDocumentProperty.
+        :rtype: str
+        """
+        return self.container['type']
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this CellsDocumentProperty.
+        Gets the data type of the property.             
+
+        :param type: The type of this CellsDocumentProperty.
+        :type: str
+        """
+
+        self.container['type'] = type
+
+    @property
+    def is_generated_name(self):
+        """
+        Gets the is_generated_name of this CellsDocumentProperty.
+        Returns true if this property does not have a name in the OLE2 storage and a   unique name was generated only for the public API.             
+
+        :return: The is_generated_name of this CellsDocumentProperty.
+        :rtype: str
+        """
+        return self.container['is_generated_name']
+
+    @is_generated_name.setter
+    def is_generated_name(self, is_generated_name):
+        """
+        Sets the is_generated_name of this CellsDocumentProperty.
+        Returns true if this property does not have a name in the OLE2 storage and a   unique name was generated only for the public API.             
+
+        :param is_generated_name: The is_generated_name of this CellsDocumentProperty.
+        :type: str
+        """
+
+        self.container['is_generated_name'] = is_generated_name
 
     def to_dict(self):
         """

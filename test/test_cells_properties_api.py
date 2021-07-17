@@ -113,7 +113,7 @@ class TestCellsPropertiesApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_properties_put_document_property(name,propertyName,_property=_property,folder=folder)
-        self.assertEqual(result.code,201)
+        self.assertEqual(result.code,200)
         pass
 
 

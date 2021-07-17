@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.test_cells_save_as_api.TestCellsSaveAsApi-20210519020521" tests="4" file="test/test_cells_save_as_api.py" time="10.141" timestamp="2021-05-19T02:07:50" failures="0" errors="0" skipped="0">
+	<testcase classname="test.test_cells_save_as_api.TestCellsSaveAsApi" name="test_cells_save_as_post_document_save_as" time="1.329" timestamp="2021-05-19T02:07:41" file="test\test_cells_save_as_api.py" line="43">
+		<!--
+        Test case for cells_save_as_post_document_save_as
+
+        Convert document and save result to storage.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_save_as_api.TestCellsSaveAsApi" name="test_cells_save_as_post_document_save_as_md" time="0.965" timestamp="2021-05-19T02:07:42" file="test\test_cells_save_as_api.py" line="60">
+		<!--
+        Test case for cells_save_as_post_document_save_as
+
+        Convert document and save result to storage.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_save_as_api.TestCellsSaveAsApi" name="test_cells_save_as_post_document_save_as_pdf" time="1.349" timestamp="2021-05-19T02:07:44" file="test\test_cells_save_as_api.py" line="78">
+		<!--
+        Test case for cells_save_as_post_document_save_as
+
+        Convert document and save result to storage.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_save_as_api.TestCellsSaveAsApi" name="test_cells_save_as_post_document_save_as_pdf_dropbox" time="6.498" timestamp="2021-05-19T02:07:50" file="test\test_cells_save_as_api.py" line="98">
+		<!--
+        Test case for cells_save_as_post_document_save_as
+
+        Convert document and save result to storage.
+        -->
+	</testcase>
+</testsuite>

@@ -29,7 +29,7 @@ import sys
 import logging
 
 from six import iteritems
-from six.moves import http_client as httplib
+from six.moves import http_client as httplib.
 
 
 def singleton(cls, *args, **kw):
@@ -254,6 +254,6 @@ class Configuration(object):
         return "Python SDK Debug Report:\n"\
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
-               "Version of the API: 21.5\n"\
-               "SDK Package Version: 21.5".\
+               "Version of the API: 21.6\n"\
+               "SDK Package Version: 21.6".\
                format(env=sys.platform, pyversion=sys.version)

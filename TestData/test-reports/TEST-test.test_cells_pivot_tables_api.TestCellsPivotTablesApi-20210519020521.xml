@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi-20210519020521" tests="19" file="test/test_cells_pivot_tables_api.py" time="14.031" timestamp="2021-05-19T02:07:26" failures="0" errors="0" skipped="0">
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_delete_pivot_table_field" time="0.894" timestamp="2021-05-19T02:07:13" file="test\test_cells_pivot_tables_api.py" line="51">
+		<!--
+        Test case for cells_pivot_tables_delete_pivot_table_field
+
+        Delete pivot field into into pivot table
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_delete_worksheet_pivot_table" time="0.709" timestamp="2021-05-19T02:07:13" file="test\test_cells_pivot_tables_api.py" line="70">
+		<!--
+        Test case for cells_pivot_tables_delete_worksheet_pivot_table
+
+        Delete worksheet pivot table by index
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_delete_worksheet_pivot_table_filters" time="0.821" timestamp="2021-05-19T02:07:14" file="test\test_cells_pivot_tables_api.py" line="90">
+		<!--
+        Test case for cells_pivot_tables_delete_worksheet_pivot_table_filters
+
+        delete all pivot filters for piovt table
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_delete_worksheet_pivot_tables" time="1.017" timestamp="2021-05-19T02:07:15" file="test\test_cells_pivot_tables_api.py" line="108">
+		<!--
+        Test case for cells_pivot_tables_delete_worksheet_pivot_tables
+
+        Delete worksheet pivot tables
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_get_pivot_table_field" time="0.300" timestamp="2021-05-19T02:07:15" file="test\test_cells_pivot_tables_api.py" line="125">
+		<!--
+        Test case for cells_pivot_tables_get_pivot_table_field
+
+        Get pivot field into into pivot table
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_get_worksheet_pivot_table" time="0.313" timestamp="2021-05-19T02:07:16" file="test\test_cells_pivot_tables_api.py" line="143">
+		<!--
+        Test case for cells_pivot_tables_get_worksheet_pivot_table
+
+        Get worksheet pivottable info by index.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_get_worksheet_pivot_table_filter" time="1.041" timestamp="2021-05-19T02:07:17" file="test\test_cells_pivot_tables_api.py" line="160">
+		<!--
+        Test case for cells_pivot_tables_get_worksheet_pivot_table_filter
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_get_worksheet_pivot_table_filters" time="0.377" timestamp="2021-05-19T02:07:17" file="test\test_cells_pivot_tables_api.py" line="193">
+		<!--
+        Test case for cells_pivot_tables_get_worksheet_pivot_table_filters
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_get_worksheet_pivot_tables" time="0.297" timestamp="2021-05-19T02:07:17" file="test\test_cells_pivot_tables_api.py" line="210">
+		<!--
+        Test case for cells_pivot_tables_get_worksheet_pivot_tables
+
+        Get worksheet pivottables info.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_post_pivot_table_cell_style" time="0.755" timestamp="2021-05-19T02:07:18" file="test\test_cells_pivot_tables_api.py" line="227">
+		<!--
+        Test case for cells_pivot_tables_post_pivot_table_cell_style
+
+        Update cell style for pivot table
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_post_pivot_table_field_hide_item" time="0.722" timestamp="2021-05-19T02:07:19" file="test\test_cells_pivot_tables_api.py" line="250">
+		<!--
+        Test case for cells_pivot_tables_post_pivot_table_field_hide_item
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_post_pivot_table_field_move_to" time="0.754" timestamp="2021-05-19T02:07:20" file="test\test_cells_pivot_tables_api.py" line="271">
+		<!--
+        Test case for cells_pivot_tables_post_pivot_table_field_move_to
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_post_pivot_table_style" time="0.756" timestamp="2021-05-19T02:07:20" file="test\test_cells_pivot_tables_api.py" line="309">
+		<!--
+        Test case for cells_pivot_tables_post_pivot_table_style
+
+        Update style for pivot table
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_post_pivot_table_update_pivot_field" time="0.839" timestamp="2021-05-19T02:07:21" file="test\test_cells_pivot_tables_api.py" line="289">
+		<!--
+        Test case for cells_pivot_tables_post_pivot_table_update_pivot_field
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_post_worksheet_pivot_table_calculate" time="0.982" timestamp="2021-05-19T02:07:22" file="test\test_cells_pivot_tables_api.py" line="330">
+		<!--
+        Test case for cells_pivot_tables_post_worksheet_pivot_table_calculate
+
+        Calculates pivottable's data to cells.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_post_worksheet_pivot_table_move" time="0.783" timestamp="2021-05-19T02:07:23" file="test\test_cells_pivot_tables_api.py" line="346">
+		<!--
+        Test case for cells_pivot_tables_post_worksheet_pivot_table_move
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_put_pivot_table_field" time="0.724" timestamp="2021-05-19T02:07:24" file="test\test_cells_pivot_tables_api.py" line="366">
+		<!--
+        Test case for cells_pivot_tables_put_pivot_table_field
+
+        Add pivot field into into pivot table
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_put_worksheet_pivot_table" time="0.755" timestamp="2021-05-19T02:07:24" file="test\test_cells_pivot_tables_api.py" line="385">
+		<!--
+        Test case for cells_pivot_tables_put_worksheet_pivot_table
+
+        Add a pivot table into worksheet.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pivot_tables_api.TestCellsPivotTablesApi" name="test_cells_pivot_tables_put_worksheet_pivot_table_filter" time="1.193" timestamp="2021-05-19T02:07:26" file="test\test_cells_pivot_tables_api.py" line="408">
+		<!--
+        Test case for cells_pivot_tables_put_worksheet_pivot_table_filter
+
+        Add pivot filter for piovt table index
+        -->
+	</testcase>
+</testsuite>

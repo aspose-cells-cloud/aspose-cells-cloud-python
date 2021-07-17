@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.test_cells_pictures_api.TestCellsPicturesApi-20210519020521" tests="7" file="test/test_cells_pictures_api.py" time="5.842" timestamp="2021-05-19T02:07:12" failures="0" errors="0" skipped="0">
+	<testcase classname="test.test_cells_pictures_api.TestCellsPicturesApi" name="test_cells_pictures_delete_worksheet_picture" time="1.255" timestamp="2021-05-19T02:07:07" file="test\test_cells_pictures_api.py" line="58">
+		<!--
+        Test case for cells_pictures_delete_worksheet_picture
+
+        Delete a picture object in worksheet
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pictures_api.TestCellsPicturesApi" name="test_cells_pictures_delete_worksheet_pictures" time="1.051" timestamp="2021-05-19T02:07:08" file="test\test_cells_pictures_api.py" line="42">
+		<!--
+        Test case for cells_pictures_delete_worksheet_pictures
+
+        Delete all pictures in worksheet.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pictures_api.TestCellsPicturesApi" name="test_cells_pictures_get_worksheet_picture" time="0.429" timestamp="2021-05-19T02:07:09" file="test\test_cells_pictures_api.py" line="74">
+		<!--
+        Test case for cells_pictures_get_worksheet_picture
+
+        GRead worksheet picture by number.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pictures_api.TestCellsPicturesApi" name="test_cells_pictures_get_worksheet_picture_format" time="0.627" timestamp="2021-05-19T02:07:09" file="test\test_cells_pictures_api.py" line="90">
+		<!--
+        Test case for cells_pictures_get_worksheet_picture_format
+
+        GRead worksheet picture by number.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pictures_api.TestCellsPicturesApi" name="test_cells_pictures_get_worksheet_pictures" time="0.391" timestamp="2021-05-19T02:07:10" file="test\test_cells_pictures_api.py" line="106">
+		<!--
+        Test case for cells_pictures_get_worksheet_pictures
+
+        Read worksheet pictures.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pictures_api.TestCellsPicturesApi" name="test_cells_pictures_post_worksheet_picture" time="0.787" timestamp="2021-05-19T02:07:10" file="test\test_cells_pictures_api.py" line="122">
+		<!--
+        Test case for cells_pictures_post_worksheet_picture
+
+        Update worksheet picture by index.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_pictures_api.TestCellsPicturesApi" name="test_cells_pictures_put_worksheet_add_picture" time="1.302" timestamp="2021-05-19T02:07:12" file="test\test_cells_pictures_api.py" line="140">
+		<!--
+        Test case for cells_pictures_put_worksheet_add_picture
+
+        Add a new worksheet picture.
+        -->
+	</testcase>
+</testsuite>

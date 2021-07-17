@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/21.5)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/21.6)
 
 
 # Python SDK for Spreadsheet Processing in Cloud
@@ -21,13 +21,17 @@ Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate M
 - Convert worksheets to PDF, XPS & SVG formats.
 - Inter-convert files to popular Excel formats.
 
-## Feature & Enhancements in Version 21.5
+## Feature & Enhancements in Version 21.6
 
-- Support autofit columns for workbook and worksheet.
-- Improve add and post row/column APIs.
-- Improve Task APIs.
-- Fix CELLSCLOUD-10354.
-
+- Improvement document properties.
+- Update the return value of put/post/delete. 
+- Improvement export API.
+- Improve split API.  
+- Improve merge API. 
+- Improve unlock API. 
+- Improve protected API. 
+- Improve watermark API.
+ 
 ## Read & Write Spreadsheet Formats
 
 **Microsoft Excel:** XLS, XLSX, XLSB, XLSM, XLT, XLTX, XLTM

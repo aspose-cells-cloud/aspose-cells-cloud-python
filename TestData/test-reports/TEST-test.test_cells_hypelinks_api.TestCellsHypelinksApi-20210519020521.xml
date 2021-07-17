@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.test_cells_hypelinks_api.TestCellsHypelinksApi-20210519020521" tests="6" file="test/test_cells_hypelinks_api.py" time="4.807" timestamp="2021-05-19T02:06:40" failures="0" errors="0" skipped="0">
+	<testcase classname="test.test_cells_hypelinks_api.TestCellsHypelinksApi" name="test_cells_hypelinks_delete_worksheet_hyperlink" time="0.940" timestamp="2021-05-19T02:06:36" file="test\test_cells_hypelinks_api.py" line="44">
+		<!--
+        Test case for cells_hypelinks_delete_worksheet_hyperlink
+
+        Delete worksheet hyperlink by index.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_hypelinks_api.TestCellsHypelinksApi" name="test_cells_hypelinks_delete_worksheet_hyperlinks" time="1.037" timestamp="2021-05-19T02:06:37" file="test\test_cells_hypelinks_api.py" line="60">
+		<!--
+        Test case for cells_hypelinks_delete_worksheet_hyperlinks
+
+        Delete all hyperlinks in worksheet.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_hypelinks_api.TestCellsHypelinksApi" name="test_cells_hypelinks_get_worksheet_hyperlink" time="0.359" timestamp="2021-05-19T02:06:38" file="test\test_cells_hypelinks_api.py" line="76">
+		<!--
+        Test case for cells_hypelinks_get_worksheet_hyperlink
+
+        Get worksheet hyperlink by index.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_hypelinks_api.TestCellsHypelinksApi" name="test_cells_hypelinks_get_worksheet_hyperlinks" time="0.385" timestamp="2021-05-19T02:06:38" file="test\test_cells_hypelinks_api.py" line="92">
+		<!--
+        Test case for cells_hypelinks_get_worksheet_hyperlinks
+
+        Get worksheet hyperlinks.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_hypelinks_api.TestCellsHypelinksApi" name="test_cells_hypelinks_post_worksheet_hyperlink" time="0.939" timestamp="2021-05-19T02:06:39" file="test\test_cells_hypelinks_api.py" line="108">
+		<!--
+        Test case for cells_hypelinks_post_worksheet_hyperlink
+
+        Update worksheet hyperlink by index.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_hypelinks_api.TestCellsHypelinksApi" name="test_cells_hypelinks_put_worksheet_hyperlink" time="1.146" timestamp="2021-05-19T02:06:40" file="test\test_cells_hypelinks_api.py" line="126">
+		<!--
+        Test case for cells_hypelinks_put_worksheet_hyperlink
+
+        Add worksheet hyperlink.
+        -->
+	</testcase>
+</testsuite>

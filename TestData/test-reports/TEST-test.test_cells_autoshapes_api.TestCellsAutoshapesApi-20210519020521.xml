@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.test_cells_autoshapes_api.TestCellsAutoshapesApi-20210519020521" tests="3" file="test/test_cells_autoshapes_api.py" time="0.235" timestamp="2021-05-19T02:06:10" failures="0" errors="0" skipped="0">
+	<testcase classname="test.test_cells_autoshapes_api.TestCellsAutoshapesApi" name="test_cells_autoshapes_get_worksheet_autoshape" time="0.219" timestamp="2021-05-19T02:06:10" file="test\test_cells_autoshapes_api.py" line="31">
+		<!--
+        Test case for cells_autoshapes_get_worksheet_autoshape
+
+        Get autoshape info.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_autoshapes_api.TestCellsAutoshapesApi" name="test_cells_autoshapes_get_worksheet_autoshape_format" time="0.000" timestamp="2021-05-19T02:06:10" file="test\test_cells_autoshapes_api.py" line="49">
+		<!--
+        Test case for cells_autoshapes_get_worksheet_autoshape with format
+
+        Get autoshape info.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_autoshapes_api.TestCellsAutoshapesApi" name="test_cells_autoshapes_get_worksheet_autoshapes" time="0.017" timestamp="2021-05-19T02:06:10" file="test\test_cells_autoshapes_api.py" line="67">
+		<!--
+        Test case for cells_autoshapes_get_worksheet_autoshapes
+
+        Get worksheet autoshapes info.
+        -->
+	</testcase>
+</testsuite>

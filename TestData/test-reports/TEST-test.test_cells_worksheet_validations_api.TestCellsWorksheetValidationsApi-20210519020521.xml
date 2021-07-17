@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.test_cells_worksheet_validations_api.TestCellsWorksheetValidationsApi-20210519020521" tests="5" file="test/test_cells_worksheet_validations_api.py" time="3.491" timestamp="2021-05-19T02:08:25" failures="0" errors="0" skipped="0">
+	<testcase classname="test.test_cells_worksheet_validations_api.TestCellsWorksheetValidationsApi" name="test_cells_worksheet_validations_delete_worksheet_validation" time="1.138" timestamp="2021-05-19T02:08:22" file="test\test_cells_worksheet_validations_api.py" line="44">
+		<!--
+        Test case for cells_worksheet_validations_delete_worksheet_validation
+
+        Delete worksheet validation by index.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheet_validations_api.TestCellsWorksheetValidationsApi" name="test_cells_worksheet_validations_get_worksheet_validation" time="0.597" timestamp="2021-05-19T02:08:23" file="test\test_cells_worksheet_validations_api.py" line="60">
+		<!--
+        Test case for cells_worksheet_validations_get_worksheet_validation
+
+        Get worksheet validation by index.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheet_validations_api.TestCellsWorksheetValidationsApi" name="test_cells_worksheet_validations_get_worksheet_validations" time="0.359" timestamp="2021-05-19T02:08:23" file="test\test_cells_worksheet_validations_api.py" line="76">
+		<!--
+        Test case for cells_worksheet_validations_get_worksheet_validations
+
+        Get worksheet validations.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheet_validations_api.TestCellsWorksheetValidationsApi" name="test_cells_worksheet_validations_post_worksheet_validation" time="0.677" timestamp="2021-05-19T02:08:24" file="test\test_cells_worksheet_validations_api.py" line="92">
+		<!--
+        Test case for cells_worksheet_validations_post_worksheet_validation
+
+        Update worksheet validation by index.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheet_validations_api.TestCellsWorksheetValidationsApi" name="test_cells_worksheet_validations_put_worksheet_validation" time="0.719" timestamp="2021-05-19T02:08:25" file="test\test_cells_worksheet_validations_api.py" line="116">
+		<!--
+        Test case for cells_worksheet_validations_put_worksheet_validation
+
+        Add worksheet validation at index.
+        -->
+	</testcase>
+</testsuite>

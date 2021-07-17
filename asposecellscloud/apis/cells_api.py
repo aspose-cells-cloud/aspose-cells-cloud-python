@@ -26530,7 +26530,13 @@ class CellsApi(object):
         form_params = []
         local_var_files = {}
         if 'file' in params:
-            local_var_files['File'] = params['file']
+            
+            if isinstance(params['file'],dict):
+                for filename , filecontext in  params['file'].items():
+                    local_var_files[filename] = filecontext
+            else:
+                local_var_files['File'] = params['file']            
+
 
         body_params = None
         # HTTP header `Accept`
@@ -33368,10 +33374,13 @@ class CellsApi(object):
         local_var_files = {}
         if 'grant_type' in params:
             form_params.append(('grant_type', params['grant_type']))
+
         if 'client_id' in params:
             form_params.append(('client_id', params['client_id']))
+
         if 'client_secret' in params:
             form_params.append(('client_secret', params['client_secret']))
+
 
         body_params = None
         # HTTP header `Accept`
@@ -33705,7 +33714,13 @@ class CellsApi(object):
         form_params = []
         local_var_files = {}
         if 'file' in params:
-            local_var_files['File'] = params['file']
+            
+            if isinstance(params['file'],dict):
+                for filename , filecontext in  params['file'].items():
+                    local_var_files[filename] = filecontext
+            else:
+                local_var_files['File'] = params['file']            
+
 
         body_params = None
         # HTTP header `Accept`

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.test_cells_auto_filter_api.TestCellsAutoFilterApi-20210519020521" tests="13" file="test/test_cells_auto_filter_api.py" time="12.385" timestamp="2021-05-19T02:06:10" failures="0" errors="0" skipped="0">
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_delete_worksheet_date_filter" time="1.335" timestamp="2021-05-19T02:05:59" file="test\test_cells_auto_filter_api.py" line="46">
+		<!--
+        Test case for cells_auto_filter_delete_worksheet_date_filter
+
+        Removes a date filter.             
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_delete_worksheet_filter" time="1.065" timestamp="2021-05-19T02:06:00" file="test\test_cells_auto_filter_api.py" line="69">
+		<!--
+        Test case for cells_auto_filter_delete_worksheet_filter
+
+        Delete a filter for a filter column.             
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_get_worksheet_auto_filter" time="0.476" timestamp="2021-05-19T02:06:00" file="test\test_cells_auto_filter_api.py" line="86">
+		<!--
+        Test case for cells_auto_filter_get_worksheet_auto_filter
+
+        Get Auto filter Description
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_post_worksheet_auto_filter_refresh" time="0.896" timestamp="2021-05-19T02:06:01" file="test\test_cells_auto_filter_api.py" line="101">
+		<!--
+        Test case for cells_auto_filter_post_worksheet_auto_filter_refresh
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_post_worksheet_match_blanks" time="0.959" timestamp="2021-05-19T02:06:02" file="test\test_cells_auto_filter_api.py" line="116">
+		<!--
+        Test case for cells_auto_filter_post_worksheet_match_blanks
+
+        Match all blank cell in the list.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_post_worksheet_match_non_blanks" time="0.923" timestamp="2021-05-19T02:06:03" file="test\test_cells_auto_filter_api.py" line="132">
+		<!--
+        Test case for cells_auto_filter_post_worksheet_match_non_blanks
+
+        Match all not blank cell in the list.             
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_put_worksheet_color_filter" time="0.932" timestamp="2021-05-19T02:06:04" file="test\test_cells_auto_filter_api.py" line="148">
+		<!--
+        Test case for cells_auto_filter_put_worksheet_color_filter
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_put_worksheet_custom_filter" time="1.022" timestamp="2021-05-19T02:06:05" file="test\test_cells_auto_filter_api.py" line="180">
+		<!--
+        Test case for cells_auto_filter_put_worksheet_custom_filter
+
+        Filters a list with a custom criteria.             
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_put_worksheet_date_filter" time="0.966" timestamp="2021-05-19T02:06:06" file="test\test_cells_auto_filter_api.py" line="204">
+		<!--
+        Test case for cells_auto_filter_put_worksheet_date_filter
+
+        add date filter in worksheet 
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_put_worksheet_dynamic_filter" time="0.913" timestamp="2021-05-19T02:06:07" file="test\test_cells_auto_filter_api.py" line="230">
+		<!--
+        Test case for cells_auto_filter_put_worksheet_dynamic_filter
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_put_worksheet_filter" time="0.948" timestamp="2021-05-19T02:06:08" file="test\test_cells_auto_filter_api.py" line="250">
+		<!--
+        Test case for cells_auto_filter_put_worksheet_filter
+
+        Adds a filter for a filter column.             
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_put_worksheet_filter_top10" time="1.017" timestamp="2021-05-19T02:06:09" file="test\test_cells_auto_filter_api.py" line="270">
+		<!--
+        Test case for cells_auto_filter_put_worksheet_filter_top10
+
+        Filter the top 10 item in the list
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_auto_filter_api.TestCellsAutoFilterApi" name="test_cells_auto_filter_put_worksheet_icon_filter" time="0.933" timestamp="2021-05-19T02:06:10" file="test\test_cells_auto_filter_api.py" line="292">
+		<!--
+        Test case for cells_auto_filter_put_worksheet_icon_filter
+
+        Adds an icon filter.
+        -->
+	</testcase>
+</testsuite>

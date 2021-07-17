@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.test_cells_worksheets_api.TestCellsWorksheetsApi-20210519020521" tests="33" file="test/test_cells_worksheets_api.py" time="22.378" timestamp="2021-05-19T02:08:47" failures="0" errors="0" skipped="0">
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_delete_unprotect_worksheet" time="0.909" timestamp="2021-05-19T02:08:26" file="test\test_cells_worksheets_api.py" line="50">
+		<!--
+        Test case for cells_worksheets_delete_unprotect_worksheet
+
+        Unprotect worksheet.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_delete_worksheet" time="0.714" timestamp="2021-05-19T02:08:26" file="test\test_cells_worksheets_api.py" line="114">
+		<!--
+        Test case for cells_worksheets_delete_worksheet
+
+        Delete worksheet.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_delete_worksheet_background" time="0.726" timestamp="2021-05-19T02:08:27" file="test\test_cells_worksheets_api.py" line="68">
+		<!--
+        Test case for cells_worksheets_delete_worksheet_background
+
+        Set worksheet background image.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_delete_worksheet_comment" time="0.740" timestamp="2021-05-19T02:08:28" file="test\test_cells_worksheets_api.py" line="83">
+		<!--
+        Test case for cells_worksheets_delete_worksheet_comment
+
+        Delete worksheet's cell comment.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_delete_worksheet_comments" time="0.641" timestamp="2021-05-19T02:08:28" file="test\test_cells_worksheets_api.py" line="99">
+		<!--
+        Test case for cells_worksheets_delete_worksheet_comments
+
+        Delete all comments for worksheet.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_delete_worksheet_freeze_panes" time="0.871" timestamp="2021-05-19T02:08:29" file="test\test_cells_worksheets_api.py" line="129">
+		<!--
+        Test case for cells_worksheets_delete_worksheet_freeze_panes
+
+        Unfreeze panes
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_get_named_ranges" time="0.318" timestamp="2021-05-19T02:08:30" file="test\test_cells_worksheets_api.py" line="148">
+		<!--
+        Test case for cells_worksheets_get_named_ranges
+
+        Read worksheets ranges info.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_get_worksheet" time="0.489" timestamp="2021-05-19T02:08:30" file="test\test_cells_worksheets_api.py" line="163">
+		<!--
+        Test case for cells_worksheets_get_worksheet
+
+        Read worksheet info or export.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_get_worksheet_calculate_formula" time="0.615" timestamp="2021-05-19T02:08:31" file="test\test_cells_worksheets_api.py" line="181">
+		<!--
+        Test case for cells_worksheets_get_worksheet_calculate_formula
+
+        Calculate formula value.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_get_worksheet_comment" time="0.335" timestamp="2021-05-19T02:08:31" file="test\test_cells_worksheets_api.py" line="197">
+		<!--
+        Test case for cells_worksheets_get_worksheet_comment
+
+        Get worksheet comment by cell name.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_get_worksheet_comments" time="0.281" timestamp="2021-05-19T02:08:31" file="test\test_cells_worksheets_api.py" line="213">
+		<!--
+        Test case for cells_worksheets_get_worksheet_comments
+
+        Get worksheet comments.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_get_worksheet_merged_cell" time="0.567" timestamp="2021-05-19T02:08:32" file="test\test_cells_worksheets_api.py" line="229">
+		<!--
+        Test case for cells_worksheets_get_worksheet_merged_cell
+
+        Get worksheet merged cell by its index.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_get_worksheet_merged_cells" time="0.301" timestamp="2021-05-19T02:08:32" file="test\test_cells_worksheets_api.py" line="245">
+		<!--
+        Test case for cells_worksheets_get_worksheet_merged_cells
+
+        Get worksheet merged cells.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_get_worksheet_text_items" time="0.740" timestamp="2021-05-19T02:08:33" file="test\test_cells_worksheets_api.py" line="260">
+		<!--
+        Test case for cells_worksheets_get_worksheet_text_items
+
+        Get worksheet text items.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_get_worksheets" time="0.330" timestamp="2021-05-19T02:08:33" file="test\test_cells_worksheets_api.py" line="275">
+		<!--
+        Test case for cells_worksheets_get_worksheets
+
+        Read worksheets info.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_autofit_worksheet_columns" time="0.863" timestamp="2021-05-19T02:08:34" file="test\test_cells_worksheets_api.py" line="290">
+		<!--
+        Test case for cells_worksheets_post_autofit_worksheet_columns
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_autofit_worksheet_row" time="0.790" timestamp="2021-05-19T02:08:35" file="test\test_cells_worksheets_api.py" line="310">
+		<!--
+        Test case for cells_worksheets_post_autofit_worksheet_row
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_autofit_worksheet_rows" time="0.834" timestamp="2021-05-19T02:08:36" file="test\test_cells_worksheets_api.py" line="329">
+		<!--
+        Test case for cells_worksheets_post_autofit_worksheet_rows
+
+        Autofit worksheet rows.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_copy_worksheet" time="0.993" timestamp="2021-05-19T02:08:37" file="test\test_cells_worksheets_api.py" line="348">
+		<!--
+        Test case for cells_worksheets_post_copy_worksheet
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_move_worksheet" time="0.819" timestamp="2021-05-19T02:08:37" file="test\test_cells_worksheets_api.py" line="368">
+		<!--
+        Test case for cells_worksheets_post_move_worksheet
+
+        Move worksheet.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_rename_worksheet" time="0.692" timestamp="2021-05-19T02:08:38" file="test\test_cells_worksheets_api.py" line="386">
+		<!--
+        Test case for cells_worksheets_post_rename_worksheet
+
+        Rename worksheet
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_update_worksheet_property" time="0.814" timestamp="2021-05-19T02:08:39" file="test\test_cells_worksheets_api.py" line="402">
+		<!--
+        Test case for cells_worksheets_post_update_worksheet_property
+
+        Update worksheet property
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_update_worksheet_zoom" time="0.704" timestamp="2021-05-19T02:08:40" file="test\test_cells_worksheets_api.py" line="419">
+		<!--
+        Test case for cells_worksheets_post_update_worksheet_zoom
+
+        
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_worksheet_comment" time="0.713" timestamp="2021-05-19T02:08:40" file="test\test_cells_worksheets_api.py" line="435">
+		<!--
+        Test case for cells_worksheets_post_worksheet_comment
+
+        Update worksheet's cell comment.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_worksheet_range_sort" time="0.674" timestamp="2021-05-19T02:08:41" file="test\test_cells_worksheets_api.py" line="469">
+		<!--
+        Test case for cells_worksheets_post_worksheet_range_sort
+
+        Sort worksheet range.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_worksheet_text_search" time="0.339" timestamp="2021-05-19T02:08:41" file="test\test_cells_worksheets_api.py" line="453">
+		<!--
+        Test case for cells_worksheets_post_worksheet_text_search
+
+        Search text.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_post_worsheet_text_replace" time="0.746" timestamp="2021-05-19T02:08:42" file="test\test_cells_worksheets_api.py" line="487">
+		<!--
+        Test case for cells_worksheets_post_worsheet_text_replace
+
+        Replace text.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_put_add_new_worksheet" time="0.726" timestamp="2021-05-19T02:08:43" file="test\test_cells_worksheets_api.py" line="504">
+		<!--
+        Test case for cells_worksheets_put_add_new_worksheet
+
+        Add new worksheet.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_put_change_visibility_worksheet" time="0.693" timestamp="2021-05-19T02:08:44" file="test\test_cells_worksheets_api.py" line="521">
+		<!--
+        Test case for cells_worksheets_put_change_visibility_worksheet
+
+        Change worksheet visibility.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_put_protect_worksheet" time="0.963" timestamp="2021-05-19T02:08:45" file="test\test_cells_worksheets_api.py" line="538">
+		<!--
+        Test case for cells_worksheets_put_protect_worksheet
+
+        Protect worksheet.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_put_worksheet_background" time="0.806" timestamp="2021-05-19T02:08:45" file="test\test_cells_worksheets_api.py" line="556">
+		<!--
+        Test case for cells_worksheets_put_worksheet_background
+
+        Set worksheet background image.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_put_worksheet_comment" time="0.958" timestamp="2021-05-19T02:08:46" file="test\test_cells_worksheets_api.py" line="577">
+		<!--
+        Test case for cells_worksheets_put_worksheet_comment
+
+        Add worksheet's cell comment.
+        -->
+	</testcase>
+	<testcase classname="test.test_cells_worksheets_api.TestCellsWorksheetsApi" name="test_cells_worksheets_put_worksheet_freeze_panes" time="0.675" timestamp="2021-05-19T02:08:47" file="test\test_cells_worksheets_api.py" line="595">
+		<!--
+        Test case for cells_worksheets_put_worksheet_freeze_panes
+
+        Set freeze panes
+        -->
+	</testcase>
+</testsuite>

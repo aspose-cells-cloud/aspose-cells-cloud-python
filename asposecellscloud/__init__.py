@@ -52,9 +52,11 @@ from .models.data_sorter import DataSorter
 from .models.disc_usage import DiscUsage
 from .models.dynamic_filter import DynamicFilter
 from .models.error_details import ErrorDetails
+from .models.file_info import FileInfo
 from .models.file_source import FileSource
 from .models.file_versions import FileVersions
 from .models.files_list import FilesList
+from .models.files_result import FilesResult
 from .models.files_upload_result import FilesUploadResult
 from .models.fill_format import FillFormat
 from .models.filter_column import FilterColumn
@@ -275,6 +277,7 @@ from .models.title import Title
 
 # import apis into sdk package
 from .apis.cells_api import CellsApi
+from .apis.lite_cells_api import LiteCellsApi
 
 # import ApiClient
 from .api_client import ApiClient

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.test_cells_task_api.TestCellsTaskApi-20210519020521" tests="1" file="test/test_cells_task_api.py" time="3.886" timestamp="2021-05-19T02:08:00" failures="0" errors="0" skipped="0">
+	<testcase classname="test.test_cells_task_api.TestCellsTaskApi" name="test_cells_task_post_run_task" time="3.886" timestamp="2021-05-19T02:08:00" file="test\test_cells_task_api.py" line="46">
+		<!--
+        Test case for cells_task_post_run_task
+
+        Run tasks  
+        -->
+	</testcase>
+</testsuite>
