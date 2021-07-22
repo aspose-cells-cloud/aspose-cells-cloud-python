@@ -11,11 +11,11 @@ from asposecellscloud.api_client import ApiClient
 import asposestoragecloud
 
 grantType = "client_credentials"
-clientId = "78946fb4-3bd4-4d3e-b309-f9e2ff9ac6f9"
-clientSecret = "b125f13bf6b76ed81ee990142d841195"
+clientId = os.getenv('CellsCloudTestClientId')
+clientSecret =  os.getenv('CellsCloudTestClientSecret')
 
 def GetAccessToken():
-    client = ApiClient('https://api.aspose.cloud/')
+    client = ApiClient(os.getenv('CellsCloudTestApiBaseUrl'))
     api = asposecellscloud.apis.o_auth_api.OAuthApi(client)
     data = api.o_auth_post(grantType, clientId, clientSecret)
     return data.access_token
@@ -25,6 +25,6 @@ api_client = None
 def GetApiClient():
     global api_client
     if api_client == None:
-        api_client = ApiClient('https://api.aspose.cloud/v1.1')
+        api_client = ApiClient(os.getenv('CellsCloudTestApiBaseUrl')+'/v1.1')
         api_client.set_default_header("Authorization", "Bearer " + GetAccessToken())
     return api_client    
