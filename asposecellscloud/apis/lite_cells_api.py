@@ -54,7 +54,7 @@ class LiteCellsApi(object):
         self.api_client =  ApiClient(base_uri)
         if self.needAuth :
             self.access_token = self.api_client.get_access_token("client_credentials", clientid, clientsecret,version)
-        # self.auth_data = self.o_auth_post("client_credentials", appsid, appkey)
+        
         config = Configuration()
         config.host = self.base_uri +'/' + self.version
         if api_client:
@@ -66,7 +66,7 @@ class LiteCellsApi(object):
         if self.needAuth :            
             self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
         self.get_access_token_time =  time.process_time()
-        # self.api_client.set_default_header("Authorization", "Bearer " + self.auth_data.access_token)
+        
 
     def check_access_token(self):
         if self.needAuth :
@@ -869,7 +869,9 @@ class LiteCellsApi(object):
 
         body_params = None
         if 'document_properties' in params:
-            body_params = params['document_properties']
+            # form_params['documentproperties'] = tuple(['documentproperties', self.api_client.sanitize_for_serialization( params['document_properties']), 'application/json'])
+            form_params.append(tuple(["documentproperties", tuple(["documentproperties",repr(self.api_client.sanitize_for_serialization( params['document_properties'])) , ""])]))            
+                       
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['multipart/form-data'])
@@ -1028,9 +1030,7 @@ class LiteCellsApi(object):
         :param str text: (required)
         :param str password:
         :param str sheetname:
-        :param str path:
-        :param str storage_name:
-        :return: file
+        :return: list[TextItem]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1058,14 +1058,12 @@ class LiteCellsApi(object):
         :param str text: (required)
         :param str password:
         :param str sheetname:
-        :param str path:
-        :param str storage_name:
-        :return: file
+        :return: list[TextItem]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'text', 'password', 'sheetname', 'path', 'storage_name']
+        all_params = ['file', 'text', 'password', 'sheetname']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1099,10 +1097,7 @@ class LiteCellsApi(object):
             query_params.append(('password', params['password']))
         if 'sheetname' in params:
             query_params.append(('sheetname', params['sheetname']))
-        if 'path' in params:
-            query_params.append(('path', params['path']))
-        if 'storage_name' in params:
-            query_params.append(('storageName', params['storage_name']))
+
 
         header_params = {}
 
@@ -1136,7 +1131,7 @@ class LiteCellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='file',
+                                        response_type='list[TextItem]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1161,8 +1156,6 @@ class LiteCellsApi(object):
         :param str password:
         :param int _from:
         :param int to:
-        :param str path:
-        :param str storage_name:
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1192,14 +1185,12 @@ class LiteCellsApi(object):
         :param str password:
         :param int _from:
         :param int to:
-        :param str path:
-        :param str storage_name:
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'format', 'password', '_from', 'to', 'path', 'storage_name']
+        all_params = ['file', 'format', 'password', '_from', 'to']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1235,10 +1226,6 @@ class LiteCellsApi(object):
             query_params.append(('from', params['_from']))
         if 'to' in params:
             query_params.append(('to', params['to']))
-        if 'path' in params:
-            query_params.append(('path', params['path']))
-        if 'storage_name' in params:
-            query_params.append(('storageName', params['storage_name']))
 
         header_params = {}
 

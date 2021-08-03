@@ -34,5 +34,12 @@ class TestCellsSearchApi(unittest.TestCase):
         result = self.api.post_search({ "assemblytest.xlsx" :assemblytest,  "datasource.xlsx":datasource},"png")
         # print(result)
         pass
+    def test_cells_search_sheet(self):
+        assemblytest = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "assemblytest.xlsx"
+        datasource = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "datasource.xlsx"
+        result = self.api.post_search({ "assemblytest.xlsx" :assemblytest,  "datasource.xlsx":datasource},"png",sheetname='Shhet1')
+        # print(result)
+        pass
+
 if __name__ == '__main__':
     unittest.main()
