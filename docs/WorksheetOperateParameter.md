@@ -1,12 +1,12 @@
-# PivotItem
+# WorksheetOperateParameter
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**index** | **int** |  | [optional] 
-**is_hidden** | **bool** | Represents whether the specified item visible. | [optional] 
-**name** | **str** | Gets the name | [optional] 
-**value** | **str** | Gets the value of the specified item. | [optional] 
+**name** | **str** |  | [optional] 
+**sheet_type** | **str** |  | [optional] 
+**new_name** | **str** |  | [optional] 
+**moving_request** | [**WorksheetMovingRequest**](WorksheetMovingRequest.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

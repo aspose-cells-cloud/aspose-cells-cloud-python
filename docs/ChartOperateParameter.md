@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**string** | **str** |  | [optional] 
+**title** | **str** |  | [optional] 
 **area** | **str** |  | [optional] 
 **category_data** | **str** |  | [optional] 
 **upper_left_row** | **int** |  | [optional] 
