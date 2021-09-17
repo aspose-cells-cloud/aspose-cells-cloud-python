@@ -28,26 +28,78 @@ class TestCellsExportObjectApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_cells_export_chart(self):
+    def test_cells_export_chart_pdf(self):
         Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
         myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
         result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"chart","pdf")
+        self.assertIsNotNone(result)
         pass
-    def test_cells_export_comment(self):
+    def test_cells_export_chart_tiff(self):
         Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
         myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
-        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"comment","png")
-        pass
-
-    def test_cells_export_picture(self):
+        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"chart","tiff")
+        self.assertIsNotNone(result)
+        pass    
+    def test_cells_export_chart_png(self):
+        Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
+        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"chart","png")
+        self.assertIsNotNone(result)
+        pass    
+    def test_cells_export_picture_png(self):
         Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
         myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
         result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"picture","png")
+        self.assertIsNotNone(result)
         pass
-    def test_cells_export_shape(self):
+    def test_cells_export_shape_png(self):
         Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
         myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
-        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"shape", "png")
+        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"shape","png")
+        self.assertIsNotNone(result)
+        pass
+
+    def test_cells_export_sheet_png(self):
+        Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
+        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"sheet","png")
+        self.assertIsNotNone(result)
+        pass
+    def test_cells_export_sheet_pdf(self):
+        Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
+        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"sheet","pdf")
+        self.assertIsNotNone(result)
+        pass    
+    def test_cells_export_sheet_xlsx(self):
+        Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
+        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"sheet","xlsx")
+        self.assertIsNotNone(result)
+        pass
+    def test_cells_export_workbook_png(self):
+        Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
+        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"workbook", "png")
+        self.assertIsNotNone(result)
+        pass
+    def test_cells_export_workbook_pdf(self):
+        Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
+        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"workbook", "pdf")
+        self.assertIsNotNone(result)
+        pass
+    def test_cells_export_workbook_md(self):
+        Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
+        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"workbook", "md")
+        self.assertIsNotNone(result)
+        pass
+    def test_cells_export_workbook_ods(self):
+        Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
+        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"workbook", "ods")
+        self.assertIsNotNone(result)
         pass
 if __name__ == '__main__':
     unittest.main()

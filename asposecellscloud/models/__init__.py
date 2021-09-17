@@ -177,6 +177,7 @@ from .import_csv_data_option import ImportCSVDataOption
 from .import_data_task_parameter import ImportDataTaskParameter
 from .import_double_array_option import ImportDoubleArrayOption
 from .import_int_array_option import ImportIntArrayOption
+from .import_picture_option import ImportPictureOption
 from .import_string_array_option import ImportStringArrayOption
 from .legend_response import LegendResponse
 from .line_format import LineFormat

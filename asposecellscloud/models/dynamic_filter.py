@@ -42,8 +42,8 @@ class DynamicFilter(object):
     """
     swagger_types = {
         'dynamic_filter_type': 'str',
-        'max_value': 'object',
-        'value': 'object'
+        'max_value': 'int',
+        'value': 'int'
     }
 
     attribute_map = {
@@ -113,7 +113,7 @@ class DynamicFilter(object):
         Gets the max_value of this DynamicFilter.
 
         :return: The max_value of this DynamicFilter.
-        :rtype: object
+        :rtype: int
         """
         return self.container['max_value']
 
@@ -123,7 +123,7 @@ class DynamicFilter(object):
         Sets the max_value of this DynamicFilter.
 
         :param max_value: The max_value of this DynamicFilter.
-        :type: object
+        :type: int
         """
 
         self.container['max_value'] = max_value
@@ -134,7 +134,7 @@ class DynamicFilter(object):
         Gets the value of this DynamicFilter.
 
         :return: The value of this DynamicFilter.
-        :rtype: object
+        :rtype: int
         """
         return self.container['value']
 
@@ -144,7 +144,7 @@ class DynamicFilter(object):
         Sets the value of this DynamicFilter.
 
         :param value: The value of this DynamicFilter.
-        :type: object
+        :type: int
         """
 
         self.container['value'] = value

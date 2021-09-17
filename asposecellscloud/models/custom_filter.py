@@ -42,7 +42,7 @@ class CustomFilter(object):
     """
     swagger_types = {
         'filter_operator_type': 'str',
-        'criteria': 'object'
+        'criteria': 'str'
     }
 
     attribute_map = {
@@ -108,7 +108,7 @@ class CustomFilter(object):
         Gets the criteria of this CustomFilter.
 
         :return: The criteria of this CustomFilter.
-        :rtype: object
+        :rtype: str
         """
         return self.container['criteria']
 
@@ -118,7 +118,7 @@ class CustomFilter(object):
         Sets the criteria of this CustomFilter.
 
         :param criteria: The criteria of this CustomFilter.
-        :type: object
+        :type: str
         """
 
         self.container['criteria'] = criteria

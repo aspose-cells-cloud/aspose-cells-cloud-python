@@ -52,9 +52,9 @@ class AccessTokenResponse(object):
     }
 
     attribute_map = {
-        'expires': '.expires',
+        'expires': 'expires',
         'access_token': 'access_token',
-        'issued': '.issued',
+        'issued': 'issued',
         'client_refresh_token_life_time_in_minutes': 'clientRefreshTokenLifeTimeInMinutes',
         'expires_in': 'expires_in',
         'token_type': 'token_type',

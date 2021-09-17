@@ -43,7 +43,7 @@ class ConditionalFormattingValue(object):
     swagger_types = {
         'is_gte': 'bool',
         'type': 'str',
-        'value': 'object'
+        'value': 'str'
     }
 
     attribute_map = {
@@ -139,7 +139,7 @@ class ConditionalFormattingValue(object):
         Get or set the value of this conditional formatting value object.  It should     be used in conjunction with Type.
 
         :return: The value of this ConditionalFormattingValue.
-        :rtype: object
+        :rtype: str
         """
         return self.container['value']
 
@@ -150,7 +150,7 @@ class ConditionalFormattingValue(object):
         Get or set the value of this conditional formatting value object.  It should     be used in conjunction with Type.
 
         :param value: The value of this ConditionalFormattingValue.
-        :type: object
+        :type: str
         """
 
         self.container['value'] = value

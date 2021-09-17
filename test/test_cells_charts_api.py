@@ -241,7 +241,7 @@ class TestCellsChartsApi(unittest.TestCase):
         area =  "C7:D11" 
         isVertical = True  
         categoryData = None  
-        isAutoGetSerialName = None  
+        isAutoGetSerialName = 'False'  
         title = None  
         folder = "PythonTest"
         result = AuthUtil.Ready(self.api, name, folder)

@@ -177,6 +177,7 @@ from .models.import_csv_data_option import ImportCSVDataOption
 from .models.import_data_task_parameter import ImportDataTaskParameter
 from .models.import_double_array_option import ImportDoubleArrayOption
 from .models.import_int_array_option import ImportIntArrayOption
+from .models.import_picture_option import ImportPictureOption
 from .models.import_string_array_option import ImportStringArrayOption
 from .models.legend_response import LegendResponse
 from .models.line_format import LineFormat

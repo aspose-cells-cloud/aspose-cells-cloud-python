@@ -8100,9 +8100,10 @@ class CellsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param int listobjectindex: list object index. (required)
+        :param str format: export format.
         :param str folder: Document's folder.
         :param str storage_name: storage name.
-        :return: ListObjectResponse
+        :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -8130,14 +8131,15 @@ class CellsApi(object):
         :param str name: Document name. (required)
         :param str sheet_name: The worksheet name. (required)
         :param int listobjectindex: list object index. (required)
+        :param str format: export format.
         :param str folder: Document's folder.
         :param str storage_name: storage name.
-        :return: ListObjectResponse
+        :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'listobjectindex', 'folder', 'storage_name']
+        all_params = ['name', 'sheet_name', 'listobjectindex', 'format', 'folder', 'storage_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8174,6 +8176,8 @@ class CellsApi(object):
             path_params['listobjectindex'] = params['listobjectindex']
 
         query_params = []
+        if 'format' in params:
+            query_params.append(('format', params['format']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
         if 'storage_name' in params:
@@ -8203,7 +8207,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ListObjectResponse',
+                                        response_type='file',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -26535,7 +26539,7 @@ class CellsApi(object):
                 for filename , filecontext in  params['file'].items():
                     local_var_files[filename] = filecontext
             else:
-                local_var_files['File'] = params['file']            
+                local_var_files['file'] = params['file']            
 
 
         body_params = None
@@ -33719,7 +33723,7 @@ class CellsApi(object):
                 for filename , filecontext in  params['file'].items():
                     local_var_files[filename] = filecontext
             else:
-                local_var_files['File'] = params['file']            
+                local_var_files['file'] = params['file']            
 
 
         body_params = None

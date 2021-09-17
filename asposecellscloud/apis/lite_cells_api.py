@@ -663,6 +663,122 @@ class LiteCellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def post_import(self, file, import_data, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_import(file, import_data, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param ImportOption import_data: (required)
+        :return: FilesResult
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.post_import_with_http_info(file, import_data, **kwargs)
+        else:
+            (data) = self.post_import_with_http_info(file, import_data, **kwargs)
+            return data
+
+    def post_import_with_http_info(self, file, import_data, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_import_with_http_info(file, import_data, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param ImportOption import_data: (required)
+        :return: FilesResult
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'import_data']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_import" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'file' is set
+        if ('file' not in params) or (params['file'] is None):
+            raise ValueError("Missing the required parameter `file` when calling `post_import`")
+        # verify the required parameter 'import_data' is set
+        if ('import_data' not in params) or (params['import_data'] is None):
+            raise ValueError("Missing the required parameter `import_data` when calling `post_import`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            
+            if isinstance(params['file'],dict):
+                for filename , filecontext in  params['file'].items():
+                    local_var_files[filename] = filecontext
+            else:
+                local_var_files['file'] = params['file']            
+
+
+        body_params = None
+        if 'import_data' in params:
+            body_params = params['import_data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['multipart/form-data'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/import', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='FilesResult',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+                                        
     def post_merge(self, file, **kwargs):
         """
         This method makes a synchronous HTTP request by default. To make an

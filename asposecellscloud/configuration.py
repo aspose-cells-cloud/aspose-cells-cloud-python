@@ -101,8 +101,6 @@ class Configuration(object):
 
         # Proxy URL
         self.proxy = None
-        # self.proxy = 'https://127.0.0.1:8888'
-        # self.ssl_ca_cert = 'C://projects//FiddlerRoot.pem'
         # Safe chars for path_param
         self.safe_chars_for_path_param = '/'
 
@@ -256,6 +254,6 @@ class Configuration(object):
         return "Python SDK Debug Report:\n"\
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
-               "Version of the API: 21.7\n"\
-               "SDK Package Version: 21.7".\
+               "Version of the API: 3.0\n"\
+               "SDK Package Version: 21.8".\
                format(env=sys.platform, pyversion=sys.version)
