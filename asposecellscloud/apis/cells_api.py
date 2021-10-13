@@ -2983,7 +2983,7 @@ class CellsApi(object):
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: ChartsResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3013,7 +3013,7 @@ class CellsApi(object):
         :param int chart_index: The chart index. (required)
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: ChartsResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3084,7 +3084,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ChartsResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3747,7 +3747,7 @@ class CellsApi(object):
         :param Legend legend:
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: LegendResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3778,7 +3778,7 @@ class CellsApi(object):
         :param Legend legend:
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: LegendResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3851,7 +3851,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='LegendResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3878,7 +3878,7 @@ class CellsApi(object):
         :param Title title: Chart title
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: TitleResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3909,7 +3909,7 @@ class CellsApi(object):
         :param Title title: Chart title
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: TitleResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3982,7 +3982,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TitleResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4021,7 +4021,7 @@ class CellsApi(object):
         :param str data_labels_position:
         :param str pivot_table_sheet:
         :param str pivot_table_name:
-        :return: ChartsResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4064,7 +4064,7 @@ class CellsApi(object):
         :param str data_labels_position:
         :param str pivot_table_sheet:
         :param str pivot_table_name:
-        :return: ChartsResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4161,7 +4161,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ChartsResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4315,7 +4315,7 @@ class CellsApi(object):
         :param Title title: Chart title.
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: TitleResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4346,7 +4346,7 @@ class CellsApi(object):
         :param Title title: Chart title.
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: TitleResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4419,7 +4419,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TitleResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -7570,7 +7570,7 @@ class CellsApi(object):
         :param Hyperlink hyperlink: Hyperlink object
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: HyperlinkResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -7601,7 +7601,7 @@ class CellsApi(object):
         :param Hyperlink hyperlink: Hyperlink object
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: HyperlinkResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -7674,7 +7674,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='HyperlinkResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -7704,7 +7704,7 @@ class CellsApi(object):
         :param str address: (required)
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: HyperlinkResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -7738,7 +7738,7 @@ class CellsApi(object):
         :param str address: (required)
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: HyperlinkResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -7829,7 +7829,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='HyperlinkResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -8879,7 +8879,7 @@ class CellsApi(object):
         :param ListObject list_object: List Object
         :param str folder: Document's folder.
         :param str storage_name: storage name.
-        :return: ListObjectResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -8914,7 +8914,7 @@ class CellsApi(object):
         :param ListObject list_object: List Object
         :param str folder: Document's folder.
         :param str storage_name: storage name.
-        :return: ListObjectResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9004,7 +9004,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ListObjectResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -9665,7 +9665,7 @@ class CellsApi(object):
         :param str image_file: Image filename
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: OleObjectResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9701,7 +9701,7 @@ class CellsApi(object):
         :param str image_file: Image filename
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: OleObjectResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9781,7 +9781,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='OleObjectResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -12448,7 +12448,7 @@ class CellsApi(object):
         :param Picture picture: Picture object
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: PictureResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12479,7 +12479,7 @@ class CellsApi(object):
         :param Picture picture: Picture object
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: PictureResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12552,7 +12552,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PictureResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -12583,7 +12583,7 @@ class CellsApi(object):
         :param str picture_path: The picture path, if not provided the picture data is inspected in the request body.
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: PicturesResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12618,7 +12618,7 @@ class CellsApi(object):
         :param str picture_path: The picture path, if not provided the picture data is inspected in the request body.
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
-        :return: PicturesResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12696,7 +12696,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PicturesResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -15303,7 +15303,7 @@ class CellsApi(object):
         :param str dest_cell_name: The cell in the upper-left corner of the PivotTable report's destination range.
         :param str table_name: The name of the new PivotTable report.
         :param bool use_same_source: Indicates whether using same data source when another existing pivot table has used this data source. If the property is true, it will save memory.
-        :return: PivotTableResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15337,7 +15337,7 @@ class CellsApi(object):
         :param str dest_cell_name: The cell in the upper-left corner of the PivotTable report's destination range.
         :param str table_name: The name of the new PivotTable report.
         :param bool use_same_source: Indicates whether using same data source when another existing pivot table has used this data source. If the property is true, it will save memory.
-        :return: PivotTableResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15413,7 +15413,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PivotTableResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -19141,7 +19141,7 @@ class CellsApi(object):
         :param str name: The document name. (required)
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: CellsDocumentPropertiesResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -19169,7 +19169,7 @@ class CellsApi(object):
         :param str name: The document name. (required)
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: CellsDocumentPropertiesResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -19230,7 +19230,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='CellsDocumentPropertiesResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -19255,7 +19255,7 @@ class CellsApi(object):
         :param str property_name: The property name. (required)
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: CellsDocumentPropertiesResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -19284,7 +19284,7 @@ class CellsApi(object):
         :param str property_name: The property name. (required)
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: CellsDocumentPropertiesResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -19350,7 +19350,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='CellsDocumentPropertiesResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -19609,7 +19609,7 @@ class CellsApi(object):
         :param CellsDocumentProperty _property: with new property value.
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: CellsDocumentPropertyResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -19639,7 +19639,7 @@ class CellsApi(object):
         :param CellsDocumentProperty _property: with new property value.
         :param str folder: The document folder.
         :param str storage_name: storage name.
-        :return: CellsDocumentPropertyResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -19707,7 +19707,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='CellsDocumentPropertyResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -21380,7 +21380,7 @@ class CellsApi(object):
 
         query_params = []
         if 'value' in params:
-            query_params.append(('Value', params['value']))
+            query_params.append(('value', params['value']))
         if 'is_converted' in params:
             query_params.append(('isConverted', params['is_converted']))
         if 'set_style' in params:
@@ -22461,7 +22461,7 @@ class CellsApi(object):
         :param int height: Represents the width of Spinner, in unit of pixel.
         :param str folder: Document's folder.
         :param str storage_name: storage name.
-        :return: ShapeResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -22498,7 +22498,7 @@ class CellsApi(object):
         :param int height: Represents the width of Spinner, in unit of pixel.
         :param str folder: Document's folder.
         :param str storage_name: storage name.
-        :return: ShapeResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -22536,7 +22536,7 @@ class CellsApi(object):
 
         query_params = []
         if 'drawing_type' in params:
-            query_params.append(('DrawingType', params['drawing_type']))
+            query_params.append(('drawingType', params['drawing_type']))
         if 'upper_left_row' in params:
             query_params.append(('upperLeftRow', params['upper_left_row']))
         if 'upper_left_column' in params:
@@ -22580,7 +22580,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ShapeResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -27066,7 +27066,7 @@ class CellsApi(object):
         :param int validation_index: The validation index. (required)
         :param str folder: Document's folder.
         :param str storage_name: storage name.
-        :return: ValidationResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -27096,7 +27096,7 @@ class CellsApi(object):
         :param int validation_index: The validation index. (required)
         :param str folder: Document's folder.
         :param str storage_name: storage name.
-        :return: ValidationResponse
+        :return: CellsCloudResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -27167,7 +27167,7 @@ class CellsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ValidationResponse',
+                                        response_type='CellsCloudResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
