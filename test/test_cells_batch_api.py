@@ -25,7 +25,7 @@ from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
 from asposecellscloud.models import MatchConditionRequest
-from asposecellscloud.models import WorkbookProtectionRequest
+from asposecellscloud.models import BatchConvertRequest
 from asposecellscloud.models import ImportIntArrayOption
 from asposecellscloud.models import CalculationOptions
 from asposecellscloud.models import WorkbookSettings
@@ -47,16 +47,19 @@ class TestOne(unittest.TestCase):
         pass
 
     def test_one_call(self):
-        name = "Book1.xlsx"
-        
-        match_condition_request = MatchConditionRequest()
-        match_condition_request.full_match_conditions =['Sheet3','Sheet4'] 
-        
         folder = "PythonTest"
-        result = AuthUtil.Ready(self.api, name, folder)
-        self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_worksheets_delete_worksheets(name, match_condition_request, folder=folder)
-        self.assertEqual(result.code,200)
+        result = AuthUtil.Ready(self.api, 'Book1.xlsx', folder)
+        result = AuthUtil.Ready(self.api, 'myDocument.xlsx', folder)
+        match_condition_request = MatchConditionRequest()
+        match_condition_request.full_match_conditions =['Book1.xlsx','myDocument.xlsx'] 
+        
+        match_convert_request =  BatchConvertRequest()
+        match_convert_request.source_folder = 'PythonTest'
+        match_convert_request.format ='PDF'
+        match_convert_request.match_condition = match_condition_request
+        
+        result = self.api.post_batch_convert( match_convert_request)
+        self.assertTrue(len(result)>0) 
         pass
 
 

@@ -31,7 +31,7 @@ class TestCellsSplitApi(unittest.TestCase):
     def test_cells_split(self):
         assemblytest = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "assemblytest.xlsx"
         datasource = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "datasource.xlsx"
-        result = self.api.post_split({ "assemblytest.xlsx" :assemblytest,  "datasource.xlsx":datasource},"1")
+        result = self.api.post_split({ "assemblytest.xlsx" :assemblytest,  "datasource.xlsx":datasource},"pdf")
         # print(result)
         pass
 if __name__ == '__main__':

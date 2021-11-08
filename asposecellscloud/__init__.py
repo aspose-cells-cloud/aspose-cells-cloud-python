@@ -28,6 +28,7 @@ from .models.above_average import AboveAverage
 from .models.access_token_response import AccessTokenResponse
 from .models.area import Area
 from .models.auto_fitter_options import AutoFitterOptions
+from .models.batch_convert_request import BatchConvertRequest
 from .models.border import Border
 from .models.calculation_options import CalculationOptions
 from .models.cell_area import CellArea
@@ -72,6 +73,7 @@ from .models.line import Line
 from .models.link import Link
 from .models.link_element import LinkElement
 from .models.list_column import ListColumn
+from .models.match_condition_request import MatchConditionRequest
 from .models.multiple_filter import MultipleFilter
 from .models.multiple_filters import MultipleFilters
 from .models.negative_bar_format import NegativeBarFormat

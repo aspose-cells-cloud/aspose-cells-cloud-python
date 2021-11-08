@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/21.9)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/21.10)
 
 
 # Python SDK for Spreadsheet Processing in Cloud
@@ -21,27 +21,10 @@ Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate M
 - Convert worksheets to PDF, XPS & SVG formats.
 - Inter-convert files to popular Excel formats.
 
-## Feature & Enhancements in Version 21.9
+## Feature & Enhancements in Version 21.10
 
-- Correct the return type of the following  REST APIs. 
-
-	Delete WorksheetDeleteChart
-	Post WorksheetChartLegend
-	Post WorksheetChartTitle
-	Put WorksheetAddChart
-	Put WorksheetChartTitle
-	Post WorksheetHyperlink
-	Put WorksheetHyperlink
-	Put WorksheetListObject
-	Put WorksheetOleObject
-	Post WorksheetPicture
-	Put WorksheetAddPicture
-	Put WorksheetPivotTable
-	Delete DocumentProperties
-	Delete DocumentProperty
-	Put DocumentProperty
-	Put WorksheetShape
-	Delete WorksheetValidation
+- Add new API for support delete multiple worksheets in a single call.
+- Add new API for supports batch convert excel files.
 	
  
 ## Read & Write Spreadsheet Formats

@@ -31,7 +31,8 @@ from asposecellscloud.models import WorksheetMovingRequest
 from asposecellscloud.models import Worksheet
 from asposecellscloud.models import Comment
 from asposecellscloud.models import DataSorter
-from asposecellscloud.models import ProtectSheetParameter
+from asposecellscloud.models import MatchConditionRequest
+
 global_api = None
 
 class TestCellsWorksheetsApi(unittest.TestCase):
@@ -611,6 +612,23 @@ class TestCellsWorksheetsApi(unittest.TestCase):
         self.assertEqual(result.code,200)
         pass
 
+    def test_cells_worksheets_delete_worksheets(self):
+        """
+        Test case for cells_worksheets_put_worksheet_freeze_panes
+
+        Set freeze panes
+        """
+        name = "Book1.xlsx"
+        
+        match_condition_request = MatchConditionRequest()
+        match_condition_request.full_match_conditions =['Sheet3','Sheet4'] 
+        
+        folder = "PythonTest"
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_worksheets_delete_worksheets(name, match_condition_request, folder=folder)
+        self.assertEqual(result.code,200)
+        pass
 
 if __name__ == '__main__':
     unittest.main()

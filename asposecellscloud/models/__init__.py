@@ -28,6 +28,7 @@ from .above_average import AboveAverage
 from .access_token_response import AccessTokenResponse
 from .area import Area
 from .auto_fitter_options import AutoFitterOptions
+from .batch_convert_request import BatchConvertRequest
 from .border import Border
 from .calculation_options import CalculationOptions
 from .cell_area import CellArea
@@ -72,6 +73,7 @@ from .line import Line
 from .link import Link
 from .link_element import LinkElement
 from .list_column import ListColumn
+from .match_condition_request import MatchConditionRequest
 from .multiple_filter import MultipleFilter
 from .multiple_filters import MultipleFilters
 from .negative_bar_format import NegativeBarFormat
