@@ -103,8 +103,7 @@ class Configuration(object):
         self.proxy = None
         # Safe chars for path_param
         self.safe_chars_for_path_param = '/'
-        # self.proxy = 'https://127.0.0.1:8888'
-        # self.ssl_ca_cert = 'C://projects//FiddlerRoot.pem'
+
     @property
     def logger_file(self):
         """
@@ -256,5 +255,5 @@ class Configuration(object):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 21.9\n"\
-               "SDK Package Version: 21.10".\
+               "SDK Package Version: 21.11".\
                format(env=sys.platform, pyversion=sys.version)

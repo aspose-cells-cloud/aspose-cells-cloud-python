@@ -555,6 +555,19 @@ class TestCellsWorkbookApi(unittest.TestCase):
         result = self.api.cells_workbook_delete_workbook_background(name,   folder=folder)
         self.assertEqual(result.code,200)
         pass
+    def test_cells_workbook_pagecount(self):
+        """
+        Test case for cells_worksheets_put_worksheet_freeze_panes
 
+        Set freeze panes
+        """
+        name = "Book1.xlsx"
+       
+        folder = "PythonTest"
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_workbook_get_page_count(name,  folder=folder)
+        self.assertGreater(result,0)
+        pass
 if __name__ == '__main__':
     unittest.main()
