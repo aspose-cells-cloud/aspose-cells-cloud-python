@@ -45,7 +45,8 @@ class CellValue(object):
         'column_index': 'int',
         'style': 'Style',
         'type': 'str',
-        'value': 'str'
+        'value': 'str',
+        'formula': 'str'
     }
 
     attribute_map = {
@@ -53,7 +54,8 @@ class CellValue(object):
         'column_index': 'columnIndex',
         'style': 'style',
         'type': 'type',
-        'value': 'value'
+        'value': 'value',
+        'formula': 'formula'
     }
     
     @staticmethod
@@ -69,7 +71,7 @@ class CellValue(object):
             return self.container[attr]
         return None
 
-    def __init__(self, row_index=None, column_index=None, style=None, type=None, value=None, **kw):
+    def __init__(self, row_index=None, column_index=None, style=None, type=None, value=None, formula=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -84,6 +86,7 @@ class CellValue(object):
         self.container['style'] = None
         self.container['type'] = None
         self.container['value'] = None
+        self.container['formula'] = None
 
         if row_index is not None:
           self.row_index = row_index
@@ -95,6 +98,8 @@ class CellValue(object):
           self.type = type
         if value is not None:
           self.value = value
+        if formula is not None:
+          self.formula = formula
 
     @property
     def row_index(self):
@@ -200,6 +205,27 @@ class CellValue(object):
         """
 
         self.container['value'] = value
+
+    @property
+    def formula(self):
+        """
+        Gets the formula of this CellValue.
+
+        :return: The formula of this CellValue.
+        :rtype: str
+        """
+        return self.container['formula']
+
+    @formula.setter
+    def formula(self, formula):
+        """
+        Sets the formula of this CellValue.
+
+        :param formula: The formula of this CellValue.
+        :type: str
+        """
+
+        self.container['formula'] = formula
 
     def to_dict(self):
         """

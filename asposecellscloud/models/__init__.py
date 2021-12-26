@@ -110,6 +110,7 @@ from .sparkline_groups import SparklineGroups
 from .split_result import SplitResult
 from .storage_exist import StorageExist
 from .storage_file import StorageFile
+from .table_total_request import TableTotalRequest
 from .task_data import TaskData
 from .task_description import TaskDescription
 from .task_parameter import TaskParameter

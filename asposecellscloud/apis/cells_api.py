@@ -8335,6 +8335,271 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def cells_list_objects_post_worksheet_list_column(self, name, sheet_name, list_object_index, column_index, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_list_objects_post_worksheet_list_column(name, sheet_name, list_object_index, column_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int list_object_index: (required)
+        :param int column_index: (required)
+        :param ListColumn list_column:
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_list_objects_post_worksheet_list_column_with_http_info(name, sheet_name, list_object_index, column_index, **kwargs)
+        else:
+            (data) = self.cells_list_objects_post_worksheet_list_column_with_http_info(name, sheet_name, list_object_index, column_index, **kwargs)
+            return data
+
+    def cells_list_objects_post_worksheet_list_column_with_http_info(self, name, sheet_name, list_object_index, column_index, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_list_objects_post_worksheet_list_column_with_http_info(name, sheet_name, list_object_index, column_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int list_object_index: (required)
+        :param int column_index: (required)
+        :param ListColumn list_column:
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'list_object_index', 'column_index', 'list_column', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_list_objects_post_worksheet_list_column" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_list_objects_post_worksheet_list_column`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_list_objects_post_worksheet_list_column`")
+        # verify the required parameter 'list_object_index' is set
+        if ('list_object_index' not in params) or (params['list_object_index'] is None):
+            raise ValueError("Missing the required parameter `list_object_index` when calling `cells_list_objects_post_worksheet_list_column`")
+        # verify the required parameter 'column_index' is set
+        if ('column_index' not in params) or (params['column_index'] is None):
+            raise ValueError("Missing the required parameter `column_index` when calling `cells_list_objects_post_worksheet_list_column`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'list_object_index' in params:
+            path_params['listObjectIndex'] = params['list_object_index']
+        if 'column_index' in params:
+            path_params['columnIndex'] = params['column_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'list_column' in params:
+            body_params = params['list_column']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/listobjects/{listObjectIndex}/listcolumns/{columnIndex}', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_list_objects_post_worksheet_list_columns_total(self, name, sheet_name, list_object_index, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_list_objects_post_worksheet_list_columns_total(name, sheet_name, list_object_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int list_object_index: (required)
+        :param list[TableTotalRequest] table_total_requests:
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_list_objects_post_worksheet_list_columns_total_with_http_info(name, sheet_name, list_object_index, **kwargs)
+        else:
+            (data) = self.cells_list_objects_post_worksheet_list_columns_total_with_http_info(name, sheet_name, list_object_index, **kwargs)
+            return data
+
+    def cells_list_objects_post_worksheet_list_columns_total_with_http_info(self, name, sheet_name, list_object_index, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_list_objects_post_worksheet_list_columns_total_with_http_info(name, sheet_name, list_object_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int list_object_index: (required)
+        :param list[TableTotalRequest] table_total_requests:
+        :param str folder:
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'list_object_index', 'table_total_requests', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_list_objects_post_worksheet_list_columns_total" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_list_objects_post_worksheet_list_columns_total`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_list_objects_post_worksheet_list_columns_total`")
+        # verify the required parameter 'list_object_index' is set
+        if ('list_object_index' not in params) or (params['list_object_index'] is None):
+            raise ValueError("Missing the required parameter `list_object_index` when calling `cells_list_objects_post_worksheet_list_columns_total`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'list_object_index' in params:
+            path_params['listObjectIndex'] = params['list_object_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'table_total_requests' in params:
+            body_params = params['table_total_requests']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/listobjects/{listObjectIndex}/listcolumns/total', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def cells_list_objects_post_worksheet_list_object(self, name, sheet_name, list_object_index, **kwargs):
         """
         Update  list object 
@@ -8876,6 +9141,8 @@ class CellsApi(object):
         :param int end_row: The start row of the list range. (required)
         :param int end_column: The start row of the list range. (required)
         :param bool has_headers: Whether the range has headers.
+        :param bool display_name: Gets and sets the display name..
+        :param bool show_totals: Gets and sets whether this ListObject show total row..
         :param ListObject list_object: List Object
         :param str folder: Document's folder.
         :param str storage_name: storage name.
@@ -8911,6 +9178,8 @@ class CellsApi(object):
         :param int end_row: The start row of the list range. (required)
         :param int end_column: The start row of the list range. (required)
         :param bool has_headers: Whether the range has headers.
+        :param bool display_name: Gets and sets the display name..
+        :param bool show_totals: Gets and sets whether this ListObject show total row..
         :param ListObject list_object: List Object
         :param str folder: Document's folder.
         :param str storage_name: storage name.
@@ -8919,7 +9188,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'start_row', 'start_column', 'end_row', 'end_column', 'has_headers', 'list_object', 'folder', 'storage_name']
+        all_params = ['name', 'sheet_name', 'start_row', 'start_column', 'end_row', 'end_column', 'has_headers', 'display_name', 'show_totals', 'list_object', 'folder', 'storage_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8973,6 +9242,10 @@ class CellsApi(object):
             query_params.append(('endColumn', params['end_column']))
         if 'has_headers' in params:
             query_params.append(('hasHeaders', params['has_headers']))
+        if 'display_name' in params:
+            query_params.append(('displayName', params['display_name']))
+        if 'show_totals' in params:
+            query_params.append(('showTotals', params['show_totals']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
         if 'storage_name' in params:
@@ -17615,7 +17888,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def cells_post_set_worksheet_column_width(self, name, sheet_name, column_index, width, **kwargs):
+    def cells_post_set_worksheet_column_width(self, name, sheet_name, column_index, width, count, **kwargs):
         """
         Set worksheet column width.
         This method makes a synchronous HTTP request by default. To make an
@@ -17624,7 +17897,7 @@ class CellsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_post_set_worksheet_column_width(name, sheet_name, column_index, width, callback=callback_function)
+        >>> thread = api.cells_post_set_worksheet_column_width(name, sheet_name, column_index, width, count, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17632,6 +17905,7 @@ class CellsApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param int column_index: The column index. (required)
         :param float width: The width. (required)
+        :param int count: column number. (required)
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
         :return: CellsCloudResponse
@@ -17641,12 +17915,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, **kwargs)
+            return self.cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, count, **kwargs)
         else:
-            (data) = self.cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, **kwargs)
+            (data) = self.cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, count, **kwargs)
             return data
 
-    def cells_post_set_worksheet_column_width_with_http_info(self, name, sheet_name, column_index, width, **kwargs):
+    def cells_post_set_worksheet_column_width_with_http_info(self, name, sheet_name, column_index, width, count, **kwargs):
         """
         Set worksheet column width.
         This method makes a synchronous HTTP request by default. To make an
@@ -17655,7 +17929,7 @@ class CellsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, callback=callback_function)
+        >>> thread = api.cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, count, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -17663,6 +17937,7 @@ class CellsApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param int column_index: The column index. (required)
         :param float width: The width. (required)
+        :param int count: column number. (required)
         :param str folder: The workbook folder.
         :param str storage_name: storage name.
         :return: CellsCloudResponse
@@ -17670,7 +17945,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'column_index', 'width', 'folder', 'storage_name']
+        all_params = ['name', 'sheet_name', 'column_index', 'width', 'count', 'folder', 'storage_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -17697,6 +17972,9 @@ class CellsApi(object):
         # verify the required parameter 'width' is set
         if ('width' not in params) or (params['width'] is None):
             raise ValueError("Missing the required parameter `width` when calling `cells_post_set_worksheet_column_width`")
+        # verify the required parameter 'count' is set
+        if ('count' not in params) or (params['count'] is None):
+            raise ValueError("Missing the required parameter `count` when calling `cells_post_set_worksheet_column_width`")
 
 
         collection_formats = {}
@@ -17712,6 +17990,8 @@ class CellsApi(object):
         query_params = []
         if 'width' in params:
             query_params.append(('width', params['width']))
+        if 'count' in params:
+            query_params.append(('count', params['count']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
         if 'storage_name' in params:
@@ -18576,6 +18856,7 @@ class CellsApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param int row_index: The row index. (required)
         :param float height: The new row height.
+        :param int count: row number.
         :param str folder: The document folder.
         :param str storage_name: storage name.
         :return: CellsCloudResponse
@@ -18607,6 +18888,7 @@ class CellsApi(object):
         :param str sheet_name: The worksheet name. (required)
         :param int row_index: The row index. (required)
         :param float height: The new row height.
+        :param int count: row number.
         :param str folder: The document folder.
         :param str storage_name: storage name.
         :return: CellsCloudResponse
@@ -18614,7 +18896,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'sheet_name', 'row_index', 'height', 'folder', 'storage_name']
+        all_params = ['name', 'sheet_name', 'row_index', 'height', 'count', 'folder', 'storage_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -18653,6 +18935,8 @@ class CellsApi(object):
         query_params = []
         if 'height' in params:
             query_params.append(('height', params['height']))
+        if 'count' in params:
+            query_params.append(('count', params['count']))
         if 'folder' in params:
             query_params.append(('folder', params['folder']))
         if 'storage_name' in params:
@@ -22305,6 +22589,133 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def cells_shapes_post_worksheet_group_shape(self, name, sheet_name, list_shape, **kwargs):
+        """
+        Update a shape in worksheet
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_shapes_post_worksheet_group_shape(name, sheet_name, list_shape, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: document name. (required)
+        :param str sheet_name: worksheet name. (required)
+        :param list[int] list_shape: group shape indexs in worksheet shapes. (required)
+        :param str folder: Document's folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_shapes_post_worksheet_group_shape_with_http_info(name, sheet_name, list_shape, **kwargs)
+        else:
+            (data) = self.cells_shapes_post_worksheet_group_shape_with_http_info(name, sheet_name, list_shape, **kwargs)
+            return data
+
+    def cells_shapes_post_worksheet_group_shape_with_http_info(self, name, sheet_name, list_shape, **kwargs):
+        """
+        Update a shape in worksheet
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_shapes_post_worksheet_group_shape_with_http_info(name, sheet_name, list_shape, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: document name. (required)
+        :param str sheet_name: worksheet name. (required)
+        :param list[int] list_shape: group shape indexs in worksheet shapes. (required)
+        :param str folder: Document's folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'list_shape', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_shapes_post_worksheet_group_shape" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_shapes_post_worksheet_group_shape`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_shapes_post_worksheet_group_shape`")
+        # verify the required parameter 'list_shape' is set
+        if ('list_shape' not in params) or (params['list_shape'] is None):
+            raise ValueError("Missing the required parameter `list_shape` when calling `cells_shapes_post_worksheet_group_shape`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'list_shape' in params:
+            body_params = params['list_shape']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/shapes/group', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def cells_shapes_post_worksheet_shape(self, name, sheet_name, shapeindex, **kwargs):
         """
         Update a shape in worksheet
@@ -22422,6 +22833,133 @@ class CellsApi(object):
         auth_settings = []
 
         return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/shapes/{shapeindex}', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_shapes_post_worksheet_ungroup_shape(self, name, sheet_name, shapeindex, **kwargs):
+        """
+        Update a shape in worksheet
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_shapes_post_worksheet_ungroup_shape(name, sheet_name, shapeindex, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: document name. (required)
+        :param str sheet_name: worksheet name. (required)
+        :param int shapeindex: shape index in worksheet shapes. (required)
+        :param str folder: Document's folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_shapes_post_worksheet_ungroup_shape_with_http_info(name, sheet_name, shapeindex, **kwargs)
+        else:
+            (data) = self.cells_shapes_post_worksheet_ungroup_shape_with_http_info(name, sheet_name, shapeindex, **kwargs)
+            return data
+
+    def cells_shapes_post_worksheet_ungroup_shape_with_http_info(self, name, sheet_name, shapeindex, **kwargs):
+        """
+        Update a shape in worksheet
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_shapes_post_worksheet_ungroup_shape_with_http_info(name, sheet_name, shapeindex, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: document name. (required)
+        :param str sheet_name: worksheet name. (required)
+        :param int shapeindex: shape index in worksheet shapes. (required)
+        :param str folder: Document's folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'shapeindex', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_shapes_post_worksheet_ungroup_shape" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_shapes_post_worksheet_ungroup_shape`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_shapes_post_worksheet_ungroup_shape`")
+        # verify the required parameter 'shapeindex' is set
+        if ('shapeindex' not in params) or (params['shapeindex'] is None):
+            raise ValueError("Missing the required parameter `shapeindex` when calling `cells_shapes_post_worksheet_ungroup_shape`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'shapeindex' in params:
+            path_params['shapeindex'] = params['shapeindex']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/shapes/{shapeindex}/ungroup', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -26576,6 +27114,7 @@ class CellsApi(object):
         :param str format: The format to convert.
         :param str password: The workbook password.
         :param str out_path: Path to save result
+        :param str storage_name: storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
@@ -26605,12 +27144,13 @@ class CellsApi(object):
         :param str format: The format to convert.
         :param str password: The workbook password.
         :param str out_path: Path to save result
+        :param str storage_name: storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'format', 'password', 'out_path']
+        all_params = ['file', 'format', 'password', 'out_path', 'storage_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -26641,6 +27181,8 @@ class CellsApi(object):
             query_params.append(('password', params['password']))
         if 'out_path' in params:
             query_params.append(('outPath', params['out_path']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
 
         header_params = {}
 

@@ -145,5 +145,38 @@ class TestCellsShapesApi(unittest.TestCase):
         pass
 
 
+    def test_cells_shapes_post_worksheet_group_shape(self):
+        """
+        Test case for cells_shapes_post_worksheet_group_shape
+
+        grounp a shape in worksheet
+        """
+        name ='Book1.xlsx'  
+        sheet_name ='Sheet6'    
+        list_shape =[0,1] 
+       
+        folder = "PythonTest"
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_shapes_post_worksheet_group_shape(name, sheet_name,list_shape ,folder=folder)
+        self.assertEqual(result.code,200)
+        pass
+
+    def test_cells_shapes_post_worksheet_ungroup_shape(self):
+        """
+        Test case for cells_shapes_post_worksheet_ungroup_shape
+
+        grounp a shape in worksheet
+        """
+        name ='Book1.xlsx'  
+        sheet_name ='Sheet6'    
+        shape_index =6
+       
+        folder = "PythonTest"
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_shapes_post_worksheet_ungroup_shape(name, sheet_name,shape_index ,folder=folder)
+        self.assertEqual(result.code,200)
+        pass    
 if __name__ == '__main__':
     unittest.main()

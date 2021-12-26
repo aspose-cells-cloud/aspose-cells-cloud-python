@@ -42,12 +42,16 @@ class ListColumn(object):
     """
     swagger_types = {
         'totals_calculation': 'str',
-        'name': 'str'
+        'name': 'str',
+        'formula': 'str',
+        'range': 'Range'
     }
 
     attribute_map = {
         'totals_calculation': 'TotalsCalculation',
-        'name': 'Name'
+        'name': 'Name',
+        'formula': 'Formula',
+        'range': 'Range'
     }
     
     @staticmethod
@@ -63,7 +67,7 @@ class ListColumn(object):
             return self.container[attr]
         return None
 
-    def __init__(self, totals_calculation=None, name=None, **kw):
+    def __init__(self, totals_calculation=None, name=None, formula=None, range=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -75,11 +79,17 @@ class ListColumn(object):
 
         self.container['totals_calculation'] = None
         self.container['name'] = None
+        self.container['formula'] = None
+        self.container['range'] = None
 
         if totals_calculation is not None:
           self.totals_calculation = totals_calculation
         if name is not None:
           self.name = name
+        if formula is not None:
+          self.formula = formula
+        if range is not None:
+          self.range = range
 
     @property
     def totals_calculation(self):
@@ -126,6 +136,52 @@ class ListColumn(object):
         """
 
         self.container['name'] = name
+
+    @property
+    def formula(self):
+        """
+        Gets the formula of this ListColumn.
+        Gets and sets the formula of the list column.
+
+        :return: The formula of this ListColumn.
+        :rtype: str
+        """
+        return self.container['formula']
+
+    @formula.setter
+    def formula(self, formula):
+        """
+        Sets the formula of this ListColumn.
+        Gets and sets the formula of the list column.
+
+        :param formula: The formula of this ListColumn.
+        :type: str
+        """
+
+        self.container['formula'] = formula
+
+    @property
+    def range(self):
+        """
+        Gets the range of this ListColumn.
+        Gets and sets the formula of the list column.
+
+        :return: The range of this ListColumn.
+        :rtype: Range
+        """
+        return self.container['range']
+
+    @range.setter
+    def range(self, range):
+        """
+        Sets the range of this ListColumn.
+        Gets and sets the formula of the list column.
+
+        :param range: The range of this ListColumn.
+        :type: Range
+        """
+
+        self.container['range'] = range
 
     def to_dict(self):
         """

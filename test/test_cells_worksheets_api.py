@@ -516,7 +516,7 @@ class TestCellsWorksheetsApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0) 
         result = self.api.cells_worksheets_put_add_new_worksheet(name, sheet_name,  position=position, sheettype=sheettype, folder=folder)
-        self.assertEqual(result.code,201)
+        self.assertEqual(result.code,200)
         pass
 
     def test_cells_worksheets_put_change_visibility_worksheet(self):

@@ -15,7 +15,7 @@ from asposecellscloud.apis.lite_cells_api import LiteCellsApi
 import AuthUtil
 
 global_api = None
-class TestCellsReplaceApi(unittest.TestCase):
+class TestCellsReverseApi(unittest.TestCase):
     """ CellsApi unit test stubs """
     
     def setUp(self):
@@ -28,10 +28,10 @@ class TestCellsReplaceApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_cells_replace(self):
+    def test_cells_reverse(self):
         assemblytest = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "assemblytest.xlsx"
         datasource = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "datasource.xlsx"
-        result = self.api.post_replace({ "assemblytest.xlsx" :assemblytest,  "datasource.xlsx":datasource},"1","aspose.cells cloud")
+        result = self.api.post_reverse({ "assemblytest.xlsx" :assemblytest,  "datasource.xlsx":datasource},"rows","pdf")
         # print(result)
         pass
 if __name__ == '__main__':

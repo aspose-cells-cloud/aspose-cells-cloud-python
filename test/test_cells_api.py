@@ -533,7 +533,7 @@ class TestCellsApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, name, folder)
         self.assertTrue(len(result.uploaded)>0)
         
-        result = self.api.cells_post_set_worksheet_column_width(name, sheet_name, columnIndex, width, folder = folder)
+        result = self.api.cells_post_set_worksheet_column_width(name, sheet_name, columnIndex, width,10, folder = folder)
         self.assertEqual(result.code,200)
         pass
 

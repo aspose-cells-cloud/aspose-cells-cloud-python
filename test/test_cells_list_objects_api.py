@@ -27,6 +27,10 @@ import AuthUtil
 from asposecellscloud.models import ListObject
 from asposecellscloud.models import DataSorter
 from asposecellscloud.models import CreatePivotTableRequest
+from asposecellscloud.models import ListColumn
+from asposecellscloud.models import TableTotalRequest
+
+
 global_api = None
 class TestCellsListObjectsApi(unittest.TestCase):
     """ CellsListObjectsApi unit test stubs """
@@ -201,6 +205,43 @@ class TestCellsListObjectsApi(unittest.TestCase):
         self.assertEqual(result.code,200)
         pass
 
+    def test_cells_list_objects_post_worksheet_list_column(self):
+        """
+        Test case for cells_list_objects_post_worksheet_list_column
+
+        
+        """
+        name ='Book1.xlsx'
+        sheet_name ='Sheet7'
+        listObjectIndex = 0 
+        request = ListColumn()
+        request.name = 'testp'
+        request.totals_calculation = 'Average'
+        folder = "PythonTest"
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_list_objects_post_worksheet_list_column(name, sheet_name,listObjectIndex,0,list_column=request,folder=folder)
+        self.assertEqual(result.code,200)
+        pass
+
+    def test_cells_list_objects_post_worksheet_list_columns_total(self):
+        """
+        Test case for cells_list_objects_post_worksheet_list_columns_total
+
+        
+        """
+        name ='Book1.xlsx'
+        sheet_name ='Sheet7'
+        listObjectIndex = 0 
+        request = TableTotalRequest()
+        request.list_column_index = 1
+        request.totals_calculation = 'Average'
+        folder = "PythonTest"
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_list_objects_post_worksheet_list_columns_total(name, sheet_name,listObjectIndex,table_total_requests=[request] ,folder=folder)
+        self.assertEqual(result.code,200)
+        pass
 
 if __name__ == '__main__':
     unittest.main()
