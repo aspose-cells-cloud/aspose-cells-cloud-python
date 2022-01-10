@@ -45,11 +45,12 @@ def GetApiClient():
     return api_client
 
 
-def Ready(api, filename, folder, storage=None):
-
-  
+def Ready(api, filename, folder, storage=None): 
     path = folder + '/' + filename
     fullfilename = "TestData/" + filename
-    response = api.upload_file(path, fullfilename)
+    if storage == None:
+        response = api.upload_file(path, fullfilename)
+    else:
+        response = api.upload_file(path, fullfilename, storage_name=storage)
     return response
 

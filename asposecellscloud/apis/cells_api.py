@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Copyright (c) 2021 Aspose.Cells Cloud
+Copyright (c) 2022 Aspose.Cells Cloud
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -21986,6 +21986,7 @@ class CellsApi(object):
         :param bool is_auto_fit_columns: Autofit columns.
         :param str folder: The document folder.
         :param str storage_name: storage name.
+        :param str out_storage_name: output storage name.
         :return: SaveResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -22018,12 +22019,13 @@ class CellsApi(object):
         :param bool is_auto_fit_columns: Autofit columns.
         :param str folder: The document folder.
         :param str storage_name: storage name.
+        :param str out_storage_name: output storage name.
         :return: SaveResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'save_options', 'newfilename', 'is_auto_fit_rows', 'is_auto_fit_columns', 'folder', 'storage_name']
+        all_params = ['name', 'save_options', 'newfilename', 'is_auto_fit_rows', 'is_auto_fit_columns', 'folder', 'storage_name', 'out_storage_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -22060,6 +22062,8 @@ class CellsApi(object):
             query_params.append(('folder', params['folder']))
         if 'storage_name' in params:
             query_params.append(('storageName', params['storage_name']))
+        if 'out_storage_name' in params:
+            query_params.append(('outStorageName', params['out_storage_name']))
 
         header_params = {}
 
@@ -24824,6 +24828,7 @@ class CellsApi(object):
         :param str folder: The document folder.
         :param str storage_name: storage name.
         :param str out_path: The document output folder.
+        :param str out_storage_name: output storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
@@ -24857,12 +24862,13 @@ class CellsApi(object):
         :param str folder: The document folder.
         :param str storage_name: storage name.
         :param str out_path: The document output folder.
+        :param str out_storage_name: output storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'password', 'format', 'is_auto_fit', 'only_save_table', 'folder', 'storage_name', 'out_path']
+        all_params = ['name', 'password', 'format', 'is_auto_fit', 'only_save_table', 'folder', 'storage_name', 'out_path', 'out_storage_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -24903,6 +24909,8 @@ class CellsApi(object):
             query_params.append(('storageName', params['storage_name']))
         if 'out_path' in params:
             query_params.append(('outPath', params['out_path']))
+        if 'out_storage_name' in params:
+            query_params.append(('outStorageName', params['out_storage_name']))
 
         header_params = {}
 
@@ -26373,6 +26381,7 @@ class CellsApi(object):
         :param str folder: The workbook folder full path.
         :param str storage_name: storage name.
         :param str out_path: Path to save result
+        :param str out_storage_name: output storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
@@ -26403,12 +26412,13 @@ class CellsApi(object):
         :param str folder: The workbook folder full path.
         :param str storage_name: storage name.
         :param str out_path: Path to save result
+        :param str out_storage_name: output storage name.
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'xml_file', 'folder', 'storage_name', 'out_path']
+        all_params = ['name', 'xml_file', 'folder', 'storage_name', 'out_path', 'out_storage_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -26443,6 +26453,8 @@ class CellsApi(object):
             query_params.append(('storageName', params['storage_name']))
         if 'out_path' in params:
             query_params.append(('outPath', params['out_path']))
+        if 'out_storage_name' in params:
+            query_params.append(('outStorageName', params['out_storage_name']))
 
         header_params = {}
 
@@ -26615,6 +26627,7 @@ class CellsApi(object):
         :param str folder: The workbook folder.
         :param str out_folder: out Folder.
         :param str storage_name: storage name.
+        :param str out_storage_name: output storage name.
         :return: SplitResultResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -26649,12 +26662,13 @@ class CellsApi(object):
         :param str folder: The workbook folder.
         :param str out_folder: out Folder.
         :param str storage_name: storage name.
+        :param str out_storage_name: output storage name.
         :return: SplitResultResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'format', '_from', 'to', 'horizontal_resolution', 'vertical_resolution', 'folder', 'out_folder', 'storage_name']
+        all_params = ['name', 'format', '_from', 'to', 'horizontal_resolution', 'vertical_resolution', 'folder', 'out_folder', 'storage_name', 'out_storage_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -26697,6 +26711,8 @@ class CellsApi(object):
             query_params.append(('outFolder', params['out_folder']))
         if 'storage_name' in params:
             query_params.append(('storageName', params['storage_name']))
+        if 'out_storage_name' in params:
+            query_params.append(('outStorageName', params['out_storage_name']))
 
         header_params = {}
 
@@ -26747,6 +26763,7 @@ class CellsApi(object):
         :param str merge_with: The workbook to merge with. (required)
         :param str folder: Source workbook folder.
         :param str storage_name: storage name.
+        :param str merged_storage_name: merged file storage name.
         :return: WorkbookResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -26776,12 +26793,13 @@ class CellsApi(object):
         :param str merge_with: The workbook to merge with. (required)
         :param str folder: Source workbook folder.
         :param str storage_name: storage name.
+        :param str merged_storage_name: merged file storage name.
         :return: WorkbookResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'merge_with', 'folder', 'storage_name']
+        all_params = ['name', 'merge_with', 'folder', 'storage_name', 'merged_storage_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -26817,6 +26835,8 @@ class CellsApi(object):
             query_params.append(('folder', params['folder']))
         if 'storage_name' in params:
             query_params.append(('storageName', params['storage_name']))
+        if 'merged_storage_name' in params:
+            query_params.append(('mergedStorageName', params['merged_storage_name']))
 
         header_params = {}
 

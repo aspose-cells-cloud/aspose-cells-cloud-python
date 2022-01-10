@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Copyright (c) 2021 Aspose.Cells Cloud
+Copyright (c) 2022 Aspose.Cells Cloud
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -42,17 +42,21 @@ class BatchConvertRequest(object):
     """
     swagger_types = {
         'source_folder': 'str',
+        'source_storage': 'str',
         'match_condition': 'MatchConditionRequest',
         'format': 'str',
         'out_folder': 'str',
+        'out_storage': 'str',
         'save_options': 'SaveOptions'
     }
 
     attribute_map = {
         'source_folder': 'SourceFolder',
+        'source_storage': 'SourceStorage',
         'match_condition': 'MatchCondition',
         'format': 'Format',
         'out_folder': 'OutFolder',
+        'out_storage': 'OutStorage',
         'save_options': 'SaveOptions'
     }
     
@@ -69,7 +73,7 @@ class BatchConvertRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self, source_folder=None, match_condition=None, format=None, out_folder=None, save_options=None, **kw):
+    def __init__(self, source_folder=None, source_storage=None, match_condition=None, format=None, out_folder=None, out_storage=None, save_options=None, **kw):
         """
         Associative dict for storing property values
         """
@@ -80,19 +84,25 @@ class BatchConvertRequest(object):
         """
 
         self.container['source_folder'] = None
+        self.container['source_storage'] = None
         self.container['match_condition'] = None
         self.container['format'] = None
         self.container['out_folder'] = None
+        self.container['out_storage'] = None
         self.container['save_options'] = None
 
         if source_folder is not None:
           self.source_folder = source_folder
+        if source_storage is not None:
+          self.source_storage = source_storage
         if match_condition is not None:
           self.match_condition = match_condition
         if format is not None:
           self.format = format
         if out_folder is not None:
           self.out_folder = out_folder
+        if out_storage is not None:
+          self.out_storage = out_storage
         if save_options is not None:
           self.save_options = save_options
 
@@ -116,6 +126,27 @@ class BatchConvertRequest(object):
         """
 
         self.container['source_folder'] = source_folder
+
+    @property
+    def source_storage(self):
+        """
+        Gets the source_storage of this BatchConvertRequest.
+
+        :return: The source_storage of this BatchConvertRequest.
+        :rtype: str
+        """
+        return self.container['source_storage']
+
+    @source_storage.setter
+    def source_storage(self, source_storage):
+        """
+        Sets the source_storage of this BatchConvertRequest.
+
+        :param source_storage: The source_storage of this BatchConvertRequest.
+        :type: str
+        """
+
+        self.container['source_storage'] = source_storage
 
     @property
     def match_condition(self):
@@ -179,6 +210,27 @@ class BatchConvertRequest(object):
         """
 
         self.container['out_folder'] = out_folder
+
+    @property
+    def out_storage(self):
+        """
+        Gets the out_storage of this BatchConvertRequest.
+
+        :return: The out_storage of this BatchConvertRequest.
+        :rtype: str
+        """
+        return self.container['out_storage']
+
+    @out_storage.setter
+    def out_storage(self, out_storage):
+        """
+        Sets the out_storage of this BatchConvertRequest.
+
+        :param out_storage: The out_storage of this BatchConvertRequest.
+        :type: str
+        """
+
+        self.container['out_storage'] = out_storage
 
     @property
     def save_options(self):

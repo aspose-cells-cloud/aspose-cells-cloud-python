@@ -30,6 +30,7 @@ from asposecellscloud.models import ImportIntArrayOption
 from asposecellscloud.models import CalculationOptions
 from asposecellscloud.models import WorkbookSettings
 from asposecellscloud.models import PasswordRequest
+from asposecellscloud.models import PdfSaveOptions
 from datetime import datetime
 global_api = None
 
@@ -47,15 +48,19 @@ class TestOne(unittest.TestCase):
         pass
 
     def test_one_call(self):
-        name = "Book1.xlsx"
-        
-        match_condition_request = MatchConditionRequest()
-        match_condition_request.full_match_conditions =['Sheet3','Sheet4'] 
-        
+        name ='Book1.xlsx'    
+        saveOptions = PdfSaveOptions()
+        saveOptions.OnePagePerSheet = True
+        saveOptions.SaveFormat = "pdf"
+        newfilename = "newbook.pdf"
+        isAutoFitRows= True
+        isAutoFitColumns= True
         folder = "PythonTest"
-        result = AuthUtil.Ready(self.api, name, folder)
-        self.assertTrue(len(result.uploaded)>0) 
-        result = self.api.cells_worksheets_delete_worksheets(name, match_condition_request, folder=folder)
+        storage = "DropBox"
+        AuthUtil.Ready(self.api, name, folder)
+        AuthUtil.Ready(self.api,name, folder, storage=storage)
+        
+        result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=(folder +'/' + newfilename),is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder, storage_name=storage)
         self.assertEqual(result.code,200)
         pass
 

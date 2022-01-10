@@ -154,7 +154,36 @@ class TestCellsWorkbookApi(unittest.TestCase):
         result = self.api.cells_workbook_get_workbook(name,password=password,format="xlsx", is_auto_fit=isAutoFit, folder=folder)
         # self.assertEqual(result.code,200)
         pass
+    def test_cells_workbook_get_workbook_JSON(self):
+        """
+        Test case for cells_workbook_get_workbook with format
 
+        Read workbook info or export.
+        """
+        name ='Book1.xlsx'       
+        folder = "PythonTest"
+        password = None
+        isAutoFit = True
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_workbook_get_workbook(name,password=password,format="json", is_auto_fit=isAutoFit, folder=folder)
+        # self.assertEqual(result.code,200)
+        pass
+    def test_cells_workbook_get_workbook_format_to_other_storage(self):
+        """
+        Test case for cells_workbook_get_workbook with format
+
+        Read workbook info or export.
+        """
+        name ='Book1.xlsx'       
+        folder = "PythonTest"
+        password = None
+        isAutoFit = True
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_workbook_get_workbook(name,password=password,format="pdf", is_auto_fit=isAutoFit, folder=folder , out_path="Freeing/Workbook1_python.pdf",  out_storage_name="DropBox")
+        # self.assertEqual(result.code,200)
+        pass    
     def test_cells_workbook_get_workbook_format_md(self):
         """
         Test case for cells_workbook_get_workbook with format
@@ -385,6 +414,21 @@ class TestCellsWorkbookApi(unittest.TestCase):
         # self.assertEqual(result.code,200)
         pass
 
+    def test_cells_workbook_post_workbook_get_smart_marker_result_to_other_storage(self):
+        """
+        Test case for cells_workbook_post_workbook_get_smart_marker_result
+
+        Smart marker processing result.
+        """
+        name ='Book1.xlsx'       
+        folder = "PythonTest"
+        xmlFile = "ReportData.xml"
+        result = AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, xmlFile, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_workbook_post_workbook_get_smart_marker_result(name, xml_file=(folder + '/' + xmlFile), folder= folder,out_storage_name="DropBox")
+        # self.assertEqual(result.code,200)
+        pass
     def test_cells_workbook_post_workbook_settings(self):
         """
         Test case for cells_workbook_post_workbook_settings
@@ -420,6 +464,26 @@ class TestCellsWorkbookApi(unittest.TestCase):
         self.assertEqual(result.code,200)
         pass
 
+
+    def test_cells_workbook_post_workbook_split_to_other_storage(self):
+        """
+        Test case for cells_workbook_post_workbook_split
+
+        Split workbook.
+        """
+        name ='Book1.xlsx'       
+        folder = "PythonTest"
+        format = "png"
+        _from = 1
+        to = 3
+        horizontalResolution = 100
+        verticalResolution = 90
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_workbook_post_workbook_split(name, format=format, _from=_from, to=to, horizontal_resolution=horizontalResolution, vertical_resolution=verticalResolution,  folder=folder,out_folder=folder,out_storage_name="DropBox")
+        self.assertEqual(result.code,200)
+        pass
+
     def test_cells_workbook_post_workbooks_merge(self):
         """
         Test case for cells_workbook_post_workbooks_merge
@@ -436,6 +500,21 @@ class TestCellsWorkbookApi(unittest.TestCase):
         self.assertEqual(result.code,200)
         pass
 
+    def test_cells_workbook_post_workbooks_merge_with_other_storage(self):
+        """
+        Test case for cells_workbook_post_workbooks_merge
+
+        Merge workbooks.
+        """
+        name ='Book1.xlsx'       
+        folder = "PythonTest"
+        formatmergeWith = "myDocument.xlsx"      
+        result = AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, formatmergeWith, folder,storage="DropBox")
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_workbook_post_workbooks_merge(name,folder +'/'+ formatmergeWith,  folder=folder,merged_storage_name="DropBox")
+        self.assertEqual(result.code,200)
+        pass
     def test_cells_workbook_post_workbooks_text_replace(self):
         """
         Test case for cells_workbook_post_workbooks_text_replace
@@ -481,6 +560,23 @@ class TestCellsWorkbookApi(unittest.TestCase):
         password = None
         outPath = None      
         result = self.api.cells_workbook_put_convert_workbook(fullfilename,format=format)
+        # self.assertEqual(result.code,200)
+        pass
+
+    def test_cells_workbook_put_convert_workbook_to_other_storage(self):
+        """
+        Test case for cells_workbook_put_convert_workbook
+
+        Convert workbook from request content to some format.
+        """
+        fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        f = open(fullfilename, 'rb')
+        workbook = f.read()
+        f.close()
+        format ='pdf'       
+        password = None
+        outPath = "Freeing/test_python_book1.pdf"
+        result = self.api.cells_workbook_put_convert_workbook(fullfilename,format=format,out_path=outPath,storage_name="DropBox" )
         # self.assertEqual(result.code,200)
         pass
 
