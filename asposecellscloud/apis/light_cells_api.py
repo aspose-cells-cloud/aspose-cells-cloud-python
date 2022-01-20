@@ -35,7 +35,7 @@ from ..configuration import Configuration
 from ..api_client import ApiClient
 
 
-class LiteCellsApi(object):
+class LightCellsApi(object):
 
     def __init__(self,clientid, clientsecret, version='v3.0', base_uri= 'https://api.aspose.cloud', api_client=None):
         self.clientid = clientid

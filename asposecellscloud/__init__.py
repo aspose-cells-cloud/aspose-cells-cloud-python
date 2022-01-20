@@ -281,7 +281,7 @@ from .models.title import Title
 
 # import apis into sdk package
 from .apis.cells_api import CellsApi
-from .apis.lite_cells_api import LiteCellsApi
+from .apis.light_cells_api import LightCellsApi
 
 # import ApiClient
 from .api_client import ApiClient

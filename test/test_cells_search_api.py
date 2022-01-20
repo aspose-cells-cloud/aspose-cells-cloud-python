@@ -11,7 +11,7 @@ ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 import asposecellscloud
 from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.lite_cells_api import LiteCellsApi
+from asposecellscloud.apis.light_cells_api import LightCellsApi
 import AuthUtil
 
 global_api = None
@@ -22,7 +22,7 @@ class TestCellsSearchApi(unittest.TestCase):
         warnings.simplefilter('ignore', ResourceWarning)
         global global_api
         if global_api is None:
-           global_api = asposecellscloud.apis.lite_cells_api.LiteCellsApi(AuthUtil.GetClientId(),AuthUtil.GetClientSecret(),"v3.0",AuthUtil.GetBaseUrl())
+           global_api = asposecellscloud.apis.light_cells_api.LightCellsApi(AuthUtil.GetClientId(),AuthUtil.GetClientSecret(),"v3.0",AuthUtil.GetBaseUrl())
         self.api = global_api
 
     def tearDown(self):

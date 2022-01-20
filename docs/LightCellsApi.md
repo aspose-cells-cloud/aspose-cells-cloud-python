@@ -1,21 +1,21 @@
-# asposecellscloud.LiteCellsApi
+# asposecellscloud.LightCellsApi
 
 All URIs are relative to *https://api.aspose.cloud/v3.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_metadata**](LiteCellsApi.md#delete_metadata) | **POST** /cells/metadata/delete | 
-[**get_metadata**](LiteCellsApi.md#get_metadata) | **POST** /cells/metadata/get | 
-[**post_assemble**](LiteCellsApi.md#post_assemble) | **POST** /cells/assemble | 
-[**post_clear_objects**](LiteCellsApi.md#post_clear_objects) | **POST** /cells/clearobjects | 
-[**post_export**](LiteCellsApi.md#post_export) | **POST** /cells/export | 
-[**post_merge**](LiteCellsApi.md#post_merge) | **POST** /cells/merge | 
-[**post_metadata**](LiteCellsApi.md#post_metadata) | **POST** /cells/metadata/update | 
-[**post_protect**](LiteCellsApi.md#post_protect) | **POST** /cells/protect | 
-[**post_search**](LiteCellsApi.md#post_search) | **POST** /cells/search | 
-[**post_split**](LiteCellsApi.md#post_split) | **POST** /cells/split | 
-[**post_unlock**](LiteCellsApi.md#post_unlock) | **POST** /cells/unlock | 
-[**post_watermark**](LiteCellsApi.md#post_watermark) | **POST** /cells/watermark | 
+[**delete_metadata**](LightCellsApi.md#delete_metadata) | **POST** /cells/metadata/delete | 
+[**get_metadata**](LightCellsApi.md#get_metadata) | **POST** /cells/metadata/get | 
+[**post_assemble**](LightCellsApi.md#post_assemble) | **POST** /cells/assemble | 
+[**post_clear_objects**](LightCellsApi.md#post_clear_objects) | **POST** /cells/clearobjects | 
+[**post_export**](LightCellsApi.md#post_export) | **POST** /cells/export | 
+[**post_merge**](LightCellsApi.md#post_merge) | **POST** /cells/merge | 
+[**post_metadata**](LightCellsApi.md#post_metadata) | **POST** /cells/metadata/update | 
+[**post_protect**](LightCellsApi.md#post_protect) | **POST** /cells/protect | 
+[**post_search**](LightCellsApi.md#post_search) | **POST** /cells/search | 
+[**post_split**](LightCellsApi.md#post_split) | **POST** /cells/split | 
+[**post_unlock**](LightCellsApi.md#post_unlock) | **POST** /cells/unlock | 
+[**post_watermark**](LightCellsApi.md#post_watermark) | **POST** /cells/watermark | 
 
 
 # **delete_metadata**
@@ -32,7 +32,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 type = 'all' # str |  (optional) (default to all)
 
@@ -40,7 +40,7 @@ try:
     api_response = api_instance.delete_metadata(file, type=type)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->delete_metadata: %s\n" % e)
+    print("Exception when calling LightCellsApi->delete_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -79,7 +79,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 type = 'all' # str |  (optional) (default to all)
 
@@ -87,7 +87,7 @@ try:
     api_response = api_instance.get_metadata(file, type=type)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->get_metadata: %s\n" % e)
+    print("Exception when calling LightCellsApi->get_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -126,7 +126,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 datasource = 'datasource_example' # str | 
 format = 'Xlsx' # str |  (optional) (default to Xlsx)
@@ -135,7 +135,7 @@ try:
     api_response = api_instance.post_assemble(file, datasource, format=format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->post_assemble: %s\n" % e)
+    print("Exception when calling LightCellsApi->post_assemble: %s\n" % e)
 ```
 
 ### Parameters
@@ -175,7 +175,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 objecttype = 'objecttype_example' # str | 
 
@@ -183,7 +183,7 @@ try:
     api_response = api_instance.post_clear_objects(file, objecttype)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->post_clear_objects: %s\n" % e)
+    print("Exception when calling LightCellsApi->post_clear_objects: %s\n" % e)
 ```
 
 ### Parameters
@@ -222,7 +222,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 object_type = 'object_type_example' # str | 
 format = 'format_example' # str | 
@@ -231,7 +231,7 @@ try:
     api_response = api_instance.post_export(file, object_type, format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->post_export: %s\n" % e)
+    print("Exception when calling LightCellsApi->post_export: %s\n" % e)
 ```
 
 ### Parameters
@@ -271,7 +271,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 format = 'xlsx' # str |  (optional) (default to xlsx)
 merge_to_one_sheet = false # bool |  (optional) (default to false)
@@ -280,7 +280,7 @@ try:
     api_response = api_instance.post_merge(file, format=format, merge_to_one_sheet=merge_to_one_sheet)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->post_merge: %s\n" % e)
+    print("Exception when calling LightCellsApi->post_merge: %s\n" % e)
 ```
 
 ### Parameters
@@ -320,7 +320,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 document_properties = asposecellscloud.CellsDocumentProperty() # CellsDocumentProperty | Cells document property.
 
@@ -328,7 +328,7 @@ try:
     api_response = api_instance.post_metadata(file, document_properties)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->post_metadata: %s\n" % e)
+    print("Exception when calling LightCellsApi->post_metadata: %s\n" % e)
 ```
 
 ### Parameters
@@ -367,7 +367,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 password = 'password_example' # str | 
 
@@ -375,7 +375,7 @@ try:
     api_response = api_instance.post_protect(file, password)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->post_protect: %s\n" % e)
+    print("Exception when calling LightCellsApi->post_protect: %s\n" % e)
 ```
 
 ### Parameters
@@ -414,7 +414,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 text = 'text_example' # str | 
 password = 'password_example' # str |  (optional)
@@ -424,7 +424,7 @@ try:
     api_response = api_instance.post_search(file, text, password=password, sheetname=sheetname)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->post_search: %s\n" % e)
+    print("Exception when calling LightCellsApi->post_search: %s\n" % e)
 ```
 
 ### Parameters
@@ -465,7 +465,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 format = 'format_example' # str | 
 password = 'password_example' # str |  (optional)
@@ -476,7 +476,7 @@ try:
     api_response = api_instance.post_split(file, format, password=password, _from=_from, to=to)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->post_split: %s\n" % e)
+    print("Exception when calling LightCellsApi->post_split: %s\n" % e)
 ```
 
 ### Parameters
@@ -518,7 +518,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 password = 'password_example' # str | 
 
@@ -526,7 +526,7 @@ try:
     api_response = api_instance.post_unlock(file, password)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->post_unlock: %s\n" % e)
+    print("Exception when calling LightCellsApi->post_unlock: %s\n" % e)
 ```
 
 ### Parameters
@@ -565,7 +565,7 @@ from asposecellscloud.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = asposecellscloud.LiteCellsApi()
+api_instance = asposecellscloud.LightCellsApi()
 file = '/path/to/file.txt' # file | File to upload
 text = 'text_example' # str | 
 color = 'color_example' # str | 
@@ -574,7 +574,7 @@ try:
     api_response = api_instance.post_watermark(file, text, color)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LiteCellsApi->post_watermark: %s\n" % e)
+    print("Exception when calling LightCellsApi->post_watermark: %s\n" % e)
 ```
 
 ### Parameters
