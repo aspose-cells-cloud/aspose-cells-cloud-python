@@ -25890,6 +25890,133 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def cells_workbook_post_digital_signature(self, name, digitalsignaturefile, password, **kwargs):
+        """
+        Add digital signature.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_workbook_post_digital_signature(name, digitalsignaturefile, password, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Workbook name. (required)
+        :param str digitalsignaturefile: Digital signature file parameters. (required)
+        :param str password: (required)
+        :param str folder: Workbook's folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_workbook_post_digital_signature_with_http_info(name, digitalsignaturefile, password, **kwargs)
+        else:
+            (data) = self.cells_workbook_post_digital_signature_with_http_info(name, digitalsignaturefile, password, **kwargs)
+            return data
+
+    def cells_workbook_post_digital_signature_with_http_info(self, name, digitalsignaturefile, password, **kwargs):
+        """
+        Add digital signature.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_workbook_post_digital_signature_with_http_info(name, digitalsignaturefile, password, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Workbook name. (required)
+        :param str digitalsignaturefile: Digital signature file parameters. (required)
+        :param str password: (required)
+        :param str folder: Workbook's folder.
+        :param str storage_name: storage name.
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'digitalsignaturefile', 'password', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_workbook_post_digital_signature" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_workbook_post_digital_signature`")
+        # verify the required parameter 'digitalsignaturefile' is set
+        if ('digitalsignaturefile' not in params) or (params['digitalsignaturefile'] is None):
+            raise ValueError("Missing the required parameter `digitalsignaturefile` when calling `cells_workbook_post_digital_signature`")
+        # verify the required parameter 'password' is set
+        if ('password' not in params) or (params['password'] is None):
+            raise ValueError("Missing the required parameter `password` when calling `cells_workbook_post_digital_signature`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = []
+        if 'digitalsignaturefile' in params:
+            query_params.append(('digitalsignaturefile', params['digitalsignaturefile']))
+        if 'password' in params:
+            query_params.append(('password', params['password']))
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/digitalsignature', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def cells_workbook_post_encrypt_document(self, name, **kwargs):
         """
         Encript document.

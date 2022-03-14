@@ -665,5 +665,21 @@ class TestCellsWorkbookApi(unittest.TestCase):
         result = self.api.cells_workbook_get_page_count(name,  folder=folder)
         self.assertGreater(result,0)
         pass
+    def test_cells_workbook_post_digital_signature(self):
+        """
+        Test case for test_cells_workbook_post_digital_signature
+
+        Set workbook background image.
+        """
+        name = "Book1.xlsx"
+        pfx_name ='roywang.pfx' 
+        password = '123456'
+        folder = "PythonTest"
+        result = AuthUtil.Ready(self.api, name, folder)
+        result = AuthUtil.Ready(self.api, pfx_name, "")
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_workbook_post_digital_signature(name,  pfx_name, password,folder=folder)
+        self.assertEqual(result.code,200)
+        pass    
 if __name__ == '__main__':
     unittest.main()
