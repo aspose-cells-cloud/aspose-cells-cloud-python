@@ -101,5 +101,11 @@ class TestCellsExportObjectApi(unittest.TestCase):
         result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"workbook", "ods")
         self.assertIsNotNone(result)
         pass
+    def test_cells_export_workbook_pdf_extend(self):
+        Book1 = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        myDocument = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "myDocument.xlsx"
+        result = self.api.post_export({ "Book1.xlsx" :Book1,  "myDocument.xlsx":myDocument},"workbook", "ods" , extended_query_parameters ={"OnePagePerSheet":"false"})
+        self.assertIsNotNone(result)
+        pass    
 if __name__ == '__main__':
     unittest.main()

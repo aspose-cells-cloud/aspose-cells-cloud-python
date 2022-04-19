@@ -117,6 +117,24 @@ class TestCellsSaveAsApi(unittest.TestCase):
         self.assertEqual(result.code,200)
         pass
 
+    def test_cells_save_as_post_document_save_as_pdf_extend(self):
+        """
+        Test case for cells_save_as_post_document_save_as
 
+        Convert document and save result to storage.
+        """
+        name ='Book1.xlsx'    
+        saveOptions = PdfSaveOptions()
+        saveOptions.OnePagePerSheet = True
+        saveOptions.SaveFormat = "pdf"
+        newfilename = "newbook.pdf"
+        isAutoFitRows= True
+        isAutoFitColumns= True
+        folder = "PythonTest"
+        AuthUtil.Ready(self.api, name, folder)
+        
+        result = self.api.cells_save_as_post_document_save_as(name, save_options=saveOptions, newfilename=(folder +'/' + newfilename),is_auto_fit_rows=isAutoFitRows, is_auto_fit_columns=isAutoFitColumns,folder=folder,  extended_query_parameters ={"OnePagePerSheet":"false"})
+        self.assertEqual(result.code,200)
+        pass
 if __name__ == '__main__':
     unittest.main()

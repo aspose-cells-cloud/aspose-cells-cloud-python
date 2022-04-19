@@ -154,6 +154,21 @@ class TestCellsWorkbookApi(unittest.TestCase):
         result = self.api.cells_workbook_get_workbook(name,password=password,format="xlsx", is_auto_fit=isAutoFit, folder=folder)
         # self.assertEqual(result.code,200)
         pass
+    def test_cells_workbook_get_workbook_extend(self):
+        """
+        Test case for cells_workbook_get_workbook with format
+
+        Read workbook info or export.
+        """
+        name ='Book1.xlsx'       
+        folder = "PythonTest"
+        password = None
+        isAutoFit = True
+        result = AuthUtil.Ready(self.api, name, folder)
+        self.assertTrue(len(result.uploaded)>0) 
+        result = self.api.cells_workbook_get_workbook(name,password=password,format="pdf", is_auto_fit=isAutoFit, folder=folder, extended_query_parameters ={"OnePagePerSheet":"false"})
+        # self.assertEqual(result.code,200)
+        pass    
     def test_cells_workbook_get_workbook_JSON(self):
         """
         Test case for cells_workbook_get_workbook with format
@@ -562,7 +577,22 @@ class TestCellsWorkbookApi(unittest.TestCase):
         result = self.api.cells_workbook_put_convert_workbook(fullfilename,format=format)
         # self.assertEqual(result.code,200)
         pass
+    def test_cells_workbook_put_convert_workbook_extend(self):
+        """
+        Test case for cells_workbook_put_convert_workbook
 
+        Convert workbook from request content to some format.
+        """
+        fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        f = open(fullfilename, 'rb')
+        workbook = f.read()
+        f.close()
+        format ='pdf'       
+        password = None
+        outPath = None      
+        result = self.api.cells_workbook_put_convert_workbook(fullfilename,format=format, extended_query_parameters ={"OnePagePerSheet":"false"})
+        # self.assertEqual(result.code,200)
+        pass
     def test_cells_workbook_put_convert_workbook_to_other_storage(self):
         """
         Test case for cells_workbook_put_convert_workbook

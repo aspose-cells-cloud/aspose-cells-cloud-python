@@ -587,7 +587,7 @@ class LightCellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['file', 'object_type', 'format']
+        all_params = ['file', 'object_type', 'format','extended_query_parameters']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -622,7 +622,10 @@ class LightCellsApi(object):
             query_params.append(('objectType', params['object_type']))
         if 'format' in params:
             query_params.append(('format', params['format']))
-
+        if 'extended_query_parameters' in params:
+             for key , value in  params['extended_query_parameters'].items():
+                query_params.append((key, value))
+                
         header_params = {}
 
         form_params = []

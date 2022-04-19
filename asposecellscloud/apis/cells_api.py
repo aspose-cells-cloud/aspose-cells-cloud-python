@@ -22025,7 +22025,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'save_options', 'newfilename', 'is_auto_fit_rows', 'is_auto_fit_columns', 'folder', 'storage_name', 'out_storage_name']
+        all_params = ['name', 'save_options', 'newfilename', 'is_auto_fit_rows', 'is_auto_fit_columns', 'folder', 'storage_name', 'out_storage_name','extended_query_parameters']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -22064,7 +22064,9 @@ class CellsApi(object):
             query_params.append(('storageName', params['storage_name']))
         if 'out_storage_name' in params:
             query_params.append(('outStorageName', params['out_storage_name']))
-
+        if 'extended_query_parameters' in params:
+             for key , value in  params['extended_query_parameters'].items():
+                query_params.append((key, value))
         header_params = {}
 
         form_params = []
@@ -24868,7 +24870,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'password', 'format', 'is_auto_fit', 'only_save_table', 'folder', 'storage_name', 'out_path', 'out_storage_name']
+        all_params = ['name', 'password', 'format', 'is_auto_fit', 'only_save_table', 'folder', 'storage_name', 'out_path', 'out_storage_name','extended_query_parameters']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -24911,7 +24913,10 @@ class CellsApi(object):
             query_params.append(('outPath', params['out_path']))
         if 'out_storage_name' in params:
             query_params.append(('outStorageName', params['out_storage_name']))
-
+        if 'extended_query_parameters' in params:
+             for key , value in  params['extended_query_parameters'].items():
+                query_params.append((key, value))
+                
         header_params = {}
 
         form_params = []
@@ -27297,7 +27302,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['file', 'format', 'password', 'out_path', 'storage_name']
+        all_params = ['file', 'format', 'password', 'out_path', 'storage_name','extended_query_parameters']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -27330,7 +27335,10 @@ class CellsApi(object):
             query_params.append(('outPath', params['out_path']))
         if 'storage_name' in params:
             query_params.append(('storageName', params['storage_name']))
-
+        if 'extended_query_parameters' in params:
+             for key , value in  params['extended_query_parameters'].items():
+                query_params.append((key, value))
+                
         header_params = {}
 
         form_params = []
@@ -27573,6 +27581,7 @@ class CellsApi(object):
             query_params.append(('folder', params['folder']))
         if 'storage_name' in params:
             query_params.append(('storageName', params['storage_name']))
+
 
         header_params = {}
 
