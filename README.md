@@ -23,7 +23,7 @@ Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate M
 
 ## Feature & Enhancements in Version 22.5
 
-- Add new API for getting barcode description.
+- Add a new API for getting barcode description.
 
 
  

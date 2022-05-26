@@ -24,14 +24,8 @@ import asposecellscloud
 from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
-from asposecellscloud.models import MatchConditionRequest
-from asposecellscloud.models import WorkbookProtectionRequest
-from asposecellscloud.models import ImportIntArrayOption
-from asposecellscloud.models import CalculationOptions
-from asposecellscloud.models import WorkbookSettings
-from asposecellscloud.models import PasswordRequest
-from asposecellscloud.models import PdfSaveOptions
-from datetime import datetime
+from asposecellscloud.models import BarcodeResponseList
+from asposecellscloud.models import BarcodeResponse
 global_api = None
 
 class TestCellsBarcodeApi(unittest.TestCase):
