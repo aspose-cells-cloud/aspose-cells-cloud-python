@@ -22025,7 +22025,7 @@ class CellsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'save_options', 'newfilename', 'is_auto_fit_rows', 'is_auto_fit_columns', 'folder', 'storage_name', 'out_storage_name','extended_query_parameters']
+        all_params = ['name', 'save_options', 'newfilename', 'is_auto_fit_rows', 'is_auto_fit_columns', 'folder', 'storage_name', 'out_storage_name','extended_query_parameters','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -22067,6 +22067,9 @@ class CellsApi(object):
         if 'extended_query_parameters' in params:
              for key , value in  params['extended_query_parameters'].items():
                 query_params.append((key, value))
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
+            
         header_params = {}
 
         form_params = []
