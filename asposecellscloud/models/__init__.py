@@ -28,6 +28,8 @@ from .above_average import AboveAverage
 from .access_token_response import AccessTokenResponse
 from .area import Area
 from .auto_fitter_options import AutoFitterOptions
+from .barcode_response import BarcodeResponse
+from .barcode_response_list import BarcodeResponseList
 from .batch_convert_request import BatchConvertRequest
 from .border import Border
 from .calculation_options import CalculationOptions
