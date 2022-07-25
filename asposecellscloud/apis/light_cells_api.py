@@ -92,6 +92,7 @@ class LightCellsApi(object):
             for asynchronous request. (optional)
         :param file file: File to upload (required)
         :param str type:
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -118,12 +119,13 @@ class LightCellsApi(object):
             for asynchronous request. (optional)
         :param file file: File to upload (required)
         :param str type:
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'type']
+        all_params = ['file', 'type','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -150,6 +152,8 @@ class LightCellsApi(object):
         query_params = []
         if 'type' in params:
             query_params.append(('type', params['type']))
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
 
         header_params = {}
 
@@ -205,6 +209,7 @@ class LightCellsApi(object):
             for asynchronous request. (optional)
         :param file file: File to upload (required)
         :param str type:
+        :param str type:checkExcelRestriction
         :return: list[CellsDocumentProperty]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -231,12 +236,13 @@ class LightCellsApi(object):
             for asynchronous request. (optional)
         :param file file: File to upload (required)
         :param str type:
+        :param str type:checkExcelRestriction
         :return: list[CellsDocumentProperty]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'type']
+        all_params = ['file', 'type','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -263,7 +269,8 @@ class LightCellsApi(object):
         query_params = []
         if 'type' in params:
             query_params.append(('type', params['type']))
-
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
         header_params = {}
 
         form_params = []
@@ -319,6 +326,7 @@ class LightCellsApi(object):
         :param file file: File to upload (required)
         :param str datasource: (required)
         :param str format:
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -346,12 +354,13 @@ class LightCellsApi(object):
         :param file file: File to upload (required)
         :param str datasource: (required)
         :param str format:
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'datasource', 'format']
+        all_params = ['file', 'datasource', 'format','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -383,6 +392,8 @@ class LightCellsApi(object):
             query_params.append(('datasource', params['datasource']))
         if 'format' in params:
             query_params.append(('format', params['format']))
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
 
         header_params = {}
 
@@ -438,6 +449,7 @@ class LightCellsApi(object):
             for asynchronous request. (optional)
         :param file file: File to upload (required)
         :param str objecttype: (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -464,12 +476,13 @@ class LightCellsApi(object):
             for asynchronous request. (optional)
         :param file file: File to upload (required)
         :param str objecttype: (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'objecttype','sheetname','out_format']
+        all_params = ['file', 'objecttype','sheetname','out_format','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -502,7 +515,10 @@ class LightCellsApi(object):
         if 'sheetname' in params:
             query_params.append(('sheetname', params['sheetname']))
         if 'out_format' in params:
-            query_params.append(('outFormat', params['out_format']))            
+            query_params.append(('outFormat', params['out_format']))         
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))            
+
         header_params = {}
 
         form_params = []
@@ -558,6 +574,7 @@ class LightCellsApi(object):
         :param file file: File to upload (required)
         :param str object_type: (required)
         :param str format: (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -585,12 +602,13 @@ class LightCellsApi(object):
         :param file file: File to upload (required)
         :param str object_type: (required)
         :param str format: (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'object_type', 'format','extended_query_parameters']
+        all_params = ['file', 'object_type', 'format','extended_query_parameters','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -615,7 +633,6 @@ class LightCellsApi(object):
         if ('format' not in params) or (params['format'] is None):
             raise ValueError("Missing the required parameter `format` when calling `post_export`")
 
-
         collection_formats = {}
 
         path_params = {}
@@ -625,6 +642,8 @@ class LightCellsApi(object):
             query_params.append(('objectType', params['object_type']))
         if 'format' in params:
             query_params.append(('format', params['format']))
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))            
         if 'extended_query_parameters' in params:
              for key , value in  params['extended_query_parameters'].items():
                 query_params.append((key, value))
@@ -709,6 +728,7 @@ class LightCellsApi(object):
             for asynchronous request. (optional)
         :param file file: File to upload (required)
         :param ImportOption import_data: (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -800,6 +820,7 @@ class LightCellsApi(object):
         :param file file: File to upload (required)
         :param str format:
         :param bool merge_to_one_sheet:
+        :param str type:checkExcelRestriction
         :return: FileInfo
                  If the method is called asynchronously,
                  returns the request thread.
@@ -827,12 +848,13 @@ class LightCellsApi(object):
         :param file file: File to upload (required)
         :param str format:
         :param bool merge_to_one_sheet:
+        :param str type:checkExcelRestriction
         :return: FileInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'format', 'merge_to_one_sheet']
+        all_params = ['file', 'format', 'merge_to_one_sheet','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -863,6 +885,8 @@ class LightCellsApi(object):
             query_params.append(('mergeToOneSheet', params['merge_to_one_sheet']))
 
         header_params = {}
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
 
         form_params = []
         local_var_files = {}
@@ -916,6 +940,7 @@ class LightCellsApi(object):
             for asynchronous request. (optional)
         :param file file: File to upload (required)
         :param CellsDocumentProperty document_properties: Cells document property. (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -942,12 +967,13 @@ class LightCellsApi(object):
             for asynchronous request. (optional)
         :param file file: File to upload (required)
         :param CellsDocumentProperty document_properties: Cells document property. (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'document_properties']
+        all_params = ['file', 'document_properties','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -975,6 +1001,8 @@ class LightCellsApi(object):
         path_params = {}
 
         query_params = []
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
 
         header_params = {}
 
@@ -1152,6 +1180,7 @@ class LightCellsApi(object):
         :param str text: (required)
         :param str password:
         :param str sheetname:
+        :param str type:checkExcelRestriction
         :return: list[TextItem]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1180,12 +1209,13 @@ class LightCellsApi(object):
         :param str text: (required)
         :param str password:
         :param str sheetname:
+        :param str type:checkExcelRestriction
         :return: list[TextItem]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'text', 'password', 'sheetname']
+        all_params = ['file', 'text', 'password', 'sheetname','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1219,7 +1249,8 @@ class LightCellsApi(object):
             query_params.append(('password', params['password']))
         if 'sheetname' in params:
             query_params.append(('sheetname', params['sheetname']))
-
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
 
         header_params = {}
 
@@ -1278,6 +1309,7 @@ class LightCellsApi(object):
         :param str password:
         :param int _from:
         :param int to:
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1307,12 +1339,13 @@ class LightCellsApi(object):
         :param str password:
         :param int _from:
         :param int to:
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'format', 'password', '_from', 'to']
+        all_params = ['file', 'format', 'password', '_from', 'to','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1348,6 +1381,8 @@ class LightCellsApi(object):
             query_params.append(('from', params['_from']))
         if 'to' in params:
             query_params.append(('to', params['to']))
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
 
         header_params = {}
 
@@ -1520,6 +1555,7 @@ class LightCellsApi(object):
         :param file file: File to upload (required)
         :param str text: (required)
         :param str color: (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1547,12 +1583,13 @@ class LightCellsApi(object):
         :param file file: File to upload (required)
         :param str text: (required)
         :param str color: (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'text', 'color']
+        all_params = ['file', 'text', 'color','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1576,7 +1613,8 @@ class LightCellsApi(object):
         # verify the required parameter 'color' is set
         if ('color' not in params) or (params['color'] is None):
             raise ValueError("Missing the required parameter `color` when calling `post_watermark`")
-
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
 
         collection_formats = {}
 
@@ -1642,6 +1680,7 @@ class LightCellsApi(object):
             for asynchronous request. (optional)
         :param file file: File to upload (required)
         :param int compress_level: (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1668,12 +1707,13 @@ class LightCellsApi(object):
             for asynchronous request. (optional)
         :param file file: File to upload (required)
         :param int compress_level: (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'compress_level']
+        all_params = ['file', 'compress_level','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1704,7 +1744,8 @@ class LightCellsApi(object):
         query_params = []
         if 'compress_level' in params:
             query_params.append(('compressLevel', params['compress_level']))
-        
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))        
 
         header_params = {}
 
@@ -1763,6 +1804,7 @@ class LightCellsApi(object):
         :param str newtext: (required)
         :param str password: (optional)
         :param str sheet_name: (optional)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1792,12 +1834,13 @@ class LightCellsApi(object):
         :param str newtext: (required)
         :param str password: (optional)
         :param str sheet_name: (optional)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'text', 'newtext','password','sheet_name']
+        all_params = ['file', 'text', 'newtext','password','sheet_name','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1836,7 +1879,8 @@ class LightCellsApi(object):
             query_params.append(('password', params['password']))
         if 'sheet_name' in params:
             query_params.append(('sheetname', params['sheet_name']))
-
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
 
         header_params = {}
 
@@ -1893,6 +1937,7 @@ class LightCellsApi(object):
         :param file file: File to upload (required)
         :param str rotate_type: (required)
         :param str format: (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1920,12 +1965,13 @@ class LightCellsApi(object):
         :param file file: File to upload (required)
         :param str rotateType: (required)
         :param str format: (required)
+        :param str type:checkExcelRestriction
         :return: FilesResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'rotate_type', 'format']
+        all_params = ['file', 'rotate_type', 'format','check_excel_restriction']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1960,7 +2006,8 @@ class LightCellsApi(object):
             query_params.append(('format', params['format']))
         if 'rotate_type' in params:
             query_params.append(('rotateType', params['rotate_type']))
-
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
 
         header_params = {}
 
