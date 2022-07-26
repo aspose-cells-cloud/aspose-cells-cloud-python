@@ -165,6 +165,7 @@ from .models.conditional_formattings_response import ConditionalFormattingsRespo
 from .models.convert_task_parameter import ConvertTaskParameter
 from .models.convert_worksheet_task_parameter import ConvertWorksheetTaskParameter
 from .models.dif_save_options import DifSaveOptions
+from .models.docx_save_options import DocxSaveOptions
 from .models.file_version import FileVersion
 from .models.fill_format_response import FillFormatResponse
 from .models.format_condition import FormatCondition
@@ -184,6 +185,7 @@ from .models.import_double_array_option import ImportDoubleArrayOption
 from .models.import_int_array_option import ImportIntArrayOption
 from .models.import_picture_option import ImportPictureOption
 from .models.import_string_array_option import ImportStringArrayOption
+from .models.json_save_options import JsonSaveOptions
 from .models.legend_response import LegendResponse
 from .models.line_format import LineFormat
 from .models.line_response import LineResponse
@@ -224,6 +226,7 @@ from .models.pivot_table_operate_parameter import PivotTableOperateParameter
 from .models.pivot_table_response import PivotTableResponse
 from .models.pivot_tables import PivotTables
 from .models.pivot_tables_response import PivotTablesResponse
+from .models.pptx_save_options import PptxSaveOptions
 from .models.range_value_response import RangeValueResponse
 from .models.ranges_response import RangesResponse
 from .models.row import Row
@@ -245,6 +248,7 @@ from .models.split_result_document import SplitResultDocument
 from .models.split_result_response import SplitResultResponse
 from .models.split_workbook_task_parameter import SplitWorkbookTaskParameter
 from .models.spreadsheet_ml2003_save_options import SpreadsheetML2003SaveOptions
+from .models.sql_script_save_options import SqlScriptSaveOptions
 from .models.style import Style
 from .models.style_response import StyleResponse
 from .models.svg_save_options import SvgSaveOptions
