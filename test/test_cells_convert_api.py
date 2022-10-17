@@ -54,6 +54,18 @@ class TestOne(unittest.TestCase):
         fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
         result = self.api.post_convert_workbook_to_png( fullfilename)
         pass
+    def test_convert_pptx_call(self):
+        fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        result = self.api.post_convert_workbook_to_pptx( fullfilename)
+        pass
+    def test_convert_html_call(self):
+        fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        result = self.api.post_convert_workbook_to_html( fullfilename)
+        pass
+    def test_convert_markdown_call(self):    
+        fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        result = self.api.post_convert_workbook_to_markdown( fullfilename)
+        pass
 
 if __name__ == '__main__':
     unittest.main()
