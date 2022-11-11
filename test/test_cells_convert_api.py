@@ -66,6 +66,17 @@ class TestOne(unittest.TestCase):
         fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
         result = self.api.post_convert_workbook_to_markdown( fullfilename)
         pass
-
+    def test_convert_json_call(self):    
+        fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        result = self.api.post_convert_workbook_to_json( fullfilename)
+        pass
+    def test_convert_sql_call(self):    
+        fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        result = self.api.post_convert_workbook_to_sql( fullfilename)
+        pass
+    def test_convert_csv_call(self):    
+        fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
+        result = self.api.post_convert_workbook_to_csv( fullfilename)
+        pass        
 if __name__ == '__main__':
     unittest.main()

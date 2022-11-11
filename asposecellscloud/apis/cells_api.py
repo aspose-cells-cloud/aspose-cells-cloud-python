@@ -35510,6 +35510,357 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def post_convert_workbook_to_json(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_json(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.post_convert_workbook_to_json_with_http_info(file, **kwargs)
+        else:
+            (data) = self.post_convert_workbook_to_json_with_http_info(file, **kwargs)
+            return data
+
+    def post_convert_workbook_to_json_with_http_info(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_json_with_http_info(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'password', 'check_excel_restriction']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_convert_workbook_to_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'file' is set
+        if ('file' not in params) or (params['file'] is None):
+            raise ValueError("Missing the required parameter `file` when calling `post_convert_workbook_to_json`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'password' in params:
+            query_params.append(('password', params['password']))
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            
+            if isinstance(params['file'],dict):
+                for filename , filecontext in  params['file'].items():
+                    local_var_files[filename] = filecontext
+            else:
+                local_var_files['file'] = params['file']            
+
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['multipart/form-data'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/convert/json', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='FileInfo',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+                                        
+    def post_convert_workbook_to_sql(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_sql(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.post_convert_workbook_to_sql_with_http_info(file, **kwargs)
+        else:
+            (data) = self.post_convert_workbook_to_sql_with_http_info(file, **kwargs)
+            return data
+
+    def post_convert_workbook_to_sql_with_http_info(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_sql_with_http_info(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'password', 'check_excel_restriction']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_convert_workbook_to_sql" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'file' is set
+        if ('file' not in params) or (params['file'] is None):
+            raise ValueError("Missing the required parameter `file` when calling `post_convert_workbook_to_sql`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'password' in params:
+            query_params.append(('password', params['password']))
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            
+            if isinstance(params['file'],dict):
+                for filename , filecontext in  params['file'].items():
+                    local_var_files[filename] = filecontext
+            else:
+                local_var_files['file'] = params['file']            
+
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['multipart/form-data'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/convert/sql', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='FileInfo',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def post_convert_workbook_to_csv(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_csv(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.post_convert_workbook_to_csv_with_http_info(file, **kwargs)
+        else:
+            (data) = self.post_convert_workbook_to_csv_with_http_info(file, **kwargs)
+            return data
+
+    def post_convert_workbook_to_csv_with_http_info(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_csv_with_http_info(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'password', 'check_excel_restriction']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_convert_workbook_to_csv" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'file' is set
+        if ('file' not in params) or (params['file'] is None):
+            raise ValueError("Missing the required parameter `file` when calling `post_convert_workbook_to_csv`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'password' in params:
+            query_params.append(('password', params['password']))
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            
+            if isinstance(params['file'],dict):
+                for filename , filecontext in  params['file'].items():
+                    local_var_files[filename] = filecontext
+            else:
+                local_var_files['file'] = params['file']            
+
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['multipart/form-data'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/convert/csv', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='FileInfo',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)                                        
+
     def storage_exists(self, storage_name, **kwargs):
         """
         Check if storage exists
