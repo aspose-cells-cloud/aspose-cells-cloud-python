@@ -165,6 +165,7 @@ from .conditional_formattings_response import ConditionalFormattingsResponse
 from .convert_task_parameter import ConvertTaskParameter
 from .convert_worksheet_task_parameter import ConvertWorksheetTaskParameter
 from .dif_save_options import DifSaveOptions
+from .docx_save_options import DocxSaveOptions
 from .file_version import FileVersion
 from .fill_format_response import FillFormatResponse
 from .format_condition import FormatCondition
@@ -184,6 +185,7 @@ from .import_double_array_option import ImportDoubleArrayOption
 from .import_int_array_option import ImportIntArrayOption
 from .import_picture_option import ImportPictureOption
 from .import_string_array_option import ImportStringArrayOption
+from .json_save_options import JsonSaveOptions
 from .legend_response import LegendResponse
 from .line_format import LineFormat
 from .line_response import LineResponse
@@ -224,6 +226,7 @@ from .pivot_table_operate_parameter import PivotTableOperateParameter
 from .pivot_table_response import PivotTableResponse
 from .pivot_tables import PivotTables
 from .pivot_tables_response import PivotTablesResponse
+from .pptx_save_options import PptxSaveOptions
 from .range_value_response import RangeValueResponse
 from .ranges_response import RangesResponse
 from .row import Row
@@ -245,6 +248,7 @@ from .split_result_document import SplitResultDocument
 from .split_result_response import SplitResultResponse
 from .split_workbook_task_parameter import SplitWorkbookTaskParameter
 from .spreadsheet_ml2003_save_options import SpreadsheetML2003SaveOptions
+from .sql_script_save_options import SqlScriptSaveOptions
 from .style import Style
 from .style_response import StyleResponse
 from .svg_save_options import SvgSaveOptions
