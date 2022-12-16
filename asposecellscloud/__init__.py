@@ -28,6 +28,7 @@ from .models.above_average import AboveAverage
 from .models.access_token_response import AccessTokenResponse
 from .models.area import Area
 from .models.auto_fitter_options import AutoFitterOptions
+from .models.axis import Axis
 from .models.barcode_response import BarcodeResponse
 from .models.barcode_response_list import BarcodeResponseList
 from .models.batch_convert_request import BatchConvertRequest
@@ -119,6 +120,7 @@ from .models.task_parameter import TaskParameter
 from .models.text_water_marker_request import TextWaterMarkerRequest
 from .models.texture_fill import TextureFill
 from .models.theme_color import ThemeColor
+from .models.tick_labels import TickLabels
 from .models.tile_pic_option import TilePicOption
 from .models.top10 import Top10
 from .models.top10_filter import Top10Filter
@@ -135,6 +137,7 @@ from .models.auto_filter_response import AutoFilterResponse
 from .models.auto_shape_response import AutoShapeResponse
 from .models.auto_shapes import AutoShapes
 from .models.auto_shapes_response import AutoShapesResponse
+from .models.axis_response import AxisResponse
 from .models.cell import Cell
 from .models.cell_response import CellResponse
 from .models.cells import Cells
