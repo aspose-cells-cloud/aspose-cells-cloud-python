@@ -27,7 +27,7 @@ import sys
 import os
 import re
 import time
-
+import warnings
 # python 2 and python 3 compatibility library
 from six import iteritems
 
@@ -38,6 +38,7 @@ from ..api_client import ApiClient
 class LightCellsApi(object):
 
     def __init__(self,clientid, clientsecret, version='v3.0', base_uri= 'https://api.aspose.cloud', api_client=None):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         self.clientid = clientid
         self.clientsecret = clientsecret
         self.version = version 
@@ -69,6 +70,7 @@ class LightCellsApi(object):
         
 
     def check_access_token(self):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         if self.needAuth :
             if self.access_token:
                 timediff =  time.process_time() - self.get_access_token_time
@@ -79,6 +81,7 @@ class LightCellsApi(object):
                     self.get_access_token_time =  time.process_time()
 
     def delete_metadata(self, file, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -106,6 +109,7 @@ class LightCellsApi(object):
             return data
 
     def delete_metadata_with_http_info(self, file, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -196,6 +200,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def get_metadata(self, file, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -223,6 +228,7 @@ class LightCellsApi(object):
             return data
 
     def get_metadata_with_http_info(self, file, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -312,6 +318,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_assemble(self, file, datasource, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -340,6 +347,7 @@ class LightCellsApi(object):
             return data
 
     def post_assemble_with_http_info(self, file, datasource, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -436,6 +444,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_clear_objects(self, file, objecttype, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -463,6 +472,7 @@ class LightCellsApi(object):
             return data
 
     def post_clear_objects_with_http_info(self, file, objecttype, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -560,6 +570,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_export(self, file, object_type, format, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -588,6 +599,7 @@ class LightCellsApi(object):
             return data
 
     def post_export_with_http_info(self, file, object_type, format, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -689,6 +701,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_import(self, file, import_data, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -715,6 +728,7 @@ class LightCellsApi(object):
             return data
 
     def post_import_with_http_info(self, file, import_data, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -806,6 +820,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
                                         
     def post_merge(self, file, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -834,6 +849,7 @@ class LightCellsApi(object):
             return data
 
     def post_merge_with_http_info(self, file, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -927,6 +943,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_metadata(self, file, document_properties, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -954,6 +971,7 @@ class LightCellsApi(object):
             return data
 
     def post_metadata_with_http_info(self, file, document_properties, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1049,6 +1067,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_protect(self, file, password, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1075,6 +1094,7 @@ class LightCellsApi(object):
             return data
 
     def post_protect_with_http_info(self, file, password, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1165,6 +1185,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_search(self, file, text, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1194,6 +1215,7 @@ class LightCellsApi(object):
             return data
 
     def post_search_with_http_info(self, file, text, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1293,6 +1315,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_split(self, file, format, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1323,6 +1346,7 @@ class LightCellsApi(object):
             return data
 
     def post_split_with_http_info(self, file, format, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1425,6 +1449,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_unlock(self, file, password, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1451,6 +1476,7 @@ class LightCellsApi(object):
             return data
 
     def post_unlock_with_http_info(self, file, password, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1541,6 +1567,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_watermark(self, file, text, color, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1569,6 +1596,7 @@ class LightCellsApi(object):
             return data
 
     def post_watermark_with_http_info(self, file, text, color, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1667,6 +1695,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_compress(self, file, compress_level,  **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1694,6 +1723,7 @@ class LightCellsApi(object):
             return data
 
     def post_compress_with_http_info(self, file, compress_level, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1788,6 +1818,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_replace(self, file, text, newtext, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1818,6 +1849,7 @@ class LightCellsApi(object):
             return data
 
     def post_replace_with_http_info(self, file, text, newtext, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1923,6 +1955,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_reverse(self, file, rotate_type, format, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -1951,6 +1984,7 @@ class LightCellsApi(object):
             return data
 
     def post_reverse_with_http_info(self, file, rotate_type, format, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -2050,6 +2084,7 @@ class LightCellsApi(object):
                                         collection_formats=collection_formats)
 
     def post_rotate(self, file, rotate_type, format, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -2078,6 +2113,7 @@ class LightCellsApi(object):
             return data
 
     def post_rotate_with_http_info(self, file, rotate_type, format, **kwargs):
+        warnings.warn("LightCellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

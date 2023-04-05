@@ -1,0 +1,800 @@
+{
+  "Name": "Cells",
+  "CompanyName": "Aspose",
+  "BaseUrl": "https://api.aspose.cloud",
+  "ApiVersion": "3.0",
+  "SdkVersion": "22.4.0",
+  "Namespace": "Aspose.Cells.Cloud",
+  "Label": "Aspose.Cells Cloud",
+  "Operations": [
+    {
+      "ClassName": "AutoFilterController",
+      "Name": "GetWorksheetAutoFilter",
+      "HttpMethod": "GET",
+      "Path": "/cells/{name}/worksheets/{sheetName}/autoFilter",
+      "Parameters": [
+        {
+          "Name": "name",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "sheetName",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "folder",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "storageName",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        }
+      ],
+      "Responses": [
+        {
+          "Name": "AutoFilterResponse",
+          "DataType": {
+            "Identifier": "Class",
+            "Reference": "AutoFilterResponse"
+          }
+        }
+      ]
+    },
+    {
+      "ClassName": "AutoFilterController",
+      "Name": "PutWorksheetDateFilter",
+      "HttpMethod": "PUT",
+      "Path": "/cells/{name}/worksheets/{sheetName}/autoFilter/dateFilter",
+      "Parameters": [
+        {
+          "Name": "name",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "sheetName",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "range",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "fieldIndex",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "dateTimeGroupingType",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "year",
+          "DefaultValue": 0,
+          "Nullable": false,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "month",
+          "DefaultValue": 0,
+          "Nullable": false,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "day",
+          "DefaultValue": 0,
+          "Nullable": false,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "hour",
+          "DefaultValue": 0,
+          "Nullable": false,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "minute",
+          "DefaultValue": 0,
+          "Nullable": false,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "second",
+          "DefaultValue": 0,
+          "Nullable": false,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "matchBlanks",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "refresh",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "folder",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "storageName",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        }
+      ],
+      "Responses": [
+        {
+          "Name": "CellsCloudResponse",
+          "DataType": {
+            "Identifier": "Class",
+            "Reference": "CellsCloudResponse"
+          }
+        }
+      ]
+    },
+    {
+      "ClassName": "AutoFilterController",
+      "Name": "PutWorksheetFilter",
+      "HttpMethod": "PUT",
+      "Path": "/cells/{name}/worksheets/{sheetName}/autoFilter/filter",
+      "Parameters": [
+        {
+          "Name": "name",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "sheetName",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "range",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "fieldIndex",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "criteria",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "matchBlanks",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "refresh",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "folder",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "storageName",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        }
+      ],
+      "Responses": [
+        {
+          "Name": "CellsCloudResponse",
+          "DataType": {
+            "Identifier": "Class",
+            "Reference": "CellsCloudResponse"
+          }
+        }
+      ]
+    },
+    {
+      "ClassName": "AutoFilterController",
+      "Name": "PutWorksheetIconFilter",
+      "HttpMethod": "PUT",
+      "Path": "/cells/{name}/worksheets/{sheetName}/autoFilter/iconFilter",
+      "Parameters": [
+        {
+          "Name": "name",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "sheetName",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "range",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "fieldIndex",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "iconSetType",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "iconId",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "matchBlanks",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "refresh",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "folder",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "storageName",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        }
+      ],
+      "Responses": [
+        {
+          "Name": "CellsCloudResponse",
+          "DataType": {
+            "Identifier": "Class",
+            "Reference": "CellsCloudResponse"
+          }
+        }
+      ]
+    },
+    {
+      "ClassName": "AutoFilterController",
+      "Name": "PutWorksheetCustomFilter",
+      "HttpMethod": "PUT",
+      "Path": "/cells/{name}/worksheets/{sheetName}/autoFilter/custom",
+      "Parameters": [
+        {
+          "Name": "name",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "sheetName",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "range",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "fieldIndex",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "operatorType1",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "criteria1",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "isAnd",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "operatorType2",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "criteria2",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "matchBlanks",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "refresh",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "folder",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "storageName",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        }
+      ],
+      "Responses": [
+        {
+          "Name": "CellsCloudResponse",
+          "DataType": {
+            "Identifier": "Class",
+            "Reference": "CellsCloudResponse"
+          }
+        }
+      ]
+    },
+    {
+      "ClassName": "AutoFilterController",
+      "Name": "PutWorksheetDynamicFilter",
+      "HttpMethod": "PUT",
+      "Path": "/cells/{name}/worksheets/{sheetName}/autoFilter/dynamicFilter",
+      "Parameters": [
+        {
+          "Name": "name",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "sheetName",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "range",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "fieldIndex",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "dynamicFilterType",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "matchBlanks",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "refresh",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "folder",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "storageName",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        }
+      ],
+      "Responses": [
+        {
+          "Name": "CellsCloudResponse",
+          "DataType": {
+            "Identifier": "Class",
+            "Reference": "CellsCloudResponse"
+          }
+        }
+      ]
+    },
+    {
+      "ClassName": "AutoFilterController",
+      "Name": "PutWorksheetFilterTop10",
+      "HttpMethod": "PUT",
+      "Path": "/cells/{name}/worksheets/{sheetName}/autoFilter/filterTop10",
+      "Parameters": [
+        {
+          "Name": "name",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "sheetName",
+          "Nullable": false,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Path"
+        },
+        {
+          "Name": "range",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "fieldIndex",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "isTop",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "isPercent",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "itemCount",
+          "Nullable": true,
+          "Required": true,
+          "DataType": {
+            "Identifier": "Integer"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "matchBlanks",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "refresh",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "Boolean"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "folder",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        },
+        {
+          "Name": "storageName",
+          "Nullable": true,
+          "Required": false,
+          "DataType": {
+            "Identifier": "String"
+          },
+          "Group": "Query"
+        }
+      ],
+      "Responses": [
+        {
+          "Name": "CellsCloudResponse",
+          "DataType": {
+            "Identifier": "Class",
+            "Reference": "CellsCloudResponse"
+          }
+        }
+      ]
+    }    
+  ],
+  "Models": [
+    {
+      "Name": "DiscUsage",
+      "Type": "Class",
+      "IsAbstract": false,
+      "Properties": [
+        {
+          "Name": "UsedSize",
+          "Nullable": true,
+          "ReadOnly": false,
+          "DataType": {
+            "Identifier": "Long"
+          }
+        },
+        {
+          "Name": "TotalSize",
+          "Nullable": true,
+          "ReadOnly": false,
+          "DataType": {
+            "Identifier": "Long"
+          }
+        }
+      ]
+    } 
+  ]
+}

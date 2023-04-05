@@ -64,4 +64,3 @@ target/
 .ipynb_checkpoints
 /.vscode
 /.swagger-codegen
-TestData/roywang.pfx
