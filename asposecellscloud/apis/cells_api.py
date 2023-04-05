@@ -17898,6 +17898,640 @@ class CellsApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
+    def cells_charts_get_chart_category_axis(self, name, sheet_name, chart_index, **kwargs):
+        """
+        Get chart Category Axis
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_get_chart_category_axis(name, sheet_name, chart_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: AxisResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_charts_get_chart_category_axis_with_http_info(name, sheet_name, chart_index, **kwargs)
+        else:
+            (data) = self.cells_charts_get_chart_category_axis_with_http_info(name, sheet_name, chart_index, **kwargs)
+            return data
+
+    def cells_charts_get_chart_category_axis_with_http_info(self, name, sheet_name, chart_index, **kwargs):
+        """
+        Get chart Category Axis
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_get_chart_category_axis_with_http_info(name, sheet_name, chart_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: AxisResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_charts_get_chart_category_axis" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_charts_get_chart_category_axis`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_charts_get_chart_category_axis`")
+        # verify the required parameter 'chart_index' is set
+        if ('chart_index' not in params) or (params['chart_index'] is None):
+            raise ValueError("Missing the required parameter `chart_index` when calling `cells_charts_get_chart_category_axis`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'chart_index' in params:
+            path_params['chartIndex'] = params['chart_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/categoryaxis', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AxisResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_charts_get_chart_second_category_axis(self, name, sheet_name, chart_index, **kwargs):
+        """
+        Get chart second category axis 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_get_chart_second_category_axis(name, sheet_name, chart_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: AxisResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_charts_get_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, **kwargs)
+        else:
+            (data) = self.cells_charts_get_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, **kwargs)
+            return data
+
+    def cells_charts_get_chart_second_category_axis_with_http_info(self, name, sheet_name, chart_index, **kwargs):
+        """
+        Get chart second category axis 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_get_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: AxisResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_charts_get_chart_second_category_axis" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_charts_get_chart_second_category_axis`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_charts_get_chart_second_category_axis`")
+        # verify the required parameter 'chart_index' is set
+        if ('chart_index' not in params) or (params['chart_index'] is None):
+            raise ValueError("Missing the required parameter `chart_index` when calling `cells_charts_get_chart_second_category_axis`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'chart_index' in params:
+            path_params['chartIndex'] = params['chart_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/secondcategoryaxis', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AxisResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_charts_get_chart_second_value_axis(self, name, sheet_name, chart_index, **kwargs):
+        """
+        Get chart second value axis 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_get_chart_second_value_axis(name, sheet_name, chart_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: AxisResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_charts_get_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, **kwargs)
+        else:
+            (data) = self.cells_charts_get_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, **kwargs)
+            return data
+
+    def cells_charts_get_chart_second_value_axis_with_http_info(self, name, sheet_name, chart_index, **kwargs):
+        """
+        Get chart second value axis 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_get_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: AxisResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_charts_get_chart_second_value_axis" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_charts_get_chart_second_value_axis`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_charts_get_chart_second_value_axis`")
+        # verify the required parameter 'chart_index' is set
+        if ('chart_index' not in params) or (params['chart_index'] is None):
+            raise ValueError("Missing the required parameter `chart_index` when calling `cells_charts_get_chart_second_value_axis`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'chart_index' in params:
+            path_params['chartIndex'] = params['chart_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/secondvalueaxis', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AxisResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_charts_get_chart_series_axis(self, name, sheet_name, chart_index, **kwargs):
+        """
+        Get chart Series Axis
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_get_chart_series_axis(name, sheet_name, chart_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: AxisResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_charts_get_chart_series_axis_with_http_info(name, sheet_name, chart_index, **kwargs)
+        else:
+            (data) = self.cells_charts_get_chart_series_axis_with_http_info(name, sheet_name, chart_index, **kwargs)
+            return data
+
+    def cells_charts_get_chart_series_axis_with_http_info(self, name, sheet_name, chart_index, **kwargs):
+        """
+        Get chart Series Axis
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_get_chart_series_axis_with_http_info(name, sheet_name, chart_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: AxisResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_charts_get_chart_series_axis" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_charts_get_chart_series_axis`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_charts_get_chart_series_axis`")
+        # verify the required parameter 'chart_index' is set
+        if ('chart_index' not in params) or (params['chart_index'] is None):
+            raise ValueError("Missing the required parameter `chart_index` when calling `cells_charts_get_chart_series_axis`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'chart_index' in params:
+            path_params['chartIndex'] = params['chart_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/seriesaxis', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AxisResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_charts_get_chart_value_axis(self, name, sheet_name, chart_index, **kwargs):
+        """
+        Get chart Value Axis
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_get_chart_value_axis(name, sheet_name, chart_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: AxisResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_charts_get_chart_value_axis_with_http_info(name, sheet_name, chart_index, **kwargs)
+        else:
+            (data) = self.cells_charts_get_chart_value_axis_with_http_info(name, sheet_name, chart_index, **kwargs)
+            return data
+
+    def cells_charts_get_chart_value_axis_with_http_info(self, name, sheet_name, chart_index, **kwargs):
+        """
+        Get chart Value Axis
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_get_chart_value_axis_with_http_info(name, sheet_name, chart_index, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: AxisResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'chart_index', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_charts_get_chart_value_axis" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_charts_get_chart_value_axis`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_charts_get_chart_value_axis`")
+        # verify the required parameter 'chart_index' is set
+        if ('chart_index' not in params) or (params['chart_index'] is None):
+            raise ValueError("Missing the required parameter `chart_index` when calling `cells_charts_get_chart_value_axis`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'chart_index' in params:
+            path_params['chartIndex'] = params['chart_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/valueaxis', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AxisResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
 
     def cells_charts_get_worksheet_chart(self, name, sheet_name, chart_number, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
@@ -18411,6 +19045,676 @@ class CellsApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
+    def cells_charts_post_chart_category_axis(self, name, sheet_name, chart_index, axis, **kwargs):
+        """
+        Update chart Category Axis
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_post_chart_category_axis(name, sheet_name, chart_index, axis, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param Axis axis: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_charts_post_chart_category_axis_with_http_info(name, sheet_name, chart_index, axis, **kwargs)
+        else:
+            (data) = self.cells_charts_post_chart_category_axis_with_http_info(name, sheet_name, chart_index, axis, **kwargs)
+            return data
+
+    def cells_charts_post_chart_category_axis_with_http_info(self, name, sheet_name, chart_index, axis, **kwargs):
+        """
+        Update chart Category Axis
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_post_chart_category_axis_with_http_info(name, sheet_name, chart_index, axis, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param Axis axis: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'chart_index', 'axis', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_charts_post_chart_category_axis" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_charts_post_chart_category_axis`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_charts_post_chart_category_axis`")
+        # verify the required parameter 'chart_index' is set
+        if ('chart_index' not in params) or (params['chart_index'] is None):
+            raise ValueError("Missing the required parameter `chart_index` when calling `cells_charts_post_chart_category_axis`")
+        # verify the required parameter 'axis' is set
+        if ('axis' not in params) or (params['axis'] is None):
+            raise ValueError("Missing the required parameter `axis` when calling `cells_charts_post_chart_category_axis`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'chart_index' in params:
+            path_params['chartIndex'] = params['chart_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'axis' in params:
+            body_params = params['axis']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/categoryaxis', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_charts_post_chart_second_category_axis(self, name, sheet_name, chart_index, axis, **kwargs):
+        """
+        Update chart second category axis 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_post_chart_second_category_axis(name, sheet_name, chart_index, axis, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param Axis axis: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_charts_post_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, axis, **kwargs)
+        else:
+            (data) = self.cells_charts_post_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, axis, **kwargs)
+            return data
+
+    def cells_charts_post_chart_second_category_axis_with_http_info(self, name, sheet_name, chart_index, axis, **kwargs):
+        """
+        Update chart second category axis 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_post_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, axis, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param Axis axis: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'chart_index', 'axis', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_charts_post_chart_second_category_axis" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_charts_post_chart_second_category_axis`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_charts_post_chart_second_category_axis`")
+        # verify the required parameter 'chart_index' is set
+        if ('chart_index' not in params) or (params['chart_index'] is None):
+            raise ValueError("Missing the required parameter `chart_index` when calling `cells_charts_post_chart_second_category_axis`")
+        # verify the required parameter 'axis' is set
+        if ('axis' not in params) or (params['axis'] is None):
+            raise ValueError("Missing the required parameter `axis` when calling `cells_charts_post_chart_second_category_axis`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'chart_index' in params:
+            path_params['chartIndex'] = params['chart_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'axis' in params:
+            body_params = params['axis']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/secondcategoryaxis', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_charts_post_chart_second_value_axis(self, name, sheet_name, chart_index, axis, **kwargs):
+        """
+        Update chart second value axis 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_post_chart_second_value_axis(name, sheet_name, chart_index, axis, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param Axis axis: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_charts_post_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, axis, **kwargs)
+        else:
+            (data) = self.cells_charts_post_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, axis, **kwargs)
+            return data
+
+    def cells_charts_post_chart_second_value_axis_with_http_info(self, name, sheet_name, chart_index, axis, **kwargs):
+        """
+        Update chart second value axis 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_post_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, axis, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param Axis axis: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'chart_index', 'axis', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_charts_post_chart_second_value_axis" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_charts_post_chart_second_value_axis`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_charts_post_chart_second_value_axis`")
+        # verify the required parameter 'chart_index' is set
+        if ('chart_index' not in params) or (params['chart_index'] is None):
+            raise ValueError("Missing the required parameter `chart_index` when calling `cells_charts_post_chart_second_value_axis`")
+        # verify the required parameter 'axis' is set
+        if ('axis' not in params) or (params['axis'] is None):
+            raise ValueError("Missing the required parameter `axis` when calling `cells_charts_post_chart_second_value_axis`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'chart_index' in params:
+            path_params['chartIndex'] = params['chart_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'axis' in params:
+            body_params = params['axis']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/secondvalueaxis', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_charts_post_chart_series_axis(self, name, sheet_name, chart_index, axis, **kwargs):
+        """
+        Update chart Series Axis
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_post_chart_series_axis(name, sheet_name, chart_index, axis, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param Axis axis: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_charts_post_chart_series_axis_with_http_info(name, sheet_name, chart_index, axis, **kwargs)
+        else:
+            (data) = self.cells_charts_post_chart_series_axis_with_http_info(name, sheet_name, chart_index, axis, **kwargs)
+            return data
+
+    def cells_charts_post_chart_series_axis_with_http_info(self, name, sheet_name, chart_index, axis, **kwargs):
+        """
+        Update chart Series Axis
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_post_chart_series_axis_with_http_info(name, sheet_name, chart_index, axis, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param Axis axis: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'chart_index', 'axis', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_charts_post_chart_series_axis" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_charts_post_chart_series_axis`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_charts_post_chart_series_axis`")
+        # verify the required parameter 'chart_index' is set
+        if ('chart_index' not in params) or (params['chart_index'] is None):
+            raise ValueError("Missing the required parameter `chart_index` when calling `cells_charts_post_chart_series_axis`")
+        # verify the required parameter 'axis' is set
+        if ('axis' not in params) or (params['axis'] is None):
+            raise ValueError("Missing the required parameter `axis` when calling `cells_charts_post_chart_series_axis`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'chart_index' in params:
+            path_params['chartIndex'] = params['chart_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'axis' in params:
+            body_params = params['axis']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/seriesaxis', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def cells_charts_post_chart_value_axis(self, name, sheet_name, chart_index, axis, **kwargs):
+        """
+        Update chart value axis 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_post_chart_value_axis(name, sheet_name, chart_index, axis, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param Axis axis: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.cells_charts_post_chart_value_axis_with_http_info(name, sheet_name, chart_index, axis, **kwargs)
+        else:
+            (data) = self.cells_charts_post_chart_value_axis_with_http_info(name, sheet_name, chart_index, axis, **kwargs)
+            return data
+
+    def cells_charts_post_chart_value_axis_with_http_info(self, name, sheet_name, chart_index, axis, **kwargs):
+        """
+        Update chart value axis 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.cells_charts_post_chart_value_axis_with_http_info(name, sheet_name, chart_index, axis, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: (required)
+        :param str sheet_name: (required)
+        :param int chart_index: (required)
+        :param Axis axis: (required)
+        :param str folder:
+        :param str storage_name:
+        :return: CellsCloudResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'sheet_name', 'chart_index', 'axis', 'folder', 'storage_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cells_charts_post_chart_value_axis" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `cells_charts_post_chart_value_axis`")
+        # verify the required parameter 'sheet_name' is set
+        if ('sheet_name' not in params) or (params['sheet_name'] is None):
+            raise ValueError("Missing the required parameter `sheet_name` when calling `cells_charts_post_chart_value_axis`")
+        # verify the required parameter 'chart_index' is set
+        if ('chart_index' not in params) or (params['chart_index'] is None):
+            raise ValueError("Missing the required parameter `chart_index` when calling `cells_charts_post_chart_value_axis`")
+        # verify the required parameter 'axis' is set
+        if ('axis' not in params) or (params['axis'] is None):
+            raise ValueError("Missing the required parameter `axis` when calling `cells_charts_post_chart_value_axis`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'sheet_name' in params:
+            path_params['sheetName'] = params['sheet_name']
+        if 'chart_index' in params:
+            path_params['chartIndex'] = params['chart_index']
+
+        query_params = []
+        if 'folder' in params:
+            query_params.append(('folder', params['folder']))
+        if 'storage_name' in params:
+            query_params.append(('storageName', params['storage_name']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'axis' in params:
+            body_params = params['axis']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/valueaxis', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CellsCloudResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
 
     def cells_charts_post_worksheet_chart(self, name, sheet_name, chart_index, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
@@ -50822,6 +52126,357 @@ class CellsApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
+
+    def post_convert_workbook_to_json(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_json(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.post_convert_workbook_to_json_with_http_info(file, **kwargs)
+        else:
+            (data) = self.post_convert_workbook_to_json_with_http_info(file, **kwargs)
+            return data
+
+    def post_convert_workbook_to_json_with_http_info(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_json_with_http_info(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'password', 'check_excel_restriction']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_convert_workbook_to_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'file' is set
+        if ('file' not in params) or (params['file'] is None):
+            raise ValueError("Missing the required parameter `file` when calling `post_convert_workbook_to_json`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'password' in params:
+            query_params.append(('password', params['password']))
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            
+            if isinstance(params['file'],dict):
+                for filename , filecontext in  params['file'].items():
+                    local_var_files[filename] = filecontext
+            else:
+                local_var_files['file'] = params['file']            
+
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['multipart/form-data'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/convert/json', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='FileInfo',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+                                        
+    def post_convert_workbook_to_sql(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_sql(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.post_convert_workbook_to_sql_with_http_info(file, **kwargs)
+        else:
+            (data) = self.post_convert_workbook_to_sql_with_http_info(file, **kwargs)
+            return data
+
+    def post_convert_workbook_to_sql_with_http_info(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_sql_with_http_info(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'password', 'check_excel_restriction']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_convert_workbook_to_sql" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'file' is set
+        if ('file' not in params) or (params['file'] is None):
+            raise ValueError("Missing the required parameter `file` when calling `post_convert_workbook_to_sql`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'password' in params:
+            query_params.append(('password', params['password']))
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            
+            if isinstance(params['file'],dict):
+                for filename , filecontext in  params['file'].items():
+                    local_var_files[filename] = filecontext
+            else:
+                local_var_files['file'] = params['file']            
+
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['multipart/form-data'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/convert/sql', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='FileInfo',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def post_convert_workbook_to_csv(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_csv(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.post_convert_workbook_to_csv_with_http_info(file, **kwargs)
+        else:
+            (data) = self.post_convert_workbook_to_csv_with_http_info(file, **kwargs)
+            return data
+
+    def post_convert_workbook_to_csv_with_http_info(self, file, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_convert_workbook_to_csv_with_http_info(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: File to upload (required)
+        :param str password:
+        :param bool check_excel_restriction:
+        :return: FileInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'password', 'check_excel_restriction']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_convert_workbook_to_csv" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'file' is set
+        if ('file' not in params) or (params['file'] is None):
+            raise ValueError("Missing the required parameter `file` when calling `post_convert_workbook_to_csv`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'password' in params:
+            query_params.append(('password', params['password']))
+        if 'check_excel_restriction' in params:
+            query_params.append(('checkExcelRestriction', params['check_excel_restriction']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            
+            if isinstance(params['file'],dict):
+                for filename , filecontext in  params['file'].items():
+                    local_var_files[filename] = filecontext
+            else:
+                local_var_files['file'] = params['file']            
+
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['multipart/form-data'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/cells/convert/csv', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='FileInfo',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)                                        
 
     def storage_exists(self, storage_name, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
