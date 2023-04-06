@@ -49792,7 +49792,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def copy_file(self, src_path, dest_path, **kwargs):
+    def copy_file_(self, src_path, dest_path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Copy file
@@ -49818,12 +49818,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.copy_file_with_http_info(src_path, dest_path, **kwargs)
+            return self.copy_file_with_http_info_(src_path, dest_path, **kwargs)
         else:
-            (data) = self.copy_file_with_http_info(src_path, dest_path, **kwargs)
+            (data) = self.copy_file_with_http_info_(src_path, dest_path, **kwargs)
             return data
 
-    def copy_file_with_http_info(self, src_path, dest_path, **kwargs):
+    def copy_file_with_http_info_(self, src_path, dest_path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Copy file
@@ -49918,7 +49918,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def copy_folder(self, src_path, dest_path, **kwargs):
+    def copy_folder_(self, src_path, dest_path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Copy folder
@@ -49943,12 +49943,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.copy_folder_with_http_info(src_path, dest_path, **kwargs)
+            return self.copy_folder_with_http_info_(src_path, dest_path, **kwargs)
         else:
-            (data) = self.copy_folder_with_http_info(src_path, dest_path, **kwargs)
+            (data) = self.copy_folder_with_http_info_(src_path, dest_path, **kwargs)
             return data
 
-    def copy_folder_with_http_info(self, src_path, dest_path, **kwargs):
+    def copy_folder_with_http_info_(self, src_path, dest_path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Copy folder
@@ -50040,7 +50040,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def create_folder(self, path, **kwargs):
+    def create_folder_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Create the folder
@@ -50063,12 +50063,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.create_folder_with_http_info(path, **kwargs)
+            return self.create_folder_with_http_info_(path, **kwargs)
         else:
-            (data) = self.create_folder_with_http_info(path, **kwargs)
+            (data) = self.create_folder_with_http_info_(path, **kwargs)
             return data
 
-    def create_folder_with_http_info(self, path, **kwargs):
+    def create_folder_with_http_info_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Create the folder
@@ -50151,7 +50151,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_file(self, path, **kwargs):
+    def delete_file_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Delete file
@@ -50175,12 +50175,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.delete_file_with_http_info(path, **kwargs)
+            return self.delete_file_with_http_info_(path, **kwargs)
         else:
-            (data) = self.delete_file_with_http_info(path, **kwargs)
+            (data) = self.delete_file_with_http_info_(path, **kwargs)
             return data
 
-    def delete_file_with_http_info(self, path, **kwargs):
+    def delete_file_with_http_info_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Delete file
@@ -50266,7 +50266,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_folder(self, path, **kwargs):
+    def delete_folder_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Delete folder
@@ -50290,12 +50290,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.delete_folder_with_http_info(path, **kwargs)
+            return self.delete_folder_with_http_info_(path, **kwargs)
         else:
-            (data) = self.delete_folder_with_http_info(path, **kwargs)
+            (data) = self.delete_folder_with_http_info_(path, **kwargs)
             return data
 
-    def delete_folder_with_http_info(self, path, **kwargs):
+    def delete_folder_with_http_info_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Delete folder
@@ -50381,7 +50381,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def download_file(self, path, **kwargs):
+    def download_file_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Download file
@@ -50405,12 +50405,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.download_file_with_http_info(path, **kwargs)
+            return self.download_file_with_http_info_(path, **kwargs)
         else:
-            (data) = self.download_file_with_http_info(path, **kwargs)
+            (data) = self.download_file_with_http_info_(path, **kwargs)
             return data
 
-    def download_file_with_http_info(self, path, **kwargs):
+    def download_file_with_http_info_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Download file
@@ -50496,7 +50496,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_disc_usage(self, **kwargs):
+    def get_disc_usage_(self, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Get disc usage
@@ -50518,12 +50518,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.get_disc_usage_with_http_info(**kwargs)
+            return self.get_disc_usage_with_http_info_(**kwargs)
         else:
-            (data) = self.get_disc_usage_with_http_info(**kwargs)
+            (data) = self.get_disc_usage_with_http_info_(**kwargs)
             return data
 
-    def get_disc_usage_with_http_info(self, **kwargs):
+    def get_disc_usage_with_http_info_(self, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Get disc usage
@@ -50600,7 +50600,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_file_versions(self, path, **kwargs):
+    def get_file_versions_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Get file versions
@@ -50623,12 +50623,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.get_file_versions_with_http_info(path, **kwargs)
+            return self.get_file_versions_with_http_info_(path, **kwargs)
         else:
-            (data) = self.get_file_versions_with_http_info(path, **kwargs)
+            (data) = self.get_file_versions_with_http_info_(path, **kwargs)
             return data
 
-    def get_file_versions_with_http_info(self, path, **kwargs):
+    def get_file_versions_with_http_info_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Get file versions
@@ -50711,7 +50711,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_files_list(self, path, **kwargs):
+    def get_files_list_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Get all files and folders within a folder
@@ -50734,12 +50734,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.get_files_list_with_http_info(path, **kwargs)
+            return self.get_files_list_with_http_info_(path, **kwargs)
         else:
-            (data) = self.get_files_list_with_http_info(path, **kwargs)
+            (data) = self.get_files_list_with_http_info_(path, **kwargs)
             return data
 
-    def get_files_list_with_http_info(self, path, **kwargs):
+    def get_files_list_with_http_info_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Get all files and folders within a folder
@@ -50822,7 +50822,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def move_file(self, src_path, dest_path, **kwargs):
+    def move_file_(self, src_path, dest_path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Move file
@@ -50848,12 +50848,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.move_file_with_http_info(src_path, dest_path, **kwargs)
+            return self.move_file_with_http_info_(src_path, dest_path, **kwargs)
         else:
-            (data) = self.move_file_with_http_info(src_path, dest_path, **kwargs)
+            (data) = self.move_file_with_http_info_(src_path, dest_path, **kwargs)
             return data
 
-    def move_file_with_http_info(self, src_path, dest_path, **kwargs):
+    def move_file_with_http_info_(self, src_path, dest_path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Move file
@@ -50948,7 +50948,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def move_folder(self, src_path, dest_path, **kwargs):
+    def move_folder_(self, src_path, dest_path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Move folder
@@ -50973,12 +50973,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.move_folder_with_http_info(src_path, dest_path, **kwargs)
+            return self.move_folder_with_http_info_(src_path, dest_path, **kwargs)
         else:
-            (data) = self.move_folder_with_http_info(src_path, dest_path, **kwargs)
+            (data) = self.move_folder_with_http_info_(src_path, dest_path, **kwargs)
             return data
 
-    def move_folder_with_http_info(self, src_path, dest_path, **kwargs):
+    def move_folder_with_http_info_(self, src_path, dest_path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Move folder
@@ -51071,7 +51071,6 @@ class CellsApi(object):
                                         collection_formats=collection_formats)
 
     def o_auth_post(self, grant_type, client_id, client_secret, **kwargs):
-        warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Get Access token
         This method makes a synchronous HTTP request by default. To make an
@@ -51100,7 +51099,6 @@ class CellsApi(object):
             return data
 
     def o_auth_post_with_http_info(self, grant_type, client_id, client_secret, **kwargs):
-        warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Get Access token
         This method makes a synchronous HTTP request by default. To make an
@@ -51194,7 +51192,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def object_exists(self, path, **kwargs):
+    def object_exists_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Check if file or folder exists
@@ -51218,12 +51216,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.object_exists_with_http_info(path, **kwargs)
+            return self.object_exists_with_http_info_(path, **kwargs)
         else:
-            (data) = self.object_exists_with_http_info(path, **kwargs)
+            (data) = self.object_exists_with_http_info_(path, **kwargs)
             return data
 
-    def object_exists_with_http_info(self, path, **kwargs):
+    def object_exists_with_http_info_(self, path, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Check if file or folder exists
@@ -51309,7 +51307,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_batch_convert(self, batch_convert_request, **kwargs):
+    def post_batch_convert_(self, batch_convert_request, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -51330,12 +51328,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_batch_convert_with_http_info(batch_convert_request, **kwargs)
+            return self.post_batch_convert_with_http_info_(batch_convert_request, **kwargs)
         else:
-            (data) = self.post_batch_convert_with_http_info(batch_convert_request, **kwargs)
+            (data) = self.post_batch_convert_with_http_info_(batch_convert_request, **kwargs)
             return data
 
-    def post_batch_convert_with_http_info(self, batch_convert_request, **kwargs):
+    def post_batch_convert_with_http_info_(self, batch_convert_request, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -51413,7 +51411,7 @@ class CellsApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
-    def post_convert_workbook_to_docx(self, file, **kwargs):
+    def post_convert_workbook_to_docx_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -51436,12 +51434,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_convert_workbook_to_docx_with_http_info(file, **kwargs)
+            return self.post_convert_workbook_to_docx_with_http_info_(file, **kwargs)
         else:
-            (data) = self.post_convert_workbook_to_docx_with_http_info(file, **kwargs)
+            (data) = self.post_convert_workbook_to_docx_with_http_info_(file, **kwargs)
             return data
 
-    def post_convert_workbook_to_docx_with_http_info(self, file, **kwargs):
+    def post_convert_workbook_to_docx_with_http_info_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -51532,7 +51530,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_convert_workbook_to_pdf(self, file, **kwargs):
+    def post_convert_workbook_to_pdf_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -51555,12 +51553,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_convert_workbook_to_pdf_with_http_info(file, **kwargs)
+            return self.post_convert_workbook_to_pdf_with_http_info_(file, **kwargs)
         else:
-            (data) = self.post_convert_workbook_to_pdf_with_http_info(file, **kwargs)
+            (data) = self.post_convert_workbook_to_pdf_with_http_info_(file, **kwargs)
             return data
 
-    def post_convert_workbook_to_pdf_with_http_info(self, file, **kwargs):
+    def post_convert_workbook_to_pdf_with_http_info_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -51651,7 +51649,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_convert_workbook_to_png(self, file, **kwargs):
+    def post_convert_workbook_to_png_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -51674,12 +51672,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_convert_workbook_to_png_with_http_info(file, **kwargs)
+            return self.post_convert_workbook_to_png_with_http_info_(file, **kwargs)
         else:
-            (data) = self.post_convert_workbook_to_png_with_http_info(file, **kwargs)
+            (data) = self.post_convert_workbook_to_png_with_http_info_(file, **kwargs)
             return data
 
-    def post_convert_workbook_to_png_with_http_info(self, file, **kwargs):
+    def post_convert_workbook_to_png_with_http_info_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -51770,7 +51768,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_convert_workbook_to_pptx(self, file, **kwargs):
+    def post_convert_workbook_to_pptx_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -51793,12 +51791,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_convert_workbook_to_pptx_with_http_info(file, **kwargs)
+            return self.post_convert_workbook_to_pptx_with_http_info_(file, **kwargs)
         else:
-            (data) = self.post_convert_workbook_to_pptx_with_http_info(file, **kwargs)
+            (data) = self.post_convert_workbook_to_pptx_with_http_info_(file, **kwargs)
             return data
 
-    def post_convert_workbook_to_pptx_with_http_info(self, file, **kwargs):
+    def post_convert_workbook_to_pptx_with_http_info_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -51889,7 +51887,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_convert_workbook_to_html(self, file, **kwargs):
+    def post_convert_workbook_to_html_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -51912,12 +51910,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_convert_workbook_to_html_with_http_info(file, **kwargs)
+            return self.post_convert_workbook_to_html_with_http_info_(file, **kwargs)
         else:
-            (data) = self.post_convert_workbook_to_html_with_http_info(file, **kwargs)
+            (data) = self.post_convert_workbook_to_html_with_http_info_(file, **kwargs)
             return data
 
-    def post_convert_workbook_to_html_with_http_info(self, file, **kwargs):
+    def post_convert_workbook_to_html_with_http_info_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -52008,7 +52006,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_convert_workbook_to_markdown(self, file, **kwargs):
+    def post_convert_workbook_to_markdown_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -52031,12 +52029,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_convert_workbook_to_markdown_with_http_info(file, **kwargs)
+            return self.post_convert_workbook_to_markdown_with_http_info_(file, **kwargs)
         else:
-            (data) = self.post_convert_workbook_to_markdown_with_http_info(file, **kwargs)
+            (data) = self.post_convert_workbook_to_markdown_with_http_info_(file, **kwargs)
             return data
 
-    def post_convert_workbook_to_markdown_with_http_info(self, file, **kwargs):
+    def post_convert_workbook_to_markdown_with_http_info_(self, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         This method makes a synchronous HTTP request by default. To make an
@@ -52127,7 +52125,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_convert_workbook_to_json(self, file, **kwargs):
+    def post_convert_workbook_to_json_(self, file, **kwargs):
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -52149,12 +52147,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_convert_workbook_to_json_with_http_info(file, **kwargs)
+            return self.post_convert_workbook_to_json_with_http_info_(file, **kwargs)
         else:
-            (data) = self.post_convert_workbook_to_json_with_http_info(file, **kwargs)
+            (data) = self.post_convert_workbook_to_json_with_http_info_(file, **kwargs)
             return data
 
-    def post_convert_workbook_to_json_with_http_info(self, file, **kwargs):
+    def post_convert_workbook_to_json_with_http_info_(self, file, **kwargs):
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -52244,7 +52242,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
                                         
-    def post_convert_workbook_to_sql(self, file, **kwargs):
+    def post_convert_workbook_to_sql_(self, file, **kwargs):
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -52266,12 +52264,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_convert_workbook_to_sql_with_http_info(file, **kwargs)
+            return self.post_convert_workbook_to_sql_with_http_info_(file, **kwargs)
         else:
-            (data) = self.post_convert_workbook_to_sql_with_http_info(file, **kwargs)
+            (data) = self.post_convert_workbook_to_sql_with_http_info_(file, **kwargs)
             return data
 
-    def post_convert_workbook_to_sql_with_http_info(self, file, **kwargs):
+    def post_convert_workbook_to_sql_with_http_info_(self, file, **kwargs):
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -52361,7 +52359,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_convert_workbook_to_csv(self, file, **kwargs):
+    def post_convert_workbook_to_csv_(self, file, **kwargs):
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -52383,12 +52381,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_convert_workbook_to_csv_with_http_info(file, **kwargs)
+            return self.post_convert_workbook_to_csv_with_http_info_(file, **kwargs)
         else:
-            (data) = self.post_convert_workbook_to_csv_with_http_info(file, **kwargs)
+            (data) = self.post_convert_workbook_to_csv_with_http_info_(file, **kwargs)
             return data
 
-    def post_convert_workbook_to_csv_with_http_info(self, file, **kwargs):
+    def post_convert_workbook_to_csv_with_http_info_(self, file, **kwargs):
         """
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -52478,7 +52476,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)                                        
 
-    def storage_exists(self, storage_name, **kwargs):
+    def storage_exists_(self, storage_name, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Check if storage exists
@@ -52500,12 +52498,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.storage_exists_with_http_info(storage_name, **kwargs)
+            return self.storage_exists_with_http_info_(storage_name, **kwargs)
         else:
-            (data) = self.storage_exists_with_http_info(storage_name, **kwargs)
+            (data) = self.storage_exists_with_http_info_(storage_name, **kwargs)
             return data
 
-    def storage_exists_with_http_info(self, storage_name, **kwargs):
+    def storage_exists_with_http_info_(self, storage_name, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Check if storage exists
@@ -52585,7 +52583,7 @@ class CellsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def upload_file(self, path, file, **kwargs):
+    def upload_file_(self, path, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Upload file
@@ -52609,12 +52607,12 @@ class CellsApi(object):
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.upload_file_with_http_info(path, file, **kwargs)
+            return self.upload_file_with_http_info_(path, file, **kwargs)
         else:
-            (data) = self.upload_file_with_http_info(path, file, **kwargs)
+            (data) = self.upload_file_with_http_info_(path, file, **kwargs)
             return data
 
-    def upload_file_with_http_info(self, path, file, **kwargs):
+    def upload_file_with_http_info_(self, path, file, **kwargs):
         warnings.warn("CellsApi is deprecated", DeprecationWarning)
         """
         Upload file
