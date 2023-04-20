@@ -287,6 +287,8 @@ from .models.legend import Legend
 from .models.ole_object import OleObject
 from .models.picture import Picture
 from .models.title import Title
+from .models.import_position import ImportPosition
+from .models.import_xml_request import ImportXMLRequest
 
 # import apis into sdk package
 from .apis.cells_api import CellsApi

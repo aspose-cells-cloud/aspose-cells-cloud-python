@@ -287,3 +287,5 @@ from .legend import Legend
 from .ole_object import OleObject
 from .picture import Picture
 from .title import Title
+from .import_position import ImportPosition
+from .import_xml_request import ImportXMLRequest
