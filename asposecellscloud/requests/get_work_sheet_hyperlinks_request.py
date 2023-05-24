@@ -43,12 +43,12 @@ class GetWorkSheetHyperlinksRequest(object):
 
         # verify the required parameter 'name' is set
         if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `get_work_sheet_hyperlinks`")
+            raise ValueError("Missing the required parameter `name` when calling `get_worksheet_hyperlinks`")
 
 
         # verify the required parameter 'sheet_name' is set
         if self.sheet_name is None:
-            raise ValueError("Missing the required parameter `sheet_name` when calling `get_work_sheet_hyperlinks`")
+            raise ValueError("Missing the required parameter `sheet_name` when calling `get_worksheet_hyperlinks`")
 
 
         collection_formats = {}

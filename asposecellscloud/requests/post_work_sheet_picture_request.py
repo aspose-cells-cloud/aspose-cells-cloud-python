@@ -45,22 +45,22 @@ class PostWorkSheetPictureRequest(object):
 
         # verify the required parameter 'name' is set
         if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `post_work_sheet_picture`")
+            raise ValueError("Missing the required parameter `name` when calling `post_worksheet_picture`")
 
 
         # verify the required parameter 'sheet_name' is set
         if self.sheet_name is None:
-            raise ValueError("Missing the required parameter `sheet_name` when calling `post_work_sheet_picture`")
+            raise ValueError("Missing the required parameter `sheet_name` when calling `post_worksheet_picture`")
 
 
         # verify the required parameter 'picture_index' is set
         if self.picture_index is None:
-            raise ValueError("Missing the required parameter `picture_index` when calling `post_work_sheet_picture`")
+            raise ValueError("Missing the required parameter `picture_index` when calling `post_worksheet_picture`")
 
 
         # verify the required parameter 'picture' is set
         if self.picture is None:
-            raise ValueError("Missing the required parameter `picture` when calling `post_work_sheet_picture`")
+            raise ValueError("Missing the required parameter `picture` when calling `post_worksheet_picture`")
 
 
         collection_formats = {}

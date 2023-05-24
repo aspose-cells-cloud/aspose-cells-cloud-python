@@ -29,7 +29,7 @@ class TestHypelinksControllerApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_work_sheet_hyperlinks(self):
+    def test_get_worksheet_hyperlinks(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -39,10 +39,10 @@ class TestHypelinksControllerApi(unittest.TestCase):
         self.assertTrue(len(result.uploaded)>0) 
      
         request =  GetWorkSheetHyperlinksRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
-        self.api.get_work_sheet_hyperlinks(request)
+        self.api.get_worksheet_hyperlinks(request)
 
 
-    def test_get_work_sheet_hyperlink(self):
+    def test_get_worksheet_hyperlink(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -52,10 +52,10 @@ class TestHypelinksControllerApi(unittest.TestCase):
         self.assertTrue(len(result.uploaded)>0) 
      
         request =  GetWorkSheetHyperlinkRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
-        self.api.get_work_sheet_hyperlink(request)
+        self.api.get_worksheet_hyperlink(request)
 
 
-    def test_delete_work_sheet_hyperlink(self):
+    def test_delete_worksheet_hyperlink(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -65,10 +65,10 @@ class TestHypelinksControllerApi(unittest.TestCase):
         self.assertTrue(len(result.uploaded)>0) 
      
         request =  DeleteWorkSheetHyperlinkRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
-        self.api.delete_work_sheet_hyperlink(request)
+        self.api.delete_worksheet_hyperlink(request)
 
 
-    def test_post_work_sheet_hyperlink(self):
+    def test_post_worksheet_hyperlink(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -79,10 +79,10 @@ class TestHypelinksControllerApi(unittest.TestCase):
         self.assertTrue(len(result.uploaded)>0) 
      
         request =  PostWorkSheetHyperlinkRequest( remote_name, 'Sheet1', 0, hyperlink,folder= remote_folder,storage_name= '')
-        self.api.post_work_sheet_hyperlink(request)
+        self.api.post_worksheet_hyperlink(request)
 
 
-    def test_put_work_sheet_hyperlink(self):
+    def test_put_worksheet_hyperlink(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -92,10 +92,10 @@ class TestHypelinksControllerApi(unittest.TestCase):
         self.assertTrue(len(result.uploaded)>0) 
      
         request =  PutWorkSheetHyperlinkRequest( remote_name, 'Sheet1', 1, 1, 2, 3, 'https://products.aspose.cloud/cells/',folder= remote_folder,storage_name= '')
-        self.api.put_work_sheet_hyperlink(request)
+        self.api.put_worksheet_hyperlink(request)
 
 
-    def test_delete_work_sheet_hyperlinks(self):
+    def test_delete_worksheet_hyperlinks(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -105,7 +105,7 @@ class TestHypelinksControllerApi(unittest.TestCase):
         self.assertTrue(len(result.uploaded)>0) 
      
         request =  DeleteWorkSheetHyperlinksRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
-        self.api.delete_work_sheet_hyperlinks(request)
+        self.api.delete_worksheet_hyperlinks(request)
 
 
 if __name__ == '__main__':

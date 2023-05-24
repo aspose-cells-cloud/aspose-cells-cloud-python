@@ -43,12 +43,12 @@ class DeleteWorkSheetPicturesRequest(object):
 
         # verify the required parameter 'name' is set
         if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `delete_work_sheet_pictures`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_worksheet_pictures`")
 
 
         # verify the required parameter 'sheet_name' is set
         if self.sheet_name is None:
-            raise ValueError("Missing the required parameter `sheet_name` when calling `delete_work_sheet_pictures`")
+            raise ValueError("Missing the required parameter `sheet_name` when calling `delete_worksheet_pictures`")
 
 
         collection_formats = {}

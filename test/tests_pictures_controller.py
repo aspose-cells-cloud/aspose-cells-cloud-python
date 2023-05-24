@@ -71,7 +71,7 @@ class TestPicturesControllerApi(unittest.TestCase):
         self.api.put_worksheet_add_picture(request)
 
 
-    def test_post_work_sheet_picture(self):
+    def test_post_worksheet_picture(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -82,7 +82,7 @@ class TestPicturesControllerApi(unittest.TestCase):
         self.assertTrue(len(result.uploaded)>0) 
      
         request =  PostWorkSheetPictureRequest( remote_name, 'Sheet6', 0, picture,folder= remote_folder,storage_name= '')
-        self.api.post_work_sheet_picture(request)
+        self.api.post_worksheet_picture(request)
 
 
     def test_delete_worksheet_picture(self):
@@ -98,7 +98,7 @@ class TestPicturesControllerApi(unittest.TestCase):
         self.api.delete_worksheet_picture(request)
 
 
-    def test_delete_work_sheet_pictures(self):
+    def test_delete_worksheet_pictures(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -108,7 +108,7 @@ class TestPicturesControllerApi(unittest.TestCase):
         self.assertTrue(len(result.uploaded)>0) 
      
         request =  DeleteWorkSheetPicturesRequest( remote_name, 'Sheet6',folder= remote_folder,storage_name= '')
-        self.api.delete_work_sheet_pictures(request)
+        self.api.delete_worksheet_pictures(request)
 
 
 if __name__ == '__main__':

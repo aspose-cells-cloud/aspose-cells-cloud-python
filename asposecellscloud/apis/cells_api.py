@@ -5107,21 +5107,27 @@ class CellsApi(object):
                                         collection_formats=http_params['collection_formats'])
 
 
-
+    def get_work_sheet_hyperlinks(self, request, **kwargs):
+        warnings.warn("get_work_sheet_hyperlinks is deprecated", DeprecationWarning)
+        return self.get_worksheet_hyperlinks(request,kwargs)
+    def get_work_sheet_hyperlinks_with_http_info(self, request, **kwargs):
+        warnings.warn("get_work_sheet_hyperlinks_with_http_info is deprecated", DeprecationWarning)
+        return self.get_worksheet_hyperlinks_with_http_info(request,kwargs)
+    
     # <summary>
     # </summary>
-    # <param name="request">Request. <see cref="GetWorkSheetHyperlinksRequest" /></param>
-    def get_work_sheet_hyperlinks(self, request, **kwargs):
+    # <param name="request">Request. <see cref="GetWorkheetHyperlinksRequest" /></param>
+    def get_worksheet_hyperlinks(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.get_work_sheet_hyperlinks_with_http_info(request,**kwargs)
+            return self.get_worksheet_hyperlinks_with_http_info(request,**kwargs)
         else:
-            (data) = self.get_work_sheet_hyperlinks_with_http_info(request,**kwargs)
+            (data) = self.get_worksheet_hyperlinks_with_http_info(request,**kwargs)
             return data
 
-    def get_work_sheet_hyperlinks_with_http_info(self, request, **kwargs):
+    def get_worksheet_hyperlinks_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -5154,21 +5160,26 @@ class CellsApi(object):
                                         collection_formats=http_params['collection_formats'])
 
 
-
+    def get_work_sheet_hyperlink(self, request, **kwargs):
+        warnings.warn("get_work_sheet_hyperlink is deprecated", DeprecationWarning)
+        return self.get_worksheet_hyperlink(request,kwargs)
+    def get_work_sheet_hyperlink_with_http_info(self, request, **kwargs):
+        warnings.warn("get_work_sheet_hyperlink_with_http_info is deprecated", DeprecationWarning)
+        return self.get_worksheet_hyperlink_with_http_info(request,kwargs)    
     # <summary>
     # </summary>
-    # <param name="request">Request. <see cref="GetWorkSheetHyperlinkRequest" /></param>
-    def get_work_sheet_hyperlink(self, request, **kwargs):
+    # <param name="request">Request. <see cref="GetWorksheetHyperlinkRequest" /></param>
+    def get_worksheet_hyperlink(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.get_work_sheet_hyperlink_with_http_info(request,**kwargs)
+            return self.get_worksheet_hyperlink_with_http_info(request,**kwargs)
         else:
-            (data) = self.get_work_sheet_hyperlink_with_http_info(request,**kwargs)
+            (data) = self.get_worksheet_hyperlink_with_http_info(request,**kwargs)
             return data
 
-    def get_work_sheet_hyperlink_with_http_info(self, request, **kwargs):
+    def get_worksheet_hyperlink_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -5201,21 +5212,26 @@ class CellsApi(object):
                                         collection_formats=http_params['collection_formats'])
 
 
-
+    def delete_work_sheet_hyperlink(self, request, **kwargs):
+        warnings.warn("get_work_sheet_hyperlink is deprecated", DeprecationWarning)
+        return self.delete_worksheet_hyperlink(request,kwargs)
+    def delete_work_sheet_hyperlink_with_http_info(self, request, **kwargs):
+        warnings.warn("delete_work_sheet_hyperlink_with_http_info is deprecated", DeprecationWarning)
+        return self.delete_worksheet_hyperlink_with_http_info(request,kwargs)   
     # <summary>
     # </summary>
-    # <param name="request">Request. <see cref="DeleteWorkSheetHyperlinkRequest" /></param>
-    def delete_work_sheet_hyperlink(self, request, **kwargs):
+    # <param name="request">Request. <see cref="DeleteWorksheetHyperlinkRequest" /></param>
+    def delete_worksheet_hyperlink(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.delete_work_sheet_hyperlink_with_http_info(request,**kwargs)
+            return self.delete_worksheet_hyperlink_with_http_info(request,**kwargs)
         else:
-            (data) = self.delete_work_sheet_hyperlink_with_http_info(request,**kwargs)
+            (data) = self.delete_worksheet_hyperlink_with_http_info(request,**kwargs)
             return data
 
-    def delete_work_sheet_hyperlink_with_http_info(self, request, **kwargs):
+    def delete_worksheet_hyperlink_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -5248,21 +5264,26 @@ class CellsApi(object):
                                         collection_formats=http_params['collection_formats'])
 
 
-
+    def post_work_sheet_hyperlink(self, request, **kwargs):
+        warnings.warn("post_work_sheet_hyperlink is deprecated", DeprecationWarning)
+        return self.post_worksheet_hyperlink(request,kwargs)
+    def post_work_sheet_hyperlink_with_http_info(self, request, **kwargs):
+        warnings.warn("post_work_sheet_hyperlink_with_http_info is deprecated", DeprecationWarning)
+        return self.post_worksheet_hyperlink_with_http_info(request,kwargs)  
     # <summary>
     # </summary>
-    # <param name="request">Request. <see cref="PostWorkSheetHyperlinkRequest" /></param>
-    def post_work_sheet_hyperlink(self, request, **kwargs):
+    # <param name="request">Request. <see cref="PostWorksheetHyperlinkRequest" /></param>
+    def post_worksheet_hyperlink(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_work_sheet_hyperlink_with_http_info(request,**kwargs)
+            return self.post_worksheet_hyperlink_with_http_info(request,**kwargs)
         else:
-            (data) = self.post_work_sheet_hyperlink_with_http_info(request,**kwargs)
+            (data) = self.post_worksheet_hyperlink_with_http_info(request,**kwargs)
             return data
 
-    def post_work_sheet_hyperlink_with_http_info(self, request, **kwargs):
+    def post_worksheet_hyperlink_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -5295,21 +5316,26 @@ class CellsApi(object):
                                         collection_formats=http_params['collection_formats'])
 
 
-
+    def put_work_sheet_hyperlink(self, request, **kwargs):
+        warnings.warn("put_work_sheet_hyperlink is deprecated", DeprecationWarning)
+        return self.put_worksheet_hyperlink(request,kwargs)
+    def put_work_sheet_hyperlink_with_http_info(self, request, **kwargs):
+        warnings.warn("put_work_sheet_hyperlink_with_http_info is deprecated", DeprecationWarning)
+        return self.put_worksheet_hyperlink_with_http_info(request,kwargs) 
     # <summary>
     # </summary>
-    # <param name="request">Request. <see cref="PutWorkSheetHyperlinkRequest" /></param>
-    def put_work_sheet_hyperlink(self, request, **kwargs):
+    # <param name="request">Request. <see cref="PutWorksheetHyperlinkRequest" /></param>
+    def put_worksheet_hyperlink(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.put_work_sheet_hyperlink_with_http_info(request,**kwargs)
+            return self.put_worksheet_hyperlink_with_http_info(request,**kwargs)
         else:
-            (data) = self.put_work_sheet_hyperlink_with_http_info(request,**kwargs)
+            (data) = self.put_worksheet_hyperlink_with_http_info(request,**kwargs)
             return data
 
-    def put_work_sheet_hyperlink_with_http_info(self, request, **kwargs):
+    def put_worksheet_hyperlink_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -5342,21 +5368,26 @@ class CellsApi(object):
                                         collection_formats=http_params['collection_formats'])
 
 
-
+    def delete_work_sheet_hyperlinks(self, request, **kwargs):
+        warnings.warn("delete_work_sheet_hyperlinks is deprecated", DeprecationWarning)
+        return self.delete_worksheet_hyperlinks(request,kwargs)
+    def delete_work_sheet_hyperlinks_with_http_info(self, request, **kwargs):
+        warnings.warn("delete_work_sheet_hyperlinks_with_http_info is deprecated", DeprecationWarning)
+        return self.delete_worksheet_hyperlinks_with_http_info(request,kwargs) 
     # <summary>
     # </summary>
-    # <param name="request">Request. <see cref="DeleteWorkSheetHyperlinksRequest" /></param>
-    def delete_work_sheet_hyperlinks(self, request, **kwargs):
+    # <param name="request">Request. <see cref="DeleteWorksheetHyperlinksRequest" /></param>
+    def delete_worksheet_hyperlinks(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.delete_work_sheet_hyperlinks_with_http_info(request,**kwargs)
+            return self.delete_worksheet_hyperlinks_with_http_info(request,**kwargs)
         else:
-            (data) = self.delete_work_sheet_hyperlinks_with_http_info(request,**kwargs)
+            (data) = self.delete_worksheet_hyperlinks_with_http_info(request,**kwargs)
             return data
 
-    def delete_work_sheet_hyperlinks_with_http_info(self, request, **kwargs):
+    def delete_worksheet_hyperlinks_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -7927,21 +7958,26 @@ class CellsApi(object):
                                         collection_formats=http_params['collection_formats'])
 
 
-
+    def post_work_sheet_picture(self, request, **kwargs):
+        warnings.warn("post_work_sheet_picture is deprecated", DeprecationWarning)
+        return self.post_worksheet_picture(request,kwargs)
+    def post_work_sheet_picture_with_http_info(self, request, **kwargs):
+        warnings.warn("post_work_sheet_picture_with_http_info is deprecated", DeprecationWarning)
+        return self.post_worksheet_picture_with_http_info(request,kwargs)
     # <summary>
     # </summary>
-    # <param name="request">Request. <see cref="PostWorkSheetPictureRequest" /></param>
-    def post_work_sheet_picture(self, request, **kwargs):
+    # <param name="request">Request. <see cref="PostWorksheetPictureRequest" /></param>
+    def post_worksheet_picture(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_work_sheet_picture_with_http_info(request,**kwargs)
+            return self.post_worksheet_picture_with_http_info(request,**kwargs)
         else:
-            (data) = self.post_work_sheet_picture_with_http_info(request,**kwargs)
+            (data) = self.post_worksheet_picture_with_http_info(request,**kwargs)
             return data
 
-    def post_work_sheet_picture_with_http_info(self, request, **kwargs):
+    def post_worksheet_picture_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -8021,21 +8057,26 @@ class CellsApi(object):
                                         collection_formats=http_params['collection_formats'])
 
 
-
+    def post_work_sheet_pictures(self, request, **kwargs):
+        warnings.warn("post_work_sheet_pictures is deprecated", DeprecationWarning)
+        return self.post_worksheet_pictures(request,kwargs)
+    def post_work_sheet_pictures_with_http_info(self, request, **kwargs):
+        warnings.warn("post_work_sheet_pictures_with_http_info is deprecated", DeprecationWarning)
+        return self.post_worksheet_pictures_with_http_info(request,kwargs)
     # <summary>
     # </summary>
-    # <param name="request">Request. <see cref="DeleteWorkSheetPicturesRequest" /></param>
-    def delete_work_sheet_pictures(self, request, **kwargs):
+    # <param name="request">Request. <see cref="DeleteWorksheetPicturesRequest" /></param>
+    def delete_worksheet_pictures(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.delete_work_sheet_pictures_with_http_info(request,**kwargs)
+            return self.delete_worksheet_pictures_with_http_info(request,**kwargs)
         else:
-            (data) = self.delete_work_sheet_pictures_with_http_info(request,**kwargs)
+            (data) = self.delete_worksheet_pictures_with_http_info(request,**kwargs)
             return data
 
-    def delete_work_sheet_pictures_with_http_info(self, request, **kwargs):
+    def delete_worksheet_pictures_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')

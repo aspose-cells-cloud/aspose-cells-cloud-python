@@ -48,37 +48,37 @@ class PutWorkSheetHyperlinkRequest(object):
 
         # verify the required parameter 'name' is set
         if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `put_work_sheet_hyperlink`")
+            raise ValueError("Missing the required parameter `name` when calling `put_worksheet_hyperlink`")
 
 
         # verify the required parameter 'sheet_name' is set
         if self.sheet_name is None:
-            raise ValueError("Missing the required parameter `sheet_name` when calling `put_work_sheet_hyperlink`")
+            raise ValueError("Missing the required parameter `sheet_name` when calling `put_worksheet_hyperlink`")
 
 
         # verify the required parameter 'first_row' is set
         if self.first_row is None:
-            raise ValueError("Missing the required parameter `first_row` when calling `put_work_sheet_hyperlink`")
+            raise ValueError("Missing the required parameter `first_row` when calling `put_worksheet_hyperlink`")
 
 
         # verify the required parameter 'first_column' is set
         if self.first_column is None:
-            raise ValueError("Missing the required parameter `first_column` when calling `put_work_sheet_hyperlink`")
+            raise ValueError("Missing the required parameter `first_column` when calling `put_worksheet_hyperlink`")
 
 
         # verify the required parameter 'total_rows' is set
         if self.total_rows is None:
-            raise ValueError("Missing the required parameter `total_rows` when calling `put_work_sheet_hyperlink`")
+            raise ValueError("Missing the required parameter `total_rows` when calling `put_worksheet_hyperlink`")
 
 
         # verify the required parameter 'total_columns' is set
         if self.total_columns is None:
-            raise ValueError("Missing the required parameter `total_columns` when calling `put_work_sheet_hyperlink`")
+            raise ValueError("Missing the required parameter `total_columns` when calling `put_worksheet_hyperlink`")
 
 
         # verify the required parameter 'address' is set
         if self.address is None:
-            raise ValueError("Missing the required parameter `address` when calling `put_work_sheet_hyperlink`")
+            raise ValueError("Missing the required parameter `address` when calling `put_worksheet_hyperlink`")
 
 
         collection_formats = {}
