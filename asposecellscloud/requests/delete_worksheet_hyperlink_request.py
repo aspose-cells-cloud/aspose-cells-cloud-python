@@ -32,7 +32,7 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class DeleteWorkSheetHyperlinkRequest(object):
+class DeleteWorksheetHyperlinkRequest(object):
 
     def __init__(self , name ,sheet_name ,hyperlink_index ,folder =None ,storage_name =None ):
         self.name = name 

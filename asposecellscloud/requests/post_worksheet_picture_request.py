@@ -32,7 +32,7 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class PostWorkSheetPictureRequest(object):
+class PostWorksheetPictureRequest(object):
 
     def __init__(self , name ,sheet_name ,picture_index ,picture =None ,folder =None ,storage_name =None ):
         self.name = name 

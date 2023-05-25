@@ -38,7 +38,7 @@ class TestHypelinksControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  GetWorkSheetHyperlinksRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
+        request =  GetWorksheetHyperlinksRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_hyperlinks(request)
 
 

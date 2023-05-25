@@ -553,7 +553,7 @@ class ApiClient(object):
         os.close(fd)
         os.remove(path)
 
-        content_disposition = response.getheader("Content-Disposition")
+        content_disposition = response.headers.get("Content-Disposition")
         if content_disposition:
             filename = re.\
                 search(r'filename=[\'"]?([^\'"\s]+)[\'"]?', content_disposition).\

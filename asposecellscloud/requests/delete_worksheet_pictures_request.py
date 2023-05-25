@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="DeleteWorkSheetPicturesRequest.cs">
+<copyright company="Aspose" file="DeleteWorksheetPicturesRequest.cs">
   Copyright (c) 2023 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -32,7 +32,7 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class DeleteWorkSheetPicturesRequest(object):
+class DeleteWorksheetPicturesRequest(object):
 
     def __init__(self , name ,sheet_name ,folder =None ,storage_name =None ):
         self.name = name 

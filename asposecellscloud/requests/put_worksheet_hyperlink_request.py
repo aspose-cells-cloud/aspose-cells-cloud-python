@@ -32,7 +32,7 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class PutWorkSheetHyperlinkRequest(object):
+class PutWorksheetHyperlinkRequest(object):
 
     def __init__(self , name ,sheet_name ,first_row =None ,first_column =None ,total_rows =None ,total_columns =None ,address =None ,folder =None ,storage_name =None ):
         self.name = name 
