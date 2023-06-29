@@ -48,5 +48,62 @@ class TestBatchControllerApi(unittest.TestCase):
         self.api.post_batch_convert(request)
 
 
+    def test_post_batch_protect(self):
+        remote_folder = 'TestData/In'
+
+        local_book1 = 'Book1.xlsx'
+        remote_book1 = 'Book1.xlsx'
+        local_my_doc = 'myDocument.xlsx'
+        remote_my_doc = 'myDocument.xlsx'
+
+        batchProtectRequestMatchCondition = MatchConditionRequest(regex_pattern= '(^Book)(.+)(xlsx$)' )
+        batchProtectRequest = BatchProtectRequest(source_folder= remote_folder ,protection_type= 'All' ,password= '123456' ,out_folder= 'TestResult' ,match_condition= batchProtectRequestMatchCondition )
+        result = AuthUtil.Ready(self.api, local_book1, remote_folder + '/' + remote_book1 ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+        result = AuthUtil.Ready(self.api, local_my_doc, remote_folder + '/' + remote_my_doc ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+     
+        request =  PostBatchProtectRequest( batchProtectRequest)
+        self.api.post_batch_protect(request)
+
+
+    def test_post_batch_lock(self):
+        remote_folder = 'TestData/In'
+
+        local_book1 = 'Book1.xlsx'
+        remote_book1 = 'Book1.xlsx'
+        local_my_doc = 'myDocument.xlsx'
+        remote_my_doc = 'myDocument.xlsx'
+
+        batchLockRequestMatchCondition = MatchConditionRequest(regex_pattern= '(^Book)(.+)(xlsx$)' )
+        batchLockRequest = BatchLockRequest(source_folder= remote_folder ,password= '123456' ,out_folder= 'TestResult' ,match_condition= batchLockRequestMatchCondition )
+        result = AuthUtil.Ready(self.api, local_book1, remote_folder + '/' + remote_book1 ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+        result = AuthUtil.Ready(self.api, local_my_doc, remote_folder + '/' + remote_my_doc ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+     
+        request =  PostBatchLockRequest( batchLockRequest)
+        self.api.post_batch_lock(request)
+
+
+    def test_post_batch_unlock(self):
+        remote_folder = 'TestData/In'
+
+        local_book1 = 'Book1.xlsx'
+        remote_book1 = 'Book1.xlsx'
+        local_my_doc = 'myDocument.xlsx'
+        remote_my_doc = 'myDocument.xlsx'
+
+        batchLockRequestMatchCondition = MatchConditionRequest(regex_pattern= '(^Book)(.+)(xlsx$)' )
+        batchLockRequest = BatchLockRequest(source_folder= remote_folder ,password= '123456' ,out_folder= 'TestResult' ,match_condition= batchLockRequestMatchCondition )
+        result = AuthUtil.Ready(self.api, local_book1, remote_folder + '/' + remote_book1 ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+        result = AuthUtil.Ready(self.api, local_my_doc, remote_folder + '/' + remote_my_doc ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+     
+        request =  PostBatchUnlockRequest( batchLockRequest)
+        self.api.post_batch_unlock(request)
+
+
 if __name__ == '__main__':
     unittest.main()

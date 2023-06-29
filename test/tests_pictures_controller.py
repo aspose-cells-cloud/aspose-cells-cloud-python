@@ -81,7 +81,7 @@ class TestPicturesControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PostWorkSheetPictureRequest( remote_name, 'Sheet6', 0, picture,folder= remote_folder,storage_name= '')
+        request =  PostWorksheetPictureRequest( remote_name, 'Sheet6', 0, picture,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_picture(request)
 
 
@@ -107,7 +107,7 @@ class TestPicturesControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  DeleteWorkSheetPicturesRequest( remote_name, 'Sheet6',folder= remote_folder,storage_name= '')
+        request =  DeleteWorksheetPicturesRequest( remote_name, 'Sheet6',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_pictures(request)
 
 

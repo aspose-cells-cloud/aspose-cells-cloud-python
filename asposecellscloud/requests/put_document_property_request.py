@@ -80,7 +80,7 @@ class PutDocumentPropertyRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path = "/cells/{name}/documentproperties/{propertyName}"
+        resource_path = "/cells/{name}/documentproperties"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

@@ -32,6 +32,9 @@ from .axis import Axis
 from .barcode_response import BarcodeResponse
 from .barcode_response_list import BarcodeResponseList
 from .batch_convert_request import BatchConvertRequest
+from .batch_lock_request import BatchLockRequest
+from .batch_protect_request import BatchProtectRequest
+from .batch_split_request import BatchSplitRequest
 from .border import Border
 from .calculation_options import CalculationOptions
 from .cell_area import CellArea

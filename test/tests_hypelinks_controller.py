@@ -51,7 +51,7 @@ class TestHypelinksControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  GetWorkSheetHyperlinkRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
+        request =  GetWorksheetHyperlinkRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_hyperlink(request)
 
 
@@ -64,7 +64,7 @@ class TestHypelinksControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  DeleteWorkSheetHyperlinkRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
+        request =  DeleteWorksheetHyperlinkRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_hyperlink(request)
 
 
@@ -78,7 +78,7 @@ class TestHypelinksControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PostWorkSheetHyperlinkRequest( remote_name, 'Sheet1', 0, hyperlink,folder= remote_folder,storage_name= '')
+        request =  PostWorksheetHyperlinkRequest( remote_name, 'Sheet1', 0, hyperlink,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_hyperlink(request)
 
 
@@ -91,7 +91,7 @@ class TestHypelinksControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutWorkSheetHyperlinkRequest( remote_name, 'Sheet1', 1, 1, 2, 3, 'https://products.aspose.cloud/cells/',folder= remote_folder,storage_name= '')
+        request =  PutWorksheetHyperlinkRequest( remote_name, 'Sheet1', 1, 1, 2, 3, 'https://products.aspose.cloud/cells/',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_hyperlink(request)
 
 
@@ -104,7 +104,7 @@ class TestHypelinksControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  DeleteWorkSheetHyperlinksRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
+        request =  DeleteWorksheetHyperlinksRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_hyperlinks(request)
 
 
