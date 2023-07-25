@@ -156,6 +156,7 @@ from asposecellscloud.requests.post_import_request import PostImportRequest
 from asposecellscloud.requests.post_watermark_request import PostWatermarkRequest
 from asposecellscloud.requests.post_clear_objects_request import PostClearObjectsRequest
 from asposecellscloud.requests.post_reverse_request import PostReverseRequest
+from asposecellscloud.requests.post_repair_request import PostRepairRequest
 from asposecellscloud.requests.post_rotate_request import PostRotateRequest
 from asposecellscloud.requests.post_metadata_request import PostMetadataRequest
 from asposecellscloud.requests.get_metadata_request import GetMetadataRequest

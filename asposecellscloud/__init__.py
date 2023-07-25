@@ -423,6 +423,7 @@ from .requests.post_import_request import PostImportRequest
 from .requests.post_watermark_request import PostWatermarkRequest
 from .requests.post_clear_objects_request import PostClearObjectsRequest
 from .requests.post_reverse_request import PostReverseRequest
+from .requests.post_repair_request import PostRepairRequest
 from .requests.post_rotate_request import PostRotateRequest
 from .requests.post_metadata_request import PostMetadataRequest
 from .requests.get_metadata_request import GetMetadataRequest
