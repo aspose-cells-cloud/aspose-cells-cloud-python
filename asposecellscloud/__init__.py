@@ -29,8 +29,6 @@ from .models.access_token_response import AccessTokenResponse
 from .models.area import Area
 from .models.auto_fitter_options import AutoFitterOptions
 from .models.axis import Axis
-from .models.barcode_response import BarcodeResponse
-from .models.barcode_response_list import BarcodeResponseList
 from .models.batch_convert_request import BatchConvertRequest
 from .models.batch_lock_request import BatchLockRequest
 from .models.batch_protect_request import BatchProtectRequest
@@ -313,7 +311,6 @@ from .requests.post_batch_protect_request import PostBatchProtectRequest
 from .requests.post_batch_lock_request import PostBatchLockRequest
 from .requests.post_batch_unlock_request import PostBatchUnlockRequest
 from .requests.post_batch_split_request import PostBatchSplitRequest
-from .requests.get_extract_barcodes_request import GetExtractBarcodesRequest
 from .requests.post_clear_contents_request import PostClearContentsRequest
 from .requests.post_clear_formats_request import PostClearFormatsRequest
 from .requests.post_update_worksheet_range_style_request import PostUpdateWorksheetRangeStyleRequest

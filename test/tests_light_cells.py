@@ -2986,6 +2986,56 @@ class TestLightCellsApi(unittest.TestCase):
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
 
+    def test_post_repair_xlsx(self):
+        book1_xlsx = 'Book1.xlsx'
+
+        format = 'xlsx'
+
+        mapFiles = { 
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+        }
+     
+        request =  PostRepairRequest( mapFiles,format= format)
+        self.api.post_repair(request)
+
+
+    def test_post_repair_pdf(self):
+        book1_xlsx = 'Book1.xlsx'
+
+        format = 'pdf'
+
+        mapFiles = { 
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+        }
+     
+        request =  PostRepairRequest( mapFiles,format= format)
+        self.api.post_repair(request)
+
+
+    def test_post_repair_csv(self):
+        book1_xlsx = 'Book1.xlsx'
+
+        format = 'csv'
+
+        mapFiles = { 
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+        }
+     
+        request =  PostRepairRequest( mapFiles,format= format)
+        self.api.post_repair(request)
+
+
+    def test_post_repair_png(self):
+        book1_xlsx = 'Book1.xlsx'
+
+        format = 'png'
+
+        mapFiles = { 
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+        }
+     
+        request =  PostRepairRequest( mapFiles,format= format)
+        self.api.post_repair(request)
 
     def test_post_reverse_rows_pdf(self):
         book1_xlsx = 'Book1.xlsx'

@@ -29,17 +29,6 @@ class TestAutoFilterControllerApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_extract_barcodes(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  GetExtractBarcodesRequest( remote_name, 'Sheet8', 0,folder= remote_folder)
-        self.api.get_extract_barcodes(request)
-
+   
 if __name__ == '__main__':
     unittest.main()

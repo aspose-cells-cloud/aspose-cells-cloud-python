@@ -1,6 +1,5 @@
 python  .\test\tests_auto_filter_controller.py  
 python  .\test\tests_batch_controller.py
-python  .\test\tests_cells_barcodes_controller.py
 python  .\test\tests_cells_controller.py
 python  .\test\tests_cells_status_controller.py
 python  .\test\tests_chart_area_controller.py
