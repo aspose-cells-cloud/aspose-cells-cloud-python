@@ -147,6 +147,7 @@ from asposecellscloud.requests.post_compress_request import PostCompressRequest
 from asposecellscloud.requests.post_export_request import PostExportRequest
 from asposecellscloud.requests.post_merge_request import PostMergeRequest
 from asposecellscloud.requests.post_unlock_request import PostUnlockRequest
+from asposecellscloud.requests.post_lock_request import PostLockRequest
 from asposecellscloud.requests.post_protect_request import PostProtectRequest
 from asposecellscloud.requests.post_split_request import PostSplitRequest
 from asposecellscloud.requests.post_search_request import PostSearchRequest

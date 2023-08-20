@@ -58,6 +58,11 @@ from .data_bar_border import DataBarBorder
 from .data_sorter import DataSorter
 from .disc_usage import DiscUsage
 from .dynamic_filter import DynamicFilter
+from .digital_signature import DigitalSignature
+from .protection import Protection
+from .protect_workbook_requst import ProtectWorkbookRequst
+from .rendering_font import RenderingFont
+from .rendering_watermark import RenderingWatermark
 from .error_details import ErrorDetails
 from .file_info import FileInfo
 from .file_source import FileSource

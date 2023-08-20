@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="PostProtectRequest.cs">
+<copyright company="Aspose" file="PostLockRequest.cs">
   Copyright (c) 2023 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -32,22 +32,21 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class PostProtectRequest(object):
+class PostLockRequest(object):
 
-    def __init__(self , file ,protect_workbook_requst =None ,password =None ):
+    def __init__(self , file ,password =None ):
         self.file = file 
-        self.protect_workbook_requst = protect_workbook_requst 
         self.password = password 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'file' is set
         if self.file is None:
-            raise ValueError("Missing the required parameter `file` when calling `post_protect`")
+            raise ValueError("Missing the required parameter `file` when calling `post_lock`")
 
 
-        # verify the required parameter 'protect_workbook_requst' is set
-        if self.protect_workbook_requst is None:
-            raise ValueError("Missing the required parameter `protect_workbook_requst` when calling `post_protect`")
+        # verify the required parameter 'password' is set
+        if self.password is None:
+            raise ValueError("Missing the required parameter `password` when calling `post_lock`")
 
 
         collection_formats = {}
@@ -76,9 +75,10 @@ class PostProtectRequest(object):
         # HTTP header `Content-Type`
         header_params['Content-Type'] = api_client.\
             select_header_content_type(['multipart/form-data'])
+
         # Authentication setting
         auth_settings = []
-        resource_path = "/cells/protect"
+        resource_path = "/cells/lock"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)
