@@ -28,7 +28,6 @@ from __future__ import absolute_import
 # import models into model package
 from test.tests_auto_filter_controller import TestAutoFilterControllerApi
 from test.tests_cells_controller import TestCellsControllerApi
-from test.tests_cells_barcodes_controller import TestCellsBarcodesControllerApi
 from test.tests_cells_status_controller import TestCellsStatusControllerApi
 from test.tests_chart_area_controller import TestChartAreaControllerApi
 from test.tests_charts_controller import TestChartsControllerApi

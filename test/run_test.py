@@ -30,7 +30,7 @@ import xmlrunner
 
 if __name__ == '__main__':
     case_path = os.getcwd()
-    discover = unittest.defaultTestLoader.discover(case_path,pattern="*/tests_*.py")    
+    discover = unittest.defaultTestLoader.discover(case_path,pattern="tests_*.py")    
     testRunner=xmlrunner.XMLTestRunner(output='test-reports')
     testRunner.run(discover)
        
