@@ -1,0 +1,18 @@
+[project]
+name = "asposecellscloud"
+version = "23.8"
+authors = [
+  { name="Aspose Cloud", email="aspose.cloud@aspose.com" },
+]
+description = "Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Microsoft Excel® spreadsheet generation, manipulation, conversion & inspection features into your own Python applications."
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.6',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+]
+
+[project.urls]
+"Homepage" = "https://github.com/aspose-cells-cloud/aspose-cells-cloud-python"
