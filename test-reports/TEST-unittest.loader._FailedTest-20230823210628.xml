@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<testsuite name="unittest.loader._FailedTest-20230823210628" tests="2" time="0.000" failures="0" errors="2">
+	<testcase classname="unittest.loader._FailedTest" name="test" time="0.000">
+		<error type="ImportError" message="Failed to import test module: test
+Traceback (most recent call last):
+  File &quot;C:\Users\Cells\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py&quot;, line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File &quot;C:\Users\Cells\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py&quot;, line 377, in _get_module_from_name
+    __import__(name)
+  File &quot;D:\cells.cloud-sdk-python\test\__init__.py&quot;, line 31, in &lt;module&gt;
+    from test.tests_cells_barcodes_controller import TestCellsBarcodesControllerApi
+ModuleNotFoundError: No module named 'test.tests_cells_barcodes_controller'
+"><![CDATA[ImportError: Failed to import test module: test
+Traceback (most recent call last):
+  File "C:\Users\Cells\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Cells\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "D:\cells.cloud-sdk-python\test\__init__.py", line 31, in <module>
+    from test.tests_cells_barcodes_controller import TestCellsBarcodesControllerApi
+ModuleNotFoundError: No module named 'test.tests_cells_barcodes_controller'
+
+]]></error>
+	</testcase>
+	<testcase classname="unittest.loader._FailedTest" name="test" time="0.000">
+		<error type="ImportError" message="Failed to import test module: test
+Traceback (most recent call last):
+  File &quot;C:\Users\Cells\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py&quot;, line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File &quot;C:\Users\Cells\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py&quot;, line 377, in _get_module_from_name
+    __import__(name)
+  File &quot;D:\cells.cloud-sdk-python\test\__init__.py&quot;, line 31, in &lt;module&gt;
+    from test.tests_cells_barcodes_controller import TestCellsBarcodesControllerApi
+ModuleNotFoundError: No module named 'test.tests_cells_barcodes_controller'
+"><![CDATA[ImportError: Failed to import test module: test
+Traceback (most recent call last):
+  File "C:\Users\Cells\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 470, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Cells\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "D:\cells.cloud-sdk-python\test\__init__.py", line 31, in <module>
+    from test.tests_cells_barcodes_controller import TestCellsBarcodesControllerApi
+ModuleNotFoundError: No module named 'test.tests_cells_barcodes_controller'
+
+]]></error>
+	</testcase>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

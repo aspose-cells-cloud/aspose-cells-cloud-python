@@ -29,8 +29,6 @@ from .access_token_response import AccessTokenResponse
 from .area import Area
 from .auto_fitter_options import AutoFitterOptions
 from .axis import Axis
-from .barcode_response import BarcodeResponse
-from .barcode_response_list import BarcodeResponseList
 from .batch_convert_request import BatchConvertRequest
 from .batch_lock_request import BatchLockRequest
 from .batch_protect_request import BatchProtectRequest
