@@ -188,6 +188,31 @@ class TestListObjectsControllerApi(unittest.TestCase):
         request =  PostWorksheetListColumnsTotalRequest( remote_name, 'Sheet7', 0, tableTotalRequests,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_list_columns_total(request)
 
+    def test_post_worksheet_list_object_remove_duplicates(self):
+        remote_folder = 'TestData/In'
+
+        local_name = 'TestTables.xlsx'
+        remote_name = 'TestTables.xlsx'
+
+        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+     
+        request =  PostWorksheetListObjectRemoveDuplicatesRequest( remote_name, 'Sheet2', 0,folder= remote_folder,storage_name= '')
+        self.api.post_worksheet_list_object_remove_duplicates(request)
+
+
+    def test_post_worksheet_list_object_insert_slicer(self):
+        remote_folder = 'TestData/In'
+
+        local_name = 'TestTables.xlsx'
+        remote_name = 'TestTables.xlsx'
+
+        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+     
+        request =  PostWorksheetListObjectInsertSlicerRequest( remote_name, 'Sheet1', 0, 2, 'j9',folder= remote_folder,storage_name= '')
+        self.api.post_worksheet_list_object_insert_slicer(request)
+
 
 if __name__ == '__main__':
     unittest.main()

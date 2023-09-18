@@ -238,6 +238,7 @@ from .pivot_tables_response import PivotTablesResponse
 from .pptx_save_options import PptxSaveOptions
 from .range_value_response import RangeValueResponse
 from .ranges_response import RangesResponse
+from .range_sort_request import RangeSortRequest
 from .row import Row
 from .row_response import RowResponse
 from .rows import Rows

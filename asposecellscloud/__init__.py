@@ -290,6 +290,7 @@ from .models.picture import Picture
 from .models.title import Title
 from .models.import_position import ImportPosition
 from .models.import_xml_request import ImportXMLRequest
+from .models.range_sort_request import RangeSortRequest
 
 from .requests.get_worksheet_auto_filter_request import GetWorksheetAutoFilterRequest
 from .requests.put_worksheet_date_filter_request import PutWorksheetDateFilterRequest
@@ -503,6 +504,7 @@ from .requests.post_worksheet_cells_range_column_width_request import PostWorksh
 from .requests.post_worksheet_cells_range_row_height_request import PostWorksheetCellsRangeRowHeightRequest
 from .requests.put_worksheet_cells_range_request import PutWorksheetCellsRangeRequest
 from .requests.delete_worksheet_cells_range_request import DeleteWorksheetCellsRangeRequest
+from .requests.post_worksheet_range_sort_request import PostWorksheetRangeSortRequest
 from .requests.get_worksheet_shapes_request import GetWorksheetShapesRequest
 from .requests.get_worksheet_shape_request import GetWorksheetShapeRequest
 from .requests.put_worksheet_shape_request import PutWorksheetShapeRequest
@@ -614,6 +616,8 @@ from .requests.storage_exists_request import StorageExistsRequest
 from .requests.object_exists_request import ObjectExistsRequest
 from .requests.get_disc_usage_request import GetDiscUsageRequest
 from .requests.get_file_versions_request import GetFileVersionsRequest
+
+
 # import apis into sdk package
 from .apis.cells_api import CellsApi
 from .apis.light_cells_api import LightCellsApi
