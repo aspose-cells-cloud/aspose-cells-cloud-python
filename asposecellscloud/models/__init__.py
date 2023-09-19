@@ -109,6 +109,8 @@ from .ranges import Ranges
 from .result_destination import ResultDestination
 from .save_options import SaveOptions
 from .save_result import SaveResult
+from .write_protection import WriteProtection
+from .formula_settings import FormulaSettings
 from .shadow_effect import ShadowEffect
 from .single_value import SingleValue
 from .solid_fill import SolidFill
