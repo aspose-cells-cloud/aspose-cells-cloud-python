@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<testsuite name="test.tests_folder_controller.TestFolderControllerApi-20230919143131" tests="15" time="17.867" failures="0" errors="0">
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_copy_folder" time="3.325"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_create_folder" time="0.543"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_delete_folder" time="1.473"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_get_files_list" time="0.598"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_move_folder" time="0.479"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_copy_folder" time="2.207"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_create_folder" time="0.628"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_delete_folder" time="1.321"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_get_files_list" time="0.664"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_move_folder" time="0.531"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_copy_folder" time="2.881"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_create_folder" time="0.561"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_delete_folder" time="1.293"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_get_files_list" time="0.731"/>
+	<testcase classname="test.tests_folder_controller.TestFolderControllerApi" name="test_move_folder" time="0.631"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

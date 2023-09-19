@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<testsuite name="test.tests_batch_controller.TestBatchControllerApi-20230919143131" tests="12" time="16.192" failures="0" errors="0">
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_convert" time="2.198"/>
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_lock" time="1.468"/>
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_protect" time="1.197"/>
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_unlock" time="1.229"/>
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_convert" time="1.285"/>
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_lock" time="1.286"/>
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_protect" time="1.253"/>
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_unlock" time="1.123"/>
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_convert" time="1.388"/>
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_lock" time="1.264"/>
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_protect" time="1.255"/>
+	<testcase classname="test.tests_batch_controller.TestBatchControllerApi" name="test_post_batch_unlock" time="1.244"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

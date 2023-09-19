@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<testsuite name="test.tests_page_setup_controller.TestPageSetupControllerApi-20230919143131" tests="21" time="16.915" failures="0" errors="0">
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_delete_header_footer" time="1.668"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_get_footer" time="0.671"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_get_header" time="0.911"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_get_page_setup" time="0.629"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_post_footer" time="0.820"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_post_header" time="0.732"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_post_page_setup" time="0.853"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_delete_header_footer" time="0.770"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_get_footer" time="0.702"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_get_header" time="0.605"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_get_page_setup" time="0.623"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_post_footer" time="0.807"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_post_header" time="0.967"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_post_page_setup" time="0.986"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_delete_header_footer" time="0.862"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_get_footer" time="0.671"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_get_header" time="0.616"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_get_page_setup" time="0.645"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_post_footer" time="0.797"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_post_header" time="0.783"/>
+	<testcase classname="test.tests_page_setup_controller.TestPageSetupControllerApi" name="test_post_page_setup" time="0.795"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

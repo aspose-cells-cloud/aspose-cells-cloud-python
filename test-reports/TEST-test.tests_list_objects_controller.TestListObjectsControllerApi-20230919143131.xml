@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<testsuite name="test.tests_list_objects_controller.TestListObjectsControllerApi-20230919143131" tests="39" time="30.898" failures="0" errors="0">
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_delete_worksheet_list_object" time="1.734"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_delete_worksheet_list_objects" time="0.966"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_get_worksheet_list_object" time="0.634"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_get_worksheet_list_objects" time="0.662"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_column" time="0.814"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_columns_total" time="0.938"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object" time="0.898"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_convert_to_range" time="0.799"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_insert_slicer" time="0.616"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_remove_duplicates" time="0.571"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_sort_table" time="0.840"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_summarize_with_pivot_table" time="0.777"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_put_worksheet_list_object" time="0.806"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_delete_worksheet_list_object" time="0.798"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_delete_worksheet_list_objects" time="0.861"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_get_worksheet_list_object" time="0.824"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_get_worksheet_list_objects" time="0.588"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_column" time="0.877"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_columns_total" time="0.769"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object" time="0.828"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_convert_to_range" time="0.877"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_insert_slicer" time="0.541"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_remove_duplicates" time="0.593"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_sort_table" time="0.727"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_summarize_with_pivot_table" time="0.815"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_put_worksheet_list_object" time="0.747"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_delete_worksheet_list_object" time="1.040"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_delete_worksheet_list_objects" time="0.878"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_get_worksheet_list_object" time="0.531"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_get_worksheet_list_objects" time="0.599"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_column" time="0.994"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_columns_total" time="0.768"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object" time="0.734"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_convert_to_range" time="0.830"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_insert_slicer" time="0.627"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_remove_duplicates" time="0.653"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_sort_table" time="0.736"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_post_worksheet_list_object_summarize_with_pivot_table" time="0.810"/>
+	<testcase classname="test.tests_list_objects_controller.TestListObjectsControllerApi" name="test_put_worksheet_list_object" time="0.799"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

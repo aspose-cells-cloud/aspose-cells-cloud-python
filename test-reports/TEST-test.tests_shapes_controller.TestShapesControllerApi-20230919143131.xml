@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<testsuite name="test.tests_shapes_controller.TestShapesControllerApi-20230919143131" tests="24" time="19.350" failures="0" errors="0">
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_delete_worksheet_shape" time="1.737"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_delete_worksheet_shapes" time="0.810"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_get_worksheet_shape" time="0.657"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_get_worksheet_shapes" time="0.691"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_post_worksheet_group_shape" time="0.679"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_post_worksheet_shape" time="0.853"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_post_worksheet_ungroup_shape" time="0.823"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_put_worksheet_shape" time="0.824"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_delete_worksheet_shape" time="0.862"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_delete_worksheet_shapes" time="0.824"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_get_worksheet_shape" time="0.619"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_get_worksheet_shapes" time="0.610"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_post_worksheet_group_shape" time="0.846"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_post_worksheet_shape" time="0.835"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_post_worksheet_ungroup_shape" time="0.761"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_put_worksheet_shape" time="0.852"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_delete_worksheet_shape" time="0.914"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_delete_worksheet_shapes" time="0.847"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_get_worksheet_shape" time="0.593"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_get_worksheet_shapes" time="0.535"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_post_worksheet_group_shape" time="0.787"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_post_worksheet_shape" time="0.880"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_post_worksheet_ungroup_shape" time="0.803"/>
+	<testcase classname="test.tests_shapes_controller.TestShapesControllerApi" name="test_put_worksheet_shape" time="0.708"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

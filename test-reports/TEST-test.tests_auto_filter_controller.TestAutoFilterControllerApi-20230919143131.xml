@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<testsuite name="test.tests_auto_filter_controller.TestAutoFilterControllerApi-20230919143131" tests="39" time="34.177" failures="0" errors="0">
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_delete_worksheet_date_filter" time="3.317"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_delete_worksheet_filter" time="1.221"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_get_worksheet_auto_filter" time="0.633"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_post_worksheet_auto_filter_refresh" time="0.852"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_post_worksheet_match_blanks" time="0.866"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_post_worksheet_match_non_blanks" time="0.844"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_color_filter" time="0.824"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_custom_filter" time="0.653"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_date_filter" time="0.716"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_dynamic_filter" time="0.698"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_filter" time="0.884"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_filter_top10" time="1.021"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_icon_filter" time="0.896"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_delete_worksheet_date_filter" time="0.810"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_delete_worksheet_filter" time="0.788"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_get_worksheet_auto_filter" time="0.583"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_post_worksheet_auto_filter_refresh" time="0.783"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_post_worksheet_match_blanks" time="1.052"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_post_worksheet_match_non_blanks" time="0.760"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_color_filter" time="0.907"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_custom_filter" time="0.923"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_date_filter" time="0.816"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_dynamic_filter" time="0.823"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_filter" time="0.754"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_filter_top10" time="0.888"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_icon_filter" time="0.744"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_delete_worksheet_date_filter" time="0.750"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_delete_worksheet_filter" time="0.743"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_get_worksheet_auto_filter" time="0.581"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_post_worksheet_auto_filter_refresh" time="0.715"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_post_worksheet_match_blanks" time="0.737"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_post_worksheet_match_non_blanks" time="0.952"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_color_filter" time="0.849"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_custom_filter" time="0.779"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_date_filter" time="0.817"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_dynamic_filter" time="0.850"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_filter" time="0.911"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_filter_top10" time="0.674"/>
+	<testcase classname="test.tests_auto_filter_controller.TestAutoFilterControllerApi" name="test_put_worksheet_icon_filter" time="0.761"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

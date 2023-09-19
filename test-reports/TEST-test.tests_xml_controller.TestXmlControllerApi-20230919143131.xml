@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<testsuite name="test.tests_xml_controller.TestXmlControllerApi-20230919143131" tests="2" time="2.131" failures="0" errors="0">
+	<testcase classname="test.tests_xml_controller.TestXmlControllerApi" name="test_post_workbook_export_xml" time="1.310"/>
+	<testcase classname="test.tests_xml_controller.TestXmlControllerApi" name="test_post_workbook_import_xml" time="0.821"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

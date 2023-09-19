@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<testsuite name="test.tests_page_breaks_controller.TestPageBreaksControllerApi-20230919143131" tests="30" time="27.237" failures="0" errors="0">
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_horizontal_page_break" time="1.626"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_horizontal_page_breaks" time="0.657"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_vertical_page_break" time="0.806"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_vertical_page_breaks" time="0.881"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_horizontal_page_break" time="0.612"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_horizontal_page_breaks" time="0.611"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_vertical_page_break" time="5.369"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_vertical_page_breaks" time="0.686"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_put_horizontal_page_break" time="0.805"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_put_vertical_page_break" time="0.697"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_horizontal_page_break" time="0.805"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_horizontal_page_breaks" time="0.816"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_vertical_page_break" time="0.804"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_vertical_page_breaks" time="0.763"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_horizontal_page_break" time="0.619"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_horizontal_page_breaks" time="0.505"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_vertical_page_break" time="0.634"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_vertical_page_breaks" time="0.638"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_put_horizontal_page_break" time="0.764"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_put_vertical_page_break" time="0.708"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_horizontal_page_break" time="0.856"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_horizontal_page_breaks" time="0.815"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_vertical_page_break" time="0.850"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_delete_vertical_page_breaks" time="0.845"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_horizontal_page_break" time="0.603"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_horizontal_page_breaks" time="0.664"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_vertical_page_break" time="0.642"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_get_vertical_page_breaks" time="0.636"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_put_horizontal_page_break" time="0.753"/>
+	<testcase classname="test.tests_page_breaks_controller.TestPageBreaksControllerApi" name="test_put_vertical_page_break" time="0.768"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<testsuite name="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi-20230919143131" tests="18" time="12.209" failures="0" errors="0">
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_delete_worksheet_sparkline_group" time="1.449"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_delete_worksheet_sparkline_groups" time="0.877"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_get_worksheet_sparkline_group" time="0.611"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_get_worksheet_sparkline_groups" time="0.554"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_post_worksheet_sparkline_group" time="0.752"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_put_worksheet_sparkline_group" time="0.615"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_delete_worksheet_sparkline_group" time="0.713"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_delete_worksheet_sparkline_groups" time="0.621"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_get_worksheet_sparkline_group" time="0.567"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_get_worksheet_sparkline_groups" time="0.485"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_post_worksheet_sparkline_group" time="0.659"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_put_worksheet_sparkline_group" time="0.637"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_delete_worksheet_sparkline_group" time="0.740"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_delete_worksheet_sparkline_groups" time="0.663"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_get_worksheet_sparkline_group" time="0.499"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_get_worksheet_sparkline_groups" time="0.488"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_post_worksheet_sparkline_group" time="0.638"/>
+	<testcase classname="test.tests_sparkline_groups_controller.TestSparklineGroupsControllerApi" name="test_put_worksheet_sparkline_group" time="0.641"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

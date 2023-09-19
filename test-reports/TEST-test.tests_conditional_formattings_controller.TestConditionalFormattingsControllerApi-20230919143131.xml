@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<testsuite name="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi-20230919143131" tests="27" time="21.149" failures="0" errors="0">
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_delete_worksheet_conditional_formatting" time="1.633"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_delete_worksheet_conditional_formatting_area" time="0.791"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_delete_worksheet_conditional_formattings" time="0.736"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_get_worksheet_conditional_formatting" time="0.544"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_get_worksheet_conditional_formattings" time="0.657"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_conditional_formatting" time="0.690"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_format_condition" time="0.736"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_format_condition_area" time="0.771"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_format_condition_condition" time="0.775"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_delete_worksheet_conditional_formatting" time="0.891"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_delete_worksheet_conditional_formatting_area" time="0.728"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_delete_worksheet_conditional_formattings" time="0.726"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_get_worksheet_conditional_formatting" time="0.725"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_get_worksheet_conditional_formattings" time="0.636"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_conditional_formatting" time="0.908"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_format_condition" time="0.778"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_format_condition_area" time="0.814"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_format_condition_condition" time="0.866"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_delete_worksheet_conditional_formatting" time="0.803"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_delete_worksheet_conditional_formatting_area" time="0.823"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_delete_worksheet_conditional_formattings" time="0.791"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_get_worksheet_conditional_formatting" time="0.637"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_get_worksheet_conditional_formattings" time="0.586"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_conditional_formatting" time="0.799"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_format_condition" time="0.817"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_format_condition_area" time="0.725"/>
+	<testcase classname="test.tests_conditional_formattings_controller.TestConditionalFormattingsControllerApi" name="test_put_worksheet_format_condition_condition" time="0.762"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>
