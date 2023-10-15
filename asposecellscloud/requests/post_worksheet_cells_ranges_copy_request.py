@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="PostWorksheetCellsRangesRequest.cs">
+<copyright company="Aspose" file="PostWorksheetCellsRangesCopyRequest.cs">
   Copyright (c) 2023 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -32,7 +32,7 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class PostWorksheetCellsRangesRequest(object):
+class PostWorksheetCellsRangesCopyRequest(object):
 
     def __init__(self , name ,sheet_name ,range_operate =None ,folder =None ,storage_name =None ):
         self.name = name 
@@ -44,17 +44,17 @@ class PostWorksheetCellsRangesRequest(object):
 
         # verify the required parameter 'name' is set
         if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `post_worksheet_cells_ranges`")
+            raise ValueError("Missing the required parameter `name` when calling `post_worksheet_cells_ranges_copy`")
 
 
         # verify the required parameter 'sheet_name' is set
         if self.sheet_name is None:
-            raise ValueError("Missing the required parameter `sheet_name` when calling `post_worksheet_cells_ranges`")
+            raise ValueError("Missing the required parameter `sheet_name` when calling `post_worksheet_cells_ranges_copy`")
 
 
         # verify the required parameter 'range_operate' is set
         if self.range_operate is None:
-            raise ValueError("Missing the required parameter `range_operate` when calling `post_worksheet_cells_ranges`")
+            raise ValueError("Missing the required parameter `range_operate` when calling `post_worksheet_cells_ranges_copy`")
 
 
         collection_formats = {}
@@ -88,7 +88,7 @@ class PostWorksheetCellsRangesRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path = "/cells/{name}/worksheets/{sheetName}/ranges"
+        resource_path = "/cells/{name}/worksheets/{sheetName}/ranges/copy"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="DeleteWorkSheetHyperlinkRequest.cs">
+<copyright company="Aspose" file="DeleteWorksheetHyperlinkRequest.cs">
   Copyright (c) 2023 Aspose.Cells Cloud
 </copyright>
 <summary>

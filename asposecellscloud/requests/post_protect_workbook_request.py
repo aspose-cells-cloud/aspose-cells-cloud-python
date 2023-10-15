@@ -34,9 +34,9 @@ from six.moves.urllib.parse import quote
 
 class PostProtectWorkbookRequest(object):
 
-    def __init__(self , name ,protection =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,protect_workbook_request =None ,folder =None ,storage_name =None ):
         self.name = name 
-        self.protection = protection 
+        self.protect_workbook_request = protect_workbook_request 
         self.folder = folder 
         self.storage_name = storage_name 
     def create_http_request(self, api_client):
@@ -46,9 +46,9 @@ class PostProtectWorkbookRequest(object):
             raise ValueError("Missing the required parameter `name` when calling `post_protect_workbook`")
 
 
-        # verify the required parameter 'protection' is set
-        if self.protection is None:
-            raise ValueError("Missing the required parameter `protection` when calling `post_protect_workbook`")
+        # verify the required parameter 'protect_workbook_request' is set
+        if self.protect_workbook_request is None:
+            raise ValueError("Missing the required parameter `protect_workbook_request` when calling `post_protect_workbook`")
 
 
         collection_formats = {}
@@ -75,8 +75,8 @@ class PostProtectWorkbookRequest(object):
         header_params['Content-Type'] = api_client.\
             select_header_content_type(['application/json'])
 
-        if self.protection is not None:
-             body_params =self.protection 
+        if self.protect_workbook_request is not None:
+             body_params =self.protect_workbook_request 
 
         # Authentication setting
         auth_settings = []

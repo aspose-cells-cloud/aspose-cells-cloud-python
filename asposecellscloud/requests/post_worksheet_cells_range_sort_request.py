@@ -34,10 +34,10 @@ from six.moves.urllib.parse import quote
 
 class PostWorksheetCellsRangeSortRequest(object):
 
-    def __init__(self , name ,sheet_name ,range_operate =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,range_sort_request =None ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
-        self.range_operate = range_operate 
+        self.range_sort_request = range_sort_request 
         self.folder = folder 
         self.storage_name = storage_name 
     def create_http_request(self, api_client):
@@ -52,9 +52,9 @@ class PostWorksheetCellsRangeSortRequest(object):
             raise ValueError("Missing the required parameter `sheet_name` when calling `post_worksheet_cells_range_sort`")
 
 
-        # verify the required parameter 'range_operate' is set
-        if self.range_operate is None:
-            raise ValueError("Missing the required parameter `range_operate` when calling `post_worksheet_cells_range_sort`")
+        # verify the required parameter 'range_sort_request' is set
+        if self.range_sort_request is None:
+            raise ValueError("Missing the required parameter `range_sort_request` when calling `post_worksheet_cells_range_sort`")
 
 
         collection_formats = {}
@@ -83,8 +83,8 @@ class PostWorksheetCellsRangeSortRequest(object):
         header_params['Content-Type'] = api_client.\
             select_header_content_type(['application/json'])
 
-        if self.range_operate is not None:
-             body_params =self.range_operate 
+        if self.range_sort_request is not None:
+             body_params =self.range_sort_request 
 
         # Authentication setting
         auth_settings = []

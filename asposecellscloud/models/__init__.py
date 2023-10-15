@@ -58,7 +58,7 @@ from .disc_usage import DiscUsage
 from .dynamic_filter import DynamicFilter
 from .digital_signature import DigitalSignature
 from .protection import Protection
-from .protect_workbook_requst import ProtectWorkbookRequst
+from .protect_workbook_request import ProtectWorkbookRequest
 from .rendering_font import RenderingFont
 from .rendering_watermark import RenderingWatermark
 from .error_details import ErrorDetails

@@ -34,9 +34,9 @@ from six.moves.urllib.parse import quote
 
 class DeleteUnProtectWorkbookRequest(object):
 
-    def __init__(self , name ,protection =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,password =None ,folder =None ,storage_name =None ):
         self.name = name 
-        self.protection = protection 
+        self.password = password 
         self.folder = folder 
         self.storage_name = storage_name 
     def create_http_request(self, api_client):
@@ -46,9 +46,9 @@ class DeleteUnProtectWorkbookRequest(object):
             raise ValueError("Missing the required parameter `name` when calling `delete_un_protect_workbook`")
 
 
-        # verify the required parameter 'protection' is set
-        if self.protection is None:
-            raise ValueError("Missing the required parameter `protection` when calling `delete_un_protect_workbook`")
+        # verify the required parameter 'password' is set
+        if self.password is None:
+            raise ValueError("Missing the required parameter `password` when calling `delete_un_protect_workbook`")
 
 
         collection_formats = {}
@@ -57,6 +57,8 @@ class DeleteUnProtectWorkbookRequest(object):
         if self.name is not None:
             path_params['name'] = self.name
         query_params = []
+        if self.password is not None:
+            query_params.append(('password',self.password ))
         if self.folder is not None:
             query_params.append(('folder',self.folder ))
         if self.storage_name is not None:
@@ -75,8 +77,6 @@ class DeleteUnProtectWorkbookRequest(object):
         header_params['Content-Type'] = api_client.\
             select_header_content_type(['application/json'])
 
-        if self.protection is not None:
-             body_params =self.protection 
 
         # Authentication setting
         auth_settings = []
