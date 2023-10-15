@@ -9565,17 +9565,17 @@ class CellsApi(object):
     # <summary>
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetCellsRangesRequest" /></param>
-    def post_worksheet_cells_ranges(self, request, **kwargs):
+    def post_worksheet_cells_ranges_copy(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.post_worksheet_cells_ranges_with_http_info(request,**kwargs)
+            return self.post_worksheet_cells_ranges_copy_with_http_info(request,**kwargs)
         else:
-            (data) = self.post_worksheet_cells_ranges_with_http_info(request,**kwargs)
+            (data) = self.post_worksheet_cells_ranges_copy_with_http_info(request,**kwargs)
             return data
 
-    def post_worksheet_cells_ranges_with_http_info(self, request, **kwargs):
+    def post_worksheet_cells_ranges_copy_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')

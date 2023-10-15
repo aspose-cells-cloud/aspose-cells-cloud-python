@@ -41,8 +41,8 @@ class TestRangesControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PostWorksheetCellsRangesRequest( remote_name, 'Sheet1', rangeOperate,folder= remote_folder,storage_name= '')
-        self.api.post_worksheet_cells_ranges(request)
+        request =  PostWorksheetCellsRangesCopyRequest( remote_name, 'Sheet1', rangeOperate,folder= remote_folder,storage_name= '')
+        self.api.post_worksheet_cells_ranges_copy(request)
 
 
     def test_post_worksheet_cells_range_merge(self):
