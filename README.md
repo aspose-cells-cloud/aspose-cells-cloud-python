@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/23.10)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/23.11)
 
 
 # Python SDK for Spreadsheet Processing in Cloud
@@ -21,13 +21,13 @@ Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate M
 - Convert worksheets to PDF, XPS & SVG formats.
 - Inter-convert files to popular Excel formats.
 
-## Feature & Enhancements in Version 23.10
+## Feature & Enhancements in Version 23.11
 
 Full list of issues covering all changes in this release:
 
-- Fix protect workbook request.
-- Fix range copy API.
-- Optimize workbook protect API.
+- Optimize import xml data into Excel file.
+- Optimize import json data into Excel file.
+- **Remove deprecated functions, class and test case.**
 
 
  
@@ -71,36 +71,28 @@ Firstly, create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/
 ## Create Spreadsheet from a Template in the Cloud via Python
 
 ```python
-
-    #Instantiate Aspose Cells API SDK
-    cellsApi = asposecellscloud.apis.cells_api.CellsApi(GetClientId(),GetClientSecret(),"v3.0")
-
-    templateFile ='Book1.xlsx'       
-    folder = "Temp"
-    name = "NewBook" + datetime.now().strftime("%Y%m%d%H%M%S") + ".xlsx"    
-    dataFile = "ReportData.xml"  
-    template_file = folder + "/" + templateFile
-    data_file = folder + "/" + dataFile
-    fullfilename = os.path.dirname(os.path.realpath(__file__)) +  "/" + templateFile
-    api.upload_file(template_file, fullfilename)
-    fullfilename = os.path.dirname(os.path.realpath(__file__)) +  "/" + data_file
-    api.upload_file(data_file, fullfilename)
-    result = cellsApi.cells_workbook_put_workbook_create(name, template_file=template_file, data_file=data_file,  folder=folder)
-    self.assertEqual(result.code,200)
+    cellsApi = CellsApi("YourClientId","YourClientSecret","v3.0","https://api.aspose.cloud")
+    remote_folder = 'TestData/In'
+    local_name = 'Book1.xlsx'
+    report_data_xml = 'ReportData.xml'
+    remote_name = 'Book1.xlsx'
+    
+    request =  PostWorkbookGetSmartMarkerResultRequest( remote_name,xml_file= remote_folder + '/' +report_data_xml,folder= remote_folder,out_path= 'OutResult/SmartMarkerResult.xlsx',storage_name= '',out_storage_name= '')
+    cellsApi.post_workbook_get_smart_marker_result(request)
 ```
 
 ## Convert Excel to PDF via Python 
 
 ```python
     #Instantiate Aspose Cells API SDK
-    cellsApi = asposecellscloud.apis.cells_api.CellsApi(GetClientId(),GetClientSecret(),"v3.0")
-
-    fullfilename = os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" + "Book1.xlsx"
-    format ='pdf'       
-    password = None
-    outPath = None      
-    result = cellsApi.cells_workbook_put_convert_workbook(fullfilename,format=format)
-    # self.assertEqual(result.code,200)
+    cellsApi = CellsApi("YourClientId","YourClientSecret","v3.0","https://api.aspose.cloud")
+    local_name = 'Book1.xlsx'
+    format = 'pdf'
+    mapFiles = { 
+        local_name:  "TestData/" +local_name             
+    }
+    request =  PutConvertWorkbookRequest( mapFiles,format= format)
+    cellsApi.put_convert_workbook(request)
 ```
 
 ## Aspose.Cells Cloud SDKs in Popular Languages

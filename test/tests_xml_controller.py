@@ -57,7 +57,7 @@ class TestXmlControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, data_xml, remote_folder + '/data.xml' ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PostWorkbookImportXMLRequest( remote_name, import_xml_request =   importXMLRequest , folder= remote_folder,storage_name= '')
+        request =  PostWorkbookImportXMLRequest( remote_name, importXMLRequest,folder= remote_folder,storage_name= '')
         self.api.post_workbook_import_xml(request)
 
 

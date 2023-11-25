@@ -1,13 +1,21 @@
-# ImportStringArrayOption
+# AsposeCellsCloud::Object::ImportStringArrayOption 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::ImportStringArrayOption;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **list[str]** |  | [optional] 
-**is_vertical** | **bool** |  | [optional] 
-**first_row** | **int** |  | [optional] 
-**first_column** | **int** |  | [optional] 
+**FirstRow** | **int** |  |
+**FirstColumn** | **int** |  |
+**IsVertical** | **boolean** |  |
+**Data** | **ARRAY[string]** |  |
+**DestinationWorksheet** | **string** |  |
+**IsInsert** | **boolean** |  |
+**ImportDataType** | **string** |  |
+**Source** | **FileSource** |  |  
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

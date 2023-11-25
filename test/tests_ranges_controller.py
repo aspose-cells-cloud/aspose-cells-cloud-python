@@ -29,7 +29,7 @@ class TestRangesControllerApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_post_worksheet_cells_ranges(self):
+    def test_post_worksheet_cells_ranges_copy(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -200,20 +200,22 @@ class TestRangesControllerApi(unittest.TestCase):
         request =  DeleteWorksheetCellsRangeRequest( remote_name, 'Sheet1', 'A1:C6', 'Up',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_cells_range(request)
 
+
     def test_post_worksheet_cells_range_sort(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Group.xlsx'
         remote_name = 'Group.xlsx'
 
-        rangeOperateDataSorter = DataSorter(case_sensitive= True )
-        rangeOperateCellArea = Range(column_count= 3 ,first_column= 0 ,first_row= 0 ,row_count= 15 )
-        rangeOperate = RangeSortRequest(data_sorter= rangeOperateDataSorter ,cell_area= rangeOperateCellArea )
+        rangeSortRequestDataSorter = DataSorter(case_sensitive= True )
+        rangeSortRequestCellArea = Range(column_count= 3 ,first_column= 0 ,first_row= 0 ,row_count= 15 )
+        rangeSortRequest = RangeSortRequest(data_sorter= rangeSortRequestDataSorter ,cell_area= rangeSortRequestCellArea )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PostWorksheetCellsRangeSortRequest( remote_name, 'book1', rangeOperate,folder= remote_folder,storage_name= '')
+        request =  PostWorksheetCellsRangeSortRequest( remote_name, 'book1', rangeSortRequest,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_cells_range_sort(request)
-        
+
+
 if __name__ == '__main__':
     unittest.main()

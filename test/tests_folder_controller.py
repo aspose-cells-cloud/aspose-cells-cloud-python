@@ -51,7 +51,7 @@ class TestFolderControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  CreateFolderRequest( 'OutResul/NewFolder',storage_name= '')
+        request =  CreateFolderRequest( 'OutResult/NewFolder',storage_name= '')
         self.api.create_folder(request)
 
 

@@ -1,15 +1,23 @@
-# ImportCSVDataOption
+# AsposeCellsCloud::Object::ImportCSVDataOption 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::ImportCSVDataOption;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**convert_numeric_data** | **bool** |  | [optional] 
-**first_column** | **int** |  | [optional] 
-**source_file** | **str** |  | [optional] 
-**first_row** | **int** |  | [optional] 
-**separator_string** | **str** |  | [optional] 
-**custom_parsers** | [**list[CustomParserConfig]**](CustomParserConfig.md) |  | [optional] 
+**SeparatorString** | **string** |  |
+**ConvertNumericData** | **boolean** |  |
+**FirstRow** | **int** |  |
+**FirstColumn** | **int** |  |
+**SourceFile** | **string** |  |
+**CustomParsers** | **ARRAY[CustomParserConfig]** |  |
+**DestinationWorksheet** | **string** |  |
+**IsInsert** | **boolean** |  |
+**ImportDataType** | **string** |  |
+**Source** | **FileSource** |  |  
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

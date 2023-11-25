@@ -77,7 +77,7 @@ class TestPivotTablesControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  GetWorksheetPivotTableFiltersRequest( remote_name, 'Sheet3', 0,folder= remote_folder,storage_name= '')
+        request =  GetWorksheetPivotTableFiltersRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_pivot_table_filters(request)
 
 
@@ -103,7 +103,7 @@ class TestPivotTablesControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutWorksheetPivotTableRequest( remote_name, 'Sheet3',folder= remote_folder,source_data= '=Sheet1!C6:E13',dest_cell_name= 'C1',table_name= 'TestPivot',use_same_source= True,storage_name= '')
+        request =  PutWorksheetPivotTableRequest( remote_name, 'Sheet4',folder= remote_folder,source_data= '=Sheet1!C6:E13',dest_cell_name= 'C1',table_name= 'TestPivot',use_same_source= True,storage_name= '')
         self.api.put_worksheet_pivot_table(request)
 
 
@@ -313,7 +313,7 @@ class TestPivotTablesControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  DeleteWorksheetPivotTableFilterRequest( remote_name, 'Sheet4', 0, 0,need_re_calculate= True,folder= remote_folder,storage_name= '')
+        request =  DeleteWorksheetPivotTableFilterRequest( remote_name, 'Sheet3', 0, 0,need_re_calculate= True,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_pivot_table_filter(request)
 
 

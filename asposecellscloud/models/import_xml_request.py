@@ -46,12 +46,14 @@ class ImportXMLRequest(object):
 
     swagger_types = {
         'xml_file_source' : 'FileSource',
-        'import_position' : 'ImportPosition'
+        'import_position' : 'ImportPosition',
+        'xml_content' : 'str'
     }
 
     attribute_map = {
         'xml_file_source' : 'XMLFileSource' ,
-        'import_position' : 'ImportPosition' 
+        'import_position' : 'ImportPosition' ,
+        'xml_content' : 'XMLContent' 
     }
 
     @staticmethod
@@ -67,7 +69,7 @@ class ImportXMLRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self,xml_file_source=None ,import_position=None   ,**kw):
+    def __init__(self,xml_file_source=None ,import_position=None ,xml_content=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -78,6 +80,7 @@ class ImportXMLRequest(object):
         """
         self.container['xml_file_source'] = None 
         self.container['import_position'] = None 
+        self.container['xml_content'] = None 
         params = locals()
         self.xml_file_source = xml_file_source
         if 'xml_file_source' in params:
@@ -88,6 +91,12 @@ class ImportXMLRequest(object):
         self.import_position = import_position
         if 'import_position' in params:
             self.import_position = params["import_position"]
+
+
+             
+        self.xml_content = xml_content
+        if 'xml_content' in params:
+            self.xml_content = params["xml_content"]
 
 
              
@@ -106,6 +115,13 @@ class ImportXMLRequest(object):
     @import_position.setter
     def import_position(self, import_position):
         self.container['import_position'] = import_position 
+    @property
+    def xml_content(self):
+        return self.container['xml_content']
+
+    @xml_content.setter
+    def xml_content(self, xml_content):
+        self.container['xml_content'] = xml_content 
 
     def to_dict(self):
         """

@@ -79,11 +79,11 @@ class TestWorkbookControllerApi(unittest.TestCase):
         local_name = 'Book1.xlsx'
         remote_name = 'Book1.xlsx'
 
-        protection = WorkbookProtectionRequest(password= '123456' ,protection_type= 'ALL' )
+        protectWorkbookRequest = ProtectWorkbookRequest(encrypt_with_password= '123456' ,protect_workbook_structure= 'ALL' )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PostProtectWorkbookRequest( remote_name, protection,folder= remote_folder,storage_name= '')
+        request =  PostProtectWorkbookRequest( remote_name, protectWorkbookRequest,folder= remote_folder,storage_name= '')
         self.api.post_protect_workbook(request)
 
 
@@ -92,8 +92,11 @@ class TestWorkbookControllerApi(unittest.TestCase):
 
         local_name = 'Book1.xlsx'
         remote_name = 'Book1.xlsx'
+
+        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
      
-        request =  DeleteUnProtectWorkbookRequest( remote_name, "123456",folder= remote_folder,storage_name= '')
+        request =  DeleteUnProtectWorkbookRequest( remote_name, remote_name,folder= remote_folder,storage_name= '')
         self.api.delete_un_protect_workbook(request)
 
 

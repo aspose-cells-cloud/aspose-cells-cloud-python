@@ -414,7 +414,7 @@ class TestCellsControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  GetWorksheetRowRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
+        request =  GetWorksheetRowRequest( remote_name, 'Sheet1', 1,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_row(request)
 
 
@@ -466,7 +466,7 @@ class TestCellsControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutInsertWorksheetRowRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
+        request =  PutInsertWorksheetRowRequest( remote_name, 'Sheet1', 1,folder= remote_folder,storage_name= '')
         self.api.put_insert_worksheet_row(request)
 
 
@@ -479,7 +479,7 @@ class TestCellsControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PostUpdateWorksheetRowRequest( remote_name, 'Sheet1', 0,height= 10.8,count= 9,folder= remote_folder,storage_name= '')
+        request =  PostUpdateWorksheetRowRequest( remote_name, 'Sheet1', 1,height= 10.8,count= 9,folder= remote_folder,storage_name= '')
         self.api.post_update_worksheet_row(request)
 
 

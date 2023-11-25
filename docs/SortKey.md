@@ -1,12 +1,19 @@
-# SortKey
+# AsposeCellsCloud::Object::SortKey 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::SortKey;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**custom_list** | **str** |  | [optional] 
-**sort_order** | **str** |  | [optional] 
-**key** | **int** |  | 
+**Key** | **int** |  |
+**SortOrder** | **string** |  |
+**CustomList** | **ARRAY[string]** |  |
+**Order** | **string** | Indicates the order of sorting. |
+**Index** | **int** | Gets the sorted column index(absolute position, column A is 0, B is 1, ...). |
+**Type** | **string** | Represents the type of sorting. |  
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

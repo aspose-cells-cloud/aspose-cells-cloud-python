@@ -188,6 +188,7 @@ class TestListObjectsControllerApi(unittest.TestCase):
         request =  PostWorksheetListColumnsTotalRequest( remote_name, 'Sheet7', 0, tableTotalRequests,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_list_columns_total(request)
 
+
     def test_post_worksheet_list_object_remove_duplicates(self):
         remote_folder = 'TestData/In'
 

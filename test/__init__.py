@@ -46,6 +46,7 @@ from test.tests_sparkline_groups_controller import TestSparklineGroupsController
 from test.tests_workbook_controller import TestWorkbookControllerApi
 from test.tests_worksheet_controller import TestWorksheetControllerApi
 from test.tests_worksheet_validations_controller import TestWorksheetValidationsControllerApi
+from test.tests_xml_controller import TestXmlControllerApi
 from test.tests_batch_controller import TestBatchControllerApi
 from test.tests_conversion import TestConversionApi
 from test.tests_conversion_json import TestConversionJsonApi

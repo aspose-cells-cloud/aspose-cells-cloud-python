@@ -1,18 +1,22 @@
-# FilterColumn
+# AsposeCellsCloud::Object::FilterColumn 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::FilterColumn;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**filter_type** | **str** |  | [optional] 
-**multiple_filters** | [**MultipleFilters**](MultipleFilters.md) |  | [optional] 
-**custom_filters** | [**list[CustomFilter]**](CustomFilter.md) |  | [optional] 
-**dynamic_filter** | [**DynamicFilter**](DynamicFilter.md) |  | [optional] 
-**color_filter** | [**ColorFilter**](ColorFilter.md) |  | [optional] 
-**field_index** | **int** |  | 
-**top10_filter** | [**Top10Filter**](Top10Filter.md) |  | [optional] 
-**icon_filter** | [**IconFilter**](IconFilter.md) |  | [optional] 
-**visibledropdown** | **str** |  | [optional] 
+**FieldIndex** | **int** | Gets and sets the column offset in the range.  |
+**FilterType** | **string** | Gets and sets the type fo filtering data.  |
+**MultipleFilters** | **MultipleFilters** |  |
+**ColorFilter** | **ColorFilter** |  |
+**CustomFilters** | **ARRAY[CustomFilter]** |  |
+**DynamicFilter** | **DynamicFilter** |  |
+**IconFilter** | **IconFilter** |  |
+**Top10Filter** | **Top10Filter** |  |
+**Visibledropdown** | **string** | Indicates whether the AutoFilter button for this column is visible.  |  
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

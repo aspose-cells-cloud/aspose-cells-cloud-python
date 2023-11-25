@@ -1,14 +1,18 @@
-# StorageFile
+# AsposeCellsCloud::Object::StorageFile 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::StorageFile;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | File or folder name. | [optional] 
-**is_folder** | **bool** | True if it is a folder. | 
-**modified_date** | **datetime** | File or folder last modified DateTime. | [optional] 
-**size** | **int** | File or folder size. | 
-**path** | **str** | File or folder path. | [optional] 
+**Name** | **string** | File or folder name. |
+**IsFolder** | **boolean** | True if it is a folder. |
+**ModifiedDate** | **DateTime** | File or folder last modified DateTime. |
+**Size** | **int** | File or folder size. |
+**Path** | **string** | File or folder path. |  
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

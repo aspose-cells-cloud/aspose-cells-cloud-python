@@ -2794,8 +2794,26 @@ class TestLightCellsApi(unittest.TestCase):
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
+        protectWorkbookRequest = ProtectWorkbookRequest(aways_open_read_only= True ,encrypt_with_password= '123456' )
+
+
      
-        request =  PostProtectRequest( mapFiles, '123456')
+        request =  PostProtectRequest( mapFiles, protectWorkbookRequest,password= '123456')
+        self.api.post_protect(request)
+
+
+    def test_post_protect__protect_workbook_request(self):
+        assembly_test_xlsx = 'assemblytest.xlsx'
+        data_source_xlsx = 'datasource.xlsx'
+
+        mapFiles = { 
+            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+        }
+        protectWorkbookRequest = ProtectWorkbookRequest(aways_open_read_only= True ,encrypt_with_password= '123456' )
+
+
+     
+        request =  PostProtectRequest( mapFiles, protectWorkbookRequest)
         self.api.post_protect(request)
 
 
@@ -2986,6 +3004,7 @@ class TestLightCellsApi(unittest.TestCase):
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
 
+
     def test_post_repair_xlsx(self):
         book1_xlsx = 'Book1.xlsx'
 
@@ -3036,6 +3055,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostRepairRequest( mapFiles,format= format)
         self.api.post_repair(request)
+
 
     def test_post_reverse_rows_pdf(self):
         book1_xlsx = 'Book1.xlsx'
