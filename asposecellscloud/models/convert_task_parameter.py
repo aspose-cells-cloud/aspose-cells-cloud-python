@@ -47,12 +47,14 @@ class ConvertTaskParameter(object):
     swagger_types = {
         'workbook' : 'FileSource',
         'destination_file' : 'str',
+        'region' : 'str',
         'save_options' : 'SaveOptions'
     }
 
     attribute_map = {
         'workbook' : 'Workbook' ,
         'destination_file' : 'DestinationFile' ,
+        'region' : 'Region' ,
         'save_options' : 'SaveOptions' 
     }
 
@@ -69,7 +71,7 @@ class ConvertTaskParameter(object):
             return self.container[attr]
         return None
 
-    def __init__(self,workbook=None ,destination_file=None ,save_options=None   ,**kw):
+    def __init__(self,workbook=None ,destination_file=None ,region=None ,save_options=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -80,6 +82,7 @@ class ConvertTaskParameter(object):
         """
         self.container['workbook'] = None 
         self.container['destination_file'] = None 
+        self.container['region'] = None 
         self.container['save_options'] = None 
         params = locals()
         self.workbook = workbook
@@ -91,6 +94,12 @@ class ConvertTaskParameter(object):
         self.destination_file = destination_file
         if 'destination_file' in params:
             self.destination_file = params["destination_file"]
+
+
+             
+        self.region = region
+        if 'region' in params:
+            self.region = params["region"]
 
 
              
@@ -115,6 +124,13 @@ class ConvertTaskParameter(object):
     @destination_file.setter
     def destination_file(self, destination_file):
         self.container['destination_file'] = destination_file 
+    @property
+    def region(self):
+        return self.container['region']
+
+    @region.setter
+    def region(self, region):
+        self.container['region'] = region 
     @property
     def save_options(self):
         return self.container['save_options']

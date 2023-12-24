@@ -34,12 +34,13 @@ from six.moves.urllib.parse import quote
 
 class PostMergeRequest(object):
 
-    def __init__(self , file ,format =None ,merge_to_one_sheet =None ,password =None ,check_excel_restriction =None ):
+    def __init__(self , file ,out_format =None ,merge_to_one_sheet =None ,password =None ,check_excel_restriction =None ,region =None ):
         self.file = file 
-        self.format = format 
+        self.out_format = out_format 
         self.merge_to_one_sheet = merge_to_one_sheet 
         self.password = password 
         self.check_excel_restriction = check_excel_restriction 
+        self.region = region 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'file' is set
@@ -51,14 +52,16 @@ class PostMergeRequest(object):
 
         path_params = {}
         query_params = []
-        if self.format is not None:
-            query_params.append(('format',self.format ))
+        if self.out_format is not None:
+            query_params.append(('outFormat',self.out_format ))
         if self.merge_to_one_sheet is not None:
             query_params.append(('mergeToOneSheet',self.merge_to_one_sheet ))
         if self.password is not None:
             query_params.append(('password',self.password ))
         if self.check_excel_restriction is not None:
             query_params.append(('checkExcelRestriction',self.check_excel_restriction ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
 
         header_params = {}
 

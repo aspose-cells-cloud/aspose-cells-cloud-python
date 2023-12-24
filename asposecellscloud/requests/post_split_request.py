@@ -34,13 +34,14 @@ from six.moves.urllib.parse import quote
 
 class PostSplitRequest(object):
 
-    def __init__(self , file ,format =None ,password =None ,_from =None ,to =None ,check_excel_restriction =None ):
+    def __init__(self , file ,out_format =None ,password =None ,_from =None ,to =None ,check_excel_restriction =None ,region =None ):
         self.file = file 
-        self.format = format 
+        self.out_format = out_format 
         self.password = password 
         self._from = _from 
         self.to = to 
         self.check_excel_restriction = check_excel_restriction 
+        self.region = region 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'file' is set
@@ -48,17 +49,17 @@ class PostSplitRequest(object):
             raise ValueError("Missing the required parameter `file` when calling `post_split`")
 
 
-        # verify the required parameter 'format' is set
-        if self.format is None:
-            raise ValueError("Missing the required parameter `format` when calling `post_split`")
+        # verify the required parameter 'out_format' is set
+        if self.out_format is None:
+            raise ValueError("Missing the required parameter `out_format` when calling `post_split`")
 
 
         collection_formats = {}
 
         path_params = {}
         query_params = []
-        if self.format is not None:
-            query_params.append(('format',self.format ))
+        if self.out_format is not None:
+            query_params.append(('outFormat',self.out_format ))
         if self.password is not None:
             query_params.append(('password',self.password ))
         if self._from is not None:
@@ -67,6 +68,8 @@ class PostSplitRequest(object):
             query_params.append(('to',self.to ))
         if self.check_excel_restriction is not None:
             query_params.append(('checkExcelRestriction',self.check_excel_restriction ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
 
         header_params = {}
 

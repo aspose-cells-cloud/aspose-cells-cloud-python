@@ -33,13 +33,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'csv'
+        out_format = 'csv'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -47,13 +47,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'xls'
+        out_format = 'xls'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -61,13 +61,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'html'
+        out_format = 'html'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -75,13 +75,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'mhtml'
+        out_format = 'mhtml'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -89,13 +89,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'ods'
+        out_format = 'ods'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -103,13 +103,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'pdf'
+        out_format = 'pdf'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -117,13 +117,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'xml'
+        out_format = 'xml'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -131,13 +131,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'txt'
+        out_format = 'txt'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -145,13 +145,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'tif'
+        out_format = 'tif'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -159,27 +159,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'xlsb'
+        out_format = 'xlsb'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
-        self.api.post_split(request)
-
-
-    def test_post_split_xlsm(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
-
-        format = 'xlsm'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
-        }
-     
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -187,41 +173,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'xlsx'
+        out_format = 'xlsx'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
-        self.api.post_split(request)
-
-
-    def test_post_split_xltm(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
-
-        format = 'xltm'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
-        }
-     
-        request =  PostSplitRequest( mapFiles, format)
-        self.api.post_split(request)
-
-
-    def test_post_split_xltx(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
-
-        format = 'xltx'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
-        }
-     
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -229,13 +187,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'xps'
+        out_format = 'xps'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -243,13 +201,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'png'
+        out_format = 'png'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -257,55 +215,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'jpg'
+        out_format = 'jpg'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
-        self.api.post_split(request)
-
-
-    def test_post_split_gif(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
-
-        format = 'gif'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
-        }
-     
-        request =  PostSplitRequest( mapFiles, format)
-        self.api.post_split(request)
-
-
-    def test_post_split_emf(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
-
-        format = 'emf'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
-        }
-     
-        request =  PostSplitRequest( mapFiles, format)
-        self.api.post_split(request)
-
-
-    def test_post_split_bmp(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
-
-        format = 'bmp'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
-        }
-     
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -313,13 +229,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'md'
+        out_format = 'md'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -327,27 +243,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'numbers'
+        out_format = 'numbers'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
-        self.api.post_split(request)
-
-
-    def test_post_split_wmf(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
-
-        format = 'wmf'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
-        }
-     
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -355,13 +257,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'svg'
+        out_format = 'svg'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -369,13 +271,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'docx'
+        out_format = 'docx'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -383,13 +285,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'pptx'
+        out_format = 'pptx'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -397,13 +299,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'json'
+        out_format = 'json'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -411,13 +313,13 @@ class TestLightCellsApi(unittest.TestCase):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
-        format = 'sql'
+        out_format = 'sql'
 
         mapFiles = { 
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostSplitRequest( mapFiles, format)
+        request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
 
@@ -2367,7 +2269,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2382,7 +2284,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2397,7 +2299,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2412,7 +2314,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2427,7 +2329,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2442,7 +2344,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2457,7 +2359,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2472,7 +2374,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2487,7 +2389,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2502,7 +2404,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2517,7 +2419,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2532,7 +2434,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2547,7 +2449,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2562,7 +2464,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2577,7 +2479,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2592,7 +2494,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2607,7 +2509,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2622,7 +2524,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2637,7 +2539,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2652,7 +2554,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2667,7 +2569,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2682,7 +2584,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2697,7 +2599,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2712,7 +2614,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2727,7 +2629,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2742,7 +2644,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2757,7 +2659,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -2772,7 +2674,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostMergeRequest( mapFiles,format= format,merge_to_one_sheet= merge_to_one_sheet)
+        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
 
@@ -3014,7 +2916,7 @@ class TestLightCellsApi(unittest.TestCase):
             book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
-        request =  PostRepairRequest( mapFiles,format= format)
+        request =  PostRepairRequest( mapFiles,out_format= format)
         self.api.post_repair(request)
 
 
@@ -3027,7 +2929,7 @@ class TestLightCellsApi(unittest.TestCase):
             book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
-        request =  PostRepairRequest( mapFiles,format= format)
+        request =  PostRepairRequest( mapFiles,out_format= format)
         self.api.post_repair(request)
 
 
@@ -3040,7 +2942,7 @@ class TestLightCellsApi(unittest.TestCase):
             book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
-        request =  PostRepairRequest( mapFiles,format= format)
+        request =  PostRepairRequest( mapFiles,out_format= format)
         self.api.post_repair(request)
 
 
@@ -3053,7 +2955,7 @@ class TestLightCellsApi(unittest.TestCase):
             book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
-        request =  PostRepairRequest( mapFiles,format= format)
+        request =  PostRepairRequest( mapFiles,out_format= format)
         self.api.post_repair(request)
 
 
@@ -3067,7 +2969,7 @@ class TestLightCellsApi(unittest.TestCase):
             book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
-        request =  PostReverseRequest( mapFiles, rotate_type,format= format)
+        request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
 
 
@@ -3081,7 +2983,7 @@ class TestLightCellsApi(unittest.TestCase):
             book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
-        request =  PostReverseRequest( mapFiles, rotate_type,format= format)
+        request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
 
 
@@ -3095,7 +2997,7 @@ class TestLightCellsApi(unittest.TestCase):
             book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
-        request =  PostReverseRequest( mapFiles, rotate_type,format= format)
+        request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
 
 
@@ -3109,7 +3011,7 @@ class TestLightCellsApi(unittest.TestCase):
             book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
-        request =  PostReverseRequest( mapFiles, rotate_type,format= format)
+        request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
 
 
@@ -3123,7 +3025,7 @@ class TestLightCellsApi(unittest.TestCase):
             book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
-        request =  PostReverseRequest( mapFiles, rotate_type,format= format)
+        request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
 
 
@@ -3137,7 +3039,7 @@ class TestLightCellsApi(unittest.TestCase):
             book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
-        request =  PostReverseRequest( mapFiles, rotate_type,format= format)
+        request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
 
 

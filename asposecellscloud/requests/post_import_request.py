@@ -34,8 +34,12 @@ from six.moves.urllib.parse import quote
 
 class PostImportRequest(object):
 
-    def __init__(self , file ):
+    def __init__(self , file ,out_format =None ,password =None ,check_excel_restriction =None ,region =None ):
         self.file = file 
+        self.out_format = out_format 
+        self.password = password 
+        self.check_excel_restriction = check_excel_restriction 
+        self.region = region 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'file' is set
@@ -47,6 +51,15 @@ class PostImportRequest(object):
 
         path_params = {}
         query_params = []
+        if self.out_format is not None:
+            query_params.append(('outFormat',self.out_format ))
+        if self.password is not None:
+            query_params.append(('password',self.password ))
+        if self.check_excel_restriction is not None:
+            query_params.append(('checkExcelRestriction',self.check_excel_restriction ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
+
         header_params = {}
 
         form_params = []

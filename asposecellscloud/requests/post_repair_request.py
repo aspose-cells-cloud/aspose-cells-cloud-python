@@ -34,9 +34,9 @@ from six.moves.urllib.parse import quote
 
 class PostRepairRequest(object):
 
-    def __init__(self , file ,format =None ):
+    def __init__(self , file ,out_format =None ):
         self.file = file 
-        self.format = format 
+        self.out_format = out_format 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'file' is set
@@ -48,8 +48,8 @@ class PostRepairRequest(object):
 
         path_params = {}
         query_params = []
-        if self.format is not None:
-            query_params.append(('format',self.format ))
+        if self.out_format is not None:
+            query_params.append(('outFormat',self.out_format ))
 
         header_params = {}
 

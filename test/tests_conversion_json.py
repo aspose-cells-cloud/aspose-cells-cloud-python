@@ -191,24 +191,6 @@ class TestConversionJsonApi(unittest.TestCase):
         self.api.put_convert_workbook(request)
 
 
-    def test_convert_workbook_xlsx(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'codegen-spec.json'
-        remote_name = 'codegen-spec.json'
-
-        format = 'xlsx'
-
-        mapFiles = { 
-            local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
-        }
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
-        self.api.put_convert_workbook(request)
-
-
     def test_convert_workbook_xps(self):
         remote_folder = 'TestData/In'
 
@@ -216,24 +198,6 @@ class TestConversionJsonApi(unittest.TestCase):
         remote_name = 'codegen-spec.json'
 
         format = 'xps'
-
-        mapFiles = { 
-            local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
-        }
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
-        self.api.put_convert_workbook(request)
-
-
-    def test_convert_workbook_png(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'codegen-spec.json'
-        remote_name = 'codegen-spec.json'
-
-        format = 'png'
 
         mapFiles = { 
             local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             

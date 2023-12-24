@@ -81,7 +81,7 @@ class CellsApi(object):
                     self.get_access_token_time =  time.process_time()
 
     # <summary>
-    # Get auto filters description in worksheet.
+    # Retrieve the description of auto filters from a worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetAutoFilterRequest" /></param>
     def get_worksheet_auto_filter(self, request, **kwargs):
@@ -129,7 +129,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Adds date filter in worksheet.
+    # Apply a date filter in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PutWorksheetDateFilterRequest" /></param>
     def put_worksheet_date_filter(self, request, **kwargs):
@@ -177,8 +177,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Adds a filter for a filter column in worksheet.
-    #             
+    # Add a filter for a column in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PutWorksheetFilterRequest" /></param>
     def put_worksheet_filter(self, request, **kwargs):
@@ -226,7 +225,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Adds an icon filter in worksheet.
+    # Add an icon filter in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PutWorksheetIconFilterRequest" /></param>
     def put_worksheet_icon_filter(self, request, **kwargs):
@@ -274,8 +273,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Filters a list with a custom criteria in worksheet.
-    #             
+    # Filter a list with custom criteria in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PutWorksheetCustomFilterRequest" /></param>
     def put_worksheet_custom_filter(self, request, **kwargs):
@@ -323,7 +321,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Adds a dynamic filter in worksheet.
+    # Add a dynamic filter in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PutWorksheetDynamicFilterRequest" /></param>
     def put_worksheet_dynamic_filter(self, request, **kwargs):
@@ -371,7 +369,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Filters the top 10 item in the list in worksheet
+    # Filter the top 10 items in the list in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PutWorksheetFilterTop10Request" /></param>
     def put_worksheet_filter_top10(self, request, **kwargs):
@@ -419,7 +417,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Adds a color filter in worksheet.
+    # Add a color filter in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PutWorksheetColorFilterRequest" /></param>
     def put_worksheet_color_filter(self, request, **kwargs):
@@ -467,7 +465,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Match all blank cell in the list.
+    # Match all blank cells in the list.
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetMatchBlanksRequest" /></param>
     def post_worksheet_match_blanks(self, request, **kwargs):
@@ -515,8 +513,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Match all not blank cell in the list.
-    #             
+    # Match all not blank cells in the list.
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetMatchNonBlanksRequest" /></param>
     def post_worksheet_match_non_blanks(self, request, **kwargs):
@@ -564,7 +561,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Refresh auto filters in worksheet.
+    # Refresh auto filters in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetAutoFilterRefreshRequest" /></param>
     def post_worksheet_auto_filter_refresh(self, request, **kwargs):
@@ -612,8 +609,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Removes a date filter in worksheet.
-    #             
+    # Remove a date filter in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="DeleteWorksheetDateFilterRequest" /></param>
     def delete_worksheet_date_filter(self, request, **kwargs):
@@ -661,8 +657,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Deletes a filter for a filter column in worksheet.
-    #             
+    # Delete a filter for a column in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="DeleteWorksheetFilterRequest" /></param>
     def delete_worksheet_filter(self, request, **kwargs):
@@ -806,6 +801,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Batch converting files that meet specific matching conditions.
     # </summary>
     # <param name="request">Request. <see cref="PostBatchConvertRequest" /></param>
     def post_batch_convert(self, request, **kwargs):
@@ -853,6 +849,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Batch protecting files that meet specific matching conditions.
     # </summary>
     # <param name="request">Request. <see cref="PostBatchProtectRequest" /></param>
     def post_batch_protect(self, request, **kwargs):
@@ -900,6 +897,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Batch locking files that meet specific matching conditions.
     # </summary>
     # <param name="request">Request. <see cref="PostBatchLockRequest" /></param>
     def post_batch_lock(self, request, **kwargs):
@@ -947,6 +945,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Batch unlocking files that meet specific matching conditions.
     # </summary>
     # <param name="request">Request. <see cref="PostBatchUnlockRequest" /></param>
     def post_batch_unlock(self, request, **kwargs):
@@ -994,6 +993,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Batch splitting files that meet specific matching conditions.
     # </summary>
     # <param name="request">Request. <see cref="PostBatchSplitRequest" /></param>
     def post_batch_split(self, request, **kwargs):
@@ -1041,7 +1041,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Clear cells contents in worksheet.
+    # Clear cell area contents in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostClearContentsRequest" /></param>
     def post_clear_contents(self, request, **kwargs):
@@ -1089,7 +1089,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Clear cells formats in worksheet.
+    # Clear cell formats in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostClearFormatsRequest" /></param>
     def post_clear_formats(self, request, **kwargs):
@@ -1137,7 +1137,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Updates cell's range style in worksheet.
+    # Update cell range styles in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostUpdateWorksheetRangeStyleRequest" /></param>
     def post_update_worksheet_range_style(self, request, **kwargs):
@@ -1185,7 +1185,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Merge cells in worksheet.
+    # Merge cells in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetMergeRequest" /></param>
     def post_worksheet_merge(self, request, **kwargs):
@@ -1233,7 +1233,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Unmerge cells in worksheet.
+    # Unmerge cells in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetUnmergeRequest" /></param>
     def post_worksheet_unmerge(self, request, **kwargs):
@@ -1281,7 +1281,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Gets cells description in some format.
+    # Retrieve cell descriptions in a specified format.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetCellsRequest" /></param>
     def get_worksheet_cells(self, request, **kwargs):
@@ -1329,7 +1329,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Gets cell data by cell or method name in worksheet.
+    # Retrieve cell data using either cell reference or method name in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetCellRequest" /></param>
     def get_worksheet_cell(self, request, **kwargs):
@@ -1377,7 +1377,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Gets cell's style description in worksheet.
+    # Retrieve cell style descriptions in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetCellStyleRequest" /></param>
     def get_worksheet_cell_style(self, request, **kwargs):
@@ -1425,7 +1425,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Sets cell value by cell name in worksheet.
+    # Set cell value using cell name in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetCellSetValueRequest" /></param>
     def post_worksheet_cell_set_value(self, request, **kwargs):
@@ -1473,7 +1473,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Sets cell's style by cell name in worksheet.
+    # Set cell style using cell name in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostUpdateWorksheetCellStyleRequest" /></param>
     def post_update_worksheet_cell_style(self, request, **kwargs):
@@ -1521,7 +1521,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Sets the value of the range in worksheet.
+    # Set the value of the range in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostSetCellRangeValueRequest" /></param>
     def post_set_cell_range_value(self, request, **kwargs):
@@ -1569,7 +1569,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Copies data to destination cell from a source cell in worksheet.
+    # Copy data from a source cell to a destination cell in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostCopyCellIntoCellRequest" /></param>
     def post_copy_cell_into_cell(self, request, **kwargs):
@@ -1617,7 +1617,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Gets the html string which contains data and some formats in this cell.
+    # Retrieve the HTML string containing data and specific formats in this cell.
     # </summary>
     # <param name="request">Request. <see cref="GetCellHtmlStringRequest" /></param>
     def get_cell_html_string(self, request, **kwargs):
@@ -1665,7 +1665,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Sets the html string which contains data and some formats in this cell.
+    # Set the HTML string containing data and specific formats in this cell.
     # </summary>
     # <param name="request">Request. <see cref="PostSetCellHtmlStringRequest" /></param>
     def post_set_cell_html_string(self, request, **kwargs):
@@ -1713,7 +1713,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Calculates cell formula in worksheet.
+    # Calculate cell formula in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostCellCalculateRequest" /></param>
     def post_cell_calculate(self, request, **kwargs):
@@ -1761,7 +1761,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Sets cell characters in worksheet.
+    # Set cell characters in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostCellCharactersRequest" /></param>
     def post_cell_characters(self, request, **kwargs):
@@ -2914,7 +2914,6 @@ class CellsApi(object):
 
     # <summary>
     # Applies formats for a whole row in worksheet.
-    #             
     # </summary>
     # <param name="request">Request. <see cref="PostRowStyleRequest" /></param>
     def post_row_style(self, request, **kwargs):
@@ -2962,7 +2961,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Gets cells description in some format.
+    # Retrieve cell descriptions in a specified format.
     # </summary>
     # <param name="request">Request. <see cref="GetCellsCloudServicesHealthCheckRequest" /></param>
     def get_cells_cloud_services_health_check(self, request, **kwargs):
@@ -3010,7 +3009,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Aspose.Cells Cloud service health status check(old). 
+    # Aspose.Cells Cloud service health status check.
     # </summary>
     # <param name="request">Request. <see cref="GetCellsCloudServiceStatusRequest" /></param>
     def get_cells_cloud_service_status(self, request, **kwargs):
@@ -3058,7 +3057,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Gets chart area description in worksheet.
+    # Retrieve chart area description in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetChartAreaRequest" /></param>
     def get_chart_area(self, request, **kwargs):
@@ -3106,7 +3105,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Gets chart area fill format description in worksheet.
+    # Retrieve chart area fill format description in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetChartAreaFillFormatRequest" /></param>
     def get_chart_area_fill_format(self, request, **kwargs):
@@ -3154,7 +3153,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Gets chart area border description.
+    # Retrieve chart area border description.
     # </summary>
     # <param name="request">Request. <see cref="GetChartAreaBorderRequest" /></param>
     def get_chart_area_border(self, request, **kwargs):
@@ -3202,7 +3201,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Get worksheet charts description.
+    # Retrieve descriptions of charts in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetChartsRequest" /></param>
     def get_worksheet_charts(self, request, **kwargs):
@@ -3250,7 +3249,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Gets chart in some format.
+    # Retrieve the chart in a specified format.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetChartRequest" /></param>
     def get_worksheet_chart(self, request, **kwargs):
@@ -3298,7 +3297,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Adds new chart in worksheet.
+    # Add a new chart in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PutWorksheetAddChartRequest" /></param>
     def put_worksheet_add_chart(self, request, **kwargs):
@@ -3346,7 +3345,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Deletes a chart by index in worksheet.
+    # Delete a chart by index in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="DeleteWorksheetDeleteChartRequest" /></param>
     def delete_worksheet_delete_chart(self, request, **kwargs):
@@ -3394,7 +3393,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Update chart propreties in worksheet.
+    # Update chart properties in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetChartRequest" /></param>
     def post_worksheet_chart(self, request, **kwargs):
@@ -3442,7 +3441,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Gets chart legend description in worksheet.
+    # Retrieve chart legend description in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetChartLegendRequest" /></param>
     def get_worksheet_chart_legend(self, request, **kwargs):
@@ -3490,7 +3489,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Updates chart legend in worksheet.
+    # Update chart legend in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetChartLegendRequest" /></param>
     def post_worksheet_chart_legend(self, request, **kwargs):
@@ -4776,7 +4775,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Exports workbook to some format.
+    # Retrieve workbooks in various formats.
     # </summary>
     # <param name="request">Request. <see cref="GetWorkbookRequest" /></param>
     def get_workbook(self, request, **kwargs):
@@ -4824,7 +4823,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Converts workbook from request content to some format.
+    # Convert the workbook from the requested content into files in different formats.
     # </summary>
     # <param name="request">Request. <see cref="PutConvertWorkbookRequest" /></param>
     def put_convert_workbook(self, request, **kwargs):
@@ -4872,7 +4871,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Converts document and saves result to storage.
+    # Save an Excel file in various formats.
     # </summary>
     # <param name="request">Request. <see cref="PostWorkbookSaveAsRequest" /></param>
     def post_workbook_save_as(self, request, **kwargs):
@@ -4920,6 +4919,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Convert Excel file to PDF files.
     # </summary>
     # <param name="request">Request. <see cref="PostConvertWorkbookToPDFRequest" /></param>
     def post_convert_workbook_to_pdf(self, request, **kwargs):
@@ -4967,6 +4967,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Convert Excel file to PNG files.
     # </summary>
     # <param name="request">Request. <see cref="PostConvertWorkbookToPNGRequest" /></param>
     def post_convert_workbook_to_png(self, request, **kwargs):
@@ -5014,6 +5015,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Convert Excel file to Docx files.
     # </summary>
     # <param name="request">Request. <see cref="PostConvertWorkbookToDocxRequest" /></param>
     def post_convert_workbook_to_docx(self, request, **kwargs):
@@ -5061,6 +5063,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Convert Excel file to Pptx files.
     # </summary>
     # <param name="request">Request. <see cref="PostConvertWorkbookToPptxRequest" /></param>
     def post_convert_workbook_to_pptx(self, request, **kwargs):
@@ -5108,6 +5111,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Convert Excel file to HTML files.
     # </summary>
     # <param name="request">Request. <see cref="PostConvertWorkbookToHtmlRequest" /></param>
     def post_convert_workbook_to_html(self, request, **kwargs):
@@ -5155,6 +5159,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Convert Excel file to Markdown files.
     # </summary>
     # <param name="request">Request. <see cref="PostConvertWorkbookToMarkdownRequest" /></param>
     def post_convert_workbook_to_markdown(self, request, **kwargs):
@@ -5202,6 +5207,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Convert Excel file to Json files.
     # </summary>
     # <param name="request">Request. <see cref="PostConvertWorkbookToJsonRequest" /></param>
     def post_convert_workbook_to_json(self, request, **kwargs):
@@ -5249,6 +5255,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Convert Excel file to SQL Script files.
     # </summary>
     # <param name="request">Request. <see cref="PostConvertWorkbookToSQLRequest" /></param>
     def post_convert_workbook_to_sql(self, request, **kwargs):
@@ -5296,6 +5303,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Convert Excel file to Csv files.
     # </summary>
     # <param name="request">Request. <see cref="PostConvertWorkbookToCSVRequest" /></param>
     def post_convert_workbook_to_csv(self, request, **kwargs):
@@ -5343,7 +5351,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Export excel internal elements or itself to kinds of format files.
+    # Export Excel internal elements or the workbook itself to various format files.
     # </summary>
     # <param name="request">Request. <see cref="PostExportRequest" /></param>
     def post_export(self, request, **kwargs):
@@ -5391,9 +5399,8 @@ class CellsApi(object):
 
 
     # <summary>
-    # Export XML data from Excel file. 
-    # When there are Xml Maps in Excel file, export xml data. 
-    # When there is not xml map in Excel file, convert Excel file to xml file. 
+    # Export XML data from an Excel file.
+    # When there are XML Maps in an Excel file, export XML data. When there is no XML map in the Excel file, convert the Excel file to an XML file.
     # </summary>
     # <param name="request">Request. <see cref="PostWorkbookExportXMLRequest" /></param>
     def post_workbook_export_xml(self, request, **kwargs):
@@ -5441,8 +5448,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Imports/Updates an XML data file into the workbook.
-    # The XML data file can be a cloud file or HTTP URI data.
+    # Import a JSON data file into the workbook. The JSON data file can either be a cloud file or data from an HTTP URI.
     # </summary>
     # <param name="request">Request. <see cref="PostWorkbookImportJsonRequest" /></param>
     def post_workbook_import_json(self, request, **kwargs):
@@ -5490,8 +5496,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Imports/Updates an XML data file into the workbook.
-    # The XML data file can be a cloud file or HTTP URI data.
+    # Import an XML data file into an Excel file. The XML data file can either be a cloud file or data from an HTTP URI.
     # </summary>
     # <param name="request">Request. <see cref="PostWorkbookImportXMLRequest" /></param>
     def post_workbook_import_xml(self, request, **kwargs):
@@ -5539,7 +5544,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Imports data into workbook.
+    # Import data into the Excel file.
     # </summary>
     # <param name="request">Request. <see cref="PostImportDataRequest" /></param>
     def post_import_data(self, request, **kwargs):
@@ -5875,7 +5880,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Combine data files and template files to kinds of format files. 
+    # Assemble data files with template files to generate files in various formats.
     # </summary>
     # <param name="request">Request. <see cref="PostAssembleRequest" /></param>
     def post_assemble(self, request, **kwargs):
@@ -5923,7 +5928,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Compress XLS, XLSX, XLSM, XLSB, ODS and more
+    # Compress files and generate target files in various formats, supported file formats are include Xls, Xlsx, Xlsm, Xlsb, Ods and more.
     # </summary>
     # <param name="request">Request. <see cref="PostCompressRequest" /></param>
     def post_compress(self, request, **kwargs):
@@ -5971,7 +5976,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Merge cells in worksheet.
+    # Merge cells in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostMergeRequest" /></param>
     def post_merge(self, request, **kwargs):
@@ -6019,7 +6024,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Split Excel spreadsheet files by worksheet, save as kinds of format files.
+    # Split Excel spreadsheet files based on worksheets and create output files in various formats.
     # </summary>
     # <param name="request">Request. <see cref="PostSplitRequest" /></param>
     def post_split(self, request, **kwargs):
@@ -6067,7 +6072,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Search specify the text from excel files.
+    # Search for specified text within Excel files.
     # </summary>
     # <param name="request">Request. <see cref="PostSearchRequest" /></param>
     def post_search(self, request, **kwargs):
@@ -6115,7 +6120,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Use new text to replace specify the text from excel files.
+    # Replace specified text with new text in Excel files.
     # </summary>
     # <param name="request">Request. <see cref="PostReplaceRequest" /></param>
     def post_replace(self, request, **kwargs):
@@ -6163,7 +6168,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Import data into excel file.
+    # Import data into an Excel file and generate output files in various formats.
     # </summary>
     # <param name="request">Request. <see cref="PostImportRequest" /></param>
     def post_import(self, request, **kwargs):
@@ -6211,7 +6216,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Add Text Watermark to Excel files.
+    # Add Text Watermark to Excel files and generate output files in various formats.
     # </summary>
     # <param name="request">Request. <see cref="PostWatermarkRequest" /></param>
     def post_watermark(self, request, **kwargs):
@@ -6259,7 +6264,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Clear excel internal elements for excel files
+    # Clear internal elements in Excel files and generate output files in various formats.
     # </summary>
     # <param name="request">Request. <see cref="PostClearObjectsRequest" /></param>
     def post_clear_objects(self, request, **kwargs):
@@ -6307,7 +6312,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Reverse rows or columns of Excel files, save as kinds of format files.
+    # Reverse rows or columns in Excel files and create output files in various formats.
     # </summary>
     # <param name="request">Request. <see cref="PostReverseRequest" /></param>
     def post_reverse(self, request, **kwargs):
@@ -6355,6 +6360,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Repair abnormal files and generate files in various formats.
     # </summary>
     # <param name="request">Request. <see cref="PostRepairRequest" /></param>
     def post_repair(self, request, **kwargs):
@@ -6402,7 +6408,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Reverse rows or columns of Excel files, save as kinds of format files.
+    # Rotate rows, columns, or other objects in Excel files and save them in various formats.
     # </summary>
     # <param name="request">Request. <see cref="PostRotateRequest" /></param>
     def post_rotate(self, request, **kwargs):
@@ -6450,6 +6456,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Update document properties in Excel file, and save them is various formats.
     # </summary>
     # <param name="request">Request. <see cref="PostMetadataRequest" /></param>
     def post_metadata(self, request, **kwargs):
@@ -6497,6 +6504,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Get cells document properties.
     # </summary>
     # <param name="request">Request. <see cref="GetMetadataRequest" /></param>
     def get_metadata(self, request, **kwargs):
@@ -6544,6 +6552,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Delete cells document properties in Excel file, and save them is various formats.
     # </summary>
     # <param name="request">Request. <see cref="DeleteMetadataRequest" /></param>
     def delete_metadata(self, request, **kwargs):
@@ -8175,7 +8184,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Updates page header in worksheet. 
+    # Updates page header in worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostHeaderRequest" /></param>
     def post_header(self, request, **kwargs):
@@ -8271,7 +8280,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Update  page footer description in worksheet. 
+    # Update  page footer description in worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostFooterRequest" /></param>
     def post_footer(self, request, **kwargs):
@@ -9853,7 +9862,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Digital Signature.
+    # Excel file digital signature.
     # </summary>
     # <param name="request">Request. <see cref="PostDigitalSignatureRequest" /></param>
     def post_digital_signature(self, request, **kwargs):
@@ -9901,7 +9910,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Encripts workbook.
+    # Excel Encryption.
     # </summary>
     # <param name="request">Request. <see cref="PostEncryptWorkbookRequest" /></param>
     def post_encrypt_workbook(self, request, **kwargs):
@@ -9949,7 +9958,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Decrypts workbook.
+    # Excel files decryption.
     # </summary>
     # <param name="request">Request. <see cref="DeleteDecryptWorkbookRequest" /></param>
     def delete_decrypt_workbook(self, request, **kwargs):
@@ -9997,7 +10006,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Protects workbook.
+    # Excel protection.
     # </summary>
     # <param name="request">Request. <see cref="PostProtectWorkbookRequest" /></param>
     def post_protect_workbook(self, request, **kwargs):
@@ -10045,7 +10054,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Unprotects workbook.
+    # Excel unprotection.
     # </summary>
     # <param name="request">Request. <see cref="DeleteUnProtectWorkbookRequest" /></param>
     def delete_un_protect_workbook(self, request, **kwargs):
@@ -10093,7 +10102,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Protects document from changes.
+    # Excel file write protection.
     # </summary>
     # <param name="request">Request. <see cref="PutDocumentProtectFromChangesRequest" /></param>
     def put_document_protect_from_changes(self, request, **kwargs):
@@ -10141,7 +10150,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Unprotects document from changes.
+    # Excel file cancel write protection.
     # </summary>
     # <param name="request">Request. <see cref="DeleteDocumentUnProtectFromChangesRequest" /></param>
     def delete_document_un_protect_from_changes(self, request, **kwargs):
@@ -10189,7 +10198,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Unprotect password protected Excel file.
+    # Unlock Excel files.
     # </summary>
     # <param name="request">Request. <see cref="PostUnlockRequest" /></param>
     def post_unlock(self, request, **kwargs):
@@ -10237,7 +10246,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Setting access password.
+    # Lock Excel files.
     # </summary>
     # <param name="request">Request. <see cref="PostLockRequest" /></param>
     def post_lock(self, request, **kwargs):
@@ -10285,7 +10294,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Protect MS Excel and OpenDocument Spreadsheet by making them password protected.
+    # Excel files encryption.
     # </summary>
     # <param name="request">Request. <see cref="PostProtectRequest" /></param>
     def post_protect(self, request, **kwargs):
@@ -10381,7 +10390,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Combines a range of cells into a single cell. 
+    # Combines a range of cells into a single cell.
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetCellsRangeMergeRequest" /></param>
     def post_worksheet_cells_range_merge(self, request, **kwargs):
@@ -10574,7 +10583,6 @@ class CellsApi(object):
 
     # <summary>
     # Puts a value into the range, if appropriate the value will be converted to other data type and cell's number format will be reset.
-    #             
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetCellsRangeValueRequest" /></param>
     def post_worksheet_cells_range_value(self, request, **kwargs):
@@ -10623,7 +10631,6 @@ class CellsApi(object):
 
     # <summary>
     # Moves the current range to the dest range.
-    #             
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetCellsRangeMoveToRequest" /></param>
     def post_worksheet_cells_range_move_to(self, request, **kwargs):
@@ -10671,7 +10678,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Sets outline border around a range of cells.
+    # Sets data sort around a range of cells.
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetCellsRangeSortRequest" /></param>
     def post_worksheet_cells_range_sort(self, request, **kwargs):
@@ -10864,7 +10871,6 @@ class CellsApi(object):
 
     # <summary>
     # Inserts a range of cells and shift cells according to the shift option.
-    #             
     # </summary>
     # <param name="request">Request. <see cref="PutWorksheetCellsRangeRequest" /></param>
     def put_worksheet_cells_range(self, request, **kwargs):
@@ -11918,7 +11924,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Update workbook's name. 
+    # Update workbook's name.
     # </summary>
     # <param name="request">Request. <see cref="PostWorkbookNameRequest" /></param>
     def post_workbook_name(self, request, **kwargs):

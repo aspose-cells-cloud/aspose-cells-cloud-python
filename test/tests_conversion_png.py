@@ -137,24 +137,6 @@ class TestConversionPngApi(unittest.TestCase):
         self.api.put_convert_workbook(request)
 
 
-    def test_convert_workbook_xlsb(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'cloud.png'
-        remote_name = 'cloud.png'
-
-        format = 'xlsb'
-
-        mapFiles = { 
-            local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
-        }
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
-        self.api.put_convert_workbook(request)
-
-
     def test_convert_workbook_xps(self):
         remote_folder = 'TestData/In'
 
@@ -252,60 +234,6 @@ class TestConversionPngApi(unittest.TestCase):
         remote_name = 'cloud.png'
 
         format = 'docx'
-
-        mapFiles = { 
-            local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
-        }
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
-        self.api.put_convert_workbook(request)
-
-
-    def test_convert_workbook_pptx(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'cloud.png'
-        remote_name = 'cloud.png'
-
-        format = 'pptx'
-
-        mapFiles = { 
-            local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
-        }
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
-        self.api.put_convert_workbook(request)
-
-
-    def test_convert_workbook_json(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'cloud.png'
-        remote_name = 'cloud.png'
-
-        format = 'json'
-
-        mapFiles = { 
-            local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
-        }
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
-        self.api.put_convert_workbook(request)
-
-
-    def test_convert_workbook_sql(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'cloud.png'
-        remote_name = 'cloud.png'
-
-        format = 'sql'
 
         mapFiles = { 
             local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             

@@ -34,11 +34,12 @@ from six.moves.urllib.parse import quote
 
 class PostImportDataRequest(object):
 
-    def __init__(self , name ,import_option =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,import_option =None ,folder =None ,storage_name =None ,region =None ):
         self.name = name 
         self.import_option = import_option 
         self.folder = folder 
         self.storage_name = storage_name 
+        self.region = region 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
@@ -56,6 +57,8 @@ class PostImportDataRequest(object):
             query_params.append(('folder',self.folder ))
         if self.storage_name is not None:
             query_params.append(('storageName',self.storage_name ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
 
         header_params = {}
 

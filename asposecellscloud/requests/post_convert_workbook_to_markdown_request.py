@@ -34,10 +34,11 @@ from six.moves.urllib.parse import quote
 
 class PostConvertWorkbookToMarkdownRequest(object):
 
-    def __init__(self , file ,password =None ,check_excel_restriction =None ):
+    def __init__(self , file ,password =None ,check_excel_restriction =None ,region =None ):
         self.file = file 
         self.password = password 
         self.check_excel_restriction = check_excel_restriction 
+        self.region = region 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'file' is set
@@ -53,6 +54,8 @@ class PostConvertWorkbookToMarkdownRequest(object):
             query_params.append(('password',self.password ))
         if self.check_excel_restriction is not None:
             query_params.append(('checkExcelRestriction',self.check_excel_restriction ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
 
         header_params = {}
 

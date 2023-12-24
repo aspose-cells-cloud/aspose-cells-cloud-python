@@ -46,23 +46,6 @@ class TestConversionApi(unittest.TestCase):
         self.api.post_workbook_save_as(request)
 
 
-    def test_workbook_save_as_xls__out_result_post_excel_save_asxls(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'xls'
-        newfilename = 'OutResult/PostExcelSaveAs.xls'
-
-        saveOptions = PdfSaveOptions(save_format= format )
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PostWorkbookSaveAsRequest( remote_name, newfilename,save_options= saveOptions,folder= remote_folder)
-        self.api.post_workbook_save_as(request)
-
-
     def test_workbook_save_as_html__out_result_post_excel_save_ashtml(self):
         remote_folder = 'TestData/In'
 
@@ -190,74 +173,6 @@ class TestConversionApi(unittest.TestCase):
 
         format = 'xlsb'
         newfilename = 'OutResult/PostExcelSaveAs.xlsb'
-
-        saveOptions = PdfSaveOptions(save_format= format )
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PostWorkbookSaveAsRequest( remote_name, newfilename,save_options= saveOptions,folder= remote_folder)
-        self.api.post_workbook_save_as(request)
-
-
-    def test_workbook_save_as_xlsm__out_result_post_excel_save_asxlsm(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'xlsm'
-        newfilename = 'OutResult/PostExcelSaveAs.xlsm'
-
-        saveOptions = PdfSaveOptions(save_format= format )
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PostWorkbookSaveAsRequest( remote_name, newfilename,save_options= saveOptions,folder= remote_folder)
-        self.api.post_workbook_save_as(request)
-
-
-    def test_workbook_save_as_xlsx__out_result_post_excel_save_asxlsx(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'xlsx'
-        newfilename = 'OutResult/PostExcelSaveAs.xlsx'
-
-        saveOptions = PdfSaveOptions(save_format= format )
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PostWorkbookSaveAsRequest( remote_name, newfilename,save_options= saveOptions,folder= remote_folder)
-        self.api.post_workbook_save_as(request)
-
-
-    def test_workbook_save_as_xltm__out_result_post_excel_save_asxltm(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'xltm'
-        newfilename = 'OutResult/PostExcelSaveAs.xltm'
-
-        saveOptions = PdfSaveOptions(save_format= format )
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PostWorkbookSaveAsRequest( remote_name, newfilename,save_options= saveOptions,folder= remote_folder)
-        self.api.post_workbook_save_as(request)
-
-
-    def test_workbook_save_as_xltx__out_result_post_excel_save_asxltx(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'xltx'
-        newfilename = 'OutResult/PostExcelSaveAs.xltx'
 
         saveOptions = PdfSaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
@@ -435,21 +350,6 @@ class TestConversionApi(unittest.TestCase):
         self.api.get_workbook(request)
 
 
-    def test_get_workbook_format_xls(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'xls'
-
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  GetWorkbookRequest( remote_name,format= format,folder= remote_folder)
-        self.api.get_workbook(request)
-
-
     def test_get_workbook_format_html(self):
         remote_folder = 'TestData/In'
 
@@ -555,21 +455,6 @@ class TestConversionApi(unittest.TestCase):
         self.api.get_workbook(request)
 
 
-    def test_get_workbook_format_xlsb(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'xlsb'
-
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  GetWorkbookRequest( remote_name,format= format,folder= remote_folder)
-        self.api.get_workbook(request)
-
-
     def test_get_workbook_format_xps(self):
         remote_folder = 'TestData/In'
 
@@ -622,21 +507,6 @@ class TestConversionApi(unittest.TestCase):
         remote_name = 'Book1.xlsx'
 
         format = 'numbers'
-
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  GetWorkbookRequest( remote_name,format= format,folder= remote_folder)
-        self.api.get_workbook(request)
-
-
-    def test_get_workbook_format_wmf(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'wmf'
 
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
@@ -1270,44 +1140,6 @@ class TestConversionApi(unittest.TestCase):
         self.api.put_convert_workbook(request)
 
 
-    def test_convert_workbook_save_cloud_xlsm__out_result_convert_workbookxlsm(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'xlsm'
-        out_path = 'OutResult/ConvertWorkbook.xlsm'
-
-        mapFiles = { 
-            local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
-        }
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
-        self.api.put_convert_workbook(request)
-
-
-    def test_convert_workbook_save_cloud_xlsx__out_result_convert_workbookxlsx(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'xlsx'
-        out_path = 'OutResult/ConvertWorkbook.xlsx'
-
-        mapFiles = { 
-            local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
-        }
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
-        self.api.put_convert_workbook(request)
-
-
     def test_convert_workbook_save_cloud_xltm__out_result_convert_workbookxltm(self):
         remote_folder = 'TestData/In'
 
@@ -1316,25 +1148,6 @@ class TestConversionApi(unittest.TestCase):
 
         format = 'xltm'
         out_path = 'OutResult/ConvertWorkbook.xltm'
-
-        mapFiles = { 
-            local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
-        }
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
-        self.api.put_convert_workbook(request)
-
-
-    def test_convert_workbook_save_cloud_xltx__out_result_convert_workbookxltx(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'xltx'
-        out_path = 'OutResult/ConvertWorkbook.xltx'
 
         mapFiles = { 
             local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             

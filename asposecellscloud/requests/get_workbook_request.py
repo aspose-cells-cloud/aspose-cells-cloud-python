@@ -34,7 +34,7 @@ from six.moves.urllib.parse import quote
 
 class GetWorkbookRequest(object):
 
-    def __init__(self , name ,format =None ,password =None ,is_auto_fit =None ,only_save_table =None ,folder =None ,out_path =None ,storage_name =None ,out_storage_name =None ,check_excel_restriction =None ):
+    def __init__(self , name ,format =None ,password =None ,is_auto_fit =None ,only_save_table =None ,folder =None ,out_path =None ,storage_name =None ,out_storage_name =None ,check_excel_restriction =None ,region =None ):
         self.name = name 
         self.format = format 
         self.password = password 
@@ -45,6 +45,7 @@ class GetWorkbookRequest(object):
         self.storage_name = storage_name 
         self.out_storage_name = out_storage_name 
         self.check_excel_restriction = check_excel_restriction 
+        self.region = region 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
@@ -76,6 +77,8 @@ class GetWorkbookRequest(object):
             query_params.append(('outStorageName',self.out_storage_name ))
         if self.check_excel_restriction is not None:
             query_params.append(('checkExcelRestriction',self.check_excel_restriction ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
 
         header_params = {}
 

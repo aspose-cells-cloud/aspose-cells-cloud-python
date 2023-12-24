@@ -34,9 +34,10 @@ from six.moves.urllib.parse import quote
 
 class DeleteMetadataRequest(object):
 
-    def __init__(self , file ,type =None ,password =None ,check_excel_restriction =None ):
+    def __init__(self , file ,type =None ,out_format =None ,password =None ,check_excel_restriction =None ):
         self.file = file 
         self.type = type 
+        self.out_format = out_format 
         self.password = password 
         self.check_excel_restriction = check_excel_restriction 
     def create_http_request(self, api_client):
@@ -52,6 +53,8 @@ class DeleteMetadataRequest(object):
         query_params = []
         if self.type is not None:
             query_params.append(('type',self.type ))
+        if self.out_format is not None:
+            query_params.append(('outFormat',self.out_format ))
         if self.password is not None:
             query_params.append(('password',self.password ))
         if self.check_excel_restriction is not None:

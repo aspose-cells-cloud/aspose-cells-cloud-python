@@ -51,6 +51,7 @@ class BatchConvertRequest(object):
         'format' : 'str',
         'out_folder' : 'str',
         'out_storage' : 'str',
+        'region' : 'str',
         'save_options' : 'SaveOptions'
     }
 
@@ -61,6 +62,7 @@ class BatchConvertRequest(object):
         'format' : 'Format' ,
         'out_folder' : 'OutFolder' ,
         'out_storage' : 'OutStorage' ,
+        'region' : 'Region' ,
         'save_options' : 'SaveOptions' 
     }
 
@@ -77,7 +79,7 @@ class BatchConvertRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self,source_folder=None ,source_storage=None ,match_condition=None ,format=None ,out_folder=None ,out_storage=None ,save_options=None   ,**kw):
+    def __init__(self,source_folder=None ,source_storage=None ,match_condition=None ,format=None ,out_folder=None ,out_storage=None ,region=None ,save_options=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -92,6 +94,7 @@ class BatchConvertRequest(object):
         self.container['format'] = None 
         self.container['out_folder'] = None 
         self.container['out_storage'] = None 
+        self.container['region'] = None 
         self.container['save_options'] = None 
         params = locals()
         self.source_folder = source_folder
@@ -127,6 +130,12 @@ class BatchConvertRequest(object):
         self.out_storage = out_storage
         if 'out_storage' in params:
             self.out_storage = params["out_storage"]
+
+
+             
+        self.region = region
+        if 'region' in params:
+            self.region = params["region"]
 
 
              
@@ -179,6 +188,13 @@ class BatchConvertRequest(object):
     @out_storage.setter
     def out_storage(self, out_storage):
         self.container['out_storage'] = out_storage 
+    @property
+    def region(self):
+        return self.container['region']
+
+    @region.setter
+    def region(self, region):
+        self.container['region'] = region 
     @property
     def save_options(self):
         return self.container['save_options']

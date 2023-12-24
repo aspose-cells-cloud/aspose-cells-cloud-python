@@ -34,7 +34,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorkbookImportJsonRequest(object):
 
-    def __init__(self , name ,import_json_request =None ,password =None ,folder =None ,storage_name =None ,out_path =None ,out_storage_name =None ,check_excel_restriction =None ):
+    def __init__(self , name ,import_json_request =None ,password =None ,folder =None ,storage_name =None ,out_path =None ,out_storage_name =None ,check_excel_restriction =None ,region =None ):
         self.name = name 
         self.import_json_request = import_json_request 
         self.password = password 
@@ -43,6 +43,7 @@ class PostWorkbookImportJsonRequest(object):
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.check_excel_restriction = check_excel_restriction 
+        self.region = region 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
@@ -73,6 +74,8 @@ class PostWorkbookImportJsonRequest(object):
             query_params.append(('outStorageName',self.out_storage_name ))
         if self.check_excel_restriction is not None:
             query_params.append(('checkExcelRestriction',self.check_excel_restriction ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
 
         header_params = {}
 

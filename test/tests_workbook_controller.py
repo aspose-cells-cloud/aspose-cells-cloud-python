@@ -329,7 +329,7 @@ class TestWorkbookControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PostWorkbookSplitRequest( remote_name,format= 'png',out_folder= 'OutResult',_from= 1,to= 5,split_name_rule= 'sheetname',folder= remote_folder,storage_name= '',out_storage_name= '')
+        request =  PostWorkbookSplitRequest( remote_name,format= 'png',out_folder= 'OutResult',_from= 1,to= 5,horizontal_resolution= 96,vertical_resolution= 96,split_name_rule= 'sheetname',folder= remote_folder,storage_name= '',out_storage_name= '')
         self.api.post_workbook_split(request)
 
 
