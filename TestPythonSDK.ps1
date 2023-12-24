@@ -1,0 +1,1 @@
+python ./test/run_test.py
