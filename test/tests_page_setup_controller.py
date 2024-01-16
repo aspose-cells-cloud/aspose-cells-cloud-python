@@ -121,5 +121,31 @@ class TestPageSetupControllerApi(unittest.TestCase):
         self.api.post_footer(request)
 
 
+    def test_post_fit_wide_to_pages(self):
+        remote_folder = 'TestData/In'
+
+        local_name = 'Book1.xlsx'
+        remote_name = 'Book1.xlsx'
+
+        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+     
+        request =  PostFitWideToPagesRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
+        self.api.post_fit_wide_to_pages(request)
+
+
+    def test_post_fit_tall_to_pages(self):
+        remote_folder = 'TestData/In'
+
+        local_name = 'Book1.xlsx'
+        remote_name = 'Book1.xlsx'
+
+        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+     
+        request =  PostFitTallToPagesRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
+        self.api.post_fit_tall_to_pages(request)
+
+
 if __name__ == '__main__':
     unittest.main()

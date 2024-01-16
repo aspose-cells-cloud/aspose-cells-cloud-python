@@ -1,7 +1,7 @@
 # coding: utf-8
 """
 <copyright company="Aspose" file="BatchConvertRequestpy.cs">
-  Copyright (c) 2023 Aspose.Cells Cloud
+  Copyright (c) 2024 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,6 +52,8 @@ class BatchConvertRequest(object):
         'out_folder' : 'str',
         'out_storage' : 'str',
         'region' : 'str',
+        'page_wide_fit_on_per_sheet' : 'bool',
+        'page_tall_fit_on_per_sheet' : 'bool',
         'save_options' : 'SaveOptions'
     }
 
@@ -63,6 +65,8 @@ class BatchConvertRequest(object):
         'out_folder' : 'OutFolder' ,
         'out_storage' : 'OutStorage' ,
         'region' : 'Region' ,
+        'page_wide_fit_on_per_sheet' : 'PageWideFitOnPerSheet' ,
+        'page_tall_fit_on_per_sheet' : 'PageTallFitOnPerSheet' ,
         'save_options' : 'SaveOptions' 
     }
 
@@ -79,7 +83,7 @@ class BatchConvertRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self,source_folder=None ,source_storage=None ,match_condition=None ,format=None ,out_folder=None ,out_storage=None ,region=None ,save_options=None   ,**kw):
+    def __init__(self,source_folder=None ,source_storage=None ,match_condition=None ,format=None ,out_folder=None ,out_storage=None ,region=None ,page_wide_fit_on_per_sheet=None ,page_tall_fit_on_per_sheet=None ,save_options=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -95,6 +99,8 @@ class BatchConvertRequest(object):
         self.container['out_folder'] = None 
         self.container['out_storage'] = None 
         self.container['region'] = None 
+        self.container['page_wide_fit_on_per_sheet'] = None 
+        self.container['page_tall_fit_on_per_sheet'] = None 
         self.container['save_options'] = None 
         params = locals()
         self.source_folder = source_folder
@@ -136,6 +142,18 @@ class BatchConvertRequest(object):
         self.region = region
         if 'region' in params:
             self.region = params["region"]
+
+
+             
+        self.page_wide_fit_on_per_sheet = page_wide_fit_on_per_sheet
+        if 'page_wide_fit_on_per_sheet' in params:
+            self.page_wide_fit_on_per_sheet = params["page_wide_fit_on_per_sheet"]
+
+
+             
+        self.page_tall_fit_on_per_sheet = page_tall_fit_on_per_sheet
+        if 'page_tall_fit_on_per_sheet' in params:
+            self.page_tall_fit_on_per_sheet = params["page_tall_fit_on_per_sheet"]
 
 
              
@@ -195,6 +213,20 @@ class BatchConvertRequest(object):
     @region.setter
     def region(self, region):
         self.container['region'] = region 
+    @property
+    def page_wide_fit_on_per_sheet(self):
+        return self.container['page_wide_fit_on_per_sheet']
+
+    @page_wide_fit_on_per_sheet.setter
+    def page_wide_fit_on_per_sheet(self, page_wide_fit_on_per_sheet):
+        self.container['page_wide_fit_on_per_sheet'] = page_wide_fit_on_per_sheet 
+    @property
+    def page_tall_fit_on_per_sheet(self):
+        return self.container['page_tall_fit_on_per_sheet']
+
+    @page_tall_fit_on_per_sheet.setter
+    def page_tall_fit_on_per_sheet(self, page_tall_fit_on_per_sheet):
+        self.container['page_tall_fit_on_per_sheet'] = page_tall_fit_on_per_sheet 
     @property
     def save_options(self):
         return self.container['save_options']

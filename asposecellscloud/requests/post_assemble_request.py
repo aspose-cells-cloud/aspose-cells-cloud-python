@@ -1,7 +1,7 @@
 # coding: utf-8
 """
 <copyright company="Aspose" file="PostAssembleRequest.cs">
-  Copyright (c) 2023 Aspose.Cells Cloud
+  Copyright (c) 2024 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,10 +34,10 @@ from six.moves.urllib.parse import quote
 
 class PostAssembleRequest(object):
 
-    def __init__(self , file ,datasource =None ,format =None ,password =None ,check_excel_restriction =None ,region =None ):
+    def __init__(self , file ,datasource =None ,out_format =None ,password =None ,check_excel_restriction =None ,region =None ):
         self.file = file 
         self.datasource = datasource 
-        self.format = format 
+        self.out_format = out_format 
         self.password = password 
         self.check_excel_restriction = check_excel_restriction 
         self.region = region 
@@ -59,8 +59,8 @@ class PostAssembleRequest(object):
         query_params = []
         if self.datasource is not None:
             query_params.append(('datasource',self.datasource ))
-        if self.format is not None:
-            query_params.append(('format',self.format ))
+        if self.out_format is not None:
+            query_params.append(('outFormat',self.out_format ))
         if self.password is not None:
             query_params.append(('password',self.password ))
         if self.check_excel_restriction is not None:

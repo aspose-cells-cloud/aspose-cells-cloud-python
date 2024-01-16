@@ -1,7 +1,7 @@
 # coding: utf-8
 """
 <copyright company="Aspose" file="__init__py.cs">
-  Copyright (c) 2023 Aspose.Cells Cloud
+  Copyright (c) 2024 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -108,6 +108,7 @@ from asposecellscloud.models.ranges import Ranges
 from asposecellscloud.models.row import Row
 from asposecellscloud.models.rows import Rows
 from asposecellscloud.models.save_result import SaveResult
+from asposecellscloud.models.paginated_save_options import PaginatedSaveOptions
 from asposecellscloud.models.single_value import SingleValue
 from asposecellscloud.models.sort_key import SortKey
 from asposecellscloud.models.split_result import SplitResult

@@ -1,7 +1,7 @@
 # coding: utf-8
 """
 <copyright company="Aspose" file="PutConvertWorkbookRequest.cs">
-  Copyright (c) 2023 Aspose.Cells Cloud
+  Copyright (c) 2024 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ from six.moves.urllib.parse import quote
 
 class PutConvertWorkbookRequest(object):
 
-    def __init__(self , file ,format =None ,password =None ,out_path =None ,storage_name =None ,check_excel_restriction =None ,stream_format =None ,region =None ):
+    def __init__(self , file ,format =None ,password =None ,out_path =None ,storage_name =None ,check_excel_restriction =None ,stream_format =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ):
         self.file = file 
         self.format = format 
         self.password = password 
@@ -43,6 +43,8 @@ class PutConvertWorkbookRequest(object):
         self.check_excel_restriction = check_excel_restriction 
         self.stream_format = stream_format 
         self.region = region 
+        self.page_wide_fit_on_per_sheet = page_wide_fit_on_per_sheet 
+        self.page_tall_fit_on_per_sheet = page_tall_fit_on_per_sheet 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'file' is set
@@ -68,6 +70,10 @@ class PutConvertWorkbookRequest(object):
             query_params.append(('streamFormat',self.stream_format ))
         if self.region is not None:
             query_params.append(('region',self.region ))
+        if self.page_wide_fit_on_per_sheet is not None:
+            query_params.append(('pageWideFitOnPerSheet',self.page_wide_fit_on_per_sheet ))
+        if self.page_tall_fit_on_per_sheet is not None:
+            query_params.append(('pageTallFitOnPerSheet',self.page_tall_fit_on_per_sheet ))
 
         header_params = {}
 

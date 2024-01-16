@@ -55,7 +55,7 @@ class TestChartsControllerApi(unittest.TestCase):
         self.api.get_worksheet_chart(request)
 
 
-    def test_put_worksheet_add_chart(self):
+    def test_put_worksheet_chart(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -64,11 +64,11 @@ class TestChartsControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutWorksheetAddChartRequest( remote_name, 'Sheet4', 'Pie',upper_left_row= 5,upper_left_column= 5,lower_right_row= 10,lower_right_column= 10,area= 'C7:D11',is_vertical= True,title= 'Aspose Chart',folder= remote_folder,storage_name= '')
-        self.api.put_worksheet_add_chart(request)
+        request =  PutWorksheetChartRequest( remote_name, 'Sheet4', 'Pie',upper_left_row= 5,upper_left_column= 5,lower_right_row= 10,lower_right_column= 10,area= 'C7:D11',is_vertical= True,title= 'Aspose Chart',folder= remote_folder,storage_name= '')
+        self.api.put_worksheet_chart(request)
 
 
-    def test_delete_worksheet_delete_chart(self):
+    def test_delete_worksheet_chart(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -77,8 +77,8 @@ class TestChartsControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  DeleteWorksheetDeleteChartRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
-        self.api.delete_worksheet_delete_chart(request)
+        request =  DeleteWorksheetChartRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
+        self.api.delete_worksheet_chart(request)
 
 
     def test_post_worksheet_chart(self):
@@ -148,7 +148,7 @@ class TestChartsControllerApi(unittest.TestCase):
         self.api.delete_worksheet_chart_legend(request)
 
 
-    def test_delete_worksheet_clear_charts(self):
+    def test_delete_worksheet_charts(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -157,8 +157,8 @@ class TestChartsControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  DeleteWorksheetClearChartsRequest( remote_name, 'Sheet4',folder= remote_folder,storage_name= '')
-        self.api.delete_worksheet_clear_charts(request)
+        request =  DeleteWorksheetChartsRequest( remote_name, 'Sheet4',folder= remote_folder,storage_name= '')
+        self.api.delete_worksheet_charts(request)
 
 
     def test_get_worksheet_chart_title(self):

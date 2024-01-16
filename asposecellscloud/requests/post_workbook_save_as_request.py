@@ -1,7 +1,7 @@
 # coding: utf-8
 """
 <copyright company="Aspose" file="PostWorkbookSaveAsRequest.cs">
-  Copyright (c) 2023 Aspose.Cells Cloud
+  Copyright (c) 2024 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorkbookSaveAsRequest(object):
 
-    def __init__(self , name ,newfilename =None ,save_options =None ,is_auto_fit_rows =None ,is_auto_fit_columns =None ,folder =None ,storage_name =None ,out_storage_name =None ,check_excel_restriction =None ,region =None ):
+    def __init__(self , name ,newfilename =None ,save_options =None ,is_auto_fit_rows =None ,is_auto_fit_columns =None ,folder =None ,storage_name =None ,out_storage_name =None ,check_excel_restriction =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ):
         self.name = name 
         self.newfilename = newfilename 
         self.save_options = save_options 
@@ -45,6 +45,8 @@ class PostWorkbookSaveAsRequest(object):
         self.out_storage_name = out_storage_name 
         self.check_excel_restriction = check_excel_restriction 
         self.region = region 
+        self.page_wide_fit_on_per_sheet = page_wide_fit_on_per_sheet 
+        self.page_tall_fit_on_per_sheet = page_tall_fit_on_per_sheet 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
@@ -79,6 +81,10 @@ class PostWorkbookSaveAsRequest(object):
             query_params.append(('checkExcelRestriction',self.check_excel_restriction ))
         if self.region is not None:
             query_params.append(('region',self.region ))
+        if self.page_wide_fit_on_per_sheet is not None:
+            query_params.append(('pageWideFitOnPerSheet',self.page_wide_fit_on_per_sheet ))
+        if self.page_tall_fit_on_per_sheet is not None:
+            query_params.append(('pageTallFitOnPerSheet',self.page_tall_fit_on_per_sheet ))
 
         header_params = {}
 

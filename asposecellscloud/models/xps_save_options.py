@@ -1,7 +1,7 @@
 # coding: utf-8
 """
 <copyright company="Aspose" file="XpsSaveOptionspy.cs">
-  Copyright (c) 2023 Aspose.Cells Cloud
+  Copyright (c) 2024 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,6 +45,24 @@ class XpsSaveOptions(object):
     """
 
     swagger_types = {
+        'default_font' : 'str',
+        'check_workbook_default_font' : 'bool',
+        'check_font_compatibility' : 'bool',
+        'is_font_substitution_char_granularity' : 'bool',
+        'one_page_per_sheet' : 'bool',
+        'all_columns_in_one_page_per_sheet' : 'bool',
+        'ignore_error' : 'bool',
+        'output_blank_page_when_nothing_to_print' : 'bool',
+        'page_index' : 'int',
+        'page_count' : 'int',
+        'printing_page_type' : 'str',
+        'gridline_type' : 'str',
+        'text_cross_type' : 'str',
+        'default_edit_language' : 'str',
+        'emf_render_setting' : 'str',
+        'merge_areas' : 'bool',
+        'sort_external_names' : 'bool',
+        'update_smart_art' : 'bool',
         'save_format' : 'str',
         'cached_file_folder' : 'str',
         'clear_data' : 'bool',
@@ -56,6 +74,24 @@ class XpsSaveOptions(object):
     }
 
     attribute_map = {
+        'default_font' : 'DefaultFont' ,
+        'check_workbook_default_font' : 'CheckWorkbookDefaultFont' ,
+        'check_font_compatibility' : 'CheckFontCompatibility' ,
+        'is_font_substitution_char_granularity' : 'IsFontSubstitutionCharGranularity' ,
+        'one_page_per_sheet' : 'OnePagePerSheet' ,
+        'all_columns_in_one_page_per_sheet' : 'AllColumnsInOnePagePerSheet' ,
+        'ignore_error' : 'IgnoreError' ,
+        'output_blank_page_when_nothing_to_print' : 'OutputBlankPageWhenNothingToPrint' ,
+        'page_index' : 'PageIndex' ,
+        'page_count' : 'PageCount' ,
+        'printing_page_type' : 'PrintingPageType' ,
+        'gridline_type' : 'GridlineType' ,
+        'text_cross_type' : 'TextCrossType' ,
+        'default_edit_language' : 'DefaultEditLanguage' ,
+        'emf_render_setting' : 'EmfRenderSetting' ,
+        'merge_areas' : 'MergeAreas' ,
+        'sort_external_names' : 'SortExternalNames' ,
+        'update_smart_art' : 'UpdateSmartArt' ,
         'save_format' : 'SaveFormat' ,
         'cached_file_folder' : 'CachedFileFolder' ,
         'clear_data' : 'ClearData' ,
@@ -79,7 +115,7 @@ class XpsSaveOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None   ,**kw):
+    def __init__(self,default_font=None ,check_workbook_default_font=None ,check_font_compatibility=None ,is_font_substitution_char_granularity=None ,one_page_per_sheet=None ,all_columns_in_one_page_per_sheet=None ,ignore_error=None ,output_blank_page_when_nothing_to_print=None ,page_index=None ,page_count=None ,printing_page_type=None ,gridline_type=None ,text_cross_type=None ,default_edit_language=None ,emf_render_setting=None ,merge_areas=None ,sort_external_names=None ,update_smart_art=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -88,6 +124,24 @@ class XpsSaveOptions(object):
         """
         XpsSaveOptions - a model defined in Swagger
         """
+        self.container['default_font'] = None 
+        self.container['check_workbook_default_font'] = None 
+        self.container['check_font_compatibility'] = None 
+        self.container['is_font_substitution_char_granularity'] = None 
+        self.container['one_page_per_sheet'] = None 
+        self.container['all_columns_in_one_page_per_sheet'] = None 
+        self.container['ignore_error'] = None 
+        self.container['output_blank_page_when_nothing_to_print'] = None 
+        self.container['page_index'] = None 
+        self.container['page_count'] = None 
+        self.container['printing_page_type'] = None 
+        self.container['gridline_type'] = None 
+        self.container['text_cross_type'] = None 
+        self.container['default_edit_language'] = None 
+        self.container['emf_render_setting'] = None 
+        self.container['merge_areas'] = None 
+        self.container['sort_external_names'] = None 
+        self.container['update_smart_art'] = None 
         self.container['save_format'] = None 
         self.container['cached_file_folder'] = None 
         self.container['clear_data'] = None 
@@ -97,6 +151,114 @@ class XpsSaveOptions(object):
         self.container['sort_names'] = None 
         self.container['validate_merged_areas'] = None 
         params = locals()
+        self.default_font = default_font
+        if 'default_font' in params:
+            self.default_font = params["default_font"]
+
+
+             
+        self.check_workbook_default_font = check_workbook_default_font
+        if 'check_workbook_default_font' in params:
+            self.check_workbook_default_font = params["check_workbook_default_font"]
+
+
+             
+        self.check_font_compatibility = check_font_compatibility
+        if 'check_font_compatibility' in params:
+            self.check_font_compatibility = params["check_font_compatibility"]
+
+
+             
+        self.is_font_substitution_char_granularity = is_font_substitution_char_granularity
+        if 'is_font_substitution_char_granularity' in params:
+            self.is_font_substitution_char_granularity = params["is_font_substitution_char_granularity"]
+
+
+             
+        self.one_page_per_sheet = one_page_per_sheet
+        if 'one_page_per_sheet' in params:
+            self.one_page_per_sheet = params["one_page_per_sheet"]
+
+
+             
+        self.all_columns_in_one_page_per_sheet = all_columns_in_one_page_per_sheet
+        if 'all_columns_in_one_page_per_sheet' in params:
+            self.all_columns_in_one_page_per_sheet = params["all_columns_in_one_page_per_sheet"]
+
+
+             
+        self.ignore_error = ignore_error
+        if 'ignore_error' in params:
+            self.ignore_error = params["ignore_error"]
+
+
+             
+        self.output_blank_page_when_nothing_to_print = output_blank_page_when_nothing_to_print
+        if 'output_blank_page_when_nothing_to_print' in params:
+            self.output_blank_page_when_nothing_to_print = params["output_blank_page_when_nothing_to_print"]
+
+
+             
+        self.page_index = page_index
+        if 'page_index' in params:
+            self.page_index = params["page_index"]
+
+
+             
+        self.page_count = page_count
+        if 'page_count' in params:
+            self.page_count = params["page_count"]
+
+
+             
+        self.printing_page_type = printing_page_type
+        if 'printing_page_type' in params:
+            self.printing_page_type = params["printing_page_type"]
+
+
+             
+        self.gridline_type = gridline_type
+        if 'gridline_type' in params:
+            self.gridline_type = params["gridline_type"]
+
+
+             
+        self.text_cross_type = text_cross_type
+        if 'text_cross_type' in params:
+            self.text_cross_type = params["text_cross_type"]
+
+
+             
+        self.default_edit_language = default_edit_language
+        if 'default_edit_language' in params:
+            self.default_edit_language = params["default_edit_language"]
+
+
+             
+        self.emf_render_setting = emf_render_setting
+        if 'emf_render_setting' in params:
+            self.emf_render_setting = params["emf_render_setting"]
+
+
+             
+        self.merge_areas = merge_areas
+        if 'merge_areas' in params:
+            self.merge_areas = params["merge_areas"]
+
+
+             
+        self.sort_external_names = sort_external_names
+        if 'sort_external_names' in params:
+            self.sort_external_names = params["sort_external_names"]
+
+
+             
+        self.update_smart_art = update_smart_art
+        if 'update_smart_art' in params:
+            self.update_smart_art = params["update_smart_art"]
+
+
+             
         self.save_format = save_format
         if 'save_format' in params:
             self.save_format = params["save_format"]
@@ -146,6 +308,132 @@ class XpsSaveOptions(object):
 
              
 
+    @property
+    def default_font(self):
+        return self.container['default_font']
+
+    @default_font.setter
+    def default_font(self, default_font):
+        self.container['default_font'] = default_font 
+    @property
+    def check_workbook_default_font(self):
+        return self.container['check_workbook_default_font']
+
+    @check_workbook_default_font.setter
+    def check_workbook_default_font(self, check_workbook_default_font):
+        self.container['check_workbook_default_font'] = check_workbook_default_font 
+    @property
+    def check_font_compatibility(self):
+        return self.container['check_font_compatibility']
+
+    @check_font_compatibility.setter
+    def check_font_compatibility(self, check_font_compatibility):
+        self.container['check_font_compatibility'] = check_font_compatibility 
+    @property
+    def is_font_substitution_char_granularity(self):
+        return self.container['is_font_substitution_char_granularity']
+
+    @is_font_substitution_char_granularity.setter
+    def is_font_substitution_char_granularity(self, is_font_substitution_char_granularity):
+        self.container['is_font_substitution_char_granularity'] = is_font_substitution_char_granularity 
+    @property
+    def one_page_per_sheet(self):
+        return self.container['one_page_per_sheet']
+
+    @one_page_per_sheet.setter
+    def one_page_per_sheet(self, one_page_per_sheet):
+        self.container['one_page_per_sheet'] = one_page_per_sheet 
+    @property
+    def all_columns_in_one_page_per_sheet(self):
+        return self.container['all_columns_in_one_page_per_sheet']
+
+    @all_columns_in_one_page_per_sheet.setter
+    def all_columns_in_one_page_per_sheet(self, all_columns_in_one_page_per_sheet):
+        self.container['all_columns_in_one_page_per_sheet'] = all_columns_in_one_page_per_sheet 
+    @property
+    def ignore_error(self):
+        return self.container['ignore_error']
+
+    @ignore_error.setter
+    def ignore_error(self, ignore_error):
+        self.container['ignore_error'] = ignore_error 
+    @property
+    def output_blank_page_when_nothing_to_print(self):
+        return self.container['output_blank_page_when_nothing_to_print']
+
+    @output_blank_page_when_nothing_to_print.setter
+    def output_blank_page_when_nothing_to_print(self, output_blank_page_when_nothing_to_print):
+        self.container['output_blank_page_when_nothing_to_print'] = output_blank_page_when_nothing_to_print 
+    @property
+    def page_index(self):
+        return self.container['page_index']
+
+    @page_index.setter
+    def page_index(self, page_index):
+        self.container['page_index'] = page_index 
+    @property
+    def page_count(self):
+        return self.container['page_count']
+
+    @page_count.setter
+    def page_count(self, page_count):
+        self.container['page_count'] = page_count 
+    @property
+    def printing_page_type(self):
+        return self.container['printing_page_type']
+
+    @printing_page_type.setter
+    def printing_page_type(self, printing_page_type):
+        self.container['printing_page_type'] = printing_page_type 
+    @property
+    def gridline_type(self):
+        return self.container['gridline_type']
+
+    @gridline_type.setter
+    def gridline_type(self, gridline_type):
+        self.container['gridline_type'] = gridline_type 
+    @property
+    def text_cross_type(self):
+        return self.container['text_cross_type']
+
+    @text_cross_type.setter
+    def text_cross_type(self, text_cross_type):
+        self.container['text_cross_type'] = text_cross_type 
+    @property
+    def default_edit_language(self):
+        return self.container['default_edit_language']
+
+    @default_edit_language.setter
+    def default_edit_language(self, default_edit_language):
+        self.container['default_edit_language'] = default_edit_language 
+    @property
+    def emf_render_setting(self):
+        return self.container['emf_render_setting']
+
+    @emf_render_setting.setter
+    def emf_render_setting(self, emf_render_setting):
+        self.container['emf_render_setting'] = emf_render_setting 
+    @property
+    def merge_areas(self):
+        return self.container['merge_areas']
+
+    @merge_areas.setter
+    def merge_areas(self, merge_areas):
+        self.container['merge_areas'] = merge_areas 
+    @property
+    def sort_external_names(self):
+        return self.container['sort_external_names']
+
+    @sort_external_names.setter
+    def sort_external_names(self, sort_external_names):
+        self.container['sort_external_names'] = sort_external_names 
+    @property
+    def update_smart_art(self):
+        return self.container['update_smart_art']
+
+    @update_smart_art.setter
+    def update_smart_art(self, update_smart_art):
+        self.container['update_smart_art'] = update_smart_art 
     @property
     def save_format(self):
         return self.container['save_format']

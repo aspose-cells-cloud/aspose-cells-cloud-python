@@ -334,7 +334,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
         self.api.post_worksheet_text_search(request)
 
 
-    def test_post_worsheet_text_replace(self):
+    def test_post_worksheet_text_replace(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
@@ -343,8 +343,8 @@ class TestWorksheetControllerApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PostWorsheetTextReplaceRequest( remote_name, 'Sheet1', '123', '456',folder= remote_folder,storage_name= '')
-        self.api.post_worsheet_text_replace(request)
+        request =  PostWorksheetTextReplaceRequest( remote_name, 'Sheet1', '123', '456',folder= remote_folder,storage_name= '')
+        self.api.post_worksheet_text_replace(request)
 
 
     def test_post_worksheet_range_sort(self):

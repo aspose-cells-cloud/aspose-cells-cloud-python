@@ -333,7 +333,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -347,7 +347,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -361,7 +361,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -375,7 +375,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -389,7 +389,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -403,7 +403,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -417,7 +417,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -431,7 +431,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -445,7 +445,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -459,7 +459,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -473,7 +473,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -487,7 +487,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -501,7 +501,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -515,7 +515,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -529,7 +529,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -543,7 +543,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -557,7 +557,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -571,7 +571,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -585,7 +585,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -599,7 +599,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -613,7 +613,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -627,7 +627,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -641,7 +641,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -655,7 +655,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -669,7 +669,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -683,7 +683,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -697,7 +697,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
@@ -711,7 +711,7 @@ class TestLightCellsApi(unittest.TestCase):
             assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
-        request =  PostAssembleRequest( mapFiles, 'ds',format= format)
+        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
 
