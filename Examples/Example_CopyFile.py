@@ -10,11 +10,9 @@ remote_folder = 'TestData/In'
 local_name = 'Book1.xlsx'
 remote_name = 'Book1.xlsx'
 
-mapFiles = { 
-    local_name:  local_name             
-}
+mapFiles = {     local_name:  local_name    }
 request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
-api.upload_file(request)
+response = api.upload_file(request)
  
 request =  CopyFileRequest( remote_folder + '/' + remote_name, 'OutResult/' + remote_name,src_storage_name= '',dest_storage_name= '',version_id= '')
 api.copy_file(request)

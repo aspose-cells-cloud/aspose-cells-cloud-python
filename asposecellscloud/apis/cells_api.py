@@ -68,17 +68,17 @@ class CellsApi(object):
             self.api_client = config.api_client
         if self.needAuth :            
             self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
-        self.get_access_token_time =  time.process_time()
+        self.get_access_token_time =  time.time()
 
     def check_access_token(self):
         if self.needAuth :
             if self.access_token:
-                timediff =  time.process_time() - self.get_access_token_time
+                timediff =  time.time() - self.get_access_token_time
                 if timediff > 86300 :
                     api_client =  ApiClient(self.base_uri)
                     self.access_token = api_client.get_access_token("client_credentials", self.clientid, self.clientsecret,self.version)
                     self.api_client.set_default_header("Authorization", "Bearer " + self.access_token)
-                    self.get_access_token_time =  time.process_time()
+                    self.get_access_token_time =  time.time()
 
     # <summary>
     # Retrieve the description of auto filters from a worksheet.
