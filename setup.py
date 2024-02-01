@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "asposecellscloud"
-VERSION = "24.1.2"
+VERSION = "24.1.3"
 # To install the library, run the following
 #
 # python setup.py install
@@ -23,7 +23,7 @@ setup(
     url="https://github.com/aspose-cells-cloud/aspose-cells-cloud-python",
     keywords=["aspose", "cells", "cloud"],
     install_requires=REQUIRES,
-    packages=['asposecellscloud', 'asposecellscloud.apis', 'asposecellscloud.models'],
+    packages=['asposecellscloud', 'asposecellscloud.apis', 'asposecellscloud.models','asposecellscloud.requests'],
     include_package_data=True,
     long_description="Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Microsoft Excel� spreadsheet generation, manipulation, conversion & inspection features into your own Python applications.",
     classifiers=[
