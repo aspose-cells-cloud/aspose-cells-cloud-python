@@ -46,8 +46,8 @@ Name | Type | Description | Notes
 **SideWall** | **LinkElement** | Returns a  object that represents the side wall of a 3-D chart. |
 **SizeWithWindow** | **boolean** | True if Microsoft Excel resizes the chart to match the size of the chart sheet window. |
 **Style** | **int** | Gets and sets the builtin style. |
-**Title** | **LinkElement** | Gets the chart's title. |
-**Type** | **string** | Gets or sets a chart's type. |
+**Title** | **LinkElement** |  |
+**Type** | **string** |  |
 **ValueAxis** | **LinkElement** | Gets the chart's Y axis. |
 **Walls** | **LinkElement** | Returns a  object that represents the walls of a 3-D chart. |
 **WallsAndGridlines2D** | **boolean** | True if gridlines are drawn two-dimensionally on a 3-D chart. |

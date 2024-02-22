@@ -185,6 +185,7 @@ from asposecellscloud.models.txt_save_options import TxtSaveOptions
 from asposecellscloud.models.xlsb_save_options import XlsbSaveOptions
 from asposecellscloud.models.xls_save_options import XlsSaveOptions
 from asposecellscloud.models.xps_save_options import XpsSaveOptions
+from asposecellscloud.models.analyze_excel_response import AnalyzeExcelResponse
 from asposecellscloud.models.arc_shape_response import ArcShapeResponse
 from asposecellscloud.models.auto_filter_response import AutoFilterResponse
 from asposecellscloud.models.auto_shape_response import AutoShapeResponse
@@ -295,6 +296,7 @@ from asposecellscloud.models.workbooks_response import WorkbooksResponse
 from asposecellscloud.models.worksheet_replace_response import WorksheetReplaceResponse
 from asposecellscloud.models.worksheet_response import WorksheetResponse
 from asposecellscloud.models.worksheets_response import WorksheetsResponse
+from asposecellscloud.models.analyze_excel_request import AnalyzeExcelRequest
 from asposecellscloud.models.batch_convert_request import BatchConvertRequest
 from asposecellscloud.models.batch_lock_request import BatchLockRequest
 from asposecellscloud.models.batch_protect_request import BatchProtectRequest
@@ -408,5 +410,13 @@ from asposecellscloud.models.title import Title
 from asposecellscloud.models.trendline import Trendline
 from asposecellscloud.models.trendlines import Trendlines
 from asposecellscloud.models.walls import Walls
+from asposecellscloud.models.analyzed_column_description import AnalyzedColumnDescription
+from asposecellscloud.models.analyzed_result import AnalyzedResult
+from asposecellscloud.models.analyzed_table_description import AnalyzedTableDescription
+from asposecellscloud.models.analyze_suggestion import AnalyzeSuggestion
+from asposecellscloud.models.discover_chart import DiscoverChart
+from asposecellscloud.models.discover_pivot_table import DiscoverPivotTable
+from asposecellscloud.models.excel_data_statistics import ExcelDataStatistics
+from asposecellscloud.models.worksheet_data_statistics import WorksheetDataStatistics
 from asposecellscloud.models.error import Error
 from asposecellscloud.models.error_details import ErrorDetails

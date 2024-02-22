@@ -48,7 +48,6 @@ class PdfSecurityOptions(object):
         'annotations_permission' : 'bool',
         'assemble_document_permission' : 'bool',
         'extract_content_permission' : 'bool',
-        'extract_content_permission_obsolete' : 'bool',
         'fill_forms_permission' : 'bool',
         'full_quality_print_permission' : 'bool',
         'modify_document_permission' : 'bool',
@@ -61,7 +60,6 @@ class PdfSecurityOptions(object):
         'annotations_permission' : 'AnnotationsPermission' ,
         'assemble_document_permission' : 'AssembleDocumentPermission' ,
         'extract_content_permission' : 'ExtractContentPermission' ,
-        'extract_content_permission_obsolete' : 'ExtractContentPermissionObsolete' ,
         'fill_forms_permission' : 'FillFormsPermission' ,
         'full_quality_print_permission' : 'FullQualityPrintPermission' ,
         'modify_document_permission' : 'ModifyDocumentPermission' ,
@@ -83,7 +81,7 @@ class PdfSecurityOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,annotations_permission=None ,assemble_document_permission=None ,extract_content_permission=None ,extract_content_permission_obsolete=None ,fill_forms_permission=None ,full_quality_print_permission=None ,modify_document_permission=None ,owner_password=None ,print_permission=None ,user_password=None   ,**kw):
+    def __init__(self,annotations_permission=None ,assemble_document_permission=None ,extract_content_permission=None ,fill_forms_permission=None ,full_quality_print_permission=None ,modify_document_permission=None ,owner_password=None ,print_permission=None ,user_password=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -95,7 +93,6 @@ class PdfSecurityOptions(object):
         self.container['annotations_permission'] = None 
         self.container['assemble_document_permission'] = None 
         self.container['extract_content_permission'] = None 
-        self.container['extract_content_permission_obsolete'] = None 
         self.container['fill_forms_permission'] = None 
         self.container['full_quality_print_permission'] = None 
         self.container['modify_document_permission'] = None 
@@ -118,12 +115,6 @@ class PdfSecurityOptions(object):
         self.extract_content_permission = extract_content_permission
         if 'extract_content_permission' in params:
             self.extract_content_permission = params["extract_content_permission"]
-
-
-             
-        self.extract_content_permission_obsolete = extract_content_permission_obsolete
-        if 'extract_content_permission_obsolete' in params:
-            self.extract_content_permission_obsolete = params["extract_content_permission_obsolete"]
 
 
              
@@ -185,13 +176,6 @@ class PdfSecurityOptions(object):
     @extract_content_permission.setter
     def extract_content_permission(self, extract_content_permission):
         self.container['extract_content_permission'] = extract_content_permission 
-    @property
-    def extract_content_permission_obsolete(self):
-        return self.container['extract_content_permission_obsolete']
-
-    @extract_content_permission_obsolete.setter
-    def extract_content_permission_obsolete(self, extract_content_permission_obsolete):
-        self.container['extract_content_permission_obsolete'] = extract_content_permission_obsolete 
     @property
     def fill_forms_permission(self):
         return self.container['fill_forms_permission']

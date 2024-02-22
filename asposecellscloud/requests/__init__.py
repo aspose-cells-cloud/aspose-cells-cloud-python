@@ -26,6 +26,7 @@
 from __future__ import absolute_import
 
 # import models into model package
+from asposecellscloud.requests.post_analyze_excel_request import PostAnalyzeExcelRequest
 from asposecellscloud.requests.get_worksheet_auto_filter_request import GetWorksheetAutoFilterRequest
 from asposecellscloud.requests.put_worksheet_date_filter_request import PutWorksheetDateFilterRequest
 from asposecellscloud.requests.put_worksheet_filter_request import PutWorksheetFilterRequest

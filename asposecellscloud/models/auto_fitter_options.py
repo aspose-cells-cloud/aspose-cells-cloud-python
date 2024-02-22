@@ -46,7 +46,6 @@ class AutoFitterOptions(object):
 
     swagger_types = {
         'auto_fit_merged_cells_type' : 'str',
-        'auto_fit_merged_cells' : 'bool',
         'ignore_hidden' : 'bool',
         'only_auto' : 'bool',
         'default_edit_language' : 'str',
@@ -58,7 +57,6 @@ class AutoFitterOptions(object):
 
     attribute_map = {
         'auto_fit_merged_cells_type' : 'AutoFitMergedCellsType' ,
-        'auto_fit_merged_cells' : 'AutoFitMergedCells' ,
         'ignore_hidden' : 'IgnoreHidden' ,
         'only_auto' : 'OnlyAuto' ,
         'default_edit_language' : 'DefaultEditLanguage' ,
@@ -81,7 +79,7 @@ class AutoFitterOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,auto_fit_merged_cells_type=None ,auto_fit_merged_cells=None ,ignore_hidden=None ,only_auto=None ,default_edit_language=None ,max_row_height=None ,auto_fit_wrapped_text_type=None ,format_strategy=None ,for_rendering=None   ,**kw):
+    def __init__(self,auto_fit_merged_cells_type=None ,ignore_hidden=None ,only_auto=None ,default_edit_language=None ,max_row_height=None ,auto_fit_wrapped_text_type=None ,format_strategy=None ,for_rendering=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -91,7 +89,6 @@ class AutoFitterOptions(object):
         AutoFitterOptions - a model defined in Swagger
         """
         self.container['auto_fit_merged_cells_type'] = None 
-        self.container['auto_fit_merged_cells'] = None 
         self.container['ignore_hidden'] = None 
         self.container['only_auto'] = None 
         self.container['default_edit_language'] = None 
@@ -103,12 +100,6 @@ class AutoFitterOptions(object):
         self.auto_fit_merged_cells_type = auto_fit_merged_cells_type
         if 'auto_fit_merged_cells_type' in params:
             self.auto_fit_merged_cells_type = params["auto_fit_merged_cells_type"]
-
-
-             
-        self.auto_fit_merged_cells = auto_fit_merged_cells
-        if 'auto_fit_merged_cells' in params:
-            self.auto_fit_merged_cells = params["auto_fit_merged_cells"]
 
 
              
@@ -162,13 +153,6 @@ class AutoFitterOptions(object):
     @auto_fit_merged_cells_type.setter
     def auto_fit_merged_cells_type(self, auto_fit_merged_cells_type):
         self.container['auto_fit_merged_cells_type'] = auto_fit_merged_cells_type 
-    @property
-    def auto_fit_merged_cells(self):
-        return self.container['auto_fit_merged_cells']
-
-    @auto_fit_merged_cells.setter
-    def auto_fit_merged_cells(self, auto_fit_merged_cells):
-        self.container['auto_fit_merged_cells'] = auto_fit_merged_cells 
     @property
     def ignore_hidden(self):
         return self.container['ignore_hidden']
