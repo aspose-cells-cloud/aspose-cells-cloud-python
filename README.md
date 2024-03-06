@@ -9,17 +9,17 @@ Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate M
 
 ## Manipulate Excel Files in the Cloud with Python
 
-- Create Excel files via API.
-- Create & refresh Pivot Tables & charts.
-- Create & manipulate spark-lines & conditional formatting.
-- Convert charts, worksheets or data ranges to images or PDF.
-- Manage comments & hyperlinks.
-- Set complex formulas & calculate results via API.
-- Set protection on workbook, worksheet, cell, column or row.
-- Create & manipulate named ranges.
-- Populate worksheets through Smart Markers.
-- Convert worksheets to PDF, XPS & SVG formats.
-- Inter-convert files to popular Excel formats.
+- Generate Excel files using the API.
+- Generate and update Pivot Tables and charts.
+- Implement and manage sparklines and conditional formatting.
+- Convert charts, worksheets, or data ranges to images or PDF.
+- Handle comments and hyperlinks.
+- Apply complex formulas and compute results via the API.
+- Implement protection on workbooks, worksheets, cells, columns, or rows.
+- Create and manage named ranges.
+- Populate worksheets using Smart Markers.
+- Convert worksheets to PDF, XPS, and SVG formats.
+- Convert files to and from popular Excel formats.
 
 ## Feature & Enhancements in Version 24.2.1
 
@@ -30,21 +30,33 @@ Full list of issues covering all changes in this release:
 ## Read & Write Spreadsheet Formats
 
 **Microsoft Excel:** XLS, XLSX, XLSB, XLSM, XLT, XLTX, XLTM
+
 **OpenOffice:** ODS
+
 **SpreadsheetML:** XML
+
 **Text:** CSV, TSV, TXT (TabDelimited)
+
 **Web:** HTML, MHTML
 
 ## Save Spreadsheets As
 
 **Microsoft Excel:** XLS, XLSX, XLSB
+
 **OpenOffice:** ODS
+
 **SpreadsheetML:** XML
+
 **Text:** CSV, TSV, TXT (TabDelimited)
+
 **Web:** HTML, MHTML
+
 **Fixed Layout:** PDF, XPS
+
 **Images:** PNG, JPG, TIFF, SVG
+
 **Markdown:** MD
+
 **Other:** DIF
 
 ## Read Other Formats
