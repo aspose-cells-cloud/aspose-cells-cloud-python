@@ -3,9 +3,11 @@
 
 # Python SDK for Spreadsheet Processing in Cloud
 
-Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Microsoft Excel® spreadsheet generation, manipulation, conversion & inspection features into your own Python applications. 
+The Python Cloud SDK wraps the Aspose.Cells REST API, enabling seamless integration of Microsoft Excel® spreadsheet generation, manipulation, conversion, and inspection features into Python applications.
 
-[Aspose.Cells Cloud SDK for Python](https://products.aspose.cloud/cells/python) offers Excel® file creation, editing, conversion, & rendering. Developers can format worksheets, rows, columns or cells to the most granular level, create & manipulate chart & pivot tables, render worksheets, charts and specific data ranges to PDF & images, add & calculate Excel's built-in and custom formulas and much more.
+With [Aspose.Cells Cloud SDK for Python](https://products.aspose.cloud/cells/python), developers can perform a wide range of tasks, including Excel® file creation, editing, conversion, and rendering. They can format worksheets, rows, columns, or cells at a granular level, create and manipulate charts and pivot tables, render worksheets, charts, and specific data ranges to PDF and images, add and calculate Excel's built-in and custom formulas, and much more.
+
+
 
 ## Manipulate Excel Files in the Cloud with Python
 
@@ -65,16 +67,20 @@ SXC, FODS
 
 ## Integrated Storage API
 
-Since version 19.9, SDK includes support of storage operations for better user experience and unification. It gives you an ability to;
+Since version 19.9, the SDK includes support for storage operations, enhancing user experience and unification. It provides the following capabilities:
 
-- Upload, download, copy, move and delete files, including versions handling (if you are using Cloud storage that supports this feature - true by default).
-- Create, copy, move and delete folders.
-- Copy and move files and folders across separate storages in scope of a single operation.
-- Check if certain file, folder or storage exists.
+- Upload, download, copy, move, and delete files, including handling versions (if supported by the cloud storage provider, defaulting to true).
+- Create, copy, move, and delete folders.
+- Copy and move files and folders across different storages in a single operation.
+- Check the existence of specific files, folders, or storage locations.
+ 
 
 ## Gett Started with Aspose.Cells Cloud SDK for Python
 
-Firstly, create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/apps) to get your application information. Next, execute `pip install asposecellscloud` from the command line to get the SDK from PIP. The complete source code is also available at [GitHub Repository](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python).
+1. Create an account at Aspose for Cloud to obtain your application information.
+2. Execute `pip install asposecellscloud` from the command line to install the SDK from PIP.
+3. The complete source code is also available at the GitHub Repository.
+
 
 ## Create Spreadsheet from a Template in the Cloud via Python
 
