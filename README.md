@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/24.3)
 
 
-# Python package for Aspose.Cells Cloud SDK
+# Python package for Aspose.Cells Cloud
 
 
 Enhance your Python applications with the [Aspose.Cells Cloud SDK](https://products.aspose.cloud/cells/python) , enabling seamless integration with [Excel, ODS, CSV, Json and other spreadsheet document formats](https://docs.aspose.cloud/cells/supported-file-formats/). With its powerful APIs, developers can effortlessly read, convert, create, edit, and manipulate the contents of Excel documents without the need for any office software installed on the machine.
@@ -72,7 +72,7 @@ Full list of issues covering all changes in this release:
 
 ## Quick Start Guide
 
-To begin with Aspose.Cells Cloud SDK, here's what you need to do:
+To begin with Aspose.Cells Cloud, here's what you need to do:
 
 1. Sign up for an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/apps) to obtain your application details.
 2. Install the Aspose.Cells Cloud Python package from the [pypi](https://pypi.org/).
@@ -114,7 +114,7 @@ api.put_convert_workbook(request)
 
 ```
 
-## Aspose.Cells Cloud SDKs in Popular Languages
+## Aspose.Cells Cloud in Popular Languages
 
 | .NET | Java | PHP | Ruby | Node.js | Android | Swift | Perl | GO |
 |---|---|---|---|---|---|---|---|---|

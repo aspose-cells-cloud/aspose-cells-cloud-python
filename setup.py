@@ -17,7 +17,7 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Microsoft Excel� spreadsheet generation, manipulation, conversion & inspection features into your own Python applications.",
+    description="Python Cloud SDK wraps Aspose.Cells Cloud API so you could seamlessly integrate Microsoft Excel file generation, manipulation, conversion & inspection features into your own Python applications.",
     author="Aspose Cloud",
     author_email="aspose.cloud@aspose.com",
     url="https://github.com/aspose-cells-cloud/aspose-cells-cloud-python",
@@ -25,7 +25,7 @@ setup(
     install_requires=REQUIRES,
     packages=['asposecellscloud', 'asposecellscloud.apis', 'asposecellscloud.models','asposecellscloud.requests'],
     include_package_data=True,
-    long_description="Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Microsoft Excel� spreadsheet generation, manipulation, conversion & inspection features into your own Python applications.",
+    long_description="Python Cloud SDK wraps Aspose.Cells Cloud API so you could seamlessly integrate Microsoft Excel file generation, manipulation, conversion & inspection features into your own Python applications.",
     classifiers=[
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.6',
