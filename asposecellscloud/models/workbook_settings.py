@@ -49,7 +49,6 @@ class WorkbookSettings(object):
         'auto_recover' : 'bool',
         'build_version' : 'str',
         'calc_mode' : 'str',
-        'calc_stack_size' : 'int',
         'calculation_id' : 'str',
         'check_comptiliblity' : 'bool',
         'check_excel_restriction' : 'bool',
@@ -115,7 +114,6 @@ class WorkbookSettings(object):
         'auto_recover' : 'AutoRecover' ,
         'build_version' : 'BuildVersion' ,
         'calc_mode' : 'CalcMode' ,
-        'calc_stack_size' : 'CalcStackSize' ,
         'calculation_id' : 'CalculationId' ,
         'check_comptiliblity' : 'CheckComptiliblity' ,
         'check_excel_restriction' : 'CheckExcelRestriction' ,
@@ -189,7 +187,7 @@ class WorkbookSettings(object):
             return self.container[attr]
         return None
 
-    def __init__(self,auto_compress_pictures=None ,auto_recover=None ,build_version=None ,calc_mode=None ,calc_stack_size=None ,calculation_id=None ,check_comptiliblity=None ,check_excel_restriction=None ,crash_save=None ,create_calc_chain=None ,data_extract_load=None ,date1904=None ,display_drawing_objects=None ,enable_macros=None ,first_visible_tab=None ,hide_pivot_field_list=None ,is_default_encrypted=None ,is_hidden=None ,is_h_scroll_bar_visible=None ,is_minimized=None ,is_v_scroll_bar_visible=None ,iteration=None ,language_code=None ,max_change=None ,max_iteration=None ,memory_setting=None ,number_decimal_separator=None ,number_group_separator=None ,parsing_formula_on_open=None ,precision_as_displayed=None ,recalculate_before_save=None ,re_calculate_on_open=None ,recommend_read_only=None ,region=None ,remove_personal_information=None ,repair_load=None ,shared=None ,sheet_tab_bar_width=None ,show_tabs=None ,update_adjacent_cells_border=None ,update_links_type=None ,window_height=None ,window_left=None ,window_top=None ,window_width=None ,author=None ,check_custom_number_format=None ,protection_type=None ,globalization_settings=None ,password=None ,write_protection=None ,is_encrypted=None ,is_protected=None ,max_row=None ,max_column=None ,significant_digits=None ,check_compatibility=None ,paper_size=None ,max_rows_of_shared_formula=None ,compliance=None ,quote_prefix_to_style=None ,formula_settings=None ,force_full_calculate=None   ,**kw):
+    def __init__(self,auto_compress_pictures=None ,auto_recover=None ,build_version=None ,calc_mode=None ,calculation_id=None ,check_comptiliblity=None ,check_excel_restriction=None ,crash_save=None ,create_calc_chain=None ,data_extract_load=None ,date1904=None ,display_drawing_objects=None ,enable_macros=None ,first_visible_tab=None ,hide_pivot_field_list=None ,is_default_encrypted=None ,is_hidden=None ,is_h_scroll_bar_visible=None ,is_minimized=None ,is_v_scroll_bar_visible=None ,iteration=None ,language_code=None ,max_change=None ,max_iteration=None ,memory_setting=None ,number_decimal_separator=None ,number_group_separator=None ,parsing_formula_on_open=None ,precision_as_displayed=None ,recalculate_before_save=None ,re_calculate_on_open=None ,recommend_read_only=None ,region=None ,remove_personal_information=None ,repair_load=None ,shared=None ,sheet_tab_bar_width=None ,show_tabs=None ,update_adjacent_cells_border=None ,update_links_type=None ,window_height=None ,window_left=None ,window_top=None ,window_width=None ,author=None ,check_custom_number_format=None ,protection_type=None ,globalization_settings=None ,password=None ,write_protection=None ,is_encrypted=None ,is_protected=None ,max_row=None ,max_column=None ,significant_digits=None ,check_compatibility=None ,paper_size=None ,max_rows_of_shared_formula=None ,compliance=None ,quote_prefix_to_style=None ,formula_settings=None ,force_full_calculate=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -202,7 +200,6 @@ class WorkbookSettings(object):
         self.container['auto_recover'] = None 
         self.container['build_version'] = None 
         self.container['calc_mode'] = None 
-        self.container['calc_stack_size'] = None 
         self.container['calculation_id'] = None 
         self.container['check_comptiliblity'] = None 
         self.container['check_excel_restriction'] = None 
@@ -283,12 +280,6 @@ class WorkbookSettings(object):
         self.calc_mode = calc_mode
         if 'calc_mode' in params:
             self.calc_mode = params["calc_mode"]
-
-
-             
-        self.calc_stack_size = calc_stack_size
-        if 'calc_stack_size' in params:
-            self.calc_stack_size = params["calc_stack_size"]
 
 
              
@@ -669,13 +660,6 @@ class WorkbookSettings(object):
     @calc_mode.setter
     def calc_mode(self, calc_mode):
         self.container['calc_mode'] = calc_mode 
-    @property
-    def calc_stack_size(self):
-        return self.container['calc_stack_size']
-
-    @calc_stack_size.setter
-    def calc_stack_size(self, calc_stack_size):
-        self.container['calc_stack_size'] = calc_stack_size 
     @property
     def calculation_id(self):
         return self.container['calculation_id']

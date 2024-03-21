@@ -67,9 +67,14 @@ from asposecellscloud.models.criteria_multiple_filter import CriteriaMultipleFil
 from asposecellscloud.models.custom_filter import CustomFilter
 from asposecellscloud.models.data_bar import DataBar
 from asposecellscloud.models.data_bar_border import DataBarBorder
+from asposecellscloud.models.data_cleansing import DataCleansing
+from asposecellscloud.models.data_column_fill_value import DataColumnFillValue
+from asposecellscloud.models.data_fill import DataFill
+from asposecellscloud.models.data_fill_value import DataFillValue
 from asposecellscloud.models.data_sorter import DataSorter
 from asposecellscloud.models.data_sorter_key import DataSorterKey
 from asposecellscloud.models.date_time_group_item import DateTimeGroupItem
+from asposecellscloud.models.deduplication_region import DeduplicationRegion
 from asposecellscloud.models.dynamic_filter import DynamicFilter
 from asposecellscloud.models.file_info import FileInfo
 from asposecellscloud.models.files_result import FilesResult
@@ -304,6 +309,10 @@ from asposecellscloud.models.batch_split_request import BatchSplitRequest
 from asposecellscloud.models.color_filter_request import ColorFilterRequest
 from asposecellscloud.models.convert_parameter import ConvertParameter
 from asposecellscloud.models.create_pivot_table_request import CreatePivotTableRequest
+from asposecellscloud.models.data_cleansing_request import DataCleansingRequest
+from asposecellscloud.models.data_deduplication_request import DataDeduplicationRequest
+from asposecellscloud.models.data_fill_request import DataFillRequest
+from asposecellscloud.models.delete_incomplete_rows_request import DeleteIncompleteRowsRequest
 from asposecellscloud.models.import_json_request import ImportJsonRequest
 from asposecellscloud.models.import_xml_request import ImportXMLRequest
 from asposecellscloud.models.match_condition_request import MatchConditionRequest
