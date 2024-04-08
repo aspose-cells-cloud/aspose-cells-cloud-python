@@ -21,7 +21,7 @@ setup(
     author="Aspose Cloud",
     author_email="aspose.cloud@aspose.com",
     url="https://github.com/aspose-cells-cloud/aspose-cells-cloud-python",
-    keywords=["aspose", "cells", "cloud"],
+    keywords=["excel", "spreadsheet", "xlsx", "convert", "aspose.cells","cloud"],
     install_requires=REQUIRES,
     packages=['asposecellscloud', 'asposecellscloud.apis', 'asposecellscloud.models','asposecellscloud.requests'],
     include_package_data=True,
