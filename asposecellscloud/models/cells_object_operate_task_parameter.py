@@ -47,12 +47,14 @@ class CellsObjectOperateTaskParameter(object):
     swagger_types = {
         'operate_object' : 'OperateObject',
         'operate_parameter' : 'OperateParameter',
+        'destinatio_data_source' : 'DataSource',
         'destination_workbook' : 'FileSource'
     }
 
     attribute_map = {
         'operate_object' : 'OperateObject' ,
         'operate_parameter' : 'OperateParameter' ,
+        'destinatio_data_source' : 'DestinatioDataSource' ,
         'destination_workbook' : 'DestinationWorkbook' 
     }
 
@@ -69,7 +71,7 @@ class CellsObjectOperateTaskParameter(object):
             return self.container[attr]
         return None
 
-    def __init__(self,operate_object=None ,operate_parameter=None ,destination_workbook=None   ,**kw):
+    def __init__(self,operate_object=None ,operate_parameter=None ,destinatio_data_source=None ,destination_workbook=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -80,6 +82,7 @@ class CellsObjectOperateTaskParameter(object):
         """
         self.container['operate_object'] = None 
         self.container['operate_parameter'] = None 
+        self.container['destinatio_data_source'] = None 
         self.container['destination_workbook'] = None 
         params = locals()
         self.operate_object = operate_object
@@ -91,6 +94,12 @@ class CellsObjectOperateTaskParameter(object):
         self.operate_parameter = operate_parameter
         if 'operate_parameter' in params:
             self.operate_parameter = params["operate_parameter"]
+
+
+             
+        self.destinatio_data_source = destinatio_data_source
+        if 'destinatio_data_source' in params:
+            self.destinatio_data_source = params["destinatio_data_source"]
 
 
              
@@ -115,6 +124,13 @@ class CellsObjectOperateTaskParameter(object):
     @operate_parameter.setter
     def operate_parameter(self, operate_parameter):
         self.container['operate_parameter'] = operate_parameter 
+    @property
+    def destinatio_data_source(self):
+        return self.container['destinatio_data_source']
+
+    @destinatio_data_source.setter
+    def destinatio_data_source(self, destinatio_data_source):
+        self.container['destinatio_data_source'] = destinatio_data_source 
     @property
     def destination_workbook(self):
         return self.container['destination_workbook']

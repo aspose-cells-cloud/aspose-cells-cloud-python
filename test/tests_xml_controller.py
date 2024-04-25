@@ -49,7 +49,7 @@ class TestXmlControllerApi(unittest.TestCase):
         data_xml = 'data.xml'
         remote_name = 'Template.xlsx'
 
-        importXMLRequestXMLFileSource = FileSource(file_source_type= 'CloudFileSystem' ,file_path= remote_folder + '/data.xml' )
+        importXMLRequestXMLFileSource = DataSource(data_source_type= 'CloudFileSystem' ,data_path= remote_folder + '/data.xml' )
         importXMLRequestImportPosition = ImportPosition(sheet_name= 'Sheet1' ,row_index= 3 ,column_index= 4 )
         importXMLRequest = ImportXMLRequest(xml_file_source= importXMLRequestXMLFileSource ,import_position= importXMLRequestImportPosition )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')

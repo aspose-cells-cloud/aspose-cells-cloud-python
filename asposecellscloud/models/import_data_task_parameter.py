@@ -45,14 +45,18 @@ class ImportDataTaskParameter(object):
     """
 
     swagger_types = {
+        'data_source' : 'DataSource',
         'workbook' : 'FileSource',
         'import_option' : 'ImportOption',
+        'target_data_source' : 'DataSource',
         'destination_workbook' : 'FileSource'
     }
 
     attribute_map = {
+        'data_source' : 'DataSource' ,
         'workbook' : 'Workbook' ,
         'import_option' : 'ImportOption' ,
+        'target_data_source' : 'TargetDataSource' ,
         'destination_workbook' : 'DestinationWorkbook' 
     }
 
@@ -69,7 +73,7 @@ class ImportDataTaskParameter(object):
             return self.container[attr]
         return None
 
-    def __init__(self,workbook=None ,import_option=None ,destination_workbook=None   ,**kw):
+    def __init__(self,data_source=None ,workbook=None ,import_option=None ,target_data_source=None ,destination_workbook=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -78,10 +82,18 @@ class ImportDataTaskParameter(object):
         """
         ImportDataTaskParameter - a model defined in Swagger
         """
+        self.container['data_source'] = None 
         self.container['workbook'] = None 
         self.container['import_option'] = None 
+        self.container['target_data_source'] = None 
         self.container['destination_workbook'] = None 
         params = locals()
+        self.data_source = data_source
+        if 'data_source' in params:
+            self.data_source = params["data_source"]
+
+
+             
         self.workbook = workbook
         if 'workbook' in params:
             self.workbook = params["workbook"]
@@ -94,6 +106,12 @@ class ImportDataTaskParameter(object):
 
 
              
+        self.target_data_source = target_data_source
+        if 'target_data_source' in params:
+            self.target_data_source = params["target_data_source"]
+
+
+             
         self.destination_workbook = destination_workbook
         if 'destination_workbook' in params:
             self.destination_workbook = params["destination_workbook"]
@@ -101,6 +119,13 @@ class ImportDataTaskParameter(object):
 
              
 
+    @property
+    def data_source(self):
+        return self.container['data_source']
+
+    @data_source.setter
+    def data_source(self, data_source):
+        self.container['data_source'] = data_source 
     @property
     def workbook(self):
         return self.container['workbook']
@@ -115,6 +140,13 @@ class ImportDataTaskParameter(object):
     @import_option.setter
     def import_option(self, import_option):
         self.container['import_option'] = import_option 
+    @property
+    def target_data_source(self):
+        return self.container['target_data_source']
+
+    @target_data_source.setter
+    def target_data_source(self, target_data_source):
+        self.container['target_data_source'] = target_data_source 
     @property
     def destination_workbook(self):
         return self.container['destination_workbook']

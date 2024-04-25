@@ -46,7 +46,7 @@ class TaskRunResult(object):
 
     swagger_types = {
         'description' : 'str',
-        'out_file_list' : 'list[FileSource]'
+        'out_file_list' : 'list[DataSource]'
     }
 
     attribute_map = {

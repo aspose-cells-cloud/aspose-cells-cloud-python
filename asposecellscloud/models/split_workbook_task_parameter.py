@@ -47,6 +47,8 @@ class SplitWorkbookTaskParameter(object):
     swagger_types = {
         'workbook' : 'FileSource',
         'destination_file_position' : 'FileSource',
+        'data_source' : 'DataSource',
+        'target_data_source' : 'DataSource',
         'destination_file_format' : 'str',
         'split_name_rule' : 'str',
         'vertical_resolution' : 'int',
@@ -56,6 +58,8 @@ class SplitWorkbookTaskParameter(object):
     attribute_map = {
         'workbook' : 'Workbook' ,
         'destination_file_position' : 'DestinationFilePosition' ,
+        'data_source' : 'DataSource' ,
+        'target_data_source' : 'TargetDataSource' ,
         'destination_file_format' : 'DestinationFileFormat' ,
         'split_name_rule' : 'SplitNameRule' ,
         'vertical_resolution' : 'VerticalResolution' ,
@@ -75,7 +79,7 @@ class SplitWorkbookTaskParameter(object):
             return self.container[attr]
         return None
 
-    def __init__(self,workbook=None ,destination_file_position=None ,destination_file_format=None ,split_name_rule=None ,vertical_resolution=None ,horizontal_resolution=None   ,**kw):
+    def __init__(self,workbook=None ,destination_file_position=None ,data_source=None ,target_data_source=None ,destination_file_format=None ,split_name_rule=None ,vertical_resolution=None ,horizontal_resolution=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -86,6 +90,8 @@ class SplitWorkbookTaskParameter(object):
         """
         self.container['workbook'] = None 
         self.container['destination_file_position'] = None 
+        self.container['data_source'] = None 
+        self.container['target_data_source'] = None 
         self.container['destination_file_format'] = None 
         self.container['split_name_rule'] = None 
         self.container['vertical_resolution'] = None 
@@ -100,6 +106,18 @@ class SplitWorkbookTaskParameter(object):
         self.destination_file_position = destination_file_position
         if 'destination_file_position' in params:
             self.destination_file_position = params["destination_file_position"]
+
+
+             
+        self.data_source = data_source
+        if 'data_source' in params:
+            self.data_source = params["data_source"]
+
+
+             
+        self.target_data_source = target_data_source
+        if 'target_data_source' in params:
+            self.target_data_source = params["target_data_source"]
 
 
              
@@ -142,6 +160,20 @@ class SplitWorkbookTaskParameter(object):
     @destination_file_position.setter
     def destination_file_position(self, destination_file_position):
         self.container['destination_file_position'] = destination_file_position 
+    @property
+    def data_source(self):
+        return self.container['data_source']
+
+    @data_source.setter
+    def data_source(self, data_source):
+        self.container['data_source'] = data_source 
+    @property
+    def target_data_source(self):
+        return self.container['target_data_source']
+
+    @target_data_source.setter
+    def target_data_source(self, target_data_source):
+        self.container['target_data_source'] = target_data_source 
     @property
     def destination_file_format(self):
         return self.container['destination_file_format']

@@ -54,6 +54,7 @@ class ImportPictureOption(object):
         'destination_worksheet' : 'str',
         'is_insert' : 'bool',
         'import_data_type' : 'str',
+        'data_source' : 'DataSource',
         'source' : 'FileSource'
     }
 
@@ -67,6 +68,7 @@ class ImportPictureOption(object):
         'destination_worksheet' : 'DestinationWorksheet' ,
         'is_insert' : 'IsInsert' ,
         'import_data_type' : 'ImportDataType' ,
+        'data_source' : 'DataSource' ,
         'source' : 'Source' 
     }
 
@@ -83,7 +85,7 @@ class ImportPictureOption(object):
             return self.container[attr]
         return None
 
-    def __init__(self,upper_left_row=None ,upper_left_column=None ,lower_right_row=None ,lower_right_column=None ,filename=None ,data=None ,destination_worksheet=None ,is_insert=None ,import_data_type=None ,source=None   ,**kw):
+    def __init__(self,upper_left_row=None ,upper_left_column=None ,lower_right_row=None ,lower_right_column=None ,filename=None ,data=None ,destination_worksheet=None ,is_insert=None ,import_data_type=None ,data_source=None ,source=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -101,6 +103,7 @@ class ImportPictureOption(object):
         self.container['destination_worksheet'] = None 
         self.container['is_insert'] = None 
         self.container['import_data_type'] = None 
+        self.container['data_source'] = None 
         self.container['source'] = None 
         params = locals()
         self.upper_left_row = upper_left_row
@@ -154,6 +157,12 @@ class ImportPictureOption(object):
         self.import_data_type = import_data_type
         if 'import_data_type' in params:
             self.import_data_type = params["import_data_type"]
+
+
+             
+        self.data_source = data_source
+        if 'data_source' in params:
+            self.data_source = params["data_source"]
 
 
              
@@ -227,6 +236,13 @@ class ImportPictureOption(object):
     @import_data_type.setter
     def import_data_type(self, import_data_type):
         self.container['import_data_type'] = import_data_type 
+    @property
+    def data_source(self):
+        return self.container['data_source']
+
+    @data_source.setter
+    def data_source(self, data_source):
+        self.container['data_source'] = data_source 
     @property
     def source(self):
         return self.container['source']

@@ -1,11 +1,11 @@
 [project]
 name = "asposecellscloud"
-version = "24.3"
+version = "24.4"
 authors = [
   { name="Aspose Cloud", email="aspose.cloud@aspose.com" },
 ]
 description = "Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Microsoft Excel® spreadsheet generation, manipulation, conversion & inspection features into your own Python applications."
-keywords = ["excel", "spreadsheet",  "convert", "xlsx", "pdf", "json","cloud","rest api"]
+keywords = ["excel", "spreadsheet",  "convert", "xlsx", "pdf", "json", "cloud", "rest api", "merge", "split", "protect"]
 readme = "README.md"
 requires-python = ">=3.6"
 classifiers = [

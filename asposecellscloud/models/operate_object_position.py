@@ -45,6 +45,7 @@ class OperateObjectPosition(object):
     """
 
     swagger_types = {
+        'data_source' : 'DataSource',
         'workbook' : 'FileSource',
         'sheet_name' : 'str',
         'chart_index' : 'int',
@@ -54,6 +55,7 @@ class OperateObjectPosition(object):
     }
 
     attribute_map = {
+        'data_source' : 'DataSource' ,
         'workbook' : 'Workbook' ,
         'sheet_name' : 'SheetName' ,
         'chart_index' : 'ChartIndex' ,
@@ -75,7 +77,7 @@ class OperateObjectPosition(object):
             return self.container[attr]
         return None
 
-    def __init__(self,workbook=None ,sheet_name=None ,chart_index=None ,shape_index=None ,cell_name=None ,list_object_index=None   ,**kw):
+    def __init__(self,data_source=None ,workbook=None ,sheet_name=None ,chart_index=None ,shape_index=None ,cell_name=None ,list_object_index=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -84,6 +86,7 @@ class OperateObjectPosition(object):
         """
         OperateObjectPosition - a model defined in Swagger
         """
+        self.container['data_source'] = None 
         self.container['workbook'] = None 
         self.container['sheet_name'] = None 
         self.container['chart_index'] = None 
@@ -91,6 +94,12 @@ class OperateObjectPosition(object):
         self.container['cell_name'] = None 
         self.container['list_object_index'] = None 
         params = locals()
+        self.data_source = data_source
+        if 'data_source' in params:
+            self.data_source = params["data_source"]
+
+
+             
         self.workbook = workbook
         if 'workbook' in params:
             self.workbook = params["workbook"]
@@ -128,6 +137,13 @@ class OperateObjectPosition(object):
 
              
 
+    @property
+    def data_source(self):
+        return self.container['data_source']
+
+    @data_source.setter
+    def data_source(self, data_source):
+        self.container['data_source'] = data_source 
     @property
     def workbook(self):
         return self.container['workbook']

@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "asposecellscloud"
-VERSION = "24.3"
+VERSION = "24.4"
 # To install the library, run the following
 #
 # python setup.py install
@@ -21,7 +21,7 @@ setup(
     author="Aspose Cloud",
     author_email="aspose.cloud@aspose.com",
     url="https://github.com/aspose-cells-cloud/aspose-cells-cloud-python",
-    keywords=["excel", "spreadsheet", "xlsx", "convert", "aspose.cells","cloud"],
+    keywords=["excel", "spreadsheet", "xlsx", "convert", "merge", "split", "protect", "rest api", "cloud", "aspose.cells"],
     install_requires=REQUIRES,
     packages=['asposecellscloud', 'asposecellscloud.apis', 'asposecellscloud.models','asposecellscloud.requests'],
     include_package_data=True,

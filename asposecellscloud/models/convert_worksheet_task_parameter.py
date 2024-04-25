@@ -45,8 +45,10 @@ class ConvertWorksheetTaskParameter(object):
     """
 
     swagger_types = {
+        'data_source' : 'DataSource',
         'workbook' : 'FileSource',
         'sheet' : 'str',
+        'target_data_source' : 'DataSource',
         'target' : 'FileSource',
         'format' : 'str',
         'area' : 'str',
@@ -56,8 +58,10 @@ class ConvertWorksheetTaskParameter(object):
     }
 
     attribute_map = {
+        'data_source' : 'DataSource' ,
         'workbook' : 'Workbook' ,
         'sheet' : 'Sheet' ,
+        'target_data_source' : 'TargetDataSource' ,
         'target' : 'Target' ,
         'format' : 'Format' ,
         'area' : 'Area' ,
@@ -79,7 +83,7 @@ class ConvertWorksheetTaskParameter(object):
             return self.container[attr]
         return None
 
-    def __init__(self,workbook=None ,sheet=None ,target=None ,format=None ,area=None ,page_index=None ,vertical_resolution=None ,horizontal_resolution=None   ,**kw):
+    def __init__(self,data_source=None ,workbook=None ,sheet=None ,target_data_source=None ,target=None ,format=None ,area=None ,page_index=None ,vertical_resolution=None ,horizontal_resolution=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -88,8 +92,10 @@ class ConvertWorksheetTaskParameter(object):
         """
         ConvertWorksheetTaskParameter - a model defined in Swagger
         """
+        self.container['data_source'] = None 
         self.container['workbook'] = None 
         self.container['sheet'] = None 
+        self.container['target_data_source'] = None 
         self.container['target'] = None 
         self.container['format'] = None 
         self.container['area'] = None 
@@ -97,6 +103,12 @@ class ConvertWorksheetTaskParameter(object):
         self.container['vertical_resolution'] = None 
         self.container['horizontal_resolution'] = None 
         params = locals()
+        self.data_source = data_source
+        if 'data_source' in params:
+            self.data_source = params["data_source"]
+
+
+             
         self.workbook = workbook
         if 'workbook' in params:
             self.workbook = params["workbook"]
@@ -106,6 +118,12 @@ class ConvertWorksheetTaskParameter(object):
         self.sheet = sheet
         if 'sheet' in params:
             self.sheet = params["sheet"]
+
+
+             
+        self.target_data_source = target_data_source
+        if 'target_data_source' in params:
+            self.target_data_source = params["target_data_source"]
 
 
              
@@ -147,6 +165,13 @@ class ConvertWorksheetTaskParameter(object):
              
 
     @property
+    def data_source(self):
+        return self.container['data_source']
+
+    @data_source.setter
+    def data_source(self, data_source):
+        self.container['data_source'] = data_source 
+    @property
     def workbook(self):
         return self.container['workbook']
 
@@ -160,6 +185,13 @@ class ConvertWorksheetTaskParameter(object):
     @sheet.setter
     def sheet(self, sheet):
         self.container['sheet'] = sheet 
+    @property
+    def target_data_source(self):
+        return self.container['target_data_source']
+
+    @target_data_source.setter
+    def target_data_source(self, target_data_source):
+        self.container['target_data_source'] = target_data_source 
     @property
     def target(self):
         return self.container['target']

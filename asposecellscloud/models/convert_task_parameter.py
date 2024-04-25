@@ -45,6 +45,7 @@ class ConvertTaskParameter(object):
     """
 
     swagger_types = {
+        'data_source' : 'DataSource',
         'workbook' : 'FileSource',
         'destination_file' : 'str',
         'region' : 'str',
@@ -52,6 +53,7 @@ class ConvertTaskParameter(object):
     }
 
     attribute_map = {
+        'data_source' : 'DataSource' ,
         'workbook' : 'Workbook' ,
         'destination_file' : 'DestinationFile' ,
         'region' : 'Region' ,
@@ -71,7 +73,7 @@ class ConvertTaskParameter(object):
             return self.container[attr]
         return None
 
-    def __init__(self,workbook=None ,destination_file=None ,region=None ,save_options=None   ,**kw):
+    def __init__(self,data_source=None ,workbook=None ,destination_file=None ,region=None ,save_options=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -80,11 +82,18 @@ class ConvertTaskParameter(object):
         """
         ConvertTaskParameter - a model defined in Swagger
         """
+        self.container['data_source'] = None 
         self.container['workbook'] = None 
         self.container['destination_file'] = None 
         self.container['region'] = None 
         self.container['save_options'] = None 
         params = locals()
+        self.data_source = data_source
+        if 'data_source' in params:
+            self.data_source = params["data_source"]
+
+
+             
         self.workbook = workbook
         if 'workbook' in params:
             self.workbook = params["workbook"]
@@ -110,6 +119,13 @@ class ConvertTaskParameter(object):
 
              
 
+    @property
+    def data_source(self):
+        return self.container['data_source']
+
+    @data_source.setter
+    def data_source(self, data_source):
+        self.container['data_source'] = data_source 
     @property
     def workbook(self):
         return self.container['workbook']

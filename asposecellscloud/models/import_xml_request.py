@@ -45,7 +45,7 @@ class ImportXMLRequest(object):
     """
 
     swagger_types = {
-        'xml_file_source' : 'FileSource',
+        'xml_file_source' : 'DataSource',
         'import_position' : 'ImportPosition',
         'xml_content' : 'str'
     }

@@ -47,13 +47,19 @@ class SmartMarkerTaskParameter(object):
     swagger_types = {
         'source_workbook' : 'FileSource',
         'destination_workbook' : 'FileSource',
-        'xml_file' : 'FileSource'
+        'xml_file' : 'FileSource',
+        'data_source' : 'DataSource',
+        'target_data_source' : 'DataSource',
+        'xml_file_data_source' : 'DataSource'
     }
 
     attribute_map = {
         'source_workbook' : 'SourceWorkbook' ,
         'destination_workbook' : 'DestinationWorkbook' ,
-        'xml_file' : 'xmlFile' 
+        'xml_file' : 'xmlFile' ,
+        'data_source' : 'DataSource' ,
+        'target_data_source' : 'TargetDataSource' ,
+        'xml_file_data_source' : 'XMLFileDataSource' 
     }
 
     @staticmethod
@@ -69,7 +75,7 @@ class SmartMarkerTaskParameter(object):
             return self.container[attr]
         return None
 
-    def __init__(self,source_workbook=None ,destination_workbook=None ,xml_file=None   ,**kw):
+    def __init__(self,source_workbook=None ,destination_workbook=None ,xml_file=None ,data_source=None ,target_data_source=None ,xml_file_data_source=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -81,6 +87,9 @@ class SmartMarkerTaskParameter(object):
         self.container['source_workbook'] = None 
         self.container['destination_workbook'] = None 
         self.container['xml_file'] = None 
+        self.container['data_source'] = None 
+        self.container['target_data_source'] = None 
+        self.container['xml_file_data_source'] = None 
         params = locals()
         self.source_workbook = source_workbook
         if 'source_workbook' in params:
@@ -97,6 +106,24 @@ class SmartMarkerTaskParameter(object):
         self.xml_file = xml_file
         if 'xml_file' in params:
             self.xml_file = params["xml_file"]
+
+
+             
+        self.data_source = data_source
+        if 'data_source' in params:
+            self.data_source = params["data_source"]
+
+
+             
+        self.target_data_source = target_data_source
+        if 'target_data_source' in params:
+            self.target_data_source = params["target_data_source"]
+
+
+             
+        self.xml_file_data_source = xml_file_data_source
+        if 'xml_file_data_source' in params:
+            self.xml_file_data_source = params["xml_file_data_source"]
 
 
              
@@ -122,6 +149,27 @@ class SmartMarkerTaskParameter(object):
     @xml_file.setter
     def xml_file(self, xml_file):
         self.container['xml_file'] = xml_file 
+    @property
+    def data_source(self):
+        return self.container['data_source']
+
+    @data_source.setter
+    def data_source(self, data_source):
+        self.container['data_source'] = data_source 
+    @property
+    def target_data_source(self):
+        return self.container['target_data_source']
+
+    @target_data_source.setter
+    def target_data_source(self, target_data_source):
+        self.container['target_data_source'] = target_data_source 
+    @property
+    def xml_file_data_source(self):
+        return self.container['xml_file_data_source']
+
+    @xml_file_data_source.setter
+    def xml_file_data_source(self, xml_file_data_source):
+        self.container['xml_file_data_source'] = xml_file_data_source 
 
     def to_dict(self):
         """

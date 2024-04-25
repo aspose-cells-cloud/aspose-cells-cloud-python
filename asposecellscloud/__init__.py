@@ -70,12 +70,15 @@ from asposecellscloud.models.data_cleansing import DataCleansing
 from asposecellscloud.models.data_column_fill_value import DataColumnFillValue
 from asposecellscloud.models.data_fill import DataFill
 from asposecellscloud.models.data_fill_value import DataFillValue
+from asposecellscloud.models.data_item import DataItem
 from asposecellscloud.models.data_sorter import DataSorter
 from asposecellscloud.models.data_sorter_key import DataSorterKey
+from asposecellscloud.models.data_source import DataSource
 from asposecellscloud.models.date_time_group_item import DateTimeGroupItem
 from asposecellscloud.models.deduplication_region import DeduplicationRegion
 from asposecellscloud.models.dynamic_filter import DynamicFilter
 from asposecellscloud.models.file_info import FileInfo
+from asposecellscloud.models.file_source import FileSource
 from asposecellscloud.models.files_result import FilesResult
 from asposecellscloud.models.filter_column import FilterColumn
 from asposecellscloud.models.font import Font
@@ -106,7 +109,6 @@ from asposecellscloud.models.paste_options import PasteOptions
 from asposecellscloud.models.pdf_security_options import PdfSecurityOptions
 from asposecellscloud.models.protection import Protection
 from asposecellscloud.models.protect_sheet_parameter import ProtectSheetParameter
-from asposecellscloud.models.query_table import QueryTable
 from asposecellscloud.models.range import Range
 from asposecellscloud.models.ranges import Ranges
 from asposecellscloud.models.row import Row
@@ -142,7 +144,6 @@ from asposecellscloud.models.xml_map import XmlMap
 from asposecellscloud.models.cells_object_operate_task_parameter import CellsObjectOperateTaskParameter
 from asposecellscloud.models.convert_task_parameter import ConvertTaskParameter
 from asposecellscloud.models.convert_worksheet_task_parameter import ConvertWorksheetTaskParameter
-from asposecellscloud.models.file_source import FileSource
 from asposecellscloud.models.import_data_task_parameter import ImportDataTaskParameter
 from asposecellscloud.models.result_destination import ResultDestination
 from asposecellscloud.models.save_files_to_cloud_result import SaveFilesToCloudResult
@@ -311,6 +312,7 @@ from asposecellscloud.models.create_pivot_table_request import CreatePivotTableR
 from asposecellscloud.models.data_cleansing_request import DataCleansingRequest
 from asposecellscloud.models.data_deduplication_request import DataDeduplicationRequest
 from asposecellscloud.models.data_fill_request import DataFillRequest
+from asposecellscloud.models.data_transformation_request import DataTransformationRequest
 from asposecellscloud.models.delete_incomplete_rows_request import DeleteIncompleteRowsRequest
 from asposecellscloud.models.import_json_request import ImportJsonRequest
 from asposecellscloud.models.import_xml_request import ImportXMLRequest
@@ -330,6 +332,13 @@ from asposecellscloud.models.worksheet_moving_request import WorksheetMovingRequ
 from asposecellscloud.models.image_or_print_options import ImageOrPrintOptions
 from asposecellscloud.models.rendering_font import RenderingFont
 from asposecellscloud.models.rendering_watermark import RenderingWatermark
+from asposecellscloud.models.load_data import LoadData
+from asposecellscloud.models.load_to import LoadTo
+from asposecellscloud.models.pivot_column import PivotColumn
+from asposecellscloud.models.query_data_source import QueryDataSource
+from asposecellscloud.models.query_table import QueryTable
+from asposecellscloud.models.transformation import Transformation
+from asposecellscloud.models.unpivot_column import UnpivotColumn
 from asposecellscloud.models.pivot_field import PivotField
 from asposecellscloud.models.pivot_filter import PivotFilter
 from asposecellscloud.models.pivot_item import PivotItem
@@ -552,6 +561,7 @@ from asposecellscloud.requests.post_data_deduplication_request import PostDataDe
 from asposecellscloud.requests.post_workbook_data_fill_request import PostWorkbookDataFillRequest
 from asposecellscloud.requests.post_data_fill_request import PostDataFillRequest
 from asposecellscloud.requests.post_delete_incomplete_rows_request import PostDeleteIncompleteRowsRequest
+from asposecellscloud.requests.post_data_transformation_request import PostDataTransformationRequest
 from asposecellscloud.requests.get_worksheet_hyperlinks_request import GetWorksheetHyperlinksRequest
 from asposecellscloud.requests.get_worksheet_hyperlink_request import GetWorksheetHyperlinkRequest
 from asposecellscloud.requests.delete_worksheet_hyperlink_request import DeleteWorksheetHyperlinkRequest
