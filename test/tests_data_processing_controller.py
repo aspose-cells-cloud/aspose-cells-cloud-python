@@ -52,6 +52,7 @@ class TestDataProcessingControllerApi(unittest.TestCase):
         remote_name = 'BookCsvDuplicateData.csv'
 
         deduplicationRegion = DeduplicationRegion()
+        deduplicationRegion.ranges = []
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
