@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/24.3)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/24.4)
 
 Aspose.Cells Cloud for Python enables you to handle various aspects of Excel files, including cell data, styles, formulas, charts, pivot tables, data validation, comments, drawing objects, images, hyperlinks, and so on. Additionally, it supports operations such as splitting, merging, repairing, and converting to other compatible file formats.
 
@@ -23,14 +23,11 @@ Enhance your Python applications with the [Aspose.Cells Cloud](https://products.
 
 
 
-## Feature & Enhancements in Version 24.3
+## Feature & Enhancements in Version 24.4
 
 Full list of issues covering all changes in this release:
 
-- Support data deduplication.
-- Support data filling.
-- Support to delete incomplete rows.
-- Support data cleansing.
+- Support data transformation.
 
 ## Support file format
 
@@ -127,6 +124,13 @@ api.put_convert_workbook(request)
 
 
 # Release history version
+
+## Enhancements in Version 24.3
+
+- Support data deduplication.
+- Support data filling.
+- Support to delete incomplete rows.
+- Support data cleansing.
 
 ## Enhancements in Version 24.2.1
 
