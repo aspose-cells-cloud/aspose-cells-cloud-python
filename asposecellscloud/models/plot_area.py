@@ -57,7 +57,6 @@ class PlotArea(object):
         'is_automatic_size' : 'bool',
         'is_inner_mode' : 'bool',
         'shadow' : 'bool',
-        'shape_properties' : 'list[LinkElement]',
         'width' : 'int',
         'height' : 'int',
         'x' : 'int',
@@ -77,7 +76,6 @@ class PlotArea(object):
         'is_automatic_size' : 'IsAutomaticSize' ,
         'is_inner_mode' : 'IsInnerMode' ,
         'shadow' : 'Shadow' ,
-        'shape_properties' : 'ShapeProperties' ,
         'width' : 'Width' ,
         'height' : 'Height' ,
         'x' : 'X' ,
@@ -97,7 +95,7 @@ class PlotArea(object):
             return self.container[attr]
         return None
 
-    def __init__(self,inner_height=None ,inner_width=None ,inner_x=None ,inner_y=None ,area=None ,auto_scale_font=None ,background_mode=None ,border=None ,font=None ,is_automatic_size=None ,is_inner_mode=None ,shadow=None ,shape_properties=None ,width=None ,height=None ,x=None ,y=None   ,**kw):
+    def __init__(self,inner_height=None ,inner_width=None ,inner_x=None ,inner_y=None ,area=None ,auto_scale_font=None ,background_mode=None ,border=None ,font=None ,is_automatic_size=None ,is_inner_mode=None ,shadow=None ,width=None ,height=None ,x=None ,y=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -118,7 +116,6 @@ class PlotArea(object):
         self.container['is_automatic_size'] = None 
         self.container['is_inner_mode'] = None 
         self.container['shadow'] = None 
-        self.container['shape_properties'] = None 
         self.container['width'] = None 
         self.container['height'] = None 
         self.container['x'] = None 
@@ -193,12 +190,6 @@ class PlotArea(object):
         self.shadow = shadow
         if 'shadow' in params:
             self.shadow = params["shadow"]
-
-
-             
-        self.shape_properties = shape_properties
-        if 'shape_properties' in params:
-            self.shape_properties = params["shape_properties"]
 
 
              
@@ -311,13 +302,6 @@ class PlotArea(object):
     @shadow.setter
     def shadow(self, shadow):
         self.container['shadow'] = shadow 
-    @property
-    def shape_properties(self):
-        return self.container['shape_properties']
-
-    @shape_properties.setter
-    def shape_properties(self, shape_properties):
-        self.container['shape_properties'] = shape_properties 
     @property
     def width(self):
         return self.container['width']

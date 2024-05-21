@@ -53,6 +53,7 @@ class ChartPoint(object):
         'shadow' : 'bool',
         'x_value' : 'str',
         'y_value' : 'str',
+        'is_in_secondary_plot' : 'bool',
         'link' : 'Link'
     }
 
@@ -65,6 +66,7 @@ class ChartPoint(object):
         'shadow' : 'Shadow' ,
         'x_value' : 'XValue' ,
         'y_value' : 'YValue' ,
+        'is_in_secondary_plot' : 'IsInSecondaryPlot' ,
         'link' : 'link' 
     }
 
@@ -81,7 +83,7 @@ class ChartPoint(object):
             return self.container[attr]
         return None
 
-    def __init__(self,area=None ,border=None ,data_labels=None ,explosion=None ,marker=None ,shadow=None ,x_value=None ,y_value=None ,link=None   ,**kw):
+    def __init__(self,area=None ,border=None ,data_labels=None ,explosion=None ,marker=None ,shadow=None ,x_value=None ,y_value=None ,is_in_secondary_plot=None ,link=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -98,6 +100,7 @@ class ChartPoint(object):
         self.container['shadow'] = None 
         self.container['x_value'] = None 
         self.container['y_value'] = None 
+        self.container['is_in_secondary_plot'] = None 
         self.container['link'] = None 
         params = locals()
         self.area = area
@@ -145,6 +148,12 @@ class ChartPoint(object):
         self.y_value = y_value
         if 'y_value' in params:
             self.y_value = params["y_value"]
+
+
+             
+        self.is_in_secondary_plot = is_in_secondary_plot
+        if 'is_in_secondary_plot' in params:
+            self.is_in_secondary_plot = params["is_in_secondary_plot"]
 
 
              
@@ -211,6 +220,13 @@ class ChartPoint(object):
     @y_value.setter
     def y_value(self, y_value):
         self.container['y_value'] = y_value 
+    @property
+    def is_in_secondary_plot(self):
+        return self.container['is_in_secondary_plot']
+
+    @is_in_secondary_plot.setter
+    def is_in_secondary_plot(self, is_in_secondary_plot):
+        self.container['is_in_secondary_plot'] = is_in_secondary_plot 
     @property
     def link(self):
         return self.container['link']

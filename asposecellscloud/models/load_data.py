@@ -48,14 +48,16 @@ class LoadData(object):
         'load_to' : 'LoadTo',
         'data_source' : 'DataSource',
         'file_info' : 'FileInfo',
-        'data_item' : 'DataItem'
+        'data_item' : 'DataItem',
+        'merge_queries' : 'MergeQueries'
     }
 
     attribute_map = {
         'load_to' : 'LoadTo' ,
         'data_source' : 'DataSource' ,
         'file_info' : 'FileInfo' ,
-        'data_item' : 'DataItem' 
+        'data_item' : 'DataItem' ,
+        'merge_queries' : 'MergeQueries' 
     }
 
     @staticmethod
@@ -71,7 +73,7 @@ class LoadData(object):
             return self.container[attr]
         return None
 
-    def __init__(self,load_to=None ,data_source=None ,file_info=None ,data_item=None   ,**kw):
+    def __init__(self,load_to=None ,data_source=None ,file_info=None ,data_item=None ,merge_queries=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -84,6 +86,7 @@ class LoadData(object):
         self.container['data_source'] = None 
         self.container['file_info'] = None 
         self.container['data_item'] = None 
+        self.container['merge_queries'] = None 
         params = locals()
         self.load_to = load_to
         if 'load_to' in params:
@@ -106,6 +109,12 @@ class LoadData(object):
         self.data_item = data_item
         if 'data_item' in params:
             self.data_item = params["data_item"]
+
+
+             
+        self.merge_queries = merge_queries
+        if 'merge_queries' in params:
+            self.merge_queries = params["merge_queries"]
 
 
              
@@ -138,6 +147,13 @@ class LoadData(object):
     @data_item.setter
     def data_item(self, data_item):
         self.container['data_item'] = data_item 
+    @property
+    def merge_queries(self):
+        return self.container['merge_queries']
+
+    @merge_queries.setter
+    def merge_queries(self, merge_queries):
+        self.container['merge_queries'] = merge_queries 
 
     def to_dict(self):
         """

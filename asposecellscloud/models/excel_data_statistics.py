@@ -45,13 +45,11 @@ class ExcelDataStatistics(object):
     """
 
     swagger_types = {
-        'worksheet_data_statistics' : 'list[WorksheetDataStatistics]',
-        'names_count' : 'int'
+        'worksheet_data_statistics' : 'list[WorksheetDataStatistics]'
     }
 
     attribute_map = {
-        'worksheet_data_statistics' : 'WorksheetDataStatistics' ,
-        'names_count' : 'NamesCount' 
+        'worksheet_data_statistics' : 'WorksheetDataStatistics' 
     }
 
     @staticmethod
@@ -67,7 +65,7 @@ class ExcelDataStatistics(object):
             return self.container[attr]
         return None
 
-    def __init__(self,worksheet_data_statistics=None ,names_count=None   ,**kw):
+    def __init__(self,worksheet_data_statistics=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -77,17 +75,10 @@ class ExcelDataStatistics(object):
         ExcelDataStatistics - a model defined in Swagger
         """
         self.container['worksheet_data_statistics'] = None 
-        self.container['names_count'] = None 
         params = locals()
         self.worksheet_data_statistics = worksheet_data_statistics
         if 'worksheet_data_statistics' in params:
             self.worksheet_data_statistics = params["worksheet_data_statistics"]
-
-
-             
-        self.names_count = names_count
-        if 'names_count' in params:
-            self.names_count = params["names_count"]
 
 
              
@@ -99,13 +90,6 @@ class ExcelDataStatistics(object):
     @worksheet_data_statistics.setter
     def worksheet_data_statistics(self, worksheet_data_statistics):
         self.container['worksheet_data_statistics'] = worksheet_data_statistics 
-    @property
-    def names_count(self):
-        return self.container['names_count']
-
-    @names_count.setter
-    def names_count(self, names_count):
-        self.container['names_count'] = names_count 
 
     def to_dict(self):
         """

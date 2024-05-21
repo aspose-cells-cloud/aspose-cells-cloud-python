@@ -45,10 +45,10 @@ class LegendEntry(object):
     """
 
     swagger_types = {
-        'auto_scale_font' : 'str',
+        'auto_scale_font' : 'bool',
         'background_mode' : 'str',
         'font' : 'Font',
-        'is_deleted' : 'str',
+        'is_deleted' : 'bool',
         'link' : 'Link'
     }
 

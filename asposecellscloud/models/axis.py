@@ -53,7 +53,7 @@ class Axis(object):
         'cross_at' : 'float',
         'cross_type' : 'str',
         'display_unit' : 'str',
-        'display_unit_label' : 'LinkElement',
+        'display_unit_label' : 'DisplayUnitLabel',
         'has_multi_level_labels' : 'bool',
         'is_automatic_major_unit' : 'bool',
         'is_automatic_max_value' : 'bool',

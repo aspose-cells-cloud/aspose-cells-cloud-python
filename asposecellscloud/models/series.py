@@ -51,10 +51,10 @@ class Series(object):
         'bubble_scale' : 'int',
         'bubble_sizes' : 'str',
         'count_of_data_values' : 'int',
-        'data_labels' : 'LinkElement',
+        'data_labels' : 'DataLabels',
         'display_name' : 'str',
         'doughnut_hole_size' : 'int',
-        'down_bars' : 'LinkElement',
+        'down_bars' : 'DropBars',
         'drop_lines' : 'Line',
         'explosion' : 'int',
         'first_slice_angle' : 'int',
@@ -70,8 +70,7 @@ class Series(object):
         'is_auto_split' : 'bool',
         'is_color_varied' : 'bool',
         'leader_lines' : 'Line',
-        'legend_entry' : 'LinkElement',
-        'line' : 'Line',
+        'legend_entry' : 'LegendEntry',
         'marker' : 'Marker',
         'name' : 'str',
         'overlap' : 'int',
@@ -80,19 +79,18 @@ class Series(object):
         'second_plot_size' : 'int',
         'series_lines' : 'Line',
         'shadow' : 'bool',
-        'shape_properties' : 'LinkElement',
         'show_negative_bubbles' : 'bool',
         'size_represents' : 'str',
         'smooth' : 'bool',
         'split_type' : 'str',
         'split_value' : 'float',
-        'trend_lines' : 'LinkElement',
+        'trend_lines' : 'Trendlines',
         'type' : 'str',
-        'up_bars' : 'LinkElement',
+        'up_bars' : 'DropBars',
         'values' : 'str',
-        'x_error_bar' : 'LinkElement',
+        'x_error_bar' : 'ErrorBar',
         'x_values' : 'str',
-        'y_error_bar' : 'LinkElement',
+        'y_error_bar' : 'ErrorBar',
         'link' : 'Link'
     }
 
@@ -123,7 +121,6 @@ class Series(object):
         'is_color_varied' : 'IsColorVaried' ,
         'leader_lines' : 'LeaderLines' ,
         'legend_entry' : 'LegendEntry' ,
-        'line' : 'Line' ,
         'marker' : 'Marker' ,
         'name' : 'Name' ,
         'overlap' : 'Overlap' ,
@@ -132,7 +129,6 @@ class Series(object):
         'second_plot_size' : 'SecondPlotSize' ,
         'series_lines' : 'SeriesLines' ,
         'shadow' : 'Shadow' ,
-        'shape_properties' : 'ShapeProperties' ,
         'show_negative_bubbles' : 'ShowNegativeBubbles' ,
         'size_represents' : 'SizeRepresents' ,
         'smooth' : 'Smooth' ,
@@ -161,7 +157,7 @@ class Series(object):
             return self.container[attr]
         return None
 
-    def __init__(self,area=None ,bar3_d_shape_type=None ,border=None ,bubble_scale=None ,bubble_sizes=None ,count_of_data_values=None ,data_labels=None ,display_name=None ,doughnut_hole_size=None ,down_bars=None ,drop_lines=None ,explosion=None ,first_slice_angle=None ,gap_width=None ,has3_d_effect=None ,has_drop_lines=None ,has_hi_lo_lines=None ,has_leader_lines=None ,has_radar_axis_labels=None ,has_series_lines=None ,has_up_down_bars=None ,hi_lo_lines=None ,is_auto_split=None ,is_color_varied=None ,leader_lines=None ,legend_entry=None ,line=None ,marker=None ,name=None ,overlap=None ,plot_on_second_axis=None ,points=None ,second_plot_size=None ,series_lines=None ,shadow=None ,shape_properties=None ,show_negative_bubbles=None ,size_represents=None ,smooth=None ,split_type=None ,split_value=None ,trend_lines=None ,type=None ,up_bars=None ,values=None ,x_error_bar=None ,x_values=None ,y_error_bar=None ,link=None   ,**kw):
+    def __init__(self,area=None ,bar3_d_shape_type=None ,border=None ,bubble_scale=None ,bubble_sizes=None ,count_of_data_values=None ,data_labels=None ,display_name=None ,doughnut_hole_size=None ,down_bars=None ,drop_lines=None ,explosion=None ,first_slice_angle=None ,gap_width=None ,has3_d_effect=None ,has_drop_lines=None ,has_hi_lo_lines=None ,has_leader_lines=None ,has_radar_axis_labels=None ,has_series_lines=None ,has_up_down_bars=None ,hi_lo_lines=None ,is_auto_split=None ,is_color_varied=None ,leader_lines=None ,legend_entry=None ,marker=None ,name=None ,overlap=None ,plot_on_second_axis=None ,points=None ,second_plot_size=None ,series_lines=None ,shadow=None ,show_negative_bubbles=None ,size_represents=None ,smooth=None ,split_type=None ,split_value=None ,trend_lines=None ,type=None ,up_bars=None ,values=None ,x_error_bar=None ,x_values=None ,y_error_bar=None ,link=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -196,7 +192,6 @@ class Series(object):
         self.container['is_color_varied'] = None 
         self.container['leader_lines'] = None 
         self.container['legend_entry'] = None 
-        self.container['line'] = None 
         self.container['marker'] = None 
         self.container['name'] = None 
         self.container['overlap'] = None 
@@ -205,7 +200,6 @@ class Series(object):
         self.container['second_plot_size'] = None 
         self.container['series_lines'] = None 
         self.container['shadow'] = None 
-        self.container['shape_properties'] = None 
         self.container['show_negative_bubbles'] = None 
         self.container['size_represents'] = None 
         self.container['smooth'] = None 
@@ -376,12 +370,6 @@ class Series(object):
 
 
              
-        self.line = line
-        if 'line' in params:
-            self.line = params["line"]
-
-
-             
         self.marker = marker
         if 'marker' in params:
             self.marker = params["marker"]
@@ -427,12 +415,6 @@ class Series(object):
         self.shadow = shadow
         if 'shadow' in params:
             self.shadow = params["shadow"]
-
-
-             
-        self.shape_properties = shape_properties
-        if 'shape_properties' in params:
-            self.shape_properties = params["shape_properties"]
 
 
              
@@ -698,13 +680,6 @@ class Series(object):
     def legend_entry(self, legend_entry):
         self.container['legend_entry'] = legend_entry 
     @property
-    def line(self):
-        return self.container['line']
-
-    @line.setter
-    def line(self, line):
-        self.container['line'] = line 
-    @property
     def marker(self):
         return self.container['marker']
 
@@ -760,13 +735,6 @@ class Series(object):
     @shadow.setter
     def shadow(self, shadow):
         self.container['shadow'] = shadow 
-    @property
-    def shape_properties(self):
-        return self.container['shape_properties']
-
-    @shape_properties.setter
-    def shape_properties(self, shape_properties):
-        self.container['shape_properties'] = shape_properties 
     @property
     def show_negative_bubbles(self):
         return self.container['show_negative_bubbles']

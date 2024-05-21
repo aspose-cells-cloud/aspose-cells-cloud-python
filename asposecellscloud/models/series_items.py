@@ -48,7 +48,7 @@ class SeriesItems(object):
         'category_data' : 'str',
         'is_color_varied' : 'bool',
         'second_catergory_data' : 'str',
-        'series_list' : 'list[LinkElement]',
+        'series_list' : 'list[Series]',
         'link' : 'Link'
     }
 

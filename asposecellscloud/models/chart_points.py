@@ -45,7 +45,7 @@ class ChartPoints(object):
     """
 
     swagger_types = {
-        'chart_point_list' : 'list[LinkElement]',
+        'chart_point_list' : 'list[ChartPoint]',
         'link' : 'Link'
     }
 

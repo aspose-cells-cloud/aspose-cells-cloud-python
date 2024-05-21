@@ -48,7 +48,6 @@ class DisplayUnitLabel(object):
         'linked_source' : 'str',
         'rotation_angle' : 'int',
         'text' : 'str',
-        'text_direction' : 'str',
         'text_horizontal_alignment' : 'str',
         'text_vertical_alignment' : 'str',
         'area' : 'Area',
@@ -59,7 +58,6 @@ class DisplayUnitLabel(object):
         'is_automatic_size' : 'bool',
         'is_inner_mode' : 'bool',
         'shadow' : 'bool',
-        'shape_properties' : 'list[LinkElement]',
         'width' : 'int',
         'height' : 'int',
         'x' : 'int',
@@ -70,7 +68,6 @@ class DisplayUnitLabel(object):
         'linked_source' : 'LinkedSource' ,
         'rotation_angle' : 'RotationAngle' ,
         'text' : 'Text' ,
-        'text_direction' : 'TextDirection' ,
         'text_horizontal_alignment' : 'TextHorizontalAlignment' ,
         'text_vertical_alignment' : 'TextVerticalAlignment' ,
         'area' : 'Area' ,
@@ -81,7 +78,6 @@ class DisplayUnitLabel(object):
         'is_automatic_size' : 'IsAutomaticSize' ,
         'is_inner_mode' : 'IsInnerMode' ,
         'shadow' : 'Shadow' ,
-        'shape_properties' : 'ShapeProperties' ,
         'width' : 'Width' ,
         'height' : 'Height' ,
         'x' : 'X' ,
@@ -101,7 +97,7 @@ class DisplayUnitLabel(object):
             return self.container[attr]
         return None
 
-    def __init__(self,linked_source=None ,rotation_angle=None ,text=None ,text_direction=None ,text_horizontal_alignment=None ,text_vertical_alignment=None ,area=None ,auto_scale_font=None ,background_mode=None ,border=None ,font=None ,is_automatic_size=None ,is_inner_mode=None ,shadow=None ,shape_properties=None ,width=None ,height=None ,x=None ,y=None   ,**kw):
+    def __init__(self,linked_source=None ,rotation_angle=None ,text=None ,text_horizontal_alignment=None ,text_vertical_alignment=None ,area=None ,auto_scale_font=None ,background_mode=None ,border=None ,font=None ,is_automatic_size=None ,is_inner_mode=None ,shadow=None ,width=None ,height=None ,x=None ,y=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -113,7 +109,6 @@ class DisplayUnitLabel(object):
         self.container['linked_source'] = None 
         self.container['rotation_angle'] = None 
         self.container['text'] = None 
-        self.container['text_direction'] = None 
         self.container['text_horizontal_alignment'] = None 
         self.container['text_vertical_alignment'] = None 
         self.container['area'] = None 
@@ -124,7 +119,6 @@ class DisplayUnitLabel(object):
         self.container['is_automatic_size'] = None 
         self.container['is_inner_mode'] = None 
         self.container['shadow'] = None 
-        self.container['shape_properties'] = None 
         self.container['width'] = None 
         self.container['height'] = None 
         self.container['x'] = None 
@@ -145,12 +139,6 @@ class DisplayUnitLabel(object):
         self.text = text
         if 'text' in params:
             self.text = params["text"]
-
-
-             
-        self.text_direction = text_direction
-        if 'text_direction' in params:
-            self.text_direction = params["text_direction"]
 
 
              
@@ -214,12 +202,6 @@ class DisplayUnitLabel(object):
 
 
              
-        self.shape_properties = shape_properties
-        if 'shape_properties' in params:
-            self.shape_properties = params["shape_properties"]
-
-
-             
         self.width = width
         if 'width' in params:
             self.width = params["width"]
@@ -266,13 +248,6 @@ class DisplayUnitLabel(object):
     @text.setter
     def text(self, text):
         self.container['text'] = text 
-    @property
-    def text_direction(self):
-        return self.container['text_direction']
-
-    @text_direction.setter
-    def text_direction(self, text_direction):
-        self.container['text_direction'] = text_direction 
     @property
     def text_horizontal_alignment(self):
         return self.container['text_horizontal_alignment']
@@ -343,13 +318,6 @@ class DisplayUnitLabel(object):
     @shadow.setter
     def shadow(self, shadow):
         self.container['shadow'] = shadow 
-    @property
-    def shape_properties(self):
-        return self.container['shape_properties']
-
-    @shape_properties.setter
-    def shape_properties(self, shape_properties):
-        self.container['shape_properties'] = shape_properties 
     @property
     def width(self):
         return self.container['width']

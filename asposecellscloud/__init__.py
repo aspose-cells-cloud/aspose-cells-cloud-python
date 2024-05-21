@@ -118,7 +118,6 @@ from asposecellscloud.models.paginated_save_options import PaginatedSaveOptions
 from asposecellscloud.models.single_value import SingleValue
 from asposecellscloud.models.sort_key import SortKey
 from asposecellscloud.models.split_result import SplitResult
-from asposecellscloud.models.split_result_document import SplitResultDocument
 from asposecellscloud.models.style import Style
 from asposecellscloud.models.style_format_condition import StyleFormatCondition
 from asposecellscloud.models.styles import Styles
@@ -190,7 +189,6 @@ from asposecellscloud.models.txt_save_options import TxtSaveOptions
 from asposecellscloud.models.xlsb_save_options import XlsbSaveOptions
 from asposecellscloud.models.xls_save_options import XlsSaveOptions
 from asposecellscloud.models.xps_save_options import XpsSaveOptions
-from asposecellscloud.models.analyze_excel_response import AnalyzeExcelResponse
 from asposecellscloud.models.arc_shape_response import ArcShapeResponse
 from asposecellscloud.models.auto_filter_response import AutoFilterResponse
 from asposecellscloud.models.auto_shape_response import AutoShapeResponse
@@ -334,6 +332,7 @@ from asposecellscloud.models.rendering_font import RenderingFont
 from asposecellscloud.models.rendering_watermark import RenderingWatermark
 from asposecellscloud.models.load_data import LoadData
 from asposecellscloud.models.load_to import LoadTo
+from asposecellscloud.models.merge_queries import MergeQueries
 from asposecellscloud.models.pivot_column import PivotColumn
 from asposecellscloud.models.query_data_source import QueryDataSource
 from asposecellscloud.models.query_table import QueryTable
@@ -344,11 +343,11 @@ from asposecellscloud.models.pivot_filter import PivotFilter
 from asposecellscloud.models.pivot_item import PivotItem
 from asposecellscloud.models.pivot_table import PivotTable
 from asposecellscloud.models.pivot_tables import PivotTables
+from asposecellscloud.models.cell_value import CellValue
 from asposecellscloud.models.custom_parser_config import CustomParserConfig
 from asposecellscloud.models.import2_dimension_double_array_option import Import2DimensionDoubleArrayOption
 from asposecellscloud.models.import2_dimension_int_array_option import Import2DimensionIntArrayOption
 from asposecellscloud.models.import2_dimension_string_array_option import Import2DimensionStringArrayOption
-from asposecellscloud.models.cell_value import CellValue
 from asposecellscloud.models.import_batch_data_option import ImportBatchDataOption
 from asposecellscloud.models.import_csv_data_option import ImportCSVDataOption
 from asposecellscloud.models.import_double_array_option import ImportDoubleArrayOption
@@ -430,7 +429,6 @@ from asposecellscloud.models.walls import Walls
 from asposecellscloud.models.analyzed_column_description import AnalyzedColumnDescription
 from asposecellscloud.models.analyzed_result import AnalyzedResult
 from asposecellscloud.models.analyzed_table_description import AnalyzedTableDescription
-from asposecellscloud.models.analyze_suggestion import AnalyzeSuggestion
 from asposecellscloud.models.discover_chart import DiscoverChart
 from asposecellscloud.models.discover_pivot_table import DiscoverPivotTable
 from asposecellscloud.models.excel_data_statistics import ExcelDataStatistics

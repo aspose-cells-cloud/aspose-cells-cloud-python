@@ -45,7 +45,7 @@ class Trendlines(object):
     """
 
     swagger_types = {
-        'trendline_list' : 'list[LinkElement]',
+        'trendline_list' : 'list[Trendline]',
         'link' : 'Link'
     }
 
