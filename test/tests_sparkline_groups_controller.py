@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -40,7 +41,7 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetSparklineGroupsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_sparkline_groups(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_sparkline_group(self):
         remote_folder = 'TestData/In'
@@ -53,7 +54,7 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetSparklineGroupRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_sparkline_group(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_sparkline_groups(self):
         remote_folder = 'TestData/In'
@@ -66,7 +67,7 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetSparklineGroupsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_sparkline_groups(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_sparkline_group(self):
         remote_folder = 'TestData/In'
@@ -79,7 +80,7 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetSparklineGroupRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_sparkline_group(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_sparkline_group(self):
         remote_folder = 'TestData/In'
@@ -92,7 +93,7 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetSparklineGroupRequest( remote_name, 'Sheet1', 'Line', 'C6:E13', False, 'G6:G13',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_sparkline_group(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_sparkline_group(self):
         remote_folder = 'TestData/In'
@@ -106,7 +107,7 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetSparklineGroupRequest( remote_name, 'Sheet1', 0, sparklineGroup,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_sparkline_group(request)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()

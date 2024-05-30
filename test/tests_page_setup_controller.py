@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -40,7 +41,7 @@ class TestPageSetupControllerApi(unittest.TestCase):
      
         request =  GetPageSetupRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_page_setup(request)
-
+        time.sleep(1)
 
     def test_post_page_setup(self):
         remote_folder = 'TestData/In'
@@ -54,7 +55,7 @@ class TestPageSetupControllerApi(unittest.TestCase):
      
         request =  PostPageSetupRequest( remote_name, 'Sheet1', pageSetup,folder= remote_folder,storage_name= '')
         self.api.post_page_setup(request)
-
+        time.sleep(1)
 
     def test_delete_header_footer(self):
         remote_folder = 'TestData/In'
@@ -67,7 +68,7 @@ class TestPageSetupControllerApi(unittest.TestCase):
      
         request =  DeleteHeaderFooterRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.delete_header_footer(request)
-
+        time.sleep(1)
 
     def test_get_header(self):
         remote_folder = 'TestData/In'
@@ -80,7 +81,7 @@ class TestPageSetupControllerApi(unittest.TestCase):
      
         request =  GetHeaderRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_header(request)
-
+        time.sleep(1)
 
     def test_post_header(self):
         remote_folder = 'TestData/In'
@@ -93,7 +94,7 @@ class TestPageSetupControllerApi(unittest.TestCase):
      
         request =  PostHeaderRequest( remote_name, 'Sheet1', 1, 'Update add header', True,folder= remote_folder,storage_name= '')
         self.api.post_header(request)
-
+        time.sleep(1)
 
     def test_get_footer(self):
         remote_folder = 'TestData/In'
@@ -106,7 +107,7 @@ class TestPageSetupControllerApi(unittest.TestCase):
      
         request =  GetFooterRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_footer(request)
-
+        time.sleep(1)
 
     def test_post_footer(self):
         remote_folder = 'TestData/In'
@@ -119,7 +120,7 @@ class TestPageSetupControllerApi(unittest.TestCase):
      
         request =  PostFooterRequest( remote_name, 'Sheet1', 1, 'add footer script', True,folder= remote_folder,storage_name= '')
         self.api.post_footer(request)
-
+        time.sleep(1)
 
     def test_post_fit_wide_to_pages(self):
         remote_folder = 'TestData/In'
@@ -132,7 +133,7 @@ class TestPageSetupControllerApi(unittest.TestCase):
      
         request =  PostFitWideToPagesRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.post_fit_wide_to_pages(request)
-
+        time.sleep(1)
 
     def test_post_fit_tall_to_pages(self):
         remote_folder = 'TestData/In'
@@ -145,7 +146,7 @@ class TestPageSetupControllerApi(unittest.TestCase):
      
         request =  PostFitTallToPagesRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.post_fit_tall_to_pages(request)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()

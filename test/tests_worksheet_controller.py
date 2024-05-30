@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -40,7 +41,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  GetWorksheetsRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.get_worksheets(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_with_format(self):
         remote_folder = 'TestData/In'
@@ -53,7 +54,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  GetWorksheetWithFormatRequest( remote_name, 'Sheet1',format= 'png',page_index= 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_with_format(request)
-
+        time.sleep(1)
 
     def test_put_change_visibility_worksheet(self):
         remote_folder = 'TestData/In'
@@ -66,7 +67,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PutChangeVisibilityWorksheetRequest( remote_name, 'Sheet1', True,folder= remote_folder,storage_name= '')
         self.api.put_change_visibility_worksheet(request)
-
+        time.sleep(1)
 
     def test_put_active_worksheet(self):
         remote_folder = 'TestData/In'
@@ -79,7 +80,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PutActiveWorksheetRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.put_active_worksheet(request)
-
+        time.sleep(1)
 
     def test_put_insert_new_worksheet(self):
         remote_folder = 'TestData/In'
@@ -92,7 +93,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PutInsertNewWorksheetRequest( remote_name, 'Sheet1', 1, 'VB',newsheetname= 'VBASheet',folder= remote_folder,storage_name= '')
         self.api.put_insert_new_worksheet(request)
-
+        time.sleep(1)
 
     def test_put_add_new_worksheet(self):
         remote_folder = 'TestData/In'
@@ -105,7 +106,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PutAddNewWorksheetRequest( remote_name, 'Sheet1',position= 0,sheettype= 'VB',folder= remote_folder,storage_name= '')
         self.api.put_add_new_worksheet(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet(self):
         remote_folder = 'TestData/In'
@@ -118,7 +119,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet(request)
-
+        time.sleep(1)
 
     def test_delete_worksheets(self):
         remote_folder = 'TestData/In'
@@ -132,7 +133,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetsRequest( remote_name,match_condition= matchCondition,folder= remote_folder,storage_name= '')
         self.api.delete_worksheets(request)
-
+        time.sleep(1)
 
     def test_post_move_worksheet(self):
         remote_folder = 'TestData/In'
@@ -146,7 +147,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostMoveWorksheetRequest( remote_name, 'Sheet1', moving,folder= remote_folder,storage_name= '')
         self.api.post_move_worksheet(request)
-
+        time.sleep(1)
 
     def test_put_protect_worksheet(self):
         remote_folder = 'TestData/In'
@@ -160,7 +161,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PutProtectWorksheetRequest( remote_name, 'Sheet1', protectParameter,folder= remote_folder,storage_name= '')
         self.api.put_protect_worksheet(request)
-
+        time.sleep(1)
 
     def test_delete_unprotect_worksheet(self):
         remote_folder = 'TestData/In'
@@ -174,7 +175,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  DeleteUnprotectWorksheetRequest( remote_name, 'Sheet1', protectParameter,folder= remote_folder,storage_name= '')
         self.api.delete_unprotect_worksheet(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_text_items(self):
         remote_folder = 'TestData/In'
@@ -187,7 +188,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  GetWorksheetTextItemsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_text_items(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_comments(self):
         remote_folder = 'TestData/In'
@@ -200,7 +201,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  GetWorksheetCommentsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_comments(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_comment(self):
         remote_folder = 'TestData/In'
@@ -213,7 +214,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  GetWorksheetCommentRequest( remote_name, 'Sheet1', 'B3',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_comment(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_comment(self):
         remote_folder = 'TestData/In'
@@ -227,7 +228,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PutWorksheetCommentRequest( remote_name, 'Sheet1', 'C1', comment,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_comment(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_comment(self):
         remote_folder = 'TestData/In'
@@ -241,7 +242,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostWorksheetCommentRequest( remote_name, 'Sheet1', 'B3', comment,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_comment(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_comment(self):
         remote_folder = 'TestData/In'
@@ -254,7 +255,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetCommentRequest( remote_name, 'Sheet1', 'B3',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_comment(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_comments(self):
         remote_folder = 'TestData/In'
@@ -267,7 +268,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetCommentsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_comments(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_merged_cells(self):
         remote_folder = 'TestData/In'
@@ -280,7 +281,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  GetWorksheetMergedCellsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_merged_cells(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_merged_cell(self):
         remote_folder = 'TestData/In'
@@ -293,7 +294,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  GetWorksheetMergedCellRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_merged_cell(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_calculate_formula(self):
         remote_folder = 'TestData/In'
@@ -306,7 +307,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  GetWorksheetCalculateFormulaRequest( remote_name, 'Sheet1', '=NOW()',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_calculate_formula(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_calculate_formula(self):
         remote_folder = 'TestData/In'
@@ -319,7 +320,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostWorksheetCalculateFormulaRequest( remote_name, 'Sheet1', '=NOW()',folder= remote_folder,storage_name= '')
         self.api.post_worksheet_calculate_formula(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_text_search(self):
         remote_folder = 'TestData/In'
@@ -332,7 +333,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostWorksheetTextSearchRequest( remote_name, 'Sheet1', '123',folder= remote_folder,storage_name= '')
         self.api.post_worksheet_text_search(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_text_replace(self):
         remote_folder = 'TestData/In'
@@ -345,7 +346,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostWorksheetTextReplaceRequest( remote_name, 'Sheet1', '123', '456',folder= remote_folder,storage_name= '')
         self.api.post_worksheet_text_replace(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_range_sort(self):
         remote_folder = 'TestData/In'
@@ -359,7 +360,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostWorksheetRangeSortRequest( remote_name, 'Sheet1', 'A1:C10', dataSorter,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_range_sort(request)
-
+        time.sleep(1)
 
     def test_post_autofit_worksheet_row(self):
         remote_folder = 'TestData/In'
@@ -372,7 +373,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostAutofitWorksheetRowRequest( remote_name, 'Sheet1', 1, 1, 8,folder= remote_folder,storage_name= '')
         self.api.post_autofit_worksheet_row(request)
-
+        time.sleep(1)
 
     def test_post_autofit_worksheet_rows(self):
         remote_folder = 'TestData/In'
@@ -385,7 +386,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostAutofitWorksheetRowsRequest( remote_name, 'Sheet1',start_row= 1,end_row= 9,only_auto= True,folder= remote_folder,storage_name= '')
         self.api.post_autofit_worksheet_rows(request)
-
+        time.sleep(1)
 
     def test_post_autofit_worksheet_columns(self):
         remote_folder = 'TestData/In'
@@ -398,7 +399,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostAutofitWorksheetColumnsRequest( remote_name, 'Sheet1',start_column= 1,end_column= 9,only_auto= True,folder= remote_folder,storage_name= '')
         self.api.post_autofit_worksheet_columns(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_background(self):
         remote_folder = 'TestData/In'
@@ -414,7 +415,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PutWorksheetBackgroundRequest( remote_name, 'Sheet1',pic_path= remote_folder + '/WaterMark.png',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_background(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_background(self):
         remote_folder = 'TestData/In'
@@ -427,7 +428,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetBackgroundRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_background(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_freeze_panes(self):
         remote_folder = 'TestData/In'
@@ -440,7 +441,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PutWorksheetFreezePanesRequest( remote_name, 'Sheet1', 1, 1, 4, 5,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_freeze_panes(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_freeze_panes(self):
         remote_folder = 'TestData/In'
@@ -453,7 +454,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetFreezePanesRequest( remote_name, 'Sheet1', 1, 1, 4, 5,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_freeze_panes(request)
-
+        time.sleep(1)
 
     def test_post_copy_worksheet(self):
         remote_folder = 'TestData/In'
@@ -467,7 +468,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostCopyWorksheetRequest( remote_name, 'Sheet15', 'Sheet6', options,source_workbook= '',source_folder= '',folder= remote_folder,storage_name= '')
         self.api.post_copy_worksheet(request)
-
+        time.sleep(1)
 
     def test_post_rename_worksheet(self):
         remote_folder = 'TestData/In'
@@ -480,7 +481,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostRenameWorksheetRequest( remote_name, 'Sheet5', 'Sheet55',folder= remote_folder,storage_name= '')
         self.api.post_rename_worksheet(request)
-
+        time.sleep(1)
 
     def test_post_update_worksheet_property(self):
         remote_folder = 'TestData/In'
@@ -494,7 +495,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostUpdateWorksheetPropertyRequest( remote_name, 'Sheet5', sheet,folder= remote_folder,storage_name= '')
         self.api.post_update_worksheet_property(request)
-
+        time.sleep(1)
 
     def test_get_named_ranges(self):
         remote_folder = 'TestData/In'
@@ -507,7 +508,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  GetNamedRangesRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.get_named_ranges(request)
-
+        time.sleep(1)
 
     def test_get_named_range_value(self):
         remote_folder = 'TestData/In'
@@ -520,7 +521,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  GetNamedRangeValueRequest( remote_name, 'Name_2',folder= remote_folder,storage_name= '')
         self.api.get_named_range_value(request)
-
+        time.sleep(1)
 
     def test_post_update_worksheet_zoom(self):
         remote_folder = 'TestData/In'
@@ -533,7 +534,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  PostUpdateWorksheetZoomRequest( remote_name, 'Sheet1', 90,folder= remote_folder,storage_name= '')
         self.api.post_update_worksheet_zoom(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_page_count(self):
         remote_folder = 'TestData/In'
@@ -546,7 +547,7 @@ class TestWorksheetControllerApi(unittest.TestCase):
      
         request =  GetWorksheetPageCountRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_page_count(request)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()

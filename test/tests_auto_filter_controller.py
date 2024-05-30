@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -40,7 +41,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  GetWorksheetAutoFilterRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_auto_filter(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_date_filter(self):
         remote_folder = 'TestData/In'
@@ -53,7 +54,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  PutWorksheetDateFilterRequest( remote_name, 'Sheet1', 'A1:B1', 0, 'Year',year= 1920,match_blanks= False,refresh= True,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_date_filter(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_filter(self):
         remote_folder = 'TestData/In'
@@ -66,7 +67,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  PutWorksheetFilterRequest( remote_name, 'Sheet1', 'A1:B1', 0, 'Year',match_blanks= False,refresh= True,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_filter(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_icon_filter(self):
         remote_folder = 'TestData/In'
@@ -79,7 +80,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  PutWorksheetIconFilterRequest( remote_name, 'Sheet1', 'A1:B1', 0, 'ArrowsGray3', 1,match_blanks= False,refresh= True,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_icon_filter(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_custom_filter(self):
         remote_folder = 'TestData/In'
@@ -92,7 +93,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  PutWorksheetCustomFilterRequest( remote_name, 'Sheet1', 'A1:B1', 0, 'LessOrEqual', '1',match_blanks= False,refresh= True,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_custom_filter(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_dynamic_filter(self):
         remote_folder = 'TestData/In'
@@ -105,7 +106,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  PutWorksheetDynamicFilterRequest( remote_name, 'Sheet1', 'A1:B1', 0, 'BelowAverage',match_blanks= False,refresh= True,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_dynamic_filter(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_filter_top10(self):
         remote_folder = 'TestData/In'
@@ -118,7 +119,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  PutWorksheetFilterTop10Request( remote_name, 'Sheet1', 'A1:B1', 0, True, True, 1,match_blanks= False,refresh= True,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_filter_top10(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_color_filter(self):
         remote_folder = 'TestData/In'
@@ -134,7 +135,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  PutWorksheetColorFilterRequest( remote_name, 'Sheet1', 'A1:B1', 0, colorFilter,match_blanks= True,refresh= True,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_color_filter(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_match_blanks(self):
         remote_folder = 'TestData/In'
@@ -147,7 +148,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  PostWorksheetMatchBlanksRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_match_blanks(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_match_non_blanks(self):
         remote_folder = 'TestData/In'
@@ -160,7 +161,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  PostWorksheetMatchNonBlanksRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_match_non_blanks(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_auto_filter_refresh(self):
         remote_folder = 'TestData/In'
@@ -173,7 +174,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  PostWorksheetAutoFilterRefreshRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.post_worksheet_auto_filter_refresh(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_date_filter(self):
         remote_folder = 'TestData/In'
@@ -186,7 +187,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetDateFilterRequest( remote_name, 'Sheet1', 0, 'Year',year= 1920,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_date_filter(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_filter(self):
         remote_folder = 'TestData/In'
@@ -199,7 +200,7 @@ class TestAutoFilterControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetFilterRequest( remote_name, 'Sheet1', 0,criteria= 'year',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_filter(request)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()

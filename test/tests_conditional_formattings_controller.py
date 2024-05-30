@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -40,7 +41,7 @@ class TestConditionalFormattingsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetConditionalFormattingsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_conditional_formattings(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_conditional_formatting(self):
         remote_folder = 'TestData/In'
@@ -53,7 +54,7 @@ class TestConditionalFormattingsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetConditionalFormattingRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_conditional_formatting(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_conditional_formatting(self):
         remote_folder = 'TestData/In'
@@ -67,7 +68,7 @@ class TestConditionalFormattingsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetConditionalFormattingRequest( remote_name, 'Sheet1', formatcondition, 'A1:C10',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_conditional_formatting(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_format_condition(self):
         remote_folder = 'TestData/In'
@@ -80,7 +81,7 @@ class TestConditionalFormattingsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetFormatConditionRequest( remote_name, 'Sheet1', 0, 'A1:C10', 'CellValue', 'Between', 'v1', 'v2',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_format_condition(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_format_condition_area(self):
         remote_folder = 'TestData/In'
@@ -93,7 +94,7 @@ class TestConditionalFormattingsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetFormatConditionAreaRequest( remote_name, 'Sheet1', 0, 'A1:C10',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_format_condition_area(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_format_condition_condition(self):
         remote_folder = 'TestData/In'
@@ -106,7 +107,7 @@ class TestConditionalFormattingsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetFormatConditionConditionRequest( remote_name, 'Sheet1', 0, 'CellValue', 'Between', 'v1', 'v2',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_format_condition_condition(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_conditional_formattings(self):
         remote_folder = 'TestData/In'
@@ -119,7 +120,7 @@ class TestConditionalFormattingsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetConditionalFormattingsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_conditional_formattings(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_conditional_formatting(self):
         remote_folder = 'TestData/In'
@@ -132,7 +133,7 @@ class TestConditionalFormattingsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetConditionalFormattingRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_conditional_formatting(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_conditional_formatting_area(self):
         remote_folder = 'TestData/In'
@@ -145,7 +146,7 @@ class TestConditionalFormattingsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetConditionalFormattingAreaRequest( remote_name, 'Sheet1', 1, 1, 4, 6,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_conditional_formatting_area(request)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()

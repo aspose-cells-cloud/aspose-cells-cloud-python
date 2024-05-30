@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -43,7 +44,7 @@ class TestDataProcessingControllerApi(unittest.TestCase):
      
         request =  PostWorkbookDataCleansingRequest( remote_name, dataCleansing,folder= remote_folder,storage_name= '')
         self.api.post_workbook_data_cleansing(request)
-
+        time.sleep(1)
 
     def test_post_workbook_data_deduplication(self):
         remote_folder = 'TestData/In'
@@ -58,7 +59,7 @@ class TestDataProcessingControllerApi(unittest.TestCase):
      
         request =  PostWorkbookDataDeduplicationRequest( remote_name, deduplicationRegion,folder= remote_folder,storage_name= '')
         self.api.post_workbook_data_deduplication(request)
-
+        time.sleep(1)
 
     def test_post_workbook_data_fill(self):
         remote_folder = 'TestData/In'
@@ -73,7 +74,7 @@ class TestDataProcessingControllerApi(unittest.TestCase):
      
         request =  PostWorkbookDataFillRequest( remote_name, dataFill,folder= remote_folder,storage_name= '')
         self.api.post_workbook_data_fill(request)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()

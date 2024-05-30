@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -40,7 +41,7 @@ class TestFolderControllerApi(unittest.TestCase):
      
         request =  GetFilesListRequest(path= remote_folder,storage_name= '')
         self.api.get_files_list(request)
-
+        time.sleep(1)
 
     def test_create_folder(self):
         remote_folder = 'TestData/In'
@@ -53,7 +54,7 @@ class TestFolderControllerApi(unittest.TestCase):
      
         request =  CreateFolderRequest( 'OutResult/NewFolder',storage_name= '')
         self.api.create_folder(request)
-
+        time.sleep(1)
 
     def test_copy_folder(self):
         remote_folder = 'TestData/In'
@@ -66,7 +67,7 @@ class TestFolderControllerApi(unittest.TestCase):
      
         request =  CopyFolderRequest( remote_folder, 'OutResult/Create',src_storage_name= '',dest_storage_name= '')
         self.api.copy_folder(request)
-
+        time.sleep(1)
 
     def test_move_folder(self):
         remote_folder = 'TestData/In'
@@ -79,7 +80,7 @@ class TestFolderControllerApi(unittest.TestCase):
      
         request =  MoveFolderRequest( 'OutResult/Create', 'OutResult/Move',src_storage_name= '',dest_storage_name= '')
         self.api.move_folder(request)
-
+        time.sleep(1)
 
     def test_delete_folder(self):
         remote_folder = 'TestData/In'
@@ -92,7 +93,7 @@ class TestFolderControllerApi(unittest.TestCase):
      
         request =  DeleteFolderRequest( 'OutResult/Create',storage_name= '',recursive= True)
         self.api.delete_folder(request)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()

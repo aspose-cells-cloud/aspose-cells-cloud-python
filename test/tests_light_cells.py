@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -41,7 +42,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_xls(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -55,7 +56,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_html(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -69,7 +70,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_mhtml(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -83,7 +84,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_ods(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -97,7 +98,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_pdf(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -111,7 +112,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_xml(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -125,7 +126,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_txt(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -139,7 +140,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_tif(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -153,7 +154,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_xlsb(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -167,7 +168,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_xlsx(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -181,7 +182,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_xps(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -195,7 +196,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_png(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -209,7 +210,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_jpg(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -223,7 +224,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_md(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -237,7 +238,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_numbers(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -251,7 +252,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_svg(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -265,7 +266,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_docx(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -279,7 +280,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_pptx(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -293,7 +294,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_json(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -307,7 +308,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_split_sql(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -321,7 +322,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
-
+        time.sleep(1)
 
     def test_post_assemble_csv(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -335,7 +336,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_xls(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -349,7 +350,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_html(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -363,7 +364,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_mhtml(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -377,7 +378,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_ods(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -391,7 +392,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_pdf(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -405,7 +406,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_xml(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -419,7 +420,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_txt(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -433,7 +434,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_tif(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -447,7 +448,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_xlsb(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -461,7 +462,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_xlsm(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -475,7 +476,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_xlsx(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -489,7 +490,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_xltm(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -503,7 +504,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_xltx(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -517,7 +518,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_xps(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -531,7 +532,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_png(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -545,7 +546,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_jpg(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -559,7 +560,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_gif(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -573,7 +574,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_emf(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -587,7 +588,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_bmp(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -601,7 +602,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_md(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -615,7 +616,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_numbers(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -629,7 +630,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_wmf(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -643,7 +644,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_svg(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -657,7 +658,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_docx(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -671,7 +672,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_pptx(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -685,7 +686,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_json(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -699,7 +700,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_assemble_sql(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -713,7 +714,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
-
+        time.sleep(1)
 
     def test_post_export_csv_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -728,7 +729,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xls_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -743,7 +744,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_html_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -758,7 +759,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_mhtml_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -773,7 +774,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_ods_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -788,7 +789,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_pdf_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -803,7 +804,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xml_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -818,7 +819,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_txt_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -833,7 +834,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_tif_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -848,7 +849,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xlsb_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -863,7 +864,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xlsm_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -878,7 +879,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xlsx_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -893,7 +894,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xltm_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -908,7 +909,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xltx_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -923,7 +924,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xps_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -938,7 +939,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_png_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -953,7 +954,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_jpg_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -968,7 +969,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_gif_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -983,7 +984,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_emf_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -998,7 +999,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_bmp_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1013,7 +1014,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_md_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1028,7 +1029,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_numbers_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1043,7 +1044,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_wmf_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1058,7 +1059,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_svg_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1073,7 +1074,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_docx_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1088,7 +1089,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_pptx_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1103,7 +1104,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_json_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1118,7 +1119,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_sql_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1133,7 +1134,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_csv_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1148,7 +1149,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xls_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1163,7 +1164,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_html_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1178,7 +1179,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_mhtml_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1193,7 +1194,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_ods_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1208,7 +1209,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_pdf_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1223,7 +1224,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xml_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1238,7 +1239,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_txt_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1253,7 +1254,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_tif_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1268,7 +1269,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xlsb_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1283,7 +1284,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xlsm_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1298,7 +1299,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xlsx_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1313,7 +1314,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xltm_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1328,7 +1329,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xltx_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1343,7 +1344,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xps_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1358,7 +1359,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_png_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1373,7 +1374,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_jpg_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1388,7 +1389,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_gif_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1403,7 +1404,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_emf_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1418,7 +1419,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_bmp_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1433,7 +1434,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_md_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1448,7 +1449,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_numbers_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1463,7 +1464,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_wmf_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1478,7 +1479,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_svg_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1493,7 +1494,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_docx_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1508,7 +1509,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_pptx_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1523,7 +1524,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_json_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1538,7 +1539,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_sql_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1553,7 +1554,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_pdf_chart(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1568,7 +1569,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_tif_chart(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1583,7 +1584,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_png_chart(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1598,7 +1599,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_jpg_chart(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1613,7 +1614,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_gif_chart(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1628,7 +1629,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_emf_chart(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1643,7 +1644,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_bmp_chart(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1658,7 +1659,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_png_picture(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1673,7 +1674,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_jpg_picture(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1688,7 +1689,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_gif_picture(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1703,7 +1704,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_emf_picture(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1718,7 +1719,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_bmp_picture(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1733,7 +1734,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_csv_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1748,7 +1749,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xls_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1763,7 +1764,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_html_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1778,7 +1779,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_mhtml_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1793,7 +1794,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_ods_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1808,7 +1809,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_pdf_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1823,7 +1824,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xml_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1838,7 +1839,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_txt_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1853,7 +1854,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_tif_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1868,7 +1869,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xlsb_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1883,7 +1884,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xlsm_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1898,7 +1899,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xlsx_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1913,7 +1914,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xltm_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1928,7 +1929,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xltx_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1943,7 +1944,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_xps_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1958,7 +1959,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_png_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1973,7 +1974,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_jpg_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1988,7 +1989,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_gif_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2003,7 +2004,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_emf_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2018,7 +2019,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_bmp_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2033,7 +2034,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_md_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2048,7 +2049,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_numbers_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2063,7 +2064,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_wmf_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2078,7 +2079,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_svg_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2093,7 +2094,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_docx_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2108,7 +2109,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_pptx_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2123,7 +2124,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_json_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2138,7 +2139,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_sql_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2153,7 +2154,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_png_oleobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2168,7 +2169,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_jpg_oleobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2183,7 +2184,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_gif_oleobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2198,7 +2199,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_emf_oleobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2213,7 +2214,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_export_bmp_oleobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2228,7 +2229,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
-
+        time.sleep(1)
 
     def test_post_compress_50(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2242,7 +2243,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostCompressRequest( mapFiles,compress_level= compress_level)
         self.api.post_compress(request)
-
+        time.sleep(1)
 
     def test_post_compress_90(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2256,7 +2257,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostCompressRequest( mapFiles,compress_level= compress_level)
         self.api.post_compress(request)
-
+        time.sleep(1)
 
     def test_post_merge_csv_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2271,7 +2272,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_xls_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2286,7 +2287,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_html_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2301,7 +2302,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_mhtml_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2316,7 +2317,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_ods_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2331,7 +2332,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_pdf_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2346,7 +2347,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_xml_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2361,7 +2362,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_txt_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2376,7 +2377,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_tif_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2391,7 +2392,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_xlsb_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2406,7 +2407,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_xlsm_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2421,7 +2422,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_xlsx_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2436,7 +2437,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_xltm_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2451,7 +2452,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_xltx_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2466,7 +2467,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_xps_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2481,7 +2482,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_png_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2496,7 +2497,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_jpg_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2511,7 +2512,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_gif_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2526,7 +2527,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_emf_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2541,7 +2542,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_bmp_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2556,7 +2557,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_md_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2571,7 +2572,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_numbers_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2586,7 +2587,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_wmf_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2601,7 +2602,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_svg_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2616,7 +2617,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_docx_false(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2631,7 +2632,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_pptx_false(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2646,7 +2647,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_json_false(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2661,7 +2662,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_merge_sql_false(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2676,7 +2677,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
-
+        time.sleep(1)
 
     def test_post_unlock(self):
         need_unlock_xlsx = 'needUnlock.xlsx'
@@ -2687,7 +2688,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostUnlockRequest( mapFiles, '123456')
         self.api.post_unlock(request)
-
+        time.sleep(1)
 
     def test_post_protect(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2702,7 +2703,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostProtectRequest( mapFiles, protectWorkbookRequest,password= '123456')
         self.api.post_protect(request)
-
+        time.sleep(1)
 
     def test_post_protect__protect_workbook_request(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2717,7 +2718,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostProtectRequest( mapFiles, protectWorkbookRequest)
         self.api.post_protect(request)
-
+        time.sleep(1)
 
     def test_post_search(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2729,7 +2730,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostSearchRequest( mapFiles, '12')
         self.api.post_search(request)
-
+        time.sleep(1)
 
     def test_post_replace(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2741,7 +2742,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostReplaceRequest( mapFiles, '12', 'newtext')
         self.api.post_replace(request)
-
+        time.sleep(1)
 
     def test_post_replace_only_sheetname(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2753,7 +2754,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostReplaceRequest( mapFiles, '12', 'newtext',sheetname= 'Sheet1')
         self.api.post_replace(request)
-
+        time.sleep(1)
 
     def test_post_watermark(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2765,7 +2766,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostWatermarkRequest( mapFiles, 'aspose.cells cloud sdk', '#773322')
         self.api.post_watermark(request)
-
+        time.sleep(1)
 
     def test_post_clear_objects_chart(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2779,7 +2780,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
-
+        time.sleep(1)
 
     def test_post_clear_objects_comment(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2793,7 +2794,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
-
+        time.sleep(1)
 
     def test_post_clear_objects_picture(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2807,7 +2808,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
-
+        time.sleep(1)
 
     def test_post_clear_objects_shape(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2821,7 +2822,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
-
+        time.sleep(1)
 
     def test_post_clear_objects_listobject(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2835,7 +2836,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
-
+        time.sleep(1)
 
     def test_post_clear_objects_hyperlink(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2849,7 +2850,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
-
+        time.sleep(1)
 
     def test_post_clear_objects_oleobject(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2863,7 +2864,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
-
+        time.sleep(1)
 
     def test_post_clear_objects_pivottable(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2877,7 +2878,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
-
+        time.sleep(1)
 
     def test_post_clear_objects_validation(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2891,7 +2892,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
-
+        time.sleep(1)
 
     def test_post_clear_objects__background(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2905,7 +2906,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
         self.api.post_clear_objects(request)
-
+        time.sleep(1)
 
     def test_post_repair_xlsx(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2918,7 +2919,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostRepairRequest( mapFiles,out_format= format)
         self.api.post_repair(request)
-
+        time.sleep(1)
 
     def test_post_repair_pdf(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2931,7 +2932,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostRepairRequest( mapFiles,out_format= format)
         self.api.post_repair(request)
-
+        time.sleep(1)
 
     def test_post_repair_csv(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2944,7 +2945,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostRepairRequest( mapFiles,out_format= format)
         self.api.post_repair(request)
-
+        time.sleep(1)
 
     def test_post_repair_png(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2957,7 +2958,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostRepairRequest( mapFiles,out_format= format)
         self.api.post_repair(request)
-
+        time.sleep(1)
 
     def test_post_reverse_rows_pdf(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2971,7 +2972,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
-
+        time.sleep(1)
 
     def test_post_reverse_cols_pdf(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2985,7 +2986,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
-
+        time.sleep(1)
 
     def test_post_reverse_both_pdf(self):
         book1_xlsx = 'Book1.xlsx'
@@ -2999,7 +3000,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
-
+        time.sleep(1)
 
     def test_post_reverse_rows_csv(self):
         book1_xlsx = 'Book1.xlsx'
@@ -3013,7 +3014,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
-
+        time.sleep(1)
 
     def test_post_reverse_cols_png(self):
         book1_xlsx = 'Book1.xlsx'
@@ -3027,7 +3028,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
-
+        time.sleep(1)
 
     def test_post_reverse_both_xlsx(self):
         book1_xlsx = 'Book1.xlsx'
@@ -3041,7 +3042,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostReverseRequest( mapFiles, rotate_type,out_format= format)
         self.api.post_reverse(request)
-
+        time.sleep(1)
 
     def test_get_metadata(self):
         book1_xlsx = 'Book1.xlsx'
@@ -3052,7 +3053,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  GetMetadataRequest( mapFiles,type= 'all')
         self.api.get_metadata(request)
-
+        time.sleep(1)
 
     def test_delete_metadata(self):
         book1_xlsx = 'Book1.xlsx'
@@ -3063,7 +3064,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  DeleteMetadataRequest( mapFiles,type= 'all')
         self.api.delete_metadata(request)
-
+        time.sleep(1)
 
     def test_post_metadata(self):
         book1_xlsx = 'Book1.xlsx'
@@ -3079,7 +3080,7 @@ class TestLightCellsApi(unittest.TestCase):
      
         request =  PostMetadataRequest( mapFiles, cellsDocuments)
         self.api.post_metadata(request)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()

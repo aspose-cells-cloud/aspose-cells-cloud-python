@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -37,7 +38,7 @@ class TestOneCase(unittest.TestCase):
      
         request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
         self.api.upload_file(request)
-
+        time.sleep(1)
     def tearDown(self):
         pass
 

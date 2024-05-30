@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -40,7 +41,7 @@ class TestCellsStatusControllerApi(unittest.TestCase):
      
         request =  GetCellsCloudServicesHealthCheckRequest()
         self.api.get_cells_cloud_services_health_check(request)
-
+        time.sleep(1)
 
     def test_get_cells_cloud_service_status(self):
         remote_folder = 'TestData/In'
@@ -53,7 +54,7 @@ class TestCellsStatusControllerApi(unittest.TestCase):
      
         request =  GetCellsCloudServiceStatusRequest()
         self.api.get_cells_cloud_service_status(request)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()

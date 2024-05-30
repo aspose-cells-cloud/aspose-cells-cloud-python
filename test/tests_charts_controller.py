@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -40,7 +41,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetChartsRequest( remote_name, 'Sheet4',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_charts(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_chart(self):
         remote_folder = 'TestData/In'
@@ -53,7 +54,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetChartRequest( remote_name, 'Sheet4', 0,format= 'png',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_chart(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_chart(self):
         remote_folder = 'TestData/In'
@@ -66,7 +67,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetChartRequest( remote_name, 'Sheet4', 'Pie',upper_left_row= 5,upper_left_column= 5,lower_right_row= 10,lower_right_column= 10,area= 'C7:D11',is_vertical= True,title= 'Aspose Chart',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_chart(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_chart(self):
         remote_folder = 'TestData/In'
@@ -79,7 +80,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetChartRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_chart(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_chart(self):
         remote_folder = 'TestData/In'
@@ -93,7 +94,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetChartRequest( remote_name, 'Sheet4', 0, chart,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_chart(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_chart_legend(self):
         remote_folder = 'TestData/In'
@@ -106,7 +107,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetChartLegendRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_chart_legend(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_chart_legend(self):
         remote_folder = 'TestData/In'
@@ -120,7 +121,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetChartLegendRequest( remote_name, 'Sheet4', 0, legend,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_chart_legend(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_chart_legend(self):
         remote_folder = 'TestData/In'
@@ -133,7 +134,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetChartLegendRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_chart_legend(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_chart_legend(self):
         remote_folder = 'TestData/In'
@@ -146,7 +147,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetChartLegendRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_chart_legend(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_charts(self):
         remote_folder = 'TestData/In'
@@ -159,7 +160,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetChartsRequest( remote_name, 'Sheet4',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_charts(request)
-
+        time.sleep(1)
 
     def test_get_worksheet_chart_title(self):
         remote_folder = 'TestData/In'
@@ -172,7 +173,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetChartTitleRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_chart_title(request)
-
+        time.sleep(1)
 
     def test_post_worksheet_chart_title(self):
         remote_folder = 'TestData/In'
@@ -186,7 +187,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetChartTitleRequest( remote_name, 'Sheet4', 0, title,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_chart_title(request)
-
+        time.sleep(1)
 
     def test_put_worksheet_chart_title(self):
         remote_folder = 'TestData/In'
@@ -200,7 +201,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetChartTitleRequest( remote_name, 'Sheet4', 0,title= title,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_chart_title(request)
-
+        time.sleep(1)
 
     def test_delete_worksheet_chart_title(self):
         remote_folder = 'TestData/In'
@@ -213,7 +214,7 @@ class TestChartsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetChartTitleRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_chart_title(request)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()

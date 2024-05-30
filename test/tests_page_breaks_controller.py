@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
@@ -40,7 +41,7 @@ class TestPageBreaksControllerApi(unittest.TestCase):
      
         request =  GetVerticalPageBreaksRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_vertical_page_breaks(request)
-
+        time.sleep(1)
 
     def test_get_horizontal_page_breaks(self):
         remote_folder = 'TestData/In'
@@ -53,7 +54,7 @@ class TestPageBreaksControllerApi(unittest.TestCase):
      
         request =  GetHorizontalPageBreaksRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_horizontal_page_breaks(request)
-
+        time.sleep(1)
 
     def test_get_vertical_page_break(self):
         remote_folder = 'TestData/In'
@@ -66,7 +67,7 @@ class TestPageBreaksControllerApi(unittest.TestCase):
      
         request =  GetVerticalPageBreakRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.get_vertical_page_break(request)
-
+        time.sleep(1)
 
     def test_get_horizontal_page_break(self):
         remote_folder = 'TestData/In'
@@ -79,7 +80,7 @@ class TestPageBreaksControllerApi(unittest.TestCase):
      
         request =  GetHorizontalPageBreakRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.get_horizontal_page_break(request)
-
+        time.sleep(1)
 
     def test_put_vertical_page_break(self):
         remote_folder = 'TestData/In'
@@ -92,7 +93,7 @@ class TestPageBreaksControllerApi(unittest.TestCase):
      
         request =  PutVerticalPageBreakRequest( remote_name, 'Sheet1',cellname= 'A1',column= 1,row= 1,start_row= 1,end_row= 1,folder= remote_folder,storage_name= '')
         self.api.put_vertical_page_break(request)
-
+        time.sleep(1)
 
     def test_put_horizontal_page_break(self):
         remote_folder = 'TestData/In'
@@ -105,7 +106,7 @@ class TestPageBreaksControllerApi(unittest.TestCase):
      
         request =  PutHorizontalPageBreakRequest( remote_name, 'Sheet1',cellname= 'A1',row= 1,column= 1,start_column= 1,end_column= 1,folder= remote_folder,storage_name= '')
         self.api.put_horizontal_page_break(request)
-
+        time.sleep(1)
 
     def test_delete_vertical_page_breaks(self):
         remote_folder = 'TestData/In'
@@ -118,7 +119,7 @@ class TestPageBreaksControllerApi(unittest.TestCase):
      
         request =  DeleteVerticalPageBreaksRequest( remote_name, 'Sheet1',column= 0,folder= remote_folder,storage_name= '')
         self.api.delete_vertical_page_breaks(request)
-
+        time.sleep(1)
 
     def test_delete_horizontal_page_breaks(self):
         remote_folder = 'TestData/In'
@@ -131,7 +132,7 @@ class TestPageBreaksControllerApi(unittest.TestCase):
      
         request =  DeleteHorizontalPageBreaksRequest( remote_name, 'Sheet1',row= 0,folder= remote_folder,storage_name= '')
         self.api.delete_horizontal_page_breaks(request)
-
+        time.sleep(1)
 
     def test_delete_vertical_page_break(self):
         remote_folder = 'TestData/In'
@@ -144,7 +145,7 @@ class TestPageBreaksControllerApi(unittest.TestCase):
      
         request =  DeleteVerticalPageBreakRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.delete_vertical_page_break(request)
-
+        time.sleep(1)
 
     def test_delete_horizontal_page_break(self):
         remote_folder = 'TestData/In'
@@ -157,7 +158,7 @@ class TestPageBreaksControllerApi(unittest.TestCase):
      
         request =  DeleteHorizontalPageBreakRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.delete_horizontal_page_break(request)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()
