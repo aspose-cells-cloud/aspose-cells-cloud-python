@@ -46,12 +46,14 @@ class PivotColumn(object):
 
     swagger_types = {
         'pivot_column_name' : 'str',
-        'value_column_names' : 'list[str]'
+        'value_column_names' : 'list[str]',
+        'applied_operate_type' : 'str'
     }
 
     attribute_map = {
         'pivot_column_name' : 'PivotColumnName' ,
-        'value_column_names' : 'ValueColumnNames' 
+        'value_column_names' : 'ValueColumnNames' ,
+        'applied_operate_type' : 'AppliedOperateType' 
     }
 
     @staticmethod
@@ -67,7 +69,7 @@ class PivotColumn(object):
             return self.container[attr]
         return None
 
-    def __init__(self,pivot_column_name=None ,value_column_names=None   ,**kw):
+    def __init__(self,pivot_column_name=None ,value_column_names=None ,applied_operate_type=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -78,6 +80,7 @@ class PivotColumn(object):
         """
         self.container['pivot_column_name'] = None 
         self.container['value_column_names'] = None 
+        self.container['applied_operate_type'] = None 
         params = locals()
         self.pivot_column_name = pivot_column_name
         if 'pivot_column_name' in params:
@@ -88,6 +91,12 @@ class PivotColumn(object):
         self.value_column_names = value_column_names
         if 'value_column_names' in params:
             self.value_column_names = params["value_column_names"]
+
+
+             
+        self.applied_operate_type = applied_operate_type
+        if 'applied_operate_type' in params:
+            self.applied_operate_type = params["applied_operate_type"]
 
 
              
@@ -106,6 +115,13 @@ class PivotColumn(object):
     @value_column_names.setter
     def value_column_names(self, value_column_names):
         self.container['value_column_names'] = value_column_names 
+    @property
+    def applied_operate_type(self):
+        return self.container['applied_operate_type']
+
+    @applied_operate_type.setter
+    def applied_operate_type(self, applied_operate_type):
+        self.container['applied_operate_type'] = applied_operate_type 
 
     def to_dict(self):
         """

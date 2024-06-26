@@ -331,13 +331,13 @@ from asposecellscloud.models.worksheet_moving_request import WorksheetMovingRequ
 from asposecellscloud.models.image_or_print_options import ImageOrPrintOptions
 from asposecellscloud.models.rendering_font import RenderingFont
 from asposecellscloud.models.rendering_watermark import RenderingWatermark
+from asposecellscloud.models.applied_operate import AppliedOperate
+from asposecellscloud.models.applied_step import AppliedStep
+from asposecellscloud.models.data_query import DataQuery
 from asposecellscloud.models.load_data import LoadData
 from asposecellscloud.models.load_to import LoadTo
 from asposecellscloud.models.merge_queries import MergeQueries
 from asposecellscloud.models.pivot_column import PivotColumn
-from asposecellscloud.models.query_data_source import QueryDataSource
-from asposecellscloud.models.query_table import QueryTable
-from asposecellscloud.models.transformation import Transformation
 from asposecellscloud.models.unpivot_column import UnpivotColumn
 from asposecellscloud.models.pivot_field import PivotField
 from asposecellscloud.models.pivot_filter import PivotFilter

@@ -45,27 +45,21 @@ class MergeQueries(object):
     """
 
     swagger_types = {
-        'data_source_a' : 'DataSource',
-        'file_info_a' : 'FileInfo',
-        'data_item_a' : 'DataItem',
+        'data_query_name_a' : 'str',
         'data_a_index_field' : 'str',
-        'data_source_b' : 'DataSource',
-        'file_info_b' : 'FileInfo',
-        'data_item_b' : 'DataItem',
+        'data_query_name_b' : 'str',
         'data_b_index_field' : 'str',
-        'join_type' : 'str'
+        'join_type' : 'str',
+        'applied_operate_type' : 'str'
     }
 
     attribute_map = {
-        'data_source_a' : 'DataSourceA' ,
-        'file_info_a' : 'FileInfoA' ,
-        'data_item_a' : 'DataItemA' ,
+        'data_query_name_a' : 'DataQueryNameA' ,
         'data_a_index_field' : 'DataAIndexField' ,
-        'data_source_b' : 'DataSourceB' ,
-        'file_info_b' : 'FileInfoB' ,
-        'data_item_b' : 'DataItemB' ,
+        'data_query_name_b' : 'DataQueryNameB' ,
         'data_b_index_field' : 'DataBIndexField' ,
-        'join_type' : 'JoinType' 
+        'join_type' : 'JoinType' ,
+        'applied_operate_type' : 'AppliedOperateType' 
     }
 
     @staticmethod
@@ -81,7 +75,7 @@ class MergeQueries(object):
             return self.container[attr]
         return None
 
-    def __init__(self,data_source_a=None ,file_info_a=None ,data_item_a=None ,data_a_index_field=None ,data_source_b=None ,file_info_b=None ,data_item_b=None ,data_b_index_field=None ,join_type=None   ,**kw):
+    def __init__(self,data_query_name_a=None ,data_a_index_field=None ,data_query_name_b=None ,data_b_index_field=None ,join_type=None ,applied_operate_type=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -90,31 +84,16 @@ class MergeQueries(object):
         """
         MergeQueries - a model defined in Swagger
         """
-        self.container['data_source_a'] = None 
-        self.container['file_info_a'] = None 
-        self.container['data_item_a'] = None 
+        self.container['data_query_name_a'] = None 
         self.container['data_a_index_field'] = None 
-        self.container['data_source_b'] = None 
-        self.container['file_info_b'] = None 
-        self.container['data_item_b'] = None 
+        self.container['data_query_name_b'] = None 
         self.container['data_b_index_field'] = None 
         self.container['join_type'] = None 
+        self.container['applied_operate_type'] = None 
         params = locals()
-        self.data_source_a = data_source_a
-        if 'data_source_a' in params:
-            self.data_source_a = params["data_source_a"]
-
-
-             
-        self.file_info_a = file_info_a
-        if 'file_info_a' in params:
-            self.file_info_a = params["file_info_a"]
-
-
-             
-        self.data_item_a = data_item_a
-        if 'data_item_a' in params:
-            self.data_item_a = params["data_item_a"]
+        self.data_query_name_a = data_query_name_a
+        if 'data_query_name_a' in params:
+            self.data_query_name_a = params["data_query_name_a"]
 
 
              
@@ -124,21 +103,9 @@ class MergeQueries(object):
 
 
              
-        self.data_source_b = data_source_b
-        if 'data_source_b' in params:
-            self.data_source_b = params["data_source_b"]
-
-
-             
-        self.file_info_b = file_info_b
-        if 'file_info_b' in params:
-            self.file_info_b = params["file_info_b"]
-
-
-             
-        self.data_item_b = data_item_b
-        if 'data_item_b' in params:
-            self.data_item_b = params["data_item_b"]
+        self.data_query_name_b = data_query_name_b
+        if 'data_query_name_b' in params:
+            self.data_query_name_b = params["data_query_name_b"]
 
 
              
@@ -154,28 +121,20 @@ class MergeQueries(object):
 
 
              
+        self.applied_operate_type = applied_operate_type
+        if 'applied_operate_type' in params:
+            self.applied_operate_type = params["applied_operate_type"]
+
+
+             
 
     @property
-    def data_source_a(self):
-        return self.container['data_source_a']
+    def data_query_name_a(self):
+        return self.container['data_query_name_a']
 
-    @data_source_a.setter
-    def data_source_a(self, data_source_a):
-        self.container['data_source_a'] = data_source_a 
-    @property
-    def file_info_a(self):
-        return self.container['file_info_a']
-
-    @file_info_a.setter
-    def file_info_a(self, file_info_a):
-        self.container['file_info_a'] = file_info_a 
-    @property
-    def data_item_a(self):
-        return self.container['data_item_a']
-
-    @data_item_a.setter
-    def data_item_a(self, data_item_a):
-        self.container['data_item_a'] = data_item_a 
+    @data_query_name_a.setter
+    def data_query_name_a(self, data_query_name_a):
+        self.container['data_query_name_a'] = data_query_name_a 
     @property
     def data_a_index_field(self):
         return self.container['data_a_index_field']
@@ -184,26 +143,12 @@ class MergeQueries(object):
     def data_a_index_field(self, data_a_index_field):
         self.container['data_a_index_field'] = data_a_index_field 
     @property
-    def data_source_b(self):
-        return self.container['data_source_b']
+    def data_query_name_b(self):
+        return self.container['data_query_name_b']
 
-    @data_source_b.setter
-    def data_source_b(self, data_source_b):
-        self.container['data_source_b'] = data_source_b 
-    @property
-    def file_info_b(self):
-        return self.container['file_info_b']
-
-    @file_info_b.setter
-    def file_info_b(self, file_info_b):
-        self.container['file_info_b'] = file_info_b 
-    @property
-    def data_item_b(self):
-        return self.container['data_item_b']
-
-    @data_item_b.setter
-    def data_item_b(self, data_item_b):
-        self.container['data_item_b'] = data_item_b 
+    @data_query_name_b.setter
+    def data_query_name_b(self, data_query_name_b):
+        self.container['data_query_name_b'] = data_query_name_b 
     @property
     def data_b_index_field(self):
         return self.container['data_b_index_field']
@@ -218,6 +163,13 @@ class MergeQueries(object):
     @join_type.setter
     def join_type(self, join_type):
         self.container['join_type'] = join_type 
+    @property
+    def applied_operate_type(self):
+        return self.container['applied_operate_type']
+
+    @applied_operate_type.setter
+    def applied_operate_type(self, applied_operate_type):
+        self.container['applied_operate_type'] = applied_operate_type 
 
     def to_dict(self):
         """

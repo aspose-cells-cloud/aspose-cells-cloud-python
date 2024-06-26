@@ -1,12 +1,10 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/24.5)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/24.6)
 
 Aspose.Cells Cloud for Python enables you to handle various aspects of Excel files, including cell data, styles, formulas, charts, pivot tables, data validation, comments, drawing objects, images, hyperlinks, and so on. Additionally, it supports operations such as splitting, merging, repairing, and converting to other compatible file formats.
 
 # Python package for Aspose.Cells Cloud
 
-
 Enhance your Python applications with the [Aspose.Cells Cloud](https://products.aspose.cloud/cells/python) , enabling seamless integration with [Excel, ODS, CSV, Json and other spreadsheet document formats](https://docs.aspose.cloud/cells/supported-file-formats/). With its powerful APIs, developers can effortlessly read, convert, create, edit, and manipulate the contents of Excel documents without the need for any office software installed on the machine.
-
 
 ## Manipulate Excel and other spreadsheet files in the Cloud
 
@@ -21,14 +19,12 @@ Enhance your Python applications with the [Aspose.Cells Cloud](https://products.
 - Import/Export: Facilitates importing data from various sources into spreadsheets and exporting spreadsheet data to other formats.
 - Security Management: Offers a range of security features like data encryption, access control, and permission management to safeguard the security and integrity of spreadsheet data.
 
-
-## Feature & Enhancements in Version 24.5
+## Feature & Enhancements in Version 24.6
 
 Full list of issues covering all changes in this release:
 
-- Add merge queries method for loading data of data transformation.
-- Optimize chart data model.
-
+- Optimize load data function of data transformation.
+- Optimize the data conversion applied steps.
 
 ## Support file format
 
@@ -79,10 +75,10 @@ To begin with Aspose.Cells Cloud, here's what you need to do:
 ```bash
    pip install asposecellscloud
 ```
+
 3. Use the conversion code provided below as a reference to add or modify your application.
 
-
-## Convert Excel to PDF Using Python 
+## Convert Excel to PDF Using Python
 
 ```python
 import os
@@ -123,8 +119,12 @@ api.put_convert_workbook(request)
 
 [Product Page](https://products.aspose.cloud/cells/python) | [Documentation](https://docs.aspose.cloud/cells/) | [Live Demo](https://products.aspose.app/cells/family) | [API Reference](https://apireference.aspose.cloud/cells/) | [Code Samples](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/tree/master/test) | [Blog](https://blog.aspose.cloud/category/cells/) | [Free Support](https://forum.aspose.cloud/c/cells) | [Free Trial](https://dashboard.aspose.cloud/#/apps)
 
-
 # Release history version
+
+## Enhancements in Version 24.5
+
+- Add merge queries method for loading data of data transformation.
+- Optimize chart data model.
 
 ## Enhancements in Version 24.4
 

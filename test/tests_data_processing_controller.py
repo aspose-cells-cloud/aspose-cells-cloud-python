@@ -76,5 +76,34 @@ class TestDataProcessingControllerApi(unittest.TestCase):
         self.api.post_workbook_data_fill(request)
         time.sleep(1)
 
+    def test_post_data_transformation(self):
+        remote_folder = 'TestData/In'
+
+        local_name = 'BookTableL2W.xlsx'
+        remote_name = 'BookTableL2W.xlsx'
+
+        dataTransformationRequestLoadDataLoadTo = LoadTo(begin_column_index= 2 ,begin_row_index= 3 ,worksheet= 'L2W' )
+        dataTransformationRequestLoadDataDataQueryDataItem = DataItem(data_item_type= 'Table' ,value= 'Table1' )
+        dataTransformationRequestLoadDataDataQueryDataSource = DataSource(data_source_type= 'CloudFileSystem' ,data_path= 'BookTableL2W.xlsx' )
+        dataTransformationRequestLoadDataDataQuery = DataQuery(name= 'DataQuery' ,data_item= dataTransformationRequestLoadDataDataQueryDataItem ,data_source= dataTransformationRequestLoadDataDataQueryDataSource ,data_source_data_type= 'ListObject' )
+        dataTransformationRequestLoadData = LoadData(load_to= dataTransformationRequestLoadDataLoadTo ,data_query= dataTransformationRequestLoadDataDataQuery )
+        dataTransformationRequestAppliedStepsAppliedStep0AppliedOperateUnpivotColumnNames = [
+            '2017',
+            '2018',
+            '2019'
+        ]
+        dataTransformationRequestAppliedStepsAppliedStep0AppliedOperate = UnpivotColumn(applied_operate_type= 'UnpivotColumn' ,value_map_name= 'Count' ,column_map_name= 'Date' ,unpivot_column_names= dataTransformationRequestAppliedStepsAppliedStep0AppliedOperateUnpivotColumnNames )
+        dataTransformationRequestAppliedStepsAppliedStep0 = AppliedStep(step_name= 'UnpivotColumn' ,applied_operate= dataTransformationRequestAppliedStepsAppliedStep0AppliedOperate )
+        dataTransformationRequestAppliedSteps = [
+            dataTransformationRequestAppliedStepsAppliedStep0
+        ]
+        dataTransformationRequest = DataTransformationRequest(load_data= dataTransformationRequestLoadData ,applied_steps= dataTransformationRequestAppliedSteps )
+        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+     
+        request =  PostDataTransformationRequest( dataTransformationRequest)
+        self.api.post_data_transformation(request)
+        time.sleep(1)
+
 if __name__ == '__main__':
     unittest.main()

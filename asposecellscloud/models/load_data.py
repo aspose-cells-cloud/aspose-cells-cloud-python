@@ -46,18 +46,12 @@ class LoadData(object):
 
     swagger_types = {
         'load_to' : 'LoadTo',
-        'data_source' : 'DataSource',
-        'file_info' : 'FileInfo',
-        'data_item' : 'DataItem',
-        'merge_queries' : 'MergeQueries'
+        'data_query' : 'DataQuery'
     }
 
     attribute_map = {
         'load_to' : 'LoadTo' ,
-        'data_source' : 'DataSource' ,
-        'file_info' : 'FileInfo' ,
-        'data_item' : 'DataItem' ,
-        'merge_queries' : 'MergeQueries' 
+        'data_query' : 'DataQuery' 
     }
 
     @staticmethod
@@ -73,7 +67,7 @@ class LoadData(object):
             return self.container[attr]
         return None
 
-    def __init__(self,load_to=None ,data_source=None ,file_info=None ,data_item=None ,merge_queries=None   ,**kw):
+    def __init__(self,load_to=None ,data_query=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -83,10 +77,7 @@ class LoadData(object):
         LoadData - a model defined in Swagger
         """
         self.container['load_to'] = None 
-        self.container['data_source'] = None 
-        self.container['file_info'] = None 
-        self.container['data_item'] = None 
-        self.container['merge_queries'] = None 
+        self.container['data_query'] = None 
         params = locals()
         self.load_to = load_to
         if 'load_to' in params:
@@ -94,27 +85,9 @@ class LoadData(object):
 
 
              
-        self.data_source = data_source
-        if 'data_source' in params:
-            self.data_source = params["data_source"]
-
-
-             
-        self.file_info = file_info
-        if 'file_info' in params:
-            self.file_info = params["file_info"]
-
-
-             
-        self.data_item = data_item
-        if 'data_item' in params:
-            self.data_item = params["data_item"]
-
-
-             
-        self.merge_queries = merge_queries
-        if 'merge_queries' in params:
-            self.merge_queries = params["merge_queries"]
+        self.data_query = data_query
+        if 'data_query' in params:
+            self.data_query = params["data_query"]
 
 
              
@@ -127,33 +100,12 @@ class LoadData(object):
     def load_to(self, load_to):
         self.container['load_to'] = load_to 
     @property
-    def data_source(self):
-        return self.container['data_source']
+    def data_query(self):
+        return self.container['data_query']
 
-    @data_source.setter
-    def data_source(self, data_source):
-        self.container['data_source'] = data_source 
-    @property
-    def file_info(self):
-        return self.container['file_info']
-
-    @file_info.setter
-    def file_info(self, file_info):
-        self.container['file_info'] = file_info 
-    @property
-    def data_item(self):
-        return self.container['data_item']
-
-    @data_item.setter
-    def data_item(self, data_item):
-        self.container['data_item'] = data_item 
-    @property
-    def merge_queries(self):
-        return self.container['merge_queries']
-
-    @merge_queries.setter
-    def merge_queries(self, merge_queries):
-        self.container['merge_queries'] = merge_queries 
+    @data_query.setter
+    def data_query(self, data_query):
+        self.container['data_query'] = data_query 
 
     def to_dict(self):
         """

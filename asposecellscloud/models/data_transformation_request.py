@@ -46,16 +46,18 @@ class DataTransformationRequest(object):
 
     swagger_types = {
         'file_info' : 'FileInfo',
-        'transformation' : 'Transformation',
+        'data_source' : 'DataSource',
         'load_data' : 'LoadData',
+        'applied_steps' : 'list[AppliedStep]',
         'region' : 'str',
         'out_format' : 'str'
     }
 
     attribute_map = {
         'file_info' : 'FileInfo' ,
-        'transformation' : 'Transformation' ,
+        'data_source' : 'DataSource' ,
         'load_data' : 'LoadData' ,
+        'applied_steps' : 'AppliedSteps' ,
         'region' : 'Region' ,
         'out_format' : 'OutFormat' 
     }
@@ -73,7 +75,7 @@ class DataTransformationRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self,file_info=None ,transformation=None ,load_data=None ,region=None ,out_format=None   ,**kw):
+    def __init__(self,file_info=None ,data_source=None ,load_data=None ,applied_steps=None ,region=None ,out_format=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -83,8 +85,9 @@ class DataTransformationRequest(object):
         DataTransformationRequest - a model defined in Swagger
         """
         self.container['file_info'] = None 
-        self.container['transformation'] = None 
+        self.container['data_source'] = None 
         self.container['load_data'] = None 
+        self.container['applied_steps'] = None 
         self.container['region'] = None 
         self.container['out_format'] = None 
         params = locals()
@@ -94,15 +97,21 @@ class DataTransformationRequest(object):
 
 
              
-        self.transformation = transformation
-        if 'transformation' in params:
-            self.transformation = params["transformation"]
+        self.data_source = data_source
+        if 'data_source' in params:
+            self.data_source = params["data_source"]
 
 
              
         self.load_data = load_data
         if 'load_data' in params:
             self.load_data = params["load_data"]
+
+
+             
+        self.applied_steps = applied_steps
+        if 'applied_steps' in params:
+            self.applied_steps = params["applied_steps"]
 
 
              
@@ -127,12 +136,12 @@ class DataTransformationRequest(object):
     def file_info(self, file_info):
         self.container['file_info'] = file_info 
     @property
-    def transformation(self):
-        return self.container['transformation']
+    def data_source(self):
+        return self.container['data_source']
 
-    @transformation.setter
-    def transformation(self, transformation):
-        self.container['transformation'] = transformation 
+    @data_source.setter
+    def data_source(self, data_source):
+        self.container['data_source'] = data_source 
     @property
     def load_data(self):
         return self.container['load_data']
@@ -140,6 +149,13 @@ class DataTransformationRequest(object):
     @load_data.setter
     def load_data(self, load_data):
         self.container['load_data'] = load_data 
+    @property
+    def applied_steps(self):
+        return self.container['applied_steps']
+
+    @applied_steps.setter
+    def applied_steps(self, applied_steps):
+        self.container['applied_steps'] = applied_steps 
     @property
     def region(self):
         return self.container['region']
