@@ -26,18 +26,23 @@ class TestOneCase(unittest.TestCase):
         if global_api is None:
            global_api = CellsApi(AuthUtil.GetClientId(),AuthUtil.GetClientSecret(),"v3.0",AuthUtil.GetBaseUrl())
         self.api = global_api
-    def test_upload_file(self):
+    def test_convert_workbook_wmf(self):
         remote_folder = 'TestData/In'
 
         local_name = 'Book1.xlsx'
         remote_name = 'Book1.xlsx'
 
+        format = 'wmf'
+
         mapFiles = { 
             local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
         }
+        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
      
-        request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
-        self.api.upload_file(request)
+        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        self.api.put_convert_workbook(request)
+        time.sleep(1)
         time.sleep(1)
     def tearDown(self):
         pass

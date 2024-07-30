@@ -344,6 +344,8 @@ from asposecellscloud.models.pivot_filter import PivotFilter
 from asposecellscloud.models.pivot_item import PivotItem
 from asposecellscloud.models.pivot_table import PivotTable
 from asposecellscloud.models.pivot_tables import PivotTables
+from asposecellscloud.models.add_text_options import AddTextOptions
+from asposecellscloud.models.base_operate_options import BaseOperateOptions
 from asposecellscloud.models.cell_value import CellValue
 from asposecellscloud.models.custom_parser_config import CustomParserConfig
 from asposecellscloud.models.import2_dimension_double_array_option import Import2DimensionDoubleArrayOption
