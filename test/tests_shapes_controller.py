@@ -41,7 +41,7 @@ class TestShapesControllerApi(unittest.TestCase):
      
         request =  GetWorksheetShapesRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_shapes(request)
-        time.sleep(1)
+        
 
     def test_get_worksheet_shape(self):
         remote_folder = 'TestData/In'
@@ -54,7 +54,7 @@ class TestShapesControllerApi(unittest.TestCase):
      
         request =  GetWorksheetShapeRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_shape(request)
-        time.sleep(1)
+        
 
     def test_put_worksheet_shape(self):
         remote_folder = 'TestData/In'
@@ -68,7 +68,7 @@ class TestShapesControllerApi(unittest.TestCase):
      
         request =  PutWorksheetShapeRequest( remote_name, 'Sheet1',shape_dto= shapeDTO,drawing_type= 'arc',upper_left_row= 1,upper_left_column= 1,top= 10,left= 10,width= 100,height= 100,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_shape(request)
-        time.sleep(1)
+        
 
     def test_delete_worksheet_shapes(self):
         remote_folder = 'TestData/In'
@@ -81,7 +81,7 @@ class TestShapesControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetShapesRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_shapes(request)
-        time.sleep(1)
+        
 
     def test_delete_worksheet_shape(self):
         remote_folder = 'TestData/In'
@@ -94,7 +94,7 @@ class TestShapesControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetShapeRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_shape(request)
-        time.sleep(1)
+        
 
     def test_post_worksheet_shape(self):
         remote_folder = 'TestData/In'
@@ -108,7 +108,7 @@ class TestShapesControllerApi(unittest.TestCase):
      
         request =  PostWorksheetShapeRequest( remote_name, 'Sheet1', 0, dto,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_shape(request)
-        time.sleep(1)
+        
 
     def test_post_worksheet_group_shape(self):
         remote_folder = 'TestData/In'
@@ -125,7 +125,7 @@ class TestShapesControllerApi(unittest.TestCase):
      
         request =  PostWorksheetGroupShapeRequest( remote_name, 'Sheet6', listShape,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_group_shape(request)
-        time.sleep(1)
+        
 
     def test_post_worksheet_ungroup_shape(self):
         remote_folder = 'TestData/In'
@@ -138,7 +138,7 @@ class TestShapesControllerApi(unittest.TestCase):
      
         request =  PostWorksheetUngroupShapeRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_ungroup_shape(request)
-        time.sleep(1)
+        
 
 if __name__ == '__main__':
     unittest.main()

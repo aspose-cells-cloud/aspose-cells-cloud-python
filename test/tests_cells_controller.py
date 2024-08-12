@@ -41,7 +41,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostClearContentsRequest( remote_name, 'Sheet1',range= 'A1:C10',start_row= 1,start_column= 1,end_row= 3,end_column= 3,folder= remote_folder,storage_name= '')
         self.api.post_clear_contents(request)
-        time.sleep(1)
+        
 
     def test_post_clear_formats(self):
         remote_folder = 'TestData/In'
@@ -54,7 +54,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostClearFormatsRequest( remote_name, 'Sheet1',range= 'A1:C10',start_row= 1,start_column= 1,end_row= 3,end_column= 3,folder= remote_folder,storage_name= '')
         self.api.post_clear_formats(request)
-        time.sleep(1)
+        
 
     def test_post_update_worksheet_range_style(self):
         remote_folder = 'TestData/In'
@@ -69,7 +69,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostUpdateWorksheetRangeStyleRequest( remote_name, 'Sheet1', 'A1:C10', style,folder= remote_folder,storage_name= '')
         self.api.post_update_worksheet_range_style(request)
-        time.sleep(1)
+        
 
     def test_post_worksheet_merge(self):
         remote_folder = 'TestData/In'
@@ -82,7 +82,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetMergeRequest( remote_name, 'Sheet1', 1, 1, 4, 4,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_merge(request)
-        time.sleep(1)
+        
 
     def test_post_worksheet_unmerge(self):
         remote_folder = 'TestData/In'
@@ -95,7 +95,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetUnmergeRequest( remote_name, 'Sheet1', 1, 1, 4, 4,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_unmerge(request)
-        time.sleep(1)
+        
 
     def test_get_worksheet_cells(self):
         remote_folder = 'TestData/In'
@@ -108,7 +108,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetCellsRequest( remote_name, 'Sheet1',offest= 1,count= 10,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_cells(request)
-        time.sleep(1)
+        
 
     def test_get_worksheet_cell(self):
         remote_folder = 'TestData/In'
@@ -121,7 +121,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetCellRequest( remote_name, 'Sheet1', 'A1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_cell(request)
-        time.sleep(1)
+        
 
     def test_get_worksheet_cell_style(self):
         remote_folder = 'TestData/In'
@@ -134,7 +134,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetCellStyleRequest( remote_name, 'Sheet1', 'A1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_cell_style(request)
-        time.sleep(1)
+        
 
     def test_post_worksheet_cell_set_value(self):
         remote_folder = 'TestData/In'
@@ -147,7 +147,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetCellSetValueRequest( remote_name, 'Sheet1', 'A1',value= '1',type= 'int',folder= remote_folder,storage_name= '')
         self.api.post_worksheet_cell_set_value(request)
-        time.sleep(1)
+        
 
     def test_post_update_worksheet_cell_style(self):
         remote_folder = 'TestData/In'
@@ -162,7 +162,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostUpdateWorksheetCellStyleRequest( remote_name, 'Sheet1', 'A1', style,folder= remote_folder,storage_name= '')
         self.api.post_update_worksheet_cell_style(request)
-        time.sleep(1)
+        
 
     def test_post_set_cell_range_value(self):
         remote_folder = 'TestData/In'
@@ -175,7 +175,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostSetCellRangeValueRequest( remote_name, 'Sheet1', 'A1:C10', 'Test', 'string',folder= remote_folder,storage_name= '')
         self.api.post_set_cell_range_value(request)
-        time.sleep(1)
+        
 
     def test_post_copy_cell_into_cell(self):
         remote_folder = 'TestData/In'
@@ -188,7 +188,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostCopyCellIntoCellRequest( remote_name, 'C1', 'Sheet1', 'Sheet2',cellname= 'A1',row= 1,column= 1,folder= remote_folder,storage_name= '')
         self.api.post_copy_cell_into_cell(request)
-        time.sleep(1)
+        
 
     def test_get_cell_html_string(self):
         remote_folder = 'TestData/In'
@@ -201,7 +201,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  GetCellHtmlStringRequest( remote_name, 'Sheet1', 'A1',folder= remote_folder,storage_name= '')
         self.api.get_cell_html_string(request)
-        time.sleep(1)
+        
 
     def test_post_set_cell_html_string(self):
         remote_folder = 'TestData/In'
@@ -214,7 +214,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostSetCellHtmlStringRequest( remote_name, 'Sheet1', 'A1',folder= remote_folder,storage_name= '')
         self.api.post_set_cell_html_string(request)
-        time.sleep(1)
+        
 
     def test_post_cell_calculate(self):
         remote_folder = 'TestData/In'
@@ -228,7 +228,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostCellCalculateRequest( remote_name, 'Sheet1', 'A1',options= options,folder= remote_folder,storage_name= '')
         self.api.post_cell_calculate(request)
-        time.sleep(1)
+        
 
     def test_post_cell_characters(self):
         remote_folder = 'TestData/In'
@@ -246,7 +246,7 @@ class TestCellsControllerApi(unittest.TestCase):
      
         request =  PostCellCharactersRequest( remote_name, 'Sheet1', 'E36',options= options,folder= remote_folder,storage_name= '')
         self.api.post_cell_characters(request)
-        time.sleep(1)
+        
 
     def test_get_worksheet_columns(self):
         remote_folder = 'TestData/In'

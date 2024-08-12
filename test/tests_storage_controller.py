@@ -41,7 +41,7 @@ class TestStorageControllerApi(unittest.TestCase):
      
         request =  StorageExistsRequest( 'Default')
         self.api.storage_exists(request)
-        time.sleep(1)
+        
 
     def test_object_exists(self):
         remote_folder = 'TestData/In'
@@ -54,7 +54,7 @@ class TestStorageControllerApi(unittest.TestCase):
      
         request =  ObjectExistsRequest( 'TestData/In/Book1.xlsx',storage_name= '',version_id= '')
         self.api.object_exists(request)
-        time.sleep(1)
+        
 
     def test_get_disc_usage(self):
         remote_folder = 'TestData/In'
@@ -67,7 +67,7 @@ class TestStorageControllerApi(unittest.TestCase):
      
         request =  GetDiscUsageRequest(storage_name= '')
         self.api.get_disc_usage(request)
-        time.sleep(1)
+        
 
     def test_get_file_versions(self):
         remote_folder = 'TestData/In'
@@ -80,7 +80,7 @@ class TestStorageControllerApi(unittest.TestCase):
      
         request =  GetFileVersionsRequest( 'TestData/In/Book1.xlsx',storage_name= '')
         self.api.get_file_versions(request)
-        time.sleep(1)
+        
 
 if __name__ == '__main__':
     unittest.main()

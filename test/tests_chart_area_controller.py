@@ -41,7 +41,7 @@ class TestChartAreaControllerApi(unittest.TestCase):
      
         request =  GetChartAreaRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
         self.api.get_chart_area(request)
-        time.sleep(1)
+        
 
     def test_get_chart_area_fill_format(self):
         remote_folder = 'TestData/In'
@@ -54,7 +54,7 @@ class TestChartAreaControllerApi(unittest.TestCase):
      
         request =  GetChartAreaFillFormatRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
         self.api.get_chart_area_fill_format(request)
-        time.sleep(1)
+        
 
     def test_get_chart_area_border(self):
         remote_folder = 'TestData/In'
@@ -67,7 +67,7 @@ class TestChartAreaControllerApi(unittest.TestCase):
      
         request =  GetChartAreaBorderRequest( remote_name, 'Sheet4', 0,folder= remote_folder,storage_name= '')
         self.api.get_chart_area_border(request)
-        time.sleep(1)
+        
 
 if __name__ == '__main__':
     unittest.main()

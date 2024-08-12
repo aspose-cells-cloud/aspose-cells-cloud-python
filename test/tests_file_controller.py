@@ -41,7 +41,7 @@ class TestFileControllerApi(unittest.TestCase):
      
         request =  DownloadFileRequest( remote_folder + '/' + remote_name,storage_name= '',version_id= '')
         self.api.download_file(request)
-        time.sleep(1)
+        
 
     def test_upload_file(self):
         remote_folder = 'TestData/In'
@@ -57,7 +57,7 @@ class TestFileControllerApi(unittest.TestCase):
      
         request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
         self.api.upload_file(request)
-        time.sleep(1)
+        
 
     def test_copy_file(self):
         remote_folder = 'TestData/In'
@@ -70,7 +70,7 @@ class TestFileControllerApi(unittest.TestCase):
      
         request =  CopyFileRequest( remote_folder + '/' + remote_name, 'OutResult/' + remote_name,src_storage_name= '',dest_storage_name= '',version_id= '')
         self.api.copy_file(request)
-        time.sleep(1)
+        
 
     def test_move_file(self):
         remote_folder = 'TestData/In'
@@ -83,7 +83,7 @@ class TestFileControllerApi(unittest.TestCase):
      
         request =  MoveFileRequest( remote_folder + '/' + remote_name, 'OutResult/' + remote_name,src_storage_name= '',dest_storage_name= '',version_id= '')
         self.api.move_file(request)
-        time.sleep(1)
+        
 
     def test_delete_file(self):
         remote_folder = 'TestData/In'
@@ -96,7 +96,7 @@ class TestFileControllerApi(unittest.TestCase):
      
         request =  DeleteFileRequest( remote_folder + '/' + remote_name,storage_name= '',version_id= '')
         self.api.delete_file(request)
-        time.sleep(1)
+        
 
 if __name__ == '__main__':
     unittest.main()

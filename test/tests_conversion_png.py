@@ -46,7 +46,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
     def test_convert_workbook_mhtml(self):
         remote_folder = 'TestData/In'
@@ -64,7 +64,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
     def test_convert_workbook_ods(self):
         remote_folder = 'TestData/In'
@@ -82,7 +82,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
     def test_convert_workbook_pdf(self):
         remote_folder = 'TestData/In'
@@ -100,7 +100,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
     def test_convert_workbook_xml(self):
         remote_folder = 'TestData/In'
@@ -118,7 +118,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
     def test_convert_workbook_tif(self):
         remote_folder = 'TestData/In'
@@ -136,7 +136,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
     def test_convert_workbook_xps(self):
         remote_folder = 'TestData/In'
@@ -154,7 +154,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
     def test_convert_workbook_jpg(self):
         remote_folder = 'TestData/In'
@@ -172,7 +172,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
     def test_convert_workbook_md(self):
         remote_folder = 'TestData/In'
@@ -190,7 +190,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
     def test_convert_workbook_numbers(self):
         remote_folder = 'TestData/In'
@@ -208,7 +208,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
     def test_convert_workbook_svg(self):
         remote_folder = 'TestData/In'
@@ -226,7 +226,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
     def test_convert_workbook_docx(self):
         remote_folder = 'TestData/In'
@@ -244,7 +244,7 @@ class TestConversionPngApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
+        
 
 if __name__ == '__main__':
     unittest.main()

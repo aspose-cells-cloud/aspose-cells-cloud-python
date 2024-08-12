@@ -42,8 +42,8 @@ class TestOneCase(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        time.sleep(1)
-        time.sleep(1)
+        
+        
     def tearDown(self):
         pass
 

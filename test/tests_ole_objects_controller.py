@@ -41,7 +41,7 @@ class TestOleObjectsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetOleObjectsRequest( remote_name, 'Sheet6',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_ole_objects(request)
-        time.sleep(1)
+        
 
     def test_get_worksheet_ole_object(self):
         remote_folder = 'TestData/In'
@@ -54,7 +54,7 @@ class TestOleObjectsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetOleObjectRequest( remote_name, 'Sheet6', 0,format= 'png',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_ole_object(request)
-        time.sleep(1)
+        
 
     def test_delete_worksheet_ole_objects(self):
         remote_folder = 'TestData/In'
@@ -67,7 +67,7 @@ class TestOleObjectsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetOleObjectsRequest( remote_name, 'Sheet6',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_ole_objects(request)
-        time.sleep(1)
+        
 
     def test_delete_worksheet_ole_object(self):
         remote_folder = 'TestData/In'
@@ -80,7 +80,7 @@ class TestOleObjectsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetOleObjectRequest( remote_name, 'Sheet6', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_ole_object(request)
-        time.sleep(1)
+        
 
     def test_post_update_worksheet_ole_object(self):
         remote_folder = 'TestData/In'
@@ -94,7 +94,7 @@ class TestOleObjectsControllerApi(unittest.TestCase):
      
         request =  PostUpdateWorksheetOleObjectRequest( remote_name, 'Sheet6', 0, ole,folder= remote_folder,storage_name= '')
         self.api.post_update_worksheet_ole_object(request)
-        time.sleep(1)
+        
 
     def test_put_worksheet_ole_object(self):
         remote_folder = 'TestData/In'
@@ -113,7 +113,7 @@ class TestOleObjectsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetOleObjectRequest( remote_name, 'Sheet6',upper_left_row= 1,upper_left_column= 1,height= 100,width= 80,ole_file= 'OLEDoc.docx',image_file= 'word.jpg',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_ole_object(request)
-        time.sleep(1)
+        
 
 if __name__ == '__main__':
     unittest.main()

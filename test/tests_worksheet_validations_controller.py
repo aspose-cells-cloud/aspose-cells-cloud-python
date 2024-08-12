@@ -41,7 +41,7 @@ class TestWorksheetValidationsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetValidationsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_validations(request)
-        time.sleep(1)
+        
 
     def test_get_worksheet_validation(self):
         remote_folder = 'TestData/In'
@@ -54,7 +54,7 @@ class TestWorksheetValidationsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetValidationRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_validation(request)
-        time.sleep(1)
+        
 
     def test_put_worksheet_validation(self):
         remote_folder = 'TestData/In'
@@ -67,7 +67,7 @@ class TestWorksheetValidationsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetValidationRequest( remote_name, 'Sheet1',range= 'A1:C10',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_validation(request)
-        time.sleep(1)
+        
 
     def test_post_worksheet_validation(self):
         remote_folder = 'TestData/In'
@@ -81,7 +81,7 @@ class TestWorksheetValidationsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetValidationRequest( remote_name, 'Sheet1', 0, validation,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_validation(request)
-        time.sleep(1)
+        
 
     def test_delete_worksheet_validation(self):
         remote_folder = 'TestData/In'
@@ -94,7 +94,7 @@ class TestWorksheetValidationsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetValidationRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_validation(request)
-        time.sleep(1)
+        
 
     def test_delete_worksheet_validations(self):
         remote_folder = 'TestData/In'
@@ -107,7 +107,7 @@ class TestWorksheetValidationsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetValidationsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_validations(request)
-        time.sleep(1)
+        
 
 if __name__ == '__main__':
     unittest.main()

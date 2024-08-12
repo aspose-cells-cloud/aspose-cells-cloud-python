@@ -41,7 +41,7 @@ class TestPropertiesControllerApi(unittest.TestCase):
      
         request =  GetDocumentPropertiesRequest( remote_name,type= 'All',folder= remote_folder,storage_name= '')
         self.api.get_document_properties(request)
-        time.sleep(1)
+        
 
     def test_get_document_property(self):
         remote_folder = 'TestData/In'
@@ -54,7 +54,7 @@ class TestPropertiesControllerApi(unittest.TestCase):
      
         request =  GetDocumentPropertyRequest( remote_name, 'Author',folder= remote_folder,storage_name= '')
         self.api.get_document_property(request)
-        time.sleep(1)
+        
 
     def test_put_document_property(self):
         remote_folder = 'TestData/In'
@@ -68,7 +68,7 @@ class TestPropertiesControllerApi(unittest.TestCase):
      
         request =  PutDocumentPropertyRequest( remote_name, property,folder= remote_folder,storage_name= '')
         self.api.put_document_property(request)
-        time.sleep(1)
+        
 
     def test_delete_document_property(self):
         remote_folder = 'TestData/In'
@@ -81,7 +81,7 @@ class TestPropertiesControllerApi(unittest.TestCase):
      
         request =  DeleteDocumentPropertyRequest( remote_name, 'Author',type= 'All',folder= remote_folder,storage_name= '')
         self.api.delete_document_property(request)
-        time.sleep(1)
+        
 
     def test_delete_document_properties(self):
         remote_folder = 'TestData/In'
@@ -94,7 +94,7 @@ class TestPropertiesControllerApi(unittest.TestCase):
      
         request =  DeleteDocumentPropertiesRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.delete_document_properties(request)
-        time.sleep(1)
+        
 
 if __name__ == '__main__':
     unittest.main()

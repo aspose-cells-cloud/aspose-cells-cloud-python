@@ -41,7 +41,7 @@ class TestXmlControllerApi(unittest.TestCase):
      
         request =  PostWorkbookExportXMLRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.post_workbook_export_xml(request)
-        time.sleep(1)
+        
 
     def test_post_workbook_import_xml(self):
         remote_folder = 'TestData/In'
@@ -60,7 +60,7 @@ class TestXmlControllerApi(unittest.TestCase):
      
         request =  PostWorkbookImportXMLRequest( remote_name, importXMLRequest,folder= remote_folder,storage_name= '')
         self.api.post_workbook_import_xml(request)
-        time.sleep(1)
+        
 
 if __name__ == '__main__':
     unittest.main()
