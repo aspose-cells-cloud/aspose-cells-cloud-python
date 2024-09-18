@@ -349,6 +349,7 @@ from asposecellscloud.models.base_operate_options import BaseOperateOptions
 from asposecellscloud.models.scope_item import ScopeItem
 from asposecellscloud.models.scope_options import ScopeOptions
 from asposecellscloud.models.trim_content_options import TrimContentOptions
+from asposecellscloud.models.word_case_options import WordCaseOptions
 from asposecellscloud.models.cell_value import CellValue
 from asposecellscloud.models.custom_parser_config import CustomParserConfig
 from asposecellscloud.models.import2_dimension_double_array_option import Import2DimensionDoubleArrayOption

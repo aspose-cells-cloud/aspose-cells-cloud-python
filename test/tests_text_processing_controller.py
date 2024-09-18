@@ -43,7 +43,6 @@ class TestTextProcessingControllerApi(unittest.TestCase):
      
         request =  PostAddTextContentRequest( addTextOptions)
         self.api.post_add_text_content(request)
-        
 
     def test_post_trim_content(self):
         remote_folder = 'TestData/In'
@@ -52,14 +51,28 @@ class TestTextProcessingControllerApi(unittest.TestCase):
         remote_name = 'BookText.xlsx'
 
         trimContentOptionsDataSource = DataSource(data_source_type= 'CloudFileSystem' ,data_path= 'BookText.xlsx' )
-        trimContentOptionsScopeOptions = ScopeOptions(scope= 'EntireWorkbook',scope_items=[] )
+        trimContentOptionsScopeOptions = ScopeOptions(scope= 'EntireWorkbook' )
         trimContentOptions = TrimContentOptions(data_source= trimContentOptionsDataSource ,trim_leading= True ,trim_trailing= True ,trim_space_between_word_to1= True ,remove_all_line_breaks= True ,scope_options= trimContentOptionsScopeOptions )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
         request =  PostTrimContentRequest( trimContentOptions)
         self.api.post_trim_content(request)
-        
+
+    def test_post_update_word_case(self):
+        remote_folder = 'TestData/In'
+
+        local_name = 'BookText.xlsx'
+        remote_name = 'BookText.xlsx'
+
+        wordCaseOptionsDataSource = DataSource(data_source_type= 'CloudFileSystem' ,data_path= 'BookText.xlsx' )
+        wordCaseOptionsScopeOptions = ScopeOptions(scope= 'EntireWorkbook' )
+        wordCaseOptions = WordCaseOptions(data_source= wordCaseOptionsDataSource ,word_case_type= 'None' ,scope_options= wordCaseOptionsScopeOptions )
+        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+     
+        request =  PostUpdateWordCaseRequest( wordCaseOptions)
+        self.api.post_update_word_case(request)
 
 if __name__ == '__main__':
     unittest.main()

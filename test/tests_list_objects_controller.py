@@ -41,7 +41,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetListObjectsRequest( remote_name, 'Sheet7',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_list_objects(request)
-        
 
     def test_get_worksheet_list_object(self):
         remote_folder = 'TestData/In'
@@ -54,7 +53,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetListObjectRequest( remote_name, 'Sheet7', 0,format= 'pdf',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_list_object(request)
-        
 
     def test_put_worksheet_list_object(self):
         remote_folder = 'TestData/In'
@@ -67,7 +65,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetListObjectRequest( remote_name, 'Sheet7',start_row= 1,start_column= 1,end_row= 6,end_column= 6,folder= remote_folder,has_headers= True,display_name= 'true',show_totals= False,storage_name= '')
         self.api.put_worksheet_list_object(request)
-        
 
     def test_delete_worksheet_list_objects(self):
         remote_folder = 'TestData/In'
@@ -80,7 +77,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetListObjectsRequest( remote_name, 'Sheet7',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_list_objects(request)
-        
 
     def test_delete_worksheet_list_object(self):
         remote_folder = 'TestData/In'
@@ -93,7 +89,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetListObjectRequest( remote_name, 'Sheet7', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_list_object(request)
-        
 
     def test_post_worksheet_list_object(self):
         remote_folder = 'TestData/In'
@@ -107,7 +102,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetListObjectRequest( remote_name, 'Sheet7', 0, listObject,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_list_object(request)
-        
 
     def test_post_worksheet_list_object_convert_to_range(self):
         remote_folder = 'TestData/In'
@@ -120,7 +114,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetListObjectConvertToRangeRequest( remote_name, 'Sheet7', 0,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_list_object_convert_to_range(request)
-        
 
     def test_post_worksheet_list_object_summarize_with_pivot_table(self):
         remote_folder = 'TestData/In'
@@ -143,7 +136,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetListObjectSummarizeWithPivotTableRequest( remote_name, 'Sheet7', 0, 'Sheet2', createPivotTableRequest,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_list_object_summarize_with_pivot_table(request)
-        
 
     def test_post_worksheet_list_object_sort_table(self):
         remote_folder = 'TestData/In'
@@ -157,7 +149,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetListObjectSortTableRequest( remote_name, 'Sheet7', 0, dataSorter,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_list_object_sort_table(request)
-        
 
     def test_post_worksheet_list_column(self):
         remote_folder = 'TestData/In'
@@ -171,7 +162,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetListColumnRequest( remote_name, 'Sheet7', 0, 0, listColumn,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_list_column(request)
-        
 
     def test_post_worksheet_list_columns_total(self):
         remote_folder = 'TestData/In'
@@ -188,7 +178,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetListColumnsTotalRequest( remote_name, 'Sheet7', 0, tableTotalRequests,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_list_columns_total(request)
-        
 
     def test_post_worksheet_list_object_remove_duplicates(self):
         remote_folder = 'TestData/In'
@@ -201,7 +190,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetListObjectRemoveDuplicatesRequest( remote_name, 'Sheet2', 0,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_list_object_remove_duplicates(request)
-        
 
     def test_post_worksheet_list_object_insert_slicer(self):
         remote_folder = 'TestData/In'
@@ -214,7 +202,6 @@ class TestListObjectsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetListObjectInsertSlicerRequest( remote_name, 'Sheet1', 0, 2, 'j9',folder= remote_folder,storage_name= '')
         self.api.post_worksheet_list_object_insert_slicer(request)
-        
 
 if __name__ == '__main__':
     unittest.main()

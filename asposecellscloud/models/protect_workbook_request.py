@@ -48,6 +48,7 @@ class ProtectWorkbookRequest(object):
         'aways_open_read_only' : 'bool',
         'encrypt_with_password' : 'str',
         'protect_current_sheet' : 'Protection',
+        'protect_all_sheets' : 'Protection',
         'protect_workbook_structure' : 'str',
         'digital_signature' : 'DigitalSignature',
         'mark_as_final' : 'bool'
@@ -57,6 +58,7 @@ class ProtectWorkbookRequest(object):
         'aways_open_read_only' : 'AwaysOpenReadOnly' ,
         'encrypt_with_password' : 'EncryptWithPassword' ,
         'protect_current_sheet' : 'ProtectCurrentSheet' ,
+        'protect_all_sheets' : 'ProtectAllSheets' ,
         'protect_workbook_structure' : 'ProtectWorkbookStructure' ,
         'digital_signature' : 'DigitalSignature' ,
         'mark_as_final' : 'MarkAsFinal' 
@@ -75,7 +77,7 @@ class ProtectWorkbookRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self,aways_open_read_only=None ,encrypt_with_password=None ,protect_current_sheet=None ,protect_workbook_structure=None ,digital_signature=None ,mark_as_final=None   ,**kw):
+    def __init__(self,aways_open_read_only=None ,encrypt_with_password=None ,protect_current_sheet=None ,protect_all_sheets=None ,protect_workbook_structure=None ,digital_signature=None ,mark_as_final=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -87,6 +89,7 @@ class ProtectWorkbookRequest(object):
         self.container['aways_open_read_only'] = None 
         self.container['encrypt_with_password'] = None 
         self.container['protect_current_sheet'] = None 
+        self.container['protect_all_sheets'] = None 
         self.container['protect_workbook_structure'] = None 
         self.container['digital_signature'] = None 
         self.container['mark_as_final'] = None 
@@ -106,6 +109,12 @@ class ProtectWorkbookRequest(object):
         self.protect_current_sheet = protect_current_sheet
         if 'protect_current_sheet' in params:
             self.protect_current_sheet = params["protect_current_sheet"]
+
+
+             
+        self.protect_all_sheets = protect_all_sheets
+        if 'protect_all_sheets' in params:
+            self.protect_all_sheets = params["protect_all_sheets"]
 
 
              
@@ -149,6 +158,13 @@ class ProtectWorkbookRequest(object):
     @protect_current_sheet.setter
     def protect_current_sheet(self, protect_current_sheet):
         self.container['protect_current_sheet'] = protect_current_sheet 
+    @property
+    def protect_all_sheets(self):
+        return self.container['protect_all_sheets']
+
+    @protect_all_sheets.setter
+    def protect_all_sheets(self, protect_all_sheets):
+        self.container['protect_all_sheets'] = protect_all_sheets 
     @property
     def protect_workbook_structure(self):
         return self.container['protect_workbook_structure']

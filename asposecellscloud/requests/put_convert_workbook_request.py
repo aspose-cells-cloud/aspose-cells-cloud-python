@@ -34,7 +34,7 @@ from six.moves.urllib.parse import quote
 
 class PutConvertWorkbookRequest(object):
 
-    def __init__(self , file ,format =None ,password =None ,out_path =None ,storage_name =None ,check_excel_restriction =None ,stream_format =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ):
+    def __init__(self , file ,format =None ,password =None ,out_path =None ,storage_name =None ,check_excel_restriction =None ,stream_format =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,sheet_name =None ,page_index =None ):
         self.file = file 
         self.format = format 
         self.password = password 
@@ -45,6 +45,8 @@ class PutConvertWorkbookRequest(object):
         self.region = region 
         self.page_wide_fit_on_per_sheet = page_wide_fit_on_per_sheet 
         self.page_tall_fit_on_per_sheet = page_tall_fit_on_per_sheet 
+        self.sheet_name = sheet_name 
+        self.page_index = page_index 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'file' is set
@@ -74,6 +76,10 @@ class PutConvertWorkbookRequest(object):
             query_params.append(('pageWideFitOnPerSheet',self.page_wide_fit_on_per_sheet ))
         if self.page_tall_fit_on_per_sheet is not None:
             query_params.append(('pageTallFitOnPerSheet',self.page_tall_fit_on_per_sheet ))
+        if self.sheet_name is not None:
+            query_params.append(('sheetName',self.sheet_name ))
+        if self.page_index is not None:
+            query_params.append(('pageIndex',self.page_index ))
 
         header_params = {}
 

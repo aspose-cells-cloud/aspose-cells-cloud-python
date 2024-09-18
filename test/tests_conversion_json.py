@@ -46,7 +46,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_xls(self):
         remote_folder = 'TestData/In'
@@ -64,7 +63,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_html(self):
         remote_folder = 'TestData/In'
@@ -82,7 +80,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_mhtml(self):
         remote_folder = 'TestData/In'
@@ -100,7 +97,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_ods(self):
         remote_folder = 'TestData/In'
@@ -118,7 +114,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_pdf(self):
         remote_folder = 'TestData/In'
@@ -136,7 +131,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_xml(self):
         remote_folder = 'TestData/In'
@@ -154,7 +148,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_txt(self):
         remote_folder = 'TestData/In'
@@ -172,7 +165,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_xlsb(self):
         remote_folder = 'TestData/In'
@@ -190,7 +182,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_xps(self):
         remote_folder = 'TestData/In'
@@ -208,7 +199,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_md(self):
         remote_folder = 'TestData/In'
@@ -226,7 +216,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_numbers(self):
         remote_folder = 'TestData/In'
@@ -244,7 +233,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_svg(self):
         remote_folder = 'TestData/In'
@@ -262,7 +250,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_docx(self):
         remote_folder = 'TestData/In'
@@ -280,7 +267,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_pptx(self):
         remote_folder = 'TestData/In'
@@ -298,7 +284,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_json(self):
         remote_folder = 'TestData/In'
@@ -316,7 +301,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
     def test_convert_workbook_sql(self):
         remote_folder = 'TestData/In'
@@ -334,7 +318,6 @@ class TestConversionJsonApi(unittest.TestCase):
      
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
-        
 
 if __name__ == '__main__':
     unittest.main()

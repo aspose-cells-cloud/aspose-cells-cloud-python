@@ -44,7 +44,6 @@ class TestDataProcessingControllerApi(unittest.TestCase):
      
         request =  PostWorkbookDataCleansingRequest( remote_name, dataCleansing,folder= remote_folder,storage_name= '')
         self.api.post_workbook_data_cleansing(request)
-        
 
     def test_post_workbook_data_deduplication(self):
         remote_folder = 'TestData/In'
@@ -52,14 +51,14 @@ class TestDataProcessingControllerApi(unittest.TestCase):
         local_name = 'BookCsvDuplicateData.csv'
         remote_name = 'BookCsvDuplicateData.csv'
 
-        deduplicationRegion = DeduplicationRegion()
-        deduplicationRegion.ranges = []
+        deduplicationRegionRanges = [
+        ]
+        deduplicationRegion = DeduplicationRegion(ranges= deduplicationRegionRanges )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
         request =  PostWorkbookDataDeduplicationRequest( remote_name, deduplicationRegion,folder= remote_folder,storage_name= '')
         self.api.post_workbook_data_deduplication(request)
-        
 
     def test_post_workbook_data_fill(self):
         remote_folder = 'TestData/In'
@@ -74,7 +73,6 @@ class TestDataProcessingControllerApi(unittest.TestCase):
      
         request =  PostWorkbookDataFillRequest( remote_name, dataFill,folder= remote_folder,storage_name= '')
         self.api.post_workbook_data_fill(request)
-        
 
     def test_post_data_transformation(self):
         remote_folder = 'TestData/In'
@@ -103,7 +101,6 @@ class TestDataProcessingControllerApi(unittest.TestCase):
      
         request =  PostDataTransformationRequest( dataTransformationRequest)
         self.api.post_data_transformation(request)
-        
 
 if __name__ == '__main__':
     unittest.main()

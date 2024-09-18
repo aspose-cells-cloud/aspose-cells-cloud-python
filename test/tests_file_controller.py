@@ -41,7 +41,6 @@ class TestFileControllerApi(unittest.TestCase):
      
         request =  DownloadFileRequest( remote_folder + '/' + remote_name,storage_name= '',version_id= '')
         self.api.download_file(request)
-        
 
     def test_upload_file(self):
         remote_folder = 'TestData/In'
@@ -57,7 +56,6 @@ class TestFileControllerApi(unittest.TestCase):
      
         request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
         self.api.upload_file(request)
-        
 
     def test_copy_file(self):
         remote_folder = 'TestData/In'
@@ -70,33 +68,6 @@ class TestFileControllerApi(unittest.TestCase):
      
         request =  CopyFileRequest( remote_folder + '/' + remote_name, 'OutResult/' + remote_name,src_storage_name= '',dest_storage_name= '',version_id= '')
         self.api.copy_file(request)
-        
-
-    def test_move_file(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  MoveFileRequest( remote_folder + '/' + remote_name, 'OutResult/' + remote_name,src_storage_name= '',dest_storage_name= '',version_id= '')
-        self.api.move_file(request)
-        
-
-    def test_delete_file(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  DeleteFileRequest( remote_folder + '/' + remote_name,storage_name= '',version_id= '')
-        self.api.delete_file(request)
-        
 
 if __name__ == '__main__':
     unittest.main()

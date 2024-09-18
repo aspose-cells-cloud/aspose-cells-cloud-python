@@ -47,7 +47,6 @@ class TestBatchControllerApi(unittest.TestCase):
      
         request =  PostBatchConvertRequest( batchConvertRequest)
         self.api.post_batch_convert(request)
-        time.sleep(1)
 
     def test_post_batch_protect(self):
         remote_folder = 'TestData/In'
@@ -66,7 +65,6 @@ class TestBatchControllerApi(unittest.TestCase):
      
         request =  PostBatchProtectRequest( batchProtectRequest)
         self.api.post_batch_protect(request)
-        time.sleep(1)
 
     def test_post_batch_lock(self):
         remote_folder = 'TestData/In'
@@ -85,7 +83,6 @@ class TestBatchControllerApi(unittest.TestCase):
      
         request =  PostBatchLockRequest( batchLockRequest)
         self.api.post_batch_lock(request)
-        time.sleep(1)
 
     def test_post_batch_unlock(self):
         remote_folder = 'TestData/In'
@@ -104,7 +101,6 @@ class TestBatchControllerApi(unittest.TestCase):
      
         request =  PostBatchUnlockRequest( batchLockRequest)
         self.api.post_batch_unlock(request)
-        time.sleep(1)
 
 if __name__ == '__main__':
     unittest.main()

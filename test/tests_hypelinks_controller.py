@@ -41,7 +41,6 @@ class TestHypelinksControllerApi(unittest.TestCase):
      
         request =  GetWorksheetHyperlinksRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_hyperlinks(request)
-        
 
     def test_get_worksheet_hyperlink(self):
         remote_folder = 'TestData/In'
@@ -54,7 +53,6 @@ class TestHypelinksControllerApi(unittest.TestCase):
      
         request =  GetWorksheetHyperlinkRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_hyperlink(request)
-        
 
     def test_delete_worksheet_hyperlink(self):
         remote_folder = 'TestData/In'
@@ -67,7 +65,6 @@ class TestHypelinksControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetHyperlinkRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_hyperlink(request)
-        
 
     def test_post_worksheet_hyperlink(self):
         remote_folder = 'TestData/In'
@@ -81,7 +78,6 @@ class TestHypelinksControllerApi(unittest.TestCase):
      
         request =  PostWorksheetHyperlinkRequest( remote_name, 'Sheet1', 0, hyperlink,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_hyperlink(request)
-        
 
     def test_put_worksheet_hyperlink(self):
         remote_folder = 'TestData/In'
@@ -94,7 +90,6 @@ class TestHypelinksControllerApi(unittest.TestCase):
      
         request =  PutWorksheetHyperlinkRequest( remote_name, 'Sheet1', 1, 1, 2, 3, 'https://products.aspose.cloud/cells/',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_hyperlink(request)
-        
 
     def test_delete_worksheet_hyperlinks(self):
         remote_folder = 'TestData/In'
@@ -107,7 +102,6 @@ class TestHypelinksControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetHyperlinksRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_hyperlinks(request)
-        
 
 if __name__ == '__main__':
     unittest.main()

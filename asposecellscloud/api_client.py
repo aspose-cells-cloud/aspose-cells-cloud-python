@@ -88,7 +88,7 @@ class ApiClient(object):
             self.host = host
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Aspose.Cells.Cloud/24.8/python'
+        self.user_agent = 'Aspose.Cells.Cloud/24.9/python'
 
     @property
     def user_agent(self):
@@ -163,7 +163,7 @@ class ApiClient(object):
 
         # request url
         url = self.host + resource_path
-    
+
         preload_content = _preload_content
         if response_type == 'file':
             preload_content = False

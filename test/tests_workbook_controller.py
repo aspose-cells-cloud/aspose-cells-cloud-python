@@ -44,7 +44,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostDigitalSignatureRequest( remote_name, remote_folder + '/roywang.pfx', '123456',folder= remote_folder,storage_name= '')
         self.api.post_digital_signature(request)
-        
 
     def test_post_encrypt_workbook(self):
         remote_folder = 'TestData/In'
@@ -58,7 +57,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostEncryptWorkbookRequest( remote_name, encryption,folder= remote_folder,storage_name= '')
         self.api.post_encrypt_workbook(request)
-        
 
     def test_delete_decrypt_workbook(self):
         remote_folder = 'TestData/In'
@@ -72,7 +70,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  DeleteDecryptWorkbookRequest( remote_name, encryption,folder= remote_folder,storage_name= '')
         self.api.delete_decrypt_workbook(request)
-        
 
     def test_post_protect_workbook(self):
         remote_folder = 'TestData/In'
@@ -86,7 +83,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostProtectWorkbookRequest( remote_name, protectWorkbookRequest,folder= remote_folder,storage_name= '')
         self.api.post_protect_workbook(request)
-        
 
     def test_delete_un_protect_workbook(self):
         remote_folder = 'TestData/In'
@@ -99,7 +95,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  DeleteUnProtectWorkbookRequest( remote_name, remote_name,folder= remote_folder,storage_name= '')
         self.api.delete_un_protect_workbook(request)
-        
 
     def test_get_workbook_default_style(self):
         remote_folder = 'TestData/In'
@@ -112,7 +107,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  GetWorkbookDefaultStyleRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.get_workbook_default_style(request)
-        
 
     def test_get_workbook_text_items(self):
         remote_folder = 'TestData/In'
@@ -125,7 +119,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  GetWorkbookTextItemsRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.get_workbook_text_items(request)
-        
 
     def test_get_workbook_names(self):
         remote_folder = 'TestData/In'
@@ -138,7 +131,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  GetWorkbookNamesRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.get_workbook_names(request)
-        
 
     def test_put_workbook_name(self):
         remote_folder = 'TestData/In'
@@ -152,7 +144,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PutWorkbookNameRequest( remote_name, newName,folder= remote_folder,storage_name= '')
         self.api.put_workbook_name(request)
-        
 
     def test_get_workbook_name(self):
         remote_folder = 'TestData/In'
@@ -165,7 +156,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  GetWorkbookNameRequest( remote_name, 'Name_2',folder= remote_folder,storage_name= '')
         self.api.get_workbook_name(request)
-        
 
     def test_post_workbook_name(self):
         remote_folder = 'TestData/In'
@@ -179,7 +169,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostWorkbookNameRequest( remote_name, 'Name_2', newName,folder= remote_folder,storage_name= '')
         self.api.post_workbook_name(request)
-        
 
     def test_get_workbook_name_value(self):
         remote_folder = 'TestData/In'
@@ -192,7 +181,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  GetWorkbookNameValueRequest( remote_name, 'Name_2',folder= remote_folder,storage_name= '')
         self.api.get_workbook_name_value(request)
-        
 
     def test_delete_workbook_names(self):
         remote_folder = 'TestData/In'
@@ -205,7 +193,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  DeleteWorkbookNamesRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.delete_workbook_names(request)
-        
 
     def test_delete_workbook_name(self):
         remote_folder = 'TestData/In'
@@ -218,7 +205,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  DeleteWorkbookNameRequest( remote_name, 'Name_2',folder= remote_folder,storage_name= '')
         self.api.delete_workbook_name(request)
-        
 
     def test_put_document_protect_from_changes(self):
         remote_folder = 'TestData/In'
@@ -232,7 +218,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PutDocumentProtectFromChangesRequest( remote_name, password,folder= remote_folder,storage_name= '')
         self.api.put_document_protect_from_changes(request)
-        
 
     def test_delete_document_un_protect_from_changes(self):
         remote_folder = 'TestData/In'
@@ -245,7 +230,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  DeleteDocumentUnProtectFromChangesRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.delete_document_un_protect_from_changes(request)
-        
 
     def test_post_workbooks_merge(self):
         remote_folder = 'TestData/In'
@@ -261,7 +245,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostWorkbooksMergeRequest( remote_name, remote_folder + '/myDocument.xlsx',folder= remote_folder,storage_name= '',merged_storage_name= '')
         self.api.post_workbooks_merge(request)
-        
 
     def test_post_workbooks_text_search(self):
         remote_folder = 'TestData/In'
@@ -274,7 +257,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostWorkbooksTextSearchRequest( remote_name, '1234',folder= remote_folder,storage_name= '')
         self.api.post_workbooks_text_search(request)
-        
 
     def test_post_workbook_text_replace(self):
         remote_folder = 'TestData/In'
@@ -287,7 +269,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostWorkbookTextReplaceRequest( remote_name, '1234', '5678',folder= remote_folder,storage_name= '')
         self.api.post_workbook_text_replace(request)
-        
 
     def test_post_workbook_get_smart_marker_result(self):
         remote_folder = 'TestData/In'
@@ -303,7 +284,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostWorkbookGetSmartMarkerResultRequest( remote_name,xml_file= remote_folder + '/ReportData.xml',folder= remote_folder,out_path= 'OutResult/SmartMarkerResult.xlsx',storage_name= '',out_storage_name= '')
         self.api.post_workbook_get_smart_marker_result(request)
-        
 
     def test_put_workbook_create(self):
         remote_folder = 'TestData/In'
@@ -319,7 +299,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PutWorkbookCreateRequest( 'PutWorkbookCreate.xlsx',template_file= remote_folder + '/' + remote_name,data_file= remote_folder + '/ReportData.xml',is_write_over= True,folder= remote_folder,storage_name= '',check_excel_restriction= True)
         self.api.put_workbook_create(request)
-        
 
     def test_post_workbook_split(self):
         remote_folder = 'TestData/In'
@@ -332,7 +311,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostWorkbookSplitRequest( remote_name,format= 'png',out_folder= 'OutResult',_from= 1,to= 5,horizontal_resolution= 96,vertical_resolution= 96,split_name_rule= 'sheetname',folder= remote_folder,storage_name= '',out_storage_name= '')
         self.api.post_workbook_split(request)
-        
 
     def test_post_import_data(self):
         remote_folder = 'TestData/In'
@@ -352,7 +330,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostImportDataRequest( remote_name,import_option= importOption,folder= remote_folder,storage_name= '')
         self.api.post_import_data(request)
-        
 
     def test_post_workbook_calculate_formula(self):
         remote_folder = 'TestData/In'
@@ -366,7 +343,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostWorkbookCalculateFormulaRequest( remote_name,options= options,ignore_error= True,folder= remote_folder,storage_name= '')
         self.api.post_workbook_calculate_formula(request)
-        
 
     def test_post_autofit_workbook_rows(self):
         remote_folder = 'TestData/In'
@@ -379,7 +355,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostAutofitWorkbookRowsRequest( remote_name,start_row= 1,end_row= 100,only_auto= True,folder= remote_folder,storage_name= '')
         self.api.post_autofit_workbook_rows(request)
-        
 
     def test_post_autofit_workbook_columns(self):
         remote_folder = 'TestData/In'
@@ -392,7 +367,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostAutofitWorkbookColumnsRequest( remote_name,start_column= 1,end_column= 20,folder= remote_folder,storage_name= '')
         self.api.post_autofit_workbook_columns(request)
-        
 
     def test_get_workbook_settings(self):
         remote_folder = 'TestData/In'
@@ -405,7 +379,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  GetWorkbookSettingsRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.get_workbook_settings(request)
-        
 
     def test_post_workbook_settings(self):
         remote_folder = 'TestData/In'
@@ -419,7 +392,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PostWorkbookSettingsRequest( remote_name, settings,folder= remote_folder,storage_name= '')
         self.api.post_workbook_settings(request)
-        
 
     def test_put_workbook_background(self):
         remote_folder = 'TestData/In'
@@ -435,7 +407,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PutWorkbookBackgroundRequest( remote_name,pic_path= remote_folder + '/WaterMark.png',folder= remote_folder,storage_name= '')
         self.api.put_workbook_background(request)
-        
 
     def test_delete_workbook_background(self):
         remote_folder = 'TestData/In'
@@ -448,7 +419,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  DeleteWorkbookBackgroundRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.delete_workbook_background(request)
-        
 
     def test_put_workbook_water_marker(self):
         remote_folder = 'TestData/In'
@@ -462,7 +432,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  PutWorkbookWaterMarkerRequest( remote_name, textWaterMarkerRequest,folder= remote_folder,storage_name= '')
         self.api.put_workbook_water_marker(request)
-        
 
     def test_get_page_count(self):
         remote_folder = 'TestData/In'
@@ -475,7 +444,6 @@ class TestWorkbookControllerApi(unittest.TestCase):
      
         request =  GetPageCountRequest( remote_name,folder= remote_folder,storage_name= '')
         self.api.get_page_count(request)
-        
 
 if __name__ == '__main__':
     unittest.main()

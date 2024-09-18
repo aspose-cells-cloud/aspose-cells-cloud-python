@@ -7,17 +7,17 @@ from asposecellscloud.requests import *
 api  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'),"v3.0",os.getenv('CellsCloudApiBaseUrl'))
 remote_folder = 'TestData/In'
 
-local_name = 'BookCsvDuplicateData.csv'
-remote_name = 'BookCsvDuplicateData.csv'
+local_name = 'BookText.xlsx'
+remote_name = 'BookText.xlsx'
 
-deduplicationRegionRanges = [
-]
-deduplicationRegion = DeduplicationRegion(ranges= deduplicationRegionRanges )
+wordCaseOptionsDataSource = DataSource(data_source_type= 'CloudFileSystem' ,data_path= 'BookText.xlsx' )
+wordCaseOptionsScopeOptions = ScopeOptions(scope= 'EntireWorkbook' )
+wordCaseOptions = WordCaseOptions(data_source= wordCaseOptionsDataSource ,word_case_type= 'None' ,scope_options= wordCaseOptionsScopeOptions )
 mapFiles = { 
     local_name:  local_name             
 }
 request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
 api.upload_file(request)
  
-request =  PostWorkbookDataDeduplicationRequest( remote_name, deduplicationRegion,folder= remote_folder,storage_name= '')
-api.post_workbook_data_deduplication(request)
+request =  PostUpdateWordCaseRequest( wordCaseOptions)
+api.post_update_word_case(request)

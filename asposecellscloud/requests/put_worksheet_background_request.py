@@ -34,10 +34,11 @@ from six.moves.urllib.parse import quote
 
 class PutWorksheetBackgroundRequest(object):
 
-    def __init__(self , name ,sheet_name ,pic_path =None ,folder =None ,storage_name =None ,file =None ):
+    def __init__(self , name ,sheet_name ,pic_path =None ,image_adapt_option =None ,folder =None ,storage_name =None ,file =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.pic_path = pic_path 
+        self.image_adapt_option = image_adapt_option 
         self.folder = folder 
         self.storage_name = storage_name 
         self.file = file 
@@ -63,6 +64,8 @@ class PutWorksheetBackgroundRequest(object):
         query_params = []
         if self.pic_path is not None:
             query_params.append(('picPath',self.pic_path ))
+        if self.image_adapt_option is not None:
+            query_params.append(('imageAdaptOption',self.image_adapt_option ))
         if self.folder is not None:
             query_params.append(('folder',self.folder ))
         if self.storage_name is not None:

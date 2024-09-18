@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="PutWorkbookBackgroundRequest.cs">
+<copyright company="Aspose" file="PostUpdateWordCaseRequest.cs">
   Copyright (c) 2024 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -32,48 +32,25 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class PutWorkbookBackgroundRequest(object):
+class PostUpdateWordCaseRequest(object):
 
-    def __init__(self , name ,pic_path =None ,image_adapt_option =None ,folder =None ,storage_name =None ,file =None ):
-        self.name = name 
-        self.pic_path = pic_path 
-        self.image_adapt_option = image_adapt_option 
-        self.folder = folder 
-        self.storage_name = storage_name 
-        self.file = file 
+    def __init__(self , word_case_options =None ):
+        self.word_case_options = word_case_options 
     def create_http_request(self, api_client):
 
-        # verify the required parameter 'name' is set
-        if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `put_workbook_background`")
+        # verify the required parameter 'word_case_options' is set
+        if self.word_case_options is None:
+            raise ValueError("Missing the required parameter `word_case_options` when calling `post_update_word_case`")
 
 
         collection_formats = {}
 
         path_params = {}
-        if self.name is not None:
-            path_params['name'] = self.name
         query_params = []
-        if self.pic_path is not None:
-            query_params.append(('picPath',self.pic_path ))
-        if self.image_adapt_option is not None:
-            query_params.append(('imageAdaptOption',self.image_adapt_option ))
-        if self.folder is not None:
-            query_params.append(('folder',self.folder ))
-        if self.storage_name is not None:
-            query_params.append(('storageName',self.storage_name ))
-
         header_params = {}
 
         form_params = []
         local_var_files = {}
-        if self.file is not None:            
-            if isinstance(self.file,dict):
-                for filename , filecontext in  self.file.items():
-                    local_var_files[filename] = filecontext
-            else:
-                local_var_files['File'] = self.file   
-
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = api_client.\
@@ -81,11 +58,14 @@ class PutWorkbookBackgroundRequest(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = api_client.\
-            select_header_content_type(['multipart/form-data'])
+            select_header_content_type(['application/json'])
+
+        if self.word_case_options is not None:
+             body_params =self.word_case_options 
 
         # Authentication setting
         auth_settings = []
-        resource_path = "/cells/{name}/background"
+        resource_path = "/cells/updatewordcase"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)
@@ -94,7 +74,7 @@ class PutWorkbookBackgroundRequest(object):
                 # specified safe chars, encode everything
                 resource_path = resource_path.replace('{%s}' % k, quote(str(v), safe='/'))
         return {
-                "method": "PUT",
+                "method": "POST",
                 "path":resource_path,
                 "query_params": query_params,
                 "header_params": header_params,
@@ -103,6 +83,6 @@ class PutWorkbookBackgroundRequest(object):
                 "auth_settings":auth_settings,
                 "body": body_params,
                 "collection_formats": collection_formats,
-                "response_type": 'CellsCloudResponse'  
+                "response_type": 'FileInfo'  
         }
 

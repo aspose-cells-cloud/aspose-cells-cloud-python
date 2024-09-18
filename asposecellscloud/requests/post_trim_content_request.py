@@ -61,9 +61,8 @@ class PostTrimContentRequest(object):
             select_header_content_type(['application/json'])
 
         if self.trim_content_options is not None:
-             
              body_params =self.trim_content_options 
-        
+
         # Authentication setting
         auth_settings = []
         resource_path = "/cells/trimcontent"

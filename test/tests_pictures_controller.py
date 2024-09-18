@@ -41,7 +41,6 @@ class TestPicturesControllerApi(unittest.TestCase):
      
         request =  GetWorksheetPicturesRequest( remote_name, 'Sheet6',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_pictures(request)
-        
 
     def test_get_worksheet_picture_with_format(self):
         remote_folder = 'TestData/In'
@@ -54,7 +53,6 @@ class TestPicturesControllerApi(unittest.TestCase):
      
         request =  GetWorksheetPictureWithFormatRequest( remote_name, 'Sheet6', 0, 'png',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_picture_with_format(request)
-        
 
     def test_put_worksheet_add_picture(self):
         remote_folder = 'TestData/In'
@@ -70,7 +68,6 @@ class TestPicturesControllerApi(unittest.TestCase):
      
         request =  PutWorksheetAddPictureRequest( remote_name, 'Sheet6',upper_left_row= 1,upper_left_column= 1,lower_right_row= 10,lower_right_column= 10,picture_path= remote_folder + '/WaterMark.png',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_add_picture(request)
-        
 
     def test_post_worksheet_picture(self):
         remote_folder = 'TestData/In'
@@ -84,7 +81,6 @@ class TestPicturesControllerApi(unittest.TestCase):
      
         request =  PostWorksheetPictureRequest( remote_name, 'Sheet6', 0, picture,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_picture(request)
-        
 
     def test_delete_worksheet_picture(self):
         remote_folder = 'TestData/In'
@@ -97,7 +93,6 @@ class TestPicturesControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetPictureRequest( remote_name, 'Sheet6', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_picture(request)
-        
 
     def test_delete_worksheet_pictures(self):
         remote_folder = 'TestData/In'
@@ -110,7 +105,6 @@ class TestPicturesControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetPicturesRequest( remote_name, 'Sheet6',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_pictures(request)
-        
 
 if __name__ == '__main__':
     unittest.main()

@@ -83,6 +83,7 @@ class HtmlSaveOptions(object):
         'is_exp_image_to_temp_dir' : 'bool',
         'page_title' : 'str',
         'parse_html_tag_in_cell' : 'bool',
+        'cell_name_attribute' : 'str',
         'save_format' : 'str',
         'cached_file_folder' : 'str',
         'clear_data' : 'bool',
@@ -132,6 +133,7 @@ class HtmlSaveOptions(object):
         'is_exp_image_to_temp_dir' : 'IsExpImageToTempDir' ,
         'page_title' : 'PageTitle' ,
         'parse_html_tag_in_cell' : 'ParseHtmlTagInCell' ,
+        'cell_name_attribute' : 'CellNameAttribute' ,
         'save_format' : 'SaveFormat' ,
         'cached_file_folder' : 'CachedFileFolder' ,
         'clear_data' : 'ClearData' ,
@@ -155,7 +157,7 @@ class HtmlSaveOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,export_page_headers=None ,export_page_footers=None ,export_row_column_headings=None ,show_all_sheets=None ,image_options=None ,save_as_single_file=None ,export_hidden_worksheet=None ,export_grid_lines=None ,presentation_preference=None ,cell_css_prefix=None ,table_css_id=None ,is_full_path_link=None ,export_worksheet_css_separately=None ,export_similar_border_style=None ,merge_empty_td_forcely=None ,export_cell_coordinate=None ,export_extra_headings=None ,export_headings=None ,export_formula=None ,add_tooltip_text=None ,export_bogus_row_data=None ,exclude_unused_styles=None ,export_document_properties=None ,export_worksheet_properties=None ,export_workbook_properties=None ,export_frame_scripts_and_properties=None ,attached_files_directory=None ,attached_files_url_prefix=None ,encoding=None ,export_active_worksheet_only=None ,export_chart_image_format=None ,export_images_as_base64=None ,hidden_col_display_type=None ,hidden_row_display_type=None ,html_cross_string_type=None ,is_exp_image_to_temp_dir=None ,page_title=None ,parse_html_tag_in_cell=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None   ,**kw):
+    def __init__(self,export_page_headers=None ,export_page_footers=None ,export_row_column_headings=None ,show_all_sheets=None ,image_options=None ,save_as_single_file=None ,export_hidden_worksheet=None ,export_grid_lines=None ,presentation_preference=None ,cell_css_prefix=None ,table_css_id=None ,is_full_path_link=None ,export_worksheet_css_separately=None ,export_similar_border_style=None ,merge_empty_td_forcely=None ,export_cell_coordinate=None ,export_extra_headings=None ,export_headings=None ,export_formula=None ,add_tooltip_text=None ,export_bogus_row_data=None ,exclude_unused_styles=None ,export_document_properties=None ,export_worksheet_properties=None ,export_workbook_properties=None ,export_frame_scripts_and_properties=None ,attached_files_directory=None ,attached_files_url_prefix=None ,encoding=None ,export_active_worksheet_only=None ,export_chart_image_format=None ,export_images_as_base64=None ,hidden_col_display_type=None ,hidden_row_display_type=None ,html_cross_string_type=None ,is_exp_image_to_temp_dir=None ,page_title=None ,parse_html_tag_in_cell=None ,cell_name_attribute=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -202,6 +204,7 @@ class HtmlSaveOptions(object):
         self.container['is_exp_image_to_temp_dir'] = None 
         self.container['page_title'] = None 
         self.container['parse_html_tag_in_cell'] = None 
+        self.container['cell_name_attribute'] = None 
         self.container['save_format'] = None 
         self.container['cached_file_folder'] = None 
         self.container['clear_data'] = None 
@@ -436,6 +439,12 @@ class HtmlSaveOptions(object):
         self.parse_html_tag_in_cell = parse_html_tag_in_cell
         if 'parse_html_tag_in_cell' in params:
             self.parse_html_tag_in_cell = params["parse_html_tag_in_cell"]
+
+
+             
+        self.cell_name_attribute = cell_name_attribute
+        if 'cell_name_attribute' in params:
+            self.cell_name_attribute = params["cell_name_attribute"]
 
 
              
@@ -754,6 +763,13 @@ class HtmlSaveOptions(object):
     @parse_html_tag_in_cell.setter
     def parse_html_tag_in_cell(self, parse_html_tag_in_cell):
         self.container['parse_html_tag_in_cell'] = parse_html_tag_in_cell 
+    @property
+    def cell_name_attribute(self):
+        return self.container['cell_name_attribute']
+
+    @cell_name_attribute.setter
+    def cell_name_attribute(self, cell_name_attribute):
+        self.container['cell_name_attribute'] = cell_name_attribute 
     @property
     def save_format(self):
         return self.container['save_format']

@@ -41,7 +41,6 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetSparklineGroupsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.get_worksheet_sparkline_groups(request)
-        
 
     def test_get_worksheet_sparkline_group(self):
         remote_folder = 'TestData/In'
@@ -54,7 +53,6 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  GetWorksheetSparklineGroupRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.get_worksheet_sparkline_group(request)
-        
 
     def test_delete_worksheet_sparkline_groups(self):
         remote_folder = 'TestData/In'
@@ -67,7 +65,6 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetSparklineGroupsRequest( remote_name, 'Sheet1',folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_sparkline_groups(request)
-        
 
     def test_delete_worksheet_sparkline_group(self):
         remote_folder = 'TestData/In'
@@ -80,7 +77,6 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  DeleteWorksheetSparklineGroupRequest( remote_name, 'Sheet1', 0,folder= remote_folder,storage_name= '')
         self.api.delete_worksheet_sparkline_group(request)
-        
 
     def test_put_worksheet_sparkline_group(self):
         remote_folder = 'TestData/In'
@@ -93,7 +89,6 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  PutWorksheetSparklineGroupRequest( remote_name, 'Sheet1', 'Line', 'C6:E13', False, 'G6:G13',folder= remote_folder,storage_name= '')
         self.api.put_worksheet_sparkline_group(request)
-        
 
     def test_post_worksheet_sparkline_group(self):
         remote_folder = 'TestData/In'
@@ -107,7 +102,6 @@ class TestSparklineGroupsControllerApi(unittest.TestCase):
      
         request =  PostWorksheetSparklineGroupRequest( remote_name, 'Sheet1', 0, sparklineGroup,folder= remote_folder,storage_name= '')
         self.api.post_worksheet_sparkline_group(request)
-        
 
 if __name__ == '__main__':
     unittest.main()
