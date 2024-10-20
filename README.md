@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/24.9)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/24.10)
 
 Aspose.Cells Cloud for Python enables you to handle various aspects of Excel files, including cell data, styles, formulas, charts, pivot tables, data validation, comments, drawing objects, images, hyperlinks, and so on. Additionally, it supports operations such as splitting, merging, repairing, and converting to other compatible file formats.
 
@@ -19,12 +19,11 @@ Enhance your Python applications with the [Aspose.Cells Cloud](https://products.
 - Import/Export: Facilitates importing data from various sources into spreadsheets and exporting spreadsheet data to other formats.
 - Security Management: Offers a range of security features like data encryption, access control, and permission management to safeguard the security and integrity of spreadsheet data.
 
-## Feature & Enhancements in Version 24.9
+## Feature & Enhancements in Version 24.10
 
 Full list of issues covering all changes in this release:
 
-- Add word case function for TextProcessingController.
-- Support to export Worksheet to HTML with cell address or id.
+- Add the new feature about removing characters on TextProcessingController.
 
 ## Support file format
 
@@ -121,14 +120,16 @@ api.put_convert_workbook(request)
 
 # Release history version
 
+## Enhancements in Version 24.9
 
-## Enhancements in Version 24.8
+- Add word case function for TextProcessingController.
+- Support to export Worksheet to HTML with cell address or id.
 
 - Add the text trim feature on Cells Cloud Services.
 
-## Enhancements in Version 24.7 
+## Enhancements in Version 24.7
 
-- Add a new feature about adding text content. 
+- Add a new feature about adding text content.
 - Add get access token by client id and client secret.
 
 ## Enhancements in Version 24.6
