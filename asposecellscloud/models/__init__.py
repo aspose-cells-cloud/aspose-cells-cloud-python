@@ -346,6 +346,7 @@ from asposecellscloud.models.pivot_table import PivotTable
 from asposecellscloud.models.pivot_tables import PivotTables
 from asposecellscloud.models.add_text_options import AddTextOptions
 from asposecellscloud.models.base_operate_options import BaseOperateOptions
+from asposecellscloud.models.convert_text_options import ConvertTextOptions
 from asposecellscloud.models.remove_characters_by_character import RemoveCharactersByCharacter
 from asposecellscloud.models.remove_characters_by_position import RemoveCharactersByPosition
 from asposecellscloud.models.remove_characters_options import RemoveCharactersOptions
