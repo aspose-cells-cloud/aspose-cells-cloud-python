@@ -49,11 +49,12 @@ class PivotFilter(object):
         'evaluation_order' : 'int',
         'field_index' : 'int',
         'filter_type' : 'str',
-        'measure_fld_index' : 'int',
+        'value_field_index' : 'int',
         'member_property_field_index' : 'int',
         'name' : 'str',
         'value1' : 'str',
-        'value2' : 'str'
+        'value2' : 'str',
+        'top10_filter' : 'Top10Filter'
     }
 
     attribute_map = {
@@ -61,11 +62,12 @@ class PivotFilter(object):
         'evaluation_order' : 'EvaluationOrder' ,
         'field_index' : 'FieldIndex' ,
         'filter_type' : 'FilterType' ,
-        'measure_fld_index' : 'MeasureFldIndex' ,
+        'value_field_index' : 'ValueFieldIndex' ,
         'member_property_field_index' : 'MemberPropertyFieldIndex' ,
         'name' : 'Name' ,
         'value1' : 'Value1' ,
-        'value2' : 'Value2' 
+        'value2' : 'Value2' ,
+        'top10_filter' : 'Top10Filter' 
     }
 
     @staticmethod
@@ -81,7 +83,7 @@ class PivotFilter(object):
             return self.container[attr]
         return None
 
-    def __init__(self,auto_filter=None ,evaluation_order=None ,field_index=None ,filter_type=None ,measure_fld_index=None ,member_property_field_index=None ,name=None ,value1=None ,value2=None   ,**kw):
+    def __init__(self,auto_filter=None ,evaluation_order=None ,field_index=None ,filter_type=None ,value_field_index=None ,member_property_field_index=None ,name=None ,value1=None ,value2=None ,top10_filter=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -94,11 +96,12 @@ class PivotFilter(object):
         self.container['evaluation_order'] = None 
         self.container['field_index'] = None 
         self.container['filter_type'] = None 
-        self.container['measure_fld_index'] = None 
+        self.container['value_field_index'] = None 
         self.container['member_property_field_index'] = None 
         self.container['name'] = None 
         self.container['value1'] = None 
         self.container['value2'] = None 
+        self.container['top10_filter'] = None 
         params = locals()
         self.auto_filter = auto_filter
         if 'auto_filter' in params:
@@ -124,9 +127,9 @@ class PivotFilter(object):
 
 
              
-        self.measure_fld_index = measure_fld_index
-        if 'measure_fld_index' in params:
-            self.measure_fld_index = params["measure_fld_index"]
+        self.value_field_index = value_field_index
+        if 'value_field_index' in params:
+            self.value_field_index = params["value_field_index"]
 
 
              
@@ -151,6 +154,12 @@ class PivotFilter(object):
         self.value2 = value2
         if 'value2' in params:
             self.value2 = params["value2"]
+
+
+             
+        self.top10_filter = top10_filter
+        if 'top10_filter' in params:
+            self.top10_filter = params["top10_filter"]
 
 
              
@@ -184,12 +193,12 @@ class PivotFilter(object):
     def filter_type(self, filter_type):
         self.container['filter_type'] = filter_type 
     @property
-    def measure_fld_index(self):
-        return self.container['measure_fld_index']
+    def value_field_index(self):
+        return self.container['value_field_index']
 
-    @measure_fld_index.setter
-    def measure_fld_index(self, measure_fld_index):
-        self.container['measure_fld_index'] = measure_fld_index 
+    @value_field_index.setter
+    def value_field_index(self, value_field_index):
+        self.container['value_field_index'] = value_field_index 
     @property
     def member_property_field_index(self):
         return self.container['member_property_field_index']
@@ -218,6 +227,13 @@ class PivotFilter(object):
     @value2.setter
     def value2(self, value2):
         self.container['value2'] = value2 
+    @property
+    def top10_filter(self):
+        return self.container['top10_filter']
+
+    @top10_filter.setter
+    def top10_filter(self, top10_filter):
+        self.container['top10_filter'] = top10_filter 
 
     def to_dict(self):
         """
