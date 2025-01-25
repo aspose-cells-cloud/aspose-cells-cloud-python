@@ -10,7 +10,7 @@ remote_folder = 'TestData/In'
 local_name = 'TestCase.xlsx'
 remote_name = 'TestCase.xlsx'
 
-filter = PivotFilter(field_index= 1 ,filter_type= 'Count' )
+filter = PivotFilter(field_index= 0 ,filter_type= 'Count' )
 mapFiles = { 
     local_name:  local_name             
 }

@@ -1,6 +1,6 @@
 [project]
 name = "asposecellscloud"
-version = "24.12"
+version = "25.1"
 authors = [
   { name="Aspose Cloud", email="aspose.cloud@aspose.com" },
 ]

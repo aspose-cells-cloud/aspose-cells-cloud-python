@@ -1,6 +1,6 @@
 """
 <copyright company="Aspose" file="api_clientpy.cs">
-  Copyright (c) 2024 Aspose.Cells Cloud
+  Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -88,7 +88,7 @@ class ApiClient(object):
             self.host = host
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Aspose.Cells.Cloud/24.12/python'
+        self.user_agent = 'Aspose.Cells.Cloud/25.1/python'
 
     @property
     def user_agent(self):

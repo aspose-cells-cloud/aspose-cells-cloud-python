@@ -120,17 +120,18 @@ class TestPivotTablesControllerApi(unittest.TestCase):
         self.api.put_pivot_table_field(request)
 
     def test_put_worksheet_pivot_table_filter(self):
-
-        self.skipTest("Skipping this test based on a condition")
         remote_folder = 'TestData/In'
 
         local_name = 'TestCase.xlsx'
         remote_name = 'TestCase.xlsx'
-
-        filter = PivotFilter(field_index= 0 ,filter_type= 'Count' )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
-     
+
+        top10Filter = Top10Filter(items= 1 ,is_percent= True ,field_index =0  )
+        filter_column = FilterColumn(filter_type='Top10Filter' , top10_filter = top10Filter )
+        autoFilter = AutoFilter(filter_columns= [filter_column] )
+        filter = PivotFilter(field_index= 0 ,filter_type= 'Count' ,auto_filter = autoFilter )
+
         request =  PutWorksheetPivotTableFilterRequest( remote_name, 'Sheet4', 0, filter,need_re_calculate= True,folder= remote_folder,storage_name= '')
         self.api.put_worksheet_pivot_table_filter(request)
 

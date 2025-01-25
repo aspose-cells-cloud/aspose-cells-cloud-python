@@ -1,7 +1,7 @@
 # coding: utf-8
 """
 <copyright company="Aspose" file="__init__py.cs">
-  Copyright (c) 2024 Aspose.Cells Cloud
+  Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -353,6 +353,7 @@ from asposecellscloud.models.remove_characters_options import RemoveCharactersOp
 from asposecellscloud.models.remove_duplicates_options import RemoveDuplicatesOptions
 from asposecellscloud.models.scope_item import ScopeItem
 from asposecellscloud.models.scope_options import ScopeOptions
+from asposecellscloud.models.split_text_options import SplitTextOptions
 from asposecellscloud.models.trim_content_options import TrimContentOptions
 from asposecellscloud.models.word_case_options import WordCaseOptions
 from asposecellscloud.models.cell_value import CellValue
@@ -709,6 +710,7 @@ from asposecellscloud.requests.post_remove_characters_request import PostRemoveC
 from asposecellscloud.requests.post_convert_text_request import PostConvertTextRequest
 from asposecellscloud.requests.post_remove_duplicates_request import PostRemoveDuplicatesRequest
 from asposecellscloud.requests.post_extract_text_request import PostExtractTextRequest
+from asposecellscloud.requests.post_split_text_request import PostSplitTextRequest
 from asposecellscloud.requests.get_workbook_default_style_request import GetWorkbookDefaultStyleRequest
 from asposecellscloud.requests.get_workbook_text_items_request import GetWorkbookTextItemsRequest
 from asposecellscloud.requests.get_workbook_names_request import GetWorkbookNamesRequest

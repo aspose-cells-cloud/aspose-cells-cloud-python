@@ -1,7 +1,7 @@
 # coding: utf-8
 """
 <copyright company="Aspose" file="__init__py.cs">
-  Copyright (c) 2024 Aspose.Cells Cloud
+  Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -354,6 +354,7 @@ from asposecellscloud.models.remove_characters_options import RemoveCharactersOp
 from asposecellscloud.models.remove_duplicates_options import RemoveDuplicatesOptions
 from asposecellscloud.models.scope_item import ScopeItem
 from asposecellscloud.models.scope_options import ScopeOptions
+from asposecellscloud.models.split_text_options import SplitTextOptions
 from asposecellscloud.models.trim_content_options import TrimContentOptions
 from asposecellscloud.models.word_case_options import WordCaseOptions
 from asposecellscloud.models.cell_value import CellValue

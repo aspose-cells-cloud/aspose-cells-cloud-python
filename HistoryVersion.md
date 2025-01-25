@@ -1,3 +1,10 @@
+
+## Feature & Enhancements in Version 24.12
+
+- Add the new remove duplicates api.
+- Add the new extract text API.
+- The pivot filter could not be created successfully.
+
 ## Feature & Enhancements in Version 24.11
 
 -Add convert text feature on TextProcessingController.
