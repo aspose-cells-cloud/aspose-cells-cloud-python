@@ -48,6 +48,7 @@ class RangeCopyRequest(object):
         'operate' : 'str',
         'source' : 'Range',
         'target' : 'Range',
+        'target_workbook' : 'str',
         'paste_options' : 'PasteOptions'
     }
 
@@ -55,6 +56,7 @@ class RangeCopyRequest(object):
         'operate' : 'Operate' ,
         'source' : 'Source' ,
         'target' : 'Target' ,
+        'target_workbook' : 'TargetWorkbook' ,
         'paste_options' : 'PasteOptions' 
     }
 
@@ -71,7 +73,7 @@ class RangeCopyRequest(object):
             return self.container[attr]
         return None
 
-    def __init__(self,operate=None ,source=None ,target=None ,paste_options=None   ,**kw):
+    def __init__(self,operate=None ,source=None ,target=None ,target_workbook=None ,paste_options=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -83,6 +85,7 @@ class RangeCopyRequest(object):
         self.container['operate'] = None 
         self.container['source'] = None 
         self.container['target'] = None 
+        self.container['target_workbook'] = None 
         self.container['paste_options'] = None 
         params = locals()
         self.operate = operate
@@ -100,6 +103,12 @@ class RangeCopyRequest(object):
         self.target = target
         if 'target' in params:
             self.target = params["target"]
+
+
+             
+        self.target_workbook = target_workbook
+        if 'target_workbook' in params:
+            self.target_workbook = params["target_workbook"]
 
 
              
@@ -131,6 +140,13 @@ class RangeCopyRequest(object):
     @target.setter
     def target(self, target):
         self.container['target'] = target 
+    @property
+    def target_workbook(self):
+        return self.container['target_workbook']
+
+    @target_workbook.setter
+    def target_workbook(self, target_workbook):
+        self.container['target_workbook'] = target_workbook 
     @property
     def paste_options(self):
         return self.container['paste_options']

@@ -30,18 +30,34 @@ class TestOneCase(unittest.TestCase):
     def test_one_case(self):
         remote_folder = 'TestData/In'
 
-        local_name = 'TestCase.xlsx'
-        remote_name = 'TestCase.xlsx'
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
+        source_name = 'Book1.xlsx'
+        target_name = 'myDocument.xlsx'
+
+        result = AuthUtil.Ready(self.api, source_name, remote_folder + '/' + source_name ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+        result = AuthUtil.Ready(self.api, target_name, remote_folder + '/' + target_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
 
-        top10Filter = Top10Filter(items= 1 ,is_percent= True ,field_index =0  )
-        filter_column = FilterColumn(filter_type='Top10Filter' , top10_filter = top10Filter )
-        autoFilter = AutoFilter(filter_columns= [filter_column] )
-        filter = PivotFilter(field_index= 0 ,filter_type= 'Count' ,auto_filter = autoFilter )
+        rangeOperateSource = Range(column_count= 3 ,first_column= 8 ,first_row= 4 ,row_count= 2, worksheet="Sheet1" )
+        rangeOperateTarget = Range(column_count= 3 ,first_column= 1,first_row= 1 ,row_count= 2 , worksheet="Sheet4")
+        rangeOperate = RangeCopyRequest(operate= 'CopyTo' ,source= rangeOperateSource ,target= rangeOperateTarget,target_workbook = remote_folder + '/' + target_name )
 
-        request =  PutWorksheetPivotTableFilterRequest( remote_name, 'Sheet4', 0, filter,need_re_calculate= True,folder= remote_folder,storage_name= '')
-        self.api.put_worksheet_pivot_table_filter(request)
+        request =  PostWorksheetCellsRangesCopyRequest( source_name, 'Sheet1', rangeOperate,   folder= remote_folder,storage_name= '')
+        self.api.post_worksheet_cells_ranges_copy(request)        
+        # remote_folder = 'TestData/In'
+
+        # local_name = 'TestCase.xlsx'
+        # remote_name = 'TestCase.xlsx'
+        # result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
+        # self.assertTrue(len(result.uploaded)>0) 
+
+        # top10Filter = Top10Filter(items= 1 ,is_percent= True ,field_index =0  )
+        # filter_column = FilterColumn(filter_type='Top10Filter' , top10_filter = top10Filter )
+        # autoFilter = AutoFilter(filter_columns= [filter_column] )
+        # filter = PivotFilter(field_index= 0 ,filter_type= 'Count' ,auto_filter = autoFilter )
+
+        # request =  PutWorksheetPivotTableFilterRequest( remote_name, 'Sheet4', 0, filter,need_re_calculate= True,folder= remote_folder,storage_name= '')
+        # self.api.put_worksheet_pivot_table_filter(request)
         
         
     def tearDown(self):
