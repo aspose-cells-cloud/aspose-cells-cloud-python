@@ -10,8 +10,8 @@ remote_folder = 'TestData/In'
 local_name = 'Book1.xlsx'
 remote_name = 'Book1.xlsx'
 
-rangeOperateSource = Range(column_count= 1 ,column_width= 10.0 ,first_row= 1 ,row_count= 10 )
-rangeOperateTarget = Range(column_count= 1 ,column_width= 10.0 ,first_row= 10 ,row_count= 10 )
+rangeOperateSource = Range(column_count= 3 ,first_column= 8 ,first_row= 3 ,row_count= 2 )
+rangeOperateTarget = Range(column_count= 3 ,first_column= 8 ,first_row= 13 ,row_count= 2 )
 rangeOperate = RangeCopyRequest(operate= 'copydata' ,source= rangeOperateSource ,target= rangeOperateTarget )
 mapFiles = { 
     local_name:  local_name             

@@ -50,7 +50,8 @@ class CopyOptions(object):
         'copy_names' : 'bool',
         'extend_to_adjacent_range' : 'bool',
         'refer_to_destination_sheet' : 'bool',
-        'refer_to_sheet_with_same_name' : 'bool'
+        'refer_to_sheet_with_same_name' : 'bool',
+        'copy_theme' : 'bool'
     }
 
     attribute_map = {
@@ -59,7 +60,8 @@ class CopyOptions(object):
         'copy_names' : 'CopyNames' ,
         'extend_to_adjacent_range' : 'ExtendToAdjacentRange' ,
         'refer_to_destination_sheet' : 'ReferToDestinationSheet' ,
-        'refer_to_sheet_with_same_name' : 'ReferToSheetWithSameName' 
+        'refer_to_sheet_with_same_name' : 'ReferToSheetWithSameName' ,
+        'copy_theme' : 'CopyTheme' 
     }
 
     @staticmethod
@@ -75,7 +77,7 @@ class CopyOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,column_character_width=None ,copy_invalid_formulas_as_values=None ,copy_names=None ,extend_to_adjacent_range=None ,refer_to_destination_sheet=None ,refer_to_sheet_with_same_name=None   ,**kw):
+    def __init__(self,column_character_width=None ,copy_invalid_formulas_as_values=None ,copy_names=None ,extend_to_adjacent_range=None ,refer_to_destination_sheet=None ,refer_to_sheet_with_same_name=None ,copy_theme=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -90,6 +92,7 @@ class CopyOptions(object):
         self.container['extend_to_adjacent_range'] = None 
         self.container['refer_to_destination_sheet'] = None 
         self.container['refer_to_sheet_with_same_name'] = None 
+        self.container['copy_theme'] = None 
         params = locals()
         self.column_character_width = column_character_width
         if 'column_character_width' in params:
@@ -124,6 +127,12 @@ class CopyOptions(object):
         self.refer_to_sheet_with_same_name = refer_to_sheet_with_same_name
         if 'refer_to_sheet_with_same_name' in params:
             self.refer_to_sheet_with_same_name = params["refer_to_sheet_with_same_name"]
+
+
+             
+        self.copy_theme = copy_theme
+        if 'copy_theme' in params:
+            self.copy_theme = params["copy_theme"]
 
 
              
@@ -170,6 +179,13 @@ class CopyOptions(object):
     @refer_to_sheet_with_same_name.setter
     def refer_to_sheet_with_same_name(self, refer_to_sheet_with_same_name):
         self.container['refer_to_sheet_with_same_name'] = refer_to_sheet_with_same_name 
+    @property
+    def copy_theme(self):
+        return self.container['copy_theme']
+
+    @copy_theme.setter
+    def copy_theme(self, copy_theme):
+        self.container['copy_theme'] = copy_theme 
 
     def to_dict(self):
         """

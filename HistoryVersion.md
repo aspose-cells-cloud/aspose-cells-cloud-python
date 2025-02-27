@@ -1,3 +1,7 @@
+## Feature & Enhancements in Version 25.1
+
+- Add the new API for splitting text in the cell.
+- Optimize pivot table filter-related APIs.
 
 ## Feature & Enhancements in Version 24.12
 

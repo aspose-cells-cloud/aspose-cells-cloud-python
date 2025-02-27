@@ -34,7 +34,7 @@ from six.moves.urllib.parse import quote
 
 class GetWorksheetWithFormatRequest(object):
 
-    def __init__(self , name ,sheet_name ,format =None ,vertical_resolution =None ,horizontal_resolution =None ,area =None ,page_index =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,format =None ,vertical_resolution =None ,horizontal_resolution =None ,area =None ,page_index =None ,one_page_per_sheet =None ,print_headings =None ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.format = format 
@@ -42,6 +42,8 @@ class GetWorksheetWithFormatRequest(object):
         self.horizontal_resolution = horizontal_resolution 
         self.area = area 
         self.page_index = page_index 
+        self.one_page_per_sheet = one_page_per_sheet 
+        self.print_headings = print_headings 
         self.folder = folder 
         self.storage_name = storage_name 
     def create_http_request(self, api_client):
@@ -74,6 +76,10 @@ class GetWorksheetWithFormatRequest(object):
             query_params.append(('area',self.area ))
         if self.page_index is not None:
             query_params.append(('pageIndex',self.page_index ))
+        if self.one_page_per_sheet is not None:
+            query_params.append(('onePagePerSheet',self.one_page_per_sheet ))
+        if self.print_headings is not None:
+            query_params.append(('printHeadings',self.print_headings ))
         if self.folder is not None:
             query_params.append(('folder',self.folder ))
         if self.storage_name is not None:
