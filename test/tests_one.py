@@ -30,20 +30,43 @@ class TestOneCase(unittest.TestCase):
     def test_one_case(self):
         remote_folder = 'TestData/In'
 
-        source_name = 'Book1.xlsx'
-        target_name = 'myDocument.xlsx'
 
-        result = AuthUtil.Ready(self.api, source_name, remote_folder + '/' + source_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-        result = AuthUtil.Ready(self.api, target_name, remote_folder + '/' + target_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
+        local_name = 'ExampleData.xlsx'
+        remote_name = 'ExampleData.xlsx'
 
-        rangeOperateSource = Range(column_count= 3 ,first_column= 8 ,first_row= 4 ,row_count= 2, worksheet="Sheet1" )
-        rangeOperateTarget = Range(column_count= 3 ,first_column= 1,first_row= 1 ,row_count= 2 , worksheet="Sheet4")
-        rangeOperate = RangeCopyRequest(operate= 'CopyTo' ,source= rangeOperateSource ,target= rangeOperateTarget,target_workbook = remote_folder + '/' + target_name )
+        mapFiles = { 
+            local_name:  "TestData/" + local_name             
+        }
+        request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
+        self.api.upload_file(request)
 
-        request =  PostWorksheetCellsRangesCopyRequest( source_name, 'Sheet1', rangeOperate,   folder= remote_folder,storage_name= '')
-        self.api.post_worksheet_cells_ranges_copy(request)        
+        image_or_print_options =  ImageOrPrintOptions(one_page_per_sheet= True)
+        page_setup = PageSetup( black_and_white= True, bottom_margin=0,left_margin=0,top_margin=0,right_margin=0,print_headings= False )
+        range_operate_source = Range(column_count= 28 ,first_column= 1 ,first_row= 1 ,row_count= 42 )
+
+        range_convert = RangeConvertRequest(source= range_operate_source ,image_or_print_options= image_or_print_options ,page_setup= page_setup , image_type= 'Png' )
+
+        request =  PostWorksheetCellsRangeToImageRequest( remote_name, 'Retention Analysis', range_convert,folder= remote_folder,storage_name= '')
+        print(request.name)
+        response = self.api.post_worksheet_cells_range_to_image(request)
+        print(response)
+        # source_name = 'Book1.xlsx'
+        # target_name = 'myDocument.xlsx'
+
+        # source_name = 'Book1.xlsx'
+        # result = AuthUtil.Ready(self.api, source_name, remote_folder + '/' + source_name ,  '')
+        # self.assertTrue(len(result.uploaded)>0) 
+
+
+
+        # rangeOperateSource = Range(column_count= 3 ,first_column= 8 ,first_row= 4 ,row_count= 2, worksheet="Sheet1" )
+        # rangeOperateTarget = Range(column_count= 3 ,first_column= 1,first_row= 1 ,row_count= 2 , worksheet="Sheet4")
+        # rangeOperate = RangeCopyRequest(operate= 'CopyTo' ,source= rangeOperateSource ,target= rangeOperateTarget,target_workbook = remote_folder + '/' + target_name )
+
+        # request =  PostWorksheetCellsRangesCopyRequest( source_name, 'Sheet1', rangeOperate,   folder= remote_folder,storage_name= '')
+        # self.api.post_worksheet_cells_ranges_copy(request)        
+
+
         # remote_folder = 'TestData/In'
 
         # local_name = 'TestCase.xlsx'

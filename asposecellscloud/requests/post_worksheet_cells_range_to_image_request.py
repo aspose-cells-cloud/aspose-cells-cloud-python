@@ -106,6 +106,6 @@ class PostWorksheetCellsRangeToImageRequest(object):
                 "auth_settings":auth_settings,
                 "body": body_params,
                 "collection_formats": collection_formats,
-                "response_type": 'CellsCloudResponse'  
+                "response_type": 'file'  
         }
 
