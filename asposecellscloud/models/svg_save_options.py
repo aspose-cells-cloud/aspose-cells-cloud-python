@@ -46,6 +46,18 @@ class SvgSaveOptions(object):
 
     swagger_types = {
         'sheet_index' : 'int',
+        'chart_image_type' : 'str',
+        'embeded_image_name_in_svg' : 'str',
+        'horizontal_resolution' : 'int',
+        'image_format' : 'str',
+        'is_cell_auto_fit' : 'bool',
+        'one_page_per_sheet' : 'bool',
+        'only_area' : 'bool',
+        'printing_page' : 'str',
+        'print_with_status_dialog' : 'bool',
+        'quality' : 'int',
+        'tiff_compression' : 'str',
+        'vertical_resolution' : 'int',
         'save_format' : 'str',
         'cached_file_folder' : 'str',
         'clear_data' : 'bool',
@@ -53,11 +65,28 @@ class SvgSaveOptions(object):
         'enable_http_compression' : 'bool',
         'refresh_chart_cache' : 'bool',
         'sort_names' : 'bool',
-        'validate_merged_areas' : 'bool'
+        'validate_merged_areas' : 'bool',
+        'merge_areas' : 'bool',
+        'sort_external_names' : 'bool',
+        'check_excel_restriction' : 'bool',
+        'update_smart_art' : 'bool',
+        'encrypt_document_properties' : 'bool'
     }
 
     attribute_map = {
         'sheet_index' : 'SheetIndex' ,
+        'chart_image_type' : 'ChartImageType' ,
+        'embeded_image_name_in_svg' : 'EmbededImageNameInSvg' ,
+        'horizontal_resolution' : 'HorizontalResolution' ,
+        'image_format' : 'ImageFormat' ,
+        'is_cell_auto_fit' : 'IsCellAutoFit' ,
+        'one_page_per_sheet' : 'OnePagePerSheet' ,
+        'only_area' : 'OnlyArea' ,
+        'printing_page' : 'PrintingPage' ,
+        'print_with_status_dialog' : 'PrintWithStatusDialog' ,
+        'quality' : 'Quality' ,
+        'tiff_compression' : 'TiffCompression' ,
+        'vertical_resolution' : 'VerticalResolution' ,
         'save_format' : 'SaveFormat' ,
         'cached_file_folder' : 'CachedFileFolder' ,
         'clear_data' : 'ClearData' ,
@@ -65,7 +94,12 @@ class SvgSaveOptions(object):
         'enable_http_compression' : 'EnableHTTPCompression' ,
         'refresh_chart_cache' : 'RefreshChartCache' ,
         'sort_names' : 'SortNames' ,
-        'validate_merged_areas' : 'ValidateMergedAreas' 
+        'validate_merged_areas' : 'ValidateMergedAreas' ,
+        'merge_areas' : 'MergeAreas' ,
+        'sort_external_names' : 'SortExternalNames' ,
+        'check_excel_restriction' : 'CheckExcelRestriction' ,
+        'update_smart_art' : 'UpdateSmartArt' ,
+        'encrypt_document_properties' : 'EncryptDocumentProperties' 
     }
 
     @staticmethod
@@ -81,7 +115,7 @@ class SvgSaveOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,sheet_index=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None   ,**kw):
+    def __init__(self,sheet_index=None ,chart_image_type=None ,embeded_image_name_in_svg=None ,horizontal_resolution=None ,image_format=None ,is_cell_auto_fit=None ,one_page_per_sheet=None ,only_area=None ,printing_page=None ,print_with_status_dialog=None ,quality=None ,tiff_compression=None ,vertical_resolution=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None ,merge_areas=None ,sort_external_names=None ,check_excel_restriction=None ,update_smart_art=None ,encrypt_document_properties=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -91,6 +125,18 @@ class SvgSaveOptions(object):
         SvgSaveOptions - a model defined in Swagger
         """
         self.container['sheet_index'] = None 
+        self.container['chart_image_type'] = None 
+        self.container['embeded_image_name_in_svg'] = None 
+        self.container['horizontal_resolution'] = None 
+        self.container['image_format'] = None 
+        self.container['is_cell_auto_fit'] = None 
+        self.container['one_page_per_sheet'] = None 
+        self.container['only_area'] = None 
+        self.container['printing_page'] = None 
+        self.container['print_with_status_dialog'] = None 
+        self.container['quality'] = None 
+        self.container['tiff_compression'] = None 
+        self.container['vertical_resolution'] = None 
         self.container['save_format'] = None 
         self.container['cached_file_folder'] = None 
         self.container['clear_data'] = None 
@@ -99,10 +145,87 @@ class SvgSaveOptions(object):
         self.container['refresh_chart_cache'] = None 
         self.container['sort_names'] = None 
         self.container['validate_merged_areas'] = None 
+        self.container['merge_areas'] = None 
+        self.container['sort_external_names'] = None 
+        self.container['check_excel_restriction'] = None 
+        self.container['update_smart_art'] = None 
+        self.container['encrypt_document_properties'] = None 
         params = locals()
         self.sheet_index = sheet_index
         if 'sheet_index' in params:
             self.sheet_index = params["sheet_index"]
+
+
+             
+        self.chart_image_type = chart_image_type
+        if 'chart_image_type' in params:
+            self.chart_image_type = params["chart_image_type"]
+
+
+             
+        self.embeded_image_name_in_svg = embeded_image_name_in_svg
+        if 'embeded_image_name_in_svg' in params:
+            self.embeded_image_name_in_svg = params["embeded_image_name_in_svg"]
+
+
+             
+        self.horizontal_resolution = horizontal_resolution
+        if 'horizontal_resolution' in params:
+            self.horizontal_resolution = params["horizontal_resolution"]
+
+
+             
+        self.image_format = image_format
+        if 'image_format' in params:
+            self.image_format = params["image_format"]
+
+
+             
+        self.is_cell_auto_fit = is_cell_auto_fit
+        if 'is_cell_auto_fit' in params:
+            self.is_cell_auto_fit = params["is_cell_auto_fit"]
+
+
+             
+        self.one_page_per_sheet = one_page_per_sheet
+        if 'one_page_per_sheet' in params:
+            self.one_page_per_sheet = params["one_page_per_sheet"]
+
+
+             
+        self.only_area = only_area
+        if 'only_area' in params:
+            self.only_area = params["only_area"]
+
+
+             
+        self.printing_page = printing_page
+        if 'printing_page' in params:
+            self.printing_page = params["printing_page"]
+
+
+             
+        self.print_with_status_dialog = print_with_status_dialog
+        if 'print_with_status_dialog' in params:
+            self.print_with_status_dialog = params["print_with_status_dialog"]
+
+
+             
+        self.quality = quality
+        if 'quality' in params:
+            self.quality = params["quality"]
+
+
+             
+        self.tiff_compression = tiff_compression
+        if 'tiff_compression' in params:
+            self.tiff_compression = params["tiff_compression"]
+
+
+             
+        self.vertical_resolution = vertical_resolution
+        if 'vertical_resolution' in params:
+            self.vertical_resolution = params["vertical_resolution"]
 
 
              
@@ -154,6 +277,36 @@ class SvgSaveOptions(object):
 
 
              
+        self.merge_areas = merge_areas
+        if 'merge_areas' in params:
+            self.merge_areas = params["merge_areas"]
+
+
+             
+        self.sort_external_names = sort_external_names
+        if 'sort_external_names' in params:
+            self.sort_external_names = params["sort_external_names"]
+
+
+             
+        self.check_excel_restriction = check_excel_restriction
+        if 'check_excel_restriction' in params:
+            self.check_excel_restriction = params["check_excel_restriction"]
+
+
+             
+        self.update_smart_art = update_smart_art
+        if 'update_smart_art' in params:
+            self.update_smart_art = params["update_smart_art"]
+
+
+             
+        self.encrypt_document_properties = encrypt_document_properties
+        if 'encrypt_document_properties' in params:
+            self.encrypt_document_properties = params["encrypt_document_properties"]
+
+
+             
 
     @property
     def sheet_index(self):
@@ -162,6 +315,90 @@ class SvgSaveOptions(object):
     @sheet_index.setter
     def sheet_index(self, sheet_index):
         self.container['sheet_index'] = sheet_index 
+    @property
+    def chart_image_type(self):
+        return self.container['chart_image_type']
+
+    @chart_image_type.setter
+    def chart_image_type(self, chart_image_type):
+        self.container['chart_image_type'] = chart_image_type 
+    @property
+    def embeded_image_name_in_svg(self):
+        return self.container['embeded_image_name_in_svg']
+
+    @embeded_image_name_in_svg.setter
+    def embeded_image_name_in_svg(self, embeded_image_name_in_svg):
+        self.container['embeded_image_name_in_svg'] = embeded_image_name_in_svg 
+    @property
+    def horizontal_resolution(self):
+        return self.container['horizontal_resolution']
+
+    @horizontal_resolution.setter
+    def horizontal_resolution(self, horizontal_resolution):
+        self.container['horizontal_resolution'] = horizontal_resolution 
+    @property
+    def image_format(self):
+        return self.container['image_format']
+
+    @image_format.setter
+    def image_format(self, image_format):
+        self.container['image_format'] = image_format 
+    @property
+    def is_cell_auto_fit(self):
+        return self.container['is_cell_auto_fit']
+
+    @is_cell_auto_fit.setter
+    def is_cell_auto_fit(self, is_cell_auto_fit):
+        self.container['is_cell_auto_fit'] = is_cell_auto_fit 
+    @property
+    def one_page_per_sheet(self):
+        return self.container['one_page_per_sheet']
+
+    @one_page_per_sheet.setter
+    def one_page_per_sheet(self, one_page_per_sheet):
+        self.container['one_page_per_sheet'] = one_page_per_sheet 
+    @property
+    def only_area(self):
+        return self.container['only_area']
+
+    @only_area.setter
+    def only_area(self, only_area):
+        self.container['only_area'] = only_area 
+    @property
+    def printing_page(self):
+        return self.container['printing_page']
+
+    @printing_page.setter
+    def printing_page(self, printing_page):
+        self.container['printing_page'] = printing_page 
+    @property
+    def print_with_status_dialog(self):
+        return self.container['print_with_status_dialog']
+
+    @print_with_status_dialog.setter
+    def print_with_status_dialog(self, print_with_status_dialog):
+        self.container['print_with_status_dialog'] = print_with_status_dialog 
+    @property
+    def quality(self):
+        return self.container['quality']
+
+    @quality.setter
+    def quality(self, quality):
+        self.container['quality'] = quality 
+    @property
+    def tiff_compression(self):
+        return self.container['tiff_compression']
+
+    @tiff_compression.setter
+    def tiff_compression(self, tiff_compression):
+        self.container['tiff_compression'] = tiff_compression 
+    @property
+    def vertical_resolution(self):
+        return self.container['vertical_resolution']
+
+    @vertical_resolution.setter
+    def vertical_resolution(self, vertical_resolution):
+        self.container['vertical_resolution'] = vertical_resolution 
     @property
     def save_format(self):
         return self.container['save_format']
@@ -218,6 +455,41 @@ class SvgSaveOptions(object):
     @validate_merged_areas.setter
     def validate_merged_areas(self, validate_merged_areas):
         self.container['validate_merged_areas'] = validate_merged_areas 
+    @property
+    def merge_areas(self):
+        return self.container['merge_areas']
+
+    @merge_areas.setter
+    def merge_areas(self, merge_areas):
+        self.container['merge_areas'] = merge_areas 
+    @property
+    def sort_external_names(self):
+        return self.container['sort_external_names']
+
+    @sort_external_names.setter
+    def sort_external_names(self, sort_external_names):
+        self.container['sort_external_names'] = sort_external_names 
+    @property
+    def check_excel_restriction(self):
+        return self.container['check_excel_restriction']
+
+    @check_excel_restriction.setter
+    def check_excel_restriction(self, check_excel_restriction):
+        self.container['check_excel_restriction'] = check_excel_restriction 
+    @property
+    def update_smart_art(self):
+        return self.container['update_smart_art']
+
+    @update_smart_art.setter
+    def update_smart_art(self, update_smart_art):
+        self.container['update_smart_art'] = update_smart_art 
+    @property
+    def encrypt_document_properties(self):
+        return self.container['encrypt_document_properties']
+
+    @encrypt_document_properties.setter
+    def encrypt_document_properties(self, encrypt_document_properties):
+        self.container['encrypt_document_properties'] = encrypt_document_properties 
 
     def to_dict(self):
         """

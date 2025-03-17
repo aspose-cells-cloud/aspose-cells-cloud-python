@@ -45,6 +45,32 @@ class MHtmlSaveOptions(object):
     """
 
     swagger_types = {
+        'export_page_headers' : 'bool',
+        'export_page_footers' : 'bool',
+        'export_row_column_headings' : 'bool',
+        'show_all_sheets' : 'bool',
+        'image_options' : 'ImageOrPrintOptions',
+        'save_as_single_file' : 'bool',
+        'export_hidden_worksheet' : 'bool',
+        'export_grid_lines' : 'bool',
+        'presentation_preference' : 'bool',
+        'cell_css_prefix' : 'str',
+        'table_css_id' : 'str',
+        'is_full_path_link' : 'bool',
+        'export_worksheet_css_separately' : 'bool',
+        'export_similar_border_style' : 'bool',
+        'merge_empty_td_forcely' : 'bool',
+        'export_cell_coordinate' : 'bool',
+        'export_extra_headings' : 'bool',
+        'export_headings' : 'bool',
+        'export_formula' : 'bool',
+        'add_tooltip_text' : 'bool',
+        'export_bogus_row_data' : 'bool',
+        'exclude_unused_styles' : 'bool',
+        'export_document_properties' : 'bool',
+        'export_worksheet_properties' : 'bool',
+        'export_workbook_properties' : 'bool',
+        'export_frame_scripts_and_properties' : 'bool',
         'attached_files_directory' : 'str',
         'attached_files_url_prefix' : 'str',
         'encoding' : 'str',
@@ -57,6 +83,7 @@ class MHtmlSaveOptions(object):
         'is_exp_image_to_temp_dir' : 'bool',
         'page_title' : 'str',
         'parse_html_tag_in_cell' : 'bool',
+        'cell_name_attribute' : 'str',
         'save_format' : 'str',
         'cached_file_folder' : 'str',
         'clear_data' : 'bool',
@@ -64,10 +91,41 @@ class MHtmlSaveOptions(object):
         'enable_http_compression' : 'bool',
         'refresh_chart_cache' : 'bool',
         'sort_names' : 'bool',
-        'validate_merged_areas' : 'bool'
+        'validate_merged_areas' : 'bool',
+        'merge_areas' : 'bool',
+        'sort_external_names' : 'bool',
+        'check_excel_restriction' : 'bool',
+        'update_smart_art' : 'bool',
+        'encrypt_document_properties' : 'bool'
     }
 
     attribute_map = {
+        'export_page_headers' : 'ExportPageHeaders' ,
+        'export_page_footers' : 'ExportPageFooters' ,
+        'export_row_column_headings' : 'ExportRowColumnHeadings' ,
+        'show_all_sheets' : 'ShowAllSheets' ,
+        'image_options' : 'ImageOptions' ,
+        'save_as_single_file' : 'SaveAsSingleFile' ,
+        'export_hidden_worksheet' : 'ExportHiddenWorksheet' ,
+        'export_grid_lines' : 'ExportGridLines' ,
+        'presentation_preference' : 'PresentationPreference' ,
+        'cell_css_prefix' : 'CellCssPrefix' ,
+        'table_css_id' : 'TableCssId' ,
+        'is_full_path_link' : 'IsFullPathLink' ,
+        'export_worksheet_css_separately' : 'ExportWorksheetCSSSeparately' ,
+        'export_similar_border_style' : 'ExportSimilarBorderStyle' ,
+        'merge_empty_td_forcely' : 'MergeEmptyTdForcely' ,
+        'export_cell_coordinate' : 'ExportCellCoordinate' ,
+        'export_extra_headings' : 'ExportExtraHeadings' ,
+        'export_headings' : 'ExportHeadings' ,
+        'export_formula' : 'ExportFormula' ,
+        'add_tooltip_text' : 'AddTooltipText' ,
+        'export_bogus_row_data' : 'ExportBogusRowData' ,
+        'exclude_unused_styles' : 'ExcludeUnusedStyles' ,
+        'export_document_properties' : 'ExportDocumentProperties' ,
+        'export_worksheet_properties' : 'ExportWorksheetProperties' ,
+        'export_workbook_properties' : 'ExportWorkbookProperties' ,
+        'export_frame_scripts_and_properties' : 'ExportFrameScriptsAndProperties' ,
         'attached_files_directory' : 'AttachedFilesDirectory' ,
         'attached_files_url_prefix' : 'AttachedFilesUrlPrefix' ,
         'encoding' : 'Encoding' ,
@@ -80,6 +138,7 @@ class MHtmlSaveOptions(object):
         'is_exp_image_to_temp_dir' : 'IsExpImageToTempDir' ,
         'page_title' : 'PageTitle' ,
         'parse_html_tag_in_cell' : 'ParseHtmlTagInCell' ,
+        'cell_name_attribute' : 'CellNameAttribute' ,
         'save_format' : 'SaveFormat' ,
         'cached_file_folder' : 'CachedFileFolder' ,
         'clear_data' : 'ClearData' ,
@@ -87,7 +146,12 @@ class MHtmlSaveOptions(object):
         'enable_http_compression' : 'EnableHTTPCompression' ,
         'refresh_chart_cache' : 'RefreshChartCache' ,
         'sort_names' : 'SortNames' ,
-        'validate_merged_areas' : 'ValidateMergedAreas' 
+        'validate_merged_areas' : 'ValidateMergedAreas' ,
+        'merge_areas' : 'MergeAreas' ,
+        'sort_external_names' : 'SortExternalNames' ,
+        'check_excel_restriction' : 'CheckExcelRestriction' ,
+        'update_smart_art' : 'UpdateSmartArt' ,
+        'encrypt_document_properties' : 'EncryptDocumentProperties' 
     }
 
     @staticmethod
@@ -103,7 +167,7 @@ class MHtmlSaveOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,attached_files_directory=None ,attached_files_url_prefix=None ,encoding=None ,export_active_worksheet_only=None ,export_chart_image_format=None ,export_images_as_base64=None ,hidden_col_display_type=None ,hidden_row_display_type=None ,html_cross_string_type=None ,is_exp_image_to_temp_dir=None ,page_title=None ,parse_html_tag_in_cell=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None   ,**kw):
+    def __init__(self,export_page_headers=None ,export_page_footers=None ,export_row_column_headings=None ,show_all_sheets=None ,image_options=None ,save_as_single_file=None ,export_hidden_worksheet=None ,export_grid_lines=None ,presentation_preference=None ,cell_css_prefix=None ,table_css_id=None ,is_full_path_link=None ,export_worksheet_css_separately=None ,export_similar_border_style=None ,merge_empty_td_forcely=None ,export_cell_coordinate=None ,export_extra_headings=None ,export_headings=None ,export_formula=None ,add_tooltip_text=None ,export_bogus_row_data=None ,exclude_unused_styles=None ,export_document_properties=None ,export_worksheet_properties=None ,export_workbook_properties=None ,export_frame_scripts_and_properties=None ,attached_files_directory=None ,attached_files_url_prefix=None ,encoding=None ,export_active_worksheet_only=None ,export_chart_image_format=None ,export_images_as_base64=None ,hidden_col_display_type=None ,hidden_row_display_type=None ,html_cross_string_type=None ,is_exp_image_to_temp_dir=None ,page_title=None ,parse_html_tag_in_cell=None ,cell_name_attribute=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None ,merge_areas=None ,sort_external_names=None ,check_excel_restriction=None ,update_smart_art=None ,encrypt_document_properties=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -112,6 +176,32 @@ class MHtmlSaveOptions(object):
         """
         MHtmlSaveOptions - a model defined in Swagger
         """
+        self.container['export_page_headers'] = None 
+        self.container['export_page_footers'] = None 
+        self.container['export_row_column_headings'] = None 
+        self.container['show_all_sheets'] = None 
+        self.container['image_options'] = None 
+        self.container['save_as_single_file'] = None 
+        self.container['export_hidden_worksheet'] = None 
+        self.container['export_grid_lines'] = None 
+        self.container['presentation_preference'] = None 
+        self.container['cell_css_prefix'] = None 
+        self.container['table_css_id'] = None 
+        self.container['is_full_path_link'] = None 
+        self.container['export_worksheet_css_separately'] = None 
+        self.container['export_similar_border_style'] = None 
+        self.container['merge_empty_td_forcely'] = None 
+        self.container['export_cell_coordinate'] = None 
+        self.container['export_extra_headings'] = None 
+        self.container['export_headings'] = None 
+        self.container['export_formula'] = None 
+        self.container['add_tooltip_text'] = None 
+        self.container['export_bogus_row_data'] = None 
+        self.container['exclude_unused_styles'] = None 
+        self.container['export_document_properties'] = None 
+        self.container['export_worksheet_properties'] = None 
+        self.container['export_workbook_properties'] = None 
+        self.container['export_frame_scripts_and_properties'] = None 
         self.container['attached_files_directory'] = None 
         self.container['attached_files_url_prefix'] = None 
         self.container['encoding'] = None 
@@ -124,6 +214,7 @@ class MHtmlSaveOptions(object):
         self.container['is_exp_image_to_temp_dir'] = None 
         self.container['page_title'] = None 
         self.container['parse_html_tag_in_cell'] = None 
+        self.container['cell_name_attribute'] = None 
         self.container['save_format'] = None 
         self.container['cached_file_folder'] = None 
         self.container['clear_data'] = None 
@@ -132,7 +223,168 @@ class MHtmlSaveOptions(object):
         self.container['refresh_chart_cache'] = None 
         self.container['sort_names'] = None 
         self.container['validate_merged_areas'] = None 
+        self.container['merge_areas'] = None 
+        self.container['sort_external_names'] = None 
+        self.container['check_excel_restriction'] = None 
+        self.container['update_smart_art'] = None 
+        self.container['encrypt_document_properties'] = None 
         params = locals()
+        self.export_page_headers = export_page_headers
+        if 'export_page_headers' in params:
+            self.export_page_headers = params["export_page_headers"]
+
+
+             
+        self.export_page_footers = export_page_footers
+        if 'export_page_footers' in params:
+            self.export_page_footers = params["export_page_footers"]
+
+
+             
+        self.export_row_column_headings = export_row_column_headings
+        if 'export_row_column_headings' in params:
+            self.export_row_column_headings = params["export_row_column_headings"]
+
+
+             
+        self.show_all_sheets = show_all_sheets
+        if 'show_all_sheets' in params:
+            self.show_all_sheets = params["show_all_sheets"]
+
+
+             
+        self.image_options = image_options
+        if 'image_options' in params:
+            self.image_options = params["image_options"]
+
+
+             
+        self.save_as_single_file = save_as_single_file
+        if 'save_as_single_file' in params:
+            self.save_as_single_file = params["save_as_single_file"]
+
+
+             
+        self.export_hidden_worksheet = export_hidden_worksheet
+        if 'export_hidden_worksheet' in params:
+            self.export_hidden_worksheet = params["export_hidden_worksheet"]
+
+
+             
+        self.export_grid_lines = export_grid_lines
+        if 'export_grid_lines' in params:
+            self.export_grid_lines = params["export_grid_lines"]
+
+
+             
+        self.presentation_preference = presentation_preference
+        if 'presentation_preference' in params:
+            self.presentation_preference = params["presentation_preference"]
+
+
+             
+        self.cell_css_prefix = cell_css_prefix
+        if 'cell_css_prefix' in params:
+            self.cell_css_prefix = params["cell_css_prefix"]
+
+
+             
+        self.table_css_id = table_css_id
+        if 'table_css_id' in params:
+            self.table_css_id = params["table_css_id"]
+
+
+             
+        self.is_full_path_link = is_full_path_link
+        if 'is_full_path_link' in params:
+            self.is_full_path_link = params["is_full_path_link"]
+
+
+             
+        self.export_worksheet_css_separately = export_worksheet_css_separately
+        if 'export_worksheet_css_separately' in params:
+            self.export_worksheet_css_separately = params["export_worksheet_css_separately"]
+
+
+             
+        self.export_similar_border_style = export_similar_border_style
+        if 'export_similar_border_style' in params:
+            self.export_similar_border_style = params["export_similar_border_style"]
+
+
+             
+        self.merge_empty_td_forcely = merge_empty_td_forcely
+        if 'merge_empty_td_forcely' in params:
+            self.merge_empty_td_forcely = params["merge_empty_td_forcely"]
+
+
+             
+        self.export_cell_coordinate = export_cell_coordinate
+        if 'export_cell_coordinate' in params:
+            self.export_cell_coordinate = params["export_cell_coordinate"]
+
+
+             
+        self.export_extra_headings = export_extra_headings
+        if 'export_extra_headings' in params:
+            self.export_extra_headings = params["export_extra_headings"]
+
+
+             
+        self.export_headings = export_headings
+        if 'export_headings' in params:
+            self.export_headings = params["export_headings"]
+
+
+             
+        self.export_formula = export_formula
+        if 'export_formula' in params:
+            self.export_formula = params["export_formula"]
+
+
+             
+        self.add_tooltip_text = add_tooltip_text
+        if 'add_tooltip_text' in params:
+            self.add_tooltip_text = params["add_tooltip_text"]
+
+
+             
+        self.export_bogus_row_data = export_bogus_row_data
+        if 'export_bogus_row_data' in params:
+            self.export_bogus_row_data = params["export_bogus_row_data"]
+
+
+             
+        self.exclude_unused_styles = exclude_unused_styles
+        if 'exclude_unused_styles' in params:
+            self.exclude_unused_styles = params["exclude_unused_styles"]
+
+
+             
+        self.export_document_properties = export_document_properties
+        if 'export_document_properties' in params:
+            self.export_document_properties = params["export_document_properties"]
+
+
+             
+        self.export_worksheet_properties = export_worksheet_properties
+        if 'export_worksheet_properties' in params:
+            self.export_worksheet_properties = params["export_worksheet_properties"]
+
+
+             
+        self.export_workbook_properties = export_workbook_properties
+        if 'export_workbook_properties' in params:
+            self.export_workbook_properties = params["export_workbook_properties"]
+
+
+             
+        self.export_frame_scripts_and_properties = export_frame_scripts_and_properties
+        if 'export_frame_scripts_and_properties' in params:
+            self.export_frame_scripts_and_properties = params["export_frame_scripts_and_properties"]
+
+
+             
         self.attached_files_directory = attached_files_directory
         if 'attached_files_directory' in params:
             self.attached_files_directory = params["attached_files_directory"]
@@ -205,6 +457,12 @@ class MHtmlSaveOptions(object):
 
 
              
+        self.cell_name_attribute = cell_name_attribute
+        if 'cell_name_attribute' in params:
+            self.cell_name_attribute = params["cell_name_attribute"]
+
+
+             
         self.save_format = save_format
         if 'save_format' in params:
             self.save_format = params["save_format"]
@@ -253,7 +511,219 @@ class MHtmlSaveOptions(object):
 
 
              
+        self.merge_areas = merge_areas
+        if 'merge_areas' in params:
+            self.merge_areas = params["merge_areas"]
 
+
+             
+        self.sort_external_names = sort_external_names
+        if 'sort_external_names' in params:
+            self.sort_external_names = params["sort_external_names"]
+
+
+             
+        self.check_excel_restriction = check_excel_restriction
+        if 'check_excel_restriction' in params:
+            self.check_excel_restriction = params["check_excel_restriction"]
+
+
+             
+        self.update_smart_art = update_smart_art
+        if 'update_smart_art' in params:
+            self.update_smart_art = params["update_smart_art"]
+
+
+             
+        self.encrypt_document_properties = encrypt_document_properties
+        if 'encrypt_document_properties' in params:
+            self.encrypt_document_properties = params["encrypt_document_properties"]
+
+
+             
+
+    @property
+    def export_page_headers(self):
+        return self.container['export_page_headers']
+
+    @export_page_headers.setter
+    def export_page_headers(self, export_page_headers):
+        self.container['export_page_headers'] = export_page_headers 
+    @property
+    def export_page_footers(self):
+        return self.container['export_page_footers']
+
+    @export_page_footers.setter
+    def export_page_footers(self, export_page_footers):
+        self.container['export_page_footers'] = export_page_footers 
+    @property
+    def export_row_column_headings(self):
+        return self.container['export_row_column_headings']
+
+    @export_row_column_headings.setter
+    def export_row_column_headings(self, export_row_column_headings):
+        self.container['export_row_column_headings'] = export_row_column_headings 
+    @property
+    def show_all_sheets(self):
+        return self.container['show_all_sheets']
+
+    @show_all_sheets.setter
+    def show_all_sheets(self, show_all_sheets):
+        self.container['show_all_sheets'] = show_all_sheets 
+    @property
+    def image_options(self):
+        return self.container['image_options']
+
+    @image_options.setter
+    def image_options(self, image_options):
+        self.container['image_options'] = image_options 
+    @property
+    def save_as_single_file(self):
+        return self.container['save_as_single_file']
+
+    @save_as_single_file.setter
+    def save_as_single_file(self, save_as_single_file):
+        self.container['save_as_single_file'] = save_as_single_file 
+    @property
+    def export_hidden_worksheet(self):
+        return self.container['export_hidden_worksheet']
+
+    @export_hidden_worksheet.setter
+    def export_hidden_worksheet(self, export_hidden_worksheet):
+        self.container['export_hidden_worksheet'] = export_hidden_worksheet 
+    @property
+    def export_grid_lines(self):
+        return self.container['export_grid_lines']
+
+    @export_grid_lines.setter
+    def export_grid_lines(self, export_grid_lines):
+        self.container['export_grid_lines'] = export_grid_lines 
+    @property
+    def presentation_preference(self):
+        return self.container['presentation_preference']
+
+    @presentation_preference.setter
+    def presentation_preference(self, presentation_preference):
+        self.container['presentation_preference'] = presentation_preference 
+    @property
+    def cell_css_prefix(self):
+        return self.container['cell_css_prefix']
+
+    @cell_css_prefix.setter
+    def cell_css_prefix(self, cell_css_prefix):
+        self.container['cell_css_prefix'] = cell_css_prefix 
+    @property
+    def table_css_id(self):
+        return self.container['table_css_id']
+
+    @table_css_id.setter
+    def table_css_id(self, table_css_id):
+        self.container['table_css_id'] = table_css_id 
+    @property
+    def is_full_path_link(self):
+        return self.container['is_full_path_link']
+
+    @is_full_path_link.setter
+    def is_full_path_link(self, is_full_path_link):
+        self.container['is_full_path_link'] = is_full_path_link 
+    @property
+    def export_worksheet_css_separately(self):
+        return self.container['export_worksheet_css_separately']
+
+    @export_worksheet_css_separately.setter
+    def export_worksheet_css_separately(self, export_worksheet_css_separately):
+        self.container['export_worksheet_css_separately'] = export_worksheet_css_separately 
+    @property
+    def export_similar_border_style(self):
+        return self.container['export_similar_border_style']
+
+    @export_similar_border_style.setter
+    def export_similar_border_style(self, export_similar_border_style):
+        self.container['export_similar_border_style'] = export_similar_border_style 
+    @property
+    def merge_empty_td_forcely(self):
+        return self.container['merge_empty_td_forcely']
+
+    @merge_empty_td_forcely.setter
+    def merge_empty_td_forcely(self, merge_empty_td_forcely):
+        self.container['merge_empty_td_forcely'] = merge_empty_td_forcely 
+    @property
+    def export_cell_coordinate(self):
+        return self.container['export_cell_coordinate']
+
+    @export_cell_coordinate.setter
+    def export_cell_coordinate(self, export_cell_coordinate):
+        self.container['export_cell_coordinate'] = export_cell_coordinate 
+    @property
+    def export_extra_headings(self):
+        return self.container['export_extra_headings']
+
+    @export_extra_headings.setter
+    def export_extra_headings(self, export_extra_headings):
+        self.container['export_extra_headings'] = export_extra_headings 
+    @property
+    def export_headings(self):
+        return self.container['export_headings']
+
+    @export_headings.setter
+    def export_headings(self, export_headings):
+        self.container['export_headings'] = export_headings 
+    @property
+    def export_formula(self):
+        return self.container['export_formula']
+
+    @export_formula.setter
+    def export_formula(self, export_formula):
+        self.container['export_formula'] = export_formula 
+    @property
+    def add_tooltip_text(self):
+        return self.container['add_tooltip_text']
+
+    @add_tooltip_text.setter
+    def add_tooltip_text(self, add_tooltip_text):
+        self.container['add_tooltip_text'] = add_tooltip_text 
+    @property
+    def export_bogus_row_data(self):
+        return self.container['export_bogus_row_data']
+
+    @export_bogus_row_data.setter
+    def export_bogus_row_data(self, export_bogus_row_data):
+        self.container['export_bogus_row_data'] = export_bogus_row_data 
+    @property
+    def exclude_unused_styles(self):
+        return self.container['exclude_unused_styles']
+
+    @exclude_unused_styles.setter
+    def exclude_unused_styles(self, exclude_unused_styles):
+        self.container['exclude_unused_styles'] = exclude_unused_styles 
+    @property
+    def export_document_properties(self):
+        return self.container['export_document_properties']
+
+    @export_document_properties.setter
+    def export_document_properties(self, export_document_properties):
+        self.container['export_document_properties'] = export_document_properties 
+    @property
+    def export_worksheet_properties(self):
+        return self.container['export_worksheet_properties']
+
+    @export_worksheet_properties.setter
+    def export_worksheet_properties(self, export_worksheet_properties):
+        self.container['export_worksheet_properties'] = export_worksheet_properties 
+    @property
+    def export_workbook_properties(self):
+        return self.container['export_workbook_properties']
+
+    @export_workbook_properties.setter
+    def export_workbook_properties(self, export_workbook_properties):
+        self.container['export_workbook_properties'] = export_workbook_properties 
+    @property
+    def export_frame_scripts_and_properties(self):
+        return self.container['export_frame_scripts_and_properties']
+
+    @export_frame_scripts_and_properties.setter
+    def export_frame_scripts_and_properties(self, export_frame_scripts_and_properties):
+        self.container['export_frame_scripts_and_properties'] = export_frame_scripts_and_properties 
     @property
     def attached_files_directory(self):
         return self.container['attached_files_directory']
@@ -339,6 +809,13 @@ class MHtmlSaveOptions(object):
     def parse_html_tag_in_cell(self, parse_html_tag_in_cell):
         self.container['parse_html_tag_in_cell'] = parse_html_tag_in_cell 
     @property
+    def cell_name_attribute(self):
+        return self.container['cell_name_attribute']
+
+    @cell_name_attribute.setter
+    def cell_name_attribute(self, cell_name_attribute):
+        self.container['cell_name_attribute'] = cell_name_attribute 
+    @property
     def save_format(self):
         return self.container['save_format']
 
@@ -394,6 +871,41 @@ class MHtmlSaveOptions(object):
     @validate_merged_areas.setter
     def validate_merged_areas(self, validate_merged_areas):
         self.container['validate_merged_areas'] = validate_merged_areas 
+    @property
+    def merge_areas(self):
+        return self.container['merge_areas']
+
+    @merge_areas.setter
+    def merge_areas(self, merge_areas):
+        self.container['merge_areas'] = merge_areas 
+    @property
+    def sort_external_names(self):
+        return self.container['sort_external_names']
+
+    @sort_external_names.setter
+    def sort_external_names(self, sort_external_names):
+        self.container['sort_external_names'] = sort_external_names 
+    @property
+    def check_excel_restriction(self):
+        return self.container['check_excel_restriction']
+
+    @check_excel_restriction.setter
+    def check_excel_restriction(self, check_excel_restriction):
+        self.container['check_excel_restriction'] = check_excel_restriction 
+    @property
+    def update_smart_art(self):
+        return self.container['update_smart_art']
+
+    @update_smart_art.setter
+    def update_smart_art(self, update_smart_art):
+        self.container['update_smart_art'] = update_smart_art 
+    @property
+    def encrypt_document_properties(self):
+        return self.container['encrypt_document_properties']
+
+    @encrypt_document_properties.setter
+    def encrypt_document_properties(self, encrypt_document_properties):
+        self.container['encrypt_document_properties'] = encrypt_document_properties 
 
     def to_dict(self):
         """

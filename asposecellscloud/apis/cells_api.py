@@ -81,6 +81,7 @@ class CellsApi(object):
                     self.get_access_token_time =  time.time()
 
     # <summary>
+    # Perform business analysis of data in Excel files.
     # </summary>
     # <param name="request">Request. <see cref="PostAnalyzeExcelRequest" /></param>
     def post_analyze_excel(self, request, **kwargs):
@@ -128,6 +129,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve the description of auto filters from a worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetAutoFilterRequest" /></param>
     def get_worksheet_auto_filter(self, request, **kwargs):
@@ -751,6 +753,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Get autoshapes description in worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetAutoshapesRequest" /></param>
     def get_worksheet_autoshapes(self, request, **kwargs):
@@ -846,6 +849,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Batch converting files that meet specific matching conditions.
     # </summary>
     # <param name="request">Request. <see cref="PostBatchConvertRequest" /></param>
     def post_batch_convert(self, request, **kwargs):
@@ -1133,6 +1137,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Clear cell area contents in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostClearContentsRequest" /></param>
     def post_clear_contents(self, request, **kwargs):
@@ -1900,6 +1905,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of worksheet columns.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetColumnsRequest" /></param>
     def get_worksheet_columns(self, request, **kwargs):
@@ -2427,6 +2433,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of rows in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetRowsRequest" /></param>
     def get_worksheet_rows(self, request, **kwargs):
@@ -3146,6 +3153,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve chart area description in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetChartAreaRequest" /></param>
     def get_chart_area(self, request, **kwargs):
@@ -3289,6 +3297,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of charts in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetChartsRequest" /></param>
     def get_worksheet_charts(self, request, **kwargs):
@@ -4440,6 +4449,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of conditional formattings in a worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetConditionalFormattingsRequest" /></param>
     def get_worksheet_conditional_formattings(self, request, **kwargs):
@@ -4871,6 +4881,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve workbooks in various formats.
     # </summary>
     # <param name="request">Request. <see cref="GetWorkbookRequest" /></param>
     def get_workbook(self, request, **kwargs):
@@ -5493,6 +5504,54 @@ class CellsApi(object):
 
 
     # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="PostConvertWorkbookRequest" /></param>
+    def post_convert_workbook(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.post_convert_workbook_with_http_info(request,**kwargs)
+        else:
+            (data) = self.post_convert_workbook_with_http_info(request,**kwargs)
+            return data
+
+    def post_convert_workbook_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_convert_workbook" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Export Excel internal elements or the workbook itself to various format files.
     # </summary>
     # <param name="request">Request. <see cref="PostExportRequest" /></param>
     def post_export(self, request, **kwargs):
@@ -6117,6 +6176,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of hyperlinks in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetHyperlinksRequest" /></param>
     def get_worksheet_hyperlinks(self, request, **kwargs):
@@ -6404,6 +6464,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Assemble data files with template files to generate files in various formats.
     # </summary>
     # <param name="request">Request. <see cref="PostAssembleRequest" /></param>
     def post_assemble(self, request, **kwargs):
@@ -7123,6 +7184,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of ListObjects in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetListObjectsRequest" /></param>
     def get_worksheet_list_objects(self, request, **kwargs):
@@ -7746,6 +7808,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of OLE objects in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetOleObjectsRequest" /></param>
     def get_worksheet_ole_objects(self, request, **kwargs):
@@ -8033,6 +8096,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of vertical page breaks in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetVerticalPageBreaksRequest" /></param>
     def get_vertical_page_breaks(self, request, **kwargs):
@@ -8512,6 +8576,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve page setup description in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetPageSetupRequest" /></param>
     def get_page_setup(self, request, **kwargs):
@@ -8943,6 +9008,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of pictures in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetPicturesRequest" /></param>
     def get_worksheet_pictures(self, request, **kwargs):
@@ -9063,6 +9129,54 @@ class CellsApi(object):
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method put_worksheet_add_picture" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # add new picture in the cells.
+    # </summary>
+    # <param name="request">Request. <see cref="AddPictureInCellRequest" /></param>
+    def add_picture_in_cell(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.add_picture_in_cell_with_http_info(request,**kwargs)
+        else:
+            (data) = self.add_picture_in_cell_with_http_info(request,**kwargs)
+            return data
+
+    def add_picture_in_cell_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method add_picture_in_cell" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -9230,6 +9344,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of pivottables  in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetPivotTablesRequest" /></param>
     def get_worksheet_pivot_tables(self, request, **kwargs):
@@ -10237,6 +10352,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of Excel file properties.
     # </summary>
     # <param name="request">Request. <see cref="GetDocumentPropertiesRequest" /></param>
     def get_document_properties(self, request, **kwargs):
@@ -10476,6 +10592,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Excel file digital signature.
     # </summary>
     # <param name="request">Request. <see cref="PostDigitalSignatureRequest" /></param>
     def post_digital_signature(self, request, **kwargs):
@@ -10955,6 +11072,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Copy content from the source range to the destination range in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="PostWorksheetCellsRangesCopyRequest" /></param>
     def post_worksheet_cells_ranges_copy(self, request, **kwargs):
@@ -11625,6 +11743,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of shapes in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetShapesRequest" /></param>
     def get_worksheet_shapes(self, request, **kwargs):
@@ -12008,6 +12127,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of sparkline groups in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetSparklineGroupsRequest" /></param>
     def get_worksheet_sparkline_groups(self, request, **kwargs):
@@ -12861,6 +12981,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve the description of the default style for the workbook .
     # </summary>
     # <param name="request">Request. <see cref="GetWorkbookDefaultStyleRequest" /></param>
     def get_workbook_default_style(self, request, **kwargs):
@@ -14012,6 +14133,55 @@ class CellsApi(object):
 
 
     # <summary>
+    # Get all style in the workbook.
+    # </summary>
+    # <param name="request">Request. <see cref="GetAllStylesRequest" /></param>
+    def get_all_styles(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.get_all_styles_with_http_info(request,**kwargs)
+        else:
+            (data) = self.get_all_styles_with_http_info(request,**kwargs)
+            return data
+
+    def get_all_styles_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_all_styles" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Retrieve the description of worksheets from a workbook.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetsRequest" /></param>
     def get_worksheets(self, request, **kwargs):
@@ -15883,6 +16053,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Retrieve descriptions of validations in the worksheet.
     # </summary>
     # <param name="request">Request. <see cref="GetWorksheetValidationsRequest" /></param>
     def get_worksheet_validations(self, request, **kwargs):

@@ -45,6 +45,8 @@ class XlsbSaveOptions(object):
     """
 
     swagger_types = {
+        'export_all_column_indexes' : 'bool',
+        'compression_type' : 'str',
         'save_format' : 'str',
         'cached_file_folder' : 'str',
         'clear_data' : 'bool',
@@ -52,10 +54,17 @@ class XlsbSaveOptions(object):
         'enable_http_compression' : 'bool',
         'refresh_chart_cache' : 'bool',
         'sort_names' : 'bool',
-        'validate_merged_areas' : 'bool'
+        'validate_merged_areas' : 'bool',
+        'merge_areas' : 'bool',
+        'sort_external_names' : 'bool',
+        'check_excel_restriction' : 'bool',
+        'update_smart_art' : 'bool',
+        'encrypt_document_properties' : 'bool'
     }
 
     attribute_map = {
+        'export_all_column_indexes' : 'ExportAllColumnIndexes' ,
+        'compression_type' : 'CompressionType' ,
         'save_format' : 'SaveFormat' ,
         'cached_file_folder' : 'CachedFileFolder' ,
         'clear_data' : 'ClearData' ,
@@ -63,7 +72,12 @@ class XlsbSaveOptions(object):
         'enable_http_compression' : 'EnableHTTPCompression' ,
         'refresh_chart_cache' : 'RefreshChartCache' ,
         'sort_names' : 'SortNames' ,
-        'validate_merged_areas' : 'ValidateMergedAreas' 
+        'validate_merged_areas' : 'ValidateMergedAreas' ,
+        'merge_areas' : 'MergeAreas' ,
+        'sort_external_names' : 'SortExternalNames' ,
+        'check_excel_restriction' : 'CheckExcelRestriction' ,
+        'update_smart_art' : 'UpdateSmartArt' ,
+        'encrypt_document_properties' : 'EncryptDocumentProperties' 
     }
 
     @staticmethod
@@ -79,7 +93,7 @@ class XlsbSaveOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None   ,**kw):
+    def __init__(self,export_all_column_indexes=None ,compression_type=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None ,merge_areas=None ,sort_external_names=None ,check_excel_restriction=None ,update_smart_art=None ,encrypt_document_properties=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -88,6 +102,8 @@ class XlsbSaveOptions(object):
         """
         XlsbSaveOptions - a model defined in Swagger
         """
+        self.container['export_all_column_indexes'] = None 
+        self.container['compression_type'] = None 
         self.container['save_format'] = None 
         self.container['cached_file_folder'] = None 
         self.container['clear_data'] = None 
@@ -96,7 +112,24 @@ class XlsbSaveOptions(object):
         self.container['refresh_chart_cache'] = None 
         self.container['sort_names'] = None 
         self.container['validate_merged_areas'] = None 
+        self.container['merge_areas'] = None 
+        self.container['sort_external_names'] = None 
+        self.container['check_excel_restriction'] = None 
+        self.container['update_smart_art'] = None 
+        self.container['encrypt_document_properties'] = None 
         params = locals()
+        self.export_all_column_indexes = export_all_column_indexes
+        if 'export_all_column_indexes' in params:
+            self.export_all_column_indexes = params["export_all_column_indexes"]
+
+
+             
+        self.compression_type = compression_type
+        if 'compression_type' in params:
+            self.compression_type = params["compression_type"]
+
+
+             
         self.save_format = save_format
         if 'save_format' in params:
             self.save_format = params["save_format"]
@@ -145,7 +178,51 @@ class XlsbSaveOptions(object):
 
 
              
+        self.merge_areas = merge_areas
+        if 'merge_areas' in params:
+            self.merge_areas = params["merge_areas"]
 
+
+             
+        self.sort_external_names = sort_external_names
+        if 'sort_external_names' in params:
+            self.sort_external_names = params["sort_external_names"]
+
+
+             
+        self.check_excel_restriction = check_excel_restriction
+        if 'check_excel_restriction' in params:
+            self.check_excel_restriction = params["check_excel_restriction"]
+
+
+             
+        self.update_smart_art = update_smart_art
+        if 'update_smart_art' in params:
+            self.update_smart_art = params["update_smart_art"]
+
+
+             
+        self.encrypt_document_properties = encrypt_document_properties
+        if 'encrypt_document_properties' in params:
+            self.encrypt_document_properties = params["encrypt_document_properties"]
+
+
+             
+
+    @property
+    def export_all_column_indexes(self):
+        return self.container['export_all_column_indexes']
+
+    @export_all_column_indexes.setter
+    def export_all_column_indexes(self, export_all_column_indexes):
+        self.container['export_all_column_indexes'] = export_all_column_indexes 
+    @property
+    def compression_type(self):
+        return self.container['compression_type']
+
+    @compression_type.setter
+    def compression_type(self, compression_type):
+        self.container['compression_type'] = compression_type 
     @property
     def save_format(self):
         return self.container['save_format']
@@ -202,6 +279,41 @@ class XlsbSaveOptions(object):
     @validate_merged_areas.setter
     def validate_merged_areas(self, validate_merged_areas):
         self.container['validate_merged_areas'] = validate_merged_areas 
+    @property
+    def merge_areas(self):
+        return self.container['merge_areas']
+
+    @merge_areas.setter
+    def merge_areas(self, merge_areas):
+        self.container['merge_areas'] = merge_areas 
+    @property
+    def sort_external_names(self):
+        return self.container['sort_external_names']
+
+    @sort_external_names.setter
+    def sort_external_names(self, sort_external_names):
+        self.container['sort_external_names'] = sort_external_names 
+    @property
+    def check_excel_restriction(self):
+        return self.container['check_excel_restriction']
+
+    @check_excel_restriction.setter
+    def check_excel_restriction(self, check_excel_restriction):
+        self.container['check_excel_restriction'] = check_excel_restriction 
+    @property
+    def update_smart_art(self):
+        return self.container['update_smart_art']
+
+    @update_smart_art.setter
+    def update_smart_art(self, update_smart_art):
+        self.container['update_smart_art'] = update_smart_art 
+    @property
+    def encrypt_document_properties(self):
+        return self.container['encrypt_document_properties']
+
+    @encrypt_document_properties.setter
+    def encrypt_document_properties(self, encrypt_document_properties):
+        self.container['encrypt_document_properties'] = encrypt_document_properties 
 
     def to_dict(self):
         """

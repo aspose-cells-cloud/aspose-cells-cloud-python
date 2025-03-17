@@ -1,3 +1,15 @@
+# Release History Version
+
+## Feature & Enhancements in Version 25.2
+
+- Support copying a range from one workbook to another workbook.
+- Add query parameters for image and print options to enhance the Get Worksheet API.
+- Added an API to count the number of Excel characters for cells cloud.
+- Added an API to count the number of Excel words for cells cloud.
+- Added an API to count the number of occurrences of a specified word in Excel for cells cloud
+- Add a new feature to support converting range to images.
+- Add a new feature to support converting worksheets to images.
+
 ## Feature & Enhancements in Version 25.1
 
 - Add the new API for splitting text in the cell.

@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/25.2)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/asposecellscloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/25.3)
 
 Aspose.Cells Cloud for Python enables you to handle various aspects of Excel files, including cell data, styles, formulas, charts, pivot tables, data validation, comments, drawing objects, images, hyperlinks, and so on. Additionally, it supports operations such as splitting, merging, repairing, and converting to other compatible file formats.
 
@@ -19,17 +19,15 @@ Enhance your Python applications with the [Aspose.Cells Cloud](https://products.
 - Import/Export: Facilitates importing data from various sources into spreadsheets and exporting spreadsheet data to other formats.
 - Security Management: Offers a range of security features like data encryption, access control, and permission management to safeguard the security and integrity of spreadsheet data.
 
-## Feature & Enhancements in Version 25.2
+## Feature & Enhancements in Version 25.3
 
 Full list of issues covering all changes in this release:
 
-- Support copying a range from one workbook to another workbook.
-- Add query parameters for image and print options to enhance the Get Worksheet API.
-- Added an API to count the number of Excel characters for cells cloud.
-- Added an API to count the number of Excel words for cells cloud.
-- Added an API to count the number of occurrences of a specified word in Excel for cells cloud
-- Add a new feature to support converting range to images.
-- Add a new feature to support converting worksheets to images
+- Optimized the properties of `SaveOptions` to enhance performance and flexibility.
+- Optimized the conversion method of `Workbook` for improved efficiency and reliability.
+- Developed a new API to retrieve a comprehensive list of all styles in a workbook.
+- Enhanced all save options to improve functionality and user experience.
+- Added a new API to insert images into cells, providing enhanced document customization capabilities.
 
 ## Support file format
 

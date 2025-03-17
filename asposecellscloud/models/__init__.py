@@ -280,6 +280,7 @@ from asposecellscloud.models.sparkline_groups_response import SparklineGroupsRes
 from asposecellscloud.models.spinner_response import SpinnerResponse
 from asposecellscloud.models.split_result_response import SplitResultResponse
 from asposecellscloud.models.style_response import StyleResponse
+from asposecellscloud.models.styles_response import StylesResponse
 from asposecellscloud.models.task_run_result_response import TaskRunResultResponse
 from asposecellscloud.models.text_box_response import TextBoxResponse
 from asposecellscloud.models.text_item_response import TextItemResponse
@@ -350,6 +351,7 @@ from asposecellscloud.models.base_operate_options import BaseOperateOptions
 from asposecellscloud.models.character_count_options import CharacterCountOptions
 from asposecellscloud.models.combination_source_data import CombinationSourceData
 from asposecellscloud.models.convert_text_options import ConvertTextOptions
+from asposecellscloud.models.convert_workbook_options import ConvertWorkbookOptions
 from asposecellscloud.models.convert_worksheet_options import ConvertWorksheetOptions
 from asposecellscloud.models.data_output_location import DataOutputLocation
 from asposecellscloud.models.extract_text_options import ExtractTextOptions
@@ -360,6 +362,7 @@ from asposecellscloud.models.remove_characters_options import RemoveCharactersOp
 from asposecellscloud.models.remove_duplicates_options import RemoveDuplicatesOptions
 from asposecellscloud.models.scope_item import ScopeItem
 from asposecellscloud.models.scope_options import ScopeOptions
+from asposecellscloud.models.specify_cells_object import SpecifyCellsObject
 from asposecellscloud.models.specify_words_count_options import SpecifyWordsCountOptions
 from asposecellscloud.models.split_text_options import SplitTextOptions
 from asposecellscloud.models.table_position_info import TablePositionInfo

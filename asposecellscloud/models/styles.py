@@ -45,7 +45,7 @@ class Styles(object):
     """
 
     swagger_types = {
-        'style_list' : 'list[LinkElement]',
+        'style_list' : 'list[Style]',
         'link' : 'Link'
     }
 

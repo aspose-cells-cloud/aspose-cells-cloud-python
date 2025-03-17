@@ -91,7 +91,12 @@ class HtmlSaveOptions(object):
         'enable_http_compression' : 'bool',
         'refresh_chart_cache' : 'bool',
         'sort_names' : 'bool',
-        'validate_merged_areas' : 'bool'
+        'validate_merged_areas' : 'bool',
+        'merge_areas' : 'bool',
+        'sort_external_names' : 'bool',
+        'check_excel_restriction' : 'bool',
+        'update_smart_art' : 'bool',
+        'encrypt_document_properties' : 'bool'
     }
 
     attribute_map = {
@@ -141,7 +146,12 @@ class HtmlSaveOptions(object):
         'enable_http_compression' : 'EnableHTTPCompression' ,
         'refresh_chart_cache' : 'RefreshChartCache' ,
         'sort_names' : 'SortNames' ,
-        'validate_merged_areas' : 'ValidateMergedAreas' 
+        'validate_merged_areas' : 'ValidateMergedAreas' ,
+        'merge_areas' : 'MergeAreas' ,
+        'sort_external_names' : 'SortExternalNames' ,
+        'check_excel_restriction' : 'CheckExcelRestriction' ,
+        'update_smart_art' : 'UpdateSmartArt' ,
+        'encrypt_document_properties' : 'EncryptDocumentProperties' 
     }
 
     @staticmethod
@@ -157,7 +167,7 @@ class HtmlSaveOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,export_page_headers=None ,export_page_footers=None ,export_row_column_headings=None ,show_all_sheets=None ,image_options=None ,save_as_single_file=None ,export_hidden_worksheet=None ,export_grid_lines=None ,presentation_preference=None ,cell_css_prefix=None ,table_css_id=None ,is_full_path_link=None ,export_worksheet_css_separately=None ,export_similar_border_style=None ,merge_empty_td_forcely=None ,export_cell_coordinate=None ,export_extra_headings=None ,export_headings=None ,export_formula=None ,add_tooltip_text=None ,export_bogus_row_data=None ,exclude_unused_styles=None ,export_document_properties=None ,export_worksheet_properties=None ,export_workbook_properties=None ,export_frame_scripts_and_properties=None ,attached_files_directory=None ,attached_files_url_prefix=None ,encoding=None ,export_active_worksheet_only=None ,export_chart_image_format=None ,export_images_as_base64=None ,hidden_col_display_type=None ,hidden_row_display_type=None ,html_cross_string_type=None ,is_exp_image_to_temp_dir=None ,page_title=None ,parse_html_tag_in_cell=None ,cell_name_attribute=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None   ,**kw):
+    def __init__(self,export_page_headers=None ,export_page_footers=None ,export_row_column_headings=None ,show_all_sheets=None ,image_options=None ,save_as_single_file=None ,export_hidden_worksheet=None ,export_grid_lines=None ,presentation_preference=None ,cell_css_prefix=None ,table_css_id=None ,is_full_path_link=None ,export_worksheet_css_separately=None ,export_similar_border_style=None ,merge_empty_td_forcely=None ,export_cell_coordinate=None ,export_extra_headings=None ,export_headings=None ,export_formula=None ,add_tooltip_text=None ,export_bogus_row_data=None ,exclude_unused_styles=None ,export_document_properties=None ,export_worksheet_properties=None ,export_workbook_properties=None ,export_frame_scripts_and_properties=None ,attached_files_directory=None ,attached_files_url_prefix=None ,encoding=None ,export_active_worksheet_only=None ,export_chart_image_format=None ,export_images_as_base64=None ,hidden_col_display_type=None ,hidden_row_display_type=None ,html_cross_string_type=None ,is_exp_image_to_temp_dir=None ,page_title=None ,parse_html_tag_in_cell=None ,cell_name_attribute=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None ,merge_areas=None ,sort_external_names=None ,check_excel_restriction=None ,update_smart_art=None ,encrypt_document_properties=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -213,6 +223,11 @@ class HtmlSaveOptions(object):
         self.container['refresh_chart_cache'] = None 
         self.container['sort_names'] = None 
         self.container['validate_merged_areas'] = None 
+        self.container['merge_areas'] = None 
+        self.container['sort_external_names'] = None 
+        self.container['check_excel_restriction'] = None 
+        self.container['update_smart_art'] = None 
+        self.container['encrypt_document_properties'] = None 
         params = locals()
         self.export_page_headers = export_page_headers
         if 'export_page_headers' in params:
@@ -493,6 +508,36 @@ class HtmlSaveOptions(object):
         self.validate_merged_areas = validate_merged_areas
         if 'validate_merged_areas' in params:
             self.validate_merged_areas = params["validate_merged_areas"]
+
+
+             
+        self.merge_areas = merge_areas
+        if 'merge_areas' in params:
+            self.merge_areas = params["merge_areas"]
+
+
+             
+        self.sort_external_names = sort_external_names
+        if 'sort_external_names' in params:
+            self.sort_external_names = params["sort_external_names"]
+
+
+             
+        self.check_excel_restriction = check_excel_restriction
+        if 'check_excel_restriction' in params:
+            self.check_excel_restriction = params["check_excel_restriction"]
+
+
+             
+        self.update_smart_art = update_smart_art
+        if 'update_smart_art' in params:
+            self.update_smart_art = params["update_smart_art"]
+
+
+             
+        self.encrypt_document_properties = encrypt_document_properties
+        if 'encrypt_document_properties' in params:
+            self.encrypt_document_properties = params["encrypt_document_properties"]
 
 
              
@@ -826,6 +871,41 @@ class HtmlSaveOptions(object):
     @validate_merged_areas.setter
     def validate_merged_areas(self, validate_merged_areas):
         self.container['validate_merged_areas'] = validate_merged_areas 
+    @property
+    def merge_areas(self):
+        return self.container['merge_areas']
+
+    @merge_areas.setter
+    def merge_areas(self, merge_areas):
+        self.container['merge_areas'] = merge_areas 
+    @property
+    def sort_external_names(self):
+        return self.container['sort_external_names']
+
+    @sort_external_names.setter
+    def sort_external_names(self, sort_external_names):
+        self.container['sort_external_names'] = sort_external_names 
+    @property
+    def check_excel_restriction(self):
+        return self.container['check_excel_restriction']
+
+    @check_excel_restriction.setter
+    def check_excel_restriction(self, check_excel_restriction):
+        self.container['check_excel_restriction'] = check_excel_restriction 
+    @property
+    def update_smart_art(self):
+        return self.container['update_smart_art']
+
+    @update_smart_art.setter
+    def update_smart_art(self, update_smart_art):
+        self.container['update_smart_art'] = update_smart_art 
+    @property
+    def encrypt_document_properties(self):
+        return self.container['encrypt_document_properties']
+
+    @encrypt_document_properties.setter
+    def encrypt_document_properties(self, encrypt_document_properties):
+        self.container['encrypt_document_properties'] = encrypt_document_properties 
 
     def to_dict(self):
         """

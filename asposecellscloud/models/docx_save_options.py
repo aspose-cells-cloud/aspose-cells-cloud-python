@@ -70,7 +70,9 @@ class DocxSaveOptions(object):
         'enable_http_compression' : 'bool',
         'refresh_chart_cache' : 'bool',
         'sort_names' : 'bool',
-        'validate_merged_areas' : 'bool'
+        'validate_merged_areas' : 'bool',
+        'check_excel_restriction' : 'bool',
+        'encrypt_document_properties' : 'bool'
     }
 
     attribute_map = {
@@ -99,7 +101,9 @@ class DocxSaveOptions(object):
         'enable_http_compression' : 'EnableHTTPCompression' ,
         'refresh_chart_cache' : 'RefreshChartCache' ,
         'sort_names' : 'SortNames' ,
-        'validate_merged_areas' : 'ValidateMergedAreas' 
+        'validate_merged_areas' : 'ValidateMergedAreas' ,
+        'check_excel_restriction' : 'CheckExcelRestriction' ,
+        'encrypt_document_properties' : 'EncryptDocumentProperties' 
     }
 
     @staticmethod
@@ -115,7 +119,7 @@ class DocxSaveOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,default_font=None ,check_workbook_default_font=None ,check_font_compatibility=None ,is_font_substitution_char_granularity=None ,one_page_per_sheet=None ,all_columns_in_one_page_per_sheet=None ,ignore_error=None ,output_blank_page_when_nothing_to_print=None ,page_index=None ,page_count=None ,printing_page_type=None ,gridline_type=None ,text_cross_type=None ,default_edit_language=None ,emf_render_setting=None ,merge_areas=None ,sort_external_names=None ,update_smart_art=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None   ,**kw):
+    def __init__(self,default_font=None ,check_workbook_default_font=None ,check_font_compatibility=None ,is_font_substitution_char_granularity=None ,one_page_per_sheet=None ,all_columns_in_one_page_per_sheet=None ,ignore_error=None ,output_blank_page_when_nothing_to_print=None ,page_index=None ,page_count=None ,printing_page_type=None ,gridline_type=None ,text_cross_type=None ,default_edit_language=None ,emf_render_setting=None ,merge_areas=None ,sort_external_names=None ,update_smart_art=None ,save_format=None ,cached_file_folder=None ,clear_data=None ,create_directory=None ,enable_http_compression=None ,refresh_chart_cache=None ,sort_names=None ,validate_merged_areas=None ,check_excel_restriction=None ,encrypt_document_properties=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -150,6 +154,8 @@ class DocxSaveOptions(object):
         self.container['refresh_chart_cache'] = None 
         self.container['sort_names'] = None 
         self.container['validate_merged_areas'] = None 
+        self.container['check_excel_restriction'] = None 
+        self.container['encrypt_document_properties'] = None 
         params = locals()
         self.default_font = default_font
         if 'default_font' in params:
@@ -304,6 +310,18 @@ class DocxSaveOptions(object):
         self.validate_merged_areas = validate_merged_areas
         if 'validate_merged_areas' in params:
             self.validate_merged_areas = params["validate_merged_areas"]
+
+
+             
+        self.check_excel_restriction = check_excel_restriction
+        if 'check_excel_restriction' in params:
+            self.check_excel_restriction = params["check_excel_restriction"]
+
+
+             
+        self.encrypt_document_properties = encrypt_document_properties
+        if 'encrypt_document_properties' in params:
+            self.encrypt_document_properties = params["encrypt_document_properties"]
 
 
              
@@ -490,6 +508,20 @@ class DocxSaveOptions(object):
     @validate_merged_areas.setter
     def validate_merged_areas(self, validate_merged_areas):
         self.container['validate_merged_areas'] = validate_merged_areas 
+    @property
+    def check_excel_restriction(self):
+        return self.container['check_excel_restriction']
+
+    @check_excel_restriction.setter
+    def check_excel_restriction(self, check_excel_restriction):
+        self.container['check_excel_restriction'] = check_excel_restriction 
+    @property
+    def encrypt_document_properties(self):
+        return self.container['encrypt_document_properties']
+
+    @encrypt_document_properties.setter
+    def encrypt_document_properties(self, encrypt_document_properties):
+        self.container['encrypt_document_properties'] = encrypt_document_properties 
 
     def to_dict(self):
         """
