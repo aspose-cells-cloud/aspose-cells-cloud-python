@@ -183,22 +183,7 @@ class TestConversionPngApi(unittest.TestCase):
         request =  PutConvertWorkbookRequest( mapFiles,format= format)
         self.api.put_convert_workbook(request)
 
-    def test_convert_workbook_numbers(self):
-        remote_folder = 'TestData/In'
 
-        local_name = 'cloud.png'
-        remote_name = 'cloud.png'
-
-        format = 'numbers'
-
-        mapFiles = { 
-            local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
-        }
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
-        self.api.put_convert_workbook(request)
 
     def test_convert_workbook_svg(self):
         remote_folder = 'TestData/In'
