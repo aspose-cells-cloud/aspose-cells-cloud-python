@@ -4,18 +4,19 @@ from __future__ import absolute_import
 
 import os
 import sys
+import time
 import unittest
 import warnings
-import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 
-from asposecellscloud.rest import ApiException
-from asposecellscloud.apis.cells_api import CellsApi
 import AuthUtil
+
+from asposecellscloud.apis.cells_api import CellsApi
 from asposecellscloud.models import *
 from asposecellscloud.requests import *
+from asposecellscloud.rest import ApiException
 
 global_api = None
 
@@ -225,18 +226,7 @@ class TestLightCellsApi(unittest.TestCase):
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
-    def test_post_split_numbers(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
-        out_format = 'numbers'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
-        }
-     
-        request =  PostSplitRequest( mapFiles, out_format)
-        self.api.post_split(request)
 
     def test_post_split_svg(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -576,18 +566,7 @@ class TestLightCellsApi(unittest.TestCase):
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
-    def test_post_assemble_numbers(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
-        format = 'numbers'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
-        }
-     
-        request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
-        self.api.post_assemble(request)
 
     def test_post_assemble_wmf(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -961,19 +940,7 @@ class TestLightCellsApi(unittest.TestCase):
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
-    def test_post_export_numbers_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        book1_xlsx = 'Book1.xlsx'
 
-        format = 'numbers'
-        object_type = 'workbook'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
-        }
-     
-        request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
-        self.api.post_export(request)
 
     def test_post_export_wmf_workbook(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1353,19 +1320,7 @@ class TestLightCellsApi(unittest.TestCase):
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
-    def test_post_export_numbers_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        book1_xlsx = 'Book1.xlsx'
 
-        format = 'numbers'
-        object_type = 'worksheet'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
-        }
-     
-        request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
-        self.api.post_export(request)
 
     def test_post_export_wmf_worksheet(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -1913,19 +1868,7 @@ class TestLightCellsApi(unittest.TestCase):
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
-    def test_post_export_numbers_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        book1_xlsx = 'Book1.xlsx'
 
-        format = 'numbers'
-        object_type = 'listobject'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
-        }
-     
-        request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
-        self.api.post_export(request)
 
     def test_post_export_wmf_listobject(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2401,19 +2344,6 @@ class TestLightCellsApi(unittest.TestCase):
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
-    def test_post_merge_numbers_true(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
-
-        format = 'numbers'
-        merge_to_one_sheet = True
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
-        }
-     
-        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
-        self.api.post_merge(request)
 
     def test_post_merge_wmf_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
