@@ -26,13 +26,12 @@
 
 from __future__ import absolute_import
 
-import os
-import re
 import json
 import mimetypes
+import os
+import re
 import tempfile
 import threading
-
 from datetime import date, datetime
 
 # python 2 and python 3 compatibility library
@@ -88,7 +87,7 @@ class ApiClient(object):
             self.host = host
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Aspose.Cells.Cloud/25.3/python'
+        self.user_agent = 'Aspose.Cells.Cloud/25.3.1/python'
 
     @property
     def user_agent(self):
