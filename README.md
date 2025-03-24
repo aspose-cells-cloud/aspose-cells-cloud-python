@@ -91,11 +91,7 @@ from asposecellscloud.requests import *
 
 api  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'),"v3.0",os.getenv('CellsCloudApiBaseUrl'))
 
-mapFiles = { 
-    'Book1.xlsx':  'Book1.xlsx'          
-}
-
-request =  PutConvertWorkbookRequest( mapFiles,format= 'pdf')
+request =  PutConvertWorkbookRequest( { 'Book1.xlsx':  "./Book1.xlsx" },format= 'pdf')
 api.put_convert_workbook(request)
 
 ```
