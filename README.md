@@ -71,7 +71,7 @@ Full list of issues covering all changes in this release:
 
 To begin with Aspose.Cells Cloud, here's what you need to do:
 
-1. Sign up for an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/apps) to obtain your application details.
+1. Sign up for an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/apps) to obtain your client id and secret.
 2. Install the Aspose.Cells Cloud Python package from the [pypi](https://pypi.org/).
 
 ```bash
@@ -90,23 +90,12 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 
 api  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'),"v3.0",os.getenv('CellsCloudApiBaseUrl'))
-remote_folder = 'TestData/In'
-
-local_name = 'Book1.xlsx'
-remote_name = 'Book1.xlsx'
-
-format = 'csv'
 
 mapFiles = { 
-    local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
+    'Book1.xlsx':  'Book1.xlsx'          
 }
-mapFiles = { 
-    local_name:  local_name             
-}
-request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
-api.upload_file(request)
 
-request =  PutConvertWorkbookRequest( mapFiles,format= format)
+request =  PutConvertWorkbookRequest( mapFiles,format= 'pdf')
 api.put_convert_workbook(request)
 
 ```

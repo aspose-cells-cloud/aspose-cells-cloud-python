@@ -3,6 +3,7 @@
 from __future__ import absolute_import
 
 import os
+    import shutil
 import sys
 import time
 import unittest
@@ -35,7 +36,7 @@ class TestOneCase(unittest.TestCase):
         remote_name = 'ExampleData.xlsx'
 
         mapFiles = { 
-            local_name:  "TestData/" + local_name             
+            local_name:  "../TestData/" + local_name             
         }
         request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
         self.api.upload_file(request)
@@ -50,6 +51,8 @@ class TestOneCase(unittest.TestCase):
         print(request.name)
         response = self.api.post_worksheet_cells_range_to_image(request)
         print(response)
+        # os.rename(response, 'ExampleData.png')
+        shutil.move(response, 'ExampleData.png')
         # source_name = 'Book1.xlsx'
         # target_name = 'myDocument.xlsx'
 
