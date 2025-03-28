@@ -3,7 +3,7 @@
 from __future__ import absolute_import
 
 import os
-    import shutil
+import shutil
 import sys
 import time
 import unittest
@@ -32,27 +32,47 @@ class TestOneCase(unittest.TestCase):
         remote_folder = 'TestData/In'
 
 
-        local_name = 'ExampleData.xlsx'
-        remote_name = 'ExampleData.xlsx'
+        local_name = 'Book1.xlsx'
+        remote_name = 'Book1.xlsx'
 
-        mapFiles = { 
-            local_name:  "../TestData/" + local_name             
-        }
-        request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
-        self.api.upload_file(request)
+        with open("../TestData/" + local_name, 'rb') as f:
+            filename = os.path.basename(f.name)
+            filedata = f.read()
+            request = PutConvertWorkbookRequest({filename:filedata}, format='pdf')
+            response = self.api.put_convert_workbook(request)
+            shutil.move(response, 'ExampleData3.pdf')
 
-        image_or_print_options =  ImageOrPrintOptions(one_page_per_sheet= True)
-        page_setup = PageSetup( black_and_white= True, bottom_margin=0,left_margin=0,top_margin=0,right_margin=0,print_headings= False )
-        range_operate_source = Range(column_count= 28 ,first_column= 1 ,first_row= 1 ,row_count= 42 )
+        # with open("../TestData/" + local_name, 'rb') as f:
+        #     filename = os.path.basename(f.name)
+        #     filedata = f.read()
+        #     request = PutConvertWorkbookRequest(filedata, format='pdf')
+        #     response = self.api.put_convert_workbook(request)
+        #     shutil.move(response, 'ExampleData3.pdf')
 
-        range_convert = RangeConvertRequest(source= range_operate_source ,image_or_print_options= image_or_print_options ,page_setup= page_setup , image_type= 'Png' )
+        # mapFiles = {
+        #     local_name:  "../TestData/" + local_name
+        # }
+        # request = PutConvertWorkbookRequest(mapFiles, format= 'pdf')
 
-        request =  PostWorksheetCellsRangeToImageRequest( remote_name, 'Retention Analysis', range_convert,folder= remote_folder,storage_name= '')
-        print(request.name)
-        response = self.api.post_worksheet_cells_range_to_image(request)
-        print(response)
-        # os.rename(response, 'ExampleData.png')
-        shutil.move(response, 'ExampleData.png')
+
+        # request = PutConvertWorkbookRequest("../TestData/" + local_name, format='pdf')
+        # response = self.api.put_convert_workbook(request)
+        # shutil.move(response, 'ExampleData2.pdf')
+        # request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
+        # self.api.upload_file(request)
+        #
+        # image_or_print_options =  ImageOrPrintOptions(one_page_per_sheet= True)
+        # page_setup = PageSetup( black_and_white= True, bottom_margin=0,left_margin=0,top_margin=0,right_margin=0,print_headings= False )
+        # range_operate_source = Range(column_count= 28 ,first_column= 1 ,first_row= 1 ,row_count= 42 )
+        #
+        # range_convert = RangeConvertRequest(source= range_operate_source ,image_or_print_options= image_or_print_options ,page_setup= page_setup , image_type= 'Png' )
+        #
+        # request =  PostWorksheetCellsRangeToImageRequest( remote_name, 'Retention Analysis', range_convert,folder= remote_folder,storage_name= '')
+        # print(request.name)
+        # response = self.api.post_worksheet_cells_range_to_image(request)
+        # print(response)
+        # # os.rename(response, 'ExampleData.png')
+        # shutil.move(response, 'ExampleData.png')
         # source_name = 'Book1.xlsx'
         # target_name = 'myDocument.xlsx'
 
@@ -60,15 +80,12 @@ class TestOneCase(unittest.TestCase):
         # result = AuthUtil.Ready(self.api, source_name, remote_folder + '/' + source_name ,  '')
         # self.assertTrue(len(result.uploaded)>0) 
 
-
-
         # rangeOperateSource = Range(column_count= 3 ,first_column= 8 ,first_row= 4 ,row_count= 2, worksheet="Sheet1" )
         # rangeOperateTarget = Range(column_count= 3 ,first_column= 1,first_row= 1 ,row_count= 2 , worksheet="Sheet4")
         # rangeOperate = RangeCopyRequest(operate= 'CopyTo' ,source= rangeOperateSource ,target= rangeOperateTarget,target_workbook = remote_folder + '/' + target_name )
 
         # request =  PostWorksheetCellsRangesCopyRequest( source_name, 'Sheet1', rangeOperate,   folder= remote_folder,storage_name= '')
         # self.api.post_worksheet_cells_ranges_copy(request)        
-
 
         # remote_folder = 'TestData/In'
 

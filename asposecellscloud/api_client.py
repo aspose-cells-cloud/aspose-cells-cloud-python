@@ -471,14 +471,21 @@ class ApiClient(object):
             for k, v in iteritems(files):
                 if not v:
                     continue
-                file_names = v if type(v) is list else [v]
-                for n in file_names:
-                    with open(n, 'rb') as f:
-                        filename = os.path.basename(f.name)
-                        filedata = f.read()
-                        mimetype = mimetypes.\
-                            guess_type(filename)[0] or 'application/octet-stream'
-                        params.append(tuple([k, tuple([filename, filedata, mimetype])]))
+                # print(v)
+                print(k)
+                if isinstance(v,bytes) :
+                    print("bytes")
+                    mimetype = mimetypes. guess_type(k)[0] or 'application/octet-stream'
+                    params.append(tuple([k, tuple([k, v, mimetype])]))
+                else:
+                    file_names = v if type(v) is list else [v]
+                    for n in file_names:
+                        with open(n, 'rb') as f:
+                            filename = os.path.basename(f.name)
+                            filedata = f.read()
+                            mimetype = mimetypes.\
+                                guess_type(filename)[0] or 'application/octet-stream'
+                            params.append(tuple([k, tuple([filename, filedata, mimetype])]))
 
         return params
 

@@ -25,6 +25,7 @@
 """
 
 import json
+import os
 
 from six import iteritems
 from asposecellscloud import *
@@ -87,10 +88,13 @@ class PutConvertWorkbookRequest(object):
         local_var_files = {}
         if self.file is not None:            
             if isinstance(self.file,dict):
-                for filename , filecontext in  self.file.items():
+                for filename, filecontext in self.file.items():
                     local_var_files[filename] = filecontext
             else:
-                local_var_files['File'] = self.file   
+                if isinstance(self.file,bytes):
+                    local_var_files['File'] = self.file
+                else:
+                    local_var_files[os.path.basename(self.file)] = self.file
 
         body_params = None
         # HTTP header `Accept`
