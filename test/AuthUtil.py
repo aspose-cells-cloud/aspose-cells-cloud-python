@@ -36,10 +36,10 @@ from asposecellscloud.api_client import ApiClient
 from asposecellscloud.requests.upload_file_request import UploadFileRequest
 
 grantType = "client_credentials"
-clientId = os.getenv('CellsCloudTestClientId')
-clientSecret = os.getenv('CellsCloudTestClientSecret')
+clientId = os.getenv('CellsCloudClientId')
+clientSecret = os.getenv('CellsCloudClientSecret')
 def GetBaseUrl():
-    return os.getenv('CellsCloudTestApiBaseUrl')
+    return os.getenv('CellsCloudApiBaseUrl')
 def GetClientId():
     return clientId
 def GetClientSecret():

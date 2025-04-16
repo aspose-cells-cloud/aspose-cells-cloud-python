@@ -69,7 +69,7 @@ class UploadFileRequest(object):
                 for filename , filecontext in  self.upload_files.items():
                     local_var_files[filename] = filecontext
             else:
-                if isinstance(self.file,bytes):
+                if isinstance(self.upload_files,bytes):
                     local_var_files['File'] = self.upload_files
                 else:
                     local_var_files['UploadFiles'] = self.upload_files   
