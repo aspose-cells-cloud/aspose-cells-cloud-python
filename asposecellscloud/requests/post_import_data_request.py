@@ -25,6 +25,7 @@
 """
 
 import json
+import os
 
 from six import iteritems
 from asposecellscloud import *
@@ -34,12 +35,13 @@ from six.moves.urllib.parse import quote
 
 class PostImportDataRequest(object):
 
-    def __init__(self , name ,import_option =None ,folder =None ,storage_name =None ,region =None ):
+    def __init__(self , name ,import_option =None ,folder =None ,storage_name =None ,region =None ,fonts_location =None ):
         self.name = name 
         self.import_option = import_option 
         self.folder = folder 
         self.storage_name = storage_name 
         self.region = region 
+        self.fonts_location = fonts_location 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
@@ -59,6 +61,8 @@ class PostImportDataRequest(object):
             query_params.append(('storageName',self.storage_name ))
         if self.region is not None:
             query_params.append(('region',self.region ))
+        if self.fonts_location is not None:
+            query_params.append(('FontsLocation',self.fonts_location ))
 
         header_params = {}
 

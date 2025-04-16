@@ -1,11 +1,10 @@
 # coding: utf-8
 
 import sys
-
-from setuptools import find_packages, setup
+from setuptools import setup, find_packages
 
 NAME = "asposecellscloud"
-VERSION = "25.3.1"
+VERSION = "25.4"
 # To install the library, run the following
 #
 # python setup.py install

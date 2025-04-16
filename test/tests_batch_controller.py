@@ -102,5 +102,23 @@ class TestBatchControllerApi(unittest.TestCase):
         request =  PostBatchUnlockRequest( batchLockRequest)
         self.api.post_batch_unlock(request)
 
+    def test_post_batch_split(self):
+        remote_folder = 'TestData/In'
+
+        local_book1 = 'Book1.xlsx'
+        remote_book1 = 'Book1.xlsx'
+        local_my_doc = 'myDocument.xlsx'
+        remote_my_doc = 'myDocument.xlsx'
+
+        batchSplitRequestMatchCondition = MatchConditionRequest(regex_pattern= '(^Book)(.+)(xlsx$)' )
+        batchSplitRequest = BatchSplitRequest(source_folder= remote_folder ,format= 'Pdf' ,out_folder= 'OutResult' ,match_condition= batchSplitRequestMatchCondition )
+        result = AuthUtil.Ready(self.api, local_book1, remote_folder + '/' + remote_book1 ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+        result = AuthUtil.Ready(self.api, local_my_doc, remote_folder + '/' + remote_my_doc ,  '')
+        self.assertTrue(len(result.uploaded)>0) 
+     
+        request =  PostBatchSplitRequest( batchSplitRequest)
+        self.api.post_batch_split(request)
+
 if __name__ == '__main__':
     unittest.main()

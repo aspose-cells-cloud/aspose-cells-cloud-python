@@ -21,5 +21,5 @@ mapFiles = {
 request =  UploadFileRequest( mapFiles, remote_folder + '/' + remote_name,storage_name= '')
 api.upload_file(request)
  
-request =  PutConvertWorkbookRequest( mapFiles,format= format)
+request =  PutConvertWorkbookRequest( mapFiles, format)
 api.put_convert_workbook(request)

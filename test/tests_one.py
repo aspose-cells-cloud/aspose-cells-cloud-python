@@ -2,6 +2,7 @@
 
 from __future__ import absolute_import
 
+import base64
 import os
 import shutil
 import sys
@@ -29,18 +30,33 @@ class TestOneCase(unittest.TestCase):
            global_api = CellsApi(AuthUtil.GetClientId(),AuthUtil.GetClientSecret(),"v3.0",AuthUtil.GetBaseUrl())
         self.api = global_api
     def test_one_case(self):
-        remote_folder = 'TestData/In'
+        cellsApi = CellsApi(AuthUtil.GetClientId(),AuthUtil.GetClientSecret())
+        convertOption = ConvertWorkbookOptions ()
+        convertOption.convert_format = 'png'
+        convertOption.file_info = FileInfo()
+        convertOption.file_info.filename = "Book1.xlsx"          
+        with open("TestData/Book1.xlsx", "rb") as excel_file:
+            convertOption.file_info.file_content = base64.b64encode(excel_file.read()).decode("utf-8") 
+        convertOption.page_setup = PageSetup()
+        convertOption.page_setup.print_headings = True
+        convertWorkbookRequest = PostConvertWorkbookRequest(convertOption)
+        fileInfo = cellsApi.post_convert_workbook(convertWorkbookRequest)
+        file_bytes = base64.b64decode(fileInfo.file_content)
+        
+        with open(fileInfo.filename, "wb") as f:
+            f.write(file_bytes)
+        # remote_folder = 'TestData/In'
 
 
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
+        # local_name = 'Book1.xlsx'
+        # remote_name = 'Book1.xlsx'
 
-        with open("../TestData/" + local_name, 'rb') as f:
-            filename = os.path.basename(f.name)
-            filedata = f.read()
-            request = PutConvertWorkbookRequest({filename:filedata}, format='pdf')
-            response = self.api.put_convert_workbook(request)
-            shutil.move(response, 'ExampleData3.pdf')
+        # with open("../TestData/" + local_name, 'rb') as f:
+        #     filename = os.path.basename(f.name)
+        #     filedata = f.read()
+        #     request = PutConvertWorkbookRequest({filename:filedata}, format='pdf')
+        #     response = self.api.put_convert_workbook(request)
+        #     shutil.move(response, 'ExampleData3.pdf')
 
         # with open("../TestData/" + local_name, 'rb') as f:
         #     filename = os.path.basename(f.name)

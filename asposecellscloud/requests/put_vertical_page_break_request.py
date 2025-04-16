@@ -25,6 +25,7 @@
 """
 
 import json
+import os
 
 from six import iteritems
 from asposecellscloud import *

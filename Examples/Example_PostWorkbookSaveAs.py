@@ -13,7 +13,7 @@ remote_name = 'Book1.xlsx'
 format = 'csv'
 newfilename = 'OutResult/PostExcelSaveAs.csv'
 
-saveOptions = PdfSaveOptions(save_format= format )
+saveOptions = SaveOptions(save_format= format )
 mapFiles = { 
     local_name:  local_name             
 }

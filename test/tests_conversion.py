@@ -39,7 +39,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'csv'
         newfilename = 'OutResult/PostExcelSaveAs.csv'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -55,7 +55,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'html'
         newfilename = 'OutResult/PostExcelSaveAs.html'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -71,7 +71,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'mhtml'
         newfilename = 'OutResult/PostExcelSaveAs.mhtml'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -87,7 +87,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'ods'
         newfilename = 'OutResult/PostExcelSaveAs.ods'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -103,7 +103,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'pdf'
         newfilename = 'OutResult/PostExcelSaveAs.pdf'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -119,7 +119,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'xml'
         newfilename = 'OutResult/PostExcelSaveAs.xml'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -135,7 +135,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'txt'
         newfilename = 'OutResult/PostExcelSaveAs.txt'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -151,7 +151,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'tif'
         newfilename = 'OutResult/PostExcelSaveAs.tif'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -167,7 +167,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'xlsb'
         newfilename = 'OutResult/PostExcelSaveAs.xlsb'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -183,7 +183,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'xps'
         newfilename = 'OutResult/PostExcelSaveAs.xps'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -199,7 +199,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'png'
         newfilename = 'OutResult/PostExcelSaveAs.png'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -215,13 +215,12 @@ class TestConversionApi(unittest.TestCase):
         format = 'md'
         newfilename = 'OutResult/PostExcelSaveAs.md'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
         request =  PostWorkbookSaveAsRequest( remote_name, newfilename,save_options= saveOptions,folder= remote_folder)
         self.api.post_workbook_save_as(request)
-
 
     def test_workbook_save_as_svg__out_result_post_excel_save_assvg(self):
         remote_folder = 'TestData/In'
@@ -232,7 +231,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'svg'
         newfilename = 'OutResult/PostExcelSaveAs.svg'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -248,7 +247,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'docx'
         newfilename = 'OutResult/PostExcelSaveAs.docx'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -264,7 +263,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'pptx'
         newfilename = 'OutResult/PostExcelSaveAs.pptx'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -280,7 +279,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'json'
         newfilename = 'OutResult/PostExcelSaveAs.json'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -296,7 +295,7 @@ class TestConversionApi(unittest.TestCase):
         format = 'sql'
         newfilename = 'OutResult/PostExcelSaveAs.sql'
 
-        saveOptions = PdfSaveOptions(save_format= format )
+        saveOptions = SaveOptions(save_format= format )
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
@@ -457,8 +456,6 @@ class TestConversionApi(unittest.TestCase):
         request =  GetWorkbookRequest( remote_name,format= format,folder= remote_folder)
         self.api.get_workbook(request)
 
-
-
     def test_get_workbook_format_svg(self):
         remote_folder = 'TestData/In'
 
@@ -543,7 +540,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_xls(self):
@@ -560,7 +557,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_html(self):
@@ -577,7 +574,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_mhtml(self):
@@ -594,7 +591,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_ods(self):
@@ -611,7 +608,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_pdf(self):
@@ -628,7 +625,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_xml(self):
@@ -645,7 +642,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_txt(self):
@@ -662,7 +659,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_tif(self):
@@ -679,7 +676,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_xlsb(self):
@@ -696,7 +693,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_xps(self):
@@ -713,7 +710,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_png(self):
@@ -730,7 +727,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_md(self):
@@ -747,26 +744,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
-        self.api.put_convert_workbook(request)
-
-
-
-    def test_convert_workbook_wmf(self):
-        remote_folder = 'TestData/In'
-
-        local_name = 'Book1.xlsx'
-        remote_name = 'Book1.xlsx'
-
-        format = 'wmf'
-
-        mapFiles = { 
-            local_name: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +local_name             
-        }
-        result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
-        self.assertTrue(len(result.uploaded)>0) 
-     
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_svg(self):
@@ -783,7 +761,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_docx(self):
@@ -800,7 +778,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_pptx(self):
@@ -817,7 +795,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_json(self):
@@ -834,7 +812,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_sql(self):
@@ -851,7 +829,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format)
+        request =  PutConvertWorkbookRequest( mapFiles, format)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_csv__out_result_convert_workbookcsv(self):
@@ -869,7 +847,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_xls__out_result_convert_workbookxls(self):
@@ -887,7 +865,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_html__out_result_convert_workbookhtml(self):
@@ -905,7 +883,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_mhtml__out_result_convert_workbookmhtml(self):
@@ -923,7 +901,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_ods__out_result_convert_workbookods(self):
@@ -941,7 +919,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_pdf__out_result_convert_workbookpdf(self):
@@ -959,7 +937,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_xml__out_result_convert_workbookxml(self):
@@ -977,7 +955,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_txt__out_result_convert_workbooktxt(self):
@@ -995,7 +973,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_tif__out_result_convert_workbooktif(self):
@@ -1013,7 +991,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_xlsb__out_result_convert_workbookxlsb(self):
@@ -1031,7 +1009,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_xltm__out_result_convert_workbookxltm(self):
@@ -1049,7 +1027,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_xps__out_result_convert_workbookxps(self):
@@ -1067,7 +1045,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_png__out_result_convert_workbookpng(self):
@@ -1085,7 +1063,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_md__out_result_convert_workbookmd(self):
@@ -1103,10 +1081,8 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
-
-
 
     def test_convert_workbook_save_cloud_svg__out_result_convert_workbooksvg(self):
         remote_folder = 'TestData/In'
@@ -1123,7 +1099,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_docx__out_result_convert_workbookdocx(self):
@@ -1141,7 +1117,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_pptx__out_result_convert_workbookpptx(self):
@@ -1159,7 +1135,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_json__out_result_convert_workbookjson(self):
@@ -1177,7 +1153,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
     def test_convert_workbook_save_cloud_sql__out_result_convert_workbooksql(self):
@@ -1195,7 +1171,7 @@ class TestConversionApi(unittest.TestCase):
         result = AuthUtil.Ready(self.api, local_name, remote_folder + '/' + remote_name ,  '')
         self.assertTrue(len(result.uploaded)>0) 
      
-        request =  PutConvertWorkbookRequest( mapFiles,format= format,out_path= out_path)
+        request =  PutConvertWorkbookRequest( mapFiles, format,out_path= out_path)
         self.api.put_convert_workbook(request)
 
 if __name__ == '__main__':

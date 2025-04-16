@@ -25,6 +25,7 @@
 """
 
 import json
+import os
 
 from six import iteritems
 from asposecellscloud import *
@@ -34,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class GetWorkbookRequest(object):
 
-    def __init__(self , name ,format =None ,password =None ,is_auto_fit =None ,only_save_table =None ,folder =None ,out_path =None ,storage_name =None ,out_storage_name =None ,check_excel_restriction =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ):
+    def __init__(self , name ,format =None ,password =None ,is_auto_fit =None ,only_save_table =None ,folder =None ,out_path =None ,storage_name =None ,out_storage_name =None ,check_excel_restriction =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,fonts_location =None ):
         self.name = name 
         self.format = format 
         self.password = password 
@@ -48,6 +49,7 @@ class GetWorkbookRequest(object):
         self.region = region 
         self.page_wide_fit_on_per_sheet = page_wide_fit_on_per_sheet 
         self.page_tall_fit_on_per_sheet = page_tall_fit_on_per_sheet 
+        self.fonts_location = fonts_location 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
@@ -85,6 +87,8 @@ class GetWorkbookRequest(object):
             query_params.append(('pageWideFitOnPerSheet',self.page_wide_fit_on_per_sheet ))
         if self.page_tall_fit_on_per_sheet is not None:
             query_params.append(('pageTallFitOnPerSheet',self.page_tall_fit_on_per_sheet ))
+        if self.fonts_location is not None:
+            query_params.append(('FontsLocation',self.fonts_location ))
 
         header_params = {}
 

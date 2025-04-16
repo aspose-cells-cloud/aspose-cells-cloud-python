@@ -25,6 +25,7 @@
 """
 
 import json
+import os
 
 from six import iteritems
 from asposecellscloud import *
@@ -34,8 +35,9 @@ from six.moves.urllib.parse import quote
 
 class PostConvertWorkbookRequest(object):
 
-    def __init__(self , convert_workbook_options =None ):
+    def __init__(self , convert_workbook_options =None ,fonts_location =None ):
         self.convert_workbook_options = convert_workbook_options 
+        self.fonts_location = fonts_location 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'convert_workbook_options' is set
@@ -47,6 +49,9 @@ class PostConvertWorkbookRequest(object):
 
         path_params = {}
         query_params = []
+        if self.fonts_location is not None:
+            query_params.append(('FontsLocation',self.fonts_location ))
+
         header_params = {}
 
         form_params = []

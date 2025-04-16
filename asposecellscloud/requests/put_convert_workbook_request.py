@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PutConvertWorkbookRequest(object):
 
-    def __init__(self , file ,format =None ,password =None ,out_path =None ,storage_name =None ,check_excel_restriction =None ,stream_format =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,sheet_name =None ,page_index =None ):
+    def __init__(self , file ,format =None ,password =None ,out_path =None ,storage_name =None ,check_excel_restriction =None ,stream_format =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,sheet_name =None ,page_index =None ,fonts_location =None ):
         self.file = file 
         self.format = format 
         self.password = password 
@@ -48,11 +48,17 @@ class PutConvertWorkbookRequest(object):
         self.page_tall_fit_on_per_sheet = page_tall_fit_on_per_sheet 
         self.sheet_name = sheet_name 
         self.page_index = page_index 
+        self.fonts_location = fonts_location 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'file' is set
         if self.file is None:
             raise ValueError("Missing the required parameter `file` when calling `put_convert_workbook`")
+
+
+        # verify the required parameter 'format' is set
+        if self.format is None:
+            raise ValueError("Missing the required parameter `format` when calling `put_convert_workbook`")
 
 
         collection_formats = {}
@@ -81,6 +87,8 @@ class PutConvertWorkbookRequest(object):
             query_params.append(('sheetName',self.sheet_name ))
         if self.page_index is not None:
             query_params.append(('pageIndex',self.page_index ))
+        if self.fonts_location is not None:
+            query_params.append(('FontsLocation',self.fonts_location ))
 
         header_params = {}
 
@@ -88,13 +96,13 @@ class PutConvertWorkbookRequest(object):
         local_var_files = {}
         if self.file is not None:            
             if isinstance(self.file,dict):
-                for filename, filecontext in self.file.items():
+                for filename , filecontext in  self.file.items():
                     local_var_files[filename] = filecontext
             else:
                 if isinstance(self.file,bytes):
                     local_var_files['File'] = self.file
                 else:
-                    local_var_files[os.path.basename(self.file)] = self.file
+                    local_var_files['File'] = self.file   
 
         body_params = None
         # HTTP header `Accept`

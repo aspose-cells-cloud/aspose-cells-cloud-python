@@ -212,6 +212,8 @@ from asposecellscloud.models.chart_points_response import ChartPointsResponse
 from asposecellscloud.models.chart_response import ChartResponse
 from asposecellscloud.models.charts_response import ChartsResponse
 from asposecellscloud.models.check_box_response import CheckBoxResponse
+from asposecellscloud.models.checked_external_reference_response import CheckedExternalReferenceResponse
+from asposecellscloud.models.checked_formula_errors_response import CheckedFormulaErrorsResponse
 from asposecellscloud.models.column_response import ColumnResponse
 from asposecellscloud.models.columns_response import ColumnsResponse
 from asposecellscloud.models.combo_box_response import ComboBoxResponse
@@ -349,6 +351,8 @@ from asposecellscloud.models.pivot_tables import PivotTables
 from asposecellscloud.models.add_text_options import AddTextOptions
 from asposecellscloud.models.base_operate_options import BaseOperateOptions
 from asposecellscloud.models.character_count_options import CharacterCountOptions
+from asposecellscloud.models.check_external_reference_options import CheckExternalReferenceOptions
+from asposecellscloud.models.check_formula_error_options import CheckFormulaErrorOptions
 from asposecellscloud.models.combination_source_data import CombinationSourceData
 from asposecellscloud.models.convert_text_options import ConvertTextOptions
 from asposecellscloud.models.convert_workbook_options import ConvertWorkbookOptions

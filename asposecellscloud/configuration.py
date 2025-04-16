@@ -27,10 +27,11 @@
 
 from __future__ import absolute_import
 
-import logging
-import sys
-
 import urllib3
+
+import sys
+import logging
+
 from six import iteritems
 from six.moves import http_client as httplib
 
@@ -258,5 +259,5 @@ class Configuration(object):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: v3.0\n"\
-               "SDK Package Version: 25.3.1".\
+               "SDK Package Version: 25.4".\
                format(env=sys.platform, pyversion=sys.version)

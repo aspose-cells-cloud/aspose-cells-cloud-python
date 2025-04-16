@@ -25,6 +25,7 @@
 """
 
 import json
+import os
 
 from six import iteritems
 from asposecellscloud import *
@@ -34,13 +35,14 @@ from six.moves.urllib.parse import quote
 
 class PostExportRequest(object):
 
-    def __init__(self , file ,object_type =None ,format =None ,password =None ,check_excel_restriction =None ,region =None ):
+    def __init__(self , file ,object_type =None ,format =None ,password =None ,check_excel_restriction =None ,region =None ,fonts_location =None ):
         self.file = file 
         self.object_type = object_type 
         self.format = format 
         self.password = password 
         self.check_excel_restriction = check_excel_restriction 
         self.region = region 
+        self.fonts_location = fonts_location 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'file' is set
@@ -62,6 +64,8 @@ class PostExportRequest(object):
             query_params.append(('checkExcelRestriction',self.check_excel_restriction ))
         if self.region is not None:
             query_params.append(('region',self.region ))
+        if self.fonts_location is not None:
+            query_params.append(('FontsLocation',self.fonts_location ))
 
         header_params = {}
 
@@ -72,7 +76,10 @@ class PostExportRequest(object):
                 for filename , filecontext in  self.file.items():
                     local_var_files[filename] = filecontext
             else:
-                local_var_files['File'] = self.file   
+                if isinstance(self.file,bytes):
+                    local_var_files['File'] = self.file
+                else:
+                    local_var_files['File'] = self.file   
 
         body_params = None
         # HTTP header `Accept`

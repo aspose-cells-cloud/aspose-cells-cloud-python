@@ -26,12 +26,13 @@
 
 from __future__ import absolute_import
 
-import json
-import mimetypes
 import os
 import re
+import json
+import mimetypes
 import tempfile
 import threading
+
 from datetime import date, datetime
 
 # python 2 and python 3 compatibility library
@@ -87,7 +88,7 @@ class ApiClient(object):
             self.host = host
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Aspose.Cells.Cloud/25.3.1/python'
+        self.user_agent = 'Aspose.Cells.Cloud/25.4/python'
 
     @property
     def user_agent(self):
@@ -471,10 +472,7 @@ class ApiClient(object):
             for k, v in iteritems(files):
                 if not v:
                     continue
-                # print(v)
-                print(k)
                 if isinstance(v,bytes) :
-                    print("bytes")
                     mimetype = mimetypes. guess_type(k)[0] or 'application/octet-stream'
                     params.append(tuple([k, tuple([k, v, mimetype])]))
                 else:

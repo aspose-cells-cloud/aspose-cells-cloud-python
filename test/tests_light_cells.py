@@ -4,19 +4,18 @@ from __future__ import absolute_import
 
 import os
 import sys
-import time
 import unittest
 import warnings
+import time
 
 ABSPATH = os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + "/..")
 sys.path.append(ABSPATH)
 
-import AuthUtil
-
+from asposecellscloud.rest import ApiException
 from asposecellscloud.apis.cells_api import CellsApi
+import AuthUtil
 from asposecellscloud.models import *
 from asposecellscloud.requests import *
-from asposecellscloud.rest import ApiException
 
 global_api = None
 
@@ -32,262 +31,240 @@ class TestLightCellsApi(unittest.TestCase):
         pass
 
     def test_post_split_csv(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'csv'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_xls(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'xls'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_html(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'html'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_mhtml(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'mhtml'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_ods(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'ods'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_pdf(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'pdf'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_xml(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'xml'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_txt(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'txt'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_tif(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'tif'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_xlsb(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'xlsb'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_xlsx(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'xlsx'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_xps(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'xps'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_png(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'png'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_jpg(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'jpg'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_md(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'md'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
-
-
     def test_post_split_svg(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'svg'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_docx(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'docx'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_pptx(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'pptx'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_json(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'json'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
         self.api.post_split(request)
 
     def test_post_split_sql(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+        book1_xlsx = 'Book1.xlsx'
 
         out_format = 'sql'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostSplitRequest( mapFiles, out_format)
@@ -566,8 +543,6 @@ class TestLightCellsApi(unittest.TestCase):
         request =  PostAssembleRequest( mapFiles, 'ds',out_format= format)
         self.api.post_assemble(request)
 
-
-
     def test_post_assemble_wmf(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
@@ -647,1404 +622,1272 @@ class TestLightCellsApi(unittest.TestCase):
         self.api.post_assemble(request)
 
     def test_post_export_csv_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'csv'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xls_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xls'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_html_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'html'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_mhtml_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'mhtml'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_ods_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'ods'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_pdf_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'pdf'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xml_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xml'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_txt_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'txt'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_tif_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'tif'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xlsb_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xlsb'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xlsm_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xlsm'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xlsx_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xlsx'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xltm_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xltm'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xltx_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xltx'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xps_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xps'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_png_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'png'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_jpg_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'jpg'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_gif_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'gif'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_emf_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'emf'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_bmp_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'bmp'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_md_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'md'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
-
-
     def test_post_export_wmf_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'wmf'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_svg_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'svg'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_docx_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'docx'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_pptx_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'pptx'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_json_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'json'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_sql_workbook(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'sql'
         object_type = 'workbook'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_csv_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'csv'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xls_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xls'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_html_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'html'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_mhtml_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'mhtml'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_ods_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'ods'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_pdf_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'pdf'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xml_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xml'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_txt_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'txt'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_tif_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'tif'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xlsb_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xlsb'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xlsm_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xlsm'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xlsx_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xlsx'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xltm_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xltm'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xltx_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xltx'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xps_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xps'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_png_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'png'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_jpg_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'jpg'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_gif_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'gif'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_emf_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'emf'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_bmp_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'bmp'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_md_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'md'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
-        }
-     
-        request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
-        self.api.post_export(request)
-
-
-
-    def test_post_export_wmf_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        book1_xlsx = 'Book1.xlsx'
-
-        format = 'wmf'
-        object_type = 'worksheet'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_svg_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'svg'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_docx_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'docx'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_pptx_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'pptx'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_json_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'json'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_sql_worksheet(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'sql'
         object_type = 'worksheet'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_pdf_chart(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'pdf'
         object_type = 'chart'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_tif_chart(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'tif'
         object_type = 'chart'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_png_chart(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'png'
         object_type = 'chart'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_jpg_chart(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'jpg'
         object_type = 'chart'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_gif_chart(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'gif'
         object_type = 'chart'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_emf_chart(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'emf'
         object_type = 'chart'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_bmp_chart(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'bmp'
         object_type = 'chart'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_png_picture(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'png'
         object_type = 'picture'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_jpg_picture(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'jpg'
         object_type = 'picture'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_gif_picture(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'gif'
         object_type = 'picture'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_emf_picture(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'emf'
         object_type = 'picture'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_bmp_picture(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'bmp'
         object_type = 'picture'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_csv_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'csv'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xls_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xls'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_html_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'html'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_mhtml_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'mhtml'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_ods_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'ods'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_pdf_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'pdf'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xml_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xml'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_txt_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'txt'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_tif_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'tif'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xlsb_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xlsb'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xlsm_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xlsm'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xlsx_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xlsx'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xltm_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xltm'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xltx_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xltx'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_xps_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'xps'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_png_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'png'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_jpg_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'jpg'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_gif_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'gif'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_emf_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'emf'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_bmp_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'bmp'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_md_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'md'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
-        }
-     
-        request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
-        self.api.post_export(request)
-
-
-
-    def test_post_export_wmf_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        book1_xlsx = 'Book1.xlsx'
-
-        format = 'wmf'
-        object_type = 'listobject'
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_svg_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'svg'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_docx_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'docx'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_pptx_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'pptx'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_json_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'json'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_sql_listobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'sql'
         object_type = 'listobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_png_oleobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'png'
         object_type = 'oleobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_jpg_oleobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'jpg'
         object_type = 'oleobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_gif_oleobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'gif'
         object_type = 'oleobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_emf_oleobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'emf'
         object_type = 'oleobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_export_bmp_oleobject(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         book1_xlsx = 'Book1.xlsx'
 
         format = 'bmp'
         object_type = 'oleobject'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostExportRequest( mapFiles,object_type= object_type,format= format)
         self.api.post_export(request)
 
     def test_post_compress_50(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
         compress_level = 50
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
         request =  PostCompressRequest( mapFiles,compress_level= compress_level)
         self.api.post_compress(request)
 
     def test_post_compress_90(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
         compress_level = 90
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
         request =  PostCompressRequest( mapFiles,compress_level= compress_level)
@@ -2344,21 +2187,6 @@ class TestLightCellsApi(unittest.TestCase):
         request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
         self.api.post_merge(request)
 
-
-    def test_post_merge_wmf_true(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
-
-        format = 'wmf'
-        merge_to_one_sheet = True
-
-        mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
-        }
-     
-        request =  PostMergeRequest( mapFiles,out_format= format,merge_to_one_sheet= merge_to_one_sheet)
-        self.api.post_merge(request)
-
     def test_post_merge_svg_true(self):
         assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
@@ -2439,73 +2267,75 @@ class TestLightCellsApi(unittest.TestCase):
         request =  PostUnlockRequest( mapFiles, '123456')
         self.api.post_unlock(request)
 
-    def test_post_protect(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
+    def test_post_lock(self):
+        needlock_xlsx = 'needlock.xlsx'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            needlock_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +needlock_xlsx             
+        }
+     
+        request =  PostLockRequest( mapFiles, '123456')
+        self.api.post_lock(request)
+
+    def test_post_protect(self):
+        assembly_test_xlsx = 'assemblytest.xlsx'
+
+        mapFiles = { 
+            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx             
         }
         protectWorkbookRequest = ProtectWorkbookRequest(aways_open_read_only= True ,encrypt_with_password= '123456' )
-
 
      
         request =  PostProtectRequest( mapFiles, protectWorkbookRequest,password= '123456')
         self.api.post_protect(request)
 
     def test_post_protect__protect_workbook_request(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
         protectWorkbookRequest = ProtectWorkbookRequest(aways_open_read_only= True ,encrypt_with_password= '123456' )
-
 
      
         request =  PostProtectRequest( mapFiles, protectWorkbookRequest)
         self.api.post_protect(request)
 
     def test_post_search(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
         request =  PostSearchRequest( mapFiles, '12')
         self.api.post_search(request)
 
     def test_post_replace(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
         request =  PostReplaceRequest( mapFiles, '12', 'newtext')
         self.api.post_replace(request)
 
     def test_post_replace_only_sheetname(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
         request =  PostReplaceRequest( mapFiles, '12', 'newtext',sheetname= 'Sheet1')
         self.api.post_replace(request)
 
     def test_post_watermark(self):
-        assembly_test_xlsx = 'assemblytest.xlsx'
         data_source_xlsx = 'datasource.xlsx'
 
         mapFiles = { 
-            assembly_test_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +assembly_test_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
         }
      
         request =  PostWatermarkRequest( mapFiles, 'aspose.cells cloud sdk', '#773322')
@@ -2513,12 +2343,11 @@ class TestLightCellsApi(unittest.TestCase):
 
     def test_post_clear_objects_chart(self):
         book1_xlsx = 'Book1.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
         objecttype = 'chart'
 
         mapFiles = { 
-            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
@@ -2526,12 +2355,11 @@ class TestLightCellsApi(unittest.TestCase):
 
     def test_post_clear_objects_comment(self):
         book1_xlsx = 'Book1.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
         objecttype = 'comment'
 
         mapFiles = { 
-            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
@@ -2539,12 +2367,11 @@ class TestLightCellsApi(unittest.TestCase):
 
     def test_post_clear_objects_picture(self):
         book1_xlsx = 'Book1.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
         objecttype = 'picture'
 
         mapFiles = { 
-            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
@@ -2552,12 +2379,11 @@ class TestLightCellsApi(unittest.TestCase):
 
     def test_post_clear_objects_shape(self):
         book1_xlsx = 'Book1.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
         objecttype = 'shape'
 
         mapFiles = { 
-            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
@@ -2565,12 +2391,11 @@ class TestLightCellsApi(unittest.TestCase):
 
     def test_post_clear_objects_listobject(self):
         book1_xlsx = 'Book1.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
         objecttype = 'listobject'
 
         mapFiles = { 
-            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
@@ -2578,12 +2403,11 @@ class TestLightCellsApi(unittest.TestCase):
 
     def test_post_clear_objects_hyperlink(self):
         book1_xlsx = 'Book1.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
         objecttype = 'hyperlink'
 
         mapFiles = { 
-            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
@@ -2591,12 +2415,11 @@ class TestLightCellsApi(unittest.TestCase):
 
     def test_post_clear_objects_oleobject(self):
         book1_xlsx = 'Book1.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
         objecttype = 'oleobject'
 
         mapFiles = { 
-            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
@@ -2604,12 +2427,11 @@ class TestLightCellsApi(unittest.TestCase):
 
     def test_post_clear_objects_pivottable(self):
         book1_xlsx = 'Book1.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
         objecttype = 'pivottable'
 
         mapFiles = { 
-            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
@@ -2617,12 +2439,11 @@ class TestLightCellsApi(unittest.TestCase):
 
     def test_post_clear_objects_validation(self):
         book1_xlsx = 'Book1.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
         objecttype = 'validation'
 
         mapFiles = { 
-            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)
@@ -2630,12 +2451,11 @@ class TestLightCellsApi(unittest.TestCase):
 
     def test_post_clear_objects__background(self):
         book1_xlsx = 'Book1.xlsx'
-        data_source_xlsx = 'datasource.xlsx'
 
         objecttype = 'Background'
 
         mapFiles = { 
-            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx ,data_source_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +data_source_xlsx             
+            book1_xlsx: os.path.dirname(os.path.realpath(__file__)) + "/../TestData/" +book1_xlsx             
         }
      
         request =  PostClearObjectsRequest( mapFiles, objecttype)

@@ -1,5 +1,13 @@
 # Release History Version
 
+## Feature & Enhancements in Version 25.3
+
+- Optimized the properties of `SaveOptions` to enhance performance and flexibility.
+- Optimized the conversion method of `Workbook` for improved efficiency and reliability.
+- Developed a new API to retrieve a comprehensive list of all styles in a workbook.
+- Enhanced all save options to improve functionality and user experience.
+- Added a new API to insert images into cells, providing enhanced document customization capabilities.
+
 ## Feature & Enhancements in Version 25.2
 
 - Support copying a range from one workbook to another workbook.

@@ -25,6 +25,7 @@
 """
 
 import json
+import os
 
 from six import iteritems
 from asposecellscloud import *
@@ -80,7 +81,10 @@ class PostClearObjectsRequest(object):
                 for filename , filecontext in  self.file.items():
                     local_var_files[filename] = filecontext
             else:
-                local_var_files['File'] = self.file   
+                if isinstance(self.file,bytes):
+                    local_var_files['File'] = self.file
+                else:
+                    local_var_files['File'] = self.file   
 
         body_params = None
         # HTTP header `Accept`
