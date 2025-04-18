@@ -64,7 +64,5 @@ target/
 .ipynb_checkpoints
 /.vscode
 /.swagger-codegen
-test-reports
 .idea
-test/
-TestData/
+integrationtests/

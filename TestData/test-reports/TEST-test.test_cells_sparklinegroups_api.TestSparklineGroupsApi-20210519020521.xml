@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.test_cells_sparklinegroups_api.TestSparklineGroupsApi-20210519020521" tests="1" file="test/test_cells_sparklinegroups_api.py" time="2.567" timestamp="2021-05-19T02:07:56" failures="0" errors="0" skipped="0">
-	<testcase classname="test.test_cells_sparklinegroups_api.TestSparklineGroupsApi" name="test_cells_sparklinegroups_gppd" time="2.567" timestamp="2021-05-19T02:07:56" file="test\test_cells_sparklinegroups_api.py" line="32">
-		<!--
-        Test case for test_cells_sparklinegroups_gppd
-
-        -->
-	</testcase>
-</testsuite>
