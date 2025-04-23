@@ -16,4 +16,4 @@ instance  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClient
 instance.upload_file(  UploadFileRequest( CompanySalesXlsx, RemoteFolder + '/' + CompanySalesXlsx))
 instance.upload_file(  UploadFileRequest( EmployeeSalesSummaryXlsx, RemoteFolder + '/' + EmployeeSalesSummaryXlsx))
 
-instance.post_batch_convert( BatchConvertRequest( source_folder= RemoteFolder , format="Pdf" , out_folder=RemoteOutputFolder , match_condition=  MatchConditionRequest( regex_pattern= "*" )))
+instance.post_batch_split( PostBatchSplitRequest(  batch_split_request= BatchSplitRequest( source_folder= RemoteFolder , format="png" , out_folder=RemoteOutputFolder , match_condition=  MatchConditionRequest( regex_pattern= 'xlsx' ))))
