@@ -103,11 +103,10 @@ Full list of issues covering all changes in this release:
 
 |**Summary**| **Category** |
 | :- |:-------------|
-| Add the new API for getting public key about encrypt password. | New Feature  |
-| Optimize convert workbook feature: Add auto fit row parameter. | Improvement  |
-| Optimize auto fit rows for worksheet. | Improvement  |
-| Optimize auto fit rows for worksheet: Add firstColumn and lastColumn. | Improvement  |
-
+| Add the new API for getting the public key for encrypting the password. | New Feature |
+| Optimize the convert workbook feature: Add auto-fit row parameter. | Improvement |
+| Optimize auto-fit rows for the worksheet. | Improvement |
+| Optimize auto fit rows for worksheet: Add firstColumn and lastColumn. | Improvement |
 
 ## Available SDKs
 
