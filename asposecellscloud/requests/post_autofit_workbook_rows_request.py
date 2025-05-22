@@ -35,13 +35,15 @@ from six.moves.urllib.parse import quote
 
 class PostAutofitWorkbookRowsRequest(object):
 
-    def __init__(self , name ,start_row =None ,end_row =None ,only_auto =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,start_row =None ,end_row =None ,only_auto =None ,folder =None ,storage_name =None ,first_column =None ,last_column =None ):
         self.name = name 
         self.start_row = start_row 
         self.end_row = end_row 
         self.only_auto = only_auto 
         self.folder = folder 
         self.storage_name = storage_name 
+        self.first_column = first_column 
+        self.last_column = last_column 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
@@ -65,8 +67,14 @@ class PostAutofitWorkbookRowsRequest(object):
             query_params.append(('folder',self.folder ))
         if self.storage_name is not None:
             query_params.append(('storageName',self.storage_name ))
+        if self.first_column is not None:
+            query_params.append(('firstColumn',self.first_column ))
+        if self.last_column is not None:
+            query_params.append(('lastColumn',self.last_column ))
 
         header_params = {}
+        header_params['x-aspose-client'] = 'python sdk';
+        header_params['x-aspose-client-version'] = '25.5';
 
         form_params = []
         local_var_files = {}
@@ -82,7 +90,7 @@ class PostAutofitWorkbookRowsRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path = "/cells/{name}/autofitrows"
+        resource_path =  "v3.0/cells/{name}/autofitrows"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

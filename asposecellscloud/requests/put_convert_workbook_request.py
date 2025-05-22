@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PutConvertWorkbookRequest(object):
 
-    def __init__(self , file ,format =None ,password =None ,out_path =None ,storage_name =None ,check_excel_restriction =None ,stream_format =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,sheet_name =None ,page_index =None ,fonts_location =None ):
+    def __init__(self , file ,format =None ,password =None ,out_path =None ,storage_name =None ,check_excel_restriction =None ,stream_format =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,sheet_name =None ,page_index =None ,one_page_per_sheet =None ,auto_rows_fit =None ,auto_columns_fit =None ,fonts_location =None ):
         self.file = file 
         self.format = format 
         self.password = password 
@@ -48,6 +48,9 @@ class PutConvertWorkbookRequest(object):
         self.page_tall_fit_on_per_sheet = page_tall_fit_on_per_sheet 
         self.sheet_name = sheet_name 
         self.page_index = page_index 
+        self.one_page_per_sheet = one_page_per_sheet 
+        self.auto_rows_fit = auto_rows_fit 
+        self.auto_columns_fit = auto_columns_fit 
         self.fonts_location = fonts_location 
     def create_http_request(self, api_client):
 
@@ -87,10 +90,18 @@ class PutConvertWorkbookRequest(object):
             query_params.append(('sheetName',self.sheet_name ))
         if self.page_index is not None:
             query_params.append(('pageIndex',self.page_index ))
+        if self.one_page_per_sheet is not None:
+            query_params.append(('onePagePerSheet',self.one_page_per_sheet ))
+        if self.auto_rows_fit is not None:
+            query_params.append(('AutoRowsFit',self.auto_rows_fit ))
+        if self.auto_columns_fit is not None:
+            query_params.append(('AutoColumnsFit',self.auto_columns_fit ))
         if self.fonts_location is not None:
             query_params.append(('FontsLocation',self.fonts_location ))
 
         header_params = {}
+        header_params['x-aspose-client'] = 'python sdk';
+        header_params['x-aspose-client-version'] = '25.5';
 
         form_params = []
         local_var_files = {}
@@ -102,7 +113,7 @@ class PutConvertWorkbookRequest(object):
                 if isinstance(self.file,bytes):
                     local_var_files['File'] = self.file
                 else:
-                    local_var_files['File'] = self.file   
+                    local_var_files[os.path.basename( self.file)] = self.file   
 
         body_params = None
         # HTTP header `Accept`
@@ -115,7 +126,7 @@ class PutConvertWorkbookRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path = "/cells/convert"
+        resource_path =  "v3.0/cells/convert"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

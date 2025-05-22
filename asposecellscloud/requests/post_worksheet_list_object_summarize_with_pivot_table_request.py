@@ -88,6 +88,8 @@ class PostWorksheetListObjectSummarizeWithPivotTableRequest(object):
             query_params.append(('storageName',self.storage_name ))
 
         header_params = {}
+        header_params['x-aspose-client'] = 'python sdk';
+        header_params['x-aspose-client-version'] = '25.5';
 
         form_params = []
         local_var_files = {}
@@ -105,7 +107,7 @@ class PostWorksheetListObjectSummarizeWithPivotTableRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path = "/cells/{name}/worksheets/{sheetName}/listobjects/{listObjectIndex}/SummarizeWithPivotTable"
+        resource_path =  "v3.0/cells/{name}/worksheets/{sheetName}/listobjects/{listObjectIndex}/SummarizeWithPivotTable"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

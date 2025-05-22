@@ -28,6 +28,7 @@ from __future__ import absolute_import
 
 import sys
 import os
+import shutil
 import re
 import time
 
@@ -59,7 +60,7 @@ class CellsApi(object):
             self.access_token = self.api_client.get_access_token("client_credentials", clientid, clientsecret,version)
         # self.auth_data = self.o_auth_post("client_credentials", appsid, appkey)
         config = Configuration()
-        config.host = self.base_uri +'/' + self.version
+        config.host = self.base_uri +'/' 
         if api_client:
             self.api_client = api_client
         else:
@@ -808,18 +809,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.get_worksheet_autoshape_with_format_with_http_info(request,**kwargs)
+            response_file = self.get_worksheet_autoshape_with_format_with_http_info(request,**kwargs)
         else:
             (data) = self.get_worksheet_autoshape_with_format_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def get_worksheet_autoshape_with_format_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -856,18 +863,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.post_batch_convert_with_http_info(request,**kwargs)
+            response_file = self.post_batch_convert_with_http_info(request,**kwargs)
         else:
             (data) = self.post_batch_convert_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def post_batch_convert_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -904,18 +917,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.post_batch_protect_with_http_info(request,**kwargs)
+            response_file = self.post_batch_protect_with_http_info(request,**kwargs)
         else:
             (data) = self.post_batch_protect_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def post_batch_protect_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -952,18 +971,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.post_batch_lock_with_http_info(request,**kwargs)
+            response_file = self.post_batch_lock_with_http_info(request,**kwargs)
         else:
             (data) = self.post_batch_lock_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def post_batch_lock_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -1000,18 +1025,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.post_batch_unlock_with_http_info(request,**kwargs)
+            response_file = self.post_batch_unlock_with_http_info(request,**kwargs)
         else:
             (data) = self.post_batch_unlock_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def post_batch_unlock_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -1048,18 +1079,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.post_batch_split_with_http_info(request,**kwargs)
+            response_file = self.post_batch_split_with_http_info(request,**kwargs)
         else:
             (data) = self.post_batch_split_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def post_batch_split_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -3352,18 +3389,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.get_worksheet_chart_with_http_info(request,**kwargs)
+            response_file = self.get_worksheet_chart_with_http_info(request,**kwargs)
         else:
             (data) = self.get_worksheet_chart_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def get_worksheet_chart_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -4888,18 +4931,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.get_workbook_with_http_info(request,**kwargs)
+            response_file = self.get_workbook_with_http_info(request,**kwargs)
         else:
             (data) = self.get_workbook_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def get_workbook_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -4936,18 +4985,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.put_convert_workbook_with_http_info(request,**kwargs)
+            response_file = self.put_convert_workbook_with_http_info(request,**kwargs)
         else:
             (data) = self.put_convert_workbook_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def put_convert_workbook_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -5702,18 +5757,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.post_workbook_export_xml_with_http_info(request,**kwargs)
+            response_file = self.post_workbook_export_xml_with_http_info(request,**kwargs)
         else:
             (data) = self.post_workbook_export_xml_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def post_workbook_export_xml_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -5750,18 +5811,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.post_workbook_import_json_with_http_info(request,**kwargs)
+            response_file = self.post_workbook_import_json_with_http_info(request,**kwargs)
         else:
             (data) = self.post_workbook_import_json_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def post_workbook_import_json_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -5798,18 +5865,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.post_workbook_import_xml_with_http_info(request,**kwargs)
+            response_file = self.post_workbook_import_xml_with_http_info(request,**kwargs)
         else:
             (data) = self.post_workbook_import_xml_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def post_workbook_import_xml_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -6536,6 +6609,54 @@ class CellsApi(object):
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_worksheet_hyperlinks" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Get publi key.
+    # </summary>
+    # <param name="request">Request. <see cref="GetPublicKeyRequest" /></param>
+    def get_public_key(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.get_public_key_with_http_info(request,**kwargs)
+        else:
+            (data) = self.get_public_key_with_http_info(request,**kwargs)
+            return data
+
+    def get_public_key_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_public_key" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -7334,18 +7455,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.get_worksheet_list_object_with_http_info(request,**kwargs)
+            response_file = self.get_worksheet_list_object_with_http_info(request,**kwargs)
         else:
             (data) = self.get_worksheet_list_object_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def get_worksheet_list_object_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -7958,18 +8085,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.get_worksheet_ole_object_with_http_info(request,**kwargs)
+            response_file = self.get_worksheet_ole_object_with_http_info(request,**kwargs)
         else:
             (data) = self.get_worksheet_ole_object_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def get_worksheet_ole_object_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -9158,18 +9291,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.get_worksheet_picture_with_format_with_http_info(request,**kwargs)
+            response_file = self.get_worksheet_picture_with_format_with_http_info(request,**kwargs)
         else:
             (data) = self.get_worksheet_picture_with_format_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def get_worksheet_picture_with_format_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -11701,18 +11840,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.post_worksheet_cells_range_to_image_with_http_info(request,**kwargs)
+            response_file = self.post_worksheet_cells_range_to_image_with_http_info(request,**kwargs)
         else:
             (data) = self.post_worksheet_cells_range_to_image_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def post_worksheet_cells_range_to_image_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -12658,18 +12803,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.post_run_task_with_http_info(request,**kwargs)
+            response_file = self.post_run_task_with_http_info(request,**kwargs)
         else:
             (data) = self.post_run_task_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def post_run_task_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -13659,18 +13810,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.post_workbook_get_smart_marker_result_with_http_info(request,**kwargs)
+            response_file = self.post_workbook_get_smart_marker_result_with_http_info(request,**kwargs)
         else:
             (data) = self.post_workbook_get_smart_marker_result_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def post_workbook_get_smart_marker_result_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -14331,18 +14488,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.get_worksheet_with_format_with_http_info(request,**kwargs)
+            response_file = self.get_worksheet_with_format_with_http_info(request,**kwargs)
         else:
             (data) = self.get_worksheet_with_format_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def get_worksheet_with_format_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:
@@ -16442,18 +16605,24 @@ class CellsApi(object):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
+        response_file = None
         if kwargs.get('callback'):
-            return self.download_file_with_http_info(request,**kwargs)
+            response_file = self.download_file_with_http_info(request,**kwargs)
         else:
             (data) = self.download_file_with_http_info(request,**kwargs)
-            return data
-
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
     def download_file_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('local_outpath')
         params = locals()
         for key, val in iteritems(params['kwargs']):
             if key not in all_params:

@@ -49,6 +49,8 @@ class CheckWorkbookFormulaErrorsRequest(object):
         path_params = {}
         query_params = []
         header_params = {}
+        header_params['x-aspose-client'] = 'python sdk';
+        header_params['x-aspose-client-version'] = '25.5';
 
         form_params = []
         local_var_files = {}
@@ -66,7 +68,7 @@ class CheckWorkbookFormulaErrorsRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path = "/cells/checkformulaerrors"
+        resource_path =  "v3.0/cells/checkformulaerrors"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

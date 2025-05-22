@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostAutofitWorksheetRowRequest(object):
 
-    def __init__(self , name ,sheet_name ,row_index =None ,first_column =None ,last_column =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,row_index =None ,first_column =None ,last_column =None ,folder =None ,storage_name =None ,row_count =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.row_index = row_index 
@@ -43,6 +43,7 @@ class PostAutofitWorksheetRowRequest(object):
         self.last_column = last_column 
         self.folder = folder 
         self.storage_name = storage_name 
+        self.row_count = row_count 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
@@ -58,16 +59,6 @@ class PostAutofitWorksheetRowRequest(object):
         # verify the required parameter 'row_index' is set
         if self.row_index is None:
             raise ValueError("Missing the required parameter `row_index` when calling `post_autofit_worksheet_row`")
-
-
-        # verify the required parameter 'first_column' is set
-        if self.first_column is None:
-            raise ValueError("Missing the required parameter `first_column` when calling `post_autofit_worksheet_row`")
-
-
-        # verify the required parameter 'last_column' is set
-        if self.last_column is None:
-            raise ValueError("Missing the required parameter `last_column` when calling `post_autofit_worksheet_row`")
 
 
         collection_formats = {}
@@ -88,8 +79,12 @@ class PostAutofitWorksheetRowRequest(object):
             query_params.append(('folder',self.folder ))
         if self.storage_name is not None:
             query_params.append(('storageName',self.storage_name ))
+        if self.row_count is not None:
+            query_params.append(('rowCount',self.row_count ))
 
         header_params = {}
+        header_params['x-aspose-client'] = 'python sdk';
+        header_params['x-aspose-client-version'] = '25.5';
 
         form_params = []
         local_var_files = {}
@@ -105,7 +100,7 @@ class PostAutofitWorksheetRowRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path = "/cells/{name}/worksheets/{sheetName}/autofitrow"
+        resource_path =  "v3.0/cells/{name}/worksheets/{sheetName}/autofitrow"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

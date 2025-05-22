@@ -20,6 +20,9 @@ Name | Type | Description | Notes
 **page_tall_fit_on_per_sheet** | **boolean** | The page tall fit on worksheet. |
 **sheet_name** | **string** |  |
 **page_index** | **int** |  |
+**one_page_per_sheet** | **boolean** |  |
+**auto_rows_fit** | **boolean** |  |
+**auto_columns_fit** | **boolean** |  |
 **fonts_location** | **string** | Use Custom fonts. |  
 
 [[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

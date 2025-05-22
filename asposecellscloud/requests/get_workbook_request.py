@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class GetWorkbookRequest(object):
 
-    def __init__(self , name ,format =None ,password =None ,is_auto_fit =None ,only_save_table =None ,folder =None ,out_path =None ,storage_name =None ,out_storage_name =None ,check_excel_restriction =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,fonts_location =None ):
+    def __init__(self , name ,format =None ,password =None ,is_auto_fit =None ,only_save_table =None ,folder =None ,out_path =None ,storage_name =None ,out_storage_name =None ,check_excel_restriction =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,one_page_per_sheet =None ,only_autofit_table =None ,fonts_location =None ):
         self.name = name 
         self.format = format 
         self.password = password 
@@ -49,6 +49,8 @@ class GetWorkbookRequest(object):
         self.region = region 
         self.page_wide_fit_on_per_sheet = page_wide_fit_on_per_sheet 
         self.page_tall_fit_on_per_sheet = page_tall_fit_on_per_sheet 
+        self.one_page_per_sheet = one_page_per_sheet 
+        self.only_autofit_table = only_autofit_table 
         self.fonts_location = fonts_location 
     def create_http_request(self, api_client):
 
@@ -87,10 +89,16 @@ class GetWorkbookRequest(object):
             query_params.append(('pageWideFitOnPerSheet',self.page_wide_fit_on_per_sheet ))
         if self.page_tall_fit_on_per_sheet is not None:
             query_params.append(('pageTallFitOnPerSheet',self.page_tall_fit_on_per_sheet ))
+        if self.one_page_per_sheet is not None:
+            query_params.append(('onePagePerSheet',self.one_page_per_sheet ))
+        if self.only_autofit_table is not None:
+            query_params.append(('onlyAutofitTable',self.only_autofit_table ))
         if self.fonts_location is not None:
             query_params.append(('FontsLocation',self.fonts_location ))
 
         header_params = {}
+        header_params['x-aspose-client'] = 'python sdk';
+        header_params['x-aspose-client-version'] = '25.5';
 
         form_params = []
         local_var_files = {}
@@ -106,7 +114,7 @@ class GetWorkbookRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path = "/cells/{name}"
+        resource_path =  "v3.0/cells/{name}"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

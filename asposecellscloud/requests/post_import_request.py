@@ -62,6 +62,8 @@ class PostImportRequest(object):
             query_params.append(('region',self.region ))
 
         header_params = {}
+        header_params['x-aspose-client'] = 'python sdk';
+        header_params['x-aspose-client-version'] = '25.5';
 
         form_params = []
         local_var_files = {}
@@ -73,7 +75,7 @@ class PostImportRequest(object):
                 if isinstance(self.file,bytes):
                     local_var_files['File'] = self.file
                 else:
-                    local_var_files['File'] = self.file   
+                    local_var_files[os.path.basename( self.file)] = self.file   
 
         body_params = None
         # HTTP header `Accept`
@@ -86,7 +88,7 @@ class PostImportRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path = "/cells/import"
+        resource_path =  "v3.0/cells/import"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)
