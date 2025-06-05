@@ -67,3 +67,4 @@ target/
 .idea
 integrationtests/
 test-reports/
+TestData

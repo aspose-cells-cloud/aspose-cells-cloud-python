@@ -67,7 +67,7 @@ class CopyFolderRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.5';
+        header_params['x-aspose-client-version'] = '25.5.2';
 
         form_params = []
         local_var_files = {}
@@ -83,7 +83,7 @@ class CopyFolderRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v3.0/cells/storage/folder/copy/{srcPath}"
+        resource_path =  "v4.0/cells/storage/folder/copy/{srcPath}"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

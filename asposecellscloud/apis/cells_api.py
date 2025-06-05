@@ -82,6 +82,1624 @@ class CellsApi(object):
                     self.get_access_token_time =  time.time()
 
     # <summary>
+    # Get Access Token Result: The Cells Cloud Get Token API acts as a proxy service,
+    # forwarding user requests to the Aspose Cloud authentication server and returning the resulting access token to the client.
+    # </summary>
+    # <param name="request">Request. <see cref="PostAccessTokenRequest" /></param>
+    def post_access_token(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.post_access_token_with_http_info(request,**kwargs)
+        else:
+            (data) = self.post_access_token_with_http_info(request,**kwargs)
+            return data
+
+    def post_access_token_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_access_token" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Check the Health Status of Aspose.Cells Cloud Service.
+    # </summary>
+    # <param name="request">Request. <see cref="GetAsposeCellsCloudStatusRequest" /></param>
+    def get_aspose_cells_cloud_status(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.get_aspose_cells_cloud_status_with_http_info(request,**kwargs)
+        else:
+            (data) = self.get_aspose_cells_cloud_status_with_http_info(request,**kwargs)
+            return data
+
+    def get_aspose_cells_cloud_status_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_aspose_cells_cloud_status" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Check the Health Status of Aspose.Cells Cloud Service.
+    # </summary>
+    # <param name="request">Request. <see cref="CheckCloudServiceHealthRequest" /></param>
+    def check_cloud_service_health(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.check_cloud_service_health_with_http_info(request,**kwargs)
+        else:
+            (data) = self.check_cloud_service_health_with_http_info(request,**kwargs)
+            return data
+
+    def check_cloud_service_health_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method check_cloud_service_health" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Converts a spreadsheet in cloud storage to the specified format.
+    # </summary>
+    # <param name="request">Request. <see cref="GetWorkbookWithFormatRequest" /></param>
+    def get_workbook_with_format(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.get_workbook_with_format_with_http_info(request,**kwargs)
+        else:
+            (data) = self.get_workbook_with_format_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def get_workbook_with_format_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_workbook_with_format" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Converts a spreadsheet on a local drive to the specified format.
+    # </summary>
+    # <param name="request">Request. <see cref="ConvertWorkbookRequest" /></param>
+    def convert_workbook(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.convert_workbook_with_http_info(request,**kwargs)
+        else:
+            (data) = self.convert_workbook_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def convert_workbook_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method convert_workbook" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Converts a spreadsheet in cloud storage to the specified format.
+    # </summary>
+    # <param name="request">Request. <see cref="WorkbookSaveAsRequest" /></param>
+    def workbook_save_as(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.workbook_save_as_with_http_info(request,**kwargs)
+        else:
+            (data) = self.workbook_save_as_with_http_info(request,**kwargs)
+            return data
+
+    def workbook_save_as_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method workbook_save_as" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Merge local spreadsheet files into a specified format file.
+    # </summary>
+    # <param name="request">Request. <see cref="MergeFilesRequest" /></param>
+    def merge_files(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.merge_files_with_http_info(request,**kwargs)
+        else:
+            (data) = self.merge_files_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def merge_files_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method merge_files" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Merge spreadsheet files in cloud storage into a specified format file.
+    # </summary>
+    # <param name="request">Request. <see cref="MergeFilesInRemoteFolderRequest" /></param>
+    def merge_files_in_remote_folder(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.merge_files_in_remote_folder_with_http_info(request,**kwargs)
+        else:
+            (data) = self.merge_files_in_remote_folder_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def merge_files_in_remote_folder_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method merge_files_in_remote_folder" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Split a local spreadsheet into the specified format, multi-file.
+    # </summary>
+    # <param name="request">Request. <see cref="SplitFileRequest" /></param>
+    def split_file(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.split_file_with_http_info(request,**kwargs)
+        else:
+            (data) = self.split_file_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def split_file_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method split_file" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Split a spreadsheet in cloud storage into the specified format, multi-file.
+    # </summary>
+    # <param name="request">Request. <see cref="SplitFileInRemoteRequest" /></param>
+    def split_file_in_remote(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.split_file_in_remote_with_http_info(request,**kwargs)
+        else:
+            (data) = self.split_file_in_remote_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def split_file_in_remote_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method split_file_in_remote" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Get an asymmetric public key.
+    # </summary>
+    # <param name="request">Request. <see cref="GetPublicKeyRequest" /></param>
+    def get_public_key(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.get_public_key_with_http_info(request,**kwargs)
+        else:
+            (data) = self.get_public_key_with_http_info(request,**kwargs)
+            return data
+
+    def get_public_key_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_public_key" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Search text in the local spreadsheet.
+    # </summary>
+    # <param name="request">Request. <see cref="SearchTextRequest" /></param>
+    def search_text(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.search_text_with_http_info(request,**kwargs)
+        else:
+            (data) = self.search_text_with_http_info(request,**kwargs)
+            return data
+
+    def search_text_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method search_text" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Search text in the remoted spreadsheet.
+    # </summary>
+    # <param name="request">Request. <see cref="SearchTextInRemoteRequest" /></param>
+    def search_text_in_remote(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.search_text_in_remote_with_http_info(request,**kwargs)
+        else:
+            (data) = self.search_text_in_remote_with_http_info(request,**kwargs)
+            return data
+
+    def search_text_in_remote_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method search_text_in_remote" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Replace text in the local spreadsheet.
+    # </summary>
+    # <param name="request">Request. <see cref="ReplaceTextRequest" /></param>
+    def replace_text(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.replace_text_with_http_info(request,**kwargs)
+        else:
+            (data) = self.replace_text_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def replace_text_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method replace_text" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Replace text in the remoted spreadsheet.
+    # </summary>
+    # <param name="request">Request. <see cref="ReplaceTextInRemoteRequest" /></param>
+    def replace_text_in_remote(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.replace_text_in_remote_with_http_info(request,**kwargs)
+        else:
+            (data) = self.replace_text_in_remote_with_http_info(request,**kwargs)
+            return data
+
+    def replace_text_in_remote_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method replace_text_in_remote" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Search broken links in the local spreadsheet.
+    # </summary>
+    # <param name="request">Request. <see cref="SearchBrokenLinksRequest" /></param>
+    def search_broken_links(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.search_broken_links_with_http_info(request,**kwargs)
+        else:
+            (data) = self.search_broken_links_with_http_info(request,**kwargs)
+            return data
+
+    def search_broken_links_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method search_broken_links" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Search broken links in the remoted spreadsheet.
+    # </summary>
+    # <param name="request">Request. <see cref="SearchBrokenLinksInRemoteRequest" /></param>
+    def search_broken_links_in_remote(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.search_broken_links_in_remote_with_http_info(request,**kwargs)
+        else:
+            (data) = self.search_broken_links_in_remote_with_http_info(request,**kwargs)
+            return data
+
+    def search_broken_links_in_remote_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method search_broken_links_in_remote" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Get the specifications
+    # </summary>
+    # <param name="request">Request. <see cref="SpecRequest" /></param>
+    def spec(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.spec_with_http_info(request,**kwargs)
+        else:
+            (data) = self.spec_with_http_info(request,**kwargs)
+            return data
+
+    def spec_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method spec" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="CodegenSpecRequest" /></param>
+    def codegen_spec(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.codegen_spec_with_http_info(request,**kwargs)
+        else:
+            (data) = self.codegen_spec_with_http_info(request,**kwargs)
+            return data
+
+    def codegen_spec_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method codegen_spec" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="DownloadFileRequest" /></param>
+    def download_file(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.download_file_with_http_info(request,**kwargs)
+        else:
+            (data) = self.download_file_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def download_file_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method download_file" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="UploadFileRequest" /></param>
+    def upload_file(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.upload_file_with_http_info(request,**kwargs)
+        else:
+            (data) = self.upload_file_with_http_info(request,**kwargs)
+            return data
+
+    def upload_file_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method upload_file" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="CopyFileRequest" /></param>
+    def copy_file(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.copy_file_with_http_info(request,**kwargs)
+        else:
+            (data) = self.copy_file_with_http_info(request,**kwargs)
+            return data
+
+    def copy_file_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method copy_file" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="MoveFileRequest" /></param>
+    def move_file(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.move_file_with_http_info(request,**kwargs)
+        else:
+            (data) = self.move_file_with_http_info(request,**kwargs)
+            return data
+
+    def move_file_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method move_file" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="DeleteFileRequest" /></param>
+    def delete_file(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.delete_file_with_http_info(request,**kwargs)
+        else:
+            (data) = self.delete_file_with_http_info(request,**kwargs)
+            return data
+
+    def delete_file_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_file" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="GetFilesListRequest" /></param>
+    def get_files_list(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.get_files_list_with_http_info(request,**kwargs)
+        else:
+            (data) = self.get_files_list_with_http_info(request,**kwargs)
+            return data
+
+    def get_files_list_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_files_list" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="CreateFolderRequest" /></param>
+    def create_folder(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.create_folder_with_http_info(request,**kwargs)
+        else:
+            (data) = self.create_folder_with_http_info(request,**kwargs)
+            return data
+
+    def create_folder_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_folder" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="CopyFolderRequest" /></param>
+    def copy_folder(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.copy_folder_with_http_info(request,**kwargs)
+        else:
+            (data) = self.copy_folder_with_http_info(request,**kwargs)
+            return data
+
+    def copy_folder_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method copy_folder" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="MoveFolderRequest" /></param>
+    def move_folder(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.move_folder_with_http_info(request,**kwargs)
+        else:
+            (data) = self.move_folder_with_http_info(request,**kwargs)
+            return data
+
+    def move_folder_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method move_folder" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="DeleteFolderRequest" /></param>
+    def delete_folder(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.delete_folder_with_http_info(request,**kwargs)
+        else:
+            (data) = self.delete_folder_with_http_info(request,**kwargs)
+            return data
+
+    def delete_folder_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_folder" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="StorageExistsRequest" /></param>
+    def storage_exists(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.storage_exists_with_http_info(request,**kwargs)
+        else:
+            (data) = self.storage_exists_with_http_info(request,**kwargs)
+            return data
+
+    def storage_exists_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method storage_exists" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="ObjectExistsRequest" /></param>
+    def object_exists(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.object_exists_with_http_info(request,**kwargs)
+        else:
+            (data) = self.object_exists_with_http_info(request,**kwargs)
+            return data
+
+    def object_exists_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method object_exists" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="GetDiscUsageRequest" /></param>
+    def get_disc_usage(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.get_disc_usage_with_http_info(request,**kwargs)
+        else:
+            (data) = self.get_disc_usage_with_http_info(request,**kwargs)
+            return data
+
+    def get_disc_usage_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_disc_usage" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="GetFileVersionsRequest" /></param>
+    def get_file_versions(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.get_file_versions_with_http_info(request,**kwargs)
+        else:
+            (data) = self.get_file_versions_with_http_info(request,**kwargs)
+            return data
+
+    def get_file_versions_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_file_versions" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
     # Perform business analysis of data in Excel files.
     # </summary>
     # <param name="request">Request. <see cref="PostAnalyzeExcelRequest" /></param>
@@ -1103,54 +2721,6 @@ class CellsApi(object):
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method post_batch_split" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # Get Access Token Result
-    # </summary>
-    # <param name="request">Request. <see cref="PostAccessTokenRequest" /></param>
-    def post_access_token(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.post_access_token_with_http_info(request,**kwargs)
-        else:
-            (data) = self.post_access_token_with_http_info(request,**kwargs)
-            return data
-
-    def post_access_token_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method post_access_token" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -6609,54 +8179,6 @@ class CellsApi(object):
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_worksheet_hyperlinks" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # Get publi key.
-    # </summary>
-    # <param name="request">Request. <see cref="GetPublicKeyRequest" /></param>
-    def get_public_key(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.get_public_key_with_http_info(request,**kwargs)
-        else:
-            (data) = self.get_public_key_with_http_info(request,**kwargs)
-            return data
-
-    def get_public_key_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_public_key" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -16576,670 +18098,6 @@ class CellsApi(object):
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_worksheet_validations" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="DownloadFileRequest" /></param>
-    def download_file(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        response_file = None
-        if kwargs.get('callback'):
-            response_file = self.download_file_with_http_info(request,**kwargs)
-        else:
-            (data) = self.download_file_with_http_info(request,**kwargs)
-            response_file = data
-        if kwargs.get('local_outpath'):
-            shutil.move( response_file , kwargs.get('local_outpath'))
-            return kwargs.get('local_outpath')
-        else:
-            return response_file
-    def download_file_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        all_params.append('local_outpath')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method download_file" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="UploadFileRequest" /></param>
-    def upload_file(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.upload_file_with_http_info(request,**kwargs)
-        else:
-            (data) = self.upload_file_with_http_info(request,**kwargs)
-            return data
-
-    def upload_file_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method upload_file" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="CopyFileRequest" /></param>
-    def copy_file(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.copy_file_with_http_info(request,**kwargs)
-        else:
-            (data) = self.copy_file_with_http_info(request,**kwargs)
-            return data
-
-    def copy_file_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method copy_file" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="MoveFileRequest" /></param>
-    def move_file(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.move_file_with_http_info(request,**kwargs)
-        else:
-            (data) = self.move_file_with_http_info(request,**kwargs)
-            return data
-
-    def move_file_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method move_file" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="DeleteFileRequest" /></param>
-    def delete_file(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.delete_file_with_http_info(request,**kwargs)
-        else:
-            (data) = self.delete_file_with_http_info(request,**kwargs)
-            return data
-
-    def delete_file_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method delete_file" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="GetFilesListRequest" /></param>
-    def get_files_list(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.get_files_list_with_http_info(request,**kwargs)
-        else:
-            (data) = self.get_files_list_with_http_info(request,**kwargs)
-            return data
-
-    def get_files_list_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_files_list" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="CreateFolderRequest" /></param>
-    def create_folder(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.create_folder_with_http_info(request,**kwargs)
-        else:
-            (data) = self.create_folder_with_http_info(request,**kwargs)
-            return data
-
-    def create_folder_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method create_folder" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="CopyFolderRequest" /></param>
-    def copy_folder(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.copy_folder_with_http_info(request,**kwargs)
-        else:
-            (data) = self.copy_folder_with_http_info(request,**kwargs)
-            return data
-
-    def copy_folder_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method copy_folder" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="MoveFolderRequest" /></param>
-    def move_folder(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.move_folder_with_http_info(request,**kwargs)
-        else:
-            (data) = self.move_folder_with_http_info(request,**kwargs)
-            return data
-
-    def move_folder_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method move_folder" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="DeleteFolderRequest" /></param>
-    def delete_folder(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.delete_folder_with_http_info(request,**kwargs)
-        else:
-            (data) = self.delete_folder_with_http_info(request,**kwargs)
-            return data
-
-    def delete_folder_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method delete_folder" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="StorageExistsRequest" /></param>
-    def storage_exists(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.storage_exists_with_http_info(request,**kwargs)
-        else:
-            (data) = self.storage_exists_with_http_info(request,**kwargs)
-            return data
-
-    def storage_exists_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method storage_exists" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="ObjectExistsRequest" /></param>
-    def object_exists(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.object_exists_with_http_info(request,**kwargs)
-        else:
-            (data) = self.object_exists_with_http_info(request,**kwargs)
-            return data
-
-    def object_exists_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method object_exists" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="GetDiscUsageRequest" /></param>
-    def get_disc_usage(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.get_disc_usage_with_http_info(request,**kwargs)
-        else:
-            (data) = self.get_disc_usage_with_http_info(request,**kwargs)
-            return data
-
-    def get_disc_usage_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_disc_usage" % key
-                )
-            params[key] = val
-        del params['kwargs'] 
-
-        http_params = request.create_http_request(self.api_client)
-        return self.api_client.call_api(http_params['path'], http_params['method'],
-                                        None,
-                                        http_params['query_params'],
-                                        http_params['header_params'],
-                                        body=http_params['body'],
-                                        post_params=http_params['form_params'],
-                                        files=http_params['files'],
-                                        response_type=http_params['response_type'],
-                                        auth_settings=http_params['auth_settings'],
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=http_params['collection_formats'])
-
-
-
-    # <summary>
-    # </summary>
-    # <param name="request">Request. <see cref="GetFileVersionsRequest" /></param>
-    def get_file_versions(self, request, **kwargs):
-
-        kwargs['_return_http_data_only'] = True
-        self.check_access_token()
-        if kwargs.get('callback'):
-            return self.get_file_versions_with_http_info(request,**kwargs)
-        else:
-            (data) = self.get_file_versions_with_http_info(request,**kwargs)
-            return data
-
-    def get_file_versions_with_http_info(self, request, **kwargs):
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_file_versions" % key
                 )
             params[key] = val
         del params['kwargs'] 

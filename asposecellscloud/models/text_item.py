@@ -45,13 +45,17 @@ class TextItem(object):
     """
 
     swagger_types = {
-        'text' : 'str',
-        'link' : 'Link'
+        'filename' : 'str',
+        'worksheet' : 'str',
+        'position' : 'str',
+        'content' : 'str'
     }
 
     attribute_map = {
-        'text' : 'Text' ,
-        'link' : 'link' 
+        'filename' : 'Filename' ,
+        'worksheet' : 'Worksheet' ,
+        'position' : 'Position' ,
+        'content' : 'Content' 
     }
 
     @staticmethod
@@ -67,7 +71,7 @@ class TextItem(object):
             return self.container[attr]
         return None
 
-    def __init__(self,text=None ,link=None   ,**kw):
+    def __init__(self,filename=None ,worksheet=None ,position=None ,content=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -76,36 +80,64 @@ class TextItem(object):
         """
         TextItem - a model defined in Swagger
         """
-        self.container['text'] = None 
-        self.container['link'] = None 
+        self.container['filename'] = None 
+        self.container['worksheet'] = None 
+        self.container['position'] = None 
+        self.container['content'] = None 
         params = locals()
-        self.text = text
-        if 'text' in params:
-            self.text = params["text"]
+        self.filename = filename
+        if 'filename' in params:
+            self.filename = params["filename"]
 
 
              
-        self.link = link
-        if 'link' in params:
-            self.link = params["link"]
+        self.worksheet = worksheet
+        if 'worksheet' in params:
+            self.worksheet = params["worksheet"]
+
+
+             
+        self.position = position
+        if 'position' in params:
+            self.position = params["position"]
+
+
+             
+        self.content = content
+        if 'content' in params:
+            self.content = params["content"]
 
 
              
 
     @property
-    def text(self):
-        return self.container['text']
+    def filename(self):
+        return self.container['filename']
 
-    @text.setter
-    def text(self, text):
-        self.container['text'] = text 
+    @filename.setter
+    def filename(self, filename):
+        self.container['filename'] = filename 
     @property
-    def link(self):
-        return self.container['link']
+    def worksheet(self):
+        return self.container['worksheet']
 
-    @link.setter
-    def link(self, link):
-        self.container['link'] = link 
+    @worksheet.setter
+    def worksheet(self, worksheet):
+        self.container['worksheet'] = worksheet 
+    @property
+    def position(self):
+        return self.container['position']
+
+    @position.setter
+    def position(self, position):
+        self.container['position'] = position 
+    @property
+    def content(self):
+        return self.container['content']
+
+    @content.setter
+    def content(self, content):
+        self.container['content'] = content 
 
     def to_dict(self):
         """
