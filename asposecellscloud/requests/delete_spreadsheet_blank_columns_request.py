@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="WorkbookSaveAsRequest.cs">
+<copyright company="Aspose" file="DeleteSpreadsheetBlankColumnsRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,49 +33,29 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class WorkbookSaveAsRequest(object):
+class DeleteSpreadsheetBlankColumnsRequest(object):
 
-    def __init__(self , name ,format =None ,save_options_data =None ,folder =None ,storage_name =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
-        self.name = name 
-        self.format = format 
-        self.save_options_data = save_options_data 
-        self.folder = folder 
-        self.storage_name = storage_name 
+    def __init__(self , spreadsheet ,out_path =None ,out_storage_name =None ,regoin =None ,password =None ):
+        self.spreadsheet = spreadsheet 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
-        self.fonts_location = fonts_location 
         self.regoin = regoin 
         self.password = password 
     def create_http_request(self, api_client):
 
-        # verify the required parameter 'name' is set
-        if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `workbook_save_as`")
-
-
-        # verify the required parameter 'format' is set
-        if self.format is None:
-            raise ValueError("Missing the required parameter `format` when calling `workbook_save_as`")
+        # verify the required parameter 'spreadsheet' is set
+        if self.spreadsheet is None:
+            raise ValueError("Missing the required parameter `spreadsheet` when calling `delete_spreadsheet_blank_columns`")
 
 
         collection_formats = {}
 
         path_params = {}
-        if self.name is not None:
-            path_params['name'] = self.name
         query_params = []
-        if self.format is not None:
-            query_params.append(('format',self.format ))
-        if self.folder is not None:
-            query_params.append(('folder',self.folder ))
-        if self.storage_name is not None:
-            query_params.append(('storageName',self.storage_name ))
         if self.out_path is not None:
             query_params.append(('outPath',self.out_path ))
         if self.out_storage_name is not None:
             query_params.append(('outStorageName',self.out_storage_name ))
-        if self.fonts_location is not None:
-            query_params.append(('fontsLocation',self.fonts_location ))
         if self.regoin is not None:
             query_params.append(('regoin',self.regoin ))
         if self.password is not None:
@@ -83,10 +63,20 @@ class WorkbookSaveAsRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.5.2';
+        header_params['x-aspose-client-version'] = '25.6.1';
 
         form_params = []
         local_var_files = {}
+        if self.spreadsheet is not None:            
+            if isinstance(self.spreadsheet,dict):
+                for filename , filecontext in  self.spreadsheet.items():
+                    local_var_files[filename] = filecontext
+            else:
+                if isinstance(self.spreadsheet,bytes):
+                    local_var_files['File'] = self.spreadsheet
+                else:
+                    local_var_files[os.path.basename( self.spreadsheet)] = self.spreadsheet   
+
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = api_client.\
@@ -94,14 +84,11 @@ class WorkbookSaveAsRequest(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = api_client.\
-            select_header_content_type(['application/json'])
-
-        if self.save_options_data is not None:
-             body_params =self.save_options_data 
+            select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/{name}/SaveAs"
+        resource_path =  "v4.0/cells/delete/blank-columns"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)
@@ -119,6 +106,6 @@ class WorkbookSaveAsRequest(object):
                 "auth_settings":auth_settings,
                 "body": body_params,
                 "collection_formats": collection_formats,
-                "response_type": 'CellsCloudResponse'  
+                "response_type": 'file'  
         }
 

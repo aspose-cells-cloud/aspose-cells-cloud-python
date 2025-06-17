@@ -1,14 +1,35 @@
-# AsposeCellsCloud::Request::PostWordsCount 
+# **Spreadsheet Cloud API: postWordsCount**
 
-## Load the model package
-```perl
-use AsposeCellsCloud::Request::PostWordsCount;
+ 
+
+
+## **Quick Start**
+
+- **Base URL**: `http://api.aspose.cloud/v3.0`
+- **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+## **Interface Details**
+
+### **Endpoint** 
+
+```
+POST http://api.aspose.cloud/v3.0/cells/wordscount
+```
+### **Function Description**
+
+### The request parameters of **postWordsCount** API are: 
+
+| Parameter Name | Type | Path/Query String/HTTPBody | Description | 
+| :- | :- | :- |:- | 
+|wordsCountOptions|Class|Body||
+
+### **Response Description**
+```json
+{
+String
+}
 ```
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**words_count_options** | **WordsCountOptions** |  |  
 
-[[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+## OpenAPI Specification
 
+The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/StatisticalCharactersController/PostWordsCount) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.

@@ -1,23 +1,71 @@
-# AsposeCellsCloud::Request::PutWorksheetOleObject 
+# **Spreadsheet Cloud API: putWorksheetOleObject**
 
-## Load the model package
-```perl
-use AsposeCellsCloud::Request::PutWorksheetOleObject;
+Add an OLE object in the worksheet. 
+
+
+## **Quick Start**
+
+- **Base URL**: `http://api.aspose.cloud/v3.0`
+- **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+- **Example** 
+
+## **Interface Details**
+
+### **Endpoint** 
+
+```
+PUT http://api.aspose.cloud/v3.0/cells/{name}/worksheets/{sheetName}/oleobjects
+```
+### **Function Description**
+PageTitle: Add an OLE object in the worksheet.PageDescription: Aspose.Cells Cloud provides robust support for adding an OLE object in the worksheet, a process known for its intricacy.HeadTitle: Add an OLE object in the worksheet.HeadSummary: Aspose.Cells Cloud provides robust support for adding an OLE object in the worksheet, a process known for its intricacy.HeadContent: Aspose.Cells Cloud provides REST API which supports adding an OLE object in the worksheet and offers SDKs for multiple programming languages. These programming languages are include of Net, Java, Go, NodeJS, Python, and so on.
+
+### The request parameters of **putWorksheetOleObject** API are: 
+
+| Parameter Name | Type | Path/Query String/HTTPBody | Description | 
+| :- | :- | :- |:- | 
+|name|String|Path|The file name.|
+|sheetName|String|Path|The worsheet name.|
+|upperLeftRow|Integer|Query|Upper left row index|
+|upperLeftColumn|Integer|Query|Upper left column index|
+|height|Integer|Query|Height of oleObject, in unit of pixel|
+|width|Integer|Query|Width of oleObject, in unit of pixel|
+|oleFile|String|Query|OLE filename path(full file name).|
+|imageFile|String|Query|Image filename path(full file name).|
+|folder|String|Query|The folder where the file is situated.|
+|storageName|String|Query|The storage name where the file is situated.|
+
+### **Response Description**
+```json
+{
+  "Name": "CellsCloudResponse",
+  "Type": "Class",
+  "IsAbstract": false,
+  "Properties": [
+    {
+      "Name": "Code",
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": false,
+      "DataType": {
+        "Identifier": "Integer",
+        "Name": "integer"
+      }
+    },
+    {
+      "Name": "Status",
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": false,
+      "DataType": {
+        "Identifier": "String",
+        "Name": "string"
+      }
+    }
+  ]
+}
 ```
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**name** | **string** | The file name. |
-**sheet_name** | **string** | The worsheet name. |
-**upper_left_row** | **int** | Upper left row index |
-**upper_left_column** | **int** | Upper left column index |
-**height** | **int** | Height of oleObject, in unit of pixel |
-**width** | **int** | Width of oleObject, in unit of pixel |
-**ole_file** | **string** | OLE filename path(full file name). |
-**image_file** | **string** | Image filename path(full file name). |
-**folder** | **string** | The folder where the file is situated. |
-**storage_name** | **string** | The storage name where the file is situated. |  
 
-[[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+## OpenAPI Specification
 
+The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/OleObjectsController/PutWorksheetOleObject) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.

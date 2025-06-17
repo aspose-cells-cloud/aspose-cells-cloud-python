@@ -8,7 +8,7 @@ use AsposeCellsCloud::Object::CellsCloudFileInfoResponse;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FileInfo** | **CellsCloudFileInfo** | A property named `FileInfo` of type `CellsCloudFileInfo` is defined for the class. |
+**FileInfo** | **CellsCloudFileInfo** |  |
 **Code** | **int** |  |
 **Status** | **string** |  |  
 

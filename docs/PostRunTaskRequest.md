@@ -1,14 +1,35 @@
-# AsposeCellsCloud::Request::PostRunTask 
+# **Spreadsheet Cloud API: postRunTask**
 
-## Load the model package
-```perl
-use AsposeCellsCloud::Request::PostRunTask;
+Run tasks. 
+
+
+## **Quick Start**
+
+- **Base URL**: `http://api.aspose.cloud/v3.0`
+- **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+## **Interface Details**
+
+### **Endpoint** 
+
+```
+POST http://api.aspose.cloud/v3.0/cells/task/runtask
+```
+### **Function Description**
+
+### The request parameters of **postRunTask** API are: 
+
+| Parameter Name | Type | Path/Query String/HTTPBody | Description | 
+| :- | :- | :- |:- | 
+|TaskData|Class|Body|Task Data Descrition|
+
+### **Response Description**
+```json
+{
+File
+}
 ```
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**task_data** | **TaskData** | Task Data Descrition |  
 
-[[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+## OpenAPI Specification
 
+The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/TaskController/PostRunTask) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.

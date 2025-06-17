@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="ReplaceTextInRemoteRequest.cs">
+<copyright company="Aspose" file="SearchContentInRemoteRangeRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,14 +33,14 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class ReplaceTextInRemoteRequest(object):
+class SearchContentInRemoteRangeRequest(object):
 
-    def __init__(self , name ,search_text =None ,replace_text =None ,sheetname =None ,cellarea =None ,folder =None ,storage_name =None ,regoin =None ,password =None ):
+    def __init__(self , name ,worksheet ,cell_area ,search_text ,ignoring_case  ,folder =None ,storage_name =None ,regoin =None ,password =None ):
         self.name = name 
+        self.worksheet = worksheet 
+        self.cell_area = cell_area 
         self.search_text = search_text 
-        self.replace_text = replace_text 
-        self.sheetname = sheetname 
-        self.cellarea = cellarea 
+        self.ignoring_case = ignoring_case 
         self.folder = folder 
         self.storage_name = storage_name 
         self.regoin = regoin 
@@ -49,17 +49,22 @@ class ReplaceTextInRemoteRequest(object):
 
         # verify the required parameter 'name' is set
         if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `replace_text_in_remote`")
+            raise ValueError("Missing the required parameter `name` when calling `search_content_in_remote_range`")
+
+
+        # verify the required parameter 'worksheet' is set
+        if self.worksheet is None:
+            raise ValueError("Missing the required parameter `worksheet` when calling `search_content_in_remote_range`")
+
+
+        # verify the required parameter 'cell_area' is set
+        if self.cell_area is None:
+            raise ValueError("Missing the required parameter `cell_area` when calling `search_content_in_remote_range`")
 
 
         # verify the required parameter 'search_text' is set
         if self.search_text is None:
-            raise ValueError("Missing the required parameter `search_text` when calling `replace_text_in_remote`")
-
-
-        # verify the required parameter 'replace_text' is set
-        if self.replace_text is None:
-            raise ValueError("Missing the required parameter `replace_text` when calling `replace_text_in_remote`")
+            raise ValueError("Missing the required parameter `search_text` when calling `search_content_in_remote_range`")
 
 
         collection_formats = {}
@@ -67,15 +72,15 @@ class ReplaceTextInRemoteRequest(object):
         path_params = {}
         if self.name is not None:
             path_params['name'] = self.name
+        if self.worksheet is not None:
+            path_params['worksheet'] = self.worksheet
+        if self.cell_area is not None:
+            path_params['cellArea'] = self.cell_area
         query_params = []
         if self.search_text is not None:
             query_params.append(('searchText',self.search_text ))
-        if self.replace_text is not None:
-            query_params.append(('replaceText',self.replace_text ))
-        if self.sheetname is not None:
-            query_params.append(('sheetname',self.sheetname ))
-        if self.cellarea is not None:
-            query_params.append(('cellarea',self.cellarea ))
+        if self.ignoring_case is not None:
+            query_params.append(('ignoringCase',self.ignoring_case ))
         if self.folder is not None:
             query_params.append(('folder',self.folder ))
         if self.storage_name is not None:
@@ -87,7 +92,7 @@ class ReplaceTextInRemoteRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.5.2';
+        header_params['x-aspose-client-version'] = '25.6.1';
 
         form_params = []
         local_var_files = {}
@@ -103,7 +108,7 @@ class ReplaceTextInRemoteRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/{name}/replace"
+        resource_path =  "v4.0/cells/{name}/worksheets/{worksheet}/ranges/{cellArea}/search/content"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)
@@ -121,6 +126,6 @@ class ReplaceTextInRemoteRequest(object):
                 "auth_settings":auth_settings,
                 "body": body_params,
                 "collection_formats": collection_formats,
-                "response_type": 'CellsCloudResponse'  
+                "response_type": 'SearchResponse'  
         }
 

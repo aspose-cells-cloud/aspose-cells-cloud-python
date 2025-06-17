@@ -229,23 +229,23 @@ class CellsApi(object):
     # <summary>
     # Converts a spreadsheet in cloud storage to the specified format.
     # </summary>
-    # <param name="request">Request. <see cref="GetWorkbookWithFormatRequest" /></param>
-    def get_workbook_with_format(self, request, **kwargs):
+    # <param name="request">Request. <see cref="ExportSpreadsheetAsFormatRequest" /></param>
+    def export_spreadsheet_as_format(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.get_workbook_with_format_with_http_info(request,**kwargs)
+            response_file = self.export_spreadsheet_as_format_with_http_info(request,**kwargs)
         else:
-            (data) = self.get_workbook_with_format_with_http_info(request,**kwargs)
+            (data) = self.export_spreadsheet_as_format_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def get_workbook_with_format_with_http_info(self, request, **kwargs):
+    def export_spreadsheet_as_format_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -257,7 +257,61 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_workbook_with_format" % key
+                    " to method export_spreadsheet_as_format" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Converts a chart of spreadsheet in cloud storage to the specified format.
+    # </summary>
+    # <param name="request">Request. <see cref="ExportChartAsFormatRequest" /></param>
+    def export_chart_as_format(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.export_chart_as_format_with_http_info(request,**kwargs)
+        else:
+            (data) = self.export_chart_as_format_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def export_chart_as_format_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method export_chart_as_format" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -283,23 +337,23 @@ class CellsApi(object):
     # <summary>
     # Converts a spreadsheet on a local drive to the specified format.
     # </summary>
-    # <param name="request">Request. <see cref="ConvertWorkbookRequest" /></param>
-    def convert_workbook(self, request, **kwargs):
+    # <param name="request">Request. <see cref="ConvertSpreadsheetRequest" /></param>
+    def convert_spreadsheet(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.convert_workbook_with_http_info(request,**kwargs)
+            response_file = self.convert_spreadsheet_with_http_info(request,**kwargs)
         else:
-            (data) = self.convert_workbook_with_http_info(request,**kwargs)
+            (data) = self.convert_spreadsheet_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def convert_workbook_with_http_info(self, request, **kwargs):
+    def convert_spreadsheet_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -311,7 +365,115 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method convert_workbook" % key
+                    " to method convert_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Converts a chart of spreadsheet on a local drive to image.
+    # </summary>
+    # <param name="request">Request. <see cref="ConvertChartToImageRequest" /></param>
+    def convert_chart_to_image(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.convert_chart_to_image_with_http_info(request,**kwargs)
+        else:
+            (data) = self.convert_chart_to_image_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def convert_chart_to_image_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method convert_chart_to_image" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Converts a chart of spreadsheet on a local drive to pdf.
+    # </summary>
+    # <param name="request">Request. <see cref="ConvertChartToPdfRequest" /></param>
+    def convert_chart_to_pdf(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.convert_chart_to_pdf_with_http_info(request,**kwargs)
+        else:
+            (data) = self.convert_chart_to_pdf_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def convert_chart_to_pdf_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method convert_chart_to_pdf" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -337,18 +499,18 @@ class CellsApi(object):
     # <summary>
     # Converts a spreadsheet in cloud storage to the specified format.
     # </summary>
-    # <param name="request">Request. <see cref="WorkbookSaveAsRequest" /></param>
-    def workbook_save_as(self, request, **kwargs):
+    # <param name="request">Request. <see cref="SaveSpreadsheetAsRequest" /></param>
+    def save_spreadsheet_as(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.workbook_save_as_with_http_info(request,**kwargs)
+            return self.save_spreadsheet_as_with_http_info(request,**kwargs)
         else:
-            (data) = self.workbook_save_as_with_http_info(request,**kwargs)
+            (data) = self.save_spreadsheet_as_with_http_info(request,**kwargs)
             return data
 
-    def workbook_save_as_with_http_info(self, request, **kwargs):
+    def save_spreadsheet_as_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -359,7 +521,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method workbook_save_as" % key
+                    " to method save_spreadsheet_as" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -385,23 +547,23 @@ class CellsApi(object):
     # <summary>
     # Merge local spreadsheet files into a specified format file.
     # </summary>
-    # <param name="request">Request. <see cref="MergeFilesRequest" /></param>
-    def merge_files(self, request, **kwargs):
+    # <param name="request">Request. <see cref="MergeSpreadsheetsRequest" /></param>
+    def merge_spreadsheets(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.merge_files_with_http_info(request,**kwargs)
+            response_file = self.merge_spreadsheets_with_http_info(request,**kwargs)
         else:
-            (data) = self.merge_files_with_http_info(request,**kwargs)
+            (data) = self.merge_spreadsheets_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def merge_files_with_http_info(self, request, **kwargs):
+    def merge_spreadsheets_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -413,7 +575,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method merge_files" % key
+                    " to method merge_spreadsheets" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -437,25 +599,25 @@ class CellsApi(object):
 
 
     # <summary>
-    # Merge spreadsheet files in cloud storage into a specified format file.
+    # Merge spreadsheet files in folder of cloud storage into a specified format file.
     # </summary>
-    # <param name="request">Request. <see cref="MergeFilesInRemoteFolderRequest" /></param>
-    def merge_files_in_remote_folder(self, request, **kwargs):
+    # <param name="request">Request. <see cref="MergeSpreadsheetsInRemoteFolderRequest" /></param>
+    def merge_spreadsheets_in_remote_folder(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.merge_files_in_remote_folder_with_http_info(request,**kwargs)
+            response_file = self.merge_spreadsheets_in_remote_folder_with_http_info(request,**kwargs)
         else:
-            (data) = self.merge_files_in_remote_folder_with_http_info(request,**kwargs)
+            (data) = self.merge_spreadsheets_in_remote_folder_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def merge_files_in_remote_folder_with_http_info(self, request, **kwargs):
+    def merge_spreadsheets_in_remote_folder_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -467,7 +629,61 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method merge_files_in_remote_folder" % key
+                    " to method merge_spreadsheets_in_remote_folder" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Merge a spreadsheet file into other spreadsheet in cloud storage, and output a specified format file.
+    # </summary>
+    # <param name="request">Request. <see cref="MergeRemoteSpreadsheetRequest" /></param>
+    def merge_remote_spreadsheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.merge_remote_spreadsheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.merge_remote_spreadsheet_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def merge_remote_spreadsheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method merge_remote_spreadsheet" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -493,23 +709,23 @@ class CellsApi(object):
     # <summary>
     # Split a local spreadsheet into the specified format, multi-file.
     # </summary>
-    # <param name="request">Request. <see cref="SplitFileRequest" /></param>
-    def split_file(self, request, **kwargs):
+    # <param name="request">Request. <see cref="SplitSpreadsheetRequest" /></param>
+    def split_spreadsheet(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.split_file_with_http_info(request,**kwargs)
+            response_file = self.split_spreadsheet_with_http_info(request,**kwargs)
         else:
-            (data) = self.split_file_with_http_info(request,**kwargs)
+            (data) = self.split_spreadsheet_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def split_file_with_http_info(self, request, **kwargs):
+    def split_spreadsheet_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -521,7 +737,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method split_file" % key
+                    " to method split_spreadsheet" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -547,23 +763,23 @@ class CellsApi(object):
     # <summary>
     # Split a spreadsheet in cloud storage into the specified format, multi-file.
     # </summary>
-    # <param name="request">Request. <see cref="SplitFileInRemoteRequest" /></param>
-    def split_file_in_remote(self, request, **kwargs):
+    # <param name="request">Request. <see cref="SplitRemoteSpreadsheetRequest" /></param>
+    def split_remote_spreadsheet(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.split_file_in_remote_with_http_info(request,**kwargs)
+            response_file = self.split_remote_spreadsheet_with_http_info(request,**kwargs)
         else:
-            (data) = self.split_file_in_remote_with_http_info(request,**kwargs)
+            (data) = self.split_remote_spreadsheet_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def split_file_in_remote_with_http_info(self, request, **kwargs):
+    def split_remote_spreadsheet_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -575,7 +791,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method split_file_in_remote" % key
+                    " to method split_remote_spreadsheet" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -649,18 +865,18 @@ class CellsApi(object):
     # <summary>
     # Search text in the local spreadsheet.
     # </summary>
-    # <param name="request">Request. <see cref="SearchTextRequest" /></param>
-    def search_text(self, request, **kwargs):
+    # <param name="request">Request. <see cref="SearchSpreadsheetContentRequest" /></param>
+    def search_spreadsheet_content(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.search_text_with_http_info(request,**kwargs)
+            return self.search_spreadsheet_content_with_http_info(request,**kwargs)
         else:
-            (data) = self.search_text_with_http_info(request,**kwargs)
+            (data) = self.search_spreadsheet_content_with_http_info(request,**kwargs)
             return data
 
-    def search_text_with_http_info(self, request, **kwargs):
+    def search_spreadsheet_content_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -671,7 +887,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method search_text" % key
+                    " to method search_spreadsheet_content" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -697,18 +913,18 @@ class CellsApi(object):
     # <summary>
     # Search text in the remoted spreadsheet.
     # </summary>
-    # <param name="request">Request. <see cref="SearchTextInRemoteRequest" /></param>
-    def search_text_in_remote(self, request, **kwargs):
+    # <param name="request">Request. <see cref="SearchContentInRemoteSpreadsheetRequest" /></param>
+    def search_content_in_remote_spreadsheet(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.search_text_in_remote_with_http_info(request,**kwargs)
+            return self.search_content_in_remote_spreadsheet_with_http_info(request,**kwargs)
         else:
-            (data) = self.search_text_in_remote_with_http_info(request,**kwargs)
+            (data) = self.search_content_in_remote_spreadsheet_with_http_info(request,**kwargs)
             return data
 
-    def search_text_in_remote_with_http_info(self, request, **kwargs):
+    def search_content_in_remote_spreadsheet_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -719,7 +935,103 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method search_text_in_remote" % key
+                    " to method search_content_in_remote_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Search text in the worksheet of remoted spreadsheet.
+    # </summary>
+    # <param name="request">Request. <see cref="SearchContentInRemoteWorksheetRequest" /></param>
+    def search_content_in_remote_worksheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.search_content_in_remote_worksheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.search_content_in_remote_worksheet_with_http_info(request,**kwargs)
+            return data
+
+    def search_content_in_remote_worksheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method search_content_in_remote_worksheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Search text in the range of remoted spreadsheet.
+    # </summary>
+    # <param name="request">Request. <see cref="SearchContentInRemoteRangeRequest" /></param>
+    def search_content_in_remote_range(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.search_content_in_remote_range_with_http_info(request,**kwargs)
+        else:
+            (data) = self.search_content_in_remote_range_with_http_info(request,**kwargs)
+            return data
+
+    def search_content_in_remote_range_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method search_content_in_remote_range" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -745,23 +1057,23 @@ class CellsApi(object):
     # <summary>
     # Replace text in the local spreadsheet.
     # </summary>
-    # <param name="request">Request. <see cref="ReplaceTextRequest" /></param>
-    def replace_text(self, request, **kwargs):
+    # <param name="request">Request. <see cref="ReplaceSpreadsheetContentRequest" /></param>
+    def replace_spreadsheet_content(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.replace_text_with_http_info(request,**kwargs)
+            response_file = self.replace_spreadsheet_content_with_http_info(request,**kwargs)
         else:
-            (data) = self.replace_text_with_http_info(request,**kwargs)
+            (data) = self.replace_spreadsheet_content_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def replace_text_with_http_info(self, request, **kwargs):
+    def replace_spreadsheet_content_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -773,7 +1085,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_text" % key
+                    " to method replace_spreadsheet_content" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -799,18 +1111,18 @@ class CellsApi(object):
     # <summary>
     # Replace text in the remoted spreadsheet.
     # </summary>
-    # <param name="request">Request. <see cref="ReplaceTextInRemoteRequest" /></param>
-    def replace_text_in_remote(self, request, **kwargs):
+    # <param name="request">Request. <see cref="ReplaceContentInRemoteSpreadsheetRequest" /></param>
+    def replace_content_in_remote_spreadsheet(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.replace_text_in_remote_with_http_info(request,**kwargs)
+            return self.replace_content_in_remote_spreadsheet_with_http_info(request,**kwargs)
         else:
-            (data) = self.replace_text_in_remote_with_http_info(request,**kwargs)
+            (data) = self.replace_content_in_remote_spreadsheet_with_http_info(request,**kwargs)
             return data
 
-    def replace_text_in_remote_with_http_info(self, request, **kwargs):
+    def replace_content_in_remote_spreadsheet_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -821,7 +1133,103 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_text_in_remote" % key
+                    " to method replace_content_in_remote_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Replace text in the worksheet of remoted spreadsheet.
+    # </summary>
+    # <param name="request">Request. <see cref="ReplaceContentInRemoteWorksheetRequest" /></param>
+    def replace_content_in_remote_worksheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.replace_content_in_remote_worksheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.replace_content_in_remote_worksheet_with_http_info(request,**kwargs)
+            return data
+
+    def replace_content_in_remote_worksheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method replace_content_in_remote_worksheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Replace text in the range of remoted spreadsheet.
+    # </summary>
+    # <param name="request">Request. <see cref="ReplaceContentInRemoteRangeRequest" /></param>
+    def replace_content_in_remote_range(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.replace_content_in_remote_range_with_http_info(request,**kwargs)
+        else:
+            (data) = self.replace_content_in_remote_range_with_http_info(request,**kwargs)
+            return data
+
+    def replace_content_in_remote_range_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method replace_content_in_remote_range" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -847,18 +1255,18 @@ class CellsApi(object):
     # <summary>
     # Search broken links in the local spreadsheet.
     # </summary>
-    # <param name="request">Request. <see cref="SearchBrokenLinksRequest" /></param>
-    def search_broken_links(self, request, **kwargs):
+    # <param name="request">Request. <see cref="SearchSpreadsheetBrokenLinksRequest" /></param>
+    def search_spreadsheet_broken_links(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.search_broken_links_with_http_info(request,**kwargs)
+            return self.search_spreadsheet_broken_links_with_http_info(request,**kwargs)
         else:
-            (data) = self.search_broken_links_with_http_info(request,**kwargs)
+            (data) = self.search_spreadsheet_broken_links_with_http_info(request,**kwargs)
             return data
 
-    def search_broken_links_with_http_info(self, request, **kwargs):
+    def search_spreadsheet_broken_links_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -869,7 +1277,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method search_broken_links" % key
+                    " to method search_spreadsheet_broken_links" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -895,18 +1303,18 @@ class CellsApi(object):
     # <summary>
     # Search broken links in the remoted spreadsheet.
     # </summary>
-    # <param name="request">Request. <see cref="SearchBrokenLinksInRemoteRequest" /></param>
-    def search_broken_links_in_remote(self, request, **kwargs):
+    # <param name="request">Request. <see cref="SearchBrokenLinksInRemoteSpreadsheetRequest" /></param>
+    def search_broken_links_in_remote_spreadsheet(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.search_broken_links_in_remote_with_http_info(request,**kwargs)
+            return self.search_broken_links_in_remote_spreadsheet_with_http_info(request,**kwargs)
         else:
-            (data) = self.search_broken_links_in_remote_with_http_info(request,**kwargs)
+            (data) = self.search_broken_links_in_remote_spreadsheet_with_http_info(request,**kwargs)
             return data
 
-    def search_broken_links_in_remote_with_http_info(self, request, **kwargs):
+    def search_broken_links_in_remote_spreadsheet_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -917,7 +1325,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method search_broken_links_in_remote" % key
+                    " to method search_broken_links_in_remote_spreadsheet" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -941,20 +1349,20 @@ class CellsApi(object):
 
 
     # <summary>
-    # Get the specifications
+    # Search broken links in the worksheet of remoted spreadsheet.
     # </summary>
-    # <param name="request">Request. <see cref="SpecRequest" /></param>
-    def spec(self, request, **kwargs):
+    # <param name="request">Request. <see cref="SearchBrokenLinksInRemoteWorksheetRequest" /></param>
+    def search_broken_links_in_remote_worksheet(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.spec_with_http_info(request,**kwargs)
+            return self.search_broken_links_in_remote_worksheet_with_http_info(request,**kwargs)
         else:
-            (data) = self.spec_with_http_info(request,**kwargs)
+            (data) = self.search_broken_links_in_remote_worksheet_with_http_info(request,**kwargs)
             return data
 
-    def spec_with_http_info(self, request, **kwargs):
+    def search_broken_links_in_remote_worksheet_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -965,7 +1373,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method spec" % key
+                    " to method search_broken_links_in_remote_worksheet" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -989,19 +1397,20 @@ class CellsApi(object):
 
 
     # <summary>
+    # Search broken links in the range of remoted spreadsheet.
     # </summary>
-    # <param name="request">Request. <see cref="CodegenSpecRequest" /></param>
-    def codegen_spec(self, request, **kwargs):
+    # <param name="request">Request. <see cref="SearchBrokenLinksInRemoteRangeRequest" /></param>
+    def search_broken_links_in_remote_range(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         if kwargs.get('callback'):
-            return self.codegen_spec_with_http_info(request,**kwargs)
+            return self.search_broken_links_in_remote_range_with_http_info(request,**kwargs)
         else:
-            (data) = self.codegen_spec_with_http_info(request,**kwargs)
+            (data) = self.search_broken_links_in_remote_range_with_http_info(request,**kwargs)
             return data
 
-    def codegen_spec_with_http_info(self, request, **kwargs):
+    def search_broken_links_in_remote_range_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -1012,7 +1421,170 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method codegen_spec" % key
+                    " to method search_broken_links_in_remote_range" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+
+    # <summary>
+    # Delete all blank rows which do not contain any data or other object.
+    # </summary>
+    # <param name="request">Request. <see cref="DeleteSpreadsheetBlankRowsRequest" /></param>
+    def delete_spreadsheet_blank_rows(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.delete_spreadsheet_blank_rows_with_http_info(request,**kwargs)
+        else:
+            (data) = self.delete_spreadsheet_blank_rows_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def delete_spreadsheet_blank_rows_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_spreadsheet_blank_rows" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Delete all blank columns which do not contain any data.
+    # </summary>
+    # <param name="request">Request. <see cref="DeleteSpreadsheetBlankColumnsRequest" /></param>
+    def delete_spreadsheet_blank_columns(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.delete_spreadsheet_blank_columns_with_http_info(request,**kwargs)
+        else:
+            (data) = self.delete_spreadsheet_blank_columns_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def delete_spreadsheet_blank_columns_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_spreadsheet_blank_columns" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Delete all blank worksheets which do not contain any data or other object.
+    # </summary>
+    # <param name="request">Request. <see cref="DeleteSpreadsheetBlankWorksheetsRequest" /></param>
+    def delete_spreadsheet_blank_worksheets(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.delete_spreadsheet_blank_worksheets_with_http_info(request,**kwargs)
+        else:
+            (data) = self.delete_spreadsheet_blank_worksheets_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def delete_spreadsheet_blank_worksheets_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_spreadsheet_blank_worksheets" % key
                 )
             params[key] = val
         del params['kwargs'] 

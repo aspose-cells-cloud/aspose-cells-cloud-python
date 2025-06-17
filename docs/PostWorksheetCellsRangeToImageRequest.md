@@ -1,18 +1,39 @@
-# AsposeCellsCloud::Request::PostWorksheetCellsRangeToImage 
+# **Spreadsheet Cloud API: postWorksheetCellsRangeToImage**
 
-## Load the model package
-```perl
-use AsposeCellsCloud::Request::PostWorksheetCellsRangeToImage;
+ 
+
+
+## **Quick Start**
+
+- **Base URL**: `http://api.aspose.cloud/v3.0`
+- **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+## **Interface Details**
+
+### **Endpoint** 
+
+```
+POST http://api.aspose.cloud/v3.0/cells/{name}/worksheets/{sheetName}/ranges/convertToImage
+```
+### **Function Description**
+
+### The request parameters of **postWorksheetCellsRangeToImage** API are: 
+
+| Parameter Name | Type | Path/Query String/HTTPBody | Description | 
+| :- | :- | :- |:- | 
+|name|String|Path||
+|sheetName|String|Path||
+|rangeConvertRequest|Class|Body||
+|folder|String|Query||
+|storageName|String|Query||
+
+### **Response Description**
+```json
+{
+File
+}
 ```
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**name** | **string** |  |
-**sheet_name** | **string** |  |
-**range_convert_request** | **RangeConvertRequest** |  |
-**folder** | **string** |  |
-**storage_name** | **string** |  |  
 
-[[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+## OpenAPI Specification
 
+The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/RangesController/PostWorksheetCellsRangeToImage) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.

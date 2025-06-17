@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="ReplaceTextRequest.cs">
+<copyright company="Aspose" file="ReplaceSpreadsheetContentRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,31 +33,31 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class ReplaceTextRequest(object):
+class ReplaceSpreadsheetContentRequest(object):
 
-    def __init__(self , spreadsheet ,search_text =None ,replace_text =None ,sheetname =None ,cellarea =None ,regoin =None ,password =None ):
+    def __init__(self , spreadsheet ,search_text =None ,replace_text =None ,worksheet =None ,cell_area =None ,regoin =None ,password =None ):
         self.spreadsheet = spreadsheet 
         self.search_text = search_text 
         self.replace_text = replace_text 
-        self.sheetname = sheetname 
-        self.cellarea = cellarea 
+        self.worksheet = worksheet 
+        self.cell_area = cell_area 
         self.regoin = regoin 
         self.password = password 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'spreadsheet' is set
         if self.spreadsheet is None:
-            raise ValueError("Missing the required parameter `spreadsheet` when calling `replace_text`")
+            raise ValueError("Missing the required parameter `spreadsheet` when calling `replace_spreadsheet_content`")
 
 
         # verify the required parameter 'search_text' is set
         if self.search_text is None:
-            raise ValueError("Missing the required parameter `search_text` when calling `replace_text`")
+            raise ValueError("Missing the required parameter `search_text` when calling `replace_spreadsheet_content`")
 
 
         # verify the required parameter 'replace_text' is set
         if self.replace_text is None:
-            raise ValueError("Missing the required parameter `replace_text` when calling `replace_text`")
+            raise ValueError("Missing the required parameter `replace_text` when calling `replace_spreadsheet_content`")
 
 
         collection_formats = {}
@@ -68,10 +68,10 @@ class ReplaceTextRequest(object):
             query_params.append(('searchText',self.search_text ))
         if self.replace_text is not None:
             query_params.append(('replaceText',self.replace_text ))
-        if self.sheetname is not None:
-            query_params.append(('sheetname',self.sheetname ))
-        if self.cellarea is not None:
-            query_params.append(('cellarea',self.cellarea ))
+        if self.worksheet is not None:
+            query_params.append(('worksheet',self.worksheet ))
+        if self.cell_area is not None:
+            query_params.append(('cellArea',self.cell_area ))
         if self.regoin is not None:
             query_params.append(('regoin',self.regoin ))
         if self.password is not None:
@@ -79,7 +79,7 @@ class ReplaceTextRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.5.2';
+        header_params['x-aspose-client-version'] = '25.6.1';
 
         form_params = []
         local_var_files = {}
@@ -104,7 +104,7 @@ class ReplaceTextRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/replace"
+        resource_path =  "v4.0/cells/replace/content"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

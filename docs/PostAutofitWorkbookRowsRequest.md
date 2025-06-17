@@ -1,21 +1,69 @@
-# AsposeCellsCloud::Request::PostAutofitWorkbookRows 
+# **Spreadsheet Cloud API: postAutofitWorkbookRows**
 
-## Load the model package
-```perl
-use AsposeCellsCloud::Request::PostAutofitWorkbookRows;
+Autofit rows in the workbook. 
+
+
+## **Quick Start**
+
+- **Base URL**: `http://api.aspose.cloud/v3.0`
+- **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+- **Example** 
+
+## **Interface Details**
+
+### **Endpoint** 
+
+```
+POST http://api.aspose.cloud/v3.0/cells/{name}/autofitrows
+```
+### **Function Description**
+PageTitle:  Autofit rows in the workbook.PageDescription: Aspose.Cells Cloud provides robust support for autofitting rows in the workbook, a process known for its intricacy.HeadTitle: Autofit rows in the workbook.HeadSummary: Aspose.Cells Cloud provides robust support for autofitting rows in the workbook, a process known for its intricacy.HeadContent: Aspose.Cells Cloud provides REST API which supports autofitting rows in the workbook and offers SDKs for multiple programming languages. These programming languages are include of Net, Java, Go, NodeJS, Python, and so on.
+
+### The request parameters of **postAutofitWorkbookRows** API are: 
+
+| Parameter Name | Type | Path/Query String/HTTPBody | Description | 
+| :- | :- | :- |:- | 
+|name|String|Path|The file name.|
+|startRow|Integer|Query|Start row.|
+|endRow|Integer|Query|End row.|
+|onlyAuto|Boolean|Query|Only auto.|
+|folder|String|Query|The folder where the file is situated.|
+|storageName|String|Query|The storage name where the file is situated.|
+|firstColumn|Integer|Query|First column index.|
+|lastColumn|Integer|Query|Last column index.|
+
+### **Response Description**
+```json
+{
+  "Name": "CellsCloudResponse",
+  "Type": "Class",
+  "IsAbstract": false,
+  "Properties": [
+    {
+      "Name": "Code",
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": false,
+      "DataType": {
+        "Identifier": "Integer",
+        "Name": "integer"
+      }
+    },
+    {
+      "Name": "Status",
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": false,
+      "DataType": {
+        "Identifier": "String",
+        "Name": "string"
+      }
+    }
+  ]
+}
 ```
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**name** | **string** | The file name. |
-**start_row** | **int** | Start row. |
-**end_row** | **int** | End row. |
-**only_auto** | **boolean** | Only auto. |
-**folder** | **string** | The folder where the file is situated. |
-**storage_name** | **string** | The storage name where the file is situated. |
-**first_column** | **int** |  |
-**last_column** | **int** |  |  
 
-[[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+## OpenAPI Specification
 
+The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/WorkbookController/PostAutofitWorkbookRows) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.

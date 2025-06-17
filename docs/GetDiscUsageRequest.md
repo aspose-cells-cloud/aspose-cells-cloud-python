@@ -1,14 +1,70 @@
-# AsposeCellsCloud::Request::GetDiscUsage 
+# **Spreadsheet Cloud API: getDiscUsage**
 
-## Load the model package
-```perl
-use AsposeCellsCloud::Request::GetDiscUsage;
+ 
+
+
+## **Quick Start**
+
+- **Base URL**: `http://api.aspose.cloud/v4.0`
+- **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+- **Example** 
+
+## **Interface Details**
+
+### **Endpoint** 
+
+```
+GET http://api.aspose.cloud/v4.0/cells/storage/disc
+```
+### **Function Description**
+
+### The request parameters of **getDiscUsage** API are: 
+
+| Parameter Name | Type | Path/Query String/HTTPBody | Description | 
+| :- | :- | :- |:- | 
+|storageName|String|Query||
+
+### **Response Description**
+```json
+{
+  "Name": "DiscUsage",
+  "Description": [
+    "Class for disc space information."
+  ],
+  "Type": "Class",
+  "IsAbstract": false,
+  "Properties": [
+    {
+      "Name": "UsedSize",
+      "Description": [
+        "Application used disc space."
+      ],
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": false,
+      "DataType": {
+        "Identifier": "Long",
+        "Name": "long"
+      }
+    },
+    {
+      "Name": "TotalSize",
+      "Description": [
+        "Total disc space."
+      ],
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": false,
+      "DataType": {
+        "Identifier": "Long",
+        "Name": "long"
+      }
+    }
+  ]
+}
 ```
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**storage_name** | **string** |  |  
 
-[[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+## OpenAPI Specification
 
+The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/StorageController/GetDiscUsage) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.

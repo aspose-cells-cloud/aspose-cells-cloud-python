@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="MergeFilesInRemoteFolderRequest.cs">
+<copyright company="Aspose" file="SearchBrokenLinksInRemoteSpreadsheetRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,46 +33,37 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class MergeFilesInRemoteFolderRequest(object):
+class SearchBrokenLinksInRemoteSpreadsheetRequest(object):
 
-    def __init__(self , folder =None ,file_match_expression =None ,out_format =None ,merge_in_one_sheet =None ,storage_name =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
+    def __init__(self , name ,worksheet =None ,cell_area =None ,folder =None ,storage_name =None ,regoin =None ,password =None ):
+        self.name = name 
+        self.worksheet = worksheet 
+        self.cell_area = cell_area 
         self.folder = folder 
-        self.file_match_expression = file_match_expression 
-        self.out_format = out_format 
-        self.merge_in_one_sheet = merge_in_one_sheet 
         self.storage_name = storage_name 
-        self.out_path = out_path 
-        self.out_storage_name = out_storage_name 
-        self.fonts_location = fonts_location 
         self.regoin = regoin 
         self.password = password 
     def create_http_request(self, api_client):
 
-        # verify the required parameter 'folder' is set
-        if self.folder is None:
-            raise ValueError("Missing the required parameter `folder` when calling `merge_files_in_remote_folder`")
+        # verify the required parameter 'name' is set
+        if self.name is None:
+            raise ValueError("Missing the required parameter `name` when calling `search_broken_links_in_remote_spreadsheet`")
 
 
         collection_formats = {}
 
         path_params = {}
+        if self.name is not None:
+            path_params['name'] = self.name
         query_params = []
+        if self.worksheet is not None:
+            query_params.append(('worksheet',self.worksheet ))
+        if self.cell_area is not None:
+            query_params.append(('cellArea',self.cell_area ))
         if self.folder is not None:
             query_params.append(('folder',self.folder ))
-        if self.file_match_expression is not None:
-            query_params.append(('fileMatchExpression',self.file_match_expression ))
-        if self.out_format is not None:
-            query_params.append(('outFormat',self.out_format ))
-        if self.merge_in_one_sheet is not None:
-            query_params.append(('mergeInOneSheet',self.merge_in_one_sheet ))
         if self.storage_name is not None:
             query_params.append(('storageName',self.storage_name ))
-        if self.out_path is not None:
-            query_params.append(('outPath',self.out_path ))
-        if self.out_storage_name is not None:
-            query_params.append(('outStorageName',self.out_storage_name ))
-        if self.fonts_location is not None:
-            query_params.append(('fontsLocation',self.fonts_location ))
         if self.regoin is not None:
             query_params.append(('regoin',self.regoin ))
         if self.password is not None:
@@ -80,7 +71,7 @@ class MergeFilesInRemoteFolderRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.5.2';
+        header_params['x-aspose-client-version'] = '25.6.1';
 
         form_params = []
         local_var_files = {}
@@ -96,7 +87,7 @@ class MergeFilesInRemoteFolderRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/mergeFilesInFolder"
+        resource_path =  "v4.0/cells/{name}/search/broken-links"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)
@@ -114,6 +105,6 @@ class MergeFilesInRemoteFolderRequest(object):
                 "auth_settings":auth_settings,
                 "body": body_params,
                 "collection_formats": collection_formats,
-                "response_type": 'file'  
+                "response_type": 'BrokenLinksReponse'  
         }
 

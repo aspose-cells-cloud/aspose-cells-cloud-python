@@ -1,20 +1,70 @@
-# AsposeCellsCloud::Request::PostWatermark 
+# **Spreadsheet Cloud API: postWatermark**
 
-## Load the model package
-```perl
-use AsposeCellsCloud::Request::PostWatermark;
+Add Text Watermark to Excel files and generate output files in various formats. 
+
+
+## **Quick Start**
+
+- **Base URL**: `http://api.aspose.cloud/v3.0`
+- **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+- **Example** 
+
+## **Interface Details**
+
+### **Endpoint** 
+
+```
+POST http://api.aspose.cloud/v3.0/cells/watermark
+```
+### **Function Description**
+PageTitle: Add text watermark to Excel files and generate output files in various formats.PageDescription: Indeed, Aspose.Cells Cloud offers strong support for adding text watermark to Excel files and generating output files in various formats.HeadTitle: Add text watermark to Excel files and generate output files in various formats.HeadSummary: Indeed, Aspose.Cells Cloud offers strong support for adding text watermark to Excel files and generating output files in various formats.HeadContent: Aspose.Cells Cloud provides REST API which supports adding text watermark to Excel files and generating output files in various formats and offers SDKs for multiple programming languages. These programming languages are include of Net, Java, Go, NodeJS, Python, and so on.
+
+### The request parameters of **postWatermark** API are: 
+
+| Parameter Name | Type | Path/Query String/HTTPBody | Description | 
+| :- | :- | :- |:- | 
+|File|File|FormData|File to upload|
+|text|String|Query|background text.|
+|color|String|Query|e.g. #1032ff|
+|outFormat|String|Query|The output data file format.(CSV/XLS/HTML/MHTML/ODS/PDF/XML/TXT/TIFF/XLSB/XLSM/XLSX/XLTM/XLTX/XPS/PNG/JPG/JPEG/GIF/EMF/BMP/MD[Markdown]/Numbers)|
+|password|String|Query|The password needed to open an Excel file.|
+|checkExcelRestriction|Boolean|Query|Whether check restriction of excel file when user modify cells related objects.|
+|region|String|Query|The regional settings for workbook.|
+
+### **Response Description**
+```json
+{
+  "Name": "FilesResult",
+  "Description": [
+    "Class features: Weekly lectures, group projects, midterm and final exams, and participation in class discussions."
+  ],
+  "Type": "Class",
+  "IsAbstract": false,
+  "Properties": [
+    {
+      "Name": "Files",
+      "Description": [
+        "A property named **Files** of type **IList FileInfo ** containing a collection of file information objects."
+      ],
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": false,
+      "DataType": {
+        "Identifier": "Container",
+        "Reference": "FileInfo",
+        "ElementDataType": {
+          "Identifier": "Class",
+          "Reference": "FileInfo",
+          "Name": "class:fileinfo"
+        },
+        "Name": "container"
+      }
+    }
+  ]
+}
 ```
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**file** | **string** | File to upload |
-**text** | **string** | background text. |
-**color** | **string** | e.g. #1032ff |
-**out_format** | **string** | The output data file format.(CSV/XLS/HTML/MHTML/ODS/PDF/XML/TXT/TIFF/XLSB/XLSM/XLSX/XLTM/XLTX/XPS/PNG/JPG/JPEG/GIF/EMF/BMP/MD[Markdown]/Numbers) |
-**password** | **string** | The password needed to open an Excel file. |
-**check_excel_restriction** | **boolean** | Whether check restriction of excel file when user modify cells related objects. |
-**region** | **string** | The regional settings for workbook. |  
 
-[[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+## OpenAPI Specification
 
+The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/LightCellsController/PostWatermark) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.

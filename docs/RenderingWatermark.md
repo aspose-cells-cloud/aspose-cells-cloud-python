@@ -8,7 +8,7 @@ use AsposeCellsCloud::Object::RenderingWatermark;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rotation** | **double** | Gets or sets roation of the watermark in degrees. |
+**Rotation** | **double** |  |
 **ScaleToPagePercent** | **int** |  |
 **Opacity** | **double** |  |
 **IsBackground** | **boolean** |  |

@@ -1,19 +1,85 @@
-# AsposeCellsCloud::Request::GetWorksheetPivotTableFilter 
+# **Spreadsheet Cloud API: getWorksheetPivotTableFilter**
 
-## Load the model package
-```perl
-use AsposeCellsCloud::Request::GetWorksheetPivotTableFilter;
+Retrieve PivotTable filters in the worksheet. 
+
+
+## **Quick Start**
+
+- **Base URL**: `http://api.aspose.cloud/v3.0`
+- **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+- **Example** 
+
+## **Interface Details**
+
+### **Endpoint** 
+
+```
+GET http://api.aspose.cloud/v3.0/cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotFilters/{filterIndex}
+```
+### **Function Description**
+PageTitle: Retrieve PivotTable filters in the worksheet.PageDescription: Aspose.Cells Cloud provides robust support for obtaining descriptions of pivot fields in the PivotTable, a process known for its intricacy.HeadTitle: Retrieve PivotTable filters in the worksheet.HeadSummary: Aspose.Cells Cloud provides robust support for obtaining descriptions of pivot fields in the PivotTable, a process known for its intricacy.HeadContent: Aspose.Cells Cloud provides REST API which supports obtaining descriptions of pivot fields in the PivotTable and offers SDKs for multiple programming languages. These programming languages are include of Net, Java, Go, NodeJS, Python, and so on.
+
+### The request parameters of **getWorksheetPivotTableFilter** API are: 
+
+| Parameter Name | Type | Path/Query String/HTTPBody | Description | 
+| :- | :- | :- |:- | 
+|name|String|Path|The file name.|
+|sheetName|String|Path|The worksheet name.|
+|pivotTableIndex|Integer|Path|The PivotTable index in the worksheet.|
+|filterIndex|Integer|Path|The pivot filter index of PivotTable.|
+|folder|String|Query|The folder where the file is situated.|
+|storageName|String|Query|The storage name where the file is situated.|
+
+### **Response Description**
+```json
+{
+  "Name": "PivotFilterResponse",
+  "Description": [
+    "Represents the PivotFilter Response."
+  ],
+  "Type": "Class",
+  "ParentName": "CellsCloudResponse",
+  "IsAbstract": false,
+  "Properties": [
+    {
+      "Name": "PivotFilter",
+      "Description": [
+        "Property Summary: Contains a pivot filter for data manipulation."
+      ],
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": false,
+      "DataType": {
+        "Identifier": "Class",
+        "Reference": "PivotFilter",
+        "Name": "class:pivotfilter"
+      }
+    },
+    {
+      "Name": "Code",
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": true,
+      "DataType": {
+        "Identifier": "Integer",
+        "Name": "integer"
+      }
+    },
+    {
+      "Name": "Status",
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": true,
+      "DataType": {
+        "Identifier": "String",
+        "Name": "string"
+      }
+    }
+  ]
+}
 ```
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**name** | **string** | The file name. |
-**sheet_name** | **string** | The worksheet name. |
-**pivot_table_index** | **int** | The PivotTable index in the worksheet. |
-**filter_index** | **int** | The pivot filter index of PivotTable. |
-**folder** | **string** | The folder where the file is situated. |
-**storage_name** | **string** | The storage name where the file is situated. |  
 
-[[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+## OpenAPI Specification
 
+The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/PivotTablesController/GetWorksheetPivotTableFilter) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.

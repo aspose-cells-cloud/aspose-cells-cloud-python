@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="SearchTextInRemoteRequest.cs">
+<copyright company="Aspose" file="SearchContentInRemoteSpreadsheetRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,14 +33,12 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class SearchTextInRemoteRequest(object):
+class SearchContentInRemoteSpreadsheetRequest(object):
 
-    def __init__(self , name ,search_text =None ,ignoring_case =None ,sheetname =None ,cellarea =None ,folder =None ,storage_name =None ,regoin =None ,password =None ):
+    def __init__(self , name ,search_text =None ,ignoring_case =None ,folder =None ,storage_name =None ,regoin =None ,password =None ):
         self.name = name 
         self.search_text = search_text 
         self.ignoring_case = ignoring_case 
-        self.sheetname = sheetname 
-        self.cellarea = cellarea 
         self.folder = folder 
         self.storage_name = storage_name 
         self.regoin = regoin 
@@ -49,12 +47,12 @@ class SearchTextInRemoteRequest(object):
 
         # verify the required parameter 'name' is set
         if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `search_text_in_remote`")
+            raise ValueError("Missing the required parameter `name` when calling `search_content_in_remote_spreadsheet`")
 
 
         # verify the required parameter 'search_text' is set
         if self.search_text is None:
-            raise ValueError("Missing the required parameter `search_text` when calling `search_text_in_remote`")
+            raise ValueError("Missing the required parameter `search_text` when calling `search_content_in_remote_spreadsheet`")
 
 
         collection_formats = {}
@@ -67,10 +65,6 @@ class SearchTextInRemoteRequest(object):
             query_params.append(('searchText',self.search_text ))
         if self.ignoring_case is not None:
             query_params.append(('ignoringCase',self.ignoring_case ))
-        if self.sheetname is not None:
-            query_params.append(('sheetname',self.sheetname ))
-        if self.cellarea is not None:
-            query_params.append(('cellarea',self.cellarea ))
         if self.folder is not None:
             query_params.append(('folder',self.folder ))
         if self.storage_name is not None:
@@ -82,7 +76,7 @@ class SearchTextInRemoteRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.5.2';
+        header_params['x-aspose-client-version'] = '25.6.1';
 
         form_params = []
         local_var_files = {}
@@ -98,7 +92,7 @@ class SearchTextInRemoteRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/{name}/search"
+        resource_path =  "v4.0/cells/{name}/search/content"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

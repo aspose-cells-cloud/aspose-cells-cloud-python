@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="ConvertWorkbookRequest.cs">
+<copyright company="Aspose" file="ConvertChartToImageRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,10 +33,12 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class ConvertWorkbookRequest(object):
+class ConvertChartToImageRequest(object):
 
-    def __init__(self , spreadsheet ,format =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
+    def __init__(self , spreadsheet ,worksheet =None ,chart_index =None ,format =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
         self.spreadsheet = spreadsheet 
+        self.worksheet = worksheet 
+        self.chart_index = chart_index 
         self.format = format 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
@@ -47,18 +49,32 @@ class ConvertWorkbookRequest(object):
 
         # verify the required parameter 'spreadsheet' is set
         if self.spreadsheet is None:
-            raise ValueError("Missing the required parameter `spreadsheet` when calling `convert_workbook`")
+            raise ValueError("Missing the required parameter `spreadsheet` when calling `convert_chart_to_image`")
+
+
+        # verify the required parameter 'worksheet' is set
+        if self.worksheet is None:
+            raise ValueError("Missing the required parameter `worksheet` when calling `convert_chart_to_image`")
+
+
+        # verify the required parameter 'chart_index' is set
+        if self.chart_index is None:
+            raise ValueError("Missing the required parameter `chart_index` when calling `convert_chart_to_image`")
 
 
         # verify the required parameter 'format' is set
         if self.format is None:
-            raise ValueError("Missing the required parameter `format` when calling `convert_workbook`")
+            raise ValueError("Missing the required parameter `format` when calling `convert_chart_to_image`")
 
 
         collection_formats = {}
 
         path_params = {}
         query_params = []
+        if self.worksheet is not None:
+            query_params.append(('worksheet',self.worksheet ))
+        if self.chart_index is not None:
+            query_params.append(('chartIndex',self.chart_index ))
         if self.format is not None:
             query_params.append(('format',self.format ))
         if self.out_path is not None:
@@ -74,7 +90,7 @@ class ConvertWorkbookRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.5.2';
+        header_params['x-aspose-client-version'] = '25.6.1';
 
         form_params = []
         local_var_files = {}
@@ -99,7 +115,7 @@ class ConvertWorkbookRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/convert"
+        resource_path =  "v4.0/cells/convert/chart/image"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

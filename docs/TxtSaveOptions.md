@@ -8,10 +8,10 @@ use AsposeCellsCloud::Object::TxtSaveOptions;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**QuoteType** | **string** | Gets or sets how to quote values in the exported text file. |
-**Separator** | **string** | Gets and sets char Delimiter of text file. |
-**SeparatorString** | **string** | Gets and sets the a string value as separator. |
-**AlwaysQuoted** | **boolean** | Indicates whether always adding '"' for each field. If true then all values will be quoted; If false then values will only be quoted when needed(for example, when values contain special characters such as '"' , '\n' or separator character). Default is false. |
+**QuoteType** | **string** |  |
+**Separator** | **string** |  |
+**SeparatorString** | **string** |  |
+**AlwaysQuoted** | **boolean** |  |
 **SaveFormat** | **string** |  |
 **CachedFileFolder** | **string** |  |
 **ClearData** | **boolean** |  |

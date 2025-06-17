@@ -8,7 +8,7 @@ use AsposeCellsCloud::Object::RenderingFont;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Gets name of the font. |
+**Name** | **string** |  |
 **Size** | **double** |  |
 **Bold** | **boolean** |  |
 **Italic** | **boolean** |  |

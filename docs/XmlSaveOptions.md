@@ -8,12 +8,12 @@ use AsposeCellsCloud::Object::XmlSaveOptions;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SheetIndexes** | **ARRAY[int?]** | Represents the indexes of exported sheets. |
-**ExportArea** | **CellArea** | Gets or sets the exporting range. |
-**HasHeaderRow** | **boolean** | Indicates whether the range contains header row. |
-**XmlMapName** | **string** | Indicates whether exporting xml map in the file. |
-**SheetNameAsElementName** | **boolean** | Indicates whether exporting sheet's name as the name of the element. |
-**DataAsAttribute** | **boolean** | Indicates whether exporting data as attributes of element. |
+**SheetIndexes** | **ARRAY[int?]** |  |
+**ExportArea** | **CellArea** |  |
+**HasHeaderRow** | **boolean** |  |
+**XmlMapName** | **string** |  |
+**SheetNameAsElementName** | **boolean** |  |
+**DataAsAttribute** | **boolean** |  |
 **SaveFormat** | **string** |  |
 **CachedFileFolder** | **string** |  |
 **ClearData** | **boolean** |  |

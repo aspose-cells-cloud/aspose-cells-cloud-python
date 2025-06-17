@@ -78,8 +78,7 @@ class PageSetup(object):
         'top_margin' : 'float',
         'zoom' : 'int',
         'header' : 'list[PageSection]',
-        'footer' : 'list[PageSection]',
-        'link' : 'Link'
+        'footer' : 'list[PageSection]'
     }
 
     attribute_map = {
@@ -116,8 +115,7 @@ class PageSetup(object):
         'top_margin' : 'TopMargin' ,
         'zoom' : 'Zoom' ,
         'header' : 'Header' ,
-        'footer' : 'Footer' ,
-        'link' : 'link' 
+        'footer' : 'Footer' 
     }
 
     @staticmethod
@@ -133,7 +131,7 @@ class PageSetup(object):
             return self.container[attr]
         return None
 
-    def __init__(self,black_and_white=None ,bottom_margin=None ,center_horizontally=None ,center_vertically=None ,first_page_number=None ,fit_to_pages_tall=None ,fit_to_pages_wide=None ,footer_margin=None ,header_margin=None ,is_auto_first_page_number=None ,is_hf_align_margins=None ,is_hf_diff_first=None ,is_hf_diff_odd_even=None ,is_hf_scale_with_doc=None ,is_percent_scale=None ,left_margin=None ,order=None ,orientation=None ,paper_size=None ,print_area=None ,print_comments=None ,print_copies=None ,print_draft=None ,print_errors=None ,print_gridlines=None ,print_headings=None ,print_quality=None ,print_title_columns=None ,print_title_rows=None ,right_margin=None ,top_margin=None ,zoom=None ,header=None ,footer=None ,link=None   ,**kw):
+    def __init__(self,black_and_white=None ,bottom_margin=None ,center_horizontally=None ,center_vertically=None ,first_page_number=None ,fit_to_pages_tall=None ,fit_to_pages_wide=None ,footer_margin=None ,header_margin=None ,is_auto_first_page_number=None ,is_hf_align_margins=None ,is_hf_diff_first=None ,is_hf_diff_odd_even=None ,is_hf_scale_with_doc=None ,is_percent_scale=None ,left_margin=None ,order=None ,orientation=None ,paper_size=None ,print_area=None ,print_comments=None ,print_copies=None ,print_draft=None ,print_errors=None ,print_gridlines=None ,print_headings=None ,print_quality=None ,print_title_columns=None ,print_title_rows=None ,right_margin=None ,top_margin=None ,zoom=None ,header=None ,footer=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -176,7 +174,6 @@ class PageSetup(object):
         self.container['zoom'] = None 
         self.container['header'] = None 
         self.container['footer'] = None 
-        self.container['link'] = None 
         params = locals()
         self.black_and_white = black_and_white
         if 'black_and_white' in params:
@@ -379,12 +376,6 @@ class PageSetup(object):
         self.footer = footer
         if 'footer' in params:
             self.footer = params["footer"]
-
-
-             
-        self.link = link
-        if 'link' in params:
-            self.link = params["link"]
 
 
              
@@ -627,13 +618,6 @@ class PageSetup(object):
     @footer.setter
     def footer(self, footer):
         self.container['footer'] = footer 
-    @property
-    def link(self):
-        return self.container['link']
-
-    @link.setter
-    def link(self, link):
-        self.container['link'] = link 
 
     def to_dict(self):
         """

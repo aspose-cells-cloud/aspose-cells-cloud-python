@@ -1,17 +1,41 @@
-# AsposeCellsCloud::Request::GetWorksheetPageCount 
+# **Spreadsheet Cloud API: getWorksheetPageCount**
 
-## Load the model package
-```perl
-use AsposeCellsCloud::Request::GetWorksheetPageCount;
+Get page count in the worksheet. 
+
+
+## **Quick Start**
+
+- **Base URL**: `http://api.aspose.cloud/v3.0`
+- **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+- **Example** 
+
+## **Interface Details**
+
+### **Endpoint** 
+
+```
+GET http://api.aspose.cloud/v3.0/cells/{name}/worksheets/{sheetName}/pagecount
+```
+### **Function Description**
+PageTitle:Get page count in the worksheet.PageDescription: Aspose.Cells Cloud provides robust support for getting page count in the worksheet, a process known for its intricacy.HeadTitle: Get page count in the worksheet.HeadSummary: Aspose.Cells Cloud provides robust support for getting page count in the worksheet, a process known for its intricacy.HeadContent: Aspose.Cells Cloud provides REST API which supports getting page count in the worksheet and offers SDKs for multiple programming languages. These programming languages are include of Net, Java, Go, NodeJS, Python, and so on.
+
+### The request parameters of **getWorksheetPageCount** API are: 
+
+| Parameter Name | Type | Path/Query String/HTTPBody | Description | 
+| :- | :- | :- |:- | 
+|name|String|Path|The file name.|
+|sheetName|String|Path|The worksheet name.|
+|folder|String|Query|The folder where the file is situated.|
+|storageName|String|Query|The storage name where the file is situated.|
+
+### **Response Description**
+```json
+{
+Integer
+}
 ```
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**name** | **string** | The file name. |
-**sheet_name** | **string** | The worksheet name. |
-**folder** | **string** | The folder where the file is situated. |
-**storage_name** | **string** | The storage name where the file is situated. |  
 
-[[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+## OpenAPI Specification
 
+The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/WorksheetsController/GetWorksheetPageCount) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.

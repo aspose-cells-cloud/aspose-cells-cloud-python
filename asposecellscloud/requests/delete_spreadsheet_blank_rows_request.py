@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="MergeFilesRequest.cs">
+<copyright company="Aspose" file="DeleteSpreadsheetBlankRowsRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,38 +33,29 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class MergeFilesRequest(object):
+class DeleteSpreadsheetBlankRowsRequest(object):
 
-    def __init__(self , spreadsheet ,out_format =None ,merge_in_one_sheet =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
+    def __init__(self , spreadsheet ,out_path =None ,out_storage_name =None ,regoin =None ,password =None ):
         self.spreadsheet = spreadsheet 
-        self.out_format = out_format 
-        self.merge_in_one_sheet = merge_in_one_sheet 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
-        self.fonts_location = fonts_location 
         self.regoin = regoin 
         self.password = password 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'spreadsheet' is set
         if self.spreadsheet is None:
-            raise ValueError("Missing the required parameter `spreadsheet` when calling `merge_files`")
+            raise ValueError("Missing the required parameter `spreadsheet` when calling `delete_spreadsheet_blank_rows`")
 
 
         collection_formats = {}
 
         path_params = {}
         query_params = []
-        if self.out_format is not None:
-            query_params.append(('outFormat',self.out_format ))
-        if self.merge_in_one_sheet is not None:
-            query_params.append(('mergeInOneSheet',self.merge_in_one_sheet ))
         if self.out_path is not None:
             query_params.append(('outPath',self.out_path ))
         if self.out_storage_name is not None:
             query_params.append(('outStorageName',self.out_storage_name ))
-        if self.fonts_location is not None:
-            query_params.append(('fontsLocation',self.fonts_location ))
         if self.regoin is not None:
             query_params.append(('regoin',self.regoin ))
         if self.password is not None:
@@ -72,7 +63,7 @@ class MergeFilesRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.5.2';
+        header_params['x-aspose-client-version'] = '25.6.1';
 
         form_params = []
         local_var_files = {}
@@ -97,7 +88,7 @@ class MergeFilesRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/merge"
+        resource_path =  "v4.0/cells/delete/blank-rows"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

@@ -8,9 +8,9 @@ use AsposeCellsCloud::Object::ImageOrPrintOptions;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TextCrossType** | **string** | TextCrossType |
-**GridlineType** | **string** | GridlineType |
-**OutputBlankPageWhenNothingToPrint** | **boolean** | Indicates whether to output a blank page when there is nothing to print. |
+**TextCrossType** | **string** |  |
+**GridlineType** | **string** |  |
+**OutputBlankPageWhenNothingToPrint** | **boolean** |  |
 **CheckWorkbookDefaultFont** | **boolean** |  |
 **DefaultFont** | **string** |  |
 **IsOptimized** | **boolean** |  |
@@ -25,14 +25,14 @@ Name | Type | Description | Notes
 **PrintWithStatusDialog** | **boolean** |  |
 **HorizontalResolution** | **int** |  |
 **VerticalResolution** | **int** |  |
-**DefaultEditLanguage** | **string** | DefaultEditLanguage |
-**TiffColorDepth** | **string** | ColorDepth |
-**TiffCompression** | **string** | TiffCompression |
-**PrintingPage** | **string** | PrintingPageType |
+**DefaultEditLanguage** | **string** |  |
+**TiffColorDepth** | **string** |  |
+**TiffCompression** | **string** |  |
+**PrintingPage** | **string** |  |
 **Quality** | **int** |  |
-**ImageType** | **string** | ImageType |
+**ImageType** | **string** |  |
 **OnePagePerSheet** | **boolean** |  |
-**TiffBinarizationMethod** | **string** | ImageBinarizationMethod |  
+**TiffBinarizationMethod** | **string** |  |  
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

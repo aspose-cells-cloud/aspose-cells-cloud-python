@@ -1,19 +1,43 @@
-# AsposeCellsCloud::Request::GetWorksheetPictureWithFormat 
+# **Spreadsheet Cloud API: getWorksheetPictureWithFormat**
 
-## Load the model package
-```perl
-use AsposeCellsCloud::Request::GetWorksheetPictureWithFormat;
+Retrieve a picture by number in the worksheet. 
+
+
+## **Quick Start**
+
+- **Base URL**: `http://api.aspose.cloud/v3.0`
+- **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+- **Example** 
+
+## **Interface Details**
+
+### **Endpoint** 
+
+```
+GET http://api.aspose.cloud/v3.0/cells/{name}/worksheets/{sheetName}/pictures/{pictureNumber}
+```
+### **Function Description**
+PageTitle: Retrieve a picture by number in the worksheet.PageDescription: Aspose.Cells Cloud provides robust support for obtaining a picture by number in the worksheet, a process known for its intricacy.HeadTitle: Retrieve a picture by number in the worksheet.HeadSummary: Aspose.Cells Cloud provides robust support for obtaining a picture by number in the worksheet, a process known for its intricacy.HeadContent: Aspose.Cells Cloud provides REST API which supports obtaining a picture by number in the worksheet and offers SDKs for multiple programming languages. These programming languages are include of Net, Java, Go, NodeJS, Python, and so on.
+
+### The request parameters of **getWorksheetPictureWithFormat** API are: 
+
+| Parameter Name | Type | Path/Query String/HTTPBody | Description | 
+| :- | :- | :- |:- | 
+|name|String|Path|The file name.|
+|sheetName|String|Path|The worksheet name.|
+|pictureNumber|Integer|Path|The picture index.|
+|format|String|Query|Picture conversion format(PNG/TIFF/JPEG/GIF/EMF/BMP).|
+|folder|String|Query|The folder where the file is situated.|
+|storageName|String|Query|The storage name where the file is situated.|
+
+### **Response Description**
+```json
+{
+File
+}
 ```
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**name** | **string** | The file name. |
-**sheet_name** | **string** | The worksheet name. |
-**picture_number** | **int** | The picture index. |
-**format** | **string** | Picture conversion format(PNG/TIFF/JPEG/GIF/EMF/BMP). |
-**folder** | **string** | The folder where the file is situated. |
-**storage_name** | **string** | The storage name where the file is situated. |  
 
-[[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+## OpenAPI Specification
 
+The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/PicturesController/GetWorksheetPictureWithFormat) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.

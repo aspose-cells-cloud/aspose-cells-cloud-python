@@ -8,9 +8,9 @@ use AsposeCellsCloud::Object::MarkdownSaveOptions;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Encoding** | **string** | Gets and sets the default encoding. |
-**FormatStrategy** | **string** | The Data provider to provide cells data for saving workbook in light mode. |
-**LineSeparator** | **string** | Gets and sets the line separator. |
+**Encoding** | **string** |  |
+**FormatStrategy** | **string** |  |
+**LineSeparator** | **string** |  |
 **SaveFormat** | **string** |  |
 **CachedFileFolder** | **string** |  |
 **ClearData** | **boolean** |  |

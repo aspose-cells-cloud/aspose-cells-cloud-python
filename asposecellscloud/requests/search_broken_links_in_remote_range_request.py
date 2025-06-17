@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="SearchBrokenLinksRequest.cs">
+<copyright company="Aspose" file="SearchBrokenLinksInRemoteRangeRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,29 +33,47 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class SearchBrokenLinksRequest(object):
+class SearchBrokenLinksInRemoteRangeRequest(object):
 
-    def __init__(self , spreadsheet ,sheetname =None ,cellarea =None ,regoin =None ,password =None ):
-        self.spreadsheet = spreadsheet 
-        self.sheetname = sheetname 
-        self.cellarea = cellarea 
+    def __init__(self , name ,worksheet ,cell_area ,folder =None ,storage_name =None ,regoin =None ,password =None ):
+        self.name = name 
+        self.worksheet = worksheet 
+        self.cell_area = cell_area 
+        self.folder = folder 
+        self.storage_name = storage_name 
         self.regoin = regoin 
         self.password = password 
     def create_http_request(self, api_client):
 
-        # verify the required parameter 'spreadsheet' is set
-        if self.spreadsheet is None:
-            raise ValueError("Missing the required parameter `spreadsheet` when calling `search_broken_links`")
+        # verify the required parameter 'name' is set
+        if self.name is None:
+            raise ValueError("Missing the required parameter `name` when calling `search_broken_links_in_remote_range`")
+
+
+        # verify the required parameter 'worksheet' is set
+        if self.worksheet is None:
+            raise ValueError("Missing the required parameter `worksheet` when calling `search_broken_links_in_remote_range`")
+
+
+        # verify the required parameter 'cell_area' is set
+        if self.cell_area is None:
+            raise ValueError("Missing the required parameter `cell_area` when calling `search_broken_links_in_remote_range`")
 
 
         collection_formats = {}
 
         path_params = {}
+        if self.name is not None:
+            path_params['name'] = self.name
+        if self.worksheet is not None:
+            path_params['worksheet'] = self.worksheet
+        if self.cell_area is not None:
+            path_params['cellArea'] = self.cell_area
         query_params = []
-        if self.sheetname is not None:
-            query_params.append(('sheetname',self.sheetname ))
-        if self.cellarea is not None:
-            query_params.append(('cellarea',self.cellarea ))
+        if self.folder is not None:
+            query_params.append(('folder',self.folder ))
+        if self.storage_name is not None:
+            query_params.append(('storageName',self.storage_name ))
         if self.regoin is not None:
             query_params.append(('regoin',self.regoin ))
         if self.password is not None:
@@ -63,20 +81,10 @@ class SearchBrokenLinksRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.5.2';
+        header_params['x-aspose-client-version'] = '25.6.1';
 
         form_params = []
         local_var_files = {}
-        if self.spreadsheet is not None:            
-            if isinstance(self.spreadsheet,dict):
-                for filename , filecontext in  self.spreadsheet.items():
-                    local_var_files[filename] = filecontext
-            else:
-                if isinstance(self.spreadsheet,bytes):
-                    local_var_files['File'] = self.spreadsheet
-                else:
-                    local_var_files[os.path.basename( self.spreadsheet)] = self.spreadsheet   
-
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = api_client.\
@@ -84,11 +92,12 @@ class SearchBrokenLinksRequest(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = api_client.\
-            select_header_content_type(['multipart/form-data'])
+            select_header_content_type(['application/json'])
+
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/searchBrokenLinks"
+        resource_path =  "v4.0/cells/{name}/worksheets/{worksheet}/ranges/{cellArea}search/broken-links"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

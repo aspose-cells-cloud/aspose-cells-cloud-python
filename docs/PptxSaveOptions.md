@@ -8,9 +8,9 @@ use AsposeCellsCloud::Object::PptxSaveOptions;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IgnoreHiddenRows** | **boolean** | Ignore hidden rows |
-**AdjustFontSizeForRowType** | **string** | Adjust font size for row type |
-**ExportViewType** | **string** | Gets and sets the display type when exporting to PowerPoint. The default exporting type is working as printing. |
+**IgnoreHiddenRows** | **boolean** |  |
+**AdjustFontSizeForRowType** | **string** |  |
+**ExportViewType** | **string** |  |
 **DefaultFont** | **string** |  |
 **CheckWorkbookDefaultFont** | **boolean** |  |
 **CheckFontCompatibility** | **boolean** |  |

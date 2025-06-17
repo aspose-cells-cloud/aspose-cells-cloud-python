@@ -1,19 +1,67 @@
-# AsposeCellsCloud::Request::PostWorksheetChart 
+# **Spreadsheet Cloud API: postWorksheetChart**
 
-## Load the model package
-```perl
-use AsposeCellsCloud::Request::PostWorksheetChart;
+Update chart properties in the worksheet. 
+
+
+## **Quick Start**
+
+- **Base URL**: `http://api.aspose.cloud/v3.0`
+- **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+- **Example** 
+
+## **Interface Details**
+
+### **Endpoint** 
+
+```
+POST http://api.aspose.cloud/v3.0/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}
+```
+### **Function Description**
+PageTitle: Update chart properties in the worksheet.PageDescription: Aspose.Cells Cloud provides robust support for updating chart properties in the worksheet, a process known for its intricacy.HeadTitle: Update chart properties in the worksheet.HeadSummary: Aspose.Cells Cloud provides robust support for updating chart properties in the worksheet, a process known for its intricacy.HeadContent: Aspose.Cells Cloud provides REST API which supports updating chart properties in the worksheet and offers SDKs for multiple programming languages. These programming languages are include of Net, Java, Go, NodeJS, Python, and so on.
+
+### The request parameters of **postWorksheetChart** API are: 
+
+| Parameter Name | Type | Path/Query String/HTTPBody | Description | 
+| :- | :- | :- |:- | 
+|name|String|Path|The file name.|
+|sheetName|String|Path|The worksheet name.|
+|chartIndex|Integer|Path|The chart index.|
+|chart|Class|Body|Chart Represents a specified chart.|
+|folder|String|Query|The folder where the file is situated.|
+|storageName|String|Query|The storage name where the file is situated.|
+
+### **Response Description**
+```json
+{
+  "Name": "CellsCloudResponse",
+  "Type": "Class",
+  "IsAbstract": false,
+  "Properties": [
+    {
+      "Name": "Code",
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": false,
+      "DataType": {
+        "Identifier": "Integer",
+        "Name": "integer"
+      }
+    },
+    {
+      "Name": "Status",
+      "Nullable": true,
+      "ReadOnly": false,
+      "IsInherit": false,
+      "DataType": {
+        "Identifier": "String",
+        "Name": "string"
+      }
+    }
+  ]
+}
 ```
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**name** | **string** | The file name. |
-**sheet_name** | **string** | The worksheet name. |
-**chart_index** | **int** | The chart index. |
-**chart** | **Chart** | Chart Represents a specified chart. |
-**folder** | **string** | The folder where the file is situated. |
-**storage_name** | **string** | The storage name where the file is situated. |  
 
-[[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+## OpenAPI Specification
 
+The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/ChartsController/PostWorksheetChart) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.

@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="SplitFileInRemoteRequest.cs">
+<copyright company="Aspose" file="ReplaceContentInRemoteWorksheetRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,25 +33,37 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class SplitFileInRemoteRequest(object):
+class ReplaceContentInRemoteWorksheetRequest(object):
 
-    def __init__(self , name ,folder =None ,_from =None ,to =None ,out_format =None ,storage_name =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
+    def __init__(self , name ,worksheet ,search_text =None ,replace_text =None ,folder =None ,storage_name =None ,regoin =None ,password =None ):
         self.name = name 
+        self.worksheet = worksheet 
+        self.search_text = search_text 
+        self.replace_text = replace_text 
         self.folder = folder 
-        self._from = _from 
-        self.to = to 
-        self.out_format = out_format 
         self.storage_name = storage_name 
-        self.out_path = out_path 
-        self.out_storage_name = out_storage_name 
-        self.fonts_location = fonts_location 
         self.regoin = regoin 
         self.password = password 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
         if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `split_file_in_remote`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_content_in_remote_worksheet`")
+
+
+        # verify the required parameter 'worksheet' is set
+        if self.worksheet is None:
+            raise ValueError("Missing the required parameter `worksheet` when calling `replace_content_in_remote_worksheet`")
+
+
+        # verify the required parameter 'search_text' is set
+        if self.search_text is None:
+            raise ValueError("Missing the required parameter `search_text` when calling `replace_content_in_remote_worksheet`")
+
+
+        # verify the required parameter 'replace_text' is set
+        if self.replace_text is None:
+            raise ValueError("Missing the required parameter `replace_text` when calling `replace_content_in_remote_worksheet`")
 
 
         collection_formats = {}
@@ -59,23 +71,17 @@ class SplitFileInRemoteRequest(object):
         path_params = {}
         if self.name is not None:
             path_params['name'] = self.name
+        if self.worksheet is not None:
+            path_params['worksheet'] = self.worksheet
         query_params = []
+        if self.search_text is not None:
+            query_params.append(('searchText',self.search_text ))
+        if self.replace_text is not None:
+            query_params.append(('replaceText',self.replace_text ))
         if self.folder is not None:
             query_params.append(('folder',self.folder ))
-        if self._from is not None:
-            query_params.append(('from',self._from ))
-        if self.to is not None:
-            query_params.append(('to',self.to ))
-        if self.out_format is not None:
-            query_params.append(('outFormat',self.out_format ))
         if self.storage_name is not None:
             query_params.append(('storageName',self.storage_name ))
-        if self.out_path is not None:
-            query_params.append(('outPath',self.out_path ))
-        if self.out_storage_name is not None:
-            query_params.append(('outStorageName',self.out_storage_name ))
-        if self.fonts_location is not None:
-            query_params.append(('fontsLocation',self.fonts_location ))
         if self.regoin is not None:
             query_params.append(('regoin',self.regoin ))
         if self.password is not None:
@@ -83,7 +89,7 @@ class SplitFileInRemoteRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.5.2';
+        header_params['x-aspose-client-version'] = '25.6.1';
 
         form_params = []
         local_var_files = {}
@@ -99,7 +105,7 @@ class SplitFileInRemoteRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/{name}/split"
+        resource_path =  "v4.0/cells/{name}/worksheets/{worksheet}/replace/content"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)
@@ -117,6 +123,6 @@ class SplitFileInRemoteRequest(object):
                 "auth_settings":auth_settings,
                 "body": body_params,
                 "collection_formats": collection_formats,
-                "response_type": 'file'  
+                "response_type": 'CellsCloudResponse'  
         }
 
