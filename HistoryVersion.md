@@ -1,5 +1,17 @@
 # Release History Version
 
+## Feature & Enhancements in Version 25.5
+
+- Add the new API for getting the public key for encrypting the password.
+- Optimize the convert workbook feature: Add auto-fit row parameter.
+- Optimize auto-fit rows for the worksheet.
+- Optimize auto-fit rows for worksheet: Add firstColumn and lastColumn.
+
+## Feature & Enhancements in Version 25.4
+
+- New API for Comprehensive Formula Error Checks in Excel Workbooks.
+- New API for External Reference Checks in Excel Workbooks.
+
 ## Feature & Enhancements in Version 25.3
 
 - Optimized the properties of `SaveOptions` to enhance performance and flexibility.

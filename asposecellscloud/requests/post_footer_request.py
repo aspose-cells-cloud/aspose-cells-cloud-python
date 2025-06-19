@@ -91,7 +91,7 @@ class PostFooterRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6.1';
+        header_params['x-aspose-client-version'] = '25.6';
 
         form_params = []
         local_var_files = {}
