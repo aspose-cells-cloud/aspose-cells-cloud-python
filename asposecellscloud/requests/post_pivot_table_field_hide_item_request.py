@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostPivotTableFieldHideItemRequest(object):
 
-    def __init__(self , name ,sheet_name ,pivot_table_index ,pivot_field_type =None ,field_index =None ,item_index =None ,is_hide =None ,need_re_calculate =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,pivot_table_index ,pivot_field_type ,field_index ,item_index ,is_hide ,need_re_calculate =None ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.pivot_table_index = pivot_table_index 
@@ -110,7 +110,7 @@ class PostPivotTableFieldHideItemRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

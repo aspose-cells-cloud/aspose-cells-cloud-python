@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class CopyFileRequest(object):
 
-    def __init__(self , src_path ,dest_path =None ,src_storage_name =None ,dest_storage_name =None ,version_id =None ):
+    def __init__(self , src_path ,dest_path ,src_storage_name =None ,dest_storage_name =None ,version_id =None ):
         self.src_path = src_path 
         self.dest_path = dest_path 
         self.src_storage_name = src_storage_name 
@@ -70,7 +70,7 @@ class CopyFileRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PutInsertNewWorksheetRequest(object):
 
-    def __init__(self , name ,sheet_name =None ,index =None ,sheettype =None ,newsheetname =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,index ,sheettype ,newsheetname =None ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.index = index 
@@ -86,7 +86,7 @@ class PutInsertNewWorksheetRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/aspose.cells%20Cloud%20SDK-25.6-green?style=for-the-badge&logo=python) [![Product Page](https://img.shields.io/badge/Product-0288d1?style=for-the-badge&logo=Google-Chrome&logoColor=white)](https://products.aspose.cloud/cells/python/) [![Documentation](https://img.shields.io/badge/Documentation-388e3c?style=for-the-badge&logo=Hugo&logoColor=white)](https://docs.aspose.cloud/cells/) [![API Ref](https://img.shields.io/badge/Reference-f39c12?style=for-the-badge&logo=html5&logoColor=white)](https://reference.aspose.cloud/cells/) [![Examples](https://img.shields.io/badge/Examples-1565c0?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-perl/tree/master/Examples) [![Blog](https://img.shields.io/badge/Blog-d32f2f?style=for-the-badge&logo=WordPress&logoColor=white)](https://blog.aspose.cloud/categories/aspose.cells-cloud-product-family/) [![Support](https://img.shields.io/badge/Support-7b1fa2?style=for-the-badge&logo=Discourse&logoColor=white)](https://forum.aspose.cloud/c/cells/7) [![PyPI](https://img.shields.io/pypi/v/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud?style=for-the-badge)](https://www.python.org/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python?style=for-the-badge)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/25.6?style=for-the-badge)
+![](https://img.shields.io/badge/aspose.cells%20Cloud%20SDK-25.7-green?style=for-the-badge&logo=python) [![Product Page](https://img.shields.io/badge/Product-0288d1?style=for-the-badge&logo=Google-Chrome&logoColor=white)](https://products.aspose.cloud/cells/python/) [![Documentation](https://img.shields.io/badge/Documentation-388e3c?style=for-the-badge&logo=Hugo&logoColor=white)](https://docs.aspose.cloud/cells/) [![API Ref](https://img.shields.io/badge/Reference-f39c12?style=for-the-badge&logo=html5&logoColor=white)](https://reference.aspose.cloud/cells/) [![Examples](https://img.shields.io/badge/Examples-1565c0?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-perl/tree/master/Examples) [![Blog](https://img.shields.io/badge/Blog-d32f2f?style=for-the-badge&logo=WordPress&logoColor=white)](https://blog.aspose.cloud/categories/aspose.cells-cloud-product-family/) [![Support](https://img.shields.io/badge/Support-7b1fa2?style=for-the-badge&logo=Discourse&logoColor=white)](https://forum.aspose.cloud/c/cells/7) [![PyPI](https://img.shields.io/pypi/v/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud?style=for-the-badge)](https://www.python.org/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python?style=for-the-badge)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/25.7?style=for-the-badge)
 
 # Python package for Aspose.Cells Cloud
 
@@ -26,10 +26,9 @@ from asposecellscloud.apis.cells_api import CellsApi
 from asposecellscloud.models import *
 from asposecellscloud.requests import *
 
-api  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'),"v3.0",os.getenv('CellsCloudApiBaseUrl'))
+cellsApi  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'),"v3.0",os.getenv('CellsCloudApiBaseUrl'))
 
-request =  PutConvertWorkbookRequest(  "./Book1.xlsx" , format= 'pdf')
-api.put_convert_workbook(request)
+cellsApi.convert_spreadsheet(ConvertSpreadsheetRequest( 'EmployeeSalesSummary.xlsx', 'pdf') , local_outpath = "EmployeeSalesSummary.pdf")
 
 ```
 
@@ -93,17 +92,15 @@ api.put_convert_workbook(request)
 - Import/Export: Facilitates importing data from various sources into spreadsheets and exporting spreadsheet data to other formats.
 - Security Management: Offers a range of security features like data encryption, access control, and permission management to safeguard the security and integrity of spreadsheet data.
 
-## Feature & Enhancements in Version v25.6.0
+## Feature & Enhancements in Version v25.7.0
 
 Full list of issues covering all changes in this release:
 
 |**Summary**| **Category** |
 | :- |:-------------|
-| Optimize the upload file API  | Improvement |
-| Support delete blank rows, columns, and worksheets. | New Feature |
-| Optimize search context for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area. | New Feature |
-| Optimize search broken links for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area. | New Feature |
-| Optimize replace context for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area. | New Feature |
+| Optimize operate scope options for extProcessingController.| Improvement  |
+| Add protect/unprotect spreadsheet APIs.| New Feature  |
+| Add convert worksheet/table/range to other formats.      | New Feature  |
 
 ## Available SDKs
 

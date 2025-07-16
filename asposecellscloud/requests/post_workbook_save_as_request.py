@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorkbookSaveAsRequest(object):
 
-    def __init__(self , name ,newfilename =None ,save_options =None ,is_auto_fit_rows =None ,is_auto_fit_columns =None ,folder =None ,storage_name =None ,out_storage_name =None ,check_excel_restriction =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,one_page_per_sheet =None ,fonts_location =None ):
+    def __init__(self , name ,newfilename ,save_options =None ,is_auto_fit_rows =None ,is_auto_fit_columns =None ,folder =None ,storage_name =None ,out_storage_name =None ,check_excel_restriction =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,one_page_per_sheet =None ,fonts_location =None ):
         self.name = name 
         self.newfilename = newfilename 
         self.save_options = save_options 
@@ -95,7 +95,7 @@ class PostWorkbookSaveAsRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

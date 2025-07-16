@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorksheetTextReplaceRequest(object):
 
-    def __init__(self , name ,sheet_name ,old_value =None ,new_value =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,old_value ,new_value ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.old_value = old_value 
@@ -83,7 +83,7 @@ class PostWorksheetTextReplaceRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

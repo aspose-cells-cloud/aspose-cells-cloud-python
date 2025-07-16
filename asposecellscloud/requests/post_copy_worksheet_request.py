@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostCopyWorksheetRequest(object):
 
-    def __init__(self , name ,sheet_name ,source_sheet =None ,options =None ,source_workbook =None ,source_folder =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,source_sheet ,options ,source_workbook =None ,source_folder =None ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.source_sheet = source_sheet 
@@ -87,7 +87,7 @@ class PostCopyWorksheetRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

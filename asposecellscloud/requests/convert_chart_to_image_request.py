@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class ConvertChartToImageRequest(object):
 
-    def __init__(self , spreadsheet ,worksheet =None ,chart_index =None ,format =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
+    def __init__(self , spreadsheet ,worksheet ,chart_index ,format ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
         self.spreadsheet = spreadsheet 
         self.worksheet = worksheet 
         self.chart_index = chart_index 
@@ -90,7 +90,7 @@ class ConvertChartToImageRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

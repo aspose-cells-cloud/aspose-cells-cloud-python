@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class ConvertSpreadsheetRequest(object):
 
-    def __init__(self , spreadsheet ,format =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
+    def __init__(self , spreadsheet ,format ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
         self.spreadsheet = spreadsheet 
         self.format = format 
         self.out_path = out_path 
@@ -74,7 +74,7 @@ class ConvertSpreadsheetRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

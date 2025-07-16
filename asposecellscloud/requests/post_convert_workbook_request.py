@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostConvertWorkbookRequest(object):
 
-    def __init__(self , convert_workbook_options =None ,fonts_location =None ):
+    def __init__(self , convert_workbook_options ,fonts_location =None ):
         self.convert_workbook_options = convert_workbook_options 
         self.fonts_location = fonts_location 
     def create_http_request(self, api_client):
@@ -54,7 +54,7 @@ class PostConvertWorkbookRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

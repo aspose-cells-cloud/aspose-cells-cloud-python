@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorksheetMergeRequest(object):
 
-    def __init__(self , name ,sheet_name ,start_row =None ,start_column =None ,total_rows =None ,total_columns =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,start_row ,start_column ,total_rows ,total_columns ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.start_row = start_row 
@@ -99,7 +99,7 @@ class PostWorksheetMergeRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

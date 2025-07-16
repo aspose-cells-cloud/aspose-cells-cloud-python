@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorksheetCellsRangeMoveToRequest(object):
 
-    def __init__(self , name ,sheet_name ,range =None ,dest_row =None ,dest_column =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,range ,dest_row ,dest_column ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.range = range 
@@ -89,7 +89,7 @@ class PostWorksheetCellsRangeMoveToRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

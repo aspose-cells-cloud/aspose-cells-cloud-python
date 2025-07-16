@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostConvertWorksheetToImageRequest(object):
 
-    def __init__(self , convert_worksheet_options =None ,fonts_location =None ):
+    def __init__(self , convert_worksheet_options ,fonts_location =None ):
         self.convert_worksheet_options = convert_worksheet_options 
         self.fonts_location = fonts_location 
     def create_http_request(self, api_client):
@@ -54,7 +54,7 @@ class PostConvertWorksheetToImageRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostProtectRequest(object):
 
-    def __init__(self , file ,protect_workbook_request =None ,password =None ):
+    def __init__(self , file ,protect_workbook_request ,password =None ):
         self.file = file 
         self.protect_workbook_request = protect_workbook_request 
         self.password = password 
@@ -60,7 +60,7 @@ class PostProtectRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

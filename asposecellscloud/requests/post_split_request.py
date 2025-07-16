@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostSplitRequest(object):
 
-    def __init__(self , file ,out_format =None ,password =None ,_from =None ,to =None ,check_excel_restriction =None ,region =None ):
+    def __init__(self , file ,out_format ,password =None ,_from =None ,to =None ,check_excel_restriction =None ,region =None ):
         self.file = file 
         self.out_format = out_format 
         self.password = password 
@@ -74,7 +74,7 @@ class PostSplitRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

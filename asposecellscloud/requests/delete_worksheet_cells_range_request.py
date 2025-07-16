@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class DeleteWorksheetCellsRangeRequest(object):
 
-    def __init__(self , name ,sheet_name ,range =None ,shift =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,range ,shift ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.range = range 
@@ -83,7 +83,7 @@ class DeleteWorksheetCellsRangeRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

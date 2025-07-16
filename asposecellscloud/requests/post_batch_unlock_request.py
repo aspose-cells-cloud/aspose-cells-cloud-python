@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostBatchUnlockRequest(object):
 
-    def __init__(self , batch_lock_request =None ):
+    def __init__(self , batch_lock_request ):
         self.batch_lock_request = batch_lock_request 
     def create_http_request(self, api_client):
 
@@ -50,7 +50,7 @@ class PostBatchUnlockRequest(object):
         query_params = []
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

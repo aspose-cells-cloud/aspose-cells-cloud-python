@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostSetCellRangeValueRequest(object):
 
-    def __init__(self , name ,sheet_name ,cellarea =None ,value =None ,type =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,cellarea ,value ,type ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.cellarea = cellarea 
@@ -91,7 +91,7 @@ class PostSetCellRangeValueRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

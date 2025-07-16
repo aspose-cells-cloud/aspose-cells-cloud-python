@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "asposecellscloud"
-VERSION = "25.6"
+VERSION = "25.7"
 # To install the library, run the following
 #
 # python setup.py install

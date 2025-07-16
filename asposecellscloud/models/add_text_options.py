@@ -48,9 +48,8 @@ class AddTextOptions(object):
         'name' : 'str',
         'data_source' : 'DataSource',
         'file_info' : 'FileInfo',
+        'scope_options' : 'ScopeOptions',
         'text' : 'str',
-        'worksheet' : 'str',
-        'range' : 'str',
         'select_poistion' : 'str',
         'select_text' : 'str',
         'skip_empty_cells' : 'bool'
@@ -60,9 +59,8 @@ class AddTextOptions(object):
         'name' : 'Name' ,
         'data_source' : 'DataSource' ,
         'file_info' : 'FileInfo' ,
+        'scope_options' : 'ScopeOptions' ,
         'text' : 'Text' ,
-        'worksheet' : 'Worksheet' ,
-        'range' : 'Range' ,
         'select_poistion' : 'SelectPoistion' ,
         'select_text' : 'SelectText' ,
         'skip_empty_cells' : 'SkipEmptyCells' 
@@ -81,7 +79,7 @@ class AddTextOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,name=None ,data_source=None ,file_info=None ,text=None ,worksheet=None ,range=None ,select_poistion=None ,select_text=None ,skip_empty_cells=None   ,**kw):
+    def __init__(self,name=None ,data_source=None ,file_info=None ,scope_options=None ,text=None ,select_poistion=None ,select_text=None ,skip_empty_cells=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -93,9 +91,8 @@ class AddTextOptions(object):
         self.container['name'] = None 
         self.container['data_source'] = None 
         self.container['file_info'] = None 
+        self.container['scope_options'] = None 
         self.container['text'] = None 
-        self.container['worksheet'] = None 
-        self.container['range'] = None 
         self.container['select_poistion'] = None 
         self.container['select_text'] = None 
         self.container['skip_empty_cells'] = None 
@@ -118,21 +115,15 @@ class AddTextOptions(object):
 
 
              
+        self.scope_options = scope_options
+        if 'scope_options' in params:
+            self.scope_options = params["scope_options"]
+
+
+             
         self.text = text
         if 'text' in params:
             self.text = params["text"]
-
-
-             
-        self.worksheet = worksheet
-        if 'worksheet' in params:
-            self.worksheet = params["worksheet"]
-
-
-             
-        self.range = range
-        if 'range' in params:
-            self.range = params["range"]
 
 
              
@@ -177,26 +168,19 @@ class AddTextOptions(object):
     def file_info(self, file_info):
         self.container['file_info'] = file_info 
     @property
+    def scope_options(self):
+        return self.container['scope_options']
+
+    @scope_options.setter
+    def scope_options(self, scope_options):
+        self.container['scope_options'] = scope_options 
+    @property
     def text(self):
         return self.container['text']
 
     @text.setter
     def text(self, text):
         self.container['text'] = text 
-    @property
-    def worksheet(self):
-        return self.container['worksheet']
-
-    @worksheet.setter
-    def worksheet(self, worksheet):
-        self.container['worksheet'] = worksheet 
-    @property
-    def range(self):
-        return self.container['range']
-
-    @range.setter
-    def range(self, range):
-        self.container['range'] = range 
     @property
     def select_poistion(self):
         return self.container['select_poistion']

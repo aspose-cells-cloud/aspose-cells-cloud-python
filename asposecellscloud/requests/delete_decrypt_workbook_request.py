@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class DeleteDecryptWorkbookRequest(object):
 
-    def __init__(self , name ,encryption =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,encryption ,folder =None ,storage_name =None ):
         self.name = name 
         self.encryption = encryption 
         self.folder = folder 
@@ -65,7 +65,7 @@ class DeleteDecryptWorkbookRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

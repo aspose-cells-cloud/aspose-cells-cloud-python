@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PutWorksheetHyperlinkRequest(object):
 
-    def __init__(self , name ,sheet_name ,first_row =None ,first_column =None ,total_rows =None ,total_columns =None ,address =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,first_row ,first_column ,total_rows ,total_columns ,address ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.first_row = first_row 
@@ -107,7 +107,7 @@ class PutWorksheetHyperlinkRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

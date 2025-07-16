@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostFooterRequest(object):
 
-    def __init__(self , name ,sheet_name ,section =None ,script =None ,is_first_page =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,section ,script ,is_first_page ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.section = section 
@@ -91,7 +91,7 @@ class PostFooterRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

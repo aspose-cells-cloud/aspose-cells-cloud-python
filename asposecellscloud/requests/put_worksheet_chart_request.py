@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PutWorksheetChartRequest(object):
 
-    def __init__(self , name ,sheet_name ,chart_type =None ,upper_left_row =None ,upper_left_column =None ,lower_right_row =None ,lower_right_column =None ,area =None ,is_vertical =None ,category_data =None ,is_auto_get_serial_name =None ,title =None ,folder =None ,data_labels =None ,data_labels_position =None ,pivot_table_sheet =None ,pivot_table_name =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,chart_type ,upper_left_row =None ,upper_left_column =None ,lower_right_row =None ,lower_right_column =None ,area =None ,is_vertical =None ,category_data =None ,is_auto_get_serial_name =None ,title =None ,folder =None ,data_labels =None ,data_labels_position =None ,pivot_table_sheet =None ,pivot_table_name =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.chart_type = chart_type 
@@ -114,7 +114,7 @@ class PutWorksheetChartRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

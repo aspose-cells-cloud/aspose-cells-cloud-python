@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class MergeSpreadsheetsInRemoteFolderRequest(object):
 
-    def __init__(self , folder =None ,file_match_expression =None ,out_format =None ,merge_in_one_sheet =None ,storage_name =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
+    def __init__(self , folder ,file_match_expression =None ,out_format =None ,merge_in_one_sheet =None ,storage_name =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
         self.folder = folder 
         self.file_match_expression = file_match_expression 
         self.out_format = out_format 
@@ -80,7 +80,7 @@ class MergeSpreadsheetsInRemoteFolderRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

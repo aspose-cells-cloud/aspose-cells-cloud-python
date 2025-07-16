@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class DeleteWorksheetFreezePanesRequest(object):
 
-    def __init__(self , name ,sheet_name ,row =None ,column =None ,freezed_rows =None ,freezed_columns =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,row ,column ,freezed_rows ,freezed_columns ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.row = row 
@@ -99,7 +99,7 @@ class DeleteWorksheetFreezePanesRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

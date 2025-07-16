@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostAssembleRequest(object):
 
-    def __init__(self , file ,datasource =None ,out_format =None ,password =None ,check_excel_restriction =None ,region =None ):
+    def __init__(self , file ,datasource ,out_format =None ,password =None ,check_excel_restriction =None ,region =None ):
         self.file = file 
         self.datasource = datasource 
         self.out_format = out_format 
@@ -71,7 +71,7 @@ class PostAssembleRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

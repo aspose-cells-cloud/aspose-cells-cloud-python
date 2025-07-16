@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PutConvertWorkbookRequest(object):
 
-    def __init__(self , file ,format =None ,password =None ,out_path =None ,storage_name =None ,check_excel_restriction =None ,stream_format =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,sheet_name =None ,page_index =None ,one_page_per_sheet =None ,auto_rows_fit =None ,auto_columns_fit =None ,fonts_location =None ):
+    def __init__(self , file ,format ,password =None ,out_path =None ,storage_name =None ,check_excel_restriction =None ,stream_format =None ,region =None ,page_wide_fit_on_per_sheet =None ,page_tall_fit_on_per_sheet =None ,sheet_name =None ,page_index =None ,one_page_per_sheet =None ,auto_rows_fit =None ,auto_columns_fit =None ,fonts_location =None ):
         self.file = file 
         self.format = format 
         self.password = password 
@@ -101,7 +101,7 @@ class PutConvertWorkbookRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

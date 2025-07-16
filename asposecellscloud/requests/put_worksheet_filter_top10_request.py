@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PutWorksheetFilterTop10Request(object):
 
-    def __init__(self , name ,sheet_name ,range =None ,field_index =None ,is_top =None ,is_percent =None ,item_count =None ,match_blanks =None ,refresh =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,range ,field_index ,is_top ,is_percent ,item_count ,match_blanks =None ,refresh =None ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.range = range 
@@ -113,7 +113,7 @@ class PutWorksheetFilterTop10Request(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

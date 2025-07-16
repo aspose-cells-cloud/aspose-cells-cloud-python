@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorksheetListObjectSortTableRequest(object):
 
-    def __init__(self , name ,sheet_name ,list_object_index ,data_sorter =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,list_object_index ,data_sorter ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.list_object_index = list_object_index 
@@ -81,7 +81,7 @@ class PostWorksheetListObjectSortTableRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

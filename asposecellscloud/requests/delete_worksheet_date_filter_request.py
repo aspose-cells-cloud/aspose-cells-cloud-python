@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class DeleteWorksheetDateFilterRequest(object):
 
-    def __init__(self , name ,sheet_name ,field_index =None ,date_time_grouping_type =None ,year =None ,month =None ,day =None ,hour =None ,minute =None ,second =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,field_index ,date_time_grouping_type ,year =None ,month =None ,day =None ,hour =None ,minute =None ,second =None ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.field_index = field_index 
@@ -101,7 +101,7 @@ class DeleteWorksheetDateFilterRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

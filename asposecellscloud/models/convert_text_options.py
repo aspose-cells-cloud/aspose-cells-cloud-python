@@ -48,8 +48,7 @@ class ConvertTextOptions(object):
         'name' : 'str',
         'data_source' : 'DataSource',
         'file_info' : 'FileInfo',
-        'worksheet' : 'str',
-        'range' : 'str',
+        'scope_options' : 'ScopeOptions',
         'convert_text_type' : 'str',
         'source_characters' : 'str',
         'target_characters' : 'str'
@@ -59,8 +58,7 @@ class ConvertTextOptions(object):
         'name' : 'Name' ,
         'data_source' : 'DataSource' ,
         'file_info' : 'FileInfo' ,
-        'worksheet' : 'Worksheet' ,
-        'range' : 'Range' ,
+        'scope_options' : 'ScopeOptions' ,
         'convert_text_type' : 'ConvertTextType' ,
         'source_characters' : 'SourceCharacters' ,
         'target_characters' : 'TargetCharacters' 
@@ -79,7 +77,7 @@ class ConvertTextOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,name=None ,data_source=None ,file_info=None ,worksheet=None ,range=None ,convert_text_type=None ,source_characters=None ,target_characters=None   ,**kw):
+    def __init__(self,name=None ,data_source=None ,file_info=None ,scope_options=None ,convert_text_type=None ,source_characters=None ,target_characters=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -91,8 +89,7 @@ class ConvertTextOptions(object):
         self.container['name'] = None 
         self.container['data_source'] = None 
         self.container['file_info'] = None 
-        self.container['worksheet'] = None 
-        self.container['range'] = None 
+        self.container['scope_options'] = None 
         self.container['convert_text_type'] = None 
         self.container['source_characters'] = None 
         self.container['target_characters'] = None 
@@ -115,15 +112,9 @@ class ConvertTextOptions(object):
 
 
              
-        self.worksheet = worksheet
-        if 'worksheet' in params:
-            self.worksheet = params["worksheet"]
-
-
-             
-        self.range = range
-        if 'range' in params:
-            self.range = params["range"]
+        self.scope_options = scope_options
+        if 'scope_options' in params:
+            self.scope_options = params["scope_options"]
 
 
              
@@ -168,19 +159,12 @@ class ConvertTextOptions(object):
     def file_info(self, file_info):
         self.container['file_info'] = file_info 
     @property
-    def worksheet(self):
-        return self.container['worksheet']
+    def scope_options(self):
+        return self.container['scope_options']
 
-    @worksheet.setter
-    def worksheet(self, worksheet):
-        self.container['worksheet'] = worksheet 
-    @property
-    def range(self):
-        return self.container['range']
-
-    @range.setter
-    def range(self, range):
-        self.container['range'] = range 
+    @scope_options.setter
+    def scope_options(self, scope_options):
+        self.container['scope_options'] = scope_options 
     @property
     def convert_text_type(self):
         return self.container['convert_text_type']

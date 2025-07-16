@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostAddTextContentRequest(object):
 
-    def __init__(self , add_text_options =None ):
+    def __init__(self , add_text_options ):
         self.add_text_options = add_text_options 
     def create_http_request(self, api_client):
 
@@ -50,7 +50,7 @@ class PostAddTextContentRequest(object):
         query_params = []
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

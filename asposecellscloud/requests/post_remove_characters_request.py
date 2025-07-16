@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostRemoveCharactersRequest(object):
 
-    def __init__(self , remove_characters_options =None ):
+    def __init__(self , remove_characters_options ):
         self.remove_characters_options = remove_characters_options 
     def create_http_request(self, api_client):
 
@@ -50,7 +50,7 @@ class PostRemoveCharactersRequest(object):
         query_params = []
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

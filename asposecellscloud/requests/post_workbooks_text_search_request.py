@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorkbooksTextSearchRequest(object):
 
-    def __init__(self , name ,text =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,text ,folder =None ,storage_name =None ):
         self.name = name 
         self.text = text 
         self.folder = folder 
@@ -67,7 +67,7 @@ class PostWorkbooksTextSearchRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

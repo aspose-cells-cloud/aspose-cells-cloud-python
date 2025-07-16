@@ -48,8 +48,7 @@ class RemoveCharactersOptions(object):
         'name' : 'str',
         'data_source' : 'DataSource',
         'file_info' : 'FileInfo',
-        'worksheet' : 'str',
-        'range' : 'str',
+        'scope_options' : 'ScopeOptions',
         'remove_characters_by_character' : 'RemoveCharactersByCharacter',
         'remove_characters_by_position' : 'RemoveCharactersByPosition'
     }
@@ -58,8 +57,7 @@ class RemoveCharactersOptions(object):
         'name' : 'Name' ,
         'data_source' : 'DataSource' ,
         'file_info' : 'FileInfo' ,
-        'worksheet' : 'Worksheet' ,
-        'range' : 'Range' ,
+        'scope_options' : 'ScopeOptions' ,
         'remove_characters_by_character' : 'RemoveCharactersByCharacter' ,
         'remove_characters_by_position' : 'RemoveCharactersByPosition' 
     }
@@ -77,7 +75,7 @@ class RemoveCharactersOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,name=None ,data_source=None ,file_info=None ,worksheet=None ,range=None ,remove_characters_by_character=None ,remove_characters_by_position=None   ,**kw):
+    def __init__(self,name=None ,data_source=None ,file_info=None ,scope_options=None ,remove_characters_by_character=None ,remove_characters_by_position=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -89,8 +87,7 @@ class RemoveCharactersOptions(object):
         self.container['name'] = None 
         self.container['data_source'] = None 
         self.container['file_info'] = None 
-        self.container['worksheet'] = None 
-        self.container['range'] = None 
+        self.container['scope_options'] = None 
         self.container['remove_characters_by_character'] = None 
         self.container['remove_characters_by_position'] = None 
         params = locals()
@@ -112,15 +109,9 @@ class RemoveCharactersOptions(object):
 
 
              
-        self.worksheet = worksheet
-        if 'worksheet' in params:
-            self.worksheet = params["worksheet"]
-
-
-             
-        self.range = range
-        if 'range' in params:
-            self.range = params["range"]
+        self.scope_options = scope_options
+        if 'scope_options' in params:
+            self.scope_options = params["scope_options"]
 
 
              
@@ -159,19 +150,12 @@ class RemoveCharactersOptions(object):
     def file_info(self, file_info):
         self.container['file_info'] = file_info 
     @property
-    def worksheet(self):
-        return self.container['worksheet']
+    def scope_options(self):
+        return self.container['scope_options']
 
-    @worksheet.setter
-    def worksheet(self, worksheet):
-        self.container['worksheet'] = worksheet 
-    @property
-    def range(self):
-        return self.container['range']
-
-    @range.setter
-    def range(self, range):
-        self.container['range'] = range 
+    @scope_options.setter
+    def scope_options(self, scope_options):
+        self.container['scope_options'] = scope_options 
     @property
     def remove_characters_by_character(self):
         return self.container['remove_characters_by_character']

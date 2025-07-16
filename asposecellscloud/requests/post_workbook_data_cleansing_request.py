@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorkbookDataCleansingRequest(object):
 
-    def __init__(self , name ,data_cleansing =None ,folder =None ,storage_name =None ,password =None ,region =None ,check_excel_restriction =None ):
+    def __init__(self , name ,data_cleansing ,folder =None ,storage_name =None ,password =None ,region =None ,check_excel_restriction =None ):
         self.name = name 
         self.data_cleansing = data_cleansing 
         self.folder = folder 
@@ -74,7 +74,7 @@ class PostWorkbookDataCleansingRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

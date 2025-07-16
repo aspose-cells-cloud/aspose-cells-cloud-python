@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostCopyCellIntoCellRequest(object):
 
-    def __init__(self , name ,dest_cell_name ,sheet_name ,worksheet =None ,cellname =None ,row =None ,column =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,dest_cell_name ,sheet_name ,worksheet ,cellname =None ,row =None ,column =None ,folder =None ,storage_name =None ):
         self.name = name 
         self.dest_cell_name = dest_cell_name 
         self.sheet_name = sheet_name 
@@ -92,7 +92,7 @@ class PostCopyCellIntoCellRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

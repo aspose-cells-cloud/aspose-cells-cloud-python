@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostCharacterCountRequest(object):
 
-    def __init__(self , character_count_options =None ):
+    def __init__(self , character_count_options ):
         self.character_count_options = character_count_options 
     def create_http_request(self, api_client):
 
@@ -50,7 +50,7 @@ class PostCharacterCountRequest(object):
         query_params = []
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

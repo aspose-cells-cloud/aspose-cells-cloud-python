@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostLockRequest(object):
 
-    def __init__(self , file ,password =None ):
+    def __init__(self , file ,password ):
         self.file = file 
         self.password = password 
     def create_http_request(self, api_client):
@@ -59,7 +59,7 @@ class PostLockRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

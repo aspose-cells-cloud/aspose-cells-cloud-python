@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostClearObjectsRequest(object):
 
-    def __init__(self , file ,objecttype =None ,sheetname =None ,out_format =None ,password =None ,check_excel_restriction =None ,region =None ):
+    def __init__(self , file ,objecttype ,sheetname =None ,out_format =None ,password =None ,check_excel_restriction =None ,region =None ):
         self.file = file 
         self.objecttype = objecttype 
         self.sheetname = sheetname 
@@ -74,7 +74,7 @@ class PostClearObjectsRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostDigitalSignatureRequest(object):
 
-    def __init__(self , name ,digitalsignaturefile =None ,password =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,digitalsignaturefile ,password ,folder =None ,storage_name =None ):
         self.name = name 
         self.digitalsignaturefile = digitalsignaturefile 
         self.password = password 
@@ -75,7 +75,7 @@ class PostDigitalSignatureRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

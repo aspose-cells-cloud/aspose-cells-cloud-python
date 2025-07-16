@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostAutofitWorksheetRowRequest(object):
 
-    def __init__(self , name ,sheet_name ,row_index =None ,first_column =None ,last_column =None ,folder =None ,storage_name =None ,row_count =None ):
+    def __init__(self , name ,sheet_name ,row_index ,first_column =None ,last_column =None ,folder =None ,storage_name =None ,row_count =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.row_index = row_index 
@@ -84,7 +84,7 @@ class PostAutofitWorksheetRowRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

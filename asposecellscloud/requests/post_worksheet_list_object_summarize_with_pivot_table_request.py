@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorksheetListObjectSummarizeWithPivotTableRequest(object):
 
-    def __init__(self , name ,sheet_name ,list_object_index ,destsheet_name =None ,create_pivot_table_request =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,list_object_index ,destsheet_name ,create_pivot_table_request ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.list_object_index = list_object_index 
@@ -89,7 +89,7 @@ class PostWorksheetListObjectSummarizeWithPivotTableRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

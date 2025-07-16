@@ -45,12 +45,12 @@ class ScopeItem(object):
     """
 
     swagger_types = {
-        'worksheet_name' : 'str',
+        'worksheet' : 'str',
         'ranges' : 'list[str]'
     }
 
     attribute_map = {
-        'worksheet_name' : 'WorksheetName' ,
+        'worksheet' : 'Worksheet' ,
         'ranges' : 'Ranges' 
     }
 
@@ -67,7 +67,7 @@ class ScopeItem(object):
             return self.container[attr]
         return None
 
-    def __init__(self,worksheet_name=None ,ranges=None   ,**kw):
+    def __init__(self,worksheet=None ,ranges=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -76,12 +76,12 @@ class ScopeItem(object):
         """
         ScopeItem - a model defined in Swagger
         """
-        self.container['worksheet_name'] = None 
+        self.container['worksheet'] = None 
         self.container['ranges'] = None 
         params = locals()
-        self.worksheet_name = worksheet_name
-        if 'worksheet_name' in params:
-            self.worksheet_name = params["worksheet_name"]
+        self.worksheet = worksheet
+        if 'worksheet' in params:
+            self.worksheet = params["worksheet"]
 
 
              
@@ -93,12 +93,12 @@ class ScopeItem(object):
              
 
     @property
-    def worksheet_name(self):
-        return self.container['worksheet_name']
+    def worksheet(self):
+        return self.container['worksheet']
 
-    @worksheet_name.setter
-    def worksheet_name(self, worksheet_name):
-        self.container['worksheet_name'] = worksheet_name 
+    @worksheet.setter
+    def worksheet(self, worksheet):
+        self.container['worksheet'] = worksheet 
     @property
     def ranges(self):
         return self.container['ranges']

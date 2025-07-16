@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorksheetSparklineGroupRequest(object):
 
-    def __init__(self , name ,sheet_name ,sparkline_group_index ,sparkline_group =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,sparkline_group_index ,sparkline_group ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.sparkline_group_index = sparkline_group_index 
@@ -81,7 +81,7 @@ class PostWorksheetSparklineGroupRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

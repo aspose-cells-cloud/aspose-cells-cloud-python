@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class ReplaceSpreadsheetContentRequest(object):
 
-    def __init__(self , spreadsheet ,search_text =None ,replace_text =None ,worksheet =None ,cell_area =None ,regoin =None ,password =None ):
+    def __init__(self , spreadsheet ,search_text ,replace_text ,worksheet =None ,cell_area =None ,regoin =None ,password =None ):
         self.spreadsheet = spreadsheet 
         self.search_text = search_text 
         self.replace_text = replace_text 
@@ -79,7 +79,7 @@ class ReplaceSpreadsheetContentRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

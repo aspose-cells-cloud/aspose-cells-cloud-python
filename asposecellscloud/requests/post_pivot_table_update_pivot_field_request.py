@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostPivotTableUpdatePivotFieldRequest(object):
 
-    def __init__(self , name ,sheet_name ,pivot_table_index ,pivot_field_index ,pivot_field_type =None ,pivot_field =None ,need_re_calculate =None ,folder =None ,storage_name =None ):
+    def __init__(self , name ,sheet_name ,pivot_table_index ,pivot_field_index ,pivot_field_type ,pivot_field ,need_re_calculate =None ,folder =None ,storage_name =None ):
         self.name = name 
         self.sheet_name = sheet_name 
         self.pivot_table_index = pivot_table_index 
@@ -100,7 +100,7 @@ class PostPivotTableUpdatePivotFieldRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

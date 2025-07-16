@@ -48,18 +48,14 @@ class RemoveDuplicatesOptions(object):
         'name' : 'str',
         'data_source' : 'DataSource',
         'file_info' : 'FileInfo',
-        'worksheet' : 'str',
-        'remove_duplicates_area' : 'str',
-        'remove_duplicates_area_value' : 'str'
+        'scope_options' : 'ScopeOptions'
     }
 
     attribute_map = {
         'name' : 'Name' ,
         'data_source' : 'DataSource' ,
         'file_info' : 'FileInfo' ,
-        'worksheet' : 'Worksheet' ,
-        'remove_duplicates_area' : 'RemoveDuplicatesArea' ,
-        'remove_duplicates_area_value' : 'RemoveDuplicatesAreaValue' 
+        'scope_options' : 'ScopeOptions' 
     }
 
     @staticmethod
@@ -75,7 +71,7 @@ class RemoveDuplicatesOptions(object):
             return self.container[attr]
         return None
 
-    def __init__(self,name=None ,data_source=None ,file_info=None ,worksheet=None ,remove_duplicates_area=None ,remove_duplicates_area_value=None   ,**kw):
+    def __init__(self,name=None ,data_source=None ,file_info=None ,scope_options=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -87,9 +83,7 @@ class RemoveDuplicatesOptions(object):
         self.container['name'] = None 
         self.container['data_source'] = None 
         self.container['file_info'] = None 
-        self.container['worksheet'] = None 
-        self.container['remove_duplicates_area'] = None 
-        self.container['remove_duplicates_area_value'] = None 
+        self.container['scope_options'] = None 
         params = locals()
         self.name = name
         if 'name' in params:
@@ -109,21 +103,9 @@ class RemoveDuplicatesOptions(object):
 
 
              
-        self.worksheet = worksheet
-        if 'worksheet' in params:
-            self.worksheet = params["worksheet"]
-
-
-             
-        self.remove_duplicates_area = remove_duplicates_area
-        if 'remove_duplicates_area' in params:
-            self.remove_duplicates_area = params["remove_duplicates_area"]
-
-
-             
-        self.remove_duplicates_area_value = remove_duplicates_area_value
-        if 'remove_duplicates_area_value' in params:
-            self.remove_duplicates_area_value = params["remove_duplicates_area_value"]
+        self.scope_options = scope_options
+        if 'scope_options' in params:
+            self.scope_options = params["scope_options"]
 
 
              
@@ -150,26 +132,12 @@ class RemoveDuplicatesOptions(object):
     def file_info(self, file_info):
         self.container['file_info'] = file_info 
     @property
-    def worksheet(self):
-        return self.container['worksheet']
+    def scope_options(self):
+        return self.container['scope_options']
 
-    @worksheet.setter
-    def worksheet(self, worksheet):
-        self.container['worksheet'] = worksheet 
-    @property
-    def remove_duplicates_area(self):
-        return self.container['remove_duplicates_area']
-
-    @remove_duplicates_area.setter
-    def remove_duplicates_area(self, remove_duplicates_area):
-        self.container['remove_duplicates_area'] = remove_duplicates_area 
-    @property
-    def remove_duplicates_area_value(self):
-        return self.container['remove_duplicates_area_value']
-
-    @remove_duplicates_area_value.setter
-    def remove_duplicates_area_value(self, remove_duplicates_area_value):
-        self.container['remove_duplicates_area_value'] = remove_duplicates_area_value 
+    @scope_options.setter
+    def scope_options(self, scope_options):
+        self.container['scope_options'] = scope_options 
 
     def to_dict(self):
         """

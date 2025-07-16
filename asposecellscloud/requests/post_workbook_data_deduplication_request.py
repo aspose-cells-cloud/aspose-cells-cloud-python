@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostWorkbookDataDeduplicationRequest(object):
 
-    def __init__(self , name ,deduplication_region =None ,folder =None ,storage_name =None ,password =None ,region =None ,check_excel_restriction =None ):
+    def __init__(self , name ,deduplication_region ,folder =None ,storage_name =None ,password =None ,region =None ,check_excel_restriction =None ):
         self.name = name 
         self.deduplication_region = deduplication_region 
         self.folder = folder 
@@ -74,7 +74,7 @@ class PostWorkbookDataDeduplicationRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}

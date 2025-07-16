@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class PostMetadataRequest(object):
 
-    def __init__(self , file ,cells_documents =None ,password =None ,check_excel_restriction =None ,out_format =None ,region =None ):
+    def __init__(self , file ,cells_documents ,password =None ,check_excel_restriction =None ,out_format =None ,region =None ):
         self.file = file 
         self.cells_documents = cells_documents 
         self.password = password 
@@ -69,7 +69,7 @@ class PostMetadataRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.6';
+        header_params['x-aspose-client-version'] = '25.7';
 
         form_params = []
         local_var_files = {}
