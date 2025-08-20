@@ -12,7 +12,7 @@ instance.upload_file(  UploadFileRequest( "BookText.xlsx", "PythonSDK/BookText.x
 trimContentOptions = TrimContentOptions( 
      data_source= DataSource(data_path="PythonSDK/BookText.xlsx", data_source_type="CloudFileSystem" ), 
      remove_all_line_breaks = True, remove_extra_line_breaks= True,
-     scope_options = ScopeOptions( scope= "eWorkbook")
+     scope_options = ScopeOptions( scope= "Workbook")
 )
 
 response = instance.post_trim_content(PostTrimContentRequest( trimContentOptions))
@@ -21,7 +21,7 @@ with open("BookText_1.xlsx", "wb") as file:
      file.write(decoded_data)
 
 
-trimContentOptions.scope_options.scope =  'EntireWorksheet'
+trimContentOptions.scope_options.scope =  'Worksheet'
 trimContentOptions.scope_options.scope_items = [ScopeItem()]
 trimContentOptions.scope_options.scope_items[0].worksheet_name = 'SDKs'
 response = instance.post_trim_content( PostTrimContentRequest(trimContentOptions))
