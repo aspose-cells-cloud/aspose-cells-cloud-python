@@ -20,16 +20,15 @@ To begin with Aspose.Cells Cloud, here's what you need to do:
 ## Convert Excel to PDF Using Python
 
 ```python
-import os
-import sys
 from asposecellscloud.apis.cells_api import CellsApi
 from asposecellscloud.models import *
 from asposecellscloud.requests import *
 
-cellsApi  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'),"v3.0",os.getenv('CellsCloudApiBaseUrl'))
+CellsCloudClientId = "...."     # get from https://dashboard.aspose.cloud/#/applications
+CellsCloudClientSecret = "...." # get from https://dashboard.aspose.cloud/#/applications
 
+cellsApi = CellsApi(CellsCloudClientId,CellsCloudClientSecret)
 cellsApi.convert_spreadsheet(ConvertSpreadsheetRequest( 'EmployeeSalesSummary.xlsx', 'pdf') , local_outpath = "EmployeeSalesSummary.pdf")
-
 ```
 
 ## Support file format
