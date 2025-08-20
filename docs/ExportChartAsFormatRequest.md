@@ -24,8 +24,8 @@ This method processes a chart of spreadsheet directly in cloud storage, converti
 | Parameter Name | Type | Path/Query String/HTTPBody | Description | 
 | :- | :- | :- |:- | 
 |name|String|Path|(Required) The name of the workbook file to be retrieved.|
-|worksheet|String|Path||
-|chartIndex|Integer|Path||
+|worksheet|String|Path|worksheet name|
+|chartIndex|Integer|Path|chart index|
 |format|String|Query|(Required) The desired pdf or image format  (e.g., "png", "Pdf", "svg").|
 |folder|String|Query|(Optional) The folder path where the workbook is stored. The default is null.|
 |storageName|String|Query|(Optional) The name of the storage if using custom cloud storage. Use default storage if omitted.|

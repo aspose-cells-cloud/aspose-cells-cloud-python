@@ -7,6 +7,8 @@ Delete all blank worksheets which do not contain any data or other object.
 
 - **Base URL**: `http://api.aspose.cloud/v4.0`
 - **Authentication Method**: `JWT (OAuth2, application)`  **Token URL**: `https://api.aspose.cloud/connect/token`
+- **Example** 
+
 ## **Interface Details**
 
 ### **Endpoint** 
@@ -15,6 +17,7 @@ Delete all blank worksheets which do not contain any data or other object.
 PUT http://api.aspose.cloud/v4.0/cells/delete/blank-worksheets
 ```
 ### **Function Description**
+- **Blank Worksheet Identification**: This function identifies and deletes worksheets that do not contain any data or objects, ensuring a clean workbook.- **Workbook Optimization**: By removing empty worksheets, it optimizes the workbook, reducing file size and improving performance.- **Usage**:- Ideal for cleaning up workbooks where unused worksheets may clutter the file and affect usability.- Enhances the organization and manageability of spreadsheets by eliminating unnecessary sheets.
 
 ### The request parameters of **deleteSpreadsheetBlankWorksheets** API are: 
 

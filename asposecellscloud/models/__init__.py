@@ -37,6 +37,7 @@ from asposecellscloud.models.files_list import FilesList
 from asposecellscloud.models.files_upload_result import FilesUploadResult
 from asposecellscloud.models.storage_file import StorageFile
 from asposecellscloud.models.google_drive_storage_file import GoogleDriveStorageFile
+from asposecellscloud.models.aggregate_result_by_color import AggregateResultByColor
 from asposecellscloud.models.broken_link import BrokenLink
 from asposecellscloud.models.cell_area import CellArea
 from asposecellscloud.models.cells_cloud_file_info import CellsCloudFileInfo
@@ -46,6 +47,7 @@ from asposecellscloud.models.pdf_security_options import PdfSecurityOptions
 from asposecellscloud.models.range import Range
 from asposecellscloud.models.save_result import SaveResult
 from asposecellscloud.models.paginated_save_options import PaginatedSaveOptions
+from asposecellscloud.models.spreadsheet_template import SpreadsheetTemplate
 from asposecellscloud.models.text_item import TextItem
 from asposecellscloud.models.dbf_save_options import DbfSaveOptions
 from asposecellscloud.models.dif_save_options import DifSaveOptions
@@ -70,6 +72,7 @@ from asposecellscloud.models.xlsb_save_options import XlsbSaveOptions
 from asposecellscloud.models.xls_save_options import XlsSaveOptions
 from asposecellscloud.models.xml_save_options import XmlSaveOptions
 from asposecellscloud.models.xps_save_options import XpsSaveOptions
+from asposecellscloud.models.aggregate_result_by_color_response import AggregateResultByColorResponse
 from asposecellscloud.models.broken_links_reponse import BrokenLinksReponse
 from asposecellscloud.models.cells_cloud_file_info_response import CellsCloudFileInfoResponse
 from asposecellscloud.models.cells_cloud_public_key_response import CellsCloudPublicKeyResponse

@@ -82,6 +82,108 @@ class CellsApi(object):
                     self.get_access_token_time =  time.time()
 
     # <summary>
+    # The Aggregate by Color API provides a convenient way to perform calculations on cells that share the same fill or font color. This API supports a range of aggregate operations, including count, sum, maximum value, minimum value, and average value, enabling you to analyze and summarize data based on color distinctions.
+    # </summary>
+    # <param name="request">Request. <see cref="AggregateCellsByColorRequest" /></param>
+    def aggregate_cells_by_color(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        if kwargs.get('callback'):
+            return self.aggregate_cells_by_color_with_http_info(request,**kwargs)
+        else:
+            (data) = self.aggregate_cells_by_color_with_http_info(request,**kwargs)
+            return data
+
+    def aggregate_cells_by_color_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method aggregate_cells_by_color" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # The Math Calculate API enables you to perform a variety of mathematical operations on a selected range of cells. You can add or subtract a specific number from all selected cells, as well as multiply or divide individual cells and entire columns. This API simplifies complex calculations and enhances data manipulation capabilities.
+    # </summary>
+    # <param name="request">Request. <see cref="MathCalculateRequest" /></param>
+    def math_calculate(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.math_calculate_with_http_info(request,**kwargs)
+        else:
+            (data) = self.math_calculate_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def math_calculate_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method math_calculate" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
     # Get Access Token Result: The Cells Cloud Get Token API acts as a proxy service,
     # forwarding user requests to the Aspose Cloud authentication server and returning the resulting access token to the client.
     # </summary>
@@ -1625,6 +1727,59 @@ class CellsApi(object):
 
 
     # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="ImportDataIntoSpreadsheetRequest" /></param>
+    def import_data_into_spreadsheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.import_data_into_spreadsheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.import_data_into_spreadsheet_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def import_data_into_spreadsheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_data_into_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
     # Get an asymmetric public key.
     # </summary>
     # <param name="request">Request. <see cref="GetPublicKeyRequest" /></param>
@@ -1650,6 +1805,330 @@ class CellsApi(object):
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_public_key" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # The Web API allows users to create a new spreadsheet with a specified name. Optionally, a template can be provided to initialize the spreadsheet with predefined content or formatting.
+    # </summary>
+    # <param name="request">Request. <see cref="CreateSpreadsheetRequest" /></param>
+    def create_spreadsheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.create_spreadsheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.create_spreadsheet_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def create_spreadsheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # The Web API enables users to add a new worksheet to a workbook, specifying the worksheet's type, position, and name. This function provides flexibility in managing workbook structure by allowing detailed control over worksheet addition.
+    # </summary>
+    # <param name="request">Request. <see cref="AddWorksheetToSpreadsheetRequest" /></param>
+    def add_worksheet_to_spreadsheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.add_worksheet_to_spreadsheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.add_worksheet_to_spreadsheet_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def add_worksheet_to_spreadsheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method add_worksheet_to_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # The Web API endpoint allows users to delete a specified worksheet from a workbook. This function provides a straightforward way to manage workbook structure by removing unnecessary or redundant worksheets.
+    # </summary>
+    # <param name="request">Request. <see cref="DeleteWorksheetFromSpreadsheetRequest" /></param>
+    def delete_worksheet_from_spreadsheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.delete_worksheet_from_spreadsheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.delete_worksheet_from_spreadsheet_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def delete_worksheet_from_spreadsheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_worksheet_from_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # The Web API endpoint allows users to rename a specified worksheet within a workbook. This function provides a straightforward way to update worksheet names, enhancing workbook organization and readability.
+    # </summary>
+    # <param name="request">Request. <see cref="RenameWorksheetInSpreadsheetRequest" /></param>
+    def rename_worksheet_in_spreadsheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.rename_worksheet_in_spreadsheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.rename_worksheet_in_spreadsheet_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def rename_worksheet_in_spreadsheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method rename_worksheet_in_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # The Web API endpoint allows users to move a specified worksheet within a workbook. This function provides a straightforward way to move a worksheet, enhancing workbook organization.
+    # </summary>
+    # <param name="request">Request. <see cref="MoveWorksheetInSpreadsheetRequest" /></param>
+    def move_worksheet_in_spreadsheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.move_worksheet_in_spreadsheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.move_worksheet_in_spreadsheet_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def move_worksheet_in_spreadsheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method move_worksheet_in_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # The Web API endpoint allows users to compress a spreadsheet to reduce its file size. This function provides a straightforward way to optimize the storage and performance of spreadsheets by applying a specified compression level.
+    # </summary>
+    # <param name="request">Request. <see cref="CompressSpreadsheetRequest" /></param>
+    def compress_spreadsheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.compress_spreadsheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.compress_spreadsheet_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def compress_spreadsheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method compress_spreadsheet" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -2597,6 +3076,60 @@ class CellsApi(object):
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_spreadsheet_blank_worksheets" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # The Swap Ranges for Excel API provides a powerful tool to move any two columns, rows, ranges, or individual cells within an Excel file. This API allows users to re-arrange their tables quickly and efficiently, ensuring that the original data formatting is preserved and all existing formulas continue to function correctly. By leveraging this API, users can streamline their data manipulation tasks and maintain the integrity of their spreadsheets.
+    # </summary>
+    # <param name="request">Request. <see cref="SawpRangeRequest" /></param>
+    def sawp_range(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.sawp_range_with_http_info(request,**kwargs)
+        else:
+            (data) = self.sawp_range_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def sawp_range_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method sawp_range" % key
                 )
             params[key] = val
         del params['kwargs'] 
