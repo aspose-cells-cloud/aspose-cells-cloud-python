@@ -127,4 +127,4 @@ The Aspose.Cells Cloud SDK is available in multiple popular programming language
 
 [![Ruby](https://img.shields.io/badge/Ruby-CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby) [![Ruby](https://img.shields.io/badge/Gem-aspose__cells__cloud-red?logo=ruby&style=for-the-badge)](https://rubygems.org/gems/aspose_cells_cloud)
 
-## [Release history version](HistoryVersion.md)
+## [Release history version](CHANGELOG.md)
