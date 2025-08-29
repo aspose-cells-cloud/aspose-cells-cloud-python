@@ -1,10 +1,10 @@
+import base64
 import os
 import shutil
-import base64
+
 from asposecellscloud.apis.cells_api import CellsApi
 from asposecellscloud.models import *
 from asposecellscloud.requests import *
-
 
 EmployeeSalesSummaryXlsx = "EmployeeSalesSummary.xlsx"
 RemoteFolder = "PythonSDK"
@@ -23,12 +23,12 @@ instance.upload_file( UploadFileRequest(EmployeeSalesSummaryXlsx, "PythonSDK/Emp
 # response = instance.get_workbook( GetWorkbookRequest(EmployeeSalesSummaryXlsx , format='pdf' , folder=RemoteFolder)  )
 # shutil.move( response ,"EmployeeSalesSummary2.pdf")
 #  Now, Export a cloud Excel file to another format file directly, and directly save to local file.
-instance.export_Spreadsheet_as_format( ExportSpreadsheetAsFormatRequest( EmployeeSalesSummaryXlsx,"csv" ,folder= "PythonSDK"  ) , local_outpath="EmployeeSalesSummary.csv" )
+instance.export_spreadsheet_as_format( ExportSpreadsheetAsFormatRequest( EmployeeSalesSummaryXlsx,"csv" ,folder= "PythonSDK"  ) , local_outpath="EmployeeSalesSummary.csv" )
 instance.export_worksheet_as_format( ExportWorksheetAsFormatRequest( EmployeeSalesSummaryXlsx,"Sales", "pdf" ,folder= "PythonSDK"  ) , local_outpath="EmployeeSalesSummary2.pdf" )
 
 #Save an Excel file of Cells Cloud as another format file of Cells Cloud.
 #instance.post_workbook_save_as( PostWorkbookSaveAsRequest( EmployeeSalesSummaryXlsx ,newfilename= "PythonSDK/EmployeeSalesSummary.pdf" ,folder=RemoteFolder   ))
-instance.save_spreadsheet_as( SaveSpreadsheetAsRequest ( EmployeeSalesSummaryXlsx,"pdf" ,folder= RemoteFolder ) )
+instance.save_spreadsheet_as( SaveSpreadsheetAsRequest ( EmployeeSalesSummaryXlsx,"pdf", save_options_data = SaveOptionsData( filename =  "PythonSDK/EmployeeSalesSummary.pdf" ) ,folder= RemoteFolder ) )
 instance.download_file( DownloadFileRequest("PythonSDK/EmployeeSalesSummary.pdf") , local_outpath="EmployeeSalesSummary3.pdf")
 
 
@@ -81,11 +81,11 @@ response = instance.get_worksheet_with_format( GetWorksheetWithFormatRequest(Emp
 shutil.move( response ,"EmployeeSalesSummary_Sales_PageIndex.png")
 
 # Convert a local Excel file's specified worksheet list object directly to another format file. Set query parameters 
-instance.convert_table_to_pdf( ConvertTableToPdfRequest( EmployeeSalesSummaryXlsx , "Sales" , "Table1" ) , local_outpath="EmployeeSalesSummary_Sales_Table.pdf")
-instance.convert_table_to_image( ConvertTableToImageRequest( EmployeeSalesSummaryXlsx , "Sales" , "Table1" ,"png" ) , local_outpath="EmployeeSalesSummary_Sales_Table.png")
-instance.convert_table_to_image( ConvertTableToImageRequest( EmployeeSalesSummaryXlsx , "Sales" , "Table1" ,"svg" ) , local_outpath="EmployeeSalesSummary_Sales_Table.svg")
-instance.convert_table_to_json( ConvertTableToJsonRequest( EmployeeSalesSummaryXlsx , "Sales" , "Table1" ) , local_outpath="EmployeeSalesSummary_Sales_Table.json")
-instance.convert_table_to_html( ConvertTableToHtmlRequest( EmployeeSalesSummaryXlsx , "Sales" , "Table1" ) , local_outpath="EmployeeSalesSummary_Sales_Table.html")
+instance.convert_table_to_pdf( ConvertTableToPdfRequest( EmployeeSalesSummaryXlsx , "SalesChartData" , "Table1" ) , local_outpath="EmployeeSalesSummary_Sales_Table.pdf")
+instance.convert_table_to_image( ConvertTableToImageRequest( EmployeeSalesSummaryXlsx , "SalesChartData" , "Table1" ,"png" ) , local_outpath="EmployeeSalesSummary_Sales_Table.png")
+instance.convert_table_to_image( ConvertTableToImageRequest( EmployeeSalesSummaryXlsx , "SalesChartData" , "Table1" ,"svg" ) , local_outpath="EmployeeSalesSummary_Sales_Table.svg")
+instance.convert_table_to_json( ConvertTableToJsonRequest( EmployeeSalesSummaryXlsx , "SalesChartData" , "Table1" ) , local_outpath="EmployeeSalesSummary_Sales_Table.json")
+instance.convert_table_to_html( ConvertTableToHtmlRequest( EmployeeSalesSummaryXlsx , "SalesChartData" , "Table1" ) , local_outpath="EmployeeSalesSummary_Sales_Table.html")
 
 
 # Convert a local Excel file's specified worksheet cells area directly to another format file. Set query parameters : print_headings, one_page_per_sheet
