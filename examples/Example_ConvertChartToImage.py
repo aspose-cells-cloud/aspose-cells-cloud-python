@@ -1,19 +1,25 @@
+import base64
 import os
 import shutil
-import base64
+
 from asposecellscloud.apis.cells_api import CellsApi
 from asposecellscloud.models import *
 from asposecellscloud.requests import *
-
 
 EmployeeSalesSummaryXlsx = "EmployeeSalesSummary.xlsx"
 RemoteFolder = "PythonSDK"
 # Get Cells Cloud SDK instance
 instance  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'))
 
-# Upload a local Excel file to Cells Cloud Storage.
+# 1. Cells Cloud V3.0: Convert chart to image 
+# 1.1. Upload a local Excel file to Cells Cloud Storage.
 instance.upload_file( UploadFileRequest(EmployeeSalesSummaryXlsx, "PythonSDK/EmployeeSalesSummary.xlsx"))
-
+# 1.2 Get chart image from Excel worksheet.
 request =  GetWorksheetChartRequest( EmployeeSalesSummaryXlsx, 'Sales', 0,format= 'png',folder= 'PythonSDK',storage_name= '')
 tmp_path = instance.get_worksheet_chart(request)
-shutil.move( tmp_path ,"EmployeeSalesSummary_Sales.png")
+# 1.3 Save chart image to local file.
+shutil.move( tmp_path ,"EmployeeSalesSummary_Sales_v30.png")
+
+# 2. Cells Cloud V3.0: Convert chart to image 
+convertChartToImageRequest = ConvertChartToImageRequest( EmployeeSalesSummaryXlsx, 'Sales', 0,format= 'png')
+instance.convert_chart_to_image(convertChartToImageRequest ,local_outpath = "EmployeeSalesSummary_Sales_v40.png" )

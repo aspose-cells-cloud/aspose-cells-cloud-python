@@ -11,7 +11,14 @@ instance.upload_file(  UploadFileRequest( "BookText.xlsx", "PythonSDK/BookText.x
 
 trimContentOptions = TrimContentOptions( 
      data_source= DataSource(data_path="PythonSDK/BookText.xlsx", data_source_type="CloudFileSystem" ), 
-     remove_all_line_breaks = True, remove_extra_line_breaks= True,
+     remove_all_line_breaks = True, 
+     remove_extra_line_breaks= True, 
+     remove_extra_spaces= True,
+     trim_leading= True,
+     trim_trailing= True,
+     trim_content= ' ',
+     trim_space_between_word_to1= True,
+     trim_non_breaking_spaces= True,     
      scope_options = ScopeOptions( scope= "Workbook")
 )
 
@@ -22,8 +29,7 @@ with open("BookText_1.xlsx", "wb") as file:
 
 
 trimContentOptions.scope_options.scope =  'Worksheet'
-trimContentOptions.scope_options.scope_items = [ScopeItem()]
-trimContentOptions.scope_options.scope_items[0].worksheet_name = 'SDKs'
+trimContentOptions.scope_options.scope_items = [ScopeItem( worksheet='SDKs')]
 response = instance.post_trim_content( PostTrimContentRequest(trimContentOptions))
 
 decoded_data = base64.b64decode(response.file_content)
@@ -32,7 +38,7 @@ with open("BookText_2.xlsx", "wb") as file:
      file.write(decoded_data)
 
 trimContentOptions.scope_options.scope =  'SelectionOlny'
-trimContentOptions.scope_options.scope_items[0].worksheet_name = 'SDKs'
+trimContentOptions.scope_options.scope_items[0].worksheet = 'SDKs'
 trimContentOptions.scope_options.scope_items[0].ranges = ["B2:B2","B4:B4"]
 response = instance.post_trim_content( PostTrimContentRequest(trimContentOptions))
 
