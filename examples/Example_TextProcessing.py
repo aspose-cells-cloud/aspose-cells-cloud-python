@@ -7,7 +7,7 @@ from asposecellscloud.requests import *
 
 # If no environment variables are configured, please obtain the ClientId and ClientSecret from https://dashboard.aspose.cloud/#/applications and replace the following values:
 # instance  = CellsApi('YourClientId','YourClientSecret')
-instance  = CellsApi(os.getenv('CellsCloudTestClientId'),os.getenv('CellsCloudTestClientSecret'))
+instance  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'))
 
 instance.upload_file(  UploadFileRequest( "BookText.xlsx", "PythonSDK/BookText.xlsx"))
 
