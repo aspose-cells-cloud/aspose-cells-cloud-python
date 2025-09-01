@@ -9,6 +9,8 @@ from asposecellscloud.requests import *
 EmployeeSalesSummaryXlsx = "EmployeeSalesSummary.xlsx"
 RemoteFolder = "PythonSDK"
 # Get Cells Cloud SDK instance
+# If no environment variables are configured, please obtain the ClientId and ClientSecret from https://dashboard.aspose.cloud/#/applications and replace the following values:
+# instance  = CellsApi('YourClientId','YourClientSecret')
 instance  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'))
 
 # 1. Cells Cloud v3.0: Convert range to image

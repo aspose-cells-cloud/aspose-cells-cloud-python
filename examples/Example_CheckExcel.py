@@ -1,6 +1,7 @@
+import base64
 import os
 import shutil
-import base64
+
 from asposecellscloud.apis.cells_api import CellsApi
 from asposecellscloud.models import *
 from asposecellscloud.requests import *
@@ -12,6 +13,8 @@ def file_to_base64(file_path):
         file_content = file.read()
     return base64.b64encode(file_content).decode('utf-8')
 
+# If no environment variables are configured, please obtain the ClientId and ClientSecret from https://dashboard.aspose.cloud/#/applications and replace the following values:
+# instance  = CellsApi('YourClientId','YourClientSecret')
 instance  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'))
 
 # 1 Check the formula error for an online Excel file in the Cells Cloud Storage.

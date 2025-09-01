@@ -1,9 +1,12 @@
 import os
 import sys
+
 from asposecellscloud.apis.cells_api import CellsApi
 from asposecellscloud.models import *
 from asposecellscloud.requests import *
 
+# If no environment variables are configured, please obtain the ClientId and ClientSecret from https://dashboard.aspose.cloud/#/applications and replace the following values:
+# instance  = CellsApi('YourClientId','YourClientSecret')
 instance  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'))
 
 remote_folder = 'SDKPython'

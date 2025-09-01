@@ -9,6 +9,8 @@ from asposecellscloud.requests import *
 EmployeeSalesSummaryXlsx = "EmployeeSalesSummary.xlsx"
 RemoteFolder = "PythonSDK"
 # Get Cells Cloud SDK instance
+# If no environment variables are configured, please obtain the ClientId and ClientSecret from https://dashboard.aspose.cloud/#/applications and replace the following values:
+# instance  = CellsApi('YourClientId','YourClientSecret')
 instance  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'))
 
 # 3.0 method: Convert a local Excel file to another format file directly.
@@ -28,7 +30,7 @@ instance.export_worksheet_as_format( ExportWorksheetAsFormatRequest( EmployeeSal
 
 #Save an Excel file of Cells Cloud as another format file of Cells Cloud.
 #instance.post_workbook_save_as( PostWorkbookSaveAsRequest( EmployeeSalesSummaryXlsx ,newfilename= "PythonSDK/EmployeeSalesSummary.pdf" ,folder=RemoteFolder   ))
-instance.save_spreadsheet_as( SaveSpreadsheetAsRequest ( EmployeeSalesSummaryXlsx,"pdf", save_options_data = SaveOptionsData( filename =  "PythonSDK/EmployeeSalesSummary.pdf" ) ,folder= RemoteFolder ) )
+instance.save_spreadsheet_as( SaveSpreadsheetAsRequest ( EmployeeSalesSummaryXlsx,"pdf" ,folder= RemoteFolder ) )
 instance.download_file( DownloadFileRequest("PythonSDK/EmployeeSalesSummary.pdf") , local_outpath="EmployeeSalesSummary3.pdf")
 
 
