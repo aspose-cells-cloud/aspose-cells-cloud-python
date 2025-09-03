@@ -11,7 +11,7 @@ RemoteFolder = "PythonSDK"
 # Get Cells Cloud SDK instance
 # If no environment variables are configured, please obtain the ClientId and ClientSecret from https://dashboard.aspose.cloud/#/applications and replace the following values:
 # cells_cloud  = CellsApi('YourClientId','YourClientSecret')
-cells_cloud  = CellsApi(os.getenv('CellsCloudTestClientId'),os.getenv('CellsCloudTestClientSecret'))
+cells_cloud  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'))
 
 # Create blank spreadsheet
 cells_cloud.create_spreadsheet( CreateSpreadsheetRequest( format="xlsb"),local_outpath ="blank_spreadsheet.xlsb" )
