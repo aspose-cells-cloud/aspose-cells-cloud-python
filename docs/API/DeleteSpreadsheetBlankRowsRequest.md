@@ -1,6 +1,6 @@
 # **Spreadsheet Cloud API: deleteSpreadsheetBlankRows**
 
-Delete all blank rows which do not contain any data or other object. 
+Delete all blank rows that do not contain any data or other objects. 
 
 
 ## **Quick Start**
@@ -17,7 +17,7 @@ Delete all blank rows which do not contain any data or other object.
 PUT http://api.aspose.cloud/v4.0/cells/delete/blank-rows
 ```
 ### **Function Description**
-- **Blank Row Identification**: This function identifies rows that do not contain any data or objects, ensuring thorough removal of unnecessary blank rows.- **Data Integrity**: By removing only truly empty rows, it maintains the integrity of your dataset, preventing accidental data loss.- **Usage**:- Ideal for cleaning large datasets where blank rows may interfere with data analysis or processing.- Enhances the readability and usability of spreadsheets by eliminating extraneous blank rows.
+This method removes rows from a spreadsheet that are completely empty, containing no data or objects. It scans through all sheets and identifies rows where every cell is empty. The operation is performed directly on the spreadsheet, ensuring that only rows with no content are deleted. This helps in cleaning up the spreadsheet and removing unnecessary blank rows, making the data more organized and easier to manage. Users should ensure that the spreadsheet is backed up before performing this operation, as deleted rows cannot be recovered. ## **Error Handling**- **400 Bad Request**: Invalid url.- **401 Unauthorized**:  Authentication has failed, or no credentials were provided.- **404 Not Found**: Source file not accessible.- **500 Server Error** The spreadsheet has encountered an anomaly in obtaining data.## **Key Features and Benefits**- **Blank Row Identification**: This function identifies rows that do not contain any data or objects, ensuring thorough removal of unnecessary blank rows.- **Data Integrity**: By removing only truly empty rows, it maintains the integrity of your dataset, preventing accidental data loss.- **Efficiency**: Enhances the readability and usability of spreadsheets by eliminating extraneous blank rows.- **Usage scenarios**: Ideal for cleaning large datasets where blank rows may interfere with data analysis or processing.
 
 ### The request parameters of **deleteSpreadsheetBlankRows** API are: 
 
@@ -26,7 +26,7 @@ PUT http://api.aspose.cloud/v4.0/cells/delete/blank-rows
 |Spreadsheet|File|FormData|Upload spreadsheet file.|
 |outPath|String|Query|(Optional) The folder path where the workbook is stored. The default is null.|
 |outStorageName|String|Query|Output file Storage Name.|
-|regoin|String|Query|The spreadsheet region setting.|
+|region|String|Query|The spreadsheet region setting.|
 |password|String|Query|The password for opening spreadsheet file.|
 
 ### **Response Description**

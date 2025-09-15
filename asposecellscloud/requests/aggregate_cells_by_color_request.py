@@ -35,13 +35,13 @@ from six.moves.urllib.parse import quote
 
 class AggregateCellsByColorRequest(object):
 
-    def __init__(self , spreadsheet ,worksheet =None ,range =None ,operation =None ,color_position =None ,regoin =None ,password =None ):
+    def __init__(self , spreadsheet ,worksheet =None ,range =None ,operation =None ,color_position =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
         self.worksheet = worksheet 
         self.range = range 
         self.operation = operation 
         self.color_position = color_position 
-        self.regoin = regoin 
+        self.region = region 
         self.password = password 
     def create_http_request(self, api_client):
 
@@ -62,14 +62,14 @@ class AggregateCellsByColorRequest(object):
             query_params.append(('operation',self.operation ))
         if self.color_position is not None:
             query_params.append(('colorPosition',self.color_position ))
-        if self.regoin is not None:
-            query_params.append(('regoin',self.regoin ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
         if self.password is not None:
             query_params.append(('password',self.password ))
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.8';
+        header_params['x-aspose-client-version'] = '25.9';
 
         form_params = []
         local_var_files = {}

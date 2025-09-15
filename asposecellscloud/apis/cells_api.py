@@ -130,7 +130,6 @@ class CellsApi(object):
 
 
     # <summary>
-    # The Math Calculate API enables you to perform a variety of mathematical operations on a selected range of cells. You can add or subtract a specific number from all selected cells, as well as multiply or divide individual cells and entire columns. This API simplifies complex calculations and enhances data manipulation capabilities.
     # </summary>
     # <param name="request">Request. <see cref="MathCalculateRequest" /></param>
     def math_calculate(self, request, **kwargs):
@@ -630,6 +629,114 @@ class CellsApi(object):
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method convert_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Converts a spreadsheet on a local drive to the pdf file.
+    # </summary>
+    # <param name="request">Request. <see cref="ConvertSpreadsheetToPdfRequest" /></param>
+    def convert_spreadsheet_to_pdf(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.convert_spreadsheet_to_pdf_with_http_info(request,**kwargs)
+        else:
+            (data) = self.convert_spreadsheet_to_pdf_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def convert_spreadsheet_to_pdf_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method convert_spreadsheet_to_pdf" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Converts a spreadsheet on a local drive to the csv file.
+    # </summary>
+    # <param name="request">Request. <see cref="ConvertSpreadsheetToCsvRequest" /></param>
+    def convert_spreadsheet_to_csv(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.convert_spreadsheet_to_csv_with_http_info(request,**kwargs)
+        else:
+            (data) = self.convert_spreadsheet_to_csv_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def convert_spreadsheet_to_csv_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method convert_spreadsheet_to_csv" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -1727,6 +1834,7 @@ class CellsApi(object):
 
 
     # <summary>
+    # Import data into a spreadsheet from a supported data file format.
     # </summary>
     # <param name="request">Request. <see cref="ImportDataIntoSpreadsheetRequest" /></param>
     def import_data_into_spreadsheet(self, request, **kwargs):
@@ -2937,7 +3045,114 @@ class CellsApi(object):
 
 
     # <summary>
-    # Delete all blank rows which do not contain any data or other object.
+    # The TrimSpreadsheetContent API is designed to process and trim content within a spreadsheet. This API allows users to remove extra spaces, line breaks, or other unnecessary characters from the content of selected cells. It is particularly useful for cleaning up data entries and ensuring consistency in spreadsheet formatting
+    # </summary>
+    # <param name="request">Request. <see cref="TrimSpreadsheetContentRequest" /></param>
+    def trim_spreadsheet_content(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.trim_spreadsheet_content_with_http_info(request,**kwargs)
+        else:
+            (data) = self.trim_spreadsheet_content_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def trim_spreadsheet_content_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method trim_spreadsheet_content" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="TrimWorksheetRangeRequest" /></param>
+    def trim_worksheet_range(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.trim_worksheet_range_with_http_info(request,**kwargs)
+        else:
+            (data) = self.trim_worksheet_range_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def trim_worksheet_range_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method trim_worksheet_range" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Delete all blank rows that do not contain any data or other objects.
     # </summary>
     # <param name="request">Request. <see cref="DeleteSpreadsheetBlankRowsRequest" /></param>
     def delete_spreadsheet_blank_rows(self, request, **kwargs):
@@ -2991,7 +3206,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Delete all blank columns which do not contain any data.
+    # Delete all blank rows that do not contain any data or other objects.
     # </summary>
     # <param name="request">Request. <see cref="DeleteSpreadsheetBlankColumnsRequest" /></param>
     def delete_spreadsheet_blank_columns(self, request, **kwargs):
@@ -3045,7 +3260,7 @@ class CellsApi(object):
 
 
     # <summary>
-    # Delete all blank worksheets which do not contain any data or other object.
+    # Delete all blank rows that do not contain any data or other objects.
     # </summary>
     # <param name="request">Request. <see cref="DeleteSpreadsheetBlankWorksheetsRequest" /></param>
     def delete_spreadsheet_blank_worksheets(self, request, **kwargs):
@@ -3101,23 +3316,23 @@ class CellsApi(object):
     # <summary>
     # The Swap Ranges for Excel API provides a powerful tool to move any two columns, rows, ranges, or individual cells within an Excel file. This API allows users to re-arrange their tables quickly and efficiently, ensuring that the original data formatting is preserved and all existing formulas continue to function correctly. By leveraging this API, users can streamline their data manipulation tasks and maintain the integrity of their spreadsheets.
     # </summary>
-    # <param name="request">Request. <see cref="SawpRangeRequest" /></param>
-    def sawp_range(self, request, **kwargs):
+    # <param name="request">Request. <see cref="SwapRangeRequest" /></param>
+    def swap_range(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.sawp_range_with_http_info(request,**kwargs)
+            response_file = self.swap_range_with_http_info(request,**kwargs)
         else:
-            (data) = self.sawp_range_with_http_info(request,**kwargs)
+            (data) = self.swap_range_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def sawp_range_with_http_info(self, request, **kwargs):
+    def swap_range_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -3129,7 +3344,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method sawp_range" % key
+                    " to method swap_range" % key
                 )
             params[key] = val
         del params['kwargs'] 

@@ -17,7 +17,7 @@ The Web API allows users to create a new spreadsheet with a specified name. Opti
 PUT http://api.aspose.cloud/v4.0/cells/spreadsheet/create
 ```
 ### **Function Description**
-By using the CreateSpreadsheet function, you can quickly set up new spreadsheets with or without templates, streamlining your workflow and enhancing productivity.**Considerations**: Ensure that the provided name is unique to avoid conflicts with existing spreadsheets. If using a template, ensure that the template file is accessible and correctly formatted.**Error Handling**: If the name is not provided or is invalid, the function may throw an exception or return an error message. If the template file is specified but cannot be found or is corrupted, the function may also throw an exception or return an error message.
+By using the CreateSpreadsheet function, you can quickly set up new spreadsheets with or without templates, streamlining your workflow and enhancing productivity.## **Error Handling**- **400 Bad Request**: Invalid url.- **401 Unauthorized**:  Authentication has failed, or no credentials were provided.- **404 Not Found**: Source file not accessible.- **500 Server Error** The spreadsheet has encountered an anomaly in obtaining data.## **Key Features and Benefits**- **Spreadsheet Creation**: Allows users to create a new spreadsheet with a specified name.- **Template Support**: Optionally, users can provide a template to initialize the spreadsheet with predefined content or formatting.- **Enhanced Productivity**: Quickly set up new spreadsheets, streamlining your workflow.
 
 ### The request parameters of **createSpreadsheet** API are: 
 
@@ -27,7 +27,7 @@ By using the CreateSpreadsheet function, you can quickly set up new spreadsheets
 |template|String|Query|template: Optional.If provided, the new spreadsheet will be created based on the specified template.This can be useful for applying predefined layouts and styles.|
 |outPath|String|Query|(Optional) The folder path where the workbook is stored. The default is null.|
 |outStorageName|String|Query|Output file Storage Name.|
-|regoin|String|Query|The spreadsheet region setting.|
+|region|String|Query|The spreadsheet region setting.|
 |password|String|Query|The password for opening spreadsheet file.|
 
 ### **Response Description**

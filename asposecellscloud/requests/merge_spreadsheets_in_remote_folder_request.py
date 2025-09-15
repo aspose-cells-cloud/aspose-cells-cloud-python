@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class MergeSpreadsheetsInRemoteFolderRequest(object):
 
-    def __init__(self , folder ,file_match_expression =None ,out_format =None ,merge_in_one_sheet =None ,storage_name =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,regoin =None ,password =None ):
+    def __init__(self , folder ,file_match_expression =None ,out_format =None ,merge_in_one_sheet =None ,storage_name =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,region =None ,password =None ):
         self.folder = folder 
         self.file_match_expression = file_match_expression 
         self.out_format = out_format 
@@ -44,7 +44,7 @@ class MergeSpreadsheetsInRemoteFolderRequest(object):
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.fonts_location = fonts_location 
-        self.regoin = regoin 
+        self.region = region 
         self.password = password 
     def create_http_request(self, api_client):
 
@@ -73,14 +73,14 @@ class MergeSpreadsheetsInRemoteFolderRequest(object):
             query_params.append(('outStorageName',self.out_storage_name ))
         if self.fonts_location is not None:
             query_params.append(('fontsLocation',self.fonts_location ))
-        if self.regoin is not None:
-            query_params.append(('regoin',self.regoin ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
         if self.password is not None:
             query_params.append(('password',self.password ))
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.8';
+        header_params['x-aspose-client-version'] = '25.9';
 
         form_params = []
         local_var_files = {}

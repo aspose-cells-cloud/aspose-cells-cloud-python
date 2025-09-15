@@ -35,13 +35,13 @@ from six.moves.urllib.parse import quote
 
 class ProtectSpreadsheetRequest(object):
 
-    def __init__(self , spreadsheet ,password ,modify_password ,out_path =None ,out_storage_name =None ,regoin =None ):
+    def __init__(self , spreadsheet ,password ,modify_password ,out_path =None ,out_storage_name =None ,region =None ):
         self.spreadsheet = spreadsheet 
         self.password = password 
         self.modify_password = modify_password 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
-        self.regoin = regoin 
+        self.region = region 
     def create_http_request(self, api_client):
 
         # verify the required parameter 'spreadsheet' is set
@@ -71,12 +71,12 @@ class ProtectSpreadsheetRequest(object):
             query_params.append(('outPath',self.out_path ))
         if self.out_storage_name is not None:
             query_params.append(('outStorageName',self.out_storage_name ))
-        if self.regoin is not None:
-            query_params.append(('regoin',self.regoin ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.8';
+        header_params['x-aspose-client-version'] = '25.9';
 
         form_params = []
         local_var_files = {}

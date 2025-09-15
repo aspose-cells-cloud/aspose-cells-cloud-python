@@ -35,13 +35,13 @@ from six.moves.urllib.parse import quote
 
 class ReplaceContentInRemoteSpreadsheetRequest(object):
 
-    def __init__(self , name ,search_text ,replace_text ,folder =None ,storage_name =None ,regoin =None ,password =None ):
+    def __init__(self , name ,search_text ,replace_text ,folder =None ,storage_name =None ,region =None ,password =None ):
         self.name = name 
         self.search_text = search_text 
         self.replace_text = replace_text 
         self.folder = folder 
         self.storage_name = storage_name 
-        self.regoin = regoin 
+        self.region = region 
         self.password = password 
     def create_http_request(self, api_client):
 
@@ -74,14 +74,14 @@ class ReplaceContentInRemoteSpreadsheetRequest(object):
             query_params.append(('folder',self.folder ))
         if self.storage_name is not None:
             query_params.append(('storageName',self.storage_name ))
-        if self.regoin is not None:
-            query_params.append(('regoin',self.regoin ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
         if self.password is not None:
             query_params.append(('password',self.password ))
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.8';
+        header_params['x-aspose-client-version'] = '25.9';
 
         form_params = []
         local_var_files = {}

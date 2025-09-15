@@ -35,13 +35,13 @@ from six.moves.urllib.parse import quote
 
 class MoveWorksheetInSpreadsheetRequest(object):
 
-    def __init__(self , spreadsheet ,worksheet ,position ,out_path =None ,out_storage_name =None ,regoin =None ,password =None ):
+    def __init__(self , spreadsheet ,worksheet ,position ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
         self.worksheet = worksheet 
         self.position = position 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
-        self.regoin = regoin 
+        self.region = region 
         self.password = password 
     def create_http_request(self, api_client):
 
@@ -72,14 +72,14 @@ class MoveWorksheetInSpreadsheetRequest(object):
             query_params.append(('outPath',self.out_path ))
         if self.out_storage_name is not None:
             query_params.append(('outStorageName',self.out_storage_name ))
-        if self.regoin is not None:
-            query_params.append(('regoin',self.regoin ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
         if self.password is not None:
             query_params.append(('password',self.password ))
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.8';
+        header_params['x-aspose-client-version'] = '25.9';
 
         form_params = []
         local_var_files = {}

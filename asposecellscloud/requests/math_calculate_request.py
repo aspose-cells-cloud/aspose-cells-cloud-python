@@ -35,13 +35,13 @@ from six.moves.urllib.parse import quote
 
 class MathCalculateRequest(object):
 
-    def __init__(self , spreadsheet ,operation ,value ,worksheet =None ,range =None ,regoin =None ,password =None ):
+    def __init__(self , spreadsheet ,operation ,value ,worksheet =None ,range =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
         self.operation = operation 
         self.value = value 
         self.worksheet = worksheet 
         self.range = range 
-        self.regoin = regoin 
+        self.region = region 
         self.password = password 
     def create_http_request(self, api_client):
 
@@ -72,14 +72,14 @@ class MathCalculateRequest(object):
             query_params.append(('worksheet',self.worksheet ))
         if self.range is not None:
             query_params.append(('range',self.range ))
-        if self.regoin is not None:
-            query_params.append(('regoin',self.regoin ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
         if self.password is not None:
             query_params.append(('password',self.password ))
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.8';
+        header_params['x-aspose-client-version'] = '25.9';
 
         form_params = []
         local_var_files = {}

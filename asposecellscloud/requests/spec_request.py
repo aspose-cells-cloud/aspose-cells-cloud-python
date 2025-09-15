@@ -35,9 +35,9 @@ from six.moves.urllib.parse import quote
 
 class SpecRequest(object):
 
-    def __init__(self , version ,regoin =None ,password =None ):
+    def __init__(self , version ,region =None ,password =None ):
         self.version = version 
-        self.regoin = regoin 
+        self.region = region 
         self.password = password 
     def create_http_request(self, api_client):
 
@@ -52,14 +52,14 @@ class SpecRequest(object):
         query_params = []
         if self.version is not None:
             query_params.append(('version',self.version ))
-        if self.regoin is not None:
-            query_params.append(('regoin',self.regoin ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
         if self.password is not None:
             query_params.append(('password',self.password ))
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.8';
+        header_params['x-aspose-client-version'] = '25.9';
 
         form_params = []
         local_var_files = {}

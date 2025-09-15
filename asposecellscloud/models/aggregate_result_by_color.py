@@ -51,8 +51,7 @@ class AggregateResultByColor(object):
         'sum' : 'float',
         'max_value' : 'float',
         'min_value' : 'float',
-        'average_value' : 'float',
-        'value' : 'float'
+        'average_value' : 'float'
     }
 
     attribute_map = {
@@ -62,8 +61,7 @@ class AggregateResultByColor(object):
         'sum' : 'Sum' ,
         'max_value' : 'MaxValue' ,
         'min_value' : 'MinValue' ,
-        'average_value' : 'AverageValue' ,
-        'value' : 'Value' 
+        'average_value' : 'AverageValue' 
     }
 
     @staticmethod
@@ -79,7 +77,7 @@ class AggregateResultByColor(object):
             return self.container[attr]
         return None
 
-    def __init__(self,aggregate_operation=None ,color_name=None ,count=None ,sum=None ,max_value=None ,min_value=None ,average_value=None ,value=None   ,**kw):
+    def __init__(self,aggregate_operation=None ,color_name=None ,count=None ,sum=None ,max_value=None ,min_value=None ,average_value=None   ,**kw):
         """
         Associative dict for storing property values
         """
@@ -95,7 +93,6 @@ class AggregateResultByColor(object):
         self.container['max_value'] = None 
         self.container['min_value'] = None 
         self.container['average_value'] = None 
-        self.container['value'] = None 
         params = locals()
         self.aggregate_operation = aggregate_operation
         if 'aggregate_operation' in params:
@@ -136,12 +133,6 @@ class AggregateResultByColor(object):
         self.average_value = average_value
         if 'average_value' in params:
             self.average_value = params["average_value"]
-
-
-             
-        self.value = value
-        if 'value' in params:
-            self.value = params["value"]
 
 
              
@@ -195,13 +186,6 @@ class AggregateResultByColor(object):
     @average_value.setter
     def average_value(self, average_value):
         self.container['average_value'] = average_value 
-    @property
-    def value(self):
-        return self.container['value']
-
-    @value.setter
-    def value(self, value):
-        self.container['value'] = value 
 
     def to_dict(self):
         """

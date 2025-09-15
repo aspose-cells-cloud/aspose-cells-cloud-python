@@ -1,6 +1,6 @@
 # **Spreadsheet Cloud API: mathCalculate**
 
-The Math Calculate API enables you to perform a variety of mathematical operations on a selected range of cells. You can add or subtract a specific number from all selected cells, as well as multiply or divide individual cells and entire columns. This API simplifies complex calculations and enhances data manipulation capabilities. 
+ 
 
 
 ## **Quick Start**
@@ -17,7 +17,6 @@ The Math Calculate API enables you to perform a variety of mathematical operatio
 PUT http://api.aspose.cloud/v4.0/cells/calculate/math
 ```
 ### **Function Description**
-The API provides a flexible and efficient solution for performing arithmetic operations on a range of cells. Whether you need to add, subtract, multiply, or divide, this API allows you to apply the same operation uniformly across the selected range, enhancing your data manipulation capabilities.**Key Features**- **Add and Subtract**: Add or subtract a specific number from all selected cells.- **Multiply and Divide**: Multiply or divide individual cells and entire columns.- **Uniform Application**: Apply the same operation uniformly across the selected range.
 
 ### The request parameters of **mathCalculate** API are: 
 
@@ -28,7 +27,7 @@ The API provides a flexible and efficient solution for performing arithmetic ope
 |value|String|Query||
 |worksheet|String|Query||
 |range|String|Query||
-|regoin|String|Query|The spreadsheet region setting.|
+|region|String|Query|The spreadsheet region setting.|
 |password|String|Query|The password for opening spreadsheet file.|
 
 ### **Response Description**

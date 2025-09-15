@@ -17,7 +17,7 @@ The Web API enables users to add a new worksheet to a workbook, specifying the w
 PUT http://api.aspose.cloud/v4.0/cells/spreadsheet/add/worksheet
 ```
 ### **Function Description**
-By using the AddWorksheet API, you can dynamically manage the structure of your workbook, adding new worksheets with specific types, positions, and names, thereby enhancing your productivity and control over spreadsheet management.**Considerations**: Ensure that the provided sheetName is unique to avoid conflicts with existing worksheets. If using a specific sheetType, ensure that it is supported by the workbook.**Error Handling**: If the sheetName is not provided or is invalid, the function may throw an exception or return an error message. If the position is out of range, the function may throw an exception or return an error message.
+By using the AddWorksheet API, you can dynamically manage the structure of your workbook, adding new worksheets with specific types, positions, and names, thereby enhancing your productivity and control over spreadsheet management.## **Error Handling**- **400 Bad Request**: Invalid url.- **401 Unauthorized**:  Authentication has failed, or no credentials were provided.- **404 Not Found**: Source file not accessible.- **500 Server Error** The spreadsheet has encountered an anomaly in obtaining data.## **Key Features and Benefits**- **Spreadsheet Creation**: Allows users to create a new spreadsheet with a specified name.- **Template Support**: Optionally, users can provide a template to initialize the spreadsheet with predefined content or formatting.- **Flexibility in Workbook Management**: Provides detailed control over the addition of new worksheets, enhancing flexibility in managing workbook structure.
 
 ### The request parameters of **addWorksheetToSpreadsheet** API are: 
 
@@ -29,7 +29,7 @@ By using the AddWorksheet API, you can dynamically manage the structure of your 
 |sheetName|String|Query|Specifies the type of worksheet to be added.If not provided, a default worksheet type will be used.|
 |outPath|String|Query|(Optional) The folder path where the workbook is stored. The default is null.|
 |outStorageName|String|Query|Output file Storage Name.|
-|regoin|String|Query|The spreadsheet region setting.|
+|region|String|Query|The spreadsheet region setting.|
 |password|String|Query|The password for opening spreadsheet file.|
 
 ### **Response Description**

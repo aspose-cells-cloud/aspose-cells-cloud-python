@@ -17,7 +17,7 @@ The Web API endpoint allows users to delete a specified worksheet from a workboo
 PUT http://api.aspose.cloud/v4.0/cells/spreadsheet/delete/worksheet
 ```
 ### **Function Description**
-By using the Web API, you can dynamically manage the structure of your workbook, removing specified worksheets to maintain a clean and organized spreadsheet environment. This feature enhances your ability to manage and optimize your workbook efficiently.**Considerations**: Ensure that the provided worksheet name is correct and matches an existing worksheet in the workbook. Be cautious when deleting worksheets, as this action cannot be undone.**Error Handling**: If the worksheet name is not provided or does not match any existing worksheet, the function may throw an exception or return an error message. Ensure proper error handling to manage cases where the worksheet does not exist.
+By using the Web API, you can dynamically manage the structure of your workbook, removing specified worksheets to maintain a clean and organized spreadsheet environment. This feature enhances your ability to manage and optimize your workbook efficiently.## **Error Handling**- **400 Bad Request**: Invalid url.- **401 Unauthorized**:  Authentication has failed, or no credentials were provided.- **404 Not Found**: Source file not accessible.- **500 Server Error** The spreadsheet has encountered an anomaly in obtaining data.## **Key Features and Benefits**- **Worksheet Deletion**: Allows users to delete a specified worksheet from a workbook.- **Simplified Workbook Management**: Provides a straightforward method to manage workbook structure by removing unnecessary or redundant worksheets.
 
 ### The request parameters of **deleteWorksheetFromSpreadsheet** API are: 
 
@@ -27,7 +27,7 @@ By using the Web API, you can dynamically manage the structure of your workbook,
 |sheetName|String|Query|Specifies the name or identifier of the worksheet to be deleted. This parameter is required and must match the name of an existing worksheet in the workbook.|
 |outPath|String|Query|(Optional) The folder path where the workbook is stored. The default is null.|
 |outStorageName|String|Query|Output file Storage Name.|
-|regoin|String|Query|The spreadsheet region setting.|
+|region|String|Query|The spreadsheet region setting.|
 |password|String|Query|The password for opening spreadsheet file.|
 
 ### **Response Description**
