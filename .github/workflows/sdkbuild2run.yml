@@ -39,3 +39,4 @@ jobs:
         python .\Example_ConvertChartToImage.py
         python .\Example_ConvertRangeToImage.py
         python .\Example_ConvertExcel.py
+        python .\Example_Management.py
