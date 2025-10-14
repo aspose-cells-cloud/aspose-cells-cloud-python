@@ -45,6 +45,7 @@ from asposecellscloud.models.cells_cloud_public_key import CellsCloudPublicKey
 from asposecellscloud.models.color import Color
 from asposecellscloud.models.pdf_security_options import PdfSecurityOptions
 from asposecellscloud.models.range import Range
+from asposecellscloud.models.remove_characters_by_position import RemoveCharactersByPosition
 from asposecellscloud.models.save_result import SaveResult
 from asposecellscloud.models.paginated_save_options import PaginatedSaveOptions
 from asposecellscloud.models.spreadsheet_template import SpreadsheetTemplate
@@ -375,7 +376,6 @@ from asposecellscloud.models.data_output_location import DataOutputLocation
 from asposecellscloud.models.extract_text_options import ExtractTextOptions
 from asposecellscloud.models.merge_table_options import MergeTableOptions
 from asposecellscloud.models.remove_characters_by_character import RemoveCharactersByCharacter
-from asposecellscloud.models.remove_characters_by_position import RemoveCharactersByPosition
 from asposecellscloud.models.remove_characters_options import RemoveCharactersOptions
 from asposecellscloud.models.remove_duplicates_options import RemoveDuplicatesOptions
 from asposecellscloud.models.scope_item import ScopeItem

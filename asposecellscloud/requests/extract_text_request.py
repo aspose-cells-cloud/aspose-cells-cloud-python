@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="TrimSpreadsheetContentRequest.cs">
+<copyright company="Aspose" file="ExtractTextRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,17 +33,18 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class TrimSpreadsheetContentRequest(object):
+class ExtractTextRequest(object):
 
-    def __init__(self , spreadsheet ,trim_content =None ,trim_leading =None ,trim_trailing =None ,trim_space_between_word_to1 =None ,trim_non_breaking_spaces =None ,remove_extra_line_breaks =None ,remove_all_line_breaks =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
+    def __init__(self , spreadsheet ,extract_text_type ,before_text ,after_text ,before_position ,after_position ,out_position_range ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
-        self.trim_content = trim_content 
-        self.trim_leading = trim_leading 
-        self.trim_trailing = trim_trailing 
-        self.trim_space_between_word_to1 = trim_space_between_word_to1 
-        self.trim_non_breaking_spaces = trim_non_breaking_spaces 
-        self.remove_extra_line_breaks = remove_extra_line_breaks 
-        self.remove_all_line_breaks = remove_all_line_breaks 
+        self.extract_text_type = extract_text_type 
+        self.before_text = before_text 
+        self.after_text = after_text 
+        self.before_position = before_position 
+        self.after_position = after_position 
+        self.out_position_range = out_position_range 
+        self.worksheet = worksheet 
+        self.range = range 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.region = region 
@@ -52,27 +53,59 @@ class TrimSpreadsheetContentRequest(object):
 
         # verify the required parameter 'spreadsheet' is set
         if self.spreadsheet is None:
-            raise ValueError("Missing the required parameter `spreadsheet` when calling `trim_spreadsheet_content`")
+            raise ValueError("Missing the required parameter `spreadsheet` when calling `extract_text`")
+
+
+        # verify the required parameter 'extract_text_type' is set
+        if self.extract_text_type is None:
+            raise ValueError("Missing the required parameter `extract_text_type` when calling `extract_text`")
+
+
+        # verify the required parameter 'before_text' is set
+        if self.before_text is None:
+            raise ValueError("Missing the required parameter `before_text` when calling `extract_text`")
+
+
+        # verify the required parameter 'after_text' is set
+        if self.after_text is None:
+            raise ValueError("Missing the required parameter `after_text` when calling `extract_text`")
+
+
+        # verify the required parameter 'before_position' is set
+        if self.before_position is None:
+            raise ValueError("Missing the required parameter `before_position` when calling `extract_text`")
+
+
+        # verify the required parameter 'after_position' is set
+        if self.after_position is None:
+            raise ValueError("Missing the required parameter `after_position` when calling `extract_text`")
+
+
+        # verify the required parameter 'out_position_range' is set
+        if self.out_position_range is None:
+            raise ValueError("Missing the required parameter `out_position_range` when calling `extract_text`")
 
 
         collection_formats = {}
 
         path_params = {}
         query_params = []
-        if self.trim_content is not None:
-            query_params.append(('trimContent',self.trim_content ))
-        if self.trim_leading is not None:
-            query_params.append(('trimLeading',self.trim_leading ))
-        if self.trim_trailing is not None:
-            query_params.append(('trimTrailing',self.trim_trailing ))
-        if self.trim_space_between_word_to1 is not None:
-            query_params.append(('trimSpaceBetweenWordTo1',self.trim_space_between_word_to1 ))
-        if self.trim_non_breaking_spaces is not None:
-            query_params.append(('trimNonBreakingSpaces',self.trim_non_breaking_spaces ))
-        if self.remove_extra_line_breaks is not None:
-            query_params.append(('removeExtraLineBreaks',self.remove_extra_line_breaks ))
-        if self.remove_all_line_breaks is not None:
-            query_params.append(('removeAllLineBreaks',self.remove_all_line_breaks ))
+        if self.extract_text_type is not None:
+            query_params.append(('extractTextType',self.extract_text_type ))
+        if self.before_text is not None:
+            query_params.append(('beforeText',self.before_text ))
+        if self.after_text is not None:
+            query_params.append(('afterText',self.after_text ))
+        if self.before_position is not None:
+            query_params.append(('beforePosition',self.before_position ))
+        if self.after_position is not None:
+            query_params.append(('afterPosition',self.after_position ))
+        if self.out_position_range is not None:
+            query_params.append(('outPositionRange',self.out_position_range ))
+        if self.worksheet is not None:
+            query_params.append(('worksheet',self.worksheet ))
+        if self.range is not None:
+            query_params.append(('range',self.range ))
         if self.out_path is not None:
             query_params.append(('outPath',self.out_path ))
         if self.out_storage_name is not None:
@@ -84,7 +117,7 @@ class TrimSpreadsheetContentRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.9';
+        header_params['x-aspose-client-version'] = '25.10';
 
         form_params = []
         local_var_files = {}
@@ -109,7 +142,7 @@ class TrimSpreadsheetContentRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/content/trim"
+        resource_path =  "v4.0/cells/content/extract/text"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

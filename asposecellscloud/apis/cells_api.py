@@ -2260,6 +2260,59 @@ class CellsApi(object):
 
 
     # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="RepairSpreadsheetRequest" /></param>
+    def repair_spreadsheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.repair_spreadsheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.repair_spreadsheet_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def repair_spreadsheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repair_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
     # Applies dual-layer password protection to Excel spreadsheets, supporting both open and modify passwords with encryption.
     # </summary>
     # <param name="request">Request. <see cref="ProtectSpreadsheetRequest" /></param>
@@ -2345,6 +2398,59 @@ class CellsApi(object):
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method unprotect_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="SpreadsheetDigitalsignatureRequest" /></param>
+    def spreadsheet_digitalsignature(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.spreadsheet_digitalsignature_with_http_info(request,**kwargs)
+        else:
+            (data) = self.spreadsheet_digitalsignature_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def spreadsheet_digitalsignature_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method spreadsheet_digitalsignature" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -3047,23 +3153,23 @@ class CellsApi(object):
     # <summary>
     # The TrimSpreadsheetContent API is designed to process and trim content within a spreadsheet. This API allows users to remove extra spaces, line breaks, or other unnecessary characters from the content of selected cells. It is particularly useful for cleaning up data entries and ensuring consistency in spreadsheet formatting
     # </summary>
-    # <param name="request">Request. <see cref="TrimSpreadsheetContentRequest" /></param>
-    def trim_spreadsheet_content(self, request, **kwargs):
+    # <param name="request">Request. <see cref="TrimCharacterRequest" /></param>
+    def trim_character(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.trim_spreadsheet_content_with_http_info(request,**kwargs)
+            response_file = self.trim_character_with_http_info(request,**kwargs)
         else:
-            (data) = self.trim_spreadsheet_content_with_http_info(request,**kwargs)
+            (data) = self.trim_character_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def trim_spreadsheet_content_with_http_info(self, request, **kwargs):
+    def trim_character_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -3075,7 +3181,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method trim_spreadsheet_content" % key
+                    " to method trim_character" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -3099,24 +3205,25 @@ class CellsApi(object):
 
 
     # <summary>
+    # Specify changing the text case in a spreadsheet to switch between uppercase, lowercase, capitalizing the first letter of each word, or capitalizing the first letter of a sentence, and adjust the text according to specific needs.
     # </summary>
-    # <param name="request">Request. <see cref="TrimWorksheetRangeRequest" /></param>
-    def trim_worksheet_range(self, request, **kwargs):
+    # <param name="request">Request. <see cref="UpdateWordCaseRequest" /></param>
+    def update_word_case(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.trim_worksheet_range_with_http_info(request,**kwargs)
+            response_file = self.update_word_case_with_http_info(request,**kwargs)
         else:
-            (data) = self.trim_worksheet_range_with_http_info(request,**kwargs)
+            (data) = self.update_word_case_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def trim_worksheet_range_with_http_info(self, request, **kwargs):
+    def update_word_case_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -3128,7 +3235,277 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method trim_worksheet_range" % key
+                    " to method update_word_case" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Perform operations or delete any custom characters, character sets, and substrings within a selected range for a specific position.
+    # </summary>
+    # <param name="request">Request. <see cref="RemoveCharactersRequest" /></param>
+    def remove_characters(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.remove_characters_with_http_info(request,**kwargs)
+        else:
+            (data) = self.remove_characters_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def remove_characters_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method remove_characters" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Specify appending text to multiple cells at once, allowing you to add prefixes, suffixes, labels, or any specific characters. You can choose the exact position of the text—in the beginning, at the end, or before or after certain characters in the cell.
+    # </summary>
+    # <param name="request">Request. <see cref="AddTextRequest" /></param>
+    def add_text(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.add_text_with_http_info(request,**kwargs)
+        else:
+            (data) = self.add_text_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def add_text_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method add_text" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Indicates converting the numbers stored as text into the correct number format, replacing unwanted characters and line breaks with the desired characters, and converting accented characters to their equivalent characters without accents.
+    # </summary>
+    # <param name="request">Request. <see cref="ConvertTextRequest" /></param>
+    def convert_text(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.convert_text_with_http_info(request,**kwargs)
+        else:
+            (data) = self.convert_text_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def convert_text_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method convert_text" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Indicates extracting substrings, text characters, and numbers from a spreadsheet cell into another cell without having to use complex FIND, MIN, LEFT, or RIGHT formulas.
+    # </summary>
+    # <param name="request">Request. <see cref="ExtractTextRequest" /></param>
+    def extract_text(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.extract_text_with_http_info(request,**kwargs)
+        else:
+            (data) = self.extract_text_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def extract_text_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method extract_text" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # Indicates performing text segmentation on the specified area according to the segmentation method, and outputting to the designated interval.
+    # </summary>
+    # <param name="request">Request. <see cref="SplitTextRequest" /></param>
+    def split_text(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.split_text_with_http_info(request,**kwargs)
+        else:
+            (data) = self.split_text_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def split_text_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method split_text" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -3154,23 +3531,23 @@ class CellsApi(object):
     # <summary>
     # Delete all blank rows that do not contain any data or other objects.
     # </summary>
-    # <param name="request">Request. <see cref="DeleteSpreadsheetBlankRowsRequest" /></param>
-    def delete_spreadsheet_blank_rows(self, request, **kwargs):
+    # <param name="request">Request. <see cref="RemoveSpreadsheetBlankRowsRequest" /></param>
+    def remove_spreadsheet_blank_rows(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.delete_spreadsheet_blank_rows_with_http_info(request,**kwargs)
+            response_file = self.remove_spreadsheet_blank_rows_with_http_info(request,**kwargs)
         else:
-            (data) = self.delete_spreadsheet_blank_rows_with_http_info(request,**kwargs)
+            (data) = self.remove_spreadsheet_blank_rows_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def delete_spreadsheet_blank_rows_with_http_info(self, request, **kwargs):
+    def remove_spreadsheet_blank_rows_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -3182,7 +3559,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_spreadsheet_blank_rows" % key
+                    " to method remove_spreadsheet_blank_rows" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -3208,23 +3585,23 @@ class CellsApi(object):
     # <summary>
     # Delete all blank rows that do not contain any data or other objects.
     # </summary>
-    # <param name="request">Request. <see cref="DeleteSpreadsheetBlankColumnsRequest" /></param>
-    def delete_spreadsheet_blank_columns(self, request, **kwargs):
+    # <param name="request">Request. <see cref="RemoveSpreadsheetBlankColumnsRequest" /></param>
+    def remove_spreadsheet_blank_columns(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.delete_spreadsheet_blank_columns_with_http_info(request,**kwargs)
+            response_file = self.remove_spreadsheet_blank_columns_with_http_info(request,**kwargs)
         else:
-            (data) = self.delete_spreadsheet_blank_columns_with_http_info(request,**kwargs)
+            (data) = self.remove_spreadsheet_blank_columns_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def delete_spreadsheet_blank_columns_with_http_info(self, request, **kwargs):
+    def remove_spreadsheet_blank_columns_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -3236,7 +3613,7 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_spreadsheet_blank_columns" % key
+                    " to method remove_spreadsheet_blank_columns" % key
                 )
             params[key] = val
         del params['kwargs'] 
@@ -3262,23 +3639,23 @@ class CellsApi(object):
     # <summary>
     # Delete all blank rows that do not contain any data or other objects.
     # </summary>
-    # <param name="request">Request. <see cref="DeleteSpreadsheetBlankWorksheetsRequest" /></param>
-    def delete_spreadsheet_blank_worksheets(self, request, **kwargs):
+    # <param name="request">Request. <see cref="RemoveSpreadsheetBlankWorksheetsRequest" /></param>
+    def remove_spreadsheet_blank_worksheets(self, request, **kwargs):
 
         kwargs['_return_http_data_only'] = True
         self.check_access_token()
         response_file = None
         if kwargs.get('callback'):
-            response_file = self.delete_spreadsheet_blank_worksheets_with_http_info(request,**kwargs)
+            response_file = self.remove_spreadsheet_blank_worksheets_with_http_info(request,**kwargs)
         else:
-            (data) = self.delete_spreadsheet_blank_worksheets_with_http_info(request,**kwargs)
+            (data) = self.remove_spreadsheet_blank_worksheets_with_http_info(request,**kwargs)
             response_file = data
         if kwargs.get('local_outpath'):
             shutil.move( response_file , kwargs.get('local_outpath'))
             return kwargs.get('local_outpath')
         else:
             return response_file
-    def delete_spreadsheet_blank_worksheets_with_http_info(self, request, **kwargs):
+    def remove_spreadsheet_blank_worksheets_with_http_info(self, request, **kwargs):
         all_params = []
         all_params.append('callback')
         all_params.append('_return_http_data_only')
@@ -3290,7 +3667,60 @@ class CellsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_spreadsheet_blank_worksheets" % key
+                    " to method remove_spreadsheet_blank_worksheets" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
+    # </summary>
+    # <param name="request">Request. <see cref="RemoveDuplicatesRequest" /></param>
+    def remove_duplicates(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.remove_duplicates_with_http_info(request,**kwargs)
+        else:
+            (data) = self.remove_duplicates_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def remove_duplicates_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method remove_duplicates" % key
                 )
             params[key] = val
         del params['kwargs'] 

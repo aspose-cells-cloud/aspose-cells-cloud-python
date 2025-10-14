@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="DeleteSpreadsheetBlankColumnsRequest.cs">
+<copyright company="Aspose" file="ConvertTextRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,10 +33,15 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class DeleteSpreadsheetBlankColumnsRequest(object):
+class ConvertTextRequest(object):
 
-    def __init__(self , spreadsheet ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
+    def __init__(self , spreadsheet ,convert_text_type ,source_characters ,target_characters ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
+        self.convert_text_type = convert_text_type 
+        self.source_characters = source_characters 
+        self.target_characters = target_characters 
+        self.worksheet = worksheet 
+        self.range = range 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.region = region 
@@ -45,13 +50,38 @@ class DeleteSpreadsheetBlankColumnsRequest(object):
 
         # verify the required parameter 'spreadsheet' is set
         if self.spreadsheet is None:
-            raise ValueError("Missing the required parameter `spreadsheet` when calling `delete_spreadsheet_blank_columns`")
+            raise ValueError("Missing the required parameter `spreadsheet` when calling `convert_text`")
+
+
+        # verify the required parameter 'convert_text_type' is set
+        if self.convert_text_type is None:
+            raise ValueError("Missing the required parameter `convert_text_type` when calling `convert_text`")
+
+
+        # verify the required parameter 'source_characters' is set
+        if self.source_characters is None:
+            raise ValueError("Missing the required parameter `source_characters` when calling `convert_text`")
+
+
+        # verify the required parameter 'target_characters' is set
+        if self.target_characters is None:
+            raise ValueError("Missing the required parameter `target_characters` when calling `convert_text`")
 
 
         collection_formats = {}
 
         path_params = {}
         query_params = []
+        if self.convert_text_type is not None:
+            query_params.append(('convertTextType',self.convert_text_type ))
+        if self.source_characters is not None:
+            query_params.append(('sourceCharacters',self.source_characters ))
+        if self.target_characters is not None:
+            query_params.append(('targetCharacters',self.target_characters ))
+        if self.worksheet is not None:
+            query_params.append(('worksheet',self.worksheet ))
+        if self.range is not None:
+            query_params.append(('range',self.range ))
         if self.out_path is not None:
             query_params.append(('outPath',self.out_path ))
         if self.out_storage_name is not None:
@@ -63,7 +93,7 @@ class DeleteSpreadsheetBlankColumnsRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.9';
+        header_params['x-aspose-client-version'] = '25.10';
 
         form_params = []
         local_var_files = {}
@@ -88,7 +118,7 @@ class DeleteSpreadsheetBlankColumnsRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/delete/blank-columns"
+        resource_path =  "v4.0/cells/content/convert/text"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

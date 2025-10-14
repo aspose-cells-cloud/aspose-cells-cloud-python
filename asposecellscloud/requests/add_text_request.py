@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="DeleteSpreadsheetBlankRowsRequest.cs">
+<copyright company="Aspose" file="AddTextRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,10 +33,16 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class DeleteSpreadsheetBlankRowsRequest(object):
+class AddTextRequest(object):
 
-    def __init__(self , spreadsheet ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
+    def __init__(self , spreadsheet ,text ,position ,select_text ,skip_empty_cells =None ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
+        self.text = text 
+        self.position = position 
+        self.select_text = select_text 
+        self.skip_empty_cells = skip_empty_cells 
+        self.worksheet = worksheet 
+        self.range = range 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.region = region 
@@ -45,13 +51,40 @@ class DeleteSpreadsheetBlankRowsRequest(object):
 
         # verify the required parameter 'spreadsheet' is set
         if self.spreadsheet is None:
-            raise ValueError("Missing the required parameter `spreadsheet` when calling `delete_spreadsheet_blank_rows`")
+            raise ValueError("Missing the required parameter `spreadsheet` when calling `add_text`")
+
+
+        # verify the required parameter 'text' is set
+        if self.text is None:
+            raise ValueError("Missing the required parameter `text` when calling `add_text`")
+
+
+        # verify the required parameter 'position' is set
+        if self.position is None:
+            raise ValueError("Missing the required parameter `position` when calling `add_text`")
+
+
+        # verify the required parameter 'select_text' is set
+        if self.select_text is None:
+            raise ValueError("Missing the required parameter `select_text` when calling `add_text`")
 
 
         collection_formats = {}
 
         path_params = {}
         query_params = []
+        if self.text is not None:
+            query_params.append(('text',self.text ))
+        if self.position is not None:
+            query_params.append(('position',self.position ))
+        if self.select_text is not None:
+            query_params.append(('selectText',self.select_text ))
+        if self.skip_empty_cells is not None:
+            query_params.append(('skipEmptyCells',self.skip_empty_cells ))
+        if self.worksheet is not None:
+            query_params.append(('worksheet',self.worksheet ))
+        if self.range is not None:
+            query_params.append(('range',self.range ))
         if self.out_path is not None:
             query_params.append(('outPath',self.out_path ))
         if self.out_storage_name is not None:
@@ -63,7 +96,7 @@ class DeleteSpreadsheetBlankRowsRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.9';
+        header_params['x-aspose-client-version'] = '25.10';
 
         form_params = []
         local_var_files = {}
@@ -88,7 +121,7 @@ class DeleteSpreadsheetBlankRowsRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/delete/blank-rows"
+        resource_path =  "v4.0/cells/content/add/text"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

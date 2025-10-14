@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="DeleteSpreadsheetBlankWorksheetsRequest.cs">
+<copyright company="Aspose" file="RemoveSpreadsheetBlankColumnsRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,7 +33,7 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class DeleteSpreadsheetBlankWorksheetsRequest(object):
+class RemoveSpreadsheetBlankColumnsRequest(object):
 
     def __init__(self , spreadsheet ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
@@ -45,7 +45,7 @@ class DeleteSpreadsheetBlankWorksheetsRequest(object):
 
         # verify the required parameter 'spreadsheet' is set
         if self.spreadsheet is None:
-            raise ValueError("Missing the required parameter `spreadsheet` when calling `delete_spreadsheet_blank_worksheets`")
+            raise ValueError("Missing the required parameter `spreadsheet` when calling `remove_spreadsheet_blank_columns`")
 
 
         collection_formats = {}
@@ -63,7 +63,7 @@ class DeleteSpreadsheetBlankWorksheetsRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.9';
+        header_params['x-aspose-client-version'] = '25.10';
 
         form_params = []
         local_var_files = {}
@@ -88,7 +88,7 @@ class DeleteSpreadsheetBlankWorksheetsRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/delete/blank-worksheets"
+        resource_path =  "v4.0/cells/remove/blank-columns"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

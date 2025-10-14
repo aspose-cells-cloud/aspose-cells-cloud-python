@@ -1,5 +1,13 @@
 # Release History Version
 
+## Feature & Enhancements in Version v25.9
+
+|**Summary**|**Category**|
+| :- | :- |
+| Support trim spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support trim worksheet range content in Cells Cloud 4.0. | Improvement  |
+| Fix few issues about spelling error. | Bug  |
+
 ## Feature & Enhancements in Version v25.8
 
 |**Summary**|**Category**|

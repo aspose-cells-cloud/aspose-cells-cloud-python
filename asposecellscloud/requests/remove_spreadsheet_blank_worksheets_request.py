@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="TrimWorksheetRangeRequest.cs">
+<copyright company="Aspose" file="RemoveSpreadsheetBlankWorksheetsRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,19 +33,10 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class TrimWorksheetRangeRequest(object):
+class RemoveSpreadsheetBlankWorksheetsRequest(object):
 
-    def __init__(self , spreadsheet ,worksheet ,range =None ,trim_content =None ,trim_leading =None ,trim_trailing =None ,trim_space_between_word_to1 =None ,trim_non_breaking_spaces =None ,remove_extra_line_breaks =None ,remove_all_line_breaks =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
+    def __init__(self , spreadsheet ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
-        self.worksheet = worksheet 
-        self.range = range 
-        self.trim_content = trim_content 
-        self.trim_leading = trim_leading 
-        self.trim_trailing = trim_trailing 
-        self.trim_space_between_word_to1 = trim_space_between_word_to1 
-        self.trim_non_breaking_spaces = trim_non_breaking_spaces 
-        self.remove_extra_line_breaks = remove_extra_line_breaks 
-        self.remove_all_line_breaks = remove_all_line_breaks 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.region = region 
@@ -54,36 +45,13 @@ class TrimWorksheetRangeRequest(object):
 
         # verify the required parameter 'spreadsheet' is set
         if self.spreadsheet is None:
-            raise ValueError("Missing the required parameter `spreadsheet` when calling `trim_worksheet_range`")
-
-
-        # verify the required parameter 'worksheet' is set
-        if self.worksheet is None:
-            raise ValueError("Missing the required parameter `worksheet` when calling `trim_worksheet_range`")
+            raise ValueError("Missing the required parameter `spreadsheet` when calling `remove_spreadsheet_blank_worksheets`")
 
 
         collection_formats = {}
 
         path_params = {}
         query_params = []
-        if self.worksheet is not None:
-            query_params.append(('worksheet',self.worksheet ))
-        if self.range is not None:
-            query_params.append(('range',self.range ))
-        if self.trim_content is not None:
-            query_params.append(('trimContent',self.trim_content ))
-        if self.trim_leading is not None:
-            query_params.append(('trimLeading',self.trim_leading ))
-        if self.trim_trailing is not None:
-            query_params.append(('trimTrailing',self.trim_trailing ))
-        if self.trim_space_between_word_to1 is not None:
-            query_params.append(('trimSpaceBetweenWordTo1',self.trim_space_between_word_to1 ))
-        if self.trim_non_breaking_spaces is not None:
-            query_params.append(('trimNonBreakingSpaces',self.trim_non_breaking_spaces ))
-        if self.remove_extra_line_breaks is not None:
-            query_params.append(('removeExtraLineBreaks',self.remove_extra_line_breaks ))
-        if self.remove_all_line_breaks is not None:
-            query_params.append(('removeAllLineBreaks',self.remove_all_line_breaks ))
         if self.out_path is not None:
             query_params.append(('outPath',self.out_path ))
         if self.out_storage_name is not None:
@@ -95,7 +63,7 @@ class TrimWorksheetRangeRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.9';
+        header_params['x-aspose-client-version'] = '25.10';
 
         form_params = []
         local_var_files = {}
@@ -120,7 +88,7 @@ class TrimWorksheetRangeRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/content/trim/worksheet"
+        resource_path =  "v4.0/cells/remove/blank-worksheets"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

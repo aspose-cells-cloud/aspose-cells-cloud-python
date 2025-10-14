@@ -1,10 +1,6 @@
-![](https://img.shields.io/badge/aspose.cells%20Cloud%20SDK-25.9-green?style=for-the-badge&logo=python) [![Product Page](https://img.shields.io/badge/Product-0288d1?style=for-the-badge&logo=Google-Chrome&logoColor=white)](https://products.aspose.cloud/cells/python/) [![Documentation](https://img.shields.io/badge/Documentation-388e3c?style=for-the-badge&logo=Hugo&logoColor=white)](https://docs.aspose.cloud/cells/) [![API Ref](https://img.shields.io/badge/Reference-f39c12?style=for-the-badge&logo=html5&logoColor=white)](https://reference.aspose.cloud/cells/) [![Examples](https://img.shields.io/badge/Examples-1565c0?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-perl/tree/master/Examples) [![Blog](https://img.shields.io/badge/Blog-d32f2f?style=for-the-badge&logo=WordPress&logoColor=white)](https://blog.aspose.cloud/categories/aspose.cells-cloud-product-family/) [![Support](https://img.shields.io/badge/Support-7b1fa2?style=for-the-badge&logo=Discourse&logoColor=white)](https://forum.aspose.cloud/c/cells/7) [![PyPI](https://img.shields.io/pypi/v/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud?style=for-the-badge)](https://www.python.org/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python?style=for-the-badge)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/25.9?style=for-the-badge)
+![](https://img.shields.io/badge/aspose.cells%20Cloud%20SDK-25.10-green?style=for-the-badge&logo=python) [![Product Page](https://img.shields.io/badge/Product-0288d1?style=for-the-badge&logo=Google-Chrome&logoColor=white)](https://products.aspose.cloud/cells/python/) [![Documentation](https://img.shields.io/badge/Documentation-388e3c?style=for-the-badge&logo=Hugo&logoColor=white)](https://docs.aspose.cloud/cells/) [![API Ref](https://img.shields.io/badge/Reference-f39c12?style=for-the-badge&logo=html5&logoColor=white)](https://reference.aspose.cloud/cells/) [![Examples](https://img.shields.io/badge/Examples-1565c0?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-perl/tree/master/Examples) [![Blog](https://img.shields.io/badge/Blog-d32f2f?style=for-the-badge&logo=WordPress&logoColor=white)](https://blog.aspose.cloud/categories/aspose.cells-cloud-product-family/) [![Support](https://img.shields.io/badge/Support-7b1fa2?style=for-the-badge&logo=Discourse&logoColor=white)](https://forum.aspose.cloud/c/cells/7) [![PyPI](https://img.shields.io/pypi/v/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud?style=for-the-badge)](https://www.python.org/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python?style=for-the-badge)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/25.10?style=for-the-badge)
 
-Aspose.Cells Cloud SDK for Python empowers developers to programmatically manage Excel files with precision. This comprehensive Python library supports advanced Excel operations like cell data formatting, dynamic formulas, pivot tables, conditional styling, charts, hyperlinks, comments, and data validation. It also enables seamless Excel file conversion (XLSX, CSV, PDF, ODS), document splitting/merging, and file repair. Designed for cloud integration, this API-first solution accelerates spreadsheet automation while ensuring data integrity across platforms like AWS, Azure, and Google Cloud.
-# Python SDK package for Aspose.Cells Cloud
-
-Enhance your Python applications with [Aspose.Cells Cloud](https://products.aspose.cloud/cells/python) – a powerful, cloud-based SDK that enables seamless integration with [Excel, ODS, CSV, Json and other spreadsheet document formats](https://docs.aspose.cloud/cells/supported-file-formats/). Leveraging its robust REST API, developers can effortlessly create, read, edit, convert, and manipulate spreadsheet content programmatically—without requiring any local office software.
-
+[Aspose.Cells Cloud SDK for Python](https://products.aspose.cloud/cells/python) is a cloud-first REST API that lets Python applications create, read, edit, convert, and repair [Excel, ODS, CSV, JSON, and other spreadsheet files](https://docs.aspose.cloud/cells/supported-file-formats/) without installing Microsoft Office. It supports advanced features, including cell formatting, formulas, pivot tables, conditional styling, charts, hyperlinks, comments, data validation, document splitting, and merging, and runs on AWS, Azure, and Google Cloud, while ensuring data integrity.
 
 ## Quick Start Guide
 
@@ -82,26 +78,31 @@ cellsApi.convert_spreadsheet(ConvertSpreadsheetRequest( 'EmployeeSalesSummary.xl
 
 ## Manipulate Excel and other spreadsheet files in the Cloud
 
-- File Manipulation: Users can upload, download, delete, and manage Excel files stored in the cloud.
-- Formatting: Supports formatting of cells, fonts, colors, and alignment modes in Excel files to cater to users' specific requirements.
-- Data Processing: Powerful functions for data processing including reading, writing, modifying cell data, performing formula calculations, and formatting data.
-- Formula Calculation: Built-in formula engine handles complex formula calculations in Excel and returns accurate results.
-- Chart Manipulation: Users can create, edit, and delete charts from Excel files for data analysis and visualization needs.
-- Table Processing: Offers robust processing capabilities for various form operations such as creation, editing, formatting, and conversion, meeting diverse form processing needs.
-- Data Verification: Includes data verification function to set cell data type, range, uniqueness, ensuring data accuracy and integrity.
-- Batch Processing: Supports batch processing of multiple Excel documents, such as batch format conversion, data extraction, and style application..
-- Import/Export: Facilitates importing data from various sources into spreadsheets and exporting spreadsheet data to other formats.
-- Security Management: Offers a range of security features like data encryption, access control, and permission management to safeguard the security and integrity of spreadsheet data.
+- **File Manipulation**: Users can upload, download, delete, and manage Excel files stored in the cloud.
+- **File Formatting**: Supports formatting of cells, fonts, colors, and alignment modes in Excel files to cater to users' specific requirements.
+- **Data Processing**: Powerful functions for data processing including reading, writing, modifying cell data, performing formula calculations, and formatting data.
+- **Formula Calculation**: Built-in formula engine handles complex formula calculations in Excel and returns accurate results.
+- **Chart Manipulation**: Users can create, edit, and delete charts from Excel files for data analysis and visualization needs.
+- **Table Processing**: Offers robust processing capabilities for various form operations such as creation, editing, formatting, and conversion, meeting diverse form processing needs.
+- **Data Verification**: Includes data verification function to set cell data type, range, uniqueness, ensuring data accuracy and integrity.
+- **Batch Processing**: Supports batch processing of multiple Excel documents, such as batch format conversion, data extraction, and style application..
+- **Import/Export Data**: Facilitates importing data from various sources into spreadsheets and exporting spreadsheet data to other formats.
+- **Security Management**: Offers a range of security features like data encryption, access control, and permission management to safeguard the security and integrity of spreadsheet data.
 
-## Feature & Enhancements in Version v25.9
+## Feature & Enhancements in Version v25.10
 
 Full list of issues covering all changes in this release:
 
-|**Summary**|**Category**|
-| :- | :- |
-| Support trim spreadsheet content in Cells Cloud 4.0. | Improvement  |
-| Support trim worksheet range content in Cells Cloud 4.0. | Improvement  |
-| Fix few issues about spelling error. | Bug  |
+|**ID**|**Summary**|**Category**|
+| :- | :- | :- |
+| 57421 | Optimize data Transform API: replace delete with remove. | Improvement  |
+| 57574 | Support to update the spreadsheet content words case in Cells Cloud 4.0. | Improvement  |
+| 57575 | Support to remove characters from spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| 57576 | Support to add text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| 57577 | Support to convert text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| 57578 | Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| 57579 | Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| 57580 | Support to split text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
 
 ## Available SDKs
 
