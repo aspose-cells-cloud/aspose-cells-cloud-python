@@ -93,16 +93,16 @@ cellsApi.convert_spreadsheet(ConvertSpreadsheetRequest( 'EmployeeSalesSummary.xl
 
 Full list of issues covering all changes in this release:
 
-|**ID**|**Summary**|**Category**|
-| :- | :- | :- |
-| 57421 | Optimize data Transform API: replace delete with remove. | Improvement  |
-| 57574 | Support to update the spreadsheet content words case in Cells Cloud 4.0. | Improvement  |
-| 57575 | Support to remove characters from spreadsheet content in Cells Cloud 4.0. | Improvement  |
-| 57576 | Support to add text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
-| 57577 | Support to convert text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
-| 57578 | Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
-| 57579 | Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
-| 57580 | Support to split text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+|**Summary**|**Category**|
+| :- | :- |
+| Optimize data Transform API: replace delete with remove. | Improvement  |
+| Support to update the spreadsheet content words case in Cells Cloud 4.0. | Improvement  |
+| Support to remove characters from spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to add text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to convert text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to split text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
 
 ## Available SDKs
 
