@@ -26,7 +26,7 @@ instance.update_word_case(UpdateWordCaseRequest("out5.xlsx", "SentenceCase", wor
 # Prefix every string in the selected range with "Aspose.Cells".
 instance.add_text( AddTextRequest("BookText.xlsx", "Aspose.Cells", "AtTheBeginning", "") , local_outpath = "out8.xlsx"  )
 # Insert an exclamation mark immediately after the specified substring within every string in the selected range.
-instance.add_text( AddTextRequest("BookText.xlsx", "!", "AfterText", "hellow  word") , local_outpath = "out9.xlsx"  )
+instance.add_text( AddTextRequest("BookText.xlsx", "!", "AfterText", "hello world") , local_outpath = "out9.xlsx"  )
 # Append an exclamation mark to every string in the selected range.
 instance.add_text( AddTextRequest("BookText.xlsx", "!", "AtTheEnd", "", worksheet = "Text", range ="A1:J7" ,skip_empty_cells=False ) , local_outpath = "out10.xlsx"  )
 
