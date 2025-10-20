@@ -34,9 +34,12 @@ jobs:
         cd examples
         python .\Example_QuickStart.py
         python .\Example_TextProcessing.py
+        python .\Example_TextProcessing_40.py
         python .\Example_CheckExcel.py
         python .\Example_CloudStorageManagement.py
         python .\Example_ConvertChartToImage.py
         python .\Example_ConvertRangeToImage.py
         python .\Example_ConvertExcel.py
         python .\Example_Management.py
+        python .\Example_DataCleaning.py
+        python .\Example_ExcelSplit.py
