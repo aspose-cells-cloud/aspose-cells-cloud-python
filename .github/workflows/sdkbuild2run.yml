@@ -43,3 +43,4 @@ jobs:
         python .\Example_Management.py
         python .\Example_DataCleaning.py
         python .\Example_ExcelSplit.py
+        python .\Example_Workbook.py
