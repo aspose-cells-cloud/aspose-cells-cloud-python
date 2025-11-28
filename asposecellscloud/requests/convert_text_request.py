@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class ConvertTextRequest(object):
 
-    def __init__(self , spreadsheet ,convert_text_type ,source_characters ,target_characters ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
+    def __init__(self , spreadsheet ,convert_text_type ,source_characters =None ,target_characters =None ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
         self.convert_text_type = convert_text_type 
         self.source_characters = source_characters 
@@ -45,7 +45,12 @@ class ConvertTextRequest(object):
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.region = region 
-        self.password = password 
+        self.password = password         
+        self.expand_query_parameters = {}
+
+    def set_expand_query_parameter(self, query_name, query_value):
+        self.expand_query_parameters.append(query_name,query_value)
+        pass
     def create_http_request(self, api_client):
 
         # verify the required parameter 'spreadsheet' is set
@@ -56,16 +61,6 @@ class ConvertTextRequest(object):
         # verify the required parameter 'convert_text_type' is set
         if self.convert_text_type is None:
             raise ValueError("Missing the required parameter `convert_text_type` when calling `convert_text`")
-
-
-        # verify the required parameter 'source_characters' is set
-        if self.source_characters is None:
-            raise ValueError("Missing the required parameter `source_characters` when calling `convert_text`")
-
-
-        # verify the required parameter 'target_characters' is set
-        if self.target_characters is None:
-            raise ValueError("Missing the required parameter `target_characters` when calling `convert_text`")
 
 
         collection_formats = {}
@@ -90,10 +85,13 @@ class ConvertTextRequest(object):
             query_params.append(('region',self.region ))
         if self.password is not None:
             query_params.append(('password',self.password ))
+        if self.expand_query_parameters is not None:
+            for key, value in self.expand_query_parameters.items():
+                query_params.append(key,value)
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.10';
+        header_params['x-aspose-client-version'] = '25.11';
 
         form_params = []
         local_var_files = {}

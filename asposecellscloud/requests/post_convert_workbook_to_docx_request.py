@@ -40,7 +40,12 @@ class PostConvertWorkbookToDocxRequest(object):
         self.password = password 
         self.check_excel_restriction = check_excel_restriction 
         self.region = region 
-        self.fonts_location = fonts_location 
+        self.fonts_location = fonts_location         
+        self.expand_query_parameters = {}
+
+    def set_expand_query_parameter(self, query_name, query_value):
+        self.expand_query_parameters.append(query_name,query_value)
+        pass
     def create_http_request(self, api_client):
 
         # verify the required parameter 'file' is set
@@ -60,10 +65,13 @@ class PostConvertWorkbookToDocxRequest(object):
             query_params.append(('region',self.region ))
         if self.fonts_location is not None:
             query_params.append(('FontsLocation',self.fonts_location ))
+        if self.expand_query_parameters is not None:
+            for key, value in self.expand_query_parameters.items():
+                query_params.append(key,value)
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.10';
+        header_params['x-aspose-client-version'] = '25.11';
 
         form_params = []
         local_var_files = {}

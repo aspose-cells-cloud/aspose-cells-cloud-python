@@ -35,20 +35,25 @@ from six.moves.urllib.parse import quote
 
 class ExtractTextRequest(object):
 
-    def __init__(self , spreadsheet ,extract_text_type ,before_text ,after_text ,before_position ,after_position ,out_position_range ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
+    def __init__(self , spreadsheet ,extract_text_type ,out_position_range ,before_text =None ,after_text =None ,before_position =None ,after_position =None ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
         self.extract_text_type = extract_text_type 
+        self.out_position_range = out_position_range 
         self.before_text = before_text 
         self.after_text = after_text 
         self.before_position = before_position 
         self.after_position = after_position 
-        self.out_position_range = out_position_range 
         self.worksheet = worksheet 
         self.range = range 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.region = region 
-        self.password = password 
+        self.password = password         
+        self.expand_query_parameters = {}
+
+    def set_expand_query_parameter(self, query_name, query_value):
+        self.expand_query_parameters.append(query_name,query_value)
+        pass
     def create_http_request(self, api_client):
 
         # verify the required parameter 'spreadsheet' is set
@@ -59,26 +64,6 @@ class ExtractTextRequest(object):
         # verify the required parameter 'extract_text_type' is set
         if self.extract_text_type is None:
             raise ValueError("Missing the required parameter `extract_text_type` when calling `extract_text`")
-
-
-        # verify the required parameter 'before_text' is set
-        if self.before_text is None:
-            raise ValueError("Missing the required parameter `before_text` when calling `extract_text`")
-
-
-        # verify the required parameter 'after_text' is set
-        if self.after_text is None:
-            raise ValueError("Missing the required parameter `after_text` when calling `extract_text`")
-
-
-        # verify the required parameter 'before_position' is set
-        if self.before_position is None:
-            raise ValueError("Missing the required parameter `before_position` when calling `extract_text`")
-
-
-        # verify the required parameter 'after_position' is set
-        if self.after_position is None:
-            raise ValueError("Missing the required parameter `after_position` when calling `extract_text`")
 
 
         # verify the required parameter 'out_position_range' is set
@@ -92,6 +77,8 @@ class ExtractTextRequest(object):
         query_params = []
         if self.extract_text_type is not None:
             query_params.append(('extractTextType',self.extract_text_type ))
+        if self.out_position_range is not None:
+            query_params.append(('outPositionRange',self.out_position_range ))
         if self.before_text is not None:
             query_params.append(('beforeText',self.before_text ))
         if self.after_text is not None:
@@ -100,8 +87,6 @@ class ExtractTextRequest(object):
             query_params.append(('beforePosition',self.before_position ))
         if self.after_position is not None:
             query_params.append(('afterPosition',self.after_position ))
-        if self.out_position_range is not None:
-            query_params.append(('outPositionRange',self.out_position_range ))
         if self.worksheet is not None:
             query_params.append(('worksheet',self.worksheet ))
         if self.range is not None:
@@ -114,10 +99,13 @@ class ExtractTextRequest(object):
             query_params.append(('region',self.region ))
         if self.password is not None:
             query_params.append(('password',self.password ))
+        if self.expand_query_parameters is not None:
+            for key, value in self.expand_query_parameters.items():
+                query_params.append(key,value)
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.10';
+        header_params['x-aspose-client-version'] = '25.11';
 
         form_params = []
         local_var_files = {}

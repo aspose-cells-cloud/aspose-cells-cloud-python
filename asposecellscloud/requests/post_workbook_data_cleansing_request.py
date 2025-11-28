@@ -42,7 +42,12 @@ class PostWorkbookDataCleansingRequest(object):
         self.storage_name = storage_name 
         self.password = password 
         self.region = region 
-        self.check_excel_restriction = check_excel_restriction 
+        self.check_excel_restriction = check_excel_restriction         
+        self.expand_query_parameters = {}
+
+    def set_expand_query_parameter(self, query_name, query_value):
+        self.expand_query_parameters.append(query_name,query_value)
+        pass
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
@@ -71,10 +76,13 @@ class PostWorkbookDataCleansingRequest(object):
             query_params.append(('region',self.region ))
         if self.check_excel_restriction is not None:
             query_params.append(('checkExcelRestriction',self.check_excel_restriction ))
+        if self.expand_query_parameters is not None:
+            for key, value in self.expand_query_parameters.items():
+                query_params.append(key,value)
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.10';
+        header_params['x-aspose-client-version'] = '25.11';
 
         form_params = []
         local_var_files = {}

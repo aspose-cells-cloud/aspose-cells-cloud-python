@@ -35,21 +35,23 @@ from six.moves.urllib.parse import quote
 
 class RemoveCharactersRequest(object):
 
-    def __init__(self , spreadsheet ,the_first_n_characters ,the_last_n_characters ,all_characters_before_text ,all_characters_after_text ,remove_text_method ,character_sets ,remove_custom_value ,worksheet ,range ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
+    def __init__(self , spreadsheet ,remove_text_method =None ,character_sets =None ,remove_custom_value =None ,case_sensitive =None ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
-        self.the_first_n_characters = the_first_n_characters 
-        self.the_last_n_characters = the_last_n_characters 
-        self.all_characters_before_text = all_characters_before_text 
-        self.all_characters_after_text = all_characters_after_text 
         self.remove_text_method = remove_text_method 
         self.character_sets = character_sets 
         self.remove_custom_value = remove_custom_value 
+        self.case_sensitive = case_sensitive 
         self.worksheet = worksheet 
         self.range = range 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.region = region 
-        self.password = password 
+        self.password = password         
+        self.expand_query_parameters = {}
+
+    def set_expand_query_parameter(self, query_name, query_value):
+        self.expand_query_parameters.append(query_name,query_value)
+        pass
     def create_http_request(self, api_client):
 
         # verify the required parameter 'spreadsheet' is set
@@ -57,69 +59,18 @@ class RemoveCharactersRequest(object):
             raise ValueError("Missing the required parameter `spreadsheet` when calling `remove_characters`")
 
 
-        # verify the required parameter 'the_first_n_characters' is set
-        if self.the_first_n_characters is None:
-            raise ValueError("Missing the required parameter `the_first_n_characters` when calling `remove_characters`")
-
-
-        # verify the required parameter 'the_last_n_characters' is set
-        if self.the_last_n_characters is None:
-            raise ValueError("Missing the required parameter `the_last_n_characters` when calling `remove_characters`")
-
-
-        # verify the required parameter 'all_characters_before_text' is set
-        if self.all_characters_before_text is None:
-            raise ValueError("Missing the required parameter `all_characters_before_text` when calling `remove_characters`")
-
-
-        # verify the required parameter 'all_characters_after_text' is set
-        if self.all_characters_after_text is None:
-            raise ValueError("Missing the required parameter `all_characters_after_text` when calling `remove_characters`")
-
-
-        # verify the required parameter 'remove_text_method' is set
-        if self.remove_text_method is None:
-            raise ValueError("Missing the required parameter `remove_text_method` when calling `remove_characters`")
-
-
-        # verify the required parameter 'character_sets' is set
-        if self.character_sets is None:
-            raise ValueError("Missing the required parameter `character_sets` when calling `remove_characters`")
-
-
-        # verify the required parameter 'remove_custom_value' is set
-        if self.remove_custom_value is None:
-            raise ValueError("Missing the required parameter `remove_custom_value` when calling `remove_characters`")
-
-
-        # verify the required parameter 'worksheet' is set
-        if self.worksheet is None:
-            raise ValueError("Missing the required parameter `worksheet` when calling `remove_characters`")
-
-
-        # verify the required parameter 'range' is set
-        if self.range is None:
-            raise ValueError("Missing the required parameter `range` when calling `remove_characters`")
-
-
         collection_formats = {}
 
         path_params = {}
         query_params = []
-        if self.the_first_n_characters is not None:
-            query_params.append(('theFirstNCharacters',self.the_first_n_characters ))
-        if self.the_last_n_characters is not None:
-            query_params.append(('theLastNCharacters',self.the_last_n_characters ))
-        if self.all_characters_before_text is not None:
-            query_params.append(('allCharactersBeforeText',self.all_characters_before_text ))
-        if self.all_characters_after_text is not None:
-            query_params.append(('allCharactersAfterText',self.all_characters_after_text ))
         if self.remove_text_method is not None:
             query_params.append(('removeTextMethod',self.remove_text_method ))
         if self.character_sets is not None:
             query_params.append(('characterSets',self.character_sets ))
         if self.remove_custom_value is not None:
             query_params.append(('removeCustomValue',self.remove_custom_value ))
+        if self.case_sensitive is not None:
+            query_params.append(('caseSensitive',self.case_sensitive ))
         if self.worksheet is not None:
             query_params.append(('worksheet',self.worksheet ))
         if self.range is not None:
@@ -132,10 +83,13 @@ class RemoveCharactersRequest(object):
             query_params.append(('region',self.region ))
         if self.password is not None:
             query_params.append(('password',self.password ))
+        if self.expand_query_parameters is not None:
+            for key, value in self.expand_query_parameters.items():
+                query_params.append(key,value)
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.10';
+        header_params['x-aspose-client-version'] = '25.11';
 
         form_params = []
         local_var_files = {}

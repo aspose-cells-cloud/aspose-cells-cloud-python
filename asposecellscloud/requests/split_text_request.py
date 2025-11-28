@@ -35,19 +35,24 @@ from six.moves.urllib.parse import quote
 
 class SplitTextRequest(object):
 
-    def __init__(self , spreadsheet ,split_delimiters_type ,custom_delimiter ,keep_delimiters_in_resulting_cells ,keep_delimiters_position ,how_to_split ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
+    def __init__(self , spreadsheet ,delimiters ,keep_delimiters_in_resulting_cells =None ,keep_delimiters_position =None ,how_to_split =None ,out_position_range =None ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
-        self.split_delimiters_type = split_delimiters_type 
-        self.custom_delimiter = custom_delimiter 
+        self.delimiters = delimiters 
         self.keep_delimiters_in_resulting_cells = keep_delimiters_in_resulting_cells 
         self.keep_delimiters_position = keep_delimiters_position 
         self.how_to_split = how_to_split 
+        self.out_position_range = out_position_range 
         self.worksheet = worksheet 
         self.range = range 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.region = region 
-        self.password = password 
+        self.password = password         
+        self.expand_query_parameters = {}
+
+    def set_expand_query_parameter(self, query_name, query_value):
+        self.expand_query_parameters.append(query_name,query_value)
+        pass
     def create_http_request(self, api_client):
 
         # verify the required parameter 'spreadsheet' is set
@@ -55,45 +60,25 @@ class SplitTextRequest(object):
             raise ValueError("Missing the required parameter `spreadsheet` when calling `split_text`")
 
 
-        # verify the required parameter 'split_delimiters_type' is set
-        if self.split_delimiters_type is None:
-            raise ValueError("Missing the required parameter `split_delimiters_type` when calling `split_text`")
-
-
-        # verify the required parameter 'custom_delimiter' is set
-        if self.custom_delimiter is None:
-            raise ValueError("Missing the required parameter `custom_delimiter` when calling `split_text`")
-
-
-        # verify the required parameter 'keep_delimiters_in_resulting_cells' is set
-        if self.keep_delimiters_in_resulting_cells is None:
-            raise ValueError("Missing the required parameter `keep_delimiters_in_resulting_cells` when calling `split_text`")
-
-
-        # verify the required parameter 'keep_delimiters_position' is set
-        if self.keep_delimiters_position is None:
-            raise ValueError("Missing the required parameter `keep_delimiters_position` when calling `split_text`")
-
-
-        # verify the required parameter 'how_to_split' is set
-        if self.how_to_split is None:
-            raise ValueError("Missing the required parameter `how_to_split` when calling `split_text`")
+        # verify the required parameter 'delimiters' is set
+        if self.delimiters is None:
+            raise ValueError("Missing the required parameter `delimiters` when calling `split_text`")
 
 
         collection_formats = {}
 
         path_params = {}
         query_params = []
-        if self.split_delimiters_type is not None:
-            query_params.append(('splitDelimitersType',self.split_delimiters_type ))
-        if self.custom_delimiter is not None:
-            query_params.append(('customDelimiter',self.custom_delimiter ))
+        if self.delimiters is not None:
+            query_params.append(('delimiters',self.delimiters ))
         if self.keep_delimiters_in_resulting_cells is not None:
             query_params.append(('keepDelimitersInResultingCells',self.keep_delimiters_in_resulting_cells ))
         if self.keep_delimiters_position is not None:
             query_params.append(('keepDelimitersPosition',self.keep_delimiters_position ))
         if self.how_to_split is not None:
             query_params.append(('HowToSplit',self.how_to_split ))
+        if self.out_position_range is not None:
+            query_params.append(('outPositionRange',self.out_position_range ))
         if self.worksheet is not None:
             query_params.append(('worksheet',self.worksheet ))
         if self.range is not None:
@@ -106,10 +91,13 @@ class SplitTextRequest(object):
             query_params.append(('region',self.region ))
         if self.password is not None:
             query_params.append(('password',self.password ))
+        if self.expand_query_parameters is not None:
+            for key, value in self.expand_query_parameters.items():
+                query_params.append(key,value)
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.10';
+        header_params['x-aspose-client-version'] = '25.11';
 
         form_params = []
         local_var_files = {}

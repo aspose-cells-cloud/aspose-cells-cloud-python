@@ -1,5 +1,18 @@
 # Release History Version
 
+## Feature & Enhancements in Version 25.10
+
+|**Summary**|**Category**|
+| :- | :- |
+| Optimize data Transform API: replace delete with remove. | Improvement  |
+| Support to update the spreadsheet content words case in Cells Cloud 4.0. | Improvement  |
+| Support to remove characters from spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to add text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to convert text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to split text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+
 ## Feature & Enhancements in Version v25.9
 
 |**Summary**|**Category**|

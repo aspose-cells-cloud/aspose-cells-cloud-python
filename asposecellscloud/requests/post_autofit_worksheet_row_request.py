@@ -43,7 +43,12 @@ class PostAutofitWorksheetRowRequest(object):
         self.last_column = last_column 
         self.folder = folder 
         self.storage_name = storage_name 
-        self.row_count = row_count 
+        self.row_count = row_count         
+        self.expand_query_parameters = {}
+
+    def set_expand_query_parameter(self, query_name, query_value):
+        self.expand_query_parameters.append(query_name,query_value)
+        pass
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
@@ -81,10 +86,13 @@ class PostAutofitWorksheetRowRequest(object):
             query_params.append(('storageName',self.storage_name ))
         if self.row_count is not None:
             query_params.append(('rowCount',self.row_count ))
+        if self.expand_query_parameters is not None:
+            for key, value in self.expand_query_parameters.items():
+                query_params.append(key,value)
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.10';
+        header_params['x-aspose-client-version'] = '25.11';
 
         form_params = []
         local_var_files = {}

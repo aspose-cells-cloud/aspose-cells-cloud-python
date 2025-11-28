@@ -38,7 +38,12 @@ class DeleteFolderRequest(object):
     def __init__(self , path ,storage_name =None ,recursive =None ):
         self.path = path 
         self.storage_name = storage_name 
-        self.recursive = recursive 
+        self.recursive = recursive         
+        self.expand_query_parameters = {}
+
+    def set_expand_query_parameter(self, query_name, query_value):
+        self.expand_query_parameters.append(query_name,query_value)
+        pass
     def create_http_request(self, api_client):
 
         # verify the required parameter 'path' is set
@@ -56,10 +61,13 @@ class DeleteFolderRequest(object):
             query_params.append(('storageName',self.storage_name ))
         if self.recursive is not None:
             query_params.append(('recursive',self.recursive ))
+        if self.expand_query_parameters is not None:
+            for key, value in self.expand_query_parameters.items():
+                query_params.append(key,value)
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.10';
+        header_params['x-aspose-client-version'] = '25.11';
 
         form_params = []
         local_var_files = {}

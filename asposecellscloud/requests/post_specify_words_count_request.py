@@ -36,7 +36,12 @@ from six.moves.urllib.parse import quote
 class PostSpecifyWordsCountRequest(object):
 
     def __init__(self , specify_words_count_options ):
-        self.specify_words_count_options = specify_words_count_options 
+        self.specify_words_count_options = specify_words_count_options         
+        self.expand_query_parameters = {}
+
+    def set_expand_query_parameter(self, query_name, query_value):
+        self.expand_query_parameters.append(query_name,query_value)
+        pass
     def create_http_request(self, api_client):
 
         # verify the required parameter 'specify_words_count_options' is set
@@ -48,9 +53,13 @@ class PostSpecifyWordsCountRequest(object):
 
         path_params = {}
         query_params = []
+        if self.expand_query_parameters is not None:
+            for key, value in self.expand_query_parameters.items():
+                query_params.append(key,value)
+
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.10';
+        header_params['x-aspose-client-version'] = '25.11';
 
         form_params = []
         local_var_files = {}

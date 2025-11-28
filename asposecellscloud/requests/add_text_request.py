@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class AddTextRequest(object):
 
-    def __init__(self , spreadsheet ,text ,position ,select_text ,skip_empty_cells =None ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
+    def __init__(self , spreadsheet ,text ,position ,select_text =None ,skip_empty_cells =None ,worksheet =None ,range =None ,out_path =None ,out_storage_name =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
         self.text = text 
         self.position = position 
@@ -46,7 +46,12 @@ class AddTextRequest(object):
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.region = region 
-        self.password = password 
+        self.password = password         
+        self.expand_query_parameters = {}
+
+    def set_expand_query_parameter(self, query_name, query_value):
+        self.expand_query_parameters.append(query_name,query_value)
+        pass
     def create_http_request(self, api_client):
 
         # verify the required parameter 'spreadsheet' is set
@@ -62,11 +67,6 @@ class AddTextRequest(object):
         # verify the required parameter 'position' is set
         if self.position is None:
             raise ValueError("Missing the required parameter `position` when calling `add_text`")
-
-
-        # verify the required parameter 'select_text' is set
-        if self.select_text is None:
-            raise ValueError("Missing the required parameter `select_text` when calling `add_text`")
 
 
         collection_formats = {}
@@ -93,10 +93,13 @@ class AddTextRequest(object):
             query_params.append(('region',self.region ))
         if self.password is not None:
             query_params.append(('password',self.password ))
+        if self.expand_query_parameters is not None:
+            for key, value in self.expand_query_parameters.items():
+                query_params.append(key,value)
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.10';
+        header_params['x-aspose-client-version'] = '25.11';
 
         form_params = []
         local_var_files = {}

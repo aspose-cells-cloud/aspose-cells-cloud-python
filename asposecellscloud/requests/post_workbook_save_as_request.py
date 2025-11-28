@@ -49,7 +49,12 @@ class PostWorkbookSaveAsRequest(object):
         self.page_wide_fit_on_per_sheet = page_wide_fit_on_per_sheet 
         self.page_tall_fit_on_per_sheet = page_tall_fit_on_per_sheet 
         self.one_page_per_sheet = one_page_per_sheet 
-        self.fonts_location = fonts_location 
+        self.fonts_location = fonts_location         
+        self.expand_query_parameters = {}
+
+    def set_expand_query_parameter(self, query_name, query_value):
+        self.expand_query_parameters.append(query_name,query_value)
+        pass
     def create_http_request(self, api_client):
 
         # verify the required parameter 'name' is set
@@ -92,10 +97,13 @@ class PostWorkbookSaveAsRequest(object):
             query_params.append(('onePagePerSheet',self.one_page_per_sheet ))
         if self.fonts_location is not None:
             query_params.append(('FontsLocation',self.fonts_location ))
+        if self.expand_query_parameters is not None:
+            for key, value in self.expand_query_parameters.items():
+                query_params.append(key,value)
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.10';
+        header_params['x-aspose-client-version'] = '25.11';
 
         form_params = []
         local_var_files = {}
