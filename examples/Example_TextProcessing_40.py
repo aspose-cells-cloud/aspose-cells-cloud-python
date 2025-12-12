@@ -43,3 +43,10 @@ instance.convert_text(ConvertTextRequest("out13.xlsx", "ConvertWriteSpace", "", 
 # ExtractTextType: ExtractFirstCharacter, ExtractFirstWord, ExtractLastCharacter, ExtractLastWord, ExtractTextBefore, ExtractTextAfter, ExtractBetweenSpecifiedCharacters, ExtractAllNumbers, GetTextFromAnyPosition
 # 
 # instance.extract_text(ExtractTextRequest("BookText.xlsx", "ExtractTextBefore", ";","","","","I2:I11" ,worksheet= "HumanResources",range="G2:G11" ) , local_outpath = "out15.xlsx")
+
+instance.remove_characters(RemoveCharactersRequest("BookText.xlsx", "RemoveSubString", "Aspose", "Aspose" , case_sensitive = False), local_outpath = "out16.xlsx")
+instance.remove_characters_by_position(RemoveCharactersByPositionRequest("BookText.xlsx",  worksheet="Text",all_characters_before_text="you", all_characters_after_text="Aspose" ), local_outpath = "out17.xlsx")
+instance.remove_characters_by_position(RemoveCharactersByPositionRequest("BookText.xlsx",  worksheet="Text",all_characters_before_text="you", all_characters_after_text="Aspose",case_sensitive= True ), local_outpath = "out18.xlsx")
+instance.remove_duplicate_substrings( RemoveDuplicateSubstringsRequest("BookText.xlsx", ";",worksheet="Text"), local_outpath = "out19.xlsx")
+instance.remove_duplicate_substrings( RemoveDuplicateSubstringsRequest("BookText.xlsx", ";",worksheet="Text", case_sensitive=True) , local_outpath = "out20.xlsx")
+instance.split_text( SplitTextRequest("BookText.xlsx", ";",worksheet="HumanResources",how_to_split="SplitToColumns", out_position_range="H2:H11", range="G2:G11", keep_delimiters_in_resulting_cells=True,keep_delimiters_position="AtTheBeginning"), local_outpath = "out21.xlsx")
