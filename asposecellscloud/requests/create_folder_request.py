@@ -64,7 +64,7 @@ class CreateFolderRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.11';
+        header_params['x-aspose-client-version'] = '25.12';
 
         form_params = []
         local_var_files = {}

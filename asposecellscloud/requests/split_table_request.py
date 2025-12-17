@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="MergeSpreadsheetsRequest.cs">
+<copyright company="Aspose" file="SplitTableRequest.cs">
   Copyright (c) 2025 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,12 +33,16 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class MergeSpreadsheetsRequest(object):
+class SplitTableRequest(object):
 
-    def __init__(self , spreadsheet ,out_format =None ,merge_in_one_sheet =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,region =None ,password =None ):
+    def __init__(self , spreadsheet ,worksheet ,table_name ,split_column_name ,save_split_column ,to_new_workbook ,to_multiple_files ,out_path =None ,out_storage_name =None ,fonts_location =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
-        self.out_format = out_format 
-        self.merge_in_one_sheet = merge_in_one_sheet 
+        self.worksheet = worksheet 
+        self.table_name = table_name 
+        self.split_column_name = split_column_name 
+        self.save_split_column = save_split_column 
+        self.to_new_workbook = to_new_workbook 
+        self.to_multiple_files = to_multiple_files 
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.fonts_location = fonts_location 
@@ -53,17 +57,55 @@ class MergeSpreadsheetsRequest(object):
 
         # verify the required parameter 'spreadsheet' is set
         if self.spreadsheet is None:
-            raise ValueError("Missing the required parameter `spreadsheet` when calling `merge_spreadsheets`")
+            raise ValueError("Missing the required parameter `spreadsheet` when calling `split_table`")
+
+
+        # verify the required parameter 'worksheet' is set
+        if self.worksheet is None:
+            raise ValueError("Missing the required parameter `worksheet` when calling `split_table`")
+
+
+        # verify the required parameter 'table_name' is set
+        if self.table_name is None:
+            raise ValueError("Missing the required parameter `table_name` when calling `split_table`")
+
+
+        # verify the required parameter 'split_column_name' is set
+        if self.split_column_name is None:
+            raise ValueError("Missing the required parameter `split_column_name` when calling `split_table`")
+
+
+        # verify the required parameter 'save_split_column' is set
+        if self.save_split_column is None:
+            raise ValueError("Missing the required parameter `save_split_column` when calling `split_table`")
+
+
+        # verify the required parameter 'to_new_workbook' is set
+        if self.to_new_workbook is None:
+            raise ValueError("Missing the required parameter `to_new_workbook` when calling `split_table`")
+
+
+        # verify the required parameter 'to_multiple_files' is set
+        if self.to_multiple_files is None:
+            raise ValueError("Missing the required parameter `to_multiple_files` when calling `split_table`")
 
 
         collection_formats = {}
 
         path_params = {}
         query_params = []
-        if self.out_format is not None:
-            query_params.append(('outFormat',self.out_format ))
-        if self.merge_in_one_sheet is not None:
-            query_params.append(('mergeInOneSheet',self.merge_in_one_sheet ))
+        if self.worksheet is not None:
+            query_params.append(('worksheet',self.worksheet ))
+        if self.table_name is not None:
+            query_params.append(('tableName',self.table_name ))
+        if self.split_column_name is not None:
+            query_params.append(('splitColumnName',self.split_column_name ))
+        if self.save_split_column is not None:
+            query_params.append(('saveSplitColumn',self.save_split_column ))
+        if self.to_new_workbook is not None:
+            query_params.append(('toNewWorkbook',self.to_new_workbook ))
+        if self.to_multiple_files is not None:
+            query_params.append(('toMultipleFiles',self.to_multiple_files ))
         if self.out_path is not None:
             query_params.append(('outPath',self.out_path ))
         if self.out_storage_name is not None:
@@ -105,7 +147,7 @@ class MergeSpreadsheetsRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/merge/spreadsheet"
+        resource_path =  "v4.0/cells/split/table"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

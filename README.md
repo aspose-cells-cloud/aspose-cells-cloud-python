@@ -1,14 +1,14 @@
-![](https://img.shields.io/badge/aspose.cells%20Cloud%20SDK-25.11-green?style=for-the-badge&logo=python) [![Product Page](https://img.shields.io/badge/Product-0288d1?style=for-the-badge&logo=Google-Chrome&logoColor=white)](https://products.aspose.cloud/cells/python/) [![Documentation](https://img.shields.io/badge/Documentation-388e3c?style=for-the-badge&logo=Hugo&logoColor=white)](https://docs.aspose.cloud/cells/) [![API Ref](https://img.shields.io/badge/Reference-f39c12?style=for-the-badge&logo=html5&logoColor=white)](https://reference.aspose.cloud/cells/) [![Examples](https://img.shields.io/badge/Examples-1565c0?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-perl/tree/master/Examples) [![Blog](https://img.shields.io/badge/Blog-d32f2f?style=for-the-badge&logo=WordPress&logoColor=white)](https://blog.aspose.cloud/categories/aspose.cells-cloud-product-family/) [![Support](https://img.shields.io/badge/Support-7b1fa2?style=for-the-badge&logo=Discourse&logoColor=white)](https://forum.aspose.cloud/c/cells/7) [![PyPI](https://img.shields.io/pypi/v/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud?style=for-the-badge)](https://www.python.org/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python?style=for-the-badge)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/25.11?style=for-the-badge)
+![](https://img.shields.io/badge/aspose.cells%20Cloud%20SDK-25.12-green?style=for-the-badge&logo=python) [![Product Page](https://img.shields.io/badge/Product-0288d1?style=for-the-badge&logo=Google-Chrome&logoColor=white)](https://products.aspose.cloud/cells/python/) [![Documentation](https://img.shields.io/badge/Documentation-388e3c?style=for-the-badge&logo=Hugo&logoColor=white)](https://docs.aspose.cloud/cells/) [![API Ref](https://img.shields.io/badge/Reference-f39c12?style=for-the-badge&logo=html5&logoColor=white)](https://reference.aspose.cloud/cells/) [![Examples](https://img.shields.io/badge/Examples-1565c0?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-perl/tree/master/Examples) [![Blog](https://img.shields.io/badge/Blog-d32f2f?style=for-the-badge&logo=WordPress&logoColor=white)](https://blog.aspose.cloud/categories/aspose.cells-cloud-product-family/) [![Support](https://img.shields.io/badge/Support-7b1fa2?style=for-the-badge&logo=Discourse&logoColor=white)](https://forum.aspose.cloud/c/cells/7) [![PyPI](https://img.shields.io/pypi/v/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asposecellscloud?style=for-the-badge)](https://www.python.org/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/asposecellscloud?style=for-the-badge)](https://pypi.org/project/asposecellscloud/)  [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-python?style=for-the-badge)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-python/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-python/25.12?style=for-the-badge)
 
 [Aspose.Cells Cloud SDK for Python](https://products.aspose.cloud/cells/python) is a cloud-native REST API that enables Python developers to **create**, **read**, **edit**, **convert**, and **repair** spreadsheet files—including **Excel** (**XLS**, **XLSX**, **XLSB**, **XLSM**), **OpenDocument Spreadsheet (ODS**), **CSV**, **TSV**, **JSON**, **HTML**, **PDF**, and **more—without requiring Microsoft Excel or Office to be installed**.
 
 Built on the **Aspose.Cells Cloud Web API**, this MIT-licensed SDK supports advanced spreadsheet operations such as:
+
 - Cell formatting, formulas, and data validation
 - Pivot tables, charts, hyperlinks, and comments
 - Conditional formatting and smart markers
 - Worksheet merging, splitting, and protection
 - Batch processing and background removal
-
 
 It seamlessly integrates with **AWS**, **Microsoft Azure**, and **Google Cloud**, ensuring **high availability**, **scalability**, and **data integrity**. Ideal for serverless apps, microservices, and cloud automation workflows.
 
@@ -99,23 +99,13 @@ cellsApi.convert_spreadsheet(ConvertSpreadsheetRequest( 'EmployeeSalesSummary.xl
 - **Import/Export Data**: Facilitates importing data from various sources into spreadsheets and exporting spreadsheet data to other formats.
 - **Security Management**: Offers a range of security features like data encryption, access control, and permission management to safeguard the security and integrity of spreadsheet data.
 
-## Feature & Enhancements in Version v25.11
+## Feature & Enhancements in Version v25.12
 
 Full list of issues covering all changes in this release:
 
 |**Summary**|**Category**|
 | :- | :- |
-| Fix the APIs query parameters default for TextProcessingController. | Bug  |
-| Fix the extract text API of the text processing controller | Bug  |
-| Developing API functions for AI translation of Excel files | New Feature  |
-| Fix SearchBrokenLinksInRemoteRange API route error. | Bug  |
-| Supports positional character removal—delete from any index, any length. | New Feature  |
-| Supports duplicate sub string removal—keep the first occurrence, drop the rest. | New Feature  |
-| Refactored Split Text API: optimize delimiter parsing and on-demand position output. | Improvement  |
-| Develop API functions for AI-powered translation of TXT articles. | New Feature  |
-| Enhance format conversion by accepting full save-option settings via query parameters. | Improvement  |
-| Enhanced format conversion with auto-fit support in Aspose.Cells Cloud Services 4.0. | Improvement  |
-
+| Support split table of spreadsheet. | New Feature  |
 
 ## Available SDKs
 
