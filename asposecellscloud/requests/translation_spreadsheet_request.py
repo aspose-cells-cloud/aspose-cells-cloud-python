@@ -1,7 +1,7 @@
 # coding: utf-8
 """
 <copyright company="Aspose" file="TranslationSpreadsheetRequest.cs">
-  Copyright (c) 2025 Aspose.Cells Cloud
+  Copyright (c) 2026 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -73,7 +73,7 @@ class TranslationSpreadsheetRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.12';
+        header_params['x-aspose-client-version'] = '26.1';
 
         form_params = []
         local_var_files = {}
@@ -98,7 +98,7 @@ class TranslationSpreadsheetRequest(object):
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v4.0/cells/translate/spreadsheet"
+        resource_path =  "v4.0/cells/ai/translate/spreadsheet"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)

@@ -2,7 +2,7 @@
 
 """
 <copyright company="Aspose" file="configurationpy.cs">
-  Copyright (c) 2025 Aspose.Cells Cloud
+  Copyright (c) 2026 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -259,5 +259,5 @@ class Configuration(object):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: v3.0\n"\
-               "SDK Package Version: 25.12".\
+               "SDK Package Version: 26.1".\
                format(env=sys.platform, pyversion=sys.version)

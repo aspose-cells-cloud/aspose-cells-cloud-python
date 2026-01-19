@@ -1,72 +1,78 @@
 # Release History Version
 
+## Feature & Enhancements in Version 25.12
+
+| **Summary**                         | **Category** |
+| :---------------------------------- | :----------- |
+| Support split table of spreadsheet. | New Feature  |
+
 ## Feature & Enhancements in Version 25.11
 
-|**Summary**|**Category**|
-| :- | :- |
-| Fix the APIs query parameters default for TextProcessingController. | Bug  |
-| Fix the extract text API of the text processing controller | Bug  |
-| Developing API functions for AI translation of Excel files | New Feature  |
-| Fix SearchBrokenLinksInRemoteRange API route error. | Bug  |
-| Supports positional character removal—delete from any index, any length. | New Feature  |
-| Supports duplicate sub string removal—keep the first occurrence, drop the rest. | New Feature  |
-| Refactored Split Text API: optimize delimiter parsing and on-demand position output. | Improvement  |
-| Develop API functions for AI-powered translation of TXT articles. | New Feature  |
+| **Summary**                                                                            | **Category** |
+| :------------------------------------------------------------------------------------- | :----------- |
+| Fix the APIs query parameters default for TextProcessingController.                    | Bug          |
+| Fix the extract text API of the text processing controller                             | Bug          |
+| Developing API functions for AI translation of Excel files                             | New Feature  |
+| Fix SearchBrokenLinksInRemoteRange API route error.                                    | Bug          |
+| Supports positional character removal—delete from any index, any length.               | New Feature  |
+| Supports duplicate sub string removal—keep the first occurrence, drop the rest.        | New Feature  |
+| Refactored Split Text API: optimize delimiter parsing and on-demand position output.   | Improvement  |
+| Develop API functions for AI-powered translation of TXT articles.                      | New Feature  |
 | Enhance format conversion by accepting full save-option settings via query parameters. | Improvement  |
-| Enhanced format conversion with auto-fit support in Aspose.Cells Cloud Services 4.0. | Improvement  |
+| Enhanced format conversion with auto-fit support in Aspose.Cells Cloud Services 4.0.   | Improvement  |
 
 ## Feature & Enhancements in Version 25.10
 
-|**Summary**|**Category**|
-| :- | :- |
-| Optimize data Transform API: replace delete with remove. | Improvement  |
-| Support to update the spreadsheet content words case in Cells Cloud 4.0. | Improvement  |
+| **Summary**                                                               | **Category** |
+| :------------------------------------------------------------------------ | :----------- |
+| Optimize data Transform API: replace delete with remove.                  | Improvement  |
+| Support to update the spreadsheet content words case in Cells Cloud 4.0.  | Improvement  |
 | Support to remove characters from spreadsheet content in Cells Cloud 4.0. | Improvement  |
-| Support to add text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
-| Support to convert text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
-| Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
-| Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
-| Support to split text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to add text for spreadsheet content in Cells Cloud 4.0.           | Improvement  |
+| Support to convert text for spreadsheet content in Cells Cloud 4.0.       | Improvement  |
+| Support to extract text for spreadsheet content in Cells Cloud 4.0.       | Improvement  |
+| Support to extract text for spreadsheet content in Cells Cloud 4.0.       | Improvement  |
+| Support to split text for spreadsheet content in Cells Cloud 4.0.         | Improvement  |
 
 ## Feature & Enhancements in Version v25.9
 
-|**Summary**|**Category**|
-| :- | :- |
-| Support trim spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| **Summary**                                              | **Category** |
+| :------------------------------------------------------- | :----------- |
+| Support trim spreadsheet content in Cells Cloud 4.0.     | Improvement  |
 | Support trim worksheet range content in Cells Cloud 4.0. | Improvement  |
-| Fix few issues about spelling error. | Bug  |
+| Fix few issues about spelling error.                     | Bug          |
 
 ## Feature & Enhancements in Version v25.8
 
-|**Summary**|**Category**|
-| :- | :- |
-| Support of Authorization in Aspose.Cells Cloud Docker Container | New Feature  |
-| New Feature: Aggregate cells by color in CalculateController. | New Feature  |
-| New Feature: Math Calculations in CalculateController. | New Feature  |
-| New Feature: Adding/Deleting/Renaming worksheet in ManagementController. | New Feature  |
-| New Feature: Adding/Deleting worksheet in ManagementController. | New Feature  |
-| New Feature: create spreadsheet in ManagementController. | New Feature  |
-| New feature: Redesign the data import into the Spreadsheet. | New Feature  |
-| New feature: Swap data ranges in the spreadsheet. | New Feature  |
-| Fix the code generator of the cells cloud SDK specification for the enum query parameter. | Bug  |
+| **Summary**                                                                               | **Category** |
+| :---------------------------------------------------------------------------------------- | :----------- |
+| Support of Authorization in Aspose.Cells Cloud Docker Container                           | New Feature  |
+| New Feature: Aggregate cells by color in CalculateController.                             | New Feature  |
+| New Feature: Math Calculations in CalculateController.                                    | New Feature  |
+| New Feature: Adding/Deleting/Renaming worksheet in ManagementController.                  | New Feature  |
+| New Feature: Adding/Deleting worksheet in ManagementController.                           | New Feature  |
+| New Feature: create spreadsheet in ManagementController.                                  | New Feature  |
+| New feature: Redesign the data import into the Spreadsheet.                               | New Feature  |
+| New feature: Swap data ranges in the spreadsheet.                                         | New Feature  |
+| Fix the code generator of the cells cloud SDK specification for the enum query parameter. | Bug          |
 
 ## Feature & Enhancements in Version 25.7
 
-|**Summary**| **Category** |
-| :- |:-------------|
-| Optimize operate scope options for extProcessingController.| Improvement  |
-| Add protect/unprotect spreadsheet APIs.| New Feature  |
-| Add convert worksheet/table/range to other formats.      | New Feature  |
+| **Summary**                                                 | **Category** |
+| :---------------------------------------------------------- | :----------- |
+| Optimize operate scope options for extProcessingController. | Improvement  |
+| Add protect/unprotect spreadsheet APIs.                     | New Feature  |
+| Add convert worksheet/table/range to other formats.         | New Feature  |
 
 ## Feature & Enhancements in Version 25.6
 
-|**Summary**| **Category** |
-| :- |:-------------|
-| Optimize the upload file API  | Improvement |
-| Support delete blank rows, columns, and worksheets. | New Feature |
-| Optimize search context for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area. | New Feature |
-| Optimize search broken links for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area. | New Feature |
-| Optimize replace context for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area. | New Feature |
+| **Summary**                                                                                                                                          | **Category** |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- |
+| Optimize the upload file API                                                                                                                         | Improvement  |
+| Support delete blank rows, columns, and worksheets.                                                                                                  | New Feature  |
+| Optimize search context for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area.      | New Feature  |
+| Optimize search broken links for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area. | New Feature  |
+| Optimize replace context for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area.     | New Feature  |
 
 ## Feature & Enhancements in Version 25.5
 

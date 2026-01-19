@@ -1,7 +1,7 @@
 # coding: utf-8
 """
 <copyright company="Aspose" file="PostDataDeduplicationRequest.cs">
-  Copyright (c) 2025 Aspose.Cells Cloud
+  Copyright (c) 2026 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,7 +59,7 @@ class PostDataDeduplicationRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '25.12';
+        header_params['x-aspose-client-version'] = '26.1';
 
         form_params = []
         local_var_files = {}

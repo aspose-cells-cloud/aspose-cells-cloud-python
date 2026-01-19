@@ -1,16 +1,14 @@
-# AsposeCellsCloud::Object::BrokenLinksReponse 
+# AsposeCellsCloud::Object::PasswordRequest 
 
 ## Load the model package
 ```perl
-use AsposeCellsCloud::Object::BrokenLinksReponse;
+use AsposeCellsCloud::Object::PasswordRequest;
 ```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BrokenLinks** | **ARRAY[BrokenLink]** |  |
-**Code** | **int** |  |
-**Status** | **string** |  |  
+**Password** | **string** | Password. |  
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

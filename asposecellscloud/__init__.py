@@ -1,7 +1,7 @@
 # coding: utf-8
 """
 <copyright company="Aspose" file="__init__py.cs">
-  Copyright (c) 2025 Aspose.Cells Cloud
+  Copyright (c) 2026 Aspose.Cells Cloud
 </copyright>
 <summary>
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -477,6 +477,7 @@ from asposecellscloud.models.discover_pivot_table import DiscoverPivotTable
 from asposecellscloud.models.excel_data_statistics import ExcelDataStatistics
 from asposecellscloud.models.worksheet_data_statistics import WorksheetDataStatistics
 
+from asposecellscloud.requests.decompose_user_task_request import DecomposeUserTaskRequest
 from asposecellscloud.requests.translation_spreadsheet_request import TranslationSpreadsheetRequest
 from asposecellscloud.requests.translate_text_file_request import TranslateTextFileRequest
 from asposecellscloud.requests.aggregate_cells_by_color_request import AggregateCellsByColorRequest
@@ -495,6 +496,8 @@ from asposecellscloud.requests.convert_spreadsheet_to_json_request import Conver
 from asposecellscloud.requests.convert_spreadsheet_to_csv_request import ConvertSpreadsheetToCsvRequest
 from asposecellscloud.requests.convert_worksheet_to_image_request import ConvertWorksheetToImageRequest
 from asposecellscloud.requests.convert_worksheet_to_pdf_request import ConvertWorksheetToPdfRequest
+from asposecellscloud.requests.convert_worksheet_to_html_request import ConvertWorksheetToHtmlRequest
+from asposecellscloud.requests.convert_worksheet_to_html_table_request import ConvertWorksheetToHtmlTableRequest
 from asposecellscloud.requests.convert_table_to_image_request import ConvertTableToImageRequest
 from asposecellscloud.requests.convert_table_to_pdf_request import ConvertTableToPdfRequest
 from asposecellscloud.requests.convert_table_to_csv_request import ConvertTableToCsvRequest
@@ -515,6 +518,9 @@ from asposecellscloud.requests.split_spreadsheet_request import SplitSpreadsheet
 from asposecellscloud.requests.split_table_request import SplitTableRequest
 from asposecellscloud.requests.split_remote_spreadsheet_request import SplitRemoteSpreadsheetRequest
 from asposecellscloud.requests.import_data_into_spreadsheet_request import ImportDataIntoSpreadsheetRequest
+from asposecellscloud.requests.import_json_data_into_spreadsheet_request import ImportJSONDataIntoSpreadsheetRequest
+from asposecellscloud.requests.import_xml_data_into_spreadsheet_request import ImportXMLDataIntoSpreadsheetRequest
+from asposecellscloud.requests.import_csv_data_into_spreadsheet_request import ImportCSVDataIntoSpreadsheetRequest
 from asposecellscloud.requests.get_public_key_request import GetPublicKeyRequest
 from asposecellscloud.requests.create_spreadsheet_request import CreateSpreadsheetRequest
 from asposecellscloud.requests.add_worksheet_to_spreadsheet_request import AddWorksheetToSpreadsheetRequest
@@ -554,6 +560,7 @@ from asposecellscloud.requests.remove_spreadsheet_blank_columns_request import R
 from asposecellscloud.requests.remove_spreadsheet_blank_worksheets_request import RemoveSpreadsheetBlankWorksheetsRequest
 from asposecellscloud.requests.remove_duplicates_request import RemoveDuplicatesRequest
 from asposecellscloud.requests.swap_range_request import SwapRangeRequest
+from asposecellscloud.requests.flip_data_request import FlipDataRequest
 from asposecellscloud.requests.download_file_request import DownloadFileRequest
 from asposecellscloud.requests.upload_file_request import UploadFileRequest
 from asposecellscloud.requests.copy_file_request import CopyFileRequest
