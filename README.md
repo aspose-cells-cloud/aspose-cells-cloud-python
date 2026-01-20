@@ -67,9 +67,9 @@ cellsApi.convert_spreadsheet(ConvertSpreadsheetRequest( 'EmployeeSalesSummary.xl
     end
     
     subgraph "Aspose Cells Cloud"
-    ` C1[File Processing API]
+      C1[File Processing API]
       C2[Format Conversion API]
-      C3[Data Analysis API]`
+      C3[Data Analysis API]
     end
     
     A1 --> B4
