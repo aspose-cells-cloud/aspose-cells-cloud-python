@@ -12,18 +12,28 @@ Built on the **Aspose.Cells Cloud Web API**, this MIT-licensed SDK supports adva
 
 It seamlessly integrates with **AWS**, **Microsoft Azure**, and **Google Cloud**, ensuring **high availability**, **scalability**, and **data integrity**. Ideal for serverless apps, microservices, and cloud automation workflows.
 
+## How to install Python library about Aspose.Cells Cloud SDK
+
+- Install the Aspose.Cells Cloud Python package from the [pypi](https://pypi.org/).
+
+  - On Linux Platform
+
+```bash
+   pip install asposecellscloud
+```
+  - On Windows Platform
+
+```powershell
+   python -m pip install asposecellscloud
+```
+
 ## Quick Start Guide
 
 To begin with Aspose.Cells Cloud, here's what you need to do:
 
 1. Sign up for an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/apps) to obtain your client id and secret.
-2. Install the Aspose.Cells Cloud Python package from the [pypi](https://pypi.org/).
 
-```bash
-   pip install asposecellscloud
-```
-
-3. Use the conversion code provided below as a reference to add or modify your application.
+2. Use the conversion code provided below as a reference to add or modify your application.
 
 ## Convert Excel to PDF Using Python
 
@@ -38,6 +48,41 @@ CellsCloudClientSecret = "...." # get from https://dashboard.aspose.cloud/#/appl
 cellsApi = CellsApi(CellsCloudClientId,CellsCloudClientSecret)
 cellsApi.convert_spreadsheet(ConvertSpreadsheetRequest( 'EmployeeSalesSummary.xlsx', 'pdf') , local_outpath = "EmployeeSalesSummary.pdf")
 ```
+## Aspose.Cells Cloud SDK Architecture
+
+```mermaid
+  graph TB
+    subgraph "Client Application Layer"
+      A1[Web Application]
+      A2[Mobile Application]
+      A3[Desktop Application]
+      A4[Backend Service]
+    end
+    
+    subgraph "SDK Language Interface"
+      B1[Java SDK]
+      B2[.NET SDK]
+      B3[Python SDK]
+      B4[Node.js SDK]
+    end
+    
+    subgraph "Aspose Cells Cloud"
+    ` C1[File Processing API]
+      C2[Format Conversion API]
+      C3[Data Analysis API]`
+    end
+    
+    A1 --> B4
+    A2 --> B1
+    A3 --> B2
+    A4 --> B1 & B3
+    
+    B1 --> C1
+    B2 --> C2
+    B3 --> C3
+    B4 --> C1 & C2 & C3
+```
+
 
 ## Support file format
 
