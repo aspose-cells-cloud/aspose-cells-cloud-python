@@ -48,40 +48,6 @@ CellsCloudClientSecret = "...." # get from https://dashboard.aspose.cloud/#/appl
 cellsApi = CellsApi(CellsCloudClientId,CellsCloudClientSecret)
 cellsApi.convert_spreadsheet(ConvertSpreadsheetRequest( 'EmployeeSalesSummary.xlsx', 'pdf') , local_outpath = "EmployeeSalesSummary.pdf")
 ```
-## Aspose.Cells Cloud SDK Architecture
-
-```mermaid
-  graph TB
-    subgraph "Client Application Layer"
-      A1[Web Application]
-      A2[Mobile Application]
-      A3[Desktop Application]
-      A4[Backend Service]
-    end
-    
-    subgraph "SDK Language Interface"
-      B1[Java SDK]
-      B2[.NET SDK]
-      B3[Python SDK]
-      B4[Node.js SDK]
-    end
-    
-    subgraph "Aspose Cells Cloud"
-      C1[File Processing API]
-      C2[Format Conversion API]
-      C3[Data Analysis API]
-    end
-    
-    A1 --> B4
-    A2 --> B1
-    A3 --> B2
-    A4 --> B1 & B3
-    
-    B1 --> C1
-    B2 --> C2
-    B3 --> C3
-    B4 --> C1 & C2 & C3
-```
 
 
 ## Support file format
