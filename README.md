@@ -49,6 +49,33 @@ cellsApi = CellsApi(CellsCloudClientId,CellsCloudClientSecret)
 cellsApi.convert_spreadsheet(ConvertSpreadsheetRequest( 'EmployeeSalesSummary.xlsx', 'pdf') , local_outpath = "EmployeeSalesSummary.pdf")
 ```
 
+## Architecture
+
+graph TB
+
+    subgraph "Client Layer"
+        C1[Web Application]
+        C2[Mobile Application]
+        C3[Desktop Application]
+    end
+    
+    subgraph "API Gateway Layer"
+        G1[Gateway Service]
+        G2[Authentication Services]
+        G3[Load Balancing]
+    end
+    
+    subgraph "Cloud Microservices layer"
+        S1[User Application]
+        S2[Product Services]
+    end
+ 
+    C1 & C2 & C3 --> G1
+    G1 --> S1 & S3
+    
+    style C1 fill:#e1f5fe
+    style G1 fill:#f3e5f5
+    style S1 fill:#e8f5e8
 
 ## Support file format
 
