@@ -51,7 +51,9 @@ cellsApi.convert_spreadsheet(ConvertSpreadsheetRequest( 'EmployeeSalesSummary.xl
 
 ## Architecture
 
+```mermaid
 graph TB
+
     subgraph "Client Layer"
         C1[Web Application]
         C2[Mobile Application]
@@ -75,6 +77,7 @@ graph TB
     style C1 fill:#e1f5fe
     style G1 fill:#f3e5f5
     style S1 fill:#e8f5e8
+```
 
 ## Support file format
 
