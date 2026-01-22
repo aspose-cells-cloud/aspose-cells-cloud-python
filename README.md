@@ -151,6 +151,12 @@ Full list of issues covering all changes in this release:
 | Support to convert worksheet to html table.                                              | New Feature  |
 | Support to flip data in worksheet.                                                       | New Feature  |
 
+### Fix version v26.1.1
+
+| **Summary**                                                                              | **Category** |
+| :--------------------------------------------------------------------------------------- |:-------------|
+| Fix object reference not set to an instance of an object.                                | Bug          |
+
 ## Available SDKs
 
 The Aspose.Cells Cloud SDK is available in multiple popular programming languages, enabling developers to integrate spreadsheet processing capabilities across various development environments.
