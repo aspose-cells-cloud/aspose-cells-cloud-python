@@ -52,7 +52,6 @@ cellsApi.convert_spreadsheet(ConvertSpreadsheetRequest( 'EmployeeSalesSummary.xl
 ## Architecture
 
 graph TB
-
     subgraph "Client Layer"
         C1[Web Application]
         C2[Mobile Application]
