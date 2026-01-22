@@ -72,7 +72,7 @@ graph TB
     end
  
     C1 & C2 & C3 --> G1
-    G1 --> S1 & S3
+    G1 --> S1 & S2
     
     style C1 fill:#e1f5fe
     style G1 fill:#f3e5f5
