@@ -49,3 +49,4 @@ jobs:
         python .\Transform\Example_DataCleaning.py
         python .\DataProcessing\Example_ExcelSplit.py
         python .\DataProcessing\Example_DataProcessing.py
+        python .\AI\Example_DecomposeUserTask.py
