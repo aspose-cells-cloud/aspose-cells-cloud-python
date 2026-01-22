@@ -55,8 +55,8 @@ class DecomposeUserTaskRequest(object):
 
         path_params = {}
         query_params = []
-        if self.task_description is not None:
-            query_params.append(('TaskDescription',self.task_description ))
+        # if self.task_description is not None:
+        #     query_params.append(('TaskDescription',self.task_description ))
         if self.region is not None:
             query_params.append(('region',self.region ))
         if self.password is not None:
@@ -67,11 +67,11 @@ class DecomposeUserTaskRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '26.1';
+        header_params['x-aspose-client-version'] = '26.1.1';
 
         form_params = []
         local_var_files = {}
-        body_params = None
+        body_params = self.task_description
         # HTTP header `Accept`
         header_params['Accept'] = api_client.\
             select_header_accept(['application/json'])

@@ -106,7 +106,7 @@ class ExportRangeAsFormatRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '26.1';
+        header_params['x-aspose-client-version'] = '26.1.1';
 
         form_params = []
         local_var_files = {}
