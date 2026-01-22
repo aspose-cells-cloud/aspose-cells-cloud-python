@@ -3,6 +3,7 @@ import shutil
 
 from asposecellscloud.apis.cells_api import CellsApi
 from asposecellscloud.requests import (ConvertChartToImageRequest,
+                                       ConvertChartToPdfRequest,
                                        GetWorksheetChartRequest,
                                        UploadFileRequest)
 
@@ -22,6 +23,10 @@ tmp_path = instance.get_worksheet_chart(request)
 # 1.3 Save chart image to local file.
 shutil.move( tmp_path ,"EmployeeSalesSummary_Sales_v30.png")
 # Local file processing
-# 2. Cells Cloud V3.0: Convert chart to image 
+# 2. Cells Cloud V4.0: Convert chart to image
 convertChartToImageRequest = ConvertChartToImageRequest( EmployeeSalesSummaryXlsx, 'Sales', 0,format= 'png')
 instance.convert_chart_to_image(convertChartToImageRequest ,local_outpath = "EmployeeSalesSummary_Sales_v40.png" )
+
+# 3. Cells Cloud V4.0: Convert chart to pdf
+convertChartToPdfRequest = ConvertChartToPdfRequest( EmployeeSalesSummaryXlsx, 'Sales', 0)
+instance.convert_chart_to_pdf( convertChartToPdfRequest ,local_outpath = "EmployeeSalesSummary_Sales_v40.pdf" )

@@ -30,3 +30,12 @@ shutil.move( tmp_path ,"EmployeeSalesSummary_Sales_v30.svg")
 # 2.1. convert range to image
 range_convert_request = ConvertRangeToImageRequest( EmployeeSalesSummaryXlsx, 'Sales', "B28:L36", "svg")
 instance.convert_range_to_image(range_convert_request ,local_outpath = "EmployeeSalesSummary_Sales_v40.svg" )
+
+# Convert a local Excel file's specified worksheet cells area directly to another format file. Set query parameters : print_headings, one_page_per_sheet
+# response = instance.get_worksheet_with_format( GetWorksheetWithFormatRequest(EmployeeSalesSummaryXlsx, "Sales", folder ="PythonSDK",  format="png", area="B5:L36" ,print_headings=True , one_page_per_sheet= False )  )
+# shutil.move( response ,"EmployeeSalesSummary_Sales_area.png")
+instance.convert_range_to_pdf( ConvertRangeToPdfRequest( EmployeeSalesSummaryXlsx , "Sales" , "B5:L36" ) , local_outpath="EmployeeSalesSummary_Sales_area.pdf")
+instance.convert_range_to_image( ConvertRangeToImageRequest( EmployeeSalesSummaryXlsx , "Sales" , "B5:L36" ,"png" ) , local_outpath="EmployeeSalesSummary_Sales_area.png")
+instance.convert_range_to_image( ConvertRangeToImageRequest( EmployeeSalesSummaryXlsx , "Sales" , "B5:L36" ,"svg" ) , local_outpath="EmployeeSalesSummary_Sales_area.svg")
+instance.convert_range_to_json( ConvertRangeToJsonRequest( EmployeeSalesSummaryXlsx , "Sales" , "B5:L36" ) , local_outpath="EmployeeSalesSummary_Sales_area.json")
+instance.convert_range_to_html( ConvertRangeToHtmlRequest( EmployeeSalesSummaryXlsx , "Sales" , "B5:L36" ) , local_outpath="EmployeeSalesSummary_Sales_area.html")

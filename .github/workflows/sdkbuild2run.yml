@@ -33,14 +33,19 @@ jobs:
       run: |
         cd examples
         python .\Example_QuickStart.py
-        python .\Example_TextProcessing.py
-        python .\Example_TextProcessing_40.py
-        python .\Example_CheckExcel.py
-        python .\Example_CloudStorageManagement.py
-        python .\Example_ConvertChartToImage.py
-        python .\Example_ConvertRangeToImage.py
-        python .\Example_ConvertExcel.py
-        python .\Example_Management.py
-        python .\Example_DataCleaning.py
-        python .\Example_ExcelSplit.py
-        python .\Example_Workbook.py
+        python .\Conversion\Example_ConvertChart.py
+        python .\Conversion\Example_ConvertTable.py
+        python .\Conversion\Example_ConvertRange.py
+        python .\Conversion\Example_ConvertWorksheet.py
+        python .\Conversion\Example_ConvertExcel.py
+        python .\Conversion\Example_ConvertWorksheetToHtmlTable.py
+        python .\Conversion\Example_SaveAs.py
+        python .\TextProcessing\Example_TextProcessing.py
+        python .\TextProcessing\Example_TextProcessing_40.py
+        python .\Management\Example_CheckExcel.py
+        python .\Management\Example_CloudStorageManagement.py
+        python .\Management\Example_Management.py
+        python .\Management\Example_WorkbookSetting.py
+        python .\Transform\Example_DataCleaning.py
+        python .\DataProcessing\Example_ExcelSplit.py
+        python .\DataProcessing\Example_DataProcessing.py
