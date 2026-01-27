@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **DataSourceType** | **string** | Represents data source type. |
 **DataPath** | **string** | Represents data path. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

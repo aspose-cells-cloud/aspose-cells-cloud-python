@@ -64,3 +64,6 @@ PageTitle: Delete horizontal page breaks in the worksheet.PageDescription: Aspos
 ## OpenAPI Specification
 
 The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/PageBreaksController/DeleteHorizontalPageBreaks) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.
+
+[[Back to API list]](../DeveloperGuide.md#api-reference)  
+[[Back to README]](../../README.md)

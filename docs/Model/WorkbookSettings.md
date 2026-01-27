@@ -71,5 +71,6 @@ Name | Type | Description | Notes
 **FormulaSettings** | **FormulaSettings** | Gets the settings for formula-related features.  |
 **ForceFullCalculate** | **boolean** | Fully calculates every time when a calculation is triggered.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

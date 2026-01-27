@@ -19,5 +19,6 @@ Name | Type | Description | Notes
 **Region** | **string** | The regional settings for workbook. |
 **SaveOptions** | **SaveOptions** | Indicates save options. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **OutFolder** | **string** | The directory that stores files whose format conversion was successful. |
 **OutStorage** | **string** | Aspose Cloud storage name. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

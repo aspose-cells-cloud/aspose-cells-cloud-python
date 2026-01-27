@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **SortAsNumber** | **boolean** | Indicates whether sorting anything that looks like a number.  |
 **Keys** | **ARRAY[DataSorterKey]** | Gets the key list of data sorter.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

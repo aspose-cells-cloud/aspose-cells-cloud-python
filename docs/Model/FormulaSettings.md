@@ -20,5 +20,6 @@ Name | Type | Description | Notes
 **EnableCalculationChain** | **boolean** | Whether enable calculation chain for formulas. Default is false.  |
 **PreservePaddingSpaces** | **boolean** | Indicates whether preserve those spaces and line breaks that are padded between formula tokens            while getting and setting formulas.            Default value is false.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

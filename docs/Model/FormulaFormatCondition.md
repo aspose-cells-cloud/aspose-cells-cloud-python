@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **Formula2** | **string** | Gets and sets the value or expression associated with conditional formatting. |
 **Operator** | **string** | Gets and sets the conditional format operator type. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

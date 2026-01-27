@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **Type** | **string** | Get or set the type of this conditional formatting value object.            Setting the type to FormatConditionValueType.Min or FormatConditionValueType.Max             will auto set "Value" to null.  |
 **Value** | **string** | Get or set the value of this conditional formatting value object.            It should be used in conjunction with Type.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

@@ -62,3 +62,6 @@ PageTitle: Delete all custom document properties and reset built-in ones.PageDes
 ## OpenAPI Specification
 
 The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/PropertiesController/DeleteDocumentProperties) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.
+
+[[Back to API list]](../DeveloperGuide.md#api-reference)  
+[[Back to README]](../../README.md)

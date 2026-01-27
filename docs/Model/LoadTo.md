@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **beginRowIndex** | **int** | The begin row index of worksheet. |
 **beginColumnIndex** | **int** | The begin column index of worksheet. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

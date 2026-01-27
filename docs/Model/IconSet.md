@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **ShowValue** | **boolean** | Get or set the flag indicating whether to show the values of the cells on which this icon set is applied.            Default value is true.  |
 **IconSetType** | **string** | Get or Set the icon set type to display.  Setting the type will auto check   if the current Cfvos's count is accord with the new type. If not accord,   old Cfvos will be cleaned and default Cfvos will be added.             |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

@@ -62,3 +62,6 @@ PageTitle: Excel file cancel write protection.PageDescription: Aspose.Cells Clou
 ## OpenAPI Specification
 
 The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/ProtectionController/DeleteDocumentUnProtectFromChanges) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.
+
+[[Back to API list]](../DeveloperGuide.md#api-reference)  
+[[Back to README]](../../README.md)

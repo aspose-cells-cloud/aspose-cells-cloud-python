@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **MinCfvo** | **ConditionalFormattingValue** | Get or set this ColorScale's min value object.            Cannot set null or CFValueObject with type FormatConditionValueType.Max to it.  |
 **MinColor** | **Color** | Get or set the gradient color for the minimum value in the range.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

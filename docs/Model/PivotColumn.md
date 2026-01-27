@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **ValueColumnNames** | **ARRAY[string]** | Represents column name that sets the column's value to the value of the pivot column. |
 **AppliedOperateType** | **string** |  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

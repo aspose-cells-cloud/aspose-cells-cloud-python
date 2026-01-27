@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **Top** | **double** | Gets or sets the top offset for stretching picture.  |
 **Bottom** | **double** | Gets or sets the bottom offset for stretching picture.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

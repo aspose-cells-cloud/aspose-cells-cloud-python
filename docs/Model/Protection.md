@@ -26,5 +26,6 @@ Name | Type | Description | Notes
 **AllowSelectingLockedCell** | **boolean** | Represents if the user is allowed to select locked cells on a protected worksheet.  |
 **AllowSelectingUnlockedCell** | **boolean** | Represents if the user is allowed to select unlocked cells on a protected worksheet.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

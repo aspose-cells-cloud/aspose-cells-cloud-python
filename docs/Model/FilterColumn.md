@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **Top10Filter** | **Top10Filter** |  |
 **Visibledropdown** | **string** | Indicates whether the AutoFilter button for this column is visible.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

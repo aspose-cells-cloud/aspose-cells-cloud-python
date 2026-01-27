@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **IsValid** | **boolean** | If this digital signature is valid and the document has not been tampered with, this value will be true. |
 **XAdESType** | **string** | XAdES type. Default value is None(XAdES is off). |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **CheckExcelRestriction** | **boolean** | Whether check restriction of Spreadsheet file when user modify cells related objects. |
 **Region** | **string** | The regional settings for workbook. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

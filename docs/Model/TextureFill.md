@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **PicFormatOption** | **PicFormatOption** | Gets or sets picture format option.  |
 **Image** | **LinkElement** | The class has a public property named "Image" of type LinkElement that can be accessed and set. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

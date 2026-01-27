@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **ParseMethod** | **string** | data parser method.             ToDateTime            ToString |
 **CustomStyle** | **string** | A property that allows storing and retrieving custom styling information for an object. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

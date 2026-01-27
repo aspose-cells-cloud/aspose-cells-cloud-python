@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **Index** | **int** | Gets the sorted column index(absolute position, column A is 0, B is 1, ...). |
 **Type** | **string** | Represents the type of sorting. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

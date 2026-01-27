@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **OutFileFormat** | **string** | finish to data cleansing, outfile`s file format. |
 **DataCleansing** | **DataCleansing** | Data cleansing content |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

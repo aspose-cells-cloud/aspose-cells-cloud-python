@@ -19,5 +19,6 @@ Name | Type | Description | Notes
 **IsInSecondaryPlot** | **boolean** | Gets or sets a value indicates whether this data points is in the second pie or bar on a pie of pie or bar of pie chart. |
 **link** | **Link** |  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

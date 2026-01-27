@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Criteria** | **string** | A property named "Criteria" of type string, allowing both getting and setting its value. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

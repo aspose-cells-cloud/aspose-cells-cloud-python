@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **Type** | **string** | The color type.  |
 **Transparency** | **double** | Gets and sets transparency as a value from 0.0 (opaque) through 1.0 (clear).  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

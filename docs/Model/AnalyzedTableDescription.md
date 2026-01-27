@@ -25,5 +25,6 @@ Name | Type | Description | Notes
 **DiscoverCharts** | **ARRAY[DiscoverChart]** | Represents a collection of charts, which is a collection of charts created based on data analysis of a table. |
 **DiscoverPivotTables** | **ARRAY[DiscoverPivotTable]** | Represents a collection of pivot tables, which is a collection of pivot tables created based on data analysis of a table. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

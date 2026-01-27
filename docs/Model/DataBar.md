@@ -21,5 +21,6 @@ Name | Type | Description | Notes
 **NegativeBarFormat** | **NegativeBarFormat** | Gets the NegativeBarFormat object associated with a data bar conditional formatting rule.  |
 **ShowValue** | **boolean** | Get or set the flag indicating whether to show the values of the cells on which this data bar is applied.            Default value is true.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

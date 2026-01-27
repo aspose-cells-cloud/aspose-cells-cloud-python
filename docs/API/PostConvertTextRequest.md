@@ -80,3 +80,6 @@ Effortlessly enhance your Excel data by performing essential text conversions. C
 ## OpenAPI Specification
 
 The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/TextProcessingController/PostConvertText) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.
+
+[[Back to API list]](../DeveloperGuide.md#api-reference)  
+[[Back to README]](../../README.md)

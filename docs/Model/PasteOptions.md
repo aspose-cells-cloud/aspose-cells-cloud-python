@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **SkipBlanks** | **boolean** | Indicates whether skips blank cells.  |
 **Transpose** | **boolean** | True to transpose rows and columns when the range is pasted. The default value is False.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

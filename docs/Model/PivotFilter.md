@@ -19,5 +19,6 @@ Name | Type | Description | Notes
 **Value2** | **string** | Gets the string value2 of the label pivot filter.             |
 **Top10Filter** | **Top10Filter** | A property that allows for setting and getting a Top10Filter object for filtering data. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

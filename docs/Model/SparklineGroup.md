@@ -36,5 +36,6 @@ Name | Type | Description | Notes
 **VerticalAxisMinValue** | **double** | Gets and sets the custom minimum value for the vertical axis.  |
 **VerticalAxisMinValueType** | **string** | Represents the vertical axis minimum value type.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

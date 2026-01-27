@@ -53,5 +53,6 @@ Name | Type | Description | Notes
 **WallsAndGridlines2D** | **boolean** | True if gridlines are drawn two-dimensionally on a 3-D chart. |
 **link** | **Link** |  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

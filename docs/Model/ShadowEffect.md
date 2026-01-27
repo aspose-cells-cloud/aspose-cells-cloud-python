@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **Size** | **double** | Gets and sets the size of the shadow. Range from 0 to 2.0.             Meaningless in inner shadow.  |
 **Transparency** | **double** | Gets and sets the degree of transparency of the shadow. Range from 0.0 (opaque) to 1.0 (clear).  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

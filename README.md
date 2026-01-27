@@ -126,7 +126,39 @@ graph TB
 | [EPUB](https://docs.fileformat.com/database/dbf/)                 | database file                                                                                                                                                                       |          | &radic;  |
 | [XHTML](https://docs.fileformat.com/web/xhtml/)                   | XHTML File Format                                                                                                                                                                   |          | &radic;  |
 
-## Manipulate Excel and other spreadsheet files in the Cloud
+## Architecture
+
+```mermaid
+graph TB
+
+    subgraph "Client Layer"
+        C1[Web Application]
+        C2[Mobile Application]
+        C3[Desktop Application]
+    end
+    
+    subgraph "API Gateway Layer"
+        G1[Gateway Service]
+        G2[Authentication Services]
+        G3[Load Balancing]
+    end
+    
+    subgraph "Cloud Microservices layer"
+        S1[User Application]
+        S2[Product Services]
+    end
+ 
+    C1 & C2 & C3 --> G1
+    G1 --> S1 & S2
+    
+    style C1 fill:#e1f5fe
+    style G1 fill:#f3e5f5
+    style S1 fill:#e8f5e8
+```
+
+## [Developer Reference](docs/DeveloperGuide.md#overview)
+
+### Manipulate Excel and other spreadsheet files in the Cloud
 
 - **File Manipulation**: Users can upload, download, delete, and manage Excel files stored in the cloud.
 - **File Formatting**: Supports formatting of cells, fonts, colors, and alignment modes in Excel files to cater to users' specific requirements.

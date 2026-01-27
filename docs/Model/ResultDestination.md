@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **InputFile** | **string** | Represents input file. |
 **OutputFile** | **string** | Represents output file. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

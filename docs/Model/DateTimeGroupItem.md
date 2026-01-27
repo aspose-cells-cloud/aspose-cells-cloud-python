@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **Second** | **int** | Gets and sets the second of the grouped date time. |
 **Year** | **int** | Gets and sets the year of the grouped date time. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

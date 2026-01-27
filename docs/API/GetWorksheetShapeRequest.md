@@ -82,3 +82,6 @@ PageTitle:  Retrieve description of shape in the worksheet.PageDescription: Aspo
 ## OpenAPI Specification
 
 The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/ShapesController/GetWorksheetShape) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.
+
+[[Back to API list]](../DeveloperGuide.md#api-reference)  
+[[Back to README]](../../README.md)

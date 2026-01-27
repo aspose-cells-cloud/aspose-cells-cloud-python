@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **Type** | **string** | Gets the data type of the property.             |
 **IsGeneratedName** | **string** | Returns true if this property does not have a name in the OLE2 storage and a  unique name was generated only for the public API.             |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

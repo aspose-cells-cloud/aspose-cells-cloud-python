@@ -115,3 +115,6 @@ PageTitle:  Perform business analysis of data in Excel files.PageDescription: As
 ## OpenAPI Specification
 
 The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/AnalyseController/PostAnalyzeExcel) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.
+
+[[Back to API list]](../DeveloperGuide.md#api-reference)  
+[[Back to README]](../../README.md)

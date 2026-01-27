@@ -63,3 +63,6 @@ PageTitle: Define a new name in the workbook.PageDescription: Aspose.Cells Cloud
 ## OpenAPI Specification
 
 The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/WorkbookController/PutWorkbookName) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.
+
+[[Back to API list]](../DeveloperGuide.md#api-reference)  
+[[Back to README]](../../README.md)

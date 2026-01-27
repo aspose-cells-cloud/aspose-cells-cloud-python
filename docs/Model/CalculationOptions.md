@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **CalculationMonitor** | **AbstractCalculationMonitor** | The monitor for user to track the progress of formula calculation.  |
 **LinkedDataSources** | **ARRAY[Workbook]** | Specifies the data sources for external links used in formulas.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

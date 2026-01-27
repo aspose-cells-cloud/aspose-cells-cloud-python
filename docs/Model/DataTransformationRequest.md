@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **Region** | **string** | This class has a property named "Region" of type string with both a getter and a setter. |
 **OutFormat** | **string** | Indicates output format  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

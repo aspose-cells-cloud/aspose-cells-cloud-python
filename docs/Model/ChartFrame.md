@@ -21,5 +21,6 @@ Name | Type | Description | Notes
 **X** | **int** | Gets or sets the x coordinate of the upper left corner in units of 1/4000 of the chart area.  |
 **Y** | **int** | Gets or sets the y coordinate of the upper left corner in units of 1/4000 of the chart area.  |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

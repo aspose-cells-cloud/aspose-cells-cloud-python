@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **KeyLength** | **int** | Encription key length. |
 **Password** | **string** | Encription password. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

@@ -67,3 +67,6 @@ PageTitle: Replace specified text with new text in Excel files.PageDescription: 
 ## OpenAPI Specification
 
 The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/LightCellsController/PostReplace) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.
+
+[[Back to API list]](../DeveloperGuide.md#api-reference)  
+[[Back to README]](../../README.md)

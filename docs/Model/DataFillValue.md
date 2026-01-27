@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **DefaultDouble** | **double** | Represents default double value.              |
 **DefaultDate** | **string** | Represents default date value.              |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **SelectText** | **string** | Selected text of cell where text should be inserted or selected in the spreadsheet. |
 **SkipEmptyCells** | **boolean** | Indicates whether empty cells should be skipped during processing. |  
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
+[[Back to Model list]](../DeveloperGuide.md#model-reference)  
+[[Back to README]](../../README.md)

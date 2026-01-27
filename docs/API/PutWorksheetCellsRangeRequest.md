@@ -65,3 +65,6 @@ PageTitle: Insert a range of cells and shift existing cells based on the specifi
 ## OpenAPI Specification
 
 The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/RangesController/PutWorksheetCellsRange) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.
+
+[[Back to API list]](../DeveloperGuide.md#api-reference)  
+[[Back to README]](../../README.md)

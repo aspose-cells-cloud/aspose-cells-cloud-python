@@ -66,3 +66,6 @@ PageTitle: Update page header in the worksheet.PageDescription: Aspose.Cells Clo
 ## OpenAPI Specification
 
 The [OpenAPI Specification](https://reference.aspose.cloud/cells/#/PageSetupController/PostHeader) defines a publicly accessible programming interface and lets you carry out REST interactions directly from a web browser.
+
+[[Back to API list]](../DeveloperGuide.md#api-reference)  
+[[Back to README]](../../README.md)
