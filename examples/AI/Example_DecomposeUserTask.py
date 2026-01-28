@@ -12,3 +12,5 @@ RemoteFolder = "PythonSDK"
 instance  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClientSecret'))
 
 instance.decompose_user_task( DecomposeUserTaskRequest("Develop a web API for a task-splitting feature on the existing system." )   ,local_outpath = "DecomposeUserTask.xlsx" )
+
+instance.decompose_user_task( DecomposeUserTaskRequest("A 21-day basic Chinese review plan, focusing on writing key characters, memorizing classical poems, and practicing synonyms and antonyms.." )   ,local_outpath = "DecomposeUserTask_StudyPlan.xlsx" )
