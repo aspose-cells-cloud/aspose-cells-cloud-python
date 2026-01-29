@@ -15,5 +15,5 @@ instance.translation_spreadsheet(TranslationSpreadsheetRequest( EmployeeSalesSum
 
 #
 instance.convert_spreadsheet( ConvertSpreadsheetRequest(EmployeeSalesSummaryXlsx, "ods" ), local_outpath = "EmployeeSalesSummary.ods" )
-instance.translation_spreadsheet(TranslationSpreadsheetRequest( "EmployeeSalesSummary.ods",target_language="zh" ) ,local_outpath = "EmployeeSalesSummary_zh_2.xlsx" )
+instance.translation_spreadsheet(TranslationSpreadsheetRequest( "EmployeeSalesSummary.ods",target_language="zh" ) ,local_outpath = "EmployeeSalesSummary_zh_2.ods" )
 

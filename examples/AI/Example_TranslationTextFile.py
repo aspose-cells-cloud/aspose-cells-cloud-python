@@ -12,4 +12,4 @@ instance  = CellsApi(os.getenv('CellsCloudClientId'),os.getenv('CellsCloudClient
 # Translate Excel files accurately into the specified language.
 instance.convert_spreadsheet( ConvertSpreadsheetRequest(EmployeeSalesSummaryXlsx, "txt" ), local_outpath = "EmployeeSalesSummary.txt" )
 
-instance.translation_spreadsheet(TranslationSpreadsheetRequest( "EmployeeSalesSummary.txt",target_language="zh" ) ,local_outpath = "EmployeeSalesSummary_zh.xlsx" )
+instance.translate_text_file(TranslateTextFileRequest( "EmployeeSalesSummary.txt",target_language="zh" ) ,local_outpath = "EmployeeSalesSummary_zh.txt" )
