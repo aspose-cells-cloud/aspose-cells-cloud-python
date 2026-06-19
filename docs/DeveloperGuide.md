@@ -9,6 +9,8 @@ This Developer Guide serves as the complete technical reference for the Aspose.C
 | [DecomposeUserTask](api/DecomposeUserTask.md) | AI task decomposition: Convert user objectives to sequential action plans with formatted file export. |
 | [TranslateSpreadsheet](api/TranslateSpreadsheet.md) | Translates the entire spreadsheet to the specified target language. |
 | [TranslateTextFile](api/TranslateTextFile.md) | Translates text file content to the specified target language. |
+| [ReportAIAnalysis](api/ReportAIAnalysis.md) |  |
+| [SummarizeSpreadsheet](api/SummarizeSpreadsheet.md) | Summarizes spreadsheet content using AI and returns the summary as a downloadable text file. |
 | [AggregateCellsByColor](api/AggregateCellsByColor.md) | The Aggregate by Color API provides a convenient way to perform calculations on cells that share the same fill or font color. This API supports a range of aggregate operations, including count, sum, maximum value, minimum value, and average value, enabling you to analyze and summarize data based on color distinctions. |
 | [MathCalculate](api/MathCalculate.md) |  |
 | [PostAccessToken](api/PostAccessToken.md) | Get Access Token Result: The Cells Cloud Get Token API acts as a proxy service,forwarding user requests to the Aspose Cloud authentication server and returning the resulting access token to the client. |

@@ -1,5 +1,21 @@
 # Release History Version
 
+## Feature & Enhancements in Version v26.5.0
+
+| **Summary**                                                                                                   | **Category** |
+| :------------------------------------------------------------------------------------------------------------ | :----------- |
+| New Web API:  Get the spreadsheet structure. | Task  |
+| Enhance the return file token for the upload file function. | Improvement  |
+| New MCP Tool: Download file based on file token. | New Feature  |
+| Enhance MCP Tools: Save file as with file token | Improvement  |
+| Enhance Get Workbook endpoint functionality. | Improvement  |
+| Support trim content in remote storage | New Feature  |
+| Support to case word in remote spreadsheet | New Feature  |
+| Support to remove characters in remote spreadsheet | New Feature  |
+| Support to add text in remote spreadsheet. | New Feature  |
+| Support to convert text in remote spreadsheet. | New Feature  |
+| [Forum] Test topic-2026-0402 | Bug  |
+
 ## Feature & Enhancements in Version v26.4.0
 
 | **Summary**                                                                                                   | **Category** |

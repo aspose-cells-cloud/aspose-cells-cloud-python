@@ -35,7 +35,7 @@ from six.moves.urllib.parse import quote
 
 class SaveSpreadsheetAsRequest(object):
 
-    def __init__(self , name ,format ,save_options_data =None ,folder =None ,storage_name =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,region =None ,password =None ):
+    def __init__(self , name ,format ,save_options_data =None ,folder =None ,storage_name =None ,out_path =None ,out_storage_name =None ,fonts_location =None ,auto_rows_fit =None ,auto_columns_fit =None ,region =None ,password =None ):
         self.name = name 
         self.format = format 
         self.save_options_data = save_options_data 
@@ -44,6 +44,8 @@ class SaveSpreadsheetAsRequest(object):
         self.out_path = out_path 
         self.out_storage_name = out_storage_name 
         self.fonts_location = fonts_location 
+        self.auto_rows_fit = auto_rows_fit 
+        self.auto_columns_fit = auto_columns_fit 
         self.region = region 
         self.password = password         
         self.expand_query_parameters = {}
@@ -81,6 +83,10 @@ class SaveSpreadsheetAsRequest(object):
             query_params.append(('outStorageName',self.out_storage_name ))
         if self.fonts_location is not None:
             query_params.append(('fontsLocation',self.fonts_location ))
+        if self.auto_rows_fit is not None:
+            query_params.append(('AutoRowsFit',self.auto_rows_fit ))
+        if self.auto_columns_fit is not None:
+            query_params.append(('AutoColumnsFit',self.auto_columns_fit ))
         if self.region is not None:
             query_params.append(('region',self.region ))
         if self.password is not None:
@@ -91,7 +97,7 @@ class SaveSpreadsheetAsRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '26.5';
+        header_params['x-aspose-client-version'] = '26.6.4';
 
         form_params = []
         local_var_files = {}

@@ -77,7 +77,7 @@ class PostExportRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '26.5';
+        header_params['x-aspose-client-version'] = '26.6.4';
 
         form_params = []
         local_var_files = {}
