@@ -9,10 +9,11 @@ This Developer Guide serves as the complete technical reference for the Aspose.C
 | [DecomposeUserTask](api/DecomposeUserTask.md) | AI task decomposition: Convert user objectives to sequential action plans with formatted file export. |
 | [TranslateSpreadsheet](api/TranslateSpreadsheet.md) | Translates the entire spreadsheet to the specified target language. |
 | [TranslateTextFile](api/TranslateTextFile.md) | Translates text file content to the specified target language. |
-| [ReportAIAnalysis](api/ReportAIAnalysis.md) |  |
+| [ReportAIAnalysis](api/ReportAIAnalysis.md) | Intelligently analyzes spreadsheet data, identifies business scenarios, and generates professional data analysis reports. |
 | [SummarizeSpreadsheet](api/SummarizeSpreadsheet.md) | Summarizes spreadsheet content using AI and returns the summary as a downloadable text file. |
 | [AggregateCellsByColor](api/AggregateCellsByColor.md) | The Aggregate by Color API provides a convenient way to perform calculations on cells that share the same fill or font color. This API supports a range of aggregate operations, including count, sum, maximum value, minimum value, and average value, enabling you to analyze and summarize data based on color distinctions. |
 | [MathCalculate](api/MathCalculate.md) |  |
+| [CalculationFormula](api/CalculationFormula.md) |  |
 | [PostAccessToken](api/PostAccessToken.md) | Get Access Token Result: The Cells Cloud Get Token API acts as a proxy service,forwarding user requests to the Aspose Cloud authentication server and returning the resulting access token to the client. |
 | [GetAsposeCellsCloudStatus](api/GetAsposeCellsCloudStatus.md) | Check the Health Status of Aspose.Cells Cloud Service. |
 | [CheckCloudServiceHealth](api/CheckCloudServiceHealth.md) | Check the Health Status of Aspose.Cells Cloud Service. |
@@ -72,6 +73,7 @@ This Developer Guide serves as the complete technical reference for the Aspose.C
 | [ProtectSpreadsheet](api/ProtectSpreadsheet.md) | Applies dual-layer password protection to Excel spreadsheets, supporting both open and modify passwords with encryption. |
 | [UnprotectSpreadsheet](api/UnprotectSpreadsheet.md) | Removes dual-layer password protection from Excel spreadsheets, supporting both open and modify passwords with encryption. |
 | [SpreadsheetDigitalsignature](api/SpreadsheetDigitalsignature.md) |  |
+| [SmartMarkerTemplate](api/SmartMarkerTemplate.md) |  |
 | [SearchAllTextItemsInRemoteSpreadsheet](api/SearchAllTextItemsInRemoteSpreadsheet.md) | Get all text items in the remote spreadsheet. |
 | [SearchSpreadsheetAllTextItems](api/SearchSpreadsheetAllTextItems.md) | Get all text items in the remote spreadsheet. |
 | [SearchSpreadsheetContent](api/SearchSpreadsheetContent.md) | Search text in the local spreadsheet. |
@@ -524,6 +526,7 @@ This Developer Guide serves as the complete technical reference for the Aspose.C
 | [CellsCloudFileInfoResponse](model/CellsCloudFileInfoResponse.md)|  |
 | [CellsCloudPublicKeyResponse](model/CellsCloudPublicKeyResponse.md)|  |
 | [CellsCloudResponse](model/CellsCloudResponse.md)|  |
+| [FormulaCalculateResultResponse](model/FormulaCalculateResultResponse.md)|  |
 | [SaveResponse](model/SaveResponse.md)|  |
 | [SearchResponse](model/SearchResponse.md)|  |
 | [ImageOrPrintOptions](model/ImageOrPrintOptions.md)|  |

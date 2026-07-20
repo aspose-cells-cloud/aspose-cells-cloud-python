@@ -88,7 +88,7 @@ class ApiClient(object):
             self.host = host
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Aspose.Cells.Cloud/26.6.4/python'
+        self.user_agent = 'Aspose.Cells.Cloud/26.7/python'
 
     @property
     def user_agent(self):
