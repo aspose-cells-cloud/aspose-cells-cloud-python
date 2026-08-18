@@ -11,6 +11,7 @@ This Developer Guide serves as the complete technical reference for the Aspose.C
 | [TranslateTextFile](api/TranslateTextFile.md) | Translates text file content to the specified target language. |
 | [ReportAIAnalysis](api/ReportAIAnalysis.md) | Intelligently analyzes spreadsheet data, identifies business scenarios, and generates professional data analysis reports. |
 | [SummarizeSpreadsheet](api/SummarizeSpreadsheet.md) | Summarizes spreadsheet content using AI and returns the summary as a downloadable text file. |
+| [CategorizeSpreadsheet](api/CategorizeSpreadsheet.md) | AI-powered data categorization: Automatically classifies spreadsheet column data into logical groups. |
 | [AggregateCellsByColor](api/AggregateCellsByColor.md) | The Aggregate by Color API provides a convenient way to perform calculations on cells that share the same fill or font color. This API supports a range of aggregate operations, including count, sum, maximum value, minimum value, and average value, enabling you to analyze and summarize data based on color distinctions. |
 | [MathCalculate](api/MathCalculate.md) |  |
 | [CalculationFormula](api/CalculationFormula.md) |  |

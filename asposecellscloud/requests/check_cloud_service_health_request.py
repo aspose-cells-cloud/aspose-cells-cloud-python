@@ -54,7 +54,7 @@ class CheckCloudServiceHealthRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '26.7';
+        header_params['x-aspose-client-version'] = '26.8';
 
         form_params = []
         local_var_files = {}

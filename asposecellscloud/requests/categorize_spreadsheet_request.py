@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-<copyright company="Aspose" file="GetWorksheetChartTitleRequest.cs">
+<copyright company="Aspose" file="CategorizeSpreadsheetRequest.cs">
   Copyright (c) 2026 Aspose.Cells Cloud
 </copyright>
 <summary>
@@ -33,14 +33,15 @@ from asposecellscloud.models import *
 from asposecellscloud.requests import *
 from six.moves.urllib.parse import quote
 
-class GetWorksheetChartTitleRequest(object):
+class CategorizeSpreadsheetRequest(object):
 
-    def __init__(self , name ,sheet_name ,chart_index ,folder =None ,storage_name =None ):
-        self.name = name 
+    def __init__(self , spreadsheet ,target_column ,sheet_name =None ,new_column_name =None ,region =None ,password =None ):
+        self.spreadsheet = spreadsheet 
+        self.target_column = target_column 
         self.sheet_name = sheet_name 
-        self.chart_index = chart_index 
-        self.folder = folder 
-        self.storage_name = storage_name         
+        self.new_column_name = new_column_name 
+        self.region = region 
+        self.password = password         
         self.expand_query_parameters = {}
 
     def set_expand_query_parameter(self, query_name, query_value):
@@ -48,35 +49,30 @@ class GetWorksheetChartTitleRequest(object):
         pass
     def create_http_request(self, api_client):
 
-        # verify the required parameter 'name' is set
-        if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `get_worksheet_chart_title`")
+        # verify the required parameter 'spreadsheet' is set
+        if self.spreadsheet is None:
+            raise ValueError("Missing the required parameter `spreadsheet` when calling `categorize_spreadsheet`")
 
 
-        # verify the required parameter 'sheet_name' is set
-        if self.sheet_name is None:
-            raise ValueError("Missing the required parameter `sheet_name` when calling `get_worksheet_chart_title`")
-
-
-        # verify the required parameter 'chart_index' is set
-        if self.chart_index is None:
-            raise ValueError("Missing the required parameter `chart_index` when calling `get_worksheet_chart_title`")
+        # verify the required parameter 'target_column' is set
+        if self.target_column is None:
+            raise ValueError("Missing the required parameter `target_column` when calling `categorize_spreadsheet`")
 
 
         collection_formats = {}
 
         path_params = {}
-        if self.name is not None:
-            path_params['name'] = self.name
-        if self.sheet_name is not None:
-            path_params['sheetName'] = self.sheet_name
-        if self.chart_index is not None:
-            path_params['chartIndex'] = self.chart_index
         query_params = []
-        if self.folder is not None:
-            query_params.append(('folder',self.folder ))
-        if self.storage_name is not None:
-            query_params.append(('storageName',self.storage_name ))
+        if self.target_column is not None:
+            query_params.append(('targetColumn',self.target_column ))
+        if self.sheet_name is not None:
+            query_params.append(('sheetName',self.sheet_name ))
+        if self.new_column_name is not None:
+            query_params.append(('newColumnName',self.new_column_name ))
+        if self.region is not None:
+            query_params.append(('region',self.region ))
+        if self.password is not None:
+            query_params.append(('password',self.password ))
         if self.expand_query_parameters is not None:
             for key, value in self.expand_query_parameters.items():
                 query_params.append(key,value)
@@ -87,6 +83,16 @@ class GetWorksheetChartTitleRequest(object):
 
         form_params = []
         local_var_files = {}
+        if self.spreadsheet is not None:            
+            if isinstance(self.spreadsheet,dict):
+                for filename , filecontext in  self.spreadsheet.items():
+                    local_var_files[filename] = filecontext
+            else:
+                if isinstance(self.spreadsheet,bytes):
+                    local_var_files['File'] = self.spreadsheet
+                else:
+                    local_var_files[os.path.basename( self.spreadsheet)] = self.spreadsheet   
+
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = api_client.\
@@ -94,12 +100,11 @@ class GetWorksheetChartTitleRequest(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = api_client.\
-            select_header_content_type(['application/json'])
-
+            select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
         auth_settings = []
-        resource_path =  "v3.0/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/title"
+        resource_path =  "v4.0/cells/ai/categorize/spreadsheet"
         # path parameters
         if path_params:
             path_params = api_client.sanitize_for_serialization(path_params)
@@ -108,7 +113,7 @@ class GetWorksheetChartTitleRequest(object):
                 # specified safe chars, encode everything
                 resource_path = resource_path.replace('{%s}' % k, quote(str(v), safe='/'))
         return {
-                "method": "GET",
+                "method": "PUT",
                 "path":resource_path,
                 "query_params": query_params,
                 "header_params": header_params,
@@ -117,6 +122,6 @@ class GetWorksheetChartTitleRequest(object):
                 "auth_settings":auth_settings,
                 "body": body_params,
                 "collection_formats": collection_formats,
-                "response_type": 'TitleResponse'  
+                "response_type": 'file'  
         }
 

@@ -1,5 +1,14 @@
 # Release History Version
 
+## Feature & Enhancements in Version v26.7
+
+| **Summary**                                                            | **Category** |
+| :--------------------------------------------------------------------- | :----------- |
+| Fix AutoFitsCanAutoFitsAttribute value data type.                      | Bug |
+| Support for the calculation formula in Aspose.Cells Cloud 4.0 Web APIs. | New Feature |
+| Support for the smart template in Aspose.Cells Cloud 4.0 Web APIs.      | New Feature |
+| Fix calc error about MathCalculate Web API.                            | Bug |
+
 ## Feature & Enhancements in Version v26.6
 
 | **Summary**                                                            | **Category** |

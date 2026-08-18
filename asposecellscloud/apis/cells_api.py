@@ -340,6 +340,60 @@ class CellsApi(object):
 
 
     # <summary>
+    # AI-powered data categorization: Automatically classifies spreadsheet column data into logical groups.
+    # </summary>
+    # <param name="request">Request. <see cref="CategorizeSpreadsheetRequest" /></param>
+    def categorize_spreadsheet(self, request, **kwargs):
+
+        kwargs['_return_http_data_only'] = True
+        self.check_access_token()
+        response_file = None
+        if kwargs.get('callback'):
+            response_file = self.categorize_spreadsheet_with_http_info(request,**kwargs)
+        else:
+            (data) = self.categorize_spreadsheet_with_http_info(request,**kwargs)
+            response_file = data
+        if kwargs.get('local_outpath'):
+            shutil.move( response_file , kwargs.get('local_outpath'))
+            return kwargs.get('local_outpath')
+        else:
+            return response_file
+    def categorize_spreadsheet_with_http_info(self, request, **kwargs):
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('local_outpath')
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method categorize_spreadsheet" % key
+                )
+            params[key] = val
+        del params['kwargs'] 
+
+        http_params = request.create_http_request(self.api_client)
+        return self.api_client.call_api(http_params['path'], http_params['method'],
+                                        None,
+                                        http_params['query_params'],
+                                        http_params['header_params'],
+                                        body=http_params['body'],
+                                        post_params=http_params['form_params'],
+                                        files=http_params['files'],
+                                        response_type=http_params['response_type'],
+                                        auth_settings=http_params['auth_settings'],
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=http_params['collection_formats'])
+
+
+
+    # <summary>
     # The Aggregate by Color API provides a convenient way to perform calculations on cells that share the same fill or font color. This API supports a range of aggregate operations, including count, sum, maximum value, minimum value, and average value, enabling you to analyze and summarize data based on color distinctions.
     # </summary>
     # <param name="request">Request. <see cref="AggregateCellsByColorRequest" /></param>
