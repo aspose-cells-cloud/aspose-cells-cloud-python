@@ -1,0 +1,75 @@
+"""Request classes for the Aspose.Cells Cloud SDK for Python."""
+
+from __future__ import annotations
+
+import json
+import os
+from typing import Any, Dict, List, Optional
+from urllib.parse import quote
+
+from aspose.cells.cloud.request_option import RequestOption
+
+
+class GetPivotTableFieldRequest(RequestOption):
+    """Retrieve descriptions of pivot fields in the PivotTable."""
+
+    def __init__(
+        self,
+        name: str,
+        sheet_name: str,
+        pivot_table_index: int,
+        pivot_field_index: int,
+        pivot_field_type: str,
+        folder: Optional[str] = None,
+        storage_name: Optional[str] = None,
+    ):
+        if not name:
+            raise ValueError("name is required")
+        if not sheet_name:
+            raise ValueError("sheetName is required")
+        if pivot_table_index is None:
+            raise ValueError("pivotTableIndex is required")
+        if pivot_field_index is None:
+            raise ValueError("pivotFieldIndex is required")
+        if not pivot_field_type:
+            raise ValueError("pivotFieldType is required")
+        self.name = name
+        self.sheet_name = sheet_name
+        self.pivot_table_index = pivot_table_index
+        self.pivot_field_index = pivot_field_index
+        self.pivot_field_type = pivot_field_type
+        self.folder = folder
+        self.storage_name = storage_name
+
+    def get_method(self) -> str:
+        return "GET"
+
+    def get_path(self) -> str:
+        return (
+            "/v3.0/cells/" +
+            quote(self.name, safe="/") +
+            "/worksheets/" +
+            quote(self.sheet_name, safe="/") +
+            "/pivottables/" +
+            quote(str(self.pivot_table_index), safe="/") +
+            "/PivotField"
+        )
+
+    def get_query_parameters(self) -> Dict[str, str]:
+        params: Dict[str, str] = {}
+        params["pivotFieldIndex"] = str(self.pivot_field_index)
+        params["pivotFieldType"] = self.pivot_field_type
+        if self.folder:
+            params["folder"] = self.folder
+        if self.storage_name:
+            params["storageName"] = self.storage_name
+        return params
+
+    def get_header_parameters(self) -> Dict[str, str]:
+        return {}
+
+    def get_json_body(self) -> Optional[Any]:
+        return None
+
+    def get_multipart_form(self) -> Optional[dict]:
+        return None

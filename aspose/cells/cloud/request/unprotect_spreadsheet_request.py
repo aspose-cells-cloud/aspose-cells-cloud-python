@@ -1,0 +1,65 @@
+"""Request classes for the Aspose.Cells Cloud SDK for Python."""
+
+from __future__ import annotations
+
+import json
+import os
+from typing import Any, Dict, List, Optional
+from urllib.parse import quote
+
+from aspose.cells.cloud.request_option import RequestOption
+
+from aspose.cells.cloud.file_source import FileSource
+
+
+class UnprotectSpreadsheetRequest(RequestOption):
+    """Removes dual-layer password protection from Excel spreadsheets, supporting both open and modify passwords with encryption."""
+
+    def __init__(
+        self,
+        spreadsheet: FileSource,
+        password: str,
+        modify_password: str,
+        out_path: Optional[str] = None,
+        out_storage_name: Optional[str] = None,
+        region: Optional[str] = None,
+    ):
+        if not spreadsheet:
+            raise ValueError("Spreadsheet is required")
+        if not password:
+            raise ValueError("password is required")
+        if not modify_password:
+            raise ValueError("modifyPassword is required")
+        self.spreadsheet = spreadsheet
+        self.password = password
+        self.modify_password = modify_password
+        self.out_path = out_path
+        self.out_storage_name = out_storage_name
+        self.region = region
+
+    def get_method(self) -> str:
+        return "PUT"
+
+    def get_path(self) -> str:
+        return "/v4.0/cells/unprotection/spreadsheet"
+
+    def get_query_parameters(self) -> Dict[str, str]:
+        params: Dict[str, str] = {}
+        params["password"] = self.password
+        params["modifyPassword"] = self.modify_password
+        if self.out_path:
+            params["outPath"] = self.out_path
+        if self.out_storage_name:
+            params["outStorageName"] = self.out_storage_name
+        if self.region:
+            params["region"] = self.region
+        return params
+
+    def get_header_parameters(self) -> Dict[str, str]:
+        return {"Content-Type": "multipart/form-data"}
+
+    def get_json_body(self) -> Optional[Any]:
+        return None
+
+    def get_multipart_form(self) -> Optional[dict]:
+        return {"Spreadsheet": self.spreadsheet}

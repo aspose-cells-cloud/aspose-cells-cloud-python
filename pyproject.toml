@@ -1,24 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "asposecellscloud"
-version = "26.8"
-authors = [
-  { name="Aspose Cloud", email="aspose.cloud@aspose.com" },
-]
-description = "Python Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Microsoft Excel® spreadsheet generation, manipulation, conversion & inspection features into your own Python applications."
-keywords = ["excel", "spreadsheet",  "convert", "xlsx", "pdf", "json", "cloud", "rest api", "merge", "split", "protect"]
+name = "aspose-cells-cloud"
+version = "26.6.4"
+description = "Aspose.Cells Cloud SDK for Python"
 readme = "README.md"
-requires-python = ">=3.6"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Aspose" }]
+keywords = ["aspose", "cells", "cloud", "excel", "xlsx", "spreadsheet", "sdk"]
 classifiers = [
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.6',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
 ]
 dependencies = [
-  "urllib3 >= 1.15", 
-  "six >= 1.10",
-  "certifi", 
-  "python-dateutil"
+    "requests>=2.20",
 ]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "openpyxl>=3.0",
+]
+
 [project.urls]
-"Homepage" = "https://github.com/aspose-cells-cloud/aspose-cells-cloud-python"
+Homepage = "https://products.aspose.cloud/cells/"
+Documentation = "https://docs.aspose.cloud/cells/"
+
+[tool.setuptools.packages.find]
+include = ["aspose*"]
+
+[tool.setuptools.package-data]
+"aspose.cells.cloud" = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "integration_tests"]
+addopts = "-ra"
