@@ -189,6 +189,17 @@ wheels = [
 ]
 
 [[package]]
+name = "aspose-cells-python"
+version = "26.3.0"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d5/41/1ad42dec249393d926cae38e439c334e0dcbf2828bf29f97bf107c27a45c/aspose_cells_python-26.3.0-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:ec099d37e72b1e4f1cc63a5062fb0d307fe20aaa287780cae8d9d0ac6924b20e", size = 75159386, upload-time = "2026-03-12T08:57:09.868Z" },
+    { url = "https://files.pythonhosted.org/packages/9b/13/d645647ab1f96231de3123b9551a377e79138ee751773cc04ab748f1a72e/aspose_cells_python-26.3.0-py3-none-macosx_11_0_arm64.whl", hash = "sha256:17451daa2a32e86f5bf62ad1f67811650c83c686fa4fa26e1d98f3b18d8bad96", size = 72008896, upload-time = "2026-03-12T08:55:23.628Z" },
+    { url = "https://files.pythonhosted.org/packages/8e/e7/1d1ea414bce66ab489e44ce80e41edeea2d9c23bd43bcb3e7cfbb946cdd7/aspose_cells_python-26.3.0-py3-none-manylinux1_x86_64.whl", hash = "sha256:9bb87126c859bfdfe61825ee8ca98217c09ada9f3bcdf42b5873ad7fdcfabec1", size = 87888414, upload-time = "2026-03-12T08:05:24.827Z" },
+    { url = "https://files.pythonhosted.org/packages/f3/67/c2662b7cd420d0b9646242c4c22adb5e8aa29db133dc65279056fadfaa34/aspose_cells_python-26.3.0-py3-none-win_amd64.whl", hash = "sha256:4c3dd895d7c3010121ef7529e8dc222f0bb1b96348d49695ed6b1c87d1780a51", size = 58887057, upload-time = "2026-03-12T08:58:23.836Z" },
+]
+
+[[package]]
 name = "asttokens"
 version = "3.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -790,6 +801,7 @@ version = "2.46.0"
 source = { editable = "." }
 dependencies = [
     { name = "accelerate" },
+    { name = "aspose-cells-python" },
     { name = "beautifulsoup4" },
     { name = "certifi" },
     { name = "docling-core", extra = ["chunking"] },
@@ -885,6 +897,7 @@ examples = [
 requires-dist = [
     { name = "accelerate", specifier = ">=1.0.0,<2" },
     { name = "accelerate", marker = "extra == 'vlm'", specifier = ">=1.2.1,<2.0.0" },
+    { name = "aspose-cells-python", specifier = ">=25.7.0" },
     { name = "beautifulsoup4", specifier = ">=4.12.3,<5.0.0" },
     { name = "certifi", specifier = ">=2024.7.4" },
     { name = "docling-core", extras = ["chunking"], specifier = ">=2.42.0,<3.0.0" },
@@ -4370,11 +4383,11 @@ wheels = [
 
 [[package]]
 name = "pygments"
-version = "2.19.2"
+version = "2.20.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz", hash = "sha256:636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887", size = 4968631, upload-time = "2025-06-21T13:39:12.283Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/c3/b2/bc9c9196916376152d655522fdcebac55e66de6603a76a02bca1b6414f6c/pygments-2.20.0.tar.gz", hash = "sha256:6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f", size = 4955991, upload-time = "2026-03-29T13:29:33.898Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c7/21/705964c7812476f378728bdf590ca4b771ec72385c533964653c68e86bdc/pygments-2.19.2-py3-none-any.whl", hash = "sha256:86540386c03d588bb81d44bc3928634ff26449851e99741617ecb9037ee5ec0b", size = 1225217, upload-time = "2025-06-21T13:39:07.939Z" },
+    { url = "https://files.pythonhosted.org/packages/f4/7e/a72dd26f3b0f4f2bf1dd8923c85f7ceb43172af56d63c7383eb62b332364/pygments-2.20.0-py3-none-any.whl", hash = "sha256:81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176", size = 1231151, upload-time = "2026-03-29T13:29:30.038Z" },
 ]
 
 [[package]]
