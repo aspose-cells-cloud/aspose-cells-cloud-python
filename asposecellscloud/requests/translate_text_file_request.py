@@ -35,9 +35,12 @@ from six.moves.urllib.parse import quote
 
 class TranslateTextFileRequest(object):
 
-    def __init__(self , spreadsheet ,target_language ,region =None ,password =None ):
+    def __init__(self , spreadsheet ,target_language ,custom_endpoint =None ,custom_api_key =None ,custom_model =None ,region =None ,password =None ):
         self.spreadsheet = spreadsheet 
         self.target_language = target_language 
+        self.custom_endpoint = custom_endpoint 
+        self.custom_api_key = custom_api_key 
+        self.custom_model = custom_model 
         self.region = region 
         self.password = password         
         self.expand_query_parameters = {}
@@ -63,6 +66,12 @@ class TranslateTextFileRequest(object):
         query_params = []
         if self.target_language is not None:
             query_params.append(('targetLanguage',self.target_language ))
+        if self.custom_endpoint is not None:
+            query_params.append(('customEndpoint',self.custom_endpoint ))
+        if self.custom_api_key is not None:
+            query_params.append(('customApiKey',self.custom_api_key ))
+        if self.custom_model is not None:
+            query_params.append(('customModel',self.custom_model ))
         if self.region is not None:
             query_params.append(('region',self.region ))
         if self.password is not None:
@@ -73,7 +82,7 @@ class TranslateTextFileRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '26.8';
+        header_params['x-aspose-client-version'] = '26.9';
 
         form_params = []
         local_var_files = {}

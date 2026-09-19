@@ -23,6 +23,9 @@ This method supports two modes of operation:1. **File Upload Mode**: Accepts a t
 | :- | :- | :- |:- | 
 |Spreadsheet|File|FormData|Upload spreadsheet file.|
 |targetLanguage|String|Query|The target language code for translation (e.g., "es", "fr", "de").|
+|customEndpoint|String|Query||
+|customApiKey|String|Query||
+|customModel|String|Query||
 |region|String|Query|Spreadsheet region/language setting (e.g., `en-US`, `fr-FR`). Influences number formatting, date parsing, and locale‑specific behavior.|
 |password|String|Query|The password for opening spreadsheet file.|
 

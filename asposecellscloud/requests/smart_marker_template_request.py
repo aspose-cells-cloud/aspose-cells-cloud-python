@@ -35,7 +35,9 @@ from six.moves.urllib.parse import quote
 
 class SmartMarkerTemplateRequest(object):
 
-    def __init__(self , region =None ,password =None ):
+    def __init__(self , datafile ,templatefile ,region =None ,password =None ):
+        self.datafile = datafile 
+        self.templatefile = templatefile 
         self.region = region 
         self.password = password         
         self.expand_query_parameters = {}
@@ -44,6 +46,15 @@ class SmartMarkerTemplateRequest(object):
         self.expand_query_parameters.append(query_name,query_value)
         pass
     def create_http_request(self, api_client):
+
+        # verify the required parameter 'datafile' is set
+        if self.datafile is None:
+            raise ValueError("Missing the required parameter `datafile` when calling `smart_marker_template`")
+
+
+        # verify the required parameter 'templatefile' is set
+        if self.templatefile is None:
+            raise ValueError("Missing the required parameter `templatefile` when calling `smart_marker_template`")
 
 
         collection_formats = {}
@@ -60,10 +71,29 @@ class SmartMarkerTemplateRequest(object):
 
         header_params = {}
         header_params['x-aspose-client'] = 'python sdk';
-        header_params['x-aspose-client-version'] = '26.8';
+        header_params['x-aspose-client-version'] = '26.9';
 
         form_params = []
         local_var_files = {}
+        if self.datafile is not None:            
+            if isinstance(self.datafile,dict):
+                for filename , filecontext in  self.datafile.items():
+                    local_var_files[filename] = filecontext
+            else:
+                if isinstance(self.datafile,bytes):
+                    local_var_files['File'] = self.datafile
+                else:
+                    local_var_files[os.path.basename( self.datafile)] = self.datafile   
+        if self.templatefile is not None:            
+            if isinstance(self.templatefile,dict):
+                for filename , filecontext in  self.templatefile.items():
+                    local_var_files[filename] = filecontext
+            else:
+                if isinstance(self.templatefile,bytes):
+                    local_var_files['File'] = self.templatefile
+                else:
+                    local_var_files[os.path.basename( self.templatefile)] = self.templatefile   
+
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = api_client.\
@@ -71,8 +101,7 @@ class SmartMarkerTemplateRequest(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = api_client.\
-            select_header_content_type(['application/json'])
-
+            select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
         auth_settings = []

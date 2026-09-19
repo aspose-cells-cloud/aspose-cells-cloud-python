@@ -20,6 +20,8 @@ PUT http://api.aspose.cloud/v4.0/cells/report/smart/template
 
 | Parameter Name | Type | Path/Query String/HTTPBody | Description | 
 | :- | :- | :- |:- | 
+|datafile|File|FormData|Upload smartmarker template json data file.|
+|templatefile|File|FormData|Upload smartmarker template file.|
 |region|String|Query|Spreadsheet region/language setting (e.g., `en-US`, `fr-FR`). Influences number formatting, date parsing, and locale‑specific behavior.|
 |password|String|Query|The password for opening spreadsheet file.|
 
